@@ -274,6 +274,7 @@ const teamMembers = [
 ];
 
 function App() {
+    const assetUrl = (path) => `${import.meta.env.BASE_URL}${String(path).replace(/^\/+/, '')}`;
     const [activePriority, setActivePriority] = useState(priorities[0]);
     const [activeCandidate, setActiveCandidate] = useState(candidates[0]);
     const [activeTeamMemberName, setActiveTeamMemberName] = useState(null);
@@ -294,12 +295,12 @@ function App() {
             <section className="hero">
                 <div className="hero__visual" aria-hidden="true">
                     <div className="hero-logo">
-                        <img src="/logo.png" alt="" />
+                        <img src={assetUrl('logo.png')} alt="" />
                     </div>
                     {heroFaces.map((member, index) => (
                         <figure className={`hero-face hero-face--${index + 1}`} key={`hero-${member.name}`}>
                             <img
-                                src={member.image}
+                                src={assetUrl(member.image)}
                                 alt=""
                                 loading="lazy"
                                 style={{ objectPosition: member.imagePosition ?? 'center top' }}
@@ -372,7 +373,7 @@ function App() {
                         <h3>{activePriority.title}</h3>
                         <img
                             className="priority-detail__image"
-                            src={activePriority.image}
+                            src={assetUrl(activePriority.image)}
                             alt={activePriority.imageAlt}
                             loading="lazy"
                         />
@@ -401,7 +402,7 @@ function App() {
                                     }
                                 >
                                     <img
-                                        src={member.image}
+                                        src={assetUrl(member.image)}
                                         alt={`Portrait von ${member.name}`}
                                         loading="lazy"
                                         style={{ objectPosition: member.imagePosition ?? 'center top' }}
@@ -419,7 +420,7 @@ function App() {
                                 <div className="team-overlay__head">
                                     <img
                                         className="team-overlay__avatar"
-                                        src={activeTeamMember.image}
+                                        src={assetUrl(activeTeamMember.image)}
                                         alt={`Portrait von ${activeTeamMember.name}`}
                                         loading="lazy"
                                         style={{ objectPosition: activeTeamMember.imagePosition ?? 'center top' }}
@@ -447,7 +448,7 @@ function App() {
                                                 detail.iconImage ? (
                                                     <img
                                                         className="team-detail__icon-image"
-                                                        src={detail.iconImage}
+                                                        src={assetUrl(detail.iconImage)}
                                                         alt={detail.iconAlt || ''}
                                                         loading="lazy"
                                                     />
