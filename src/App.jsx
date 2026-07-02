@@ -472,7 +472,7 @@ function App() {
             <section className="content content--soft content--candidate">
                 <div className="section-heading">
                     <p className="eyebrow">Geht es noch konkreter?</p>
-                    <h2>JA! Persönliche Schwerpunkte aus dem Team</h2>
+                    <h2>Persönliche Schwerpunkte aus dem Team</h2>
                 </div>
 
                 <div className="candidate-grid">
