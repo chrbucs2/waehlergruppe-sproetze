@@ -552,24 +552,38 @@ function App() {
                         <div className="legal-modal__content">
                             <h3>Wählergruppe Sprötze</h3>
                             <p>
-                                Eine unabhängige Wählerinitiative für Sprötze
+                                Eine unabhängige Bürgerbewegung für eine lebenswerte Gemeinde.
                             </p>
-                            <h4>Kontakt & Anfragen</h4>
+                            <h4>Verantwortliche Organisation</h4>
                             <p>
-                                Fragen? Gerne! <br/>
-                                Kontaktiert uns über die lokalen Kanäle oder bei unseren Treffen.
+                                <strong>Wählergruppe Sprötze</strong><br/>
+                                Unabhängige Wählerinitiative (nicht eingetragener Verein)<br/>
+                                <br/>
+                                <em>Die Kontaktdaten der Verantwortlichen finden Sie in unserem lokalen Netzwerk oder in den öffentlichen Wahlunterlagen.</em>
                             </p>
-                            <h4>Verantwortliche</h4>
+                            <h4>Kandidaten</h4>
                             <p>
-                                Webseite und Inhalte verantwortet die Wählergruppe Sprötze.
+                                Denise Jusinski · Peter Kröger · Claas Bartels · Dorothee Kröger · 
+                                Christian Buck · René Hamann · Ute Schwermer-Vietheer · Ingo Schalow · 
+                                Detlev von der Heide
                             </p>
-                            <h4>Technische Hinweise</h4>
+                            <h4>Hosting & Technologie</h4>
                             <p>
-                                Diese Webseite wird gehostet auf GitHub Pages. Der Quellcode ist öffentlich verfügbar.
+                                Diese Webseite wird gehostet auf <strong>GitHub Pages</strong> (<a href="https://pages.github.com" target="_blank" rel="noopener noreferrer">pages.github.com</a>).<br/>
+                                <br/>
+                                Technologie: React + Vite<br/>
+                                Quellcode: Öffentlich verfügbar auf <a href="https://github.com/chrbucs2/waehlergruppe-sproetze" target="_blank" rel="noopener noreferrer">GitHub</a><br/>
+                                Repository: chrbucs2/waehlergruppe-sproetze
                             </p>
-                            <h4>Externe Links</h4>
+                            <h4>Haftungsausschluss für externe Links</h4>
                             <p>
-                                Für fremde Inhalte, auf die wir von dieser Seite verlinken, übernehmen wir keine Haftung. Dies gilt besonders für Inhalte auf von uns nicht kontrollierten Webseiten.
+                                Für fremde Inhalte, auf die wir von dieser Seite verlinken, übernehmen wir keine Haftung nach TMG §7(1). 
+                                Dies gilt besonders für Inhalte auf von uns nicht kontrollierten Webseiten.
+                            </p>
+                            <h4>Bildrechte</h4>
+                            <p>
+                                Alle auf dieser Seite abgebildeten Personen haben der Veröffentlichung ihrer Fotos zugestimmt. 
+                                Der Schutz der Persönlichkeitsrechte wird respektiert.
                             </p>
                         </div>
                     </article>
@@ -593,30 +607,68 @@ function App() {
                         <div className="legal-modal__content">
                             <h3>Datenschutz bei der Wählergruppe Sprötze</h3>
                             <p>
-                                Der Schutz Ihrer persönlichen Daten ist uns wichtig. Diese Datenschutzerklärung erläutert, welche Informationen wir erfassen und wie wir diese nutzen.
+                                Der Schutz Ihrer persönlichen Daten ist uns wichtig. Diese Datenschutzerklärung erläutert, 
+                                welche Informationen erfasst werden und wie wir diese behandeln.
                             </p>
-                            <h4>Datenerfassung</h4>
+                            <h4>Datenerfassung durch uns</h4>
                             <p>
-                                Diese Webseite wird auf GitHub Pages gehostet. GitHub speichert automatisch Zugriffsdaten (IP-Adresse, Zeitstempel, Browser-Informationen) zum Zweck der Sicherheit und Verfügbarkeit der Infrastruktur.
+                                <strong>Diese Website erfasst KEINE persönlichen Daten von Ihnen.</strong><br/>
+                                <br/>
+                                ✓ Keine Kontaktformulare<br/>
+                                ✓ Keine Newsletter-Anmeldung<br/>
+                                ✓ Kein Tracking oder Analytics<br/>
+                                ✓ Keine Cookies<br/>
+                                ✓ Keine Speicherung von Besucherdaten
+                            </p>
+                            <h4>Datenerfassung durch GitHub Pages</h4>
+                            <p>
+                                Diese Website wird auf <strong>GitHub Pages</strong> gehostet. GitHub speichert automatisch 
+                                und unvermeidlich:
                             </p>
                             <p>
-                                Weitere Informationen finden Sie in der <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub Datenschutzerklärung</a>.
-                            </p>
-                            <h4>Kontaktformulare</h4>
-                            <p>
-                                Auf dieser Webseite gibt es derzeit keine Kontaktformulare. Ihre Anfragen werden nicht erfasst.
-                            </p>
-                            <h4>Cookies</h4>
-                            <p>
-                                Diese Seite nutzt keine Cookies und kein Tracking. Es erfolgt keine Nutzerverfolgung oder Datenverkauf.
+                                • IP-Adresse (zur Sicherheit und Verfügbarkeit)<br/>
+                                • Zugriffszeitstempel<br/>
+                                • Browser-Informationen (User-Agent)<br/>
+                                • Referrer-Daten<br/>
+                                <br/>
+                                <strong>Speicherdauer:</strong> Typischerweise ca. 90 Tage nach GitHub-Standardrichtlinien<br/>
+                                <strong>Verarbeitung:</strong> Nur zur Infrastruktur-Überwachung und Sicherheit
                             </p>
                             <h4>Ihre Rechte</h4>
                             <p>
-                                Sie haben das Recht, auf Anfrage Auskunft über Ihre gespeicherten Daten zu erhalten, diese zu berichtigen oder löschen zu lassen. GitHub ermöglicht dies über deren Datenschutzmechanismen.
+                                Sie haben unter der DSGVO folgende Rechte:
+                            </p>
+                            <p>
+                                • Recht auf Auskunft über Ihre gespeicherten Daten<br/>
+                                • Recht auf Berichtigung oder Löschung<br/>
+                                • Recht auf Datenportabilität<br/>
+                                • Recht auf Beschwerde bei einer Datenschutzbehörde<br/>
+                                <br/>
+                                <em>Da wir keine Daten speichern, sind diese Rechte in der Praxis nicht anwendbar, 
+                                aber Sie können GitHub kontaktieren.</em>
+                            </p>
+                            <h4>GitHub Datenschutzerklärung</h4>
+                            <p>
+                                Für weitere Informationen zur Datenverarbeitung durch GitHub Pages siehe:<br/>
+                                <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener noreferrer">
+                                    GitHub Privacy Statement
+                                </a>
+                            </p>
+                            <h4>Open Source & Transparenz</h4>
+                            <p>
+                                Der Quellcode dieser Website ist öffentlich verfügbar. Es gibt keine versteckten 
+                                Datenverarbeitungen oder Tracking-Skripte. Alle genutzten Bibliotheken sind 
+                                mit Open-Source-Lizenzen lizenziert.
+                            </p>
+                            <h4>Kontakt zur Datenschutzerklärung</h4>
+                            <p>
+                                Bei Fragen zum Datenschutz kontaktieren Sie bitte die Wählergruppe Sprötze 
+                                über die im Impressum angegebenen Kontaktdaten.
                             </p>
                             <h4>Änderungen</h4>
                             <p>
-                                Wir behalten uns vor, diese Datenschutzerklärung jederzeit anzupassen. Die aktuelle Fassung finden Sie hier auf dieser Seite.
+                                Wir behalten uns vor, diese Datenschutzerklärung jederzeit anzupassen. 
+                                Die aktuelle Fassung finden Sie hier auf dieser Seite.
                             </p>
                         </div>
                     </article>
