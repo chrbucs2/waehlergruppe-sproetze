@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-labelledby="title desc">
+  <title id="title">Wohnen bezahlbar halten</title>
+  <desc id="desc">Haus, Baum und ruhige Landschaft als Symbol für lebenswerte Ortsentwicklung.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f3f7ff"/>
+      <stop offset="100%" stop-color="#e0d5f2"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" fill="url(#bg)"/>
+  <path d="M0 300 Q180 250 380 300 T800 295 V420 H0 Z" fill="#c8b8e6"/>
+  <rect x="255" y="205" width="280" height="165" rx="14" fill="#fff9f2" stroke="#7b4a7c" stroke-width="8"/>
+  <path d="M236 215 L395 115 L554 215" fill="#7b4a7c"/>
+  <rect x="370" y="272" width="62" height="98" rx="8" fill="#d4b891"/>
+  <rect x="300" y="244" width="50" height="46" rx="6" fill="#d8e7ff"/>
+  <rect x="455" y="244" width="50" height="46" rx="6" fill="#d8e7ff"/>
+  <rect x="615" y="230" width="14" height="82" rx="6" fill="#7b4a7c"/>
+  <circle cx="622" cy="200" r="40" fill="#7fbf7f"/>
+  <circle cx="590" cy="218" r="24" fill="#7fbf7f"/>
+  <circle cx="650" cy="218" r="24" fill="#7fbf7f"/>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-labelledby="title desc">
+  <title id="title">Natur schützen</title>
+  <desc id="desc">Stilisierte Landschaft mit Hügeln, Fluss und Blatt.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#eef7ff"/>
+      <stop offset="100%" stop-color="#dcecd7"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" fill="url(#sky)"/>
+  <path d="M0 285 Q180 235 360 282 T800 275 V420 H0 Z" fill="#b7d8a7"/>
+  <path d="M0 330 Q200 290 440 320 T800 312 V420 H0 Z" fill="#9cc491"/>
+  <path d="M100 355 Q220 290 350 335 T620 330 Q700 330 780 360" fill="none" stroke="#6fa3d8" stroke-width="14" stroke-linecap="round"/>
+  <path d="M525 230 C560 165 630 170 653 220 C620 258 555 270 525 230 Z" fill="#6fa86d"/>
+  <path d="M590 176 C655 145 706 198 682 260 C622 246 584 215 590 176 Z" fill="#84bb73"/>
+  <path d="M540 246 Q610 214 678 194" fill="none" stroke="#5d8f57" stroke-width="6" stroke-linecap="round"/>
+</svg>

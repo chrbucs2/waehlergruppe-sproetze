@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-labelledby="title desc">
+  <title id="title">Familienfreundliches Wohnen</title>
+  <desc id="desc">Haus mit Sonne und Weg vor sanften Landschaftsformen.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f7f1ff"/>
+      <stop offset="100%" stop-color="#e5d9f5"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" fill="url(#bg)"/>
+  <circle cx="665" cy="85" r="36" fill="#f2c76f"/>
+  <path d="M0 300 Q180 250 360 300 T800 300 V420 H0 Z" fill="#cab7e6"/>
+  <path d="M210 285 L400 145 L590 285" fill="none" stroke="#7b4a7c" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="275" y="220" width="250" height="150" rx="12" fill="#fff9f2" stroke="#7b4a7c" stroke-width="8"/>
+  <rect x="375" y="270" width="64" height="100" rx="8" fill="#d4b891"/>
+  <rect x="310" y="252" width="48" height="42" rx="6" fill="#d8e7ff"/>
+  <rect x="455" y="252" width="48" height="42" rx="6" fill="#d8e7ff"/>
+  <path d="M350 420 Q400 350 450 420" fill="none" stroke="#7b4a7c" stroke-width="8" stroke-linecap="round"/>
+</svg>

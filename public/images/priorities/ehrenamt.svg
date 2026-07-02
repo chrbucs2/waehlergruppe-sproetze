@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-labelledby="title desc">
+  <title id="title">Ehrenamt fördern</title>
+  <desc id="desc">Hände und Herz als Symbol für Gemeinschaft und Engagement.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff3f6"/>
+      <stop offset="100%" stop-color="#eddcf5"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" fill="url(#bg)"/>
+  <path d="M0 300 Q190 260 400 300 T800 294 V420 H0 Z" fill="#ccb9e7"/>
+  <path d="M400 150 C400 122 432 111 450 131 C468 111 500 122 500 150 C500 185 450 220 450 220 C450 220 400 185 400 150 Z" fill="#c85d74"/>
+  <path d="M198 286 C232 245 290 235 343 242 C368 246 382 263 372 282 C362 301 341 314 318 318 L252 330 C230 334 205 318 194 298 Z" fill="#f3c9a8" stroke="#7b4a7c" stroke-width="5"/>
+  <path d="M602 286 C568 245 510 235 457 242 C432 246 418 263 428 282 C438 301 459 314 482 318 L548 330 C570 334 595 318 606 298 Z" fill="#f3c9a8" stroke="#7b4a7c" stroke-width="5"/>
+</svg>
