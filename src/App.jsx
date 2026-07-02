@@ -278,6 +278,8 @@ function App() {
     const [activePriority, setActivePriority] = useState(priorities[0]);
     const [activeCandidate, setActiveCandidate] = useState(candidates[0]);
     const [activeTeamMemberName, setActiveTeamMemberName] = useState(null);
+    const [showImpressum, setShowImpressum] = useState(false);
+    const [showDatenschutz, setShowDatenschutz] = useState(false);
     const activeTeamMember = teamMembers.find((member) => member.name === activeTeamMemberName) ?? null;
     const heroFaces = teamMembers;
 
@@ -512,10 +514,114 @@ function App() {
                     <strong>Wählergruppe Sprötze</strong>
                     <p>Bürgernähe, Augenmaß und ein lebenswertes Dorf.</p>
                 </div>
+                <div className="footer__legal">
+                    <button
+                        type="button"
+                        onClick={() => setShowImpressum(true)}
+                        className="footer__legal-link"
+                    >
+                        Impressum
+                    </button>
+                    <button
+                        type="button"
+                        onClick={() => setShowDatenschutz(true)}
+                        className="footer__legal-link"
+                    >
+                        Datenschutz
+                    </button>
+                </div>
                 <a className="footer__link" href="#top" onClick={(event) => event.preventDefault()}>
                     Nach oben
                 </a>
             </footer>
+
+            {showImpressum && (
+                <div className="legal-overlay" onClick={() => setShowImpressum(false)}>
+                    <article className="legal-modal" onClick={(e) => e.stopPropagation()}>
+                        <header className="legal-modal__header">
+                            <h2>Impressum</h2>
+                            <button
+                                type="button"
+                                onClick={() => setShowImpressum(false)}
+                                aria-label="Schließen"
+                                className="legal-modal__close"
+                            >
+                                ✕
+                            </button>
+                        </header>
+                        <div className="legal-modal__content">
+                            <h3>Wählergruppe Sprötze</h3>
+                            <p>
+                                Eine unabhängige Wählerinitiative für Sprötze
+                            </p>
+                            <h4>Kontakt & Anfragen</h4>
+                            <p>
+                                Fragen? Gerne! <br/>
+                                Kontaktiert uns über die lokalen Kanäle oder bei unseren Treffen.
+                            </p>
+                            <h4>Verantwortliche</h4>
+                            <p>
+                                Webseite und Inhalte verantwortet die Wählergruppe Sprötze.
+                            </p>
+                            <h4>Technische Hinweise</h4>
+                            <p>
+                                Diese Webseite wird gehostet auf GitHub Pages. Der Quellcode ist öffentlich verfügbar.
+                            </p>
+                            <h4>Externe Links</h4>
+                            <p>
+                                Für fremde Inhalte, auf die wir von dieser Seite verlinken, übernehmen wir keine Haftung. Dies gilt besonders für Inhalte auf von uns nicht kontrollierten Webseiten.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            )}
+
+            {showDatenschutz && (
+                <div className="legal-overlay" onClick={() => setShowDatenschutz(false)}>
+                    <article className="legal-modal" onClick={(e) => e.stopPropagation()}>
+                        <header className="legal-modal__header">
+                            <h2>Datenschutzerklärung</h2>
+                            <button
+                                type="button"
+                                onClick={() => setShowDatenschutz(false)}
+                                aria-label="Schließen"
+                                className="legal-modal__close"
+                            >
+                                ✕
+                            </button>
+                        </header>
+                        <div className="legal-modal__content">
+                            <h3>Datenschutz bei der Wählergruppe Sprötze</h3>
+                            <p>
+                                Der Schutz Ihrer persönlichen Daten ist uns wichtig. Diese Datenschutzerklärung erläutert, welche Informationen wir erfassen und wie wir diese nutzen.
+                            </p>
+                            <h4>Datenerfassung</h4>
+                            <p>
+                                Diese Webseite wird auf GitHub Pages gehostet. GitHub speichert automatisch Zugriffsdaten (IP-Adresse, Zeitstempel, Browser-Informationen) zum Zweck der Sicherheit und Verfügbarkeit der Infrastruktur.
+                            </p>
+                            <p>
+                                Weitere Informationen finden Sie in der <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub Datenschutzerklärung</a>.
+                            </p>
+                            <h4>Kontaktformulare</h4>
+                            <p>
+                                Auf dieser Webseite gibt es derzeit keine Kontaktformulare. Ihre Anfragen werden nicht erfasst.
+                            </p>
+                            <h4>Cookies</h4>
+                            <p>
+                                Diese Seite nutzt keine Cookies und kein Tracking. Es erfolgt keine Nutzerverfolgung oder Datenverkauf.
+                            </p>
+                            <h4>Ihre Rechte</h4>
+                            <p>
+                                Sie haben das Recht, auf Anfrage Auskunft über Ihre gespeicherten Daten zu erhalten, diese zu berichtigen oder löschen zu lassen. GitHub ermöglicht dies über deren Datenschutzmechanismen.
+                            </p>
+                            <h4>Änderungen</h4>
+                            <p>
+                                Wir behalten uns vor, diese Datenschutzerklärung jederzeit anzupassen. Die aktuelle Fassung finden Sie hier auf dieser Seite.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            )}
         </main>
     );
 }

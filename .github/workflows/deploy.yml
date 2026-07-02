@@ -33,6 +33,13 @@ jobs:
       - name: Build site
         run: npm run build
 
+      - name: Check build output
+        run: |
+          echo "Build output:"
+          ls -la dist
+          echo "Index check:"
+          test -f dist/index.html && echo "index.html exists" || exit 1
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -48,3 +55,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
