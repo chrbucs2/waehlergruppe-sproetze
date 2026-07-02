@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const priorities = [
     {
@@ -282,6 +282,18 @@ function App() {
     const [showDatenschutz, setShowDatenschutz] = useState(false);
     const activeTeamMember = teamMembers.find((member) => member.name === activeTeamMemberName) ?? null;
     const heroFaces = teamMembers;
+
+    useEffect(() => {
+        const handleEscKey = (e) => {
+            if (e.key === 'Escape') {
+                setActiveTeamMemberName(null);
+                setShowImpressum(false);
+                setShowDatenschutz(false);
+            }
+        };
+        document.addEventListener('keydown', handleEscKey);
+        return () => document.removeEventListener('keydown', handleEscKey);
+    }, []);
 
     const highlights = [
         'Bürgernähe. Sprötze. Für EUCH!',
@@ -579,7 +591,7 @@ function App() {
                             <p>
                                 Denise Jusinski (35) · Peter Kröger (71) · Claas Bartels (44) · 
                                 Dorothee Kröger (36) · Christian Buck (47) · René Hamann (50) · 
-                                Ute Schwermer-Vietheer (74) · Ingo Schalow (60) · Detlev von der Heide
+                                Ute Schwermer-Vietheer (74) · Ingo Schalow (60) · Gabriele Pilkowski
                             </p>
                             <h4>Hosting & Technologie</h4>
                             <p>
@@ -618,10 +630,23 @@ function App() {
                             </button>
                         </header>
                         <div className="legal-modal__content">
-                            <h3>Datenschutz bei der Wählergruppe Sprötze</h3>
+                            <h3>Datenschutzerklärung</h3>
                             <p>
                                 Der Schutz Ihrer persönlichen Daten ist uns wichtig. Diese Datenschutzerklärung erläutert, 
-                                welche Informationen erfasst werden und wie wir diese behandeln.
+                                welche Informationen erfasst werden und wie wir diese behandeln (DSGVO-konform).
+                            </p>
+                            <h4>Datenverantwortlicher</h4>
+                            <p>
+                                <strong>Wählergruppe Sprötze</strong>, vertreten durch:<br/>
+                                • Christian Buck, wgs@buck-online.net<br/>
+                                • Peter Kröger, peter.kroeger@sproetze.de<br/>
+                                <br/>
+                                <em>Kontaktdetails siehe Impressum.</em>
+                            </p>
+                            <h4>Datenschutzbeauftragter</h4>
+                            <p>
+                                Die Wählergruppe Sprötze ist eine kleine Initiative ohne regelmäßige Datenverarbeitung. 
+                                <strong>Kein Datenschutzbeauftragter</strong> ist nach DSGVO Art. 37 erforderlich.
                             </p>
                             <h4>Datenerfassung durch uns</h4>
                             <p>
@@ -633,55 +658,59 @@ function App() {
                                 ✓ Keine Cookies<br/>
                                 ✓ Keine Speicherung von Besucherdaten
                             </p>
-                            <h4>Datenerfassung durch GitHub Pages</h4>
+                            <h4>Datenerfassung durch GitHub Pages (Hosting-Provider)</h4>
                             <p>
                                 Diese Website wird auf <strong>GitHub Pages</strong> gehostet. GitHub speichert automatisch 
-                                und unvermeidlich:
-                            </p>
-                            <p>
+                                Zugriffsdaten:<br/>
+                                <br/>
                                 • IP-Adresse (zur Sicherheit und Verfügbarkeit)<br/>
                                 • Zugriffszeitstempel<br/>
                                 • Browser-Informationen (User-Agent)<br/>
                                 • Referrer-Daten<br/>
-                                <br/>
-                                <strong>Speicherdauer:</strong> Typischerweise ca. 90 Tage nach GitHub-Standardrichtlinien<br/>
-                                <strong>Verarbeitung:</strong> Nur zur Infrastruktur-Überwachung und Sicherheit
                             </p>
-                            <h4>Ihre Rechte</h4>
+                            <p>
+                                <strong>Rechtsgrundlage:</strong> DSGVO Art. 6 Abs. 1 f) (berechtigtes Interesse 
+                                zur Infrastruktur-Überwachung und Sicherheit)<br/>
+                                <strong>Speicherdauer:</strong> Typischerweise ca. 90 Tage nach GitHub-Standardrichtlinien<br/>
+                                <strong>Verarbeitung durch:</strong> GitHub Inc. (USA), unter EU-Datenschutzabkommen
+                            </p>
+                            <h4>Ihre Rechte und Widerspruch</h4>
                             <p>
                                 Sie haben unter der DSGVO folgende Rechte:
                             </p>
                             <p>
-                                • Recht auf Auskunft über Ihre gespeicherten Daten<br/>
-                                • Recht auf Berichtigung oder Löschung<br/>
-                                • Recht auf Datenportabilität<br/>
-                                • Recht auf Beschwerde bei einer Datenschutzbehörde<br/>
-                                <br/>
-                                <em>Da wir keine Daten speichern, sind diese Rechte in der Praxis nicht anwendbar, 
-                                aber Sie können GitHub kontaktieren.</em>
+                                • Recht auf Auskunft über Ihre Daten (Art. 15)<br/>
+                                • Recht auf Berichtigung oder Löschung (Art. 16–17)<br/>
+                                • Recht auf Datenportabilität (Art. 20)<br/>
+                                • Recht auf Beschwerde bei einer Datenschutzbehörde (Art. 77)<br/>
                             </p>
-                            <h4>GitHub Datenschutzerklärung</h4>
                             <p>
-                                Für weitere Informationen zur Datenverarbeitung durch GitHub Pages siehe:<br/>
+                                <strong>Sie können GitHub-Datenerfassung einschränken durch:</strong><br/>
+                                • Browser-Einstellungen (Cookies, Do-Not-Track)<br/>
+                                • VPN-Nutzung<br/>
+                                • Browsererweiterungen (z.B. uBlock)<br/>
+                            </p>
+                            <p>
+                                Für volle DSGVO-Rechte kontaktieren Sie bitte GitHub unter ihrer 
                                 <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener noreferrer">
-                                    GitHub Privacy Statement
-                                </a>
+                                    Privacy Statement
+                                </a>.
                             </p>
                             <h4>Open Source & Transparenz</h4>
                             <p>
-                                Der Quellcode dieser Website ist öffentlich verfügbar. Es gibt keine versteckten 
-                                Datenverarbeitungen oder Tracking-Skripte. Alle genutzten Bibliotheken sind 
-                                mit Open-Source-Lizenzen lizenziert.
+                                Der Quellcode dieser Website ist öffentlich verfügbar (<a href="https://github.com/chrbucs2/waehlergruppe-sproetze" target="_blank" rel="noopener noreferrer">GitHub</a>). 
+                                Es gibt keine versteckten Datenverarbeitungen oder Tracking-Skripte. Alle genutzten 
+                                Bibliotheken (React, Vite) sind unter MIT-Lizenz verfügbar.
                             </p>
-                            <h4>Kontakt zur Datenschutzerklärung</h4>
+                            <h4>Kontakt & Fragen</h4>
                             <p>
-                                Bei Fragen zum Datenschutz kontaktieren Sie bitte die Wählergruppe Sprötze 
+                                Bei Fragen zum Datenschutz kontaktieren Sie die Wählergruppe Sprötze 
                                 über die im Impressum angegebenen Kontaktdaten.
                             </p>
-                            <h4>Änderungen</h4>
+                            <h4>Änderungen dieser Erklärung</h4>
                             <p>
                                 Wir behalten uns vor, diese Datenschutzerklärung jederzeit anzupassen. 
-                                Die aktuelle Fassung finden Sie hier auf dieser Seite.
+                                Die aktuelle Fassung finden Sie hier auf dieser Seite. Stand: Juli 2026.
                             </p>
                         </div>
                     </article>
