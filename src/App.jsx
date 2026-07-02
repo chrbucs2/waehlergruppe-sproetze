@@ -1,277 +1,5 @@
 import { useState, useEffect } from 'react';
-
-const priorities = [
-    {
-        title: 'Familien verbinden',
-        eyebrow: '1. Familien, Kinder und Generationen',
-        image: '/images/priorities/familie.svg',
-        imageAlt: 'Illustration eines Hauses mit Sonne für familienfreundliches Wohnen',
-        text:
-            'Attraktive Spiel- und Freizeitangebote, sichere Schul- und Kindergartenwege und neue Begegnungsorte für Jung und Alt. Das Gelände der ehemaligen Feuerwehr soll als zentraler Treffpunkt mit Grünflächen, Spielmöglichkeiten und Raum für Gemeinschaft entwickelt werden.',
-    },
-    {
-        title: 'Dorfcharakter bewahren',
-        eyebrow: '2. Entwicklung mit Augenmaß',
-        image: '/images/priorities/dorfcharakter.svg',
-        imageAlt: 'Illustration einer Dorf-Silhouette',
-        text:
-            'Sprötze soll seinen gewachsenen, dörflichen Charakter behalten. Neue Bauvorhaben müssen sich harmonisch ins Ortsbild einfügen. Wachstum darf nicht zulasten von Lebensqualität, Infrastruktur oder Identität gehen.',
-    },
-    {
-        title: 'Natur schützen',
-        eyebrow: '3. Nachhaltigkeit',
-        image: '/images/priorities/natur.svg',
-        imageAlt: 'Illustration von Blättern und Landschaft für Naturschutz',
-        text:
-            'Heide-, Wald- und Naturlandschaften rund um Sprötze sind ein wertvolles Erbe. Wir setzen uns für sensible Lebensräume, den Erhalt von Grünflächen und eine verantwortungsvolle Besucherlenkung ein.',
-    },
-    {
-        title: 'Mobilität sichern',
-        eyebrow: '4. Verkehr & Sicherheit',
-        image: '/images/priorities/mobilitaet.svg',
-        imageAlt: 'Illustration einer Straße mit Markierungen',
-        text:
-            'Eine starke ÖPNV-Anbindung mit zuverlässigen Bahn- und Busverbindungen, dazu Verkehrsberuhigung, sichere Wege für Kinder, Fußgänger und Radfahrer.',
-    },
-    {
-        title: 'Bürgerbeteiligung stärken',
-        eyebrow: '5. Transparenz',
-        image: '/images/priorities/transparenz.svg',
-        imageAlt: 'Illustration von Sprechblasen für Dialog und Beteiligung',
-        text:
-            'Politik muss nachvollziehbar und bürgernah sein. Wir stehen für offene Kommunikation, frühzeitige Information und mehr Einbindung der Bürgerinnen und Bürger in Entscheidungen.',
-    },
-    {
-        title: 'Ehrenamt fördern',
-        eyebrow: '6. Vereine & Gemeinschaft',
-        image: '/images/priorities/ehrenamt.svg',
-        imageAlt: 'Illustration eines Herzsymbols mit Händen für Ehrenamt',
-        text:
-            'Vereine, Feuerwehr, Kultur- und Sportgemeinschaften sind das Herz unseres Dorfes. Wir wollen das Ehrenamt stärken und freiwilliges Engagement besser unterstützen.',
-    },
-    {
-        title: 'Wohnen bezahlbar halten',
-        eyebrow: '7. Ortsentwicklung',
-        image: '/images/priorities/wohnen.svg',
-        imageAlt: 'Illustration von Haus und Baum für nachhaltige Ortsentwicklung',
-        text:
-            'Sprötze soll für alle Generationen lebenswert bleiben. Wir unterstützen bezahlbaren Wohnraum für junge Familien und Senioren, ohne den dörflichen Charakter zu gefährden.',
-    },
-];
-
-const candidates = [
-    {
-        name: 'Denise Jusinski',
-        profile: '35 Jahre, Vertrieb für digitale Medien',
-        summary:
-            'Denise verbindet Familienfreundlichkeit, Naturschutz und echte Beteiligung im Dorfalltag.',
-        priorities: [
-            'Mehr Spiel- und Freizeitangebote für Kinder und junge Familien.',
-            'Natur schützen und Tourismus so steuern, dass sensible Lebensräume erhalten bleiben.',
-            'Transparente Kommunikation, stärkere Bürgerbeteiligung und faire Lösungen für Hundebesitzer.',
-        ],
-        focus: ['Familien', 'Naturschutz', 'Transparenz', 'Ehrenamt'],
-    },
-    {
-        name: 'Peter Kröger',
-        profile: '71 Jahre, Pensionär',
-        summary:
-            'Peter steht für unabhängige Kommunalpolitik, behutsame Ortsentwicklung und hohe Alltagssicherheit.',
-        priorities: [
-            'Sachliche, bürgernahe Entscheidungen ohne Parteibindung treffen.',
-            'Begegnungsstätte für Jung und Alt auf dem ehemaligen Feuerwehrgelände schaffen.',
-            'Tempo-30-Orientierung, starke ÖPNV-Anbindung und Schutz von Natur- und Heideflächen sichern.',
-        ],
-        focus: ['Unabhängig', 'Begegnung', 'Verkehr', 'Naturschutz'],
-    },
-    {
-        name: 'Claas Bartels',
-        profile: '44 Jahre, Kaufmann',
-        summary:
-            'Claas will Entwicklung mit Augenmaß, Rückhalt fürs Ehrenamt und frühzeitige, ehrliche Information.',
-        priorities: [
-            'Dörfliche Identität bewahren und Bauvorhaben am Ortsbild ausrichten.',
-            'Vereine, Feuerwehr, Kultur und Ehrenamt als Träger des Dorflebens stärken.',
-            'Transparente Entscheidungen und klare Grenzen gegenüber dem Gewerbegebiet sichern.',
-        ],
-        focus: ['Augenmaß', 'Ehrenamt', 'Transparenz', 'Dorfidentität'],
-    },
-    {
-        name: 'Dorothee Kröger',
-        profile: '36 Jahre, Klinikmanagement Unternehmensentwicklung',
-        summary:
-            'Dorothee verbindet sichere Wege, starke Vereine und einen offenen Dorfmittelpunkt für alle Generationen.',
-        priorities: [
-            'Auf dem ehemaligen Feuerwehrgelände eine Park- und Begegnungsanlage mit Spielplatz schaffen.',
-            'Vereine aktiv unterstützen und den Zusammenhalt im Dorf stärken.',
-            'Kinderfreundliche Verkehrsmaßnahmen und dorftypische Bauentwicklung durchsetzen.',
-        ],
-        focus: ['Dorfmittelpunkt', 'Vereine', 'Kindersicherheit', 'Dorfcharakter'],
-    },
-    {
-        name: 'Christian Buck',
-        profile: '47 Jahre, Softwareentwickler',
-        summary:
-            'Christian steht für eine lebenswerte Dorfentwicklung mit Augenmaß, Begegnung und digital transparenter Politik.',
-        priorities: [
-            'Dorfcharakter erhalten und Bauentwicklung maßvoll gestalten.',
-            'Ehemaliges Feuerwehrgelände als Ort für Begegnung und Gemeinschaft weiterentwickeln.',
-            'Bezahlbares Wohnen, Freizeit- und Vereinsangebote sowie nachvollziehbare Information stärken.',
-        ],
-        focus: ['Dorfcharakter', 'Begegnungsort', 'Wohnen', 'Transparenz'],
-    },
-    {
-        name: 'René Hamann',
-        profile: '50 Jahre, Medienvermarktung, Familienvater',
-        summary:
-            'René setzt den Fokus auf Mobilität, Verkehrssicherheit und den Schutz von Natur und Dorfidentität.',
-        priorities: [
-            'ÖPNV mit Metronom- und Busanbindung sichern und ausbauen.',
-            'Verkehr im Ort beruhigen und Wege für Kinder, Fußgänger und Radfahrer sicherer machen.',
-            'Heide, Wald und Grünflächen bewahren sowie Wachstum im Einklang mit Infrastruktur planen.',
-        ],
-        focus: ['ÖPNV', 'Verkehrssicherheit', 'Natur', 'Ortsentwicklung'],
-    },
-    {
-        name: 'Ute Schwermer-Vietheer',
-        profile: '74 Jahre, Studienrätin i. R.',
-        summary:
-            'Ute steht für Toleranz, Weltoffenheit und ein starkes Miteinander der Generationen.',
-        priorities: [
-            'Dorfgemeinschaft stärken und Menschen im Ort besser verbinden.',
-            'Sichere Schulwege und ein verlässliches Umfeld für Familien sichern.',
-            'Respektvolles Zusammenleben von Jung und Alt fördern.',
-        ],
-        focus: ['Weltoffenheit', 'Dorfgemeinschaft', 'Sicherheit', 'Miteinander'],
-    },
-    {
-        name: 'Ingo Schalow',
-        profile: '60 Jahre, Unternehmensberater Logistik',
-        summary:
-            'Ingo setzt auf bürgernahe Sachpolitik, klare Ortsgrenzen und einen lebendigen Ortskern.',
-        priorities: [
-            'Mehr Transparenz durch regelmäßige Information über Ortsratsthemen.',
-            'Keine Erweiterung des Gewerbegebiets Trelder Berg Richtung Sprötze.',
-            'Begegnungsfläche am Feuerwehrgelände und Nutzung des Lehrerhauses für die Allgemeinheit entwickeln.',
-        ],
-        focus: ['Bürgernähe', 'Sachpolitik', 'Ortsgrenzen', 'Begegnungsstätte'],
-    },
-];
-
-const teamMembers = [
-    {
-        name: 'Denise Jusinski',
-        image: '/images/team/denise-jusinski.png',
-        meta: '35 Jahre, Vertrieb für digitale Medien',
-        details: [
-            { icon: '👨‍👩‍👦', text: 'verheiratet, 2 Jahre alten Sohn & eine Golden Retriever Dame “Zwirbi”' },
-            { icon: '📍', text: 'geboren in Buchholz, aufgewachsen in Wörme' },
-            { icon: '🤝', text: 'ehrenamtliches Vorstandsmitglied' },
-            { icon: '🏅', text: 'ehrenamtlich als Spartenleitung sowie Übungsleiterin Fitness im TSV Sprötze' },
-        ],
-        quote:
-            'Ein familienfreundliches Sprötze, lebendige Vereine, transparente Entscheidungen sowie Natur- und Artenschutz mit fairen Lösungen für Hundebesitzer – dafür setze ich mich ein',
-    },
-    {
-        name: 'Peter Kröger',
-        image: '/images/team/peter-kroeger.jpg',
-        imagePosition: 'center 25%',
-        meta: '71 Jahre, Pensionär',
-        details: [
-            { icon: '👨‍👩‍👦', text: 'verheiratet, Vater & Opa' },
-            { icon: '🚒', text: 'Ehrenortsbrandmeister der FF Sprötze, 28 Jahre in der Wehrführung tätig' },
-            { icon: '🎯', text: 'Ehrenkommandeur des Schützenvereins, 55 Jahre Mitglied im Verein' },
-            { icon: '🗳️', text: 'Seit 1991 engagiere ich mich in der Freien Wählergruppe für unsere Ortschaft.' },
-        ],
-        quote:
-            'Verlässlichkeit, Erfahrung und Verantwortung prägen mein Handeln. Gemeinsam gestalten wir die Zukunft unserer Ortschaft – bürgernah, unabhängig und mit Augenmaß.',
-    },
-    {
-        name: 'Claas Bartels',
-        image: '/images/team/claas-bartels.jpg',
-        imagePosition: 'center 40%',
-        meta: '44 Jahre, Kaufmann',
-        details: [
-            { icon: '👨‍👩‍👧‍👦', text: 'verheiratet, 2 Kinder' },
-            { icon: '🎯', text: 'Präsident Schützenverein Sprötze-Kakenstorf' },
-            { icon: '🚒', text: 'Mitglied Freiwillige Feuerwehr Sprötze' },
-            { icon: '🎵', text: 'seit vielen Jahren ehrenamtlich in Sport & Musik engagiert' },
-        ],
-        quote:
-            'Sprötze ist kein Reißbrettprojekt. Unser Dorf lebt von seiner Geschichte, seinen Menschen und dem Engagement vieler Ehrenamtlicher. Entwicklung braucht Augenmaß, damit das erhalten bleibt, was Sprötze ausmacht.',
-    },
-    {
-        name: 'Dorothee Kröger',
-        image: '/images/team/dorothee-kroeger.png',
-        imagePosition: 'center 25%',
-        meta: '36 Jahre, Klinikmanagement Unternehmensentwicklung',
-        details: [
-            { icon: '👨‍👩‍👧‍👦', text: 'Mutter' },
-            { icon: '🚒', text: 'Mitglied Freiwillige Feuerwehr Sprötze, seit 2001, Stadtkinderfeuerwehrwartin und Kinderfeuerwehrwartin Sprötze, seit 2020' },
-            { icon: '🎯', text: 'Mitglied Schützenverein Sprötze-Kakenstorf' },
-        ],
-        quote:
-            'Wir gestalten Sprötze gemeinsam! Mit sicheren Wegen, lebendigen Vereinen, Orten der Begegnung und einer Entwicklung, die den Charakter unseres schönen Dorfes erhält.',
-    },
-    {
-        name: 'Christian Buck',
-        image: '/images/team/christian-buck.png',
-        meta: '47 Jahre, Softwareentwickler',
-        details: [
-            { icon: '👨‍👩‍👧‍👦', text: 'Vater von 2 Töchtern' },
-            { icon: '🌿', text: 'sportlich aktiv & naturverbunden' },
-        ],
-        quote:
-            'Mir ist wichtig, dass Sprötze nicht einfach verwaltet, sondern gemeinsam gestaltet wird – mit Augenmaß bei der Entwicklung, Respekt vor unserer Natur und mehr Transparenz für alle.',
-    },
-    {
-        name: 'René Hamann',
-        image: '/images/team/rene-hamann.png',
-        imagePosition: 'center 42%',
-        meta: '50 Jahre, Medienvermarktung, Familienvater',
-        details: [
-            { icon: '👨‍👩‍👧‍👦', text: 'Familienvater' },
-        ],
-        quote:
-            'Ich stehe für ein verkehrssicheres Sprötze, in dem jeder wohlbehalten an sein Ziel kommt, für den Erhalt des dörflichen Charakters im Einklang mit dem Wandel der Zeit sowie einen austarierten HeideTourismus.',
-    },
-    {
-        name: 'Gabriele Pilkowski',
-        image: '/images/team/gabriele-pilkowski.png',
-        meta: '62 Jahre, Personalleiterin',
-        details: [
-            { icon: '⚖️', text: 'ehrenamtliche Richterin' },
-        ],
-        quote:
-            'Sprötze ist für mich ein liebenswerter Ort für alle Generationen. Ich möchte die Vielfalt erhalten, das Miteinander bewahren und die Zukunft gemeinsam gestalten.',
-    },
-    {
-        name: 'Ute Schwermer-Vietheer',
-        image: '/images/team/ute-schwermer-vietheer.jpg',
-        imagePosition: 'center 25%',
-        meta: '74 Jahre, Studienrätin i. R.',
-        details: [
-            { icon: '🎂', text: '74 Jahre, Studienrätin i.R.' },
-            { icon: '👨‍👩‍👧‍👦', text: 'verheiratet, 3 Kinder, 5 Enkelkinder' },
-            { icon: '🚲', text: 'Hobbies: Fahrrad fahren, regionale Geschichte, Enkelkinder, Garten, Kultur, Musik' },
-            { iconImage: '/images/icons/vierdoerfer-doenz.png', iconAlt: 'Logo Vierdörfer Dönz', text: 'ehem. 1. Vorsitzende der Vierdörfer Dönz,' },
-        ],
-        quote:
-            'Ich setzte mich für eine starke Dorfgemeinschaft, sichere Schuluwege und eine lebenswerte Zukunft für Jung und Alt ein',
-    },
-    {
-        name: 'Ingo Schalow',
-        image: '/images/team/ingo-schalow.png',
-        meta: '60 Jahre, Unternehmensberater Logistik',
-        details: [
-            { icon: '👨‍👩‍👧‍👦', text: '2 erwachsene Kinder' },
-            { icon: '🏡', text: 'aufgewachsen in Sprötze' },
-            { icon: '🗳️', text: 'Seit 20 Jahren Mitglied der Wählergemeinschaft, 15 Jahre im Ortsrat' },
-        ],
-        quote:
-            'Ich bin hier zu Hause und Verantwortung beginnt vor der eigenen Haustür. Veränderungen entstehen nur dort, wo Menschen mitmachen und gemeinsam gestalten. Und ich möchte die Zukunft unsere Gemeinde aktiv mitgestalten.',
-    },
-];
+import { priorities, candidates, teamMembers, organization, contacts, legal } from './data';
 
 function App() {
     const assetUrl = (path) => `${import.meta.env.BASE_URL}${String(path).replace(/^\/+/, '')}`;
@@ -551,7 +279,7 @@ function App() {
                 <div className="legal-overlay" onClick={() => setShowImpressum(false)}>
                     <article className="legal-modal" onClick={(e) => e.stopPropagation()}>
                         <header className="legal-modal__header">
-                            <h2>Impressum</h2>
+                            <h2>{legal.impressum.heading}</h2>
                             <button
                                 type="button"
                                 onClick={() => setShowImpressum(false)}
@@ -562,54 +290,40 @@ function App() {
                             </button>
                         </header>
                         <div className="legal-modal__content">
-                            <h3>Wählergruppe Sprötze</h3>
+                            <h3>{organization.name}</h3>
+                            <p>{organization.tagline}</p>
+                            <h4>{legal.impressum.webmasterSection.title}</h4>
                             <p>
-                                Eine unabhängige Bürgerbewegung für eine lebenswerte Gemeinde.
-                            </p>
-                            <h4>Verantwortlich für Webseite & Inhalte</h4>
-                            <p>
-                                <strong>Christian Buck</strong> (Webmaster)<br/>
-                                Hubertusweg 4<br/>
-                                21244 Buchholz i.d.N.<br/>
+                                <strong>{contacts.webmaster.name}</strong> ({contacts.webmaster.title})<br/>
+                                {contacts.webmaster.address}<br/>
                                 <br/>
-                                E-Mail: <a href="mailto:wgs@buck-online.net">wgs@buck-online.net</a>
+                                E-Mail: <a href={`mailto:${contacts.webmaster.email}`}>{contacts.webmaster.email}</a>
                             </p>
-                            <h4>Vertreter der Wählergruppe</h4>
+                            <h4>{legal.impressum.representativeSection.title}</h4>
                             <p>
-                                <strong>Peter Kröger</strong><br/>
-                                Sprötzer Bahnhofstraße 9A<br/>
-                                21244 Buchholz-Sprötze<br/>
+                                <strong>{contacts.representative.name}</strong><br/>
+                                {contacts.representative.address}<br/>
                                 <br/>
-                                Telefon: <a href="tel:+4941867878">+49 4186 7878</a><br/>
-                                E-Mail: <a href="mailto:peter.kroeger@sproetze.de">peter.kroeger@sproetze.de</a>
+                                Telefon: <a href={`tel:${contacts.representative.phone.replace(/\s+/g, '')}`}>{contacts.representative.phone}</a><br/>
+                                E-Mail: <a href={`mailto:${contacts.representative.email}`}>{contacts.representative.email}</a>
                             </p>
                             <h4>Organisationsform</h4>
-                            <p>
-                                Wählergruppe Sprötze ist eine unabhängige Bürgerbewegung (nicht eingetragener Verein, parteilos).
-                            </p>
+                            <p>{legal.impressum.organizationForm}</p>
                             <h4>Kandidaten der Wählergruppe</h4>
                             <p>
-                                Denise Jusinski (35) · Peter Kröger (71) · Claas Bartels (44) · 
-                                Dorothee Kröger (36) · Christian Buck (47) · René Hamann (50) · 
-                                Ute Schwermer-Vietheer (74) · Ingo Schalow (60) · Gabriele Pilkowski
+                                {teamMembers.map((member) => `${member.name} (${member.meta.split(' ')[0]})`).join(' · ')}
                             </p>
                             <h4>Hosting & Technologie</h4>
                             <p>
-                                Diese Webseite wird gehostet auf <strong>GitHub Pages</strong> (<a href="https://pages.github.com" target="_blank" rel="noopener noreferrer">pages.github.com</a>).<br/>
+                                {legal.impressum.hostingTech.split('\n')[0]}<br/>
                                 <br/>
-                                Technologie: React + Vite<br/>
+                                {legal.impressum.hostingTech.split('\n')[1]}<br/>
                                 Quellcode: Öffentlich verfügbar auf <a href="https://github.com/chrbucs2/waehlergruppe-sproetze" target="_blank" rel="noopener noreferrer">GitHub</a>
                             </p>
                             <h4>Haftungsausschluss für externe Links</h4>
-                            <p>
-                                Für fremde Inhalte, auf die wir von dieser Seite verlinken, übernehmen wir keine Haftung nach TMG §7(1). 
-                                Dies gilt besonders für Inhalte auf von uns nicht kontrollierten Webseiten.
-                            </p>
+                            <p>{legal.impressum.externalLinksDisclaimer}</p>
                             <h4>Bildrechte</h4>
-                            <p>
-                                Alle auf dieser Seite abgebildeten Personen haben der Veröffentlichung ihrer Fotos zugestimmt. 
-                                Der Schutz der Persönlichkeitsrechte wird respektiert.
-                            </p>
+                            <p>{legal.impressum.imageRights}</p>
                         </div>
                     </article>
                 </div>
@@ -619,7 +333,7 @@ function App() {
                 <div className="legal-overlay" onClick={() => setShowDatenschutz(false)}>
                     <article className="legal-modal" onClick={(e) => e.stopPropagation()}>
                         <header className="legal-modal__header">
-                            <h2>Datenschutzerklärung</h2>
+                            <h2>{legal.datenschutz.heading}</h2>
                             <button
                                 type="button"
                                 onClick={() => setShowDatenschutz(false)}
@@ -630,88 +344,50 @@ function App() {
                             </button>
                         </header>
                         <div className="legal-modal__content">
-                            <h3>Datenschutzerklärung</h3>
-                            <p>
-                                Der Schutz Ihrer persönlichen Daten ist uns wichtig. Diese Datenschutzerklärung erläutert, 
-                                welche Informationen erfasst werden und wie wir diese behandeln (DSGVO-konform).
-                            </p>
+                            <p>{legal.datenschutz.introduction}</p>
                             <h4>Datenverantwortlicher</h4>
                             <p>
-                                <strong>Wählergruppe Sprötze</strong>, vertreten durch:<br/>
-                                • Christian Buck, wgs@buck-online.net<br/>
-                                • Peter Kröger, peter.kroeger@sproetze.de<br/>
-                                <br/>
-                                <em>Kontaktdetails siehe Impressum.</em>
+                                {legal.datenschutz.dataController.split('\n').map((line, i) => (
+                                    <span key={i}>{line}<br/></span>
+                                ))}
                             </p>
                             <h4>Datenschutzbeauftragter</h4>
-                            <p>
-                                Die Wählergruppe Sprötze ist eine kleine Initiative ohne regelmäßige Datenverarbeitung. 
-                                <strong>Kein Datenschutzbeauftragter</strong> ist nach DSGVO Art. 37 erforderlich.
-                            </p>
+                            <p>{legal.datenschutz.dsb}</p>
                             <h4>Datenerfassung durch uns</h4>
-                            <p>
-                                <strong>Diese Website erfasst KEINE persönlichen Daten von Ihnen.</strong><br/>
-                                <br/>
-                                ✓ Keine Kontaktformulare<br/>
-                                ✓ Keine Newsletter-Anmeldung<br/>
-                                ✓ Kein Tracking oder Analytics<br/>
-                                ✓ Keine Cookies<br/>
-                                ✓ Keine Speicherung von Besucherdaten
-                            </p>
+                            <p>{legal.datenschutz.noDataCollection.split('\n').map((line, i) => (<span key={i}>{line}<br/></span>))}</p>
                             <h4>Datenerfassung durch GitHub Pages (Hosting-Provider)</h4>
+                            <p>{legal.datenschutz.githubDataCollection.split('\n').map((line, i) => (<span key={i}>{line}<br/></span>))}</p>
                             <p>
-                                Diese Website wird auf <strong>GitHub Pages</strong> gehostet. GitHub speichert automatisch 
-                                Zugriffsdaten:<br/>
-                                <br/>
-                                • IP-Adresse (zur Sicherheit und Verfügbarkeit)<br/>
-                                • Zugriffszeitstempel<br/>
-                                • Browser-Informationen (User-Agent)<br/>
-                                • Referrer-Daten<br/>
-                            </p>
-                            <p>
-                                <strong>Rechtsgrundlage:</strong> DSGVO Art. 6 Abs. 1 f) (berechtigtes Interesse 
-                                zur Infrastruktur-Überwachung und Sicherheit)<br/>
-                                <strong>Speicherdauer:</strong> Typischerweise ca. 90 Tage nach GitHub-Standardrichtlinien<br/>
+                                <strong>Rechtsgrundlage:</strong> {legal.datenschutz.legalBasis}<br/>
+                                <strong>Speicherdauer:</strong> {legal.datenschutz.storageDuration}<br/>
                                 <strong>Verarbeitung durch:</strong> GitHub Inc. (USA), unter EU-Datenschutzabkommen
                             </p>
                             <h4>Ihre Rechte und Widerspruch</h4>
-                            <p>
-                                Sie haben unter der DSGVO folgende Rechte:
-                            </p>
-                            <p>
-                                • Recht auf Auskunft über Ihre Daten (Art. 15)<br/>
-                                • Recht auf Berichtigung oder Löschung (Art. 16–17)<br/>
-                                • Recht auf Datenportabilität (Art. 20)<br/>
-                                • Recht auf Beschwerde bei einer Datenschutzbehörde (Art. 77)<br/>
-                            </p>
+                            <p>Sie haben unter der DSGVO folgende Rechte:</p>
+                            <p>{legal.datenschutz.userRights.split('\n').map((line, i) => (<span key={i}>{line}<br/></span>))}</p>
                             <p>
                                 <strong>Sie können GitHub-Datenerfassung einschränken durch:</strong><br/>
-                                • Browser-Einstellungen (Cookies, Do-Not-Track)<br/>
-                                • VPN-Nutzung<br/>
-                                • Browsererweiterungen (z.B. uBlock)<br/>
+                                {legal.datenschutz.objectionMethods.split('\n').slice(1).map((line, i) => (
+                                    <span key={i}>{line}<br/></span>
+                                ))}
                             </p>
                             <p>
                                 Für volle DSGVO-Rechte kontaktieren Sie bitte GitHub unter ihrer 
                                 <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener noreferrer">
-                                    Privacy Statement
+                                    {' '}Privacy Statement
                                 </a>.
                             </p>
                             <h4>Open Source & Transparenz</h4>
                             <p>
-                                Der Quellcode dieser Website ist öffentlich verfügbar (<a href="https://github.com/chrbucs2/waehlergruppe-sproetze" target="_blank" rel="noopener noreferrer">GitHub</a>). 
-                                Es gibt keine versteckten Datenverarbeitungen oder Tracking-Skripte. Alle genutzten 
-                                Bibliotheken (React, Vite) sind unter MIT-Lizenz verfügbar.
+                                <a href="https://github.com/chrbucs2/waehlergruppe-sproetze" target="_blank" rel="noopener noreferrer">Quellcode</a>: {legal.datenschutz.openSource}
                             </p>
                             <h4>Kontakt & Fragen</h4>
                             <p>
-                                Bei Fragen zum Datenschutz kontaktieren Sie die Wählergruppe Sprötze 
+                                Bei Fragen zum Datenschutz kontaktieren Sie die {organization.name} 
                                 über die im Impressum angegebenen Kontaktdaten.
                             </p>
                             <h4>Änderungen dieser Erklärung</h4>
-                            <p>
-                                Wir behalten uns vor, diese Datenschutzerklärung jederzeit anzupassen. 
-                                Die aktuelle Fassung finden Sie hier auf dieser Seite. Stand: Juli 2026.
-                            </p>
+                            <p>{legal.datenschutz.changes}</p>
                         </div>
                     </article>
                 </div>
