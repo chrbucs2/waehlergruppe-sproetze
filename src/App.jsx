@@ -554,26 +554,39 @@ function App() {
                             <p>
                                 Eine unabhängige Bürgerbewegung für eine lebenswerte Gemeinde.
                             </p>
-                            <h4>Verantwortliche Organisation</h4>
+                            <h4>Verantwortlich für Webseite & Inhalte</h4>
                             <p>
-                                <strong>Wählergruppe Sprötze</strong><br/>
-                                Unabhängige Wählerinitiative (nicht eingetragener Verein)<br/>
+                                <strong>Christian Buck</strong> (Webmaster)<br/>
+                                Hubertusweg 4<br/>
+                                21244 Buchholz i.d.N.<br/>
                                 <br/>
-                                <em>Die Kontaktdaten der Verantwortlichen finden Sie in unserem lokalen Netzwerk oder in den öffentlichen Wahlunterlagen.</em>
+                                E-Mail: <a href="mailto:wgs@buck-online.net">wgs@buck-online.net</a>
                             </p>
-                            <h4>Kandidaten</h4>
+                            <h4>Vertreter der Wählergruppe</h4>
                             <p>
-                                Denise Jusinski · Peter Kröger · Claas Bartels · Dorothee Kröger · 
-                                Christian Buck · René Hamann · Ute Schwermer-Vietheer · Ingo Schalow · 
-                                Detlev von der Heide
+                                <strong>Peter Kröger</strong><br/>
+                                Sprötzer Bahnhofstraße 9A<br/>
+                                21244 Buchholz-Sprötze<br/>
+                                <br/>
+                                Telefon: <a href="tel:+4941867878">+49 4186 7878</a><br/>
+                                E-Mail: <a href="mailto:peter.kroeger@sproetze.de">peter.kroeger@sproetze.de</a>
+                            </p>
+                            <h4>Organisationsform</h4>
+                            <p>
+                                Wählergruppe Sprötze ist eine unabhängige Bürgerbewegung (nicht eingetragener Verein, parteilos).
+                            </p>
+                            <h4>Kandidaten der Wählergruppe</h4>
+                            <p>
+                                Denise Jusinski (35) · Peter Kröger (71) · Claas Bartels (44) · 
+                                Dorothee Kröger (36) · Christian Buck (47) · René Hamann (50) · 
+                                Ute Schwermer-Vietheer (74) · Ingo Schalow (60) · Detlev von der Heide
                             </p>
                             <h4>Hosting & Technologie</h4>
                             <p>
                                 Diese Webseite wird gehostet auf <strong>GitHub Pages</strong> (<a href="https://pages.github.com" target="_blank" rel="noopener noreferrer">pages.github.com</a>).<br/>
                                 <br/>
                                 Technologie: React + Vite<br/>
-                                Quellcode: Öffentlich verfügbar auf <a href="https://github.com/chrbucs2/waehlergruppe-sproetze" target="_blank" rel="noopener noreferrer">GitHub</a><br/>
-                                Repository: chrbucs2/waehlergruppe-sproetze
+                                Quellcode: Öffentlich verfügbar auf <a href="https://github.com/chrbucs2/waehlergruppe-sproetze" target="_blank" rel="noopener noreferrer">GitHub</a>
                             </p>
                             <h4>Haftungsausschluss für externe Links</h4>
                             <p>
