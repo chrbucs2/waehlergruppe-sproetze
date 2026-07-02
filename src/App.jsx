@@ -98,7 +98,7 @@ const candidates = [
     },
     {
         name: 'Dorothee Kröger',
-        profile: '36 Jahre, Klimamanagement Unternehmensentwicklung',
+        profile: '36 Jahre, Klinikmanagement Unternehmensentwicklung',
         summary:
             'Dorothee verbindet sichere Wege, starke Vereine und einen offenen Dorfmittelpunkt für alle Generationen.',
         priorities: [
@@ -204,7 +204,7 @@ const teamMembers = [
         name: 'Dorothee Kröger',
         image: '/images/team/dorothee-kroeger.png',
         imagePosition: 'center 25%',
-        meta: '36 Jahre, Klimamanagement Unternehmensentwicklung',
+        meta: '36 Jahre, Klinikmanagement Unternehmensentwicklung',
         details: [
             { icon: '👨‍👩‍👧‍👦', text: 'Mutter' },
             { icon: '🚒', text: 'Mitglied Freiwillige Feuerwehr Sprötze, seit 2001, Stadtkinderfeuerwehrwartin und Kinderfeuerwehrwartin Sprötze, seit 2020' },
@@ -279,7 +279,7 @@ function App() {
     const [activeCandidate, setActiveCandidate] = useState(candidates[0]);
     const [activeTeamMemberName, setActiveTeamMemberName] = useState(null);
     const activeTeamMember = teamMembers.find((member) => member.name === activeTeamMemberName) ?? null;
-    const heroFaces = teamMembers.slice(0, 8);
+    const heroFaces = teamMembers;
 
     const highlights = [
         'Bürgernähe. Sprötze. Für EUCH!',
