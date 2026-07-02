@@ -1,18 +1,18 @@
 :root {
   color-scheme: light;
-  --bg: #f1eef8;
-  --bg-soft: #e7e2f2;
-  --surface: rgba(248, 245, 255, 0.92);
-  --surface-strong: #fcfbff;
+  --bg: #eeebfb;
+  --bg-soft: #e2dcf3;
+  --surface: rgba(245, 242, 255, 0.93);
+  --surface-strong: #f9f7ff;
   --text: #2f2b3a;
-  --muted: #5f5870;
+  --muted: #5b5470;
   --primary: #7b4a7c;
   --primary-dark: #5d375d;
-  --secondary: #6f6ba3;
-  --accent: #bba7de;
+  --secondary: #6663a8;
+  --accent: #ad98d8;
   --accent-dark: #4b3f6c;
-  --moss: #735b7e;
-  --sky: #bccfd4;
+  --moss: #6d5a8e;
+  --sky: #b7c8e4;
   --border: rgba(93, 55, 93, 0.2);
   --shadow: 0 24px 60px rgba(53, 39, 74, 0.12);
 }
@@ -30,9 +30,9 @@ body {
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   color: var(--text);
   background:
-    radial-gradient(circle at top, rgba(123, 74, 124, 0.2), transparent 28%),
-    radial-gradient(circle at 85% 12%, rgba(188, 207, 212, 0.3), transparent 24%),
-    linear-gradient(180deg, #f7f4ff 0%, var(--bg) 100%);
+    radial-gradient(circle at top, rgba(123, 74, 124, 0.22), transparent 28%),
+    radial-gradient(circle at 85% 12%, rgba(183, 200, 228, 0.34), transparent 24%),
+    linear-gradient(180deg, #f4f1ff 0%, var(--bg) 100%);
 }
 
 a {
@@ -65,7 +65,7 @@ a {
   grid-template-columns: 1fr 1fr;
   gap: 24px;
   padding: 28px;
-  background: linear-gradient(135deg, rgba(252, 250, 255, 0.97), rgba(231, 226, 242, 0.9));
+  background: linear-gradient(135deg, rgba(248, 245, 255, 0.98), rgba(224, 216, 244, 0.92));
   align-items: center;
 }
 
@@ -291,7 +291,7 @@ h1 {
   gap: 16px;
   margin: 18px 0;
   padding: 28px;
-  background: rgba(255, 251, 246, 0.78);
+  background: rgba(245, 241, 255, 0.8);
 }
 
 .stats__header {
@@ -323,17 +323,17 @@ h1 {
 .content {
   margin-top: 18px;
   padding: 28px;
-  background: rgba(255, 251, 246, 0.8);
+  background: rgba(245, 241, 255, 0.82);
 }
 
 .content--soft {
-  background: linear-gradient(180deg, rgba(231, 226, 242, 0.5), rgba(252, 249, 255, 0.92));
+  background: linear-gradient(180deg, rgba(223, 214, 244, 0.56), rgba(247, 243, 255, 0.94));
 }
 
 .content--team {
   background:
-    linear-gradient(180deg, rgba(123, 74, 124, 0.14), rgba(255, 251, 246, 0.94)),
-    rgba(255, 251, 246, 0.9);
+    linear-gradient(180deg, rgba(123, 74, 124, 0.16), rgba(245, 241, 255, 0.95)),
+    rgba(245, 241, 255, 0.92);
 }
 
 .content--positionen {
@@ -666,7 +666,7 @@ h1 {
   display: grid;
   align-content: start;
   gap: 14px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(231, 226, 242, 0.66));
+  background: linear-gradient(135deg, rgba(249, 247, 255, 0.94), rgba(222, 213, 244, 0.7));
 }
 
 .feature-list {
