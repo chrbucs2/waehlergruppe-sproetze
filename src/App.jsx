@@ -233,7 +233,7 @@ const teamMembers = [
             { icon: '👨‍👩‍👧‍👦', text: 'Familienvater' },
         ],
         quote:
-            '„Ich stehe für ein verkehrssicheres Sprötze, in dem jeder wohlbehalten an sein Ziel kommt, für den Erhalt des dörflichen Charakters im Einklang mit dem Wandel der Zeit sowie einen austarierten HeideTourismus.',
+            'Ich stehe für ein verkehrssicheres Sprötze, in dem jeder wohlbehalten an sein Ziel kommt, für den Erhalt des dörflichen Charakters im Einklang mit dem Wandel der Zeit sowie einen austarierten HeideTourismus.',
     },
     {
         name: 'Gabriele Pilkowski',
@@ -442,9 +442,8 @@ function App() {
                                     {activeTeamMember.details.map((detail, index) => (
                                         <li
                                             key={`${detail.icon || detail.iconImage || 'icon'}-${detail.text}`}
-                                            className={index === 0 ? 'team-detail__line--plain' : ''}
                                         >
-                                            {index !== 0 && (
+                                            {(
                                                 detail.iconImage ? (
                                                     <img
                                                         className="team-detail__icon-image"
