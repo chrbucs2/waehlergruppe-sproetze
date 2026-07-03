@@ -91,7 +91,6 @@ export const teamMembers = [
         imagePosition: 'center 25%',
         meta: '74 Jahre, Studienrätin i. R.',
         details: [
-            { icon: '🎂', text: '74 Jahre, Studienrätin i.R.' },
             { icon: '👨‍👩‍👧‍👦', text: 'verheiratet, 3 Kinder, 5 Enkelkinder' },
             { icon: '🚲', text: 'Hobbies: Fahrrad fahren, regionale Geschichte, Enkelkinder, Garten, Kultur, Musik' },
             { iconImage: '/images/icons/vierdoerfer-doenz.png', iconAlt: 'Logo Vierdörfer Dönz', text: 'ehem. 1. Vorsitzende der Vierdörfer Dönz,' },
