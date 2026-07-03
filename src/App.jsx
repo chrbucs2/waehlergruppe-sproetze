@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { priorities, candidates, teamMembers, organization, contacts, legal } from './data';
 
 function App() {
@@ -8,6 +8,8 @@ function App() {
     const [activeTeamMemberName, setActiveTeamMemberName] = useState(null);
     const [showImpressum, setShowImpressum] = useState(false);
     const [showDatenschutz, setShowDatenschutz] = useState(false);
+    const priorityDetailRef = useRef(null);
+    const candidateDetailRef = useRef(null);
     const activeTeamMember = teamMembers.find((member) => member.name === activeTeamMemberName) ?? null;
     const heroFaces = teamMembers;
 
@@ -31,6 +33,25 @@ function App() {
         'Natur- und Umweltschutz.',
         'Lokalen Interessen von Sprötze!',
     ];
+
+    const scrollDetailIntoView = (detailRef) => {
+        if (!window.matchMedia('(max-width: 900px)').matches) {
+            return;
+        }
+        requestAnimationFrame(() => {
+            detailRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    };
+
+    const handlePrioritySelect = (priority) => {
+        setActivePriority(priority);
+        scrollDetailIntoView(priorityDetailRef);
+    };
+
+    const handleCandidateSelect = (candidate) => {
+        setActiveCandidate(candidate);
+        scrollDetailIntoView(candidateDetailRef);
+    };
 
     return (
         <main className="page" id="top">
@@ -102,7 +123,7 @@ function App() {
                                 key={priority.title}
                                 type="button"
                                 className={`priority-chip${activePriority.title === priority.title ? ' is-active' : ''}`}
-                                onClick={() => setActivePriority(priority)}
+                                onClick={() => handlePrioritySelect(priority)}
                             >
                                 <span>{priority.eyebrow}</span>
                                 {priority.title}
@@ -110,7 +131,7 @@ function App() {
                         ))}
                     </div>
 
-                    <article className="priority-detail">
+                    <article className="priority-detail" ref={priorityDetailRef}>
                         <p className="eyebrow">{activePriority.eyebrow}</p>
                         <h3>{activePriority.title}</h3>
                         <img
@@ -223,7 +244,7 @@ function App() {
                                 key={candidate.name}
                                 type="button"
                                 className={`priority-chip${activeCandidate.name === candidate.name ? ' is-active' : ''}`}
-                                onClick={() => setActiveCandidate(candidate)}
+                                onClick={() => handleCandidateSelect(candidate)}
                             >
                                 <span>{candidate.profile}</span>
                                 {candidate.name}
@@ -231,7 +252,7 @@ function App() {
                         ))}
                     </div>
 
-                    <article className="feature-card feature-card--active">
+                    <article className="feature-card feature-card--active" ref={candidateDetailRef}>
                         <h3>{activeCandidate.name}</h3>
                         <p className="feature-card__profile">{activeCandidate.profile}</p>
                         <p>{activeCandidate.summary}</p>
