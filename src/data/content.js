@@ -29,7 +29,7 @@ export const legal = {
     impressum: {
         heading: 'Impressum',
         webmasterSection: {
-            title: 'Verantwortlich für Webseite & Inhalte',
+            title: 'Verantwortlich für Webseite',
             content: `${contacts.webmaster.name} (${contacts.webmaster.title})
 ${contacts.webmaster.address}
 
