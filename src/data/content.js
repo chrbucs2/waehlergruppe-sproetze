@@ -45,8 +45,7 @@ E-Mail: ${contacts.representative.email}`,
         },
         organizationForm:
             'Wählergruppe Sprötze ist eine unabhängige Bürgerbewegung (nicht eingetragener Verein, parteilos).',
-        hostingTech:
-            'Diese Webseite wird gehostet auf GitHub Pages (pages.github.com). Technologie: React + Vite.',
+        hostingTech: 'Diese Webseite wird auf GitHub Pages (pages.github.com) gehostet.',
         externalLinksDisclaimer:
             'Für fremde Inhalte, auf die wir von dieser Seite verlinken, übernehmen wir keine Haftung nach TMG §7(1).',
         imageRights:
@@ -83,8 +82,6 @@ E-Mail: ${contacts.representative.email}`,
 • Browser-Einstellungen (Cookies, Do-Not-Track)
 • VPN-Nutzung
 • Browsererweiterungen (z.B. uBlock)`,
-        openSource:
-            'Der Quellcode dieser Website ist öffentlich verfügbar (GitHub). Es gibt keine versteckten Datenverarbeitungen oder Tracking-Skripte. Alle genutzten Bibliotheken (React, Vite) sind unter MIT-Lizenz verfügbar.',
         changes:
             'Wir behalten uns vor, diese Datenschutzerklärung jederzeit anzupassen. Die aktuelle Fassung finden Sie hier auf dieser Seite. Stand: Juli 2026.',
     },

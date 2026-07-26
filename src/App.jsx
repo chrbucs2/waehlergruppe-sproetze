@@ -336,10 +336,7 @@ function App() {
                             </p>
                             <h4>Hosting & Technologie</h4>
                             <p>
-                                {legal.impressum.hostingTech.split('\n')[0]}<br/>
-                                <br/>
-                                {legal.impressum.hostingTech.split('\n')[1]}<br/>
-                                Quellcode: Öffentlich verfügbar auf <a href="https://github.com/chrbucs2/waehlergruppe-sproetze" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                {legal.impressum.hostingTech}
                             </p>
                             <h4>Haftungsausschluss für externe Links</h4>
                             <p>{legal.impressum.externalLinksDisclaimer}</p>
@@ -397,10 +394,6 @@ function App() {
                                 <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener noreferrer">
                                     {' '}Privacy Statement
                                 </a>.
-                            </p>
-                            <h4>Open Source & Transparenz</h4>
-                            <p>
-                                <a href="https://github.com/chrbucs2/waehlergruppe-sproetze" target="_blank" rel="noopener noreferrer">Quellcode</a>: {legal.datenschutz.openSource}
                             </p>
                             <h4>Kontakt & Fragen</h4>
                             <p>
