@@ -313,6 +313,16 @@ function App() {
                         <div className="legal-modal__content">
                             <h3>{organization.name}</h3>
                             <p>{organization.tagline}</p>
+                            <h4>{legal.impressum.representativeSection.title}</h4>
+                            <p>
+                                <strong>{contacts.representative.name}</strong><br/>
+                                {contacts.representative.address}<br/>
+                                <br/>
+                                Telefon: <a href={`tel:${contacts.representative.phone.replace(/\s+/g, '')}`}>{contacts.representative.phone}</a><br/>
+                                E-Mail: <a href={`mailto:${contacts.representative.email}`}>{contacts.representative.email}</a>
+                            </p>
+                            <h4>Organisationsform</h4>
+                            <p>{legal.impressum.organizationForm}</p>
                             <h4>Kandidaten der Wählergruppe</h4>
                             <p>
                                 {teamMembers.map((member) => `${member.name} (${member.meta.split(' ')[0]})`).join(' · ')}
@@ -324,16 +334,6 @@ function App() {
                                 <br/>
                                 E-Mail: <a href={`mailto:${contacts.webmaster.email}`}>{contacts.webmaster.email}</a>
                             </p>
-                            <h4>{legal.impressum.representativeSection.title}</h4>
-                            <p>
-                                <strong>{contacts.representative.name}</strong><br/>
-                                {contacts.representative.address}<br/>
-                                <br/>
-                                Telefon: <a href={`tel:${contacts.representative.phone.replace(/\s+/g, '')}`}>{contacts.representative.phone}</a><br/>
-                                E-Mail: <a href={`mailto:${contacts.representative.email}`}>{contacts.representative.email}</a>
-                            </p>
-                            <h4>Organisationsform</h4>
-                            <p>{legal.impressum.organizationForm}</p>
                             <h4>Hosting & Technologie</h4>
                             <p>
                                 {legal.impressum.hostingTech}
