@@ -108,6 +108,6 @@ export const teamMembers = [
             { icon: '🗳️', text: 'Seit 20 Jahren Mitglied der Wählergemeinschaft, 15 Jahre im Ortsrat' },
         ],
         quote:
-            'Ich bin hier zu Hause und Verantwortung beginnt vor der eigenen Haustür. Veränderungen entstehen nur dort, wo Menschen mitmachen und gemeinsam gestalten. Und ich möchte die Zukunft unsere Gemeinde aktiv mitgestalten.',
+            'Ich bin hier zu Hause und Verantwortung beginnt vor der eigenen Haustür. Veränderungen entstehen nur dort, wo Menschen mitmachen und gemeinsam gestalten. Und ich möchte die Zukunft unserer Gemeinde aktiv mitgestalten.',
     },
 ];
