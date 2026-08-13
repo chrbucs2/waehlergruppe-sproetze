@@ -58,7 +58,7 @@ function App() {
             <section className="hero">
                 <div className="hero__visual" aria-hidden="true">
                     <div className="hero-logo">
-                        <img src={assetUrl('logo.png')} alt="" />
+                        <img src={assetUrl('logo.png')} alt="Logo der Wählergruppe Sprötze" />
                     </div>
                     {heroFaces.map((member, index) => (
                         <figure className={`hero-face hero-face--${index + 1}`} key={`hero-${member.name}`}>
