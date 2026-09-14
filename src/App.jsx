@@ -1,29 +1,219 @@
-import { useState, useEffect, useRef } from 'react';
-import { priorities, candidates, teamMembers, organization, contacts, legal } from './data';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import {
+    candidates,
+    contacts,
+    electionResults,
+    legal,
+    newsArticles,
+    newsTopics,
+    organization,
+    priorities,
+    scheduleItems,
+    teamMembers,
+} from './data';
 
-function App() {
-    const assetUrl = (path) => `${import.meta.env.BASE_URL}${String(path).replace(/^\/+/, '')}`;
+const NEWS_INDEX_PATH = '/spr%C3%B6tze-aktuell';
+
+function assetUrl(path) {
+    return `${import.meta.env.BASE_URL}${String(path).replace(/^\/+/, '')}`;
+}
+
+function normalizePath(pathname) {
+    if (!pathname) {
+        return '/';
+    }
+    const trimmed = pathname.endsWith('/') && pathname !== '/' ? pathname.slice(0, -1) : pathname;
+    return trimmed || '/';
+}
+
+function formatDate(dateString) {
+    return new Intl.DateTimeFormat('de-DE', {
+        day: '2-digit',
+        month: 'long',
+        year: 'numeric',
+    }).format(new Date(dateString));
+}
+
+function getTopicById(topicId) {
+    return newsTopics.find((topic) => topic.id === topicId) ?? null;
+}
+
+function getArticleBySlug(slug) {
+    return newsArticles.find((article) => article.slug === slug) ?? null;
+}
+
+function sortNewsByDate(items) {
+    return [...items].sort((left, right) => new Date(right.publishedAt) - new Date(left.publishedAt));
+}
+
+function sortScheduleByDate(items) {
+    return [...items].sort((left, right) => new Date(left.date) - new Date(right.date));
+}
+
+function LegalModals({ showImpressum, showDatenschutz, setShowImpressum, setShowDatenschutz }) {
+    return (
+        <>
+            {showImpressum && (
+                <div className="legal-overlay" onClick={() => setShowImpressum(false)}>
+                    <article className="legal-modal" onClick={(e) => e.stopPropagation()}>
+                        <header className="legal-modal__header">
+                            <h2>{legal.impressum.heading}</h2>
+                            <button
+                                type="button"
+                                onClick={() => setShowImpressum(false)}
+                                aria-label="Schließen"
+                                className="legal-modal__close"
+                            >
+                                ✕
+                            </button>
+                        </header>
+                        <div className="legal-modal__content">
+                            <h3>{organization.name}</h3>
+                            <p>{organization.tagline}</p>
+                            <h4>Organisationsform</h4>
+                            <p>{legal.impressum.organizationForm}</p>
+                            <h4>{legal.impressum.representativeSection.title}</h4>
+                            <p>
+                                <strong>{contacts.representative.name}</strong><br />
+                                {contacts.representative.address}<br />
+                                <br />
+                                Telefon: <a href={`tel:${contacts.representative.phone.replace(/\s+/g, '')}`}>{contacts.representative.phone}</a><br />
+                                E-Mail: <a href={`mailto:${contacts.representative.email}`}>{contacts.representative.email}</a>
+                            </p>
+                            <h4>Kandidaten der Wählergruppe</h4>
+                            <p>{teamMembers.map((member) => `${member.name} (${member.meta.split(' ')[0]})`).join(' · ')}</p>
+                            <h4>{legal.impressum.webmasterSection.title}</h4>
+                            <p>
+                                <strong>{contacts.webmaster.name}</strong> ({contacts.webmaster.title})<br />
+                                {contacts.webmaster.address}<br />
+                                <br />
+                                E-Mail: <a href={`mailto:${contacts.webmaster.email}`}>{contacts.webmaster.email}</a>
+                            </p>
+                            <h4>Hosting & Technologie</h4>
+                            <p>{legal.impressum.hostingTech}</p>
+                            <h4>Haftungsausschluss für externe Links</h4>
+                            <p>{legal.impressum.externalLinksDisclaimer}</p>
+                            <h4>Bildrechte</h4>
+                            <p>{legal.impressum.imageRights}</p>
+                        </div>
+                    </article>
+                </div>
+            )}
+
+            {showDatenschutz && (
+                <div className="legal-overlay" onClick={() => setShowDatenschutz(false)}>
+                    <article className="legal-modal" onClick={(e) => e.stopPropagation()}>
+                        <header className="legal-modal__header">
+                            <h2>{legal.datenschutz.heading}</h2>
+                            <button
+                                type="button"
+                                onClick={() => setShowDatenschutz(false)}
+                                aria-label="Schließen"
+                                className="legal-modal__close"
+                            >
+                                ✕
+                            </button>
+                        </header>
+                        <div className="legal-modal__content">
+                            <p>{legal.datenschutz.introduction}</p>
+                            <h4>Datenverantwortlicher</h4>
+                            <p>
+                                {legal.datenschutz.dataController.split('\n').map((line, index) => (
+                                    <span key={index}>{line}<br /></span>
+                                ))}
+                            </p>
+                            <h4>Datenschutzbeauftragter</h4>
+                            <p>{legal.datenschutz.dsb}</p>
+                            <h4>Datenerfassung durch uns</h4>
+                            <p>{legal.datenschutz.noDataCollection.split('\n').map((line, index) => (<span key={index}>{line}<br /></span>))}</p>
+                            <h4>Datenerfassung durch GitHub Pages (Hosting-Provider)</h4>
+                            <p>{legal.datenschutz.githubDataCollection.split('\n').map((line, index) => (<span key={index}>{line}<br /></span>))}</p>
+                            <p>
+                                <strong>Rechtsgrundlage:</strong> {legal.datenschutz.legalBasis}<br />
+                                <strong>Speicherdauer:</strong> {legal.datenschutz.storageDuration}<br />
+                                <strong>Verarbeitung durch:</strong> GitHub Inc. (USA), unter EU-Datenschutzabkommen
+                            </p>
+                            <h4>Ihre Rechte und Widerspruch</h4>
+                            <p>Sie haben unter der DSGVO folgende Rechte:</p>
+                            <p>{legal.datenschutz.userRights.split('\n').map((line, index) => (<span key={index}>{line}<br /></span>))}</p>
+                            <p>
+                                <strong>Sie können GitHub-Datenerfassung einschränken durch:</strong><br />
+                                {legal.datenschutz.objectionMethods.split('\n').slice(1).map((line, index) => (
+                                    <span key={index}>{line}<br /></span>
+                                ))}
+                            </p>
+                            <p>
+                                Für volle DSGVO-Rechte kontaktieren Sie bitte GitHub unter ihrer
+                                <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener noreferrer">
+                                    {' '}Privacy Statement
+                                </a>.
+                            </p>
+                            <h4>Kontakt & Fragen</h4>
+                            <p>
+                                Bei Fragen zum Datenschutz kontaktieren Sie die {organization.name}
+                                {' '}über die im Impressum angegebenen Kontaktdaten.
+                            </p>
+                            <h4>Änderungen dieser Erklärung</h4>
+                            <p>{legal.datenschutz.changes}</p>
+                        </div>
+                    </article>
+                </div>
+            )}
+        </>
+    );
+}
+
+function SiteFooter({ onShowImpressum, onShowDatenschutz }) {
+    return (
+        <footer className="footer">
+            <div>
+                <strong>Wählergruppe Sprötze</strong>
+                <p>Bürgernähe, Augenmaß und ein lebenswertes Dorf.</p>
+            </div>
+            <div className="footer__legal">
+                <button type="button" onClick={onShowImpressum} className="footer__legal-link">
+                    Impressum
+                </button>
+                <button type="button" onClick={onShowDatenschutz} className="footer__legal-link">
+                    Datenschutz
+                </button>
+            </div>
+            <a className="footer__link" href="#top">
+                Nach oben
+            </a>
+        </footer>
+    );
+}
+
+function HomePage({ onShowImpressum, onShowDatenschutz }) {
     const [activePriority, setActivePriority] = useState(priorities[0]);
     const [activeCandidate, setActiveCandidate] = useState(candidates[0]);
     const [activeTeamMemberName, setActiveTeamMemberName] = useState(null);
-    const [showImpressum, setShowImpressum] = useState(false);
-    const [showDatenschutz, setShowDatenschutz] = useState(false);
+    const [showElectionInfo, setShowElectionInfo] = useState(false);
     const priorityDetailRef = useRef(null);
     const candidateDetailRef = useRef(null);
+    const teamSectionRef = useRef(null);
     const activeTeamMember = teamMembers.find((member) => member.name === activeTeamMemberName) ?? null;
     const heroFaces = teamMembers;
-
-    useEffect(() => {
-        const handleEscKey = (e) => {
-            if (e.key === 'Escape') {
-                setActiveTeamMemberName(null);
-                setShowImpressum(false);
-                setShowDatenschutz(false);
-            }
-        };
-        document.addEventListener('keydown', handleEscKey);
-        return () => document.removeEventListener('keydown', handleEscKey);
-    }, []);
+    const teamMembersByElectionRank = useMemo(
+        () => [...teamMembers].sort((left, right) => {
+            const leftResult = electionResults.allCandidateResults.find((entry) => entry.name === left.name);
+            const rightResult = electionResults.allCandidateResults.find((entry) => entry.name === right.name);
+            return (leftResult?.rank ?? Number.POSITIVE_INFINITY) - (rightResult?.rank ?? Number.POSITIVE_INFINITY);
+        }),
+        [],
+    );
+    const electedTeamMembers = useMemo(
+        () => electionResults.electedCandidates
+            .slice()
+            .sort((left, right) => left.rank - right.rank)
+            .map((result) => {
+                const member = teamMembers.find((entry) => entry.name === result.name);
+                return member ? { ...member, election: result } : null;
+            })
+            .filter(Boolean),
+        [],
+    );
 
     const highlights = [
         'Bürgernähe. Sprötze. Für EUCH!',
@@ -43,18 +233,21 @@ function App() {
         });
     };
 
-    const handlePrioritySelect = (priority) => {
-        setActivePriority(priority);
-        scrollDetailIntoView(priorityDetailRef);
+    const handleTeamMemberSelect = (memberName) => {
+        setActiveTeamMemberName((current) => (current === memberName ? null : memberName));
     };
 
-    const handleCandidateSelect = (candidate) => {
-        setActiveCandidate(candidate);
-        scrollDetailIntoView(candidateDetailRef);
+    const handleElectedMemberJump = (memberName) => {
+        setActiveTeamMemberName(memberName);
+        requestAnimationFrame(() => {
+            teamSectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
     };
+
+    const closeElectionInfo = () => setShowElectionInfo(false);
 
     return (
-        <main className="page" id="top">
+        <>
             <section className="hero">
                 <div className="hero__visual" aria-hidden="true">
                     <div className="hero-logo">
@@ -99,6 +292,90 @@ function App() {
                 </div>
             </section>
 
+            <section className="stats stats--team">
+                <div className="stats__header">
+                    <p className="eyebrow">Im Ortsrat für Euch dabei</p>
+                    <p className="stats__intro">
+                        Nach den Wahlergebnissen vom {electionResults.source.updatedAt.split(',')[0]}
+                        <button
+                            type="button"
+                            className="stats__info-button"
+                            onClick={() => setShowElectionInfo((current) => !current)}
+                            aria-expanded={showElectionInfo}
+                            aria-controls="election-info-overlay"
+                            aria-label="Wahlergebnisse anzeigen"
+                        >
+                            <span aria-hidden="true">ⓘ</span>
+                        </button>{' '}
+                        wurden für Euch gewählt:
+                    </p>
+                </div>
+                {showElectionInfo && (
+                    <div className="election-overlay" onClick={closeElectionInfo}>
+                        <article
+                            className="election-modal"
+                            id="election-info-overlay"
+                            role="dialog"
+                            aria-modal="true"
+                            aria-label="Wahlergebnisse Sprötze"
+                            onClick={(event) => event.stopPropagation()}
+                        >
+                            <header className="election-modal__header">
+                                <div>
+                                    <p className="eyebrow">Wahlergebnisse</p>
+                                    <h3>Ortsratswahl 2026 in Sprötze</h3>
+                                </div>
+                                <button
+                                    type="button"
+                                    className="election-modal__close"
+                                    onClick={closeElectionInfo}
+                                    aria-label="Wahlergebnisse schließen"
+                                >
+                                    ✕
+                                </button>
+                            </header>
+                            <div className="election-modal__content">
+                                <p className="election-modal__copy">
+                                    Stand {electionResults.source.updatedAt} · Wahlbeteiligung {electionResults.turnout}
+                                </p>
+                                <div className="election-results-list">
+                                    {electionResults.partyResults.map((result) => (
+                                        <div className="election-results-list__item" key={result.party}>
+                                            <strong>{result.party}</strong>
+                                            <span>{result.votes} Stimmen</span>
+                                            <span>{result.percentage}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                                <p className="election-info__source">
+                                    Quelle:{' '}
+                                    <a href={electionResults.source.url} target="_blank" rel="noopener noreferrer">
+                                        {electionResults.source.label}
+                                    </a>
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                )}
+                {electedTeamMembers.map((member) => (
+                    <button
+                        key={member.name}
+                        type="button"
+                        className="stat-card stat-card--team"
+                        onClick={() => handleElectedMemberJump(member.name)}
+                    >
+                        <img
+                            className="stat-card__portrait"
+                            src={assetUrl(member.image)}
+                            alt={`Portrait von ${member.name}`}
+                            loading="lazy"
+                            style={{ objectPosition: member.imagePosition ?? 'center top' }}
+                        />
+                        <strong>{member.name}</strong>
+                    </button>
+                ))}
+            </section>
+
             <section className="stats">
                 <div className="stats__header">
                     <p className="eyebrow">Wofür wir stehen</p>
@@ -113,7 +390,6 @@ function App() {
             <section className="content content--positionen" id="positionen">
                 <div className="section-heading">
                     <p className="eyebrow">Unsere Schwerpunkte</p>
-                    <h2>Tippen Sie auf ein Anliegen, um mehr zu erfahren.</h2>
                 </div>
 
                 <div className="priority-grid">
@@ -123,7 +399,10 @@ function App() {
                                 key={priority.title}
                                 type="button"
                                 className={`priority-chip${activePriority.title === priority.title ? ' is-active' : ''}`}
-                                onClick={() => handlePrioritySelect(priority)}
+                                onClick={() => {
+                                    setActivePriority(priority);
+                                    scrollDetailIntoView(priorityDetailRef);
+                                }}
                             >
                                 <span>{priority.eyebrow}</span>
                                 {priority.title}
@@ -145,24 +424,22 @@ function App() {
                 </div>
             </section>
 
-            <section className="content content--team" id="personen">
+            <section className="content content--team" id="personen" ref={teamSectionRef}>
                 <div className="section-heading">
-                    <p className="eyebrow">Für unseren Ortsrat mit dabei</p>
+                    <p className="eyebrow">Mitglieder</p>
                     <h2>Unser Team für Sprötze</h2>
                 </div>
 
                 <div className="team-layout">
                     <div className="team-grid">
-                        {teamMembers.map((member) => (
+                        {teamMembersByElectionRank.map((member) => {
+                            const result = electionResults.allCandidateResults.find((entry) => entry.name === member.name);
+                            return (
                             <article className={`team-card${activeTeamMemberName === member.name ? ' is-active' : ''}`} key={member.name}>
                                 <button
                                     className="team-card__trigger"
                                     type="button"
-                                    onClick={() =>
-                                        setActiveTeamMemberName((current) =>
-                                            current === member.name ? null : member.name,
-                                        )
-                                    }
+                                    onClick={() => handleTeamMemberSelect(member.name)}
                                 >
                                     <img
                                         src={assetUrl(member.image)}
@@ -172,9 +449,13 @@ function App() {
                                     />
                                     <h3>{member.name}</h3>
                                     <span className="team-card__meta">{member.meta}</span>
+                                    {result?.elected && (
+                                        <span className="team-card__badge">Gewählt · Platz {result.rank}</span>
+                                    )}
                                 </button>
                             </article>
-                        ))}
+                            );
+                        })}
                     </div>
 
                     {activeTeamMember && (
@@ -189,7 +470,7 @@ function App() {
                                         style={{ objectPosition: activeTeamMember.imagePosition ?? 'center top' }}
                                     />
                                     <div>
-                                        <p className="eyebrow">Geht es noch konkreter?</p>
+                                        <p className="eyebrow">Kandidatur für den Ortsrat</p>
                                         <h3>{activeTeamMember.name}</h3>
                                     </div>
                                     <button
@@ -202,23 +483,19 @@ function App() {
                                     </button>
                                 </div>
                                 <ul className="team-detail__facts">
-                                    {activeTeamMember.details.map((detail, index) => (
-                                        <li
-                                            key={`${detail.icon || detail.iconImage || 'icon'}-${detail.text}`}
-                                        >
-                                            {(
-                                                detail.iconImage ? (
-                                                    <img
-                                                        className="team-detail__icon-image"
-                                                        src={assetUrl(detail.iconImage)}
-                                                        alt={detail.iconAlt || ''}
-                                                        loading="lazy"
-                                                    />
-                                                ) : (
-                                                    <span className="team-detail__icon" aria-hidden="true">
-                                                        {detail.icon}
-                                                    </span>
-                                                )
+                                    {activeTeamMember.details.map((detail) => (
+                                        <li key={`${detail.icon || detail.iconImage || 'icon'}-${detail.text}`}>
+                                            {detail.iconImage ? (
+                                                <img
+                                                    className="team-detail__icon-image"
+                                                    src={assetUrl(detail.iconImage)}
+                                                    alt={detail.iconAlt || ''}
+                                                    loading="lazy"
+                                                />
+                                            ) : (
+                                                <span className="team-detail__icon" aria-hidden="true">
+                                                    {detail.icon}
+                                                </span>
                                             )}
                                             <span>{detail.text}</span>
                                         </li>
@@ -244,7 +521,10 @@ function App() {
                                 key={candidate.name}
                                 type="button"
                                 className={`priority-chip${activeCandidate.name === candidate.name ? ' is-active' : ''}`}
-                                onClick={() => handleCandidateSelect(candidate)}
+                                onClick={() => {
+                                    setActiveCandidate(candidate);
+                                    scrollDetailIntoView(candidateDetailRef);
+                                }}
                             >
                                 <span>{candidate.profile}</span>
                                 {candidate.name}
@@ -270,142 +550,264 @@ function App() {
                 </div>
             </section>
 
-            <footer className="footer">
-                <div>
-                    <strong>Wählergruppe Sprötze</strong>
-                    <p>Bürgernähe, Augenmaß und ein lebenswertes Dorf.</p>
-                </div>
-                <div className="footer__legal">
-                    <button
-                        type="button"
-                        onClick={() => setShowImpressum(true)}
-                        className="footer__legal-link"
-                    >
-                        Impressum
-                    </button>
-                    <button
-                        type="button"
-                        onClick={() => setShowDatenschutz(true)}
-                        className="footer__legal-link"
-                    >
-                        Datenschutz
-                    </button>
-                </div>
-                <a className="footer__link" href="#top" onClick={(event) => event.preventDefault()}>
-                    Nach oben
-                </a>
-            </footer>
+            <SiteFooter onShowImpressum={onShowImpressum} onShowDatenschutz={onShowDatenschutz} />
+        </>
+    );
+}
 
-            {showImpressum && (
-                <div className="legal-overlay" onClick={() => setShowImpressum(false)}>
-                    <article className="legal-modal" onClick={(e) => e.stopPropagation()}>
-                        <header className="legal-modal__header">
-                            <h2>{legal.impressum.heading}</h2>
-                            <button
-                                type="button"
-                                onClick={() => setShowImpressum(false)}
-                                aria-label="Schließen"
-                                className="legal-modal__close"
-                            >
-                                ✕
-                            </button>
-                        </header>
-                        <div className="legal-modal__content">
-                            <h3>{organization.name}</h3>
-                            <p>{organization.tagline}</p>
-                            <h4>Organisationsform</h4>
-                            <p>{legal.impressum.organizationForm}</p>
-                            <h4>{legal.impressum.representativeSection.title}</h4>
-                            <p>
-                                <strong>{contacts.representative.name}</strong><br/>
-                                {contacts.representative.address}<br/>
-                                <br/>
-                                Telefon: <a href={`tel:${contacts.representative.phone.replace(/\s+/g, '')}`}>{contacts.representative.phone}</a><br/>
-                                E-Mail: <a href={`mailto:${contacts.representative.email}`}>{contacts.representative.email}</a>
-                            </p>
-                            <h4>Kandidaten der Wählergruppe</h4>
-                            <p>
-                                {teamMembers.map((member) => `${member.name} (${member.meta.split(' ')[0]})`).join(' · ')}
-                            </p>
-                            <h4>{legal.impressum.webmasterSection.title}</h4>
-                            <p>
-                                <strong>{contacts.webmaster.name}</strong> ({contacts.webmaster.title})<br/>
-                                {contacts.webmaster.address}<br/>
-                                <br/>
-                                E-Mail: <a href={`mailto:${contacts.webmaster.email}`}>{contacts.webmaster.email}</a>
-                            </p>
-                            <h4>Hosting & Technologie</h4>
-                            <p>
-                                {legal.impressum.hostingTech}
-                            </p>
-                            <h4>Haftungsausschluss für externe Links</h4>
-                            <p>{legal.impressum.externalLinksDisclaimer}</p>
-                            <h4>Bildrechte</h4>
-                            <p>{legal.impressum.imageRights}</p>
-                        </div>
+function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleSlug }) {
+    const orderedArticles = useMemo(() => sortNewsByDate(newsArticles), []);
+    const orderedSchedule = useMemo(() => sortScheduleByDate(scheduleItems), []);
+    const activeTopic = topicId ? getTopicById(topicId) : null;
+    const activeArticle = articleSlug ? getArticleBySlug(articleSlug) : null;
+
+    const visibleArticles = useMemo(() => {
+        if (!activeTopic) {
+            return orderedArticles;
+        }
+        return orderedArticles.filter((article) => article.topicIds.includes(activeTopic.id));
+    }, [activeTopic, orderedArticles]);
+
+    const upcomingSchedule = orderedSchedule.filter((item) => !item.isPast);
+    const pastSchedule = orderedSchedule.filter((item) => item.isPast).reverse();
+
+    return (
+        <>
+            <section className="hero hero--news">
+                <div className="hero__copy">
+                    <p className="eyebrow">Sprötze aktuell</p>
+                    <h1>News, Themen und Sitzungstermine</h1>
+                    <p className="lead">
+                        Hier pflegen wir aktuelle Meldungen zentral an einer Stelle — mit Themenfiltern,
+                        Detailseiten für einzelne Beiträge und Terminen relevanter Sitzungen.
+                    </p>
+                    <article className="hero__group">
+                        <ul>
+                            <li>Neueste Meldungen stehen automatisch oben.</li>
+                            <li>Themen lassen sich gesammelt filtern und aufrufen.</li>
+                            <li>Zu Sitzungen gibt es Details, Ergebnisse und Verknüpfungen zu News.</li>
+                        </ul>
+                    </article>
+                    <div className="hero__actions">
+                        <a className="button button--primary" href="#news-feed">
+                            Zu den News
+                        </a>
+                        <a className="button button--secondary" href="#termine">
+                            Zu den Terminen
+                        </a>
+                    </div>
+                </div>
+                <div className="news-hero-card">
+                    <p className="eyebrow">Aktuelles System</p>
+                    <h2>Zentrale Pflege für Beiträge und Termine</h2>
+                    <p>
+                        Inhalte kommen aus <code>src/data/news.js</code> und lassen sich dort gesammelt
+                        erweitern oder ändern.
+                    </p>
+                    <div className="focus-list">
+                        {newsTopics.map((topic) => (
+                            <a key={topic.id} href={`${NEWS_INDEX_PATH}?thema=${topic.id}`}>
+                                <span>{topic.label}</span>
+                            </a>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            <section className="content content--soft" id="news-feed">
+                <div className="section-heading">
+                    <p className="eyebrow">Themenfilter</p>
+                    <h2>{activeTopic ? `News zu ${activeTopic.label}` : 'Alle aktuellen Meldungen'}</h2>
+                    <p className="section-copy">
+                        {activeTopic ? activeTopic.description : 'Beiträge sind nach Veröffentlichungsdatum sortiert — der neueste Beitrag steht immer zuerst.'}
+                    </p>
+                </div>
+
+                <div className="topic-filter">
+                    <a className={`topic-filter__chip${!activeTopic ? ' is-active' : ''}`} href={NEWS_INDEX_PATH}>
+                        Alle Themen
+                    </a>
+                    {newsTopics.map((topic) => (
+                        <a
+                            key={topic.id}
+                            className={`topic-filter__chip${activeTopic?.id === topic.id ? ' is-active' : ''}`}
+                            href={`${NEWS_INDEX_PATH}?thema=${topic.id}`}
+                        >
+                            {topic.label}
+                        </a>
+                    ))}
+                </div>
+
+                <div className="news-layout">
+                    <div className="news-list">
+                        {visibleArticles.map((article) => (
+                            <article className="news-card" key={article.id}>
+                                <p className="eyebrow">{formatDate(article.publishedAt)}</p>
+                                <h3>{article.title}</h3>
+                                <p>{article.summary}</p>
+                                <div className="focus-list">
+                                    {article.topicIds.map((id) => (
+                                        <a key={id} href={`${NEWS_INDEX_PATH}?thema=${id}`}>
+                                            <span>{getTopicById(id)?.label ?? id}</span>
+                                        </a>
+                                    ))}
+                                </div>
+                                <a className="news-card__link" href={`${NEWS_INDEX_PATH}?artikel=${article.slug}`}>
+                                    Beitrag öffnen
+                                </a>
+                            </article>
+                        ))}
+                    </div>
+
+                    <article className="feature-card feature-card--active news-detail">
+                        {activeArticle ? (
+                            <>
+                                <p className="eyebrow">{formatDate(activeArticle.publishedAt)}</p>
+                                <h3>{activeArticle.title}</h3>
+                                <p>{activeArticle.summary}</p>
+                                {activeArticle.content.map((paragraph) => (
+                                    <p key={paragraph}>{paragraph}</p>
+                                ))}
+                                <div className="focus-list">
+                                    {activeArticle.topicIds.map((id) => (
+                                        <a key={id} href={`${NEWS_INDEX_PATH}?thema=${id}`}>
+                                            <span>{getTopicById(id)?.label ?? id}</span>
+                                        </a>
+                                    ))}
+                                </div>
+                            </>
+                        ) : (
+                            <>
+                                <p className="eyebrow">Detailansicht</p>
+                                <h3>Ein Beitrag auf eigener Seite innerhalb von „Sprötze aktuell“</h3>
+                                <p>
+                                    Klicken Sie auf eine Meldung, um den Beitrag ausführlicher zu lesen.
+                                    Der Aufruf erfolgt über die URL mit <code>?artikel=…</code> und kann direkt geteilt werden.
+                                </p>
+                            </>
+                        )}
                     </article>
                 </div>
-            )}
+            </section>
 
-            {showDatenschutz && (
-                <div className="legal-overlay" onClick={() => setShowDatenschutz(false)}>
-                    <article className="legal-modal" onClick={(e) => e.stopPropagation()}>
-                        <header className="legal-modal__header">
-                            <h2>{legal.datenschutz.heading}</h2>
-                            <button
-                                type="button"
-                                onClick={() => setShowDatenschutz(false)}
-                                aria-label="Schließen"
-                                className="legal-modal__close"
-                            >
-                                ✕
-                            </button>
-                        </header>
-                        <div className="legal-modal__content">
-                            <p>{legal.datenschutz.introduction}</p>
-                            <h4>Datenverantwortlicher</h4>
-                            <p>
-                                {legal.datenschutz.dataController.split('\n').map((line, i) => (
-                                    <span key={i}>{line}<br/></span>
-                                ))}
-                            </p>
-                            <h4>Datenschutzbeauftragter</h4>
-                            <p>{legal.datenschutz.dsb}</p>
-                            <h4>Datenerfassung durch uns</h4>
-                            <p>{legal.datenschutz.noDataCollection.split('\n').map((line, i) => (<span key={i}>{line}<br/></span>))}</p>
-                            <h4>Datenerfassung durch GitHub Pages (Hosting-Provider)</h4>
-                            <p>{legal.datenschutz.githubDataCollection.split('\n').map((line, i) => (<span key={i}>{line}<br/></span>))}</p>
-                            <p>
-                                <strong>Rechtsgrundlage:</strong> {legal.datenschutz.legalBasis}<br/>
-                                <strong>Speicherdauer:</strong> {legal.datenschutz.storageDuration}<br/>
-                                <strong>Verarbeitung durch:</strong> GitHub Inc. (USA), unter EU-Datenschutzabkommen
-                            </p>
-                            <h4>Ihre Rechte und Widerspruch</h4>
-                            <p>Sie haben unter der DSGVO folgende Rechte:</p>
-                            <p>{legal.datenschutz.userRights.split('\n').map((line, i) => (<span key={i}>{line}<br/></span>))}</p>
-                            <p>
-                                <strong>Sie können GitHub-Datenerfassung einschränken durch:</strong><br/>
-                                {legal.datenschutz.objectionMethods.split('\n').slice(1).map((line, i) => (
-                                    <span key={i}>{line}<br/></span>
-                                ))}
-                            </p>
-                            <p>
-                                Für volle DSGVO-Rechte kontaktieren Sie bitte GitHub unter ihrer 
-                                <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener noreferrer">
-                                    {' '}Privacy Statement
-                                </a>.
-                            </p>
-                            <h4>Kontakt & Fragen</h4>
-                            <p>
-                                Bei Fragen zum Datenschutz kontaktieren Sie die {organization.name} 
-                                über die im Impressum angegebenen Kontaktdaten.
-                            </p>
-                            <h4>Änderungen dieser Erklärung</h4>
-                            <p>{legal.datenschutz.changes}</p>
-                        </div>
-                    </article>
+            <section className="content" id="termine">
+                <div className="section-heading">
+                    <p className="eyebrow">Relevante Sitzungen</p>
+                    <h2>Termine mit Details, Ergebnissen und Verweisen</h2>
                 </div>
+
+                <div className="schedule-grid">
+                    <div>
+                        <h3 className="schedule-grid__headline">Anstehende Termine</h3>
+                        <div className="schedule-list">
+                            {upcomingSchedule.map((item) => (
+                                <article className="schedule-card" key={item.id}>
+                                    <div className="schedule-card__head">
+                                        <p className="eyebrow">{item.category}</p>
+                                        <strong>{formatDate(item.date)} · {item.time}</strong>
+                                    </div>
+                                    <h4>{item.title}</h4>
+                                    <p>{item.location}</p>
+                                    <p>{item.details}</p>
+                                    <ul className="feature-list">
+                                        {item.agenda.map((agendaItem) => (
+                                            <li key={agendaItem}>{agendaItem}</li>
+                                        ))}
+                                    </ul>
+                                </article>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 className="schedule-grid__headline">Vergangene Sitzungen</h3>
+                        <div className="schedule-list">
+                            {pastSchedule.map((item) => (
+                                <article className="schedule-card" key={item.id}>
+                                    <div className="schedule-card__head">
+                                        <p className="eyebrow">{item.category}</p>
+                                        <strong>{formatDate(item.date)} · {item.time}</strong>
+                                    </div>
+                                    <h4>{item.title}</h4>
+                                    <p>{item.location}</p>
+                                    <p>{item.details}</p>
+                                    {item.outcome && (
+                                        <div className="schedule-card__outcome">
+                                            <strong>Ergebnis</strong>
+                                            <p>{item.outcome}</p>
+                                        </div>
+                                    )}
+                                    {item.relatedNewsSlug && (
+                                        <a className="news-card__link" href={`${NEWS_INDEX_PATH}?artikel=${item.relatedNewsSlug}`}>
+                                            Passenden News-Beitrag öffnen
+                                        </a>
+                                    )}
+                                </article>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <SiteFooter onShowImpressum={onShowImpressum} onShowDatenschutz={onShowDatenschutz} />
+        </>
+    );
+}
+
+function App() {
+    const [currentPath, setCurrentPath] = useState(() => normalizePath(window.location.pathname));
+    const [search, setSearch] = useState(() => window.location.search);
+    const [showImpressum, setShowImpressum] = useState(false);
+    const [showDatenschutz, setShowDatenschutz] = useState(false);
+
+    useEffect(() => {
+        const handleEscKey = (event) => {
+            if (event.key === 'Escape') {
+                setShowImpressum(false);
+                setShowDatenschutz(false);
+            }
+        };
+
+        const handleLocationChange = () => {
+            setCurrentPath(normalizePath(window.location.pathname));
+            setSearch(window.location.search);
+        };
+
+        document.addEventListener('keydown', handleEscKey);
+        window.addEventListener('popstate', handleLocationChange);
+
+        return () => {
+            document.removeEventListener('keydown', handleEscKey);
+            window.removeEventListener('popstate', handleLocationChange);
+        };
+    }, []);
+
+    const params = useMemo(() => new URLSearchParams(search), [search]);
+    const topicId = params.get('thema');
+    const articleSlug = params.get('artikel');
+    const isNewsPage = currentPath === normalizePath(NEWS_INDEX_PATH);
+
+    return (
+        <main className="page" id="top">
+            {isNewsPage ? (
+                <NewsPage
+                    onShowImpressum={() => setShowImpressum(true)}
+                    onShowDatenschutz={() => setShowDatenschutz(true)}
+                    topicId={topicId}
+                    articleSlug={articleSlug}
+                />
+            ) : (
+                <HomePage
+                    onShowImpressum={() => setShowImpressum(true)}
+                    onShowDatenschutz={() => setShowDatenschutz(true)}
+                />
             )}
+            <LegalModals
+                showImpressum={showImpressum}
+                showDatenschutz={showDatenschutz}
+                setShowImpressum={setShowImpressum}
+                setShowDatenschutz={setShowDatenschutz}
+            />
         </main>
     );
 }

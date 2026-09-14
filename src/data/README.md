@@ -73,6 +73,24 @@ Rechtliche Texte:
 - `impressum`: Impressum-Inhalte (Überschriften, Texte)
 - `datenschutz`: Datenschutzerklärung (DSGVO-konform)
 
+### `news.js`
+Zentrale Inhalte für `/sprötze-aktuell`:
+
+- `newsTopics`: Themenbereiche für Filter und Zuordnungen
+- `newsArticles`: News-Beiträge mit Datum, Kurztext, Langtext und Themen
+- `scheduleItems`: Relevante Sitzungstermine mit Details, Ergebnissen und optionalem News-Link
+
+Die News werden im Frontend automatisch nach `publishedAt` absteigend sortiert, damit der neueste Beitrag oben steht.
+
+### `electionResults.js`
+Zentrale Wahldaten für die Startseite:
+
+- `source`: Quellenangabe und Zeitstempel
+- `turnout`: Wahlbeteiligung
+- `listResult`: Listen-Ergebnis der WGS
+- `electedCandidates`: die frisch gewählten Kandidaten
+- `allCandidateResults`: vollständige Stimmenübersicht der WGS-Kandidaten
+
 ## Verwendung in App.jsx
 
 ```javascript

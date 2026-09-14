@@ -3,3 +3,5 @@ export { priorities } from './priorities';
 export { candidates } from './candidates';
 export { teamMembers } from './teamMembers';
 export { organization, contacts, legal } from './content';
+export { newsArticles, newsTopics, scheduleItems } from './news';
+export { electionResults } from './electionResults';
