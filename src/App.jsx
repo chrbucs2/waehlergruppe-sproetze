@@ -579,6 +579,10 @@ function HomePage({ onShowImpressum, onShowDatenschutz }) {
 
 function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleSlug }) {
     const orderedArticles = useMemo(() => sortNewsByDate(newsArticles), []);
+    const availableTopics = useMemo(
+        () => newsTopics.filter((topic) => orderedArticles.some((article) => article.topicIds.includes(topic.id))),
+        [orderedArticles],
+    );
     const activeTopic = topicId ? getTopicById(topicId) : null;
     const activeArticle = articleSlug ? getArticleBySlug(articleSlug) : null;
     const backHref = activeTopic ? `${NEWS_INDEX_PATH}?thema=${activeTopic.id}` : NEWS_INDEX_PATH;
@@ -655,7 +659,7 @@ function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleSlug }) 
                         erweitern oder ändern.
                     </p>
                     <div className="focus-list">
-                        {newsTopics.map((topic) => (
+                        {availableTopics.map((topic) => (
                             <a key={topic.id} href={`${NEWS_INDEX_PATH}?thema=${topic.id}`}>
                                 <span>{topic.label}</span>
                             </a>
@@ -677,7 +681,7 @@ function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleSlug }) 
                     <a className={`topic-filter__chip${!activeTopic ? ' is-active' : ''}`} href={NEWS_INDEX_PATH}>
                         Alle Themen
                     </a>
-                    {newsTopics.map((topic) => (
+                    {availableTopics.map((topic) => (
                         <a
                             key={topic.id}
                             className={`topic-filter__chip${activeTopic?.id === topic.id ? ' is-active' : ''}`}
@@ -750,9 +754,17 @@ function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug }) {
                             <p key={paragraph}>{paragraph}</p>
                         ))}
                         <ul className="feature-list">
-                            {(activeScheduleItem.agendaDetails ?? activeScheduleItem.agenda.map((agendaItem) => ({ text: agendaItem }))).map((agendaItem) => (
+                            {activeScheduleItem.agenda.map((agendaItem) => (
                                 <li key={agendaItem.text}>
                                     {agendaItem.isRelevantForSproetze ? <strong>{agendaItem.text}</strong> : agendaItem.text}
+                                    {agendaItem.relatedNewsSlug && (
+                                        <>
+                                            {' '}
+                                            <a className="agenda-link" href={`${NEWS_INDEX_PATH}?artikel=${agendaItem.relatedNewsSlug}`}>
+                                                Zum News-Beitrag
+                                            </a>
+                                        </>
+                                    )}
                                 </li>
                             ))}
                         </ul>
@@ -761,11 +773,6 @@ function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug }) {
                                 <strong>Ergebnis</strong>
                                 <p>{activeScheduleItem.outcome}</p>
                             </div>
-                        )}
-                        {isPast && activeScheduleItem.relatedNewsSlug && (
-                            <a className="news-card__link" href={`${NEWS_INDEX_PATH}?artikel=${activeScheduleItem.relatedNewsSlug}`}>
-                                Passenden News-Beitrag öffnen
-                            </a>
                         )}
                         {activeScheduleItem.link && (
                             <a className="news-card__link" href={activeScheduleItem.link} target="_blank" rel="noopener noreferrer">
