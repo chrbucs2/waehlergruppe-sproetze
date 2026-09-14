@@ -73,6 +73,23 @@ a {
   align-items: stretch;
 }
 
+.hero--news h1 {
+  font-size: clamp(1.7rem, 3vw, 2.6rem);
+  line-height: 1;
+  max-width: 16ch;
+}
+
+.schedule-page__title {
+  font-size: clamp(1.55rem, 2.6vw, 2.25rem) !important;
+  max-width: 18ch !important;
+}
+
+.schedule-page__lead {
+  font-size: 0.98rem;
+  line-height: 1.55;
+  max-width: 42ch;
+}
+
 .hero__copy {
   display: flex;
   flex-direction: column;
@@ -837,7 +854,7 @@ h1 {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 24px;
-  padding: 22px;
+  padding: 18px 20px;
 }
 
 .news-hero-card {
@@ -883,6 +900,11 @@ h1 {
 .schedule-list {
   display: grid;
   gap: 14px;
+}
+
+.schedule-list__toggle {
+  margin-top: 18px;
+  justify-self: start;
 }
 
 .news-card {
@@ -954,12 +976,16 @@ h1 {
 
 .schedule-card {
   display: grid;
-  gap: 10px;
+  gap: 8px;
 }
 
 .schedule-card__head {
   display: grid;
   gap: 4px;
+}
+
+.schedule-card p {
+  font-size: 0.96rem;
 }
 
 .schedule-card__outcome {

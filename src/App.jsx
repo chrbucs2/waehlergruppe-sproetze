@@ -55,12 +55,21 @@ function getArticleBySlug(slug) {
     return newsArticles.find((article) => article.slug === slug) ?? null;
 }
 
+function getScheduleItemBySlug(slug) {
+    return scheduleItems.find((item) => item.slug === slug) ?? null;
+}
+
 function sortNewsByDate(items) {
     return [...items].sort((left, right) => new Date(right.publishedAt) - new Date(left.publishedAt));
 }
 
 function sortScheduleByDate(items) {
     return [...items].sort((left, right) => new Date(left.date) - new Date(right.date));
+}
+
+function getScheduleStatus(item, now = new Date()) {
+    const scheduleDate = new Date(`${item.date}T${item.time?.slice(0, 5) || '00:00'}:00`);
+    return scheduleDate < now ? 'past' : 'upcoming';
 }
 
 function LegalModals({ showImpressum, showDatenschutz, setShowImpressum, setShowDatenschutz }) {
@@ -705,70 +714,121 @@ function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleSlug }) 
     );
 }
 
-function SchedulePage({ onShowImpressum, onShowDatenschutz }) {
+function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug }) {
     const orderedSchedule = useMemo(() => sortScheduleByDate(scheduleItems), []);
-    const upcomingSchedule = orderedSchedule.filter((item) => !item.isPast);
-    const pastSchedule = orderedSchedule.filter((item) => item.isPast).reverse();
+    const [showAllUpcoming, setShowAllUpcoming] = useState(false);
+    const now = useMemo(() => new Date(), []);
+    const activeScheduleItem = scheduleSlug ? getScheduleItemBySlug(scheduleSlug) : null;
+    const upcomingSchedule = useMemo(
+        () => orderedSchedule.filter((item) => getScheduleStatus(item, now) === 'upcoming'),
+        [now, orderedSchedule],
+    );
+    const pastSchedule = useMemo(
+        () => orderedSchedule.filter((item) => getScheduleStatus(item, now) === 'past').reverse(),
+        [now, orderedSchedule],
+    );
+    const visibleUpcomingSchedule = showAllUpcoming ? upcomingSchedule : upcomingSchedule.slice(0, 1);
+
+    if (activeScheduleItem) {
+        const isPast = getScheduleStatus(activeScheduleItem, now) === 'past';
+
+        return (
+            <>
+                <section className="content content--soft news-article-page">
+                    <a className="news-back-link" href={SCHEDULE_PATH}>
+                        Zurück zur Terminübersicht
+                    </a>
+                    <div className="section-heading">
+                        <p className="eyebrow">
+                            {activeScheduleItem.category} · {formatDate(activeScheduleItem.date)} · {activeScheduleItem.time}
+                        </p>
+                        <h1 className="news-article-page__title">{activeScheduleItem.title}</h1>
+                        <p className="section-copy">{activeScheduleItem.location}</p>
+                    </div>
+                    <article className="feature-card feature-card--active news-article-page__content">
+                        {(activeScheduleItem.content ?? [activeScheduleItem.details]).map((paragraph) => (
+                            <p key={paragraph}>{paragraph}</p>
+                        ))}
+                        <ul className="feature-list">
+                            {(activeScheduleItem.agendaDetails ?? activeScheduleItem.agenda.map((agendaItem) => ({ text: agendaItem }))).map((agendaItem) => (
+                                <li key={agendaItem.text}>
+                                    {agendaItem.isRelevantForSproetze ? <strong>{agendaItem.text}</strong> : agendaItem.text}
+                                </li>
+                            ))}
+                        </ul>
+                        {isPast && activeScheduleItem.outcome && (
+                            <div className="schedule-card__outcome">
+                                <strong>Ergebnis</strong>
+                                <p>{activeScheduleItem.outcome}</p>
+                            </div>
+                        )}
+                        {isPast && activeScheduleItem.relatedNewsSlug && (
+                            <a className="news-card__link" href={`${NEWS_INDEX_PATH}?artikel=${activeScheduleItem.relatedNewsSlug}`}>
+                                Passenden News-Beitrag öffnen
+                            </a>
+                        )}
+                        {activeScheduleItem.link && (
+                            <a className="news-card__link" href={activeScheduleItem.link} target="_blank" rel="noopener noreferrer">
+                                Zur öffentlichen Sitzungsseite
+                            </a>
+                        )}
+                    </article>
+                </section>
+
+                <SiteFooter onShowImpressum={onShowImpressum} onShowDatenschutz={onShowDatenschutz} />
+            </>
+        );
+    }
 
     return (
         <>
             <section className="hero hero--news">
                 <div className="hero__copy">
                     <p className="eyebrow">Termine</p>
-                    <h1>Sitzungen und wichtige Termine</h1>
-                    <p className="lead">
-                        Hier sammeln wir relevante Sitzungen für Sprötze mit weiterführenden Informationen,
-                        Ergebnissen und passenden Verweisen.
+                    <h1 className="schedule-page__title">Termine für Sprötze</h1>
+                    <p className="lead schedule-page__lead">
+                        Der nächste relevante Termin zuerst, weitere bei Bedarf.
                     </p>
-                    <article className="hero__group">
-                        <ul>
-                            <li>Anstehende Termine mit Ort, Zeit und Agenda.</li>
-                            <li>Vergangene Sitzungen mit Ergebnissen.</li>
-                            <li>Optionaler Verweis auf passende News-Beiträge.</li>
-                        </ul>
-                    </article>
                     <div className="hero__actions">
-                        <a className="button button--primary" href="#kommende-termine">
-                            Zu den kommenden Terminen
+                        <a className="button button--primary" href={NEWS_INDEX_PATH}>
+                            Zu den News
                         </a>
-                        <a className="button button--secondary" href="#vergangene-termine">
-                            Zu vergangenen Sitzungen
+                        <a className="button button--secondary" href="/">
+                            Zur WGS Startseite
                         </a>
                     </div>
-                </div>
-                <div className="news-hero-card">
-                    <p className="eyebrow">Zentrale Pflege</p>
-                    <h2>Termine separat und übersichtlich</h2>
-                    <p>
-                        Die Terminpflege läuft weiterhin zentral über <code>src/data/news.js</code>,
-                        jetzt aber auf einer eigenen Testseite.
-                    </p>
                 </div>
             </section>
 
             <section className="content" id="kommende-termine">
                 <div className="section-heading">
                     <p className="eyebrow">Anstehend</p>
-                    <h2>Kommende Termine</h2>
+                    <h2>Der nächste Termin</h2>
                 </div>
                 <div className="schedule-list">
-                    {upcomingSchedule.map((item) => (
+                    {visibleUpcomingSchedule.map((item) => (
                         <article className="schedule-card" key={item.id}>
                             <div className="schedule-card__head">
                                 <p className="eyebrow">{item.category}</p>
                                 <strong>{formatDate(item.date)} · {item.time}</strong>
                             </div>
                             <h4>{item.title}</h4>
-                            <p>{item.location}</p>
                             <p>{item.details}</p>
-                            <ul className="feature-list">
-                                {item.agenda.map((agendaItem) => (
-                                    <li key={agendaItem}>{agendaItem}</li>
-                                ))}
-                            </ul>
+                            <a className="news-card__link" href={`${SCHEDULE_PATH}?termin=${item.slug}`}>
+                                Termin öffnen
+                            </a>
                         </article>
                     ))}
                 </div>
+                {upcomingSchedule.length > 1 && (
+                    <button
+                        type="button"
+                        className="button button--secondary schedule-list__toggle"
+                        onClick={() => setShowAllUpcoming((current) => !current)}
+                    >
+                        {showAllUpcoming ? 'Weniger anzeigen' : `Weitere Termine anzeigen (${upcomingSchedule.length - 1})`}
+                    </button>
+                )}
             </section>
 
             <section className="content content--soft" id="vergangene-termine">
@@ -784,19 +844,10 @@ function SchedulePage({ onShowImpressum, onShowDatenschutz }) {
                                 <strong>{formatDate(item.date)} · {item.time}</strong>
                             </div>
                             <h4>{item.title}</h4>
-                            <p>{item.location}</p>
                             <p>{item.details}</p>
-                            {item.outcome && (
-                                <div className="schedule-card__outcome">
-                                    <strong>Ergebnis</strong>
-                                    <p>{item.outcome}</p>
-                                </div>
-                            )}
-                            {item.relatedNewsSlug && (
-                                <a className="news-card__link" href={`${NEWS_INDEX_PATH}?artikel=${item.relatedNewsSlug}`}>
-                                    Passenden News-Beitrag öffnen
-                                </a>
-                            )}
+                            <a className="news-card__link" href={`${SCHEDULE_PATH}?termin=${item.slug}`}>
+                                Termin öffnen
+                            </a>
                         </article>
                     ))}
                 </div>
@@ -850,6 +901,7 @@ function App() {
     const params = useMemo(() => new URLSearchParams(search), [search]);
     const topicId = params.get('thema');
     const articleSlug = params.get('artikel');
+    const scheduleSlug = params.get('termin');
     const isNewsPage = currentPath === normalizePath(NEWS_INDEX_PATH);
     const isSchedulePage = currentPath === normalizePath(SCHEDULE_PATH);
 
@@ -866,6 +918,7 @@ function App() {
                 <SchedulePage
                     onShowImpressum={() => setShowImpressum(true)}
                     onShowDatenschutz={() => setShowDatenschutz(true)}
+                    scheduleSlug={scheduleSlug}
                 />
             ) : (
                 <HomePage
