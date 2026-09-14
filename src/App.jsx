@@ -13,6 +13,7 @@ import {
 } from './data';
 
 const NEWS_INDEX_PATH = '/spr%C3%B6tze-aktuell';
+const SCHEDULE_PATH = '/termine';
 
 function assetUrl(path) {
     return `${import.meta.env.BASE_URL}${String(path).replace(/^\/+/, '')}`;
@@ -24,6 +25,18 @@ function normalizePath(pathname) {
     }
     const trimmed = pathname.endsWith('/') && pathname !== '/' ? pathname.slice(0, -1) : pathname;
     return trimmed || '/';
+}
+
+function getPathFromLocation() {
+    const params = new URLSearchParams(window.location.search);
+    const redirectedPath = params.get('p');
+    return normalizePath(redirectedPath ? decodeURIComponent(redirectedPath) : window.location.pathname);
+}
+
+function getSearchFromLocation() {
+    const params = new URLSearchParams(window.location.search);
+    const redirectedSearch = params.get('q');
+    return redirectedSearch ? decodeURIComponent(redirectedSearch) : window.location.search;
 }
 
 function formatDate(dateString) {
@@ -557,9 +570,9 @@ function HomePage({ onShowImpressum, onShowDatenschutz }) {
 
 function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleSlug }) {
     const orderedArticles = useMemo(() => sortNewsByDate(newsArticles), []);
-    const orderedSchedule = useMemo(() => sortScheduleByDate(scheduleItems), []);
     const activeTopic = topicId ? getTopicById(topicId) : null;
     const activeArticle = articleSlug ? getArticleBySlug(articleSlug) : null;
+    const backHref = activeTopic ? `${NEWS_INDEX_PATH}?thema=${activeTopic.id}` : NEWS_INDEX_PATH;
 
     const visibleArticles = useMemo(() => {
         if (!activeTopic) {
@@ -568,38 +581,66 @@ function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleSlug }) 
         return orderedArticles.filter((article) => article.topicIds.includes(activeTopic.id));
     }, [activeTopic, orderedArticles]);
 
-    const upcomingSchedule = orderedSchedule.filter((item) => !item.isPast);
-    const pastSchedule = orderedSchedule.filter((item) => item.isPast).reverse();
+    if (activeArticle) {
+        return (
+            <>
+                <section className="content content--soft news-article-page">
+                    <a className="news-back-link" href={backHref}>
+                        Zurück zur Übersicht
+                    </a>
+                    <div className="section-heading">
+                        <p className="eyebrow">{formatDate(activeArticle.publishedAt)}</p>
+                        <h1 className="news-article-page__title">{activeArticle.title}</h1>
+                        <p className="section-copy">{activeArticle.summary}</p>
+                    </div>
+                    <article className="feature-card feature-card--active news-article-page__content">
+                        {activeArticle.content.map((paragraph) => (
+                            <p key={paragraph}>{paragraph}</p>
+                        ))}
+                        <div className="focus-list">
+                            {activeArticle.topicIds.map((id) => (
+                                <a key={id} href={`${NEWS_INDEX_PATH}?thema=${id}`}>
+                                    <span>{getTopicById(id)?.label ?? id}</span>
+                                </a>
+                            ))}
+                        </div>
+                    </article>
+                </section>
+
+                <SiteFooter onShowImpressum={onShowImpressum} onShowDatenschutz={onShowDatenschutz} />
+            </>
+        );
+    }
 
     return (
         <>
             <section className="hero hero--news">
                 <div className="hero__copy">
                     <p className="eyebrow">Sprötze aktuell</p>
-                    <h1>News, Themen und Sitzungstermine</h1>
+                    <h1>News und Themen aus Sprötze</h1>
                     <p className="lead">
-                        Hier pflegen wir aktuelle Meldungen zentral an einer Stelle — mit Themenfiltern,
-                        Detailseiten für einzelne Beiträge und Terminen relevanter Sitzungen.
+                        Hier pflegen wir aktuelle Meldungen zentral an einer Stelle — mit Themenfiltern
+                        und Detailseiten für einzelne Beiträge.
                     </p>
                     <article className="hero__group">
                         <ul>
                             <li>Neueste Meldungen stehen automatisch oben.</li>
                             <li>Themen lassen sich gesammelt filtern und aufrufen.</li>
-                            <li>Zu Sitzungen gibt es Details, Ergebnisse und Verknüpfungen zu News.</li>
+                            <li>Beiträge können über ihre eigene URL direkt geteilt werden.</li>
                         </ul>
                     </article>
                     <div className="hero__actions">
                         <a className="button button--primary" href="#news-feed">
                             Zu den News
                         </a>
-                        <a className="button button--secondary" href="#termine">
-                            Zu den Terminen
+                        <a className="button button--secondary" href={SCHEDULE_PATH}>
+                            Zur Terminseite
                         </a>
                     </div>
                 </div>
                 <div className="news-hero-card">
                     <p className="eyebrow">Aktuelles System</p>
-                    <h2>Zentrale Pflege für Beiträge und Termine</h2>
+                    <h2>Zentrale Pflege für Beiträge</h2>
                     <p>
                         Inhalte kommen aus <code>src/data/news.js</code> und lassen sich dort gesammelt
                         erweitern oder ändern.
@@ -638,114 +679,126 @@ function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleSlug }) 
                     ))}
                 </div>
 
-                <div className="news-layout">
-                    <div className="news-list">
-                        {visibleArticles.map((article) => (
-                            <article className="news-card" key={article.id}>
-                                <p className="eyebrow">{formatDate(article.publishedAt)}</p>
-                                <h3>{article.title}</h3>
-                                <p>{article.summary}</p>
-                                <div className="focus-list">
-                                    {article.topicIds.map((id) => (
-                                        <a key={id} href={`${NEWS_INDEX_PATH}?thema=${id}`}>
-                                            <span>{getTopicById(id)?.label ?? id}</span>
-                                        </a>
-                                    ))}
-                                </div>
-                                <a className="news-card__link" href={`${NEWS_INDEX_PATH}?artikel=${article.slug}`}>
-                                    Beitrag öffnen
-                                </a>
-                            </article>
-                        ))}
-                    </div>
-
-                    <article className="feature-card feature-card--active news-detail">
-                        {activeArticle ? (
-                            <>
-                                <p className="eyebrow">{formatDate(activeArticle.publishedAt)}</p>
-                                <h3>{activeArticle.title}</h3>
-                                <p>{activeArticle.summary}</p>
-                                {activeArticle.content.map((paragraph) => (
-                                    <p key={paragraph}>{paragraph}</p>
+                <div className="news-list">
+                    {visibleArticles.map((article) => (
+                        <article className="news-card" key={article.id}>
+                            <p className="eyebrow">{formatDate(article.publishedAt)}</p>
+                            <h3>{article.title}</h3>
+                            <p>{article.summary}</p>
+                            <div className="focus-list">
+                                {article.topicIds.map((id) => (
+                                    <a key={id} href={`${NEWS_INDEX_PATH}?thema=${id}`}>
+                                        <span>{getTopicById(id)?.label ?? id}</span>
+                                    </a>
                                 ))}
-                                <div className="focus-list">
-                                    {activeArticle.topicIds.map((id) => (
-                                        <a key={id} href={`${NEWS_INDEX_PATH}?thema=${id}`}>
-                                            <span>{getTopicById(id)?.label ?? id}</span>
-                                        </a>
-                                    ))}
-                                </div>
-                            </>
-                        ) : (
-                            <>
-                                <p className="eyebrow">Detailansicht</p>
-                                <h3>Ein Beitrag auf eigener Seite innerhalb von „Sprötze aktuell“</h3>
-                                <p>
-                                    Klicken Sie auf eine Meldung, um den Beitrag ausführlicher zu lesen.
-                                    Der Aufruf erfolgt über die URL mit <code>?artikel=…</code> und kann direkt geteilt werden.
-                                </p>
-                            </>
-                        )}
-                    </article>
+                            </div>
+                            <a className="news-card__link" href={`${NEWS_INDEX_PATH}?artikel=${article.slug}`}>
+                                Beitrag öffnen
+                            </a>
+                        </article>
+                    ))}
                 </div>
             </section>
 
-            <section className="content" id="termine">
-                <div className="section-heading">
-                    <p className="eyebrow">Relevante Sitzungen</p>
-                    <h2>Termine mit Details, Ergebnissen und Verweisen</h2>
+            <SiteFooter onShowImpressum={onShowImpressum} onShowDatenschutz={onShowDatenschutz} />
+        </>
+    );
+}
+
+function SchedulePage({ onShowImpressum, onShowDatenschutz }) {
+    const orderedSchedule = useMemo(() => sortScheduleByDate(scheduleItems), []);
+    const upcomingSchedule = orderedSchedule.filter((item) => !item.isPast);
+    const pastSchedule = orderedSchedule.filter((item) => item.isPast).reverse();
+
+    return (
+        <>
+            <section className="hero hero--news">
+                <div className="hero__copy">
+                    <p className="eyebrow">Termine</p>
+                    <h1>Sitzungen und wichtige Termine</h1>
+                    <p className="lead">
+                        Hier sammeln wir relevante Sitzungen für Sprötze mit weiterführenden Informationen,
+                        Ergebnissen und passenden Verweisen.
+                    </p>
+                    <article className="hero__group">
+                        <ul>
+                            <li>Anstehende Termine mit Ort, Zeit und Agenda.</li>
+                            <li>Vergangene Sitzungen mit Ergebnissen.</li>
+                            <li>Optionaler Verweis auf passende News-Beiträge.</li>
+                        </ul>
+                    </article>
+                    <div className="hero__actions">
+                        <a className="button button--primary" href="#kommende-termine">
+                            Zu den kommenden Terminen
+                        </a>
+                        <a className="button button--secondary" href="#vergangene-termine">
+                            Zu vergangenen Sitzungen
+                        </a>
+                    </div>
                 </div>
+                <div className="news-hero-card">
+                    <p className="eyebrow">Zentrale Pflege</p>
+                    <h2>Termine separat und übersichtlich</h2>
+                    <p>
+                        Die Terminpflege läuft weiterhin zentral über <code>src/data/news.js</code>,
+                        jetzt aber auf einer eigenen Testseite.
+                    </p>
+                </div>
+            </section>
 
-                <div className="schedule-grid">
-                    <div>
-                        <h3 className="schedule-grid__headline">Anstehende Termine</h3>
-                        <div className="schedule-list">
-                            {upcomingSchedule.map((item) => (
-                                <article className="schedule-card" key={item.id}>
-                                    <div className="schedule-card__head">
-                                        <p className="eyebrow">{item.category}</p>
-                                        <strong>{formatDate(item.date)} · {item.time}</strong>
-                                    </div>
-                                    <h4>{item.title}</h4>
-                                    <p>{item.location}</p>
-                                    <p>{item.details}</p>
-                                    <ul className="feature-list">
-                                        {item.agenda.map((agendaItem) => (
-                                            <li key={agendaItem}>{agendaItem}</li>
-                                        ))}
-                                    </ul>
-                                </article>
-                            ))}
-                        </div>
-                    </div>
+            <section className="content" id="kommende-termine">
+                <div className="section-heading">
+                    <p className="eyebrow">Anstehend</p>
+                    <h2>Kommende Termine</h2>
+                </div>
+                <div className="schedule-list">
+                    {upcomingSchedule.map((item) => (
+                        <article className="schedule-card" key={item.id}>
+                            <div className="schedule-card__head">
+                                <p className="eyebrow">{item.category}</p>
+                                <strong>{formatDate(item.date)} · {item.time}</strong>
+                            </div>
+                            <h4>{item.title}</h4>
+                            <p>{item.location}</p>
+                            <p>{item.details}</p>
+                            <ul className="feature-list">
+                                {item.agenda.map((agendaItem) => (
+                                    <li key={agendaItem}>{agendaItem}</li>
+                                ))}
+                            </ul>
+                        </article>
+                    ))}
+                </div>
+            </section>
 
-                    <div>
-                        <h3 className="schedule-grid__headline">Vergangene Sitzungen</h3>
-                        <div className="schedule-list">
-                            {pastSchedule.map((item) => (
-                                <article className="schedule-card" key={item.id}>
-                                    <div className="schedule-card__head">
-                                        <p className="eyebrow">{item.category}</p>
-                                        <strong>{formatDate(item.date)} · {item.time}</strong>
-                                    </div>
-                                    <h4>{item.title}</h4>
-                                    <p>{item.location}</p>
-                                    <p>{item.details}</p>
-                                    {item.outcome && (
-                                        <div className="schedule-card__outcome">
-                                            <strong>Ergebnis</strong>
-                                            <p>{item.outcome}</p>
-                                        </div>
-                                    )}
-                                    {item.relatedNewsSlug && (
-                                        <a className="news-card__link" href={`${NEWS_INDEX_PATH}?artikel=${item.relatedNewsSlug}`}>
-                                            Passenden News-Beitrag öffnen
-                                        </a>
-                                    )}
-                                </article>
-                            ))}
-                        </div>
-                    </div>
+            <section className="content content--soft" id="vergangene-termine">
+                <div className="section-heading">
+                    <p className="eyebrow">Rückblick</p>
+                    <h2>Vergangene Sitzungen</h2>
+                </div>
+                <div className="schedule-list">
+                    {pastSchedule.map((item) => (
+                        <article className="schedule-card" key={item.id}>
+                            <div className="schedule-card__head">
+                                <p className="eyebrow">{item.category}</p>
+                                <strong>{formatDate(item.date)} · {item.time}</strong>
+                            </div>
+                            <h4>{item.title}</h4>
+                            <p>{item.location}</p>
+                            <p>{item.details}</p>
+                            {item.outcome && (
+                                <div className="schedule-card__outcome">
+                                    <strong>Ergebnis</strong>
+                                    <p>{item.outcome}</p>
+                                </div>
+                            )}
+                            {item.relatedNewsSlug && (
+                                <a className="news-card__link" href={`${NEWS_INDEX_PATH}?artikel=${item.relatedNewsSlug}`}>
+                                    Passenden News-Beitrag öffnen
+                                </a>
+                            )}
+                        </article>
+                    ))}
                 </div>
             </section>
 
@@ -755,12 +808,24 @@ function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleSlug }) 
 }
 
 function App() {
-    const [currentPath, setCurrentPath] = useState(() => normalizePath(window.location.pathname));
-    const [search, setSearch] = useState(() => window.location.search);
+    const [currentPath, setCurrentPath] = useState(getPathFromLocation);
+    const [search, setSearch] = useState(getSearchFromLocation);
     const [showImpressum, setShowImpressum] = useState(false);
     const [showDatenschutz, setShowDatenschutz] = useState(false);
 
     useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        const redirectedPath = params.get('p');
+        const redirectedSearch = params.get('q');
+
+        if (redirectedPath) {
+            const targetPath = decodeURIComponent(redirectedPath);
+            const targetSearch = redirectedSearch ? decodeURIComponent(redirectedSearch) : '';
+            window.history.replaceState(null, '', `${targetPath}${targetSearch}${window.location.hash}`);
+            setCurrentPath(normalizePath(targetPath));
+            setSearch(targetSearch);
+        }
+
         const handleEscKey = (event) => {
             if (event.key === 'Escape') {
                 setShowImpressum(false);
@@ -769,8 +834,8 @@ function App() {
         };
 
         const handleLocationChange = () => {
-            setCurrentPath(normalizePath(window.location.pathname));
-            setSearch(window.location.search);
+            setCurrentPath(getPathFromLocation());
+            setSearch(getSearchFromLocation());
         };
 
         document.addEventListener('keydown', handleEscKey);
@@ -786,6 +851,7 @@ function App() {
     const topicId = params.get('thema');
     const articleSlug = params.get('artikel');
     const isNewsPage = currentPath === normalizePath(NEWS_INDEX_PATH);
+    const isSchedulePage = currentPath === normalizePath(SCHEDULE_PATH);
 
     return (
         <main className="page" id="top">
@@ -795,6 +861,11 @@ function App() {
                     onShowDatenschutz={() => setShowDatenschutz(true)}
                     topicId={topicId}
                     articleSlug={articleSlug}
+                />
+            ) : isSchedulePage ? (
+                <SchedulePage
+                    onShowImpressum={() => setShowImpressum(true)}
+                    onShowDatenschutz={() => setShowDatenschutz(true)}
                 />
             ) : (
                 <HomePage

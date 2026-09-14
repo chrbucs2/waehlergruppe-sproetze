@@ -922,6 +922,31 @@ h1 {
   min-height: 100%;
 }
 
+.news-article-page {
+  display: grid;
+  gap: 18px;
+}
+
+.news-article-page__title {
+  max-width: 20ch;
+}
+
+.news-article-page__content {
+  max-width: 820px;
+}
+
+.news-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+
+.news-back-link::before {
+  content: '←';
+}
+
 .schedule-grid__headline {
   margin-bottom: 12px;
   font-size: 1.2rem;
