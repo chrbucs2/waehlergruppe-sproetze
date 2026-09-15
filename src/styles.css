@@ -492,7 +492,7 @@ h1 {
 .section-heading {
   display: grid;
   gap: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
 }
 
 .section-heading h2 {
@@ -968,20 +968,7 @@ h1 {
   margin-top: 0;
 }
 
-.schedule-note-box {
-  display: grid;
-  gap: 8px;
-  padding: 16px 18px;
-  border-radius: 18px;
-  background: rgba(123, 74, 124, 0.08);
-  border: 1px solid rgba(123, 74, 124, 0.16);
-}
-
-.schedule-note-box h3 {
-  margin: 0;
-}
-
-.schedule-note-box p {
+.schedule-outcome-text {
   line-height: 1.7;
   margin: 0;
 }

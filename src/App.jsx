@@ -836,9 +836,7 @@ function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug }) {
                             </section>
                         ))}
                         {activeScheduleItem.outcome && (
-                            <section className="schedule-note-box">
-                                <p dangerouslySetInnerHTML={{ __html: formatInlineMarkup(activeScheduleItem.outcome) }} />
-                            </section>
+                            <p className="schedule-outcome-text" dangerouslySetInnerHTML={{ __html: formatInlineMarkup(activeScheduleItem.outcome) }} />
                         )}
                         {activeScheduleItem.link && (
                             <p className="schedule-link-note">
