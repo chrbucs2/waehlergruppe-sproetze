@@ -855,7 +855,7 @@ function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug }) {
 
     return (
         <>
-            <section className="hero hero--news">
+            <section className="hero hero--news hero--schedule">
                 <div className="hero__copy">
                     <p className="eyebrow">Termine</p>
                     <h1 className="schedule-page__title">Termine für Sprötze</h1>
