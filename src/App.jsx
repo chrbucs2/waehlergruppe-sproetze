@@ -681,7 +681,7 @@ function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleSlug }) 
 
     return (
         <>
-            <section className="hero hero--news">
+            <section className="hero hero--news hero--schedule">
                 <div className="hero__copy">
                     <p className="eyebrow">Sprötze aktuell</p>
                     <h1>News und Themen aus Sprötze</h1>

@@ -73,6 +73,10 @@ a {
   align-items: stretch;
 }
 
+.hero--news.hero--schedule {
+  grid-template-columns: 1fr;
+}
+
 .hero--news h1 {
   font-size: clamp(1.75rem, 2.9vw, 2.55rem);
   line-height: 1.08;
@@ -87,7 +91,7 @@ a {
 .schedule-page__lead {
   font-size: 0.98rem;
   line-height: 1.55;
-  max-width: 42ch;
+  max-width: 60ch;
 }
 
 .hero__copy {
@@ -980,12 +984,6 @@ h1 {
 .news-article-page {
   display: grid;
   gap: 24px;
-  grid-template-columns: 1fr;
-}
-
-.news-article-page .section-heading {
-  max-width: none;
-  width: 100%;
 }
 
 .news-article-page__title {
