@@ -73,7 +73,7 @@ a {
   align-items: stretch;
 }
 
-.hero--news.hero--schedule {
+.hero.hero--schedule {
   grid-template-columns: 1fr;
 }
 
