@@ -14,6 +14,7 @@ import {
 
 const NEWS_INDEX_PATH = '/spr%C3%B6tze-aktuell';
 const SCHEDULE_PATH = '/termine';
+const THANK_YOU_MODAL_STORAGE_KEY = 'wgs-thank-you-modal-dismissed-v1';
 
 function assetUrl(path) {
     return `${import.meta.env.BASE_URL}${String(path).replace(/^\/+/, '')}`;
@@ -182,6 +183,55 @@ function LegalModals({ showImpressum, showDatenschutz, setShowImpressum, setShow
                 </div>
             )}
         </>
+    );
+}
+
+function ThankYouModal({ isOpen, onClose }) {
+    if (!isOpen) {
+        return null;
+    }
+
+    return (
+        <div className="legal-overlay" onClick={onClose}>
+            <article
+                className="legal-modal thank-you-modal"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="thank-you-modal-title"
+                onClick={(event) => event.stopPropagation()}
+            >
+                <header className="legal-modal__header">
+                    <h2 id="thank-you-modal-title">Danke für 42,1&nbsp;% Vertrauen</h2>
+                    <button
+                        type="button"
+                        onClick={onClose}
+                        aria-label="Dankeschön schließen"
+                        className="legal-modal__close"
+                    >
+                        ✕
+                    </button>
+                </header>
+                <div className="legal-modal__content thank-you-modal__content">
+                    <p className="eyebrow">Ortsratswahl 2026</p>
+                    <p>
+                        Herzlichen Dank an alle Wählerinnen und Wähler für dieses überragende Ergebnis bei der
+                        Ortsratswahl in Sprötze.
+                    </p>
+                    <p className="thank-you-modal__highlight">
+                        42,1&nbsp;% für die Wählergruppe Sprötze
+                    </p>
+                    <p>
+                        Dieses Vertrauen ist für uns Auftrag und Ansporn, uns weiter mit voller Kraft für Sprötze
+                        einzusetzen.
+                    </p>
+                    <div className="hero__actions">
+                        <button type="button" className="button button--primary" onClick={onClose}>
+                            Vielen Dank!
+                        </button>
+                    </div>
+                </div>
+            </article>
+        </div>
     );
 }
 
@@ -870,6 +920,7 @@ function App() {
     const [search, setSearch] = useState(getSearchFromLocation);
     const [showImpressum, setShowImpressum] = useState(false);
     const [showDatenschutz, setShowDatenschutz] = useState(false);
+    const [showThankYouModal, setShowThankYouModal] = useState(false);
 
     useEffect(() => {
         const params = new URLSearchParams(window.location.search);
@@ -884,10 +935,18 @@ function App() {
             setSearch(targetSearch);
         }
 
+        const isHomePage = normalizePath(redirectedPath ? decodeURIComponent(redirectedPath) : window.location.pathname) === '/';
+        const hasDismissedThankYouModal = window.localStorage.getItem(THANK_YOU_MODAL_STORAGE_KEY) === 'true';
+
+        if (isHomePage && !hasDismissedThankYouModal) {
+            setShowThankYouModal(true);
+        }
+
         const handleEscKey = (event) => {
             if (event.key === 'Escape') {
                 setShowImpressum(false);
                 setShowDatenschutz(false);
+                setShowThankYouModal(false);
             }
         };
 
@@ -905,6 +964,11 @@ function App() {
         };
     }, []);
 
+    const closeThankYouModal = () => {
+        window.localStorage.setItem(THANK_YOU_MODAL_STORAGE_KEY, 'true');
+        setShowThankYouModal(false);
+    };
+
     const params = useMemo(() => new URLSearchParams(search), [search]);
     const topicId = params.get('thema');
     const articleSlug = params.get('artikel');
@@ -914,6 +978,7 @@ function App() {
 
     return (
         <main className="page" id="top">
+            <ThankYouModal isOpen={showThankYouModal} onClose={closeThankYouModal} />
             {isNewsPage ? (
                 <NewsPage
                     onShowImpressum={() => setShowImpressum(true)}

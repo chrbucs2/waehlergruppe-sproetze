@@ -1243,6 +1243,31 @@ h1 {
   opacity: 0.8;
 }
 
+.thank-you-modal {
+  max-width: 560px;
+}
+
+.thank-you-modal__content {
+  text-align: center;
+  gap: 18px;
+}
+
+.thank-you-modal__content .eyebrow {
+  justify-self: center;
+}
+
+.thank-you-modal__highlight {
+  margin: 0;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  line-height: 1;
+  font-weight: 800;
+  color: var(--primary-dark);
+}
+
+.thank-you-modal__content .hero__actions {
+  justify-content: center;
+}
+
 .footer__legal {
   display: flex;
   gap: 16px;
