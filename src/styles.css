@@ -980,6 +980,12 @@ h1 {
 .news-article-page {
   display: grid;
   gap: 24px;
+  grid-template-columns: 1fr;
+}
+
+.news-article-page .section-heading {
+  max-width: none;
+  width: 100%;
 }
 
 .news-article-page__title {
