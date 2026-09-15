@@ -811,6 +811,7 @@ function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug }) {
                                 ))
                                 : <p>{activeScheduleItem.introduction}</p>
                         )}
+                        <p>Themen der Sitzung waren:</p>
                         {activeScheduleItem.sections?.map((section) => (
                             <section className="schedule-detail-section" key={section.title}>
                                 <h3>{section.title}</h3>
