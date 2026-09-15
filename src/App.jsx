@@ -814,9 +814,25 @@ function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug }) {
                         {activeScheduleItem.sections?.map((section) => (
                             <section className="schedule-detail-section" key={section.title}>
                                 <h3>{section.title}</h3>
-                                {section.paragraphs.map((paragraph) => (
-                                    <p key={paragraph} dangerouslySetInnerHTML={{ __html: formatInlineMarkup(paragraph) }} />
-                                ))}
+                                {section.paragraphs.map((paragraph) => {
+                                    if (typeof paragraph === 'string') {
+                                        return (
+                                            <p
+                                                key={paragraph}
+                                                dangerouslySetInnerHTML={{ __html: formatInlineMarkup(paragraph) }}
+                                            />
+                                        );
+                                    }
+
+                                    return (
+                                        <p key={paragraph.text} className="schedule-link-note">
+                                            <strong>Quelle:</strong>{' '}
+                                            <a className="news-card__link" href={paragraph.link}>
+                                                {paragraph.text}
+                                            </a>
+                                        </p>
+                                    );
+                                })}
                             </section>
                         ))}
                         {activeScheduleItem.link && (

@@ -18,13 +18,9 @@ export const scheduleItems = [
             {
                 title: 'Lerchenpark / ehemaliges Rütgersgelände',
                 paragraphs: [
-                    'Beraten wurde der Rahmenplan für die Südstadterweiterung auf dem ehemaligen Rütgersgelände.',
-                    'Vorgesehen ist die Entwicklung eines neuen Stadtquartiers mit Wohnflächen, Einrichtungen für den Gemeinbedarf wie einer Kita oder Sporthalle, möglichen Dienstleistungen und kleinteiligem Einzelhandel sowie größeren Frei- und Grünflächen.',
-                    'Ein wesentlicher Aspekt der Planung ist die verkehrliche Einbindung des neuen Quartiers in das bestehende Straßennetz.',
-                    'Dabei soll insbesondere vermieden werden, dass unerwünschter Durchgangsverkehr durch angrenzende Wohngebiete entsteht.',
-                    'Bei der Beratung am 6. Mai handelte es sich noch nicht um die abschließende Entscheidung des Rates.',
-                    'Die Verwaltung schlug vor, den Rahmenplan vom 30. März 2026 als Grundlage für die weitere Planung zu beschließen.',
-                    'Auf dieser Basis sollen anschließend einzelne Bebauungspläne entwickelt werden. Die endgültige politische Entscheidung über den Rahmenplan war dem Rat vorbehalten.',
+                    'Beraten wurde der Rahmenplan für die Südstadterweiterung auf dem ehemaligen Rütgersgelände. Vorgesehen ist die Entwicklung eines neuen Stadtquartiers mit Wohnflächen, Einrichtungen für den Gemeinbedarf wie einer Kita oder Sporthalle, möglichen Dienstleistungen und kleinteiligem Einzelhandel sowie größeren Frei- und Grünflächen.',
+                    'Ein wesentlicher Aspekt der Planung ist die verkehrliche Einbindung des neuen Quartiers in das bestehende Straßennetz. Dabei soll insbesondere vermieden werden, dass unerwünschter Durchgangsverkehr durch angrenzende Wohngebiete entsteht.',
+                    'Bei der Beratung am 6. Mai handelte es sich noch nicht um die abschließende Entscheidung des Rates. Die Verwaltung schlug vor, den Rahmenplan vom 30. März 2026 als Grundlage für die weitere Planung zu beschließen. Auf dieser Basis sollen anschließend einzelne Bebauungspläne entwickelt werden. Die endgültige politische Entscheidung über den Rahmenplan war dem Rat vorbehalten.',
                 ],
             },
             {
@@ -35,7 +31,10 @@ export const scheduleItems = [
                     'Insbesondere sollen dort die planungsrechtlichen Voraussetzungen für den Bau einer neuen Kindertagesstätte geschaffen werden.',
                     'Der Bebauungsplan ermöglicht darüber hinaus weitere soziale, kulturelle und sportliche Einrichtungen sowie Bildungs-, Freizeit- und Spielangebote.',
                     'Neben der vorgesehenen Nutzung beschäftigte sich die Planung mit der Erschließung des Grundstücks, den Auswirkungen des zusätzlichen Verkehrs, der Entwässerung und dem Lärmschutz sowie mit Vorgaben zur Gestaltung und Begrünung der Fläche.',
-                    '-> Link zum Artikel "Bebauungsplan Sprötzer Weg"',
+                    {
+                        text: 'Link zum Artikel „Bebauungsplan Sprötzer Weg“',
+                        link: '/spr%C3%B6tze-aktuell?artikel=bebauungsplan-sproetzer-weg-an-den-tennisplaetzen-satzungsbeschluss',
+                    },
                 ],
             },
             {
