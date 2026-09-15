@@ -2,27 +2,19 @@ export const scheduleItems = [
     {
         id: 'ausschuss-stadtentwicklung-2026-05-06',
         slug: 'ausschuss-stadtentwicklung-umwelt-klimaschutz-mobilitaet-2026-05-06',
-        title: 'Sitzung mit Bebauungsplan Sprötzer Weg und Lerchenpark',
+        category: 'Ausschuss Stadtentwicklung, Umwelt, Klimaschutz und Mobilität',
         date: '2026-05-06',
         time: '18:30 Uhr',
+        title: 'Bebauungsplan Sprötzer Weg und Neuausrichtung des Innenstadtmanagements',
         location: 'Kantine, Rathausplatz 1, 21244 Buchholz i.d.N.',
-        category: 'Ausschuss Stadtentwicklung, Umwelt, Klimaschutz und Mobilität',
         isPast: true,
         details:
-            'Sitzung mit wichtigem Sprötzer Tagesordnungspunkt zum Bebauungsplan am Sprötzer Weg.',
+            'Im Mittelpunkt der Ausschusssitzung am 6. Mai 2026 standen zentrale Themen der Buchholzer Stadtentwicklung: die Entwicklung des Lerchenparks, der Bebauungsplan „Sprötzer Weg / An den Tennisplätzen“ sowie die Neuausrichtung des Innenstadtmanagements.',
         introduction: [
             'Der Ausschuss für Stadtentwicklung, Umwelt, Klimaschutz und Mobilität tagte am Mittwoch, den 6. Mai 2026, ab 18:30 Uhr in der Kantine am Rathausplatz 1 in Buchholz.',
             'Die öffentliche Sitzung dauerte laut Tagesordnung bis 21:50 Uhr.',
         ],
         sections: [
-            {
-                title: 'Lerchenpark / ehemaliges Rütgersgelände',
-                paragraphs: [
-                    'Beraten wurde der Rahmenplan für die Südstadterweiterung auf dem ehemaligen Rütgersgelände. Vorgesehen ist die Entwicklung eines neuen Stadtquartiers mit Wohnflächen, Einrichtungen für den Gemeinbedarf wie einer Kita oder Sporthalle, möglichen Dienstleistungen und kleinteiligem Einzelhandel sowie größeren Frei- und Grünflächen.',
-                    'Ein wesentlicher Aspekt der Planung ist die verkehrliche Einbindung des neuen Quartiers in das bestehende Straßennetz. Dabei soll insbesondere vermieden werden, dass unerwünschter Durchgangsverkehr durch angrenzende Wohngebiete entsteht.',
-                    'Bei der Beratung am 6. Mai handelte es sich noch nicht um die abschließende Entscheidung des Rates. Die Verwaltung schlug vor, den Rahmenplan vom 30. März 2026 als Grundlage für die weitere Planung zu beschließen. Auf dieser Basis sollen anschließend einzelne Bebauungspläne entwickelt werden. Die endgültige politische Entscheidung über den Rahmenplan war dem Rat vorbehalten.',
-                ],
-            },
             {
                 title: 'Bebauungsplan „Sprötzer Weg / An den Tennisplätzen“',
                 paragraphs: [
@@ -32,9 +24,17 @@ export const scheduleItems = [
                     'Der Bebauungsplan ermöglicht darüber hinaus weitere soziale, kulturelle und sportliche Einrichtungen sowie Bildungs-, Freizeit- und Spielangebote.',
                     'Neben der vorgesehenen Nutzung beschäftigte sich die Planung mit der Erschließung des Grundstücks, den Auswirkungen des zusätzlichen Verkehrs, der Entwässerung und dem Lärmschutz sowie mit Vorgaben zur Gestaltung und Begrünung der Fläche.',
                     {
-                        text: 'Link zum Artikel „Bebauungsplan Sprötzer Weg“',
+                        text: 'Bebauungsplan Sprötzer Weg',
                         link: '/spr%C3%B6tze-aktuell?artikel=bebauungsplan-sproetzer-weg-an-den-tennisplaetzen-satzungsbeschluss',
                     },
+                ],
+            },
+            {
+                title: 'Lerchenpark / ehemaliges Rütgersgelände',
+                paragraphs: [
+                    'Beraten wurde der Rahmenplan für die Südstadterweiterung auf dem ehemaligen Rütgersgelände. Vorgesehen ist die Entwicklung eines neuen Stadtquartiers mit Wohnflächen, Einrichtungen für den Gemeinbedarf wie einer Kita oder Sporthalle, möglichen Dienstleistungen und kleinteiligem Einzelhandel sowie größeren Frei- und Grünflächen.',
+                    'Ein wesentlicher Aspekt der Planung ist die verkehrliche Einbindung des neuen Quartiers in das bestehende Straßennetz. Dabei soll insbesondere vermieden werden, dass unerwünschter Durchgangsverkehr durch angrenzende Wohngebiete entsteht.',
+                    'Bei der Beratung am 6. Mai handelte es sich noch nicht um die abschließende Entscheidung des Rates. Die Verwaltung schlug vor, den Rahmenplan vom 30. März 2026 als Grundlage für die weitere Planung zu beschließen. Auf dieser Basis sollen anschließend einzelne Bebauungspläne entwickelt werden. Die endgültige politische Entscheidung über den Rahmenplan war dem Rat vorbehalten.',
                 ],
             },
             {
