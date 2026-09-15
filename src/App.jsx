@@ -12,8 +12,8 @@ import {
     teamMembers,
 } from './data';
 
-const NEWS_INDEX_PATH = `${import.meta.env.BASE_URL}spr%C3%B6tze-aktuell`;
-const SCHEDULE_PATH = `${import.meta.env.BASE_URL}termine`;
+const NEWS_INDEX_PATH = `${import.meta.env.BASE_URL}?p=%2Fspr%C3%B6tze-aktuell&q=`;
+const SCHEDULE_PATH = `${import.meta.env.BASE_URL}?p=%2Ftermine&q=`;
 const THANK_YOU_MODAL_STORAGE_KEY = 'wgs-thank-you-modal-dismissed-v1';
 
 function assetUrl(path) {
