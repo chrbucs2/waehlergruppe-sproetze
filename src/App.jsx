@@ -800,8 +800,16 @@ function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug }) {
                         <p className="section-copy">{activeScheduleItem.location}</p>
                     </div>
                     <article className="feature-card feature-card--active news-article-page__content">
-                        {(activeScheduleItem.content ?? [activeScheduleItem.details]).map((paragraph) => (
+                        {activeScheduleItem.content && activeScheduleItem.content.map((paragraph) => (
                             <p key={paragraph}>{paragraph}</p>
+                        ))}
+                        {activeScheduleItem.sections?.map((section) => (
+                            <section key={section.title}>
+                                <h3>{section.title}</h3>
+                                {section.paragraphs.map((paragraph) => (
+                                    <p key={paragraph}>{paragraph}</p>
+                                ))}
+                            </section>
                         ))}
                         <ul className="feature-list">
                             {activeScheduleItem.agenda.map((agendaItem) => (
