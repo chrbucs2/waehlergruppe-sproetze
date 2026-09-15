@@ -835,9 +835,14 @@ function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug }) {
                                 })}
                             </section>
                         ))}
+                        {activeScheduleItem.outcome && (
+                            <section className="schedule-note-box">
+                                <h3>Nachtrag</h3>
+                                <p dangerouslySetInnerHTML={{ __html: formatInlineMarkup(activeScheduleItem.outcome) }} />
+                            </section>
+                        )}
                         {activeScheduleItem.link && (
                             <p className="schedule-link-note">
-                                <strong>Quelle:</strong>{' '}
                                 <a className="news-card__link" href={activeScheduleItem.link} target="_blank" rel="noopener noreferrer">
                                     {activeScheduleItem.linkLabel ?? 'Zur öffentlichen Sitzungsseite'}
                                 </a>
