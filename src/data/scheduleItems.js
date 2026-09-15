@@ -8,17 +8,9 @@ export const scheduleItems = [
         location: 'Kantine, Rathausplatz 1, 21244 Buchholz i.d.N.',
         category: 'Ausschuss Stadtentwicklung, Umwelt, Klimaschutz und Mobilität',
         isPast: true,
-        agenda: [
-            { text: 'Lerchenpark: Rahmenplanverfahren zur Südstadterweiterung auf dem ehemaligen Rütgersgelände.', isRelevantForSproetze: false },
-            {
-                text: 'Bebauungsplan „Sprötzer Weg / An den Tennisplätzen, 1. Änderung“: Satzungsbeschluss nach § 10 Absatz 1 BauGB.',
-                isRelevantForSproetze: true,
-                relatedNewsSlug: 'bebauungsplan-sproetzer-weg-an-den-tennisplaetzen-satzungsbeschluss',
-            },
-            { text: 'Neuausrichtung des Innenstadtmanagements.', isRelevantForSproetze: false },
-        ],
         details:
             'Sitzung mit wichtigem Sprötzer Tagesordnungspunkt zum Bebauungsplan am Sprötzer Weg.',
+        introduction: 'Der Ausschuss für Stadtentwicklung, Umwelt, Klimaschutz und Mobilität tagte am Mittwoch, den 6. Mai 2026, ab 18:30 Uhr in der Kantine am Rathausplatz 1 in Buchholz.',
         sections: [
             {
                 title: 'Lerchenpark / ehemaliges Rütgersgelände',
@@ -44,9 +36,13 @@ export const scheduleItems = [
                     'Der Tagesordnungspunkt war zunächst als Anhörung vorgesehen. Dem Ausschuss lagen ergänzende Informationen zur möglichen Fortführung und Neuausrichtung des Stadtmarketings vor.',
                 ],
             },
+            {
+                title: 'Hinweis zur Sitzung',
+                paragraphs: [
+                    'Die öffentliche Sitzung dauerte laut Tagesordnung bis 21:50 Uhr.',
+                ],
+            },
         ],
-        outcome:
-            'Die öffentliche Vorlage zum Bebauungsplan und mehrere Anlagen waren verlinkt. Ein öffentliches Protokoll ist auf der Sitzungsseite ebenfalls aufgeführt.',
         link: 'https://www.buchholz.de/allris/to010?SILFDNR=1000953&refresh=false',
     },
     {
@@ -58,14 +54,6 @@ export const scheduleItems = [
         location: 'Kantine Rathaus Buchholz',
         category: 'Ausschuss Stadtentwicklung, Umwelt, Klimaschutz und Mobilität',
         isPast: false,
-        agenda: [
-            { text: 'Mehr Bänke an Bushaltestellen: Es wird geprüft, ob es an den Haltestellen mehr und höhere Sitzplätze geben kann.', isRelevantForSproetze: true },
-            { text: 'Bus-Fahrplan: Es gibt einen Antrag, dass die Busse in Buchholz wieder nach dem alten Fahrplan fahren sollen.', isRelevantForSproetze: true },
-            { text: 'Neues Rechenzentrum: Es wird eine Studie für ein Rechenzentrum in der Nähe vom Bahnhof vorgestellt. Dabei geht es auch um die Wärmeversorgung.', isRelevantForSproetze: false },
-            { text: 'Wohnungen bauen: Die Stadt spricht darüber, wie man schneller neue Wohnungen bauen kann.', isRelevantForSproetze: true },
-            { text: 'Klimabeirat: Es wird ein Plan besprochen, damit der Klimabeirat unabhängig arbeiten kann.', isRelevantForSproetze: false },
-            { text: 'Fragen von Bürgerinnen und Bürgern: Es gibt eine Zeit, in der Einwohnerinnen und Einwohner Fragen an die Politik stellen dürfen.', isRelevantForSproetze: true },
-        ],
         details:
             'Öffentliche Sitzung zu Stadtentwicklung, Mobilität und Klimathemen.',
         content: [
@@ -82,9 +70,6 @@ export const scheduleItems = [
         location: 'Kantine Rathaus Buchholz',
         category: 'Ausschuss Wirtschaft, Finanzen, Verwaltung und Digitalisierung',
         isPast: false,
-        agenda: [
-            'Noch keine verifizierte Tagesordnung',
-        ],
         details:
             'Relevant insbesondere bei Haushalt, Investitionsplanung, Schulen, Feuerwehr, Straßen oder städtischen Grundstücken mit Sprötze-Bezug.',
     },
@@ -97,9 +82,6 @@ export const scheduleItems = [
         location: 'Saal EMPORE',
         category: 'Rat der Stadt',
         isPast: false,
-        agenda: [
-            'Tagesordnung derzeit noch nicht verifiziert',
-        ],
         details:'Verpflichtung der Ratsmitglieder nach der Kommunalwahl',
     },
     {
@@ -111,9 +93,6 @@ export const scheduleItems = [
         location: 'Saal EMPORE',
         category: 'Rat der Stadt',
         isPast: false,
-        agenda: [
-            'Noch keine Tagesordnung vorhanden',
-        ],
         details:
             'Ausschussbesetzungen, Mehrheiten und der politischen Arbeit der neuen Wahlperiode.',
     },
@@ -126,9 +105,6 @@ export const scheduleItems = [
         location: 'Schützenhaus Sprötze',
         category: 'Ortsrat Sprötze',
         isPast: false,
-        agenda: [
-            'Noch keine Tagesordnung vorhanden',
-        ],
         details:
             'Neue Zusammensetzung, voraussichtlich Wahl von Ortsbürgermeister/in bzw. Stellvertretungen und organisatorische Weichenstellungen.',
     },
@@ -141,9 +117,6 @@ export const scheduleItems = [
         location: 'Saal EMPORE',
         category: 'Rat der Stadt',
         isPast: false,
-        agenda: [
-            'Noch keine Tagesordnung vorhanden',
-        ],
         details:
             'Projekte, Haushalt, Bebauung, Verkehr oder Infrastruktur aufgerufen werden.',
     },
@@ -156,12 +129,6 @@ export const scheduleItems = [
         location: 'Torbogenzimmer, Rathausplatz 1, 21244 Buchholz i.d.N.',
         category: 'Ortsrat Sprötze',
         isPast: true,
-        agenda: [
-            { text: 'Genehmigung des Protokolls der Sitzung vom 28.10.2024.', isRelevantForSproetze: true },
-            { text: 'Bericht der Ortsbürgermeisterin.', isRelevantForSproetze: true },
-            { text: 'Bericht des Bürgermeisters.', isRelevantForSproetze: true },
-            { text: 'Anfragen nach § 17 der Geschäftsordnung.', isRelevantForSproetze: true },
-        ],
         details:
             'Reguläre Ortsratssitzung mit kurzer öffentlicher Tagesordnung und anschließendem nichtöffentlichen Teil.',
         content: [

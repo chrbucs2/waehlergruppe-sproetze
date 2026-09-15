@@ -800,9 +800,9 @@ function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug }) {
                         <p className="section-copy">{activeScheduleItem.location}</p>
                     </div>
                     <article className="feature-card feature-card--active news-article-page__content">
-                        {activeScheduleItem.content && activeScheduleItem.content.map((paragraph) => (
-                            <p key={paragraph}>{paragraph}</p>
-                        ))}
+                        {activeScheduleItem.introduction && (
+                            <p>{activeScheduleItem.introduction}</p>
+                        )}
                         {activeScheduleItem.sections?.map((section) => (
                             <section key={section.title}>
                                 <h3>{section.title}</h3>
@@ -811,27 +811,6 @@ function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug }) {
                                 ))}
                             </section>
                         ))}
-                        <ul className="feature-list">
-                            {activeScheduleItem.agenda.map((agendaItem) => (
-                                <li key={agendaItem.text}>
-                                    {agendaItem.isRelevantForSproetze ? <strong>{agendaItem.text}</strong> : agendaItem.text}
-                                    {agendaItem.relatedNewsSlug && (
-                                        <>
-                                            {' '}
-                                            <a className="agenda-link" href={`${NEWS_INDEX_PATH}?artikel=${agendaItem.relatedNewsSlug}`}>
-                                                Zum News-Beitrag
-                                            </a>
-                                        </>
-                                    )}
-                                </li>
-                            ))}
-                        </ul>
-                        {isPast && activeScheduleItem.outcome && (
-                            <div className="schedule-card__outcome">
-                                <strong>Ergebnis</strong>
-                                <p>{activeScheduleItem.outcome}</p>
-                            </div>
-                        )}
                         {activeScheduleItem.link && (
                             <a className="news-card__link" href={activeScheduleItem.link} target="_blank" rel="noopener noreferrer">
                                 Zur öffentlichen Sitzungsseite
