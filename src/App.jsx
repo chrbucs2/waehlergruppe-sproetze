@@ -48,6 +48,10 @@ function formatDate(dateString) {
     }).format(new Date(dateString));
 }
 
+function formatInlineMarkup(text) {
+    return String(text).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+}
+
 function getTopicById(topicId) {
     return newsTopics.find((topic) => topic.id === topicId) ?? null;
 }
@@ -797,26 +801,32 @@ function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug }) {
                             {activeScheduleItem.category} · {formatDate(activeScheduleItem.date)} · {activeScheduleItem.time}
                         </p>
                         <h1 className="news-article-page__title">{activeScheduleItem.title}</h1>
+                        <div className="section-spacer" aria-hidden="true" />
                         <p className="section-copy">{activeScheduleItem.location}</p>
                     </div>
                     <article className="feature-card feature-card--active news-article-page__content">
                         {activeScheduleItem.introduction && (
                             Array.isArray(activeScheduleItem.introduction)
-                                ? activeScheduleItem.introduction.map((paragraph) => <p key={paragraph}>{paragraph}</p>)
+                                ? activeScheduleItem.introduction.map((paragraph) => (
+                                    <p key={paragraph} dangerouslySetInnerHTML={{ __html: formatInlineMarkup(paragraph) }} />
+                                ))
                                 : <p>{activeScheduleItem.introduction}</p>
                         )}
                         {activeScheduleItem.sections?.map((section) => (
                             <section className="schedule-detail-section" key={section.title}>
                                 <h3>{section.title}</h3>
                                 {section.paragraphs.map((paragraph) => (
-                                    <p key={paragraph}>{paragraph}</p>
+                                    <p key={paragraph} dangerouslySetInnerHTML={{ __html: formatInlineMarkup(paragraph) }} />
                                 ))}
                             </section>
                         ))}
                         {activeScheduleItem.link && (
-                            <a className="news-card__link" href={activeScheduleItem.link} target="_blank" rel="noopener noreferrer">
-                                Zur öffentlichen Sitzungsseite
-                            </a>
+                            <p className="schedule-link-note">
+                                <strong>Quelle:</strong>{' '}
+                                <a className="news-card__link" href={activeScheduleItem.link} target="_blank" rel="noopener noreferrer">
+                                    {activeScheduleItem.linkLabel ?? 'Zur öffentlichen Sitzungsseite'}
+                                </a>
+                            </p>
                         )}
                     </article>
                 </section>

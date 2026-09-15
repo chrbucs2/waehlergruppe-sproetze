@@ -49,6 +49,7 @@ export const scheduleItems = [
             },
         ],
         link: 'https://www.buchholz.de/allris/to010?SILFDNR=1000953&refresh=false',
+        linkLabel: 'Zur öffentlichen Sitzungsseite',
     },
     {
         id: 'ausschuss-stadtentwicklung-2026-09-17',
