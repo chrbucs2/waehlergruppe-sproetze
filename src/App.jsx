@@ -826,7 +826,6 @@ function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug }) {
 
                                     return (
                                         <p key={paragraph.text} className="schedule-link-note">
-                                            <strong>Quelle:</strong>{' '}
                                             <a className="news-card__link" href={paragraph.link}>
                                                 {paragraph.text}
                                             </a>
