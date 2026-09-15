@@ -801,7 +801,6 @@ function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug }) {
                             {activeScheduleItem.category} · {formatDate(activeScheduleItem.date)} · {activeScheduleItem.time}
                         </p>
                         <h1 className="news-article-page__title">{activeScheduleItem.title}</h1>
-                        <div className="section-spacer" aria-hidden="true" />
                         <p className="section-copy">{activeScheduleItem.location}</p>
                     </div>
                     <article className="feature-card feature-card--active news-article-page__content">
