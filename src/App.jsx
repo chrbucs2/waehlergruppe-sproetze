@@ -12,7 +12,7 @@ import {
     teamMembers,
 } from './data';
 
-const NEWS_INDEX_PATH = '/spr%C3%B6tze-aktuell';
+const NEWS_INDEX_PATH = '/sproetze-aktuell';
 const SCHEDULE_PATH = '/termine';
 const THANK_YOU_MODAL_STORAGE_KEY = 'wgs-thank-you-modal-dismissed-v1';
 

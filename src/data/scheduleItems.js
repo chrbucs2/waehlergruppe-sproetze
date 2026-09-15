@@ -24,7 +24,7 @@ export const scheduleItems = [
                     'Neben der vorgesehenen Nutzung beschäftigte sich die Planung mit der Erschließung des Grundstücks, den Auswirkungen des zusätzlichen Verkehrs, der Entwässerung und dem Lärmschutz sowie mit Vorgaben zur Gestaltung und Begrünung der Fläche.',
                     {
                         text: 'Bebauungsplan Sprötzer Weg',
-                        link: '/spr%C3%B6tze-aktuell?artikel=bebauungsplan-sproetzer-weg-an-den-tennisplaetzen-satzungsbeschluss',
+                        link: '/sproetze-aktuell?artikel=bebauungsplan-sproetzer-weg-an-den-tennisplaetzen-satzungsbeschluss',
                     },
                 ],
             },
