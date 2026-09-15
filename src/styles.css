@@ -980,14 +980,15 @@ h1 {
 .news-article-page__title {
   font-size: clamp(1.85rem, 3vw, 2.7rem);
   line-height: 1.12;
-  max-width: 20ch;
+  max-width: none;
+  width: 100%;
   margin-bottom: 10px;
 }
 
 .news-article-page__content {
   max-width: 820px;
   display: grid;
-  gap: 20px;
+  gap: 12px;
 }
 
 .news-article-page__content > p {
