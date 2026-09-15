@@ -705,7 +705,7 @@ function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleSlug }) 
                     <p className="eyebrow">Aktuelles System</p>
                     <h2>Zentrale Pflege für Beiträge</h2>
                     <p>
-                        Inhalte kommen aus <code>src/data/news.js</code> und lassen sich dort gesammelt
+                        Inhalte kommen aus <code>src/data/</code> und lassen sich dort gesammelt
                         erweitern oder ändern.
                     </p>
                     <div className="focus-list">

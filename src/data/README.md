@@ -73,12 +73,16 @@ Rechtliche Texte:
 - `impressum`: Impressum-Inhalte (Überschriften, Texte)
 - `datenschutz`: Datenschutzerklärung (DSGVO-konform)
 
-### `news.js`
-Zentrale Inhalte für `/sprötze-aktuell`:
+### `newsTopics.js`
+Themenbereiche für `/sprötze-aktuell`.
 
-- `newsTopics`: Themenbereiche für Filter und Zuordnungen
-- `newsArticles`: News-Beiträge mit Datum, Kurztext, Langtext und Themen
-- `scheduleItems`: Relevante Sitzungstermine mit Details, Ergebnissen und optionalem News-Link
+### `newsArticles.js`
+News-Beiträge mit Datum, Kurztext, Langtext und Themen.
+
+### `scheduleItems.js`
+Relevante Sitzungstermine mit Details, Ergebnissen und optionalem News-Link.
+
+Zentrale Inhalte für `/sprötze-aktuell`:
 
 Die News werden im Frontend automatisch nach `publishedAt` absteigend sortiert, damit der neueste Beitrag oben steht.
 
