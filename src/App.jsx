@@ -801,10 +801,12 @@ function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug }) {
                     </div>
                     <article className="feature-card feature-card--active news-article-page__content">
                         {activeScheduleItem.introduction && (
-                            <p>{activeScheduleItem.introduction}</p>
+                            Array.isArray(activeScheduleItem.introduction)
+                                ? activeScheduleItem.introduction.map((paragraph) => <p key={paragraph}>{paragraph}</p>)
+                                : <p>{activeScheduleItem.introduction}</p>
                         )}
                         {activeScheduleItem.sections?.map((section) => (
-                            <section key={section.title}>
+                            <section className="schedule-detail-section" key={section.title}>
                                 <h3>{section.title}</h3>
                                 {section.paragraphs.map((paragraph) => (
                                     <p key={paragraph}>{paragraph}</p>

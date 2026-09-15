@@ -10,21 +10,30 @@ export const scheduleItems = [
         isPast: true,
         details:
             'Sitzung mit wichtigem Sprötzer Tagesordnungspunkt zum Bebauungsplan am Sprötzer Weg.',
-        introduction: 'Der Ausschuss für Stadtentwicklung, Umwelt, Klimaschutz und Mobilität tagte am Mittwoch, den 6. Mai 2026, ab 18:30 Uhr in der Kantine am Rathausplatz 1 in Buchholz.',
+        introduction: [
+            'Der Ausschuss für Stadtentwicklung, Umwelt, Klimaschutz und Mobilität tagte am Mittwoch, den 6. Mai 2026, ab 18:30 Uhr in der Kantine am Rathausplatz 1 in Buchholz.',
+            'Die öffentliche Sitzung dauerte laut Tagesordnung bis 21:50 Uhr.',
+        ],
         sections: [
             {
                 title: 'Lerchenpark / ehemaliges Rütgersgelände',
                 paragraphs: [
-                    'Beraten wurde der Rahmenplan für die Südstadterweiterung auf dem ehemaligen Rütgersgelände. Vorgesehen ist die Entwicklung eines neuen Stadtquartiers mit Wohnflächen, Einrichtungen für den Gemeinbedarf wie einer Kita oder Sporthalle, möglichen Dienstleistungen und kleinteiligem Einzelhandel sowie größeren Frei- und Grünflächen.',
-                    'Ein wesentlicher Aspekt der Planung ist die verkehrliche Einbindung des neuen Quartiers in das bestehende Straßennetz. Dabei soll insbesondere vermieden werden, dass unerwünschter Durchgangsverkehr durch angrenzende Wohngebiete entsteht.',
-                    'Bei der Beratung am 6. Mai handelte es sich noch nicht um die abschließende Entscheidung des Rates. Die Verwaltung schlug vor, den Rahmenplan vom 30. März 2026 als Grundlage für die weitere Planung zu beschließen. Auf dieser Basis sollen anschließend einzelne Bebauungspläne entwickelt werden. Die endgültige politische Entscheidung über den Rahmenplan war dem Rat vorbehalten.',
+                    'Beraten wurde der Rahmenplan für die Südstadterweiterung auf dem ehemaligen Rütgersgelände.',
+                    'Vorgesehen ist die Entwicklung eines neuen Stadtquartiers mit Wohnflächen, Einrichtungen für den Gemeinbedarf wie einer Kita oder Sporthalle, möglichen Dienstleistungen und kleinteiligem Einzelhandel sowie größeren Frei- und Grünflächen.',
+                    'Ein wesentlicher Aspekt der Planung ist die verkehrliche Einbindung des neuen Quartiers in das bestehende Straßennetz.',
+                    'Dabei soll insbesondere vermieden werden, dass unerwünschter Durchgangsverkehr durch angrenzende Wohngebiete entsteht.',
+                    'Bei der Beratung am 6. Mai handelte es sich noch nicht um die abschließende Entscheidung des Rates.',
+                    'Die Verwaltung schlug vor, den Rahmenplan vom 30. März 2026 als Grundlage für die weitere Planung zu beschließen.',
+                    'Auf dieser Basis sollen anschließend einzelne Bebauungspläne entwickelt werden. Die endgültige politische Entscheidung über den Rahmenplan war dem Rat vorbehalten.',
                 ],
             },
             {
                 title: 'Bebauungsplan „Sprötzer Weg / An den Tennisplätzen“',
                 paragraphs: [
                     'Der Ausschuss beriet die 1. Änderung des Bebauungsplans als Vorbereitung des späteren Satzungsbeschlusses.',
-                    'Kern der Planung ist die Umnutzung einer bislang für Einzelhandel vorgesehenen Brachfläche neben dem bestehenden Discounter. Insbesondere sollen dort die planungsrechtlichen Voraussetzungen für den Bau einer neuen Kindertagesstätte geschaffen werden. Der Bebauungsplan ermöglicht darüber hinaus weitere soziale, kulturelle und sportliche Einrichtungen sowie Bildungs-, Freizeit- und Spielangebote.',
+                    'Kern der Planung ist die Umnutzung einer bislang für Einzelhandel vorgesehenen Brachfläche neben dem bestehenden Discounter.',
+                    'Insbesondere sollen dort die planungsrechtlichen Voraussetzungen für den Bau einer neuen Kindertagesstätte geschaffen werden.',
+                    'Der Bebauungsplan ermöglicht darüber hinaus weitere soziale, kulturelle und sportliche Einrichtungen sowie Bildungs-, Freizeit- und Spielangebote.',
                     'Neben der vorgesehenen Nutzung beschäftigte sich die Planung mit der Erschließung des Grundstücks, den Auswirkungen des zusätzlichen Verkehrs, der Entwässerung und dem Lärmschutz sowie mit Vorgaben zur Gestaltung und Begrünung der Fläche.',
                     '-> Link zum Artikel "Bebauungsplan Sprötzer Weg"',
                 ],
@@ -32,14 +41,10 @@ export const scheduleItems = [
             {
                 title: 'Neuausrichtung des Innenstadtmanagements',
                 paragraphs: [
-                    'Ein weiterer Schwerpunkt war die zukünftige Organisation des Innenstadtmanagements. Hintergrund war die Auflösung des Vereins Buchholz Marketing und damit die Frage, wie Aufgaben des Stadtmarketings und der Innenstadtentwicklung künftig organisiert und fortgeführt werden sollen.',
-                    'Der Tagesordnungspunkt war zunächst als Anhörung vorgesehen. Dem Ausschuss lagen ergänzende Informationen zur möglichen Fortführung und Neuausrichtung des Stadtmarketings vor.',
-                ],
-            },
-            {
-                title: 'Hinweis zur Sitzung',
-                paragraphs: [
-                    'Die öffentliche Sitzung dauerte laut Tagesordnung bis 21:50 Uhr.',
+                    'Ein weiterer Schwerpunkt war die zukünftige Organisation des Innenstadtmanagements.',
+                    'Hintergrund war die Auflösung des Vereins Buchholz Marketing und damit die Frage, wie Aufgaben des Stadtmarketings und der Innenstadtentwicklung künftig organisiert und fortgeführt werden sollen.',
+                    'Der Tagesordnungspunkt war zunächst als Anhörung vorgesehen.',
+                    'Dem Ausschuss lagen ergänzende Informationen zur möglichen Fortführung und Neuausrichtung des Stadtmarketings vor.',
                 ],
             },
         ],
