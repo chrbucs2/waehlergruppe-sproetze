@@ -6,6 +6,6 @@ export default defineConfig(({ command }) => {
 
   return {
     plugins: [react()],
-    base: '/',
+    base: command === 'build' ? `/${repoName}/` : '/',
   };
 });
