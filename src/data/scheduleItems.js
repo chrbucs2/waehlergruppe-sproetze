@@ -21,10 +21,6 @@ export const scheduleItems = [
                     'Insbesondere sollen dort die planungsrechtlichen Voraussetzungen für den Bau einer neuen Kindertagesstätte geschaffen werden.',
                     'Der Bebauungsplan ermöglicht darüber hinaus weitere soziale, kulturelle und sportliche Einrichtungen sowie Bildungs-, Freizeit- und Spielangebote.',
                     'Neben der vorgesehenen Nutzung beschäftigte sich die Planung mit der Erschließung des Grundstücks, den Auswirkungen des zusätzlichen Verkehrs, der Entwässerung und dem Lärmschutz sowie mit Vorgaben zur Gestaltung und Begrünung der Fläche.',
-                    {
-                        text: 'Bebauungsplan Sprötzer Weg',
-                        link: '/artikel/bebauungsplan-sproetzer-weg',
-                    },
                 ],
             },
             {
