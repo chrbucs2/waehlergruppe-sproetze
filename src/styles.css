@@ -1155,6 +1155,15 @@ h1 {
     grid-template-columns: 1fr;
   }
 
+  .hero--news,
+  .hero.hero--schedule {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__brand {
+    display: none;
+  }
+
   .stats {
     grid-template-columns: 1fr;
   }
