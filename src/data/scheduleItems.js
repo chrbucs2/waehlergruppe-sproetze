@@ -5,7 +5,7 @@ export const scheduleItems = [
         category: 'Ausschuss Stadtentwicklung, Umwelt, Klimaschutz und Mobilität',
         date: '2026-05-06',
         time: '18:30 Uhr',
-        title: 'Bebauungsplan Sprötzer Weg und Neuausrichtung des Innenstadtmanagements',
+        title: 'Bebauungsplan Sprötzer Weg',
         location: 'Kantine, Rathausplatz 1, 21244 Buchholz i.d.N.',
         details:
             'Im Mittelpunkt der Ausschusssitzung am 6. Mai 2026 standen zentrale Themen der Buchholzer Stadtentwicklung: die Entwicklung des Lerchenparks, der **Bebauungsplan „Sprötzer Weg / An den Tennisplätzen“** sowie die Neuausrichtung des Innenstadtmanagements.',
@@ -52,7 +52,7 @@ export const scheduleItems = [
         category: 'Ortsrat Sprötze',
         date: '2026-06-15',
         time: '17:30 Uhr',
-        title: 'Berichte zu aktuellen Themen und Grundstücksangelegenheit in der Niedersachsenstraße 13',
+        title: 'Grundstücksangelegenheit in der Niedersachsenstraße 13',
         location: 'Torbogenzimmer, Rathausplatz 1, 21244 Buchholz i.d.N.',
         details:
             'Im Mittelpunkt der Sitzung des Ortsrates Sprötze am 15. Juni 2026 standen die Berichte der Ortsbürgermeisterin und des Bürgermeisters sowie aktuelle Anfragen aus dem Ortsrat. Im nichtöffentlichen Teil wurde zudem die **Veräußerung eines Wohngrundstücks in der Niedersachsenstraße 13** behandelt.',
