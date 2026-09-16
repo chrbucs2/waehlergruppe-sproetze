@@ -803,49 +803,56 @@ function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug }) {
                         <h1 className="news-article-page__title">{activeScheduleItem.title}</h1>
                         <p className="section-copy">{activeScheduleItem.location}</p>
                     </div>
-                    <article className="feature-card feature-card--active news-article-page__content">
-                        {activeScheduleItem.introduction && (
-                            Array.isArray(activeScheduleItem.introduction)
+                    {activeScheduleItem.introduction && (
+                        <div className="schedule-detail-intro">
+                            {Array.isArray(activeScheduleItem.introduction)
                                 ? activeScheduleItem.introduction.map((paragraph) => (
                                     <p key={paragraph} dangerouslySetInnerHTML={{ __html: formatInlineMarkup(paragraph) }} />
                                 ))
-                                : <p>{activeScheduleItem.introduction}</p>
-                        )}
-                        {activeScheduleItem.sections?.length > 0 && <p>Themen der Sitzung waren:</p>}
-                        {activeScheduleItem.sections?.map((section) => (
-                            <section className="schedule-detail-section" key={section.title}>
-                                <h3>{section.title}</h3>
-                                {section.paragraphs.map((paragraph) => {
-                                    if (typeof paragraph === 'string') {
-                                        return (
-                                            <p
-                                                key={paragraph}
-                                                dangerouslySetInnerHTML={{ __html: formatInlineMarkup(paragraph) }}
-                                            />
-                                        );
-                                    }
+                                : <p>{activeScheduleItem.introduction}</p>}
+                        </div>
+                    )}
+                    {activeScheduleItem.sections?.length > 0 ? (
+                        <article className="feature-card feature-card--active news-article-page__content">
+                            {activeScheduleItem.sections.map((section) => (
+                                <section className="schedule-detail-section" key={section.title}>
+                                    <h3>{section.title}</h3>
+                                    {section.paragraphs.map((paragraph) => {
+                                        if (typeof paragraph === 'string') {
+                                            return (
+                                                <p
+                                                    key={paragraph}
+                                                    dangerouslySetInnerHTML={{ __html: formatInlineMarkup(paragraph) }}
+                                                />
+                                            );
+                                        }
 
-                                    return (
-                                        <p key={paragraph.text} className="schedule-link-note">
-                                            <a className="news-card__link" href={paragraph.link}>
-                                                {paragraph.text}
-                                            </a>
-                                        </p>
-                                    );
-                                })}
-                            </section>
-                        ))}
-                        {activeScheduleItem.outcome && (
+                                        return (
+                                            <p key={paragraph.text} className="schedule-link-note">
+                                                <a className="news-card__link" href={paragraph.link}>
+                                                    {paragraph.text}
+                                                </a>
+                                            </p>
+                                        );
+                                    })}
+                                </section>
+                            ))}
+                            {activeScheduleItem.outcome && (
+                                <p className="schedule-outcome-text" dangerouslySetInnerHTML={{ __html: formatInlineMarkup(activeScheduleItem.outcome) }} />
+                            )}
+                        </article>
+                    ) : (
+                        activeScheduleItem.outcome && (
                             <p className="schedule-outcome-text" dangerouslySetInnerHTML={{ __html: formatInlineMarkup(activeScheduleItem.outcome) }} />
-                        )}
-                        {activeScheduleItem.link && (
-                            <p className="schedule-link-note">
-                                <a className="news-card__link" href={activeScheduleItem.link} target="_blank" rel="noopener noreferrer">
-                                    {activeScheduleItem.linkLabel ?? 'Zur öffentlichen Sitzungsseite'}
-                                </a>
-                            </p>
-                        )}
-                    </article>
+                        )
+                    )}
+                    {activeScheduleItem.link && (
+                        <p className="schedule-source-link">
+                            <a className="news-card__link" href={activeScheduleItem.link} target="_blank" rel="noopener noreferrer">
+                                {activeScheduleItem.linkLabel ?? 'Zur öffentlichen Sitzungsseite'}
+                            </a>
+                        </p>
+                    )}
                 </section>
 
                 <SiteFooter onShowImpressum={onShowImpressum} onShowDatenschutz={onShowDatenschutz} />
@@ -860,7 +867,7 @@ function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug }) {
                     <p className="eyebrow">Termine</p>
                     <h1 className="schedule-page__title">Termine für Sprötze</h1>
                     <p className="lead schedule-page__lead">
-                        Der nächste relevante Termin zuerst, weitere bei Bedarf.
+                        Hier werden Termine aufgeführt, die für uns Sprötzer relevant sind.
                     </p>
                     <div className="hero__actions">
                         <a className="button button--primary" href={NEWS_INDEX_PATH}>
@@ -876,7 +883,7 @@ function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug }) {
             <section className="content" id="kommende-termine">
                 <div className="section-heading">
                     <p className="eyebrow">Anstehend</p>
-                    <h2>Der nächste Termin</h2>
+                    <h2>Die nächsten Termine</h2>
                 </div>
                 <div className="schedule-list">
                     {visibleUpcomingSchedule.map((item) => (
@@ -887,9 +894,11 @@ function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug }) {
                             </div>
                             <h4>{item.title}</h4>
                             <p>{item.details}</p>
-                            <a className="news-card__link" href={`${SCHEDULE_PATH}?termin=${item.slug}`}>
-                                Termin öffnen
-                            </a>
+                            {item.sections?.length > 0 && (
+                                <a className="news-card__link" href={`${SCHEDULE_PATH}?termin=${item.slug}`}>
+                                    Termin öffnen
+                                </a>
+                            )}
                         </article>
                     ))}
                 </div>
@@ -918,9 +927,11 @@ function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug }) {
                             </div>
                             <h4>{item.title}</h4>
                             <p>{item.details}</p>
-                            <a className="news-card__link" href={`${SCHEDULE_PATH}?termin=${item.slug}`}>
-                                Termin öffnen
-                            </a>
+                            {item.sections?.length > 0 && (
+                                <a className="news-card__link" href={`${SCHEDULE_PATH}?termin=${item.slug}`}>
+                                    Termin öffnen
+                                </a>
+                            )}
                         </article>
                     ))}
                 </div>

@@ -960,6 +960,18 @@ h1 {
   content: '→';
 }
 
+.schedule-detail-intro {
+  margin: 0;
+  max-width: 64rem;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.schedule-detail-intro p {
+  margin: 0;
+  line-height: 1.7;
+}
+
 .schedule-link-note {
   display: inline-flex;
   flex-wrap: wrap;
@@ -969,6 +981,16 @@ h1 {
 }
 
 .schedule-link-note .news-card__link {
+  margin-top: 0;
+}
+
+.schedule-source-link {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.schedule-source-link .news-card__link {
   margin-top: 0;
 }
 
