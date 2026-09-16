@@ -84,7 +84,8 @@ export const news = [
             {
                 title: 'Was bedeutet „Bauturbo“?',
                 paragraphs: [
-                    'Der sogenannte „Bauturbo“ schafft neue Möglichkeiten im Baurecht, um Wohnungsbau schneller zu ermöglichen. Das bedeutet jedoch nicht, dass automatisch gebaut werden darf: Die Stadt muss dem konkreten Vorhaben zustimmen und weitere Anforderungen des Bau- und Genehmigungsrechts bleiben bestehen.',
+                    'Der sogenannte „Bauturbo“ soll Wohnungsbau schneller ermöglichen. Dafür darf inzwischen auch von bestehenden Bebauungsplänen abgewichen werden – etwa bei Gebäudehöhe oder Größe.',
+                    'Für einen Ort kann das weitreichende Folgen haben: Im Einzelfall können dadurch Gebäude zugelassen werden, die größer oder höher ausfallen, als es der bisherige Bebauungsplan vorsieht. Die Stadt muss solchen Abweichungen jedoch zustimmen.',
                     'Die Stadt Buchholz hat bereits im März 2026 grundsätzliche Kriterien für den Umgang mit dem Bauturbo beschlossen. Das Bauprojekt an der Niedersachsenstraße 13 wird nun als konkreter Einzelfall behandelt.',
                 ],
             },
