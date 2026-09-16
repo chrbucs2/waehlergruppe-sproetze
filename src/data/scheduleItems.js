@@ -8,7 +8,7 @@ export const scheduleItems = [
         title: 'Bebauungsplan Sprötzer Weg und Neuausrichtung des Innenstadtmanagements',
         location: 'Kantine, Rathausplatz 1, 21244 Buchholz i.d.N.',
         details:
-            'Im Mittelpunkt der Ausschusssitzung am 6. Mai 2026 standen zentrale Themen der Buchholzer Stadtentwicklung: die Entwicklung des Lerchenparks, der Bebauungsplan „Sprötzer Weg / An den Tennisplätzen“ sowie die Neuausrichtung des Innenstadtmanagements.',
+            'Im Mittelpunkt der Ausschusssitzung am 6. Mai 2026 standen zentrale Themen der Buchholzer Stadtentwicklung: die Entwicklung des Lerchenparks, der **Bebauungsplan „Sprötzer Weg / An den Tennisplätzen“** sowie die Neuausrichtung des Innenstadtmanagements.',
         introduction: [
             'Für Sprötze ist die Sitzung besonders relevant, weil mit dem Bebauungsplan „Sprötzer Weg / An den Tennisplätzen“ unmittelbar an einer wichtigen Verbindung zwischen Sprötze und der Buchholzer Kernstadt geplant wird.'
         ],
@@ -23,7 +23,7 @@ export const scheduleItems = [
                     'Neben der vorgesehenen Nutzung beschäftigte sich die Planung mit der Erschließung des Grundstücks, den Auswirkungen des zusätzlichen Verkehrs, der Entwässerung und dem Lärmschutz sowie mit Vorgaben zur Gestaltung und Begrünung der Fläche.',
                     {
                         text: 'Bebauungsplan Sprötzer Weg',
-                        link: '/sproetze-aktuell?artikel=bebauungsplan-sproetzer-weg-an-den-tennisplaetzen-satzungsbeschluss',
+                        link: '/artikel/bebauungsplan-sproetzer-weg',
                     },
                 ],
             },
@@ -52,10 +52,10 @@ export const scheduleItems = [
         category: 'Ortsrat Sprötze',
         date: '2026-06-15',
         time: '17:30 Uhr',
-        title: 'Berichte zu aktuellen Themen und Grundstücksangelegenheit in der Niedersachsenstraße',
+        title: 'Berichte zu aktuellen Themen und Grundstücksangelegenheit in der Niedersachsenstraße 13',
         location: 'Torbogenzimmer, Rathausplatz 1, 21244 Buchholz i.d.N.',
         details:
-            'Im Mittelpunkt der Sitzung des Ortsrates Sprötze am 15. Juni 2026 standen die Berichte der Ortsbürgermeisterin und des Bürgermeisters sowie aktuelle Anfragen aus dem Ortsrat. Im nichtöffentlichen Teil wurde zudem die Veräußerung eines Wohngrundstücks in der Niedersachsenstraße behandelt.',
+            'Im Mittelpunkt der Sitzung des Ortsrates Sprötze am 15. Juni 2026 standen die Berichte der Ortsbürgermeisterin und des Bürgermeisters sowie aktuelle Anfragen aus dem Ortsrat. Im nichtöffentlichen Teil wurde zudem die **Veräußerung eines Wohngrundstücks in der Niedersachsenstraße 13** behandelt.',
         introduction: [
             'Als Sitzung des Ortsrates ist der Termin unmittelbar für Sprötze relevant: Hier werden örtliche Anliegen aufgegriffen und Informationen aus Stadt und Ortschaft ausgetauscht.',
         ],
@@ -64,7 +64,7 @@ export const scheduleItems = [
                 title: 'Tagesordnungspunkte',
                 paragraphs: [
                     'Im öffentlichen Teil berichteten die Ortsbürgermeisterin und der Bürgermeister über aktuelle Themen. Anschließend bestand für die Mitglieder des Ortsrates die Möglichkeit, Anfragen nach § 17 der Geschäftsordnung zu stellen.',
-                    'Der nichtöffentliche Teil fand von 18:00 bis 18:35 Uhr statt. Als wesentlicher Tagesordnungspunkt wurde dort die Veräußerung eines Wohngrundstücks in der Niedersachsenstraße behandelt.',
+                    'Im nichtöffentliche Teil wurde die **Veräußerung eines Wohngrundstücks in der Niedersachsenstraße 13** behandelt. Hier sind **zwei Mehrfamilienhäuser mit insgesamt 12 bis 15 Wohnungen sowie zwei Gewerbeeinheiten** vorgesehen.',
                     'Ein veröffentlichtes Protokoll oder offizielle Ergebnisse lagen bei der Recherche noch nicht vor.',
                 ],
             }
@@ -83,7 +83,7 @@ export const scheduleItems = [
         details:
             'Der Ausschuss befasst sich mit aktuellen Themen und Vorhaben aus den Bereichen Stadtentwicklung, Bauleitplanung, Umwelt, Klimaschutz und Mobilität.',
         introduction: [
-            'Für Sprötze ist die Sitzung vor allem wegen **TOP 13** zur **Niedersachsenstraße 13** relevant. Dort soll über die Anwendung des sogenannten „Bauturbos“ auf ein konkretes Bauvorhaben beraten werden: Geplant sind **zwei Mehrfamilienhäuser mit insgesamt 12 bis 15 Wohnungen sowie zwei Gewerbeeinheiten**.',
+            'Für Sprötze ist die Sitzung vor allem wegen **TOP 13** zur **Niedersachsenstraße 13** relevant. Dabei handelt es sich um das Eckgrundstück neben dem Lebensmittelhändler in Sprötze. Es soll über die Anwendung des sogenannten „Bauturbos“ auf ein konkretes Bauvorhaben beraten werden: Geplant sind **zwei Mehrfamilienhäuser mit insgesamt 12 bis 15 Wohnungen sowie zwei Gewerbeeinheiten**.',
         ],
         sections: [
             {

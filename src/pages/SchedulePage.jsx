@@ -4,7 +4,7 @@ import { SiteFooter } from '../components/SiteFooter';
 import { scheduleItems } from '../data';
 import { getScheduleItemBySlug, getScheduleStatus, sortScheduleByDate } from '../lib/content';
 import { SCHEDULE_PATH } from '../lib/constants';
-import { formatDate, formatInlineMarkup } from '../lib/formatting';
+import { assetUrl, formatDate, formatInlineMarkup } from '../lib/formatting';
 
 export function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug }) {
     const orderedSchedule = useMemo(() => sortScheduleByDate(scheduleItems), []);
@@ -110,6 +110,9 @@ export function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug 
                         </a>
                     </div>
                 </div>
+                <div className="hero__brand" aria-label="Logo der Wählergruppe Sprötze">
+                    <img src={assetUrl('logo.png')} alt="Logo der Wählergruppe Sprötze" />
+                </div>
             </section>
 
             <section className="content" id="kommende-termine">
@@ -125,7 +128,7 @@ export function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug 
                                 <strong>{formatDate(item.date)} · {item.time}</strong>
                             </div>
                             <h4>{item.title}</h4>
-                            <p>{item.details}</p>
+                            <p dangerouslySetInnerHTML={{ __html: formatInlineMarkup(item.details) }} />
                             {item.sections?.length > 0 && (
                                 <a className="news-card__link" href={`${SCHEDULE_PATH}/${item.slug}`}>
                                     Termin öffnen
@@ -158,7 +161,7 @@ export function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug 
                                 <strong>{formatDate(item.date)} · {item.time}</strong>
                             </div>
                             <h4>{item.title}</h4>
-                            <p>{item.details}</p>
+                            <p dangerouslySetInnerHTML={{ __html: formatInlineMarkup(item.details) }} />
                             {item.sections?.length > 0 && (
                                 <a className="news-card__link" href={`${SCHEDULE_PATH}/${item.slug}`}>
                                     Termin öffnen

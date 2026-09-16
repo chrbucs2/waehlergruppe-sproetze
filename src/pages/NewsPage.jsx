@@ -4,7 +4,7 @@ import { SiteFooter } from '../components/SiteFooter';
 import { news, newsTopics } from '../data';
 import { getTopicById, sortNewsByDate } from '../lib/content';
 import { NEWS_INDEX_PATH } from '../lib/constants';
-import { formatDate, formatInlineMarkup } from '../lib/formatting';
+import { assetUrl, formatDate, formatInlineMarkup } from '../lib/formatting';
 
 export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleSlug }) {
     const orderedArticles = useMemo(() => sortNewsByDate(news), []);
@@ -131,6 +131,9 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
                             Zur Terminseite
                         </a>
                     </div>
+                </div>
+                <div className="hero__brand" aria-label="Logo der Wählergruppe Sprötze">
+                    <img src={assetUrl('logo.png')} alt="Logo der Wählergruppe Sprötze" />
                 </div>
             </section>
 
