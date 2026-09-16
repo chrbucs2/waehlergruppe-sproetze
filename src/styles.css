@@ -517,10 +517,14 @@ h1 {
   margin-bottom: 12px;
 }
 
+.news-article-page .section-heading {
+  margin-bottom: 0px;
+}
+
 .section-heading {
   display: grid;
   gap: 10px;
-  margin-bottom: 8px;
+  margin-bottom: 20px;
   width: 100%;
   max-width: unset;
 }
