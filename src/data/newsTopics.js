@@ -15,11 +15,6 @@ export const newsTopics = [
         description: 'Entwicklung, Nutzung und Aufwertung der Ortsmitte von Sprötze.',
     },
     {
-        id: 'bauturbo',
-        label: 'Bauturbo',
-        description: 'Vorhaben, die über die beschleunigten Möglichkeiten des Bauturbos laufen.',
-    },
-    {
         id: 'leben-im-dorf',
         label: 'Leben im Dorf',
         description: 'Themen rund um Zusammenhalt, Ehrenamt und die Entwicklung von Sprötze.',

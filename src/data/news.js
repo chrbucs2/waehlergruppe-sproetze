@@ -65,7 +65,7 @@ export const news = [
         slug: 'niedersachsenstrasse-13-mehrfamilienhaeuser-bauturbo',
         title: 'Niedersachsenstraße 13: Neue Wohnungen und Gewerbe in Sprötzes Ortsmitte geplant',
         publishedAt: '2026-09-17',
-        topicIds: ['ortsmitte', 'bauturbo'],
+        topicIds: ['ortsmitte'],
         summary: [
             '**Neue Wohnungen in der Sprötzer Ortsmitte geplant**: Auf dem bekannten Eckgrundstück an der Niedersachsenstraße 13 neben dem Edeka sollen zwei Mehrfamilienhäuser mit insgesamt 12 bis 15 Wohnungen sowie zwei Gewerbeeinheiten entstehen.',
             'Das Vorhaben soll mithilfe des sogenannten „Bauturbos“ ermöglicht werden. Am 17. September 2026 beschäftigt sich der Ausschuss für Stadtentwicklung, Umwelt, Klimaschutz und Mobilität mit dem Projekt.',
