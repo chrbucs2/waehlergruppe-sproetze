@@ -22,24 +22,12 @@ export function ArticlePage({ article, onShowImpressum, onShowDatenschutz }) {
                         {article.modifiedAt && ` · aktualisiert am ${formatDate(article.modifiedAt)}`}
                     </p>
                     <h1 className="news-article-page__title">{article.title}</h1>
-                    {article.excerpt && <p className="section-copy">{article.excerpt}</p>}
                 </div>
 
                 {article.introduction && (
                     <div className="schedule-detail-intro">
                         {article.introduction.map((paragraph, index) => (
                             <p key={`${article.id}-intro-${index}`} dangerouslySetInnerHTML={renderParagraph(paragraph)} />
-                        ))}
-                    </div>
-                )}
-
-                {(article.images ?? []).length > 0 && (
-                    <div className="article-gallery">
-                        {article.images.map((image, index) => (
-                            <figure className="article-gallery__item" key={`${article.id}-image-${index}`}>
-                                <img src={image.src} alt={image.alt} loading="lazy" />
-                                {image.caption && <figcaption>{image.caption}</figcaption>}
-                            </figure>
                         ))}
                     </div>
                 )}
@@ -55,17 +43,40 @@ export function ArticlePage({ article, onShowImpressum, onShowDatenschutz }) {
                                     );
                                 }
 
+                                if (paragraph?.type === 'subheading') {
+                                    return (
+                                        <p key={`${section.title}-subheading-${index}`} className="article-subheading" dangerouslySetInnerHTML={renderParagraph(paragraph.text)} />
+                                    );
+                                }
+
+                                if (paragraph?.type === 'list') {
+                                    return (
+                                        <ul key={`${section.title}-list-${index}`} className="article-list">
+                                            {paragraph.items.map((item) => (
+                                                <li key={item} dangerouslySetInnerHTML={renderParagraph(item)} />
+                                            ))}
+                                        </ul>
+                                    );
+                                }
+
                                 return (
                                     <p
                                         key={`${section.title}-${paragraph.text}`}
-                                        className={`schedule-link-note${paragraph.indent ? ' is-indented' : ''}`}
+                                        className="schedule-link-note is-indented"
                                     >
-                                        <a className="news-card__link" href={paragraph.link} target="_blank" rel="noopener noreferrer">
+                                        <a className="news-card__link" href={paragraph.link}>
                                             {paragraph.text}
                                         </a>
                                     </p>
                                 );
                             })}
+
+                            {(section.image ? [section.image] : []).map((image, index) => (
+                                <figure className="article-section-image" key={`${section.title}-image-${index}`}>
+                                    <img src={image.src} alt={image.alt} loading="lazy" />
+                                    {image.caption && <figcaption>{image.caption}</figcaption>}
+                                </figure>
+                            ))}
                         </section>
                     ))}
                 </article>

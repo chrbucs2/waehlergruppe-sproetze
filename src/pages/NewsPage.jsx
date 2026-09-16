@@ -70,9 +70,9 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
                                             return (
                                                 <p
                                                     key={`${section.title}-${paragraph.text}`}
-                                                    className={`schedule-link-note${paragraph.indent ? ' is-indented' : ''}`}
+                                                    className="schedule-link-note is-indented"
                                                 >
-                                                    <a className="news-card__link" href={paragraph.link} target="_blank" rel="noopener noreferrer">
+                                                    <a className="news-card__link" href={paragraph.link}>
                                                         {paragraph.text}
                                                     </a>
                                                 </p>

@@ -505,6 +505,8 @@ h1 {
   display: grid;
   gap: 10px;
   margin-bottom: 8px;
+  width: 100%;
+  max-width: unset;
 }
 
 .section-heading h2 {
@@ -846,7 +848,8 @@ h1 {
 .section-copy {
   color: var(--muted);
   line-height: 1.7;
-  max-width: 72ch;
+  max-width: none;
+  width: 100%;
 }
 
 .news-card,
@@ -926,7 +929,8 @@ h1 {
 
 .schedule-detail-intro {
   margin: 0;
-  max-width: 64rem;
+  width: 100%;
+  max-width: unset;
   display: grid;
   gap: 1.25rem;
 }
@@ -934,6 +938,8 @@ h1 {
 .schedule-detail-intro p {
   margin: 0;
   line-height: 1.7;
+  max-width: unset;
+  width: 100%;
 }
 
 .schedule-link-note {
@@ -979,13 +985,14 @@ h1 {
 .news-article-page__title {
   font-size: clamp(1.85rem, 3vw, 2.7rem);
   line-height: 1.12;
-  max-width: none;
+  max-width: unset;
   width: 100%;
   margin-bottom: 10px;
 }
 
 .news-article-page__content {
-  max-width: 820px;
+  width: 100%;
+  max-width: unset;
   display: grid;
   gap: 12px;
 }
@@ -997,7 +1004,7 @@ h1 {
 
 .schedule-detail-section {
   display: grid;
-  gap: 12px;
+  gap: 2px;
 }
 
 .schedule-detail-section h3 {
@@ -1008,6 +1015,43 @@ h1 {
 .schedule-detail-section p {
   line-height: 1.75;
   margin-bottom: 4px;
+}
+
+.article-section-image {
+  margin: 1rem 0 0;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.article-section-image img {
+  display: block;
+  width: min(100%, 960px);
+  max-height: 620px;
+  object-fit: contain;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.article-section-image figcaption {
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.55;
+}
+
+.article-subheading {
+  margin: 0.25rem 0 0;
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+
+.article-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  display: grid;
+  gap: 0.4rem;
+  color: var(--muted);
+  line-height: 1.7;
 }
 
 .news-back-link {
