@@ -1,11 +1,19 @@
-import { newsArticles, newsTopics, scheduleItems } from '../data';
+import { articles, news, newsTopics, scheduleItems } from '../data';
 
 export function getTopicById(topicId) {
     return newsTopics.find((topic) => topic.id === topicId) ?? null;
 }
 
+export function getNewsArticleBySlug(slug) {
+    return news.find((article) => article.slug === slug) ?? null;
+}
+
+export function getGeneralArticleBySlug(slug) {
+    return articles.find((article) => article.slug === slug) ?? null;
+}
+
 export function getArticleBySlug(slug) {
-    return newsArticles.find((article) => article.slug === slug) ?? null;
+    return getNewsArticleBySlug(slug) ?? getGeneralArticleBySlug(slug);
 }
 
 export function getScheduleItemBySlug(slug) {

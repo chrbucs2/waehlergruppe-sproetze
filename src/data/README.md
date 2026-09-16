@@ -76,8 +76,11 @@ Rechtliche Texte:
 ### `newsTopics.js`
 Themenbereiche für `/sprötze-aktuell`.
 
-### `newsArticles.js`
+### `news.js`
 News-Beiträge mit Datum, Kurztext, Langtext und Themen.
+
+### `articles.js`
+Übergreifende Artikelseiten mit ausführlicher Einleitung, Sections, Bildern und Quellenangaben.
 
 ### `scheduleItems.js`
 Relevante Sitzungstermine mit Details, Ergebnissen und optionalem News-Link.

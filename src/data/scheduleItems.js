@@ -83,7 +83,7 @@ export const scheduleItems = [
         details:
             'Der Ausschuss befasst sich mit aktuellen Themen und Vorhaben aus den Bereichen Stadtentwicklung, Bauleitplanung, Umwelt, Klimaschutz und Mobilität.',
         introduction: [
-            'Für Sprötze ist die Sitzung vor allem wegen **TOP 13** zur Niedersachsenstraße 13 relevant. Dort soll über die Anwendung des sogenannten „Bauturbos“ auf ein konkretes Bauvorhaben beraten werden: Geplant sind zwei Mehrfamilienhäuser mit insgesamt 12 bis 15 Wohnungen sowie zwei Gewerbeeinheiten.',
+            'Für Sprötze ist die Sitzung vor allem wegen **TOP 13** zur **Niedersachsenstraße 13** relevant. Dort soll über die Anwendung des sogenannten „Bauturbos“ auf ein konkretes Bauvorhaben beraten werden: Geplant sind **zwei Mehrfamilienhäuser mit insgesamt 12 bis 15 Wohnungen sowie zwei Gewerbeeinheiten**.',
         ],
         sections: [
             {

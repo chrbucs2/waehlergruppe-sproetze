@@ -1,19 +1,19 @@
 import { useMemo } from 'react';
 
 import { SiteFooter } from '../components/SiteFooter';
-import { newsArticles, newsTopics } from '../data';
+import { news, newsTopics } from '../data';
 import { getTopicById, sortNewsByDate } from '../lib/content';
 import { NEWS_INDEX_PATH } from '../lib/constants';
-import { formatDate } from '../lib/formatting';
+import { formatDate, formatInlineMarkup } from '../lib/formatting';
 
 export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleSlug }) {
-    const orderedArticles = useMemo(() => sortNewsByDate(newsArticles), []);
+    const orderedArticles = useMemo(() => sortNewsByDate(news), []);
     const availableTopics = useMemo(
         () => newsTopics.filter((topic) => orderedArticles.some((article) => article.topicIds.includes(topic.id))),
         [orderedArticles],
     );
     const activeTopic = topicId ? getTopicById(topicId) : null;
-    const activeArticle = articleSlug ? newsArticles.find((article) => article.slug === articleSlug) ?? null : null;
+    const activeArticle = articleSlug ? news.find((article) => article.slug === articleSlug) ?? null : null;
     const backHref = activeTopic ? `${NEWS_INDEX_PATH}?thema=${activeTopic.id}` : NEWS_INDEX_PATH;
 
     const visibleArticles = useMemo(() => {
@@ -24,7 +24,17 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
         return orderedArticles.filter((article) => article.topicIds.includes(activeTopic.id));
     }, [activeTopic, orderedArticles]);
 
+    const renderMarkup = (text) => ({ __html: formatInlineMarkup(text) });
+    const getSummaryParagraphs = (summary) => (Array.isArray(summary) ? summary : [summary]);
+
     if (activeArticle) {
+        const introParagraphs = Array.isArray(activeArticle.introduction)
+            ? activeArticle.introduction
+            : activeArticle.summary
+                ? getSummaryParagraphs(activeArticle.summary)
+                : [];
+        const sections = activeArticle.sections ?? [];
+
         return (
             <>
                 <section className="content content--soft news-article-page">
@@ -34,20 +44,69 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
                     <div className="section-heading">
                         <p className="eyebrow">{formatDate(activeArticle.publishedAt)}</p>
                         <h1 className="news-article-page__title">{activeArticle.title}</h1>
-                        <p className="section-copy">{activeArticle.summary}</p>
                     </div>
-                    <article className="feature-card feature-card--active news-article-page__content">
-                        {activeArticle.content.map((paragraph) => (
-                            <p key={paragraph}>{paragraph}</p>
-                        ))}
-                        <div className="focus-list">
-                            {activeArticle.topicIds.map((id) => (
-                                <a key={id} href={`${NEWS_INDEX_PATH}?thema=${id}`}>
-                                    <span>{getTopicById(id)?.label ?? id}</span>
-                                </a>
+
+                    {introParagraphs.length > 0 && (
+                        <div className="schedule-detail-intro">
+                            {introParagraphs.map((paragraph, index) => (
+                                <p key={`${activeArticle.id}-intro-${index}`} dangerouslySetInnerHTML={renderMarkup(paragraph)} />
                             ))}
                         </div>
-                    </article>
+                    )}
+
+                    {sections.length > 0 ? (
+                        <>
+                            <article className="feature-card feature-card--active news-article-page__content">
+                                {sections.map((section) => (
+                                    <section className="schedule-detail-section" key={section.title}>
+                                        <h3>{section.title}</h3>
+                                        {section.paragraphs.map((paragraph, index) => {
+                                            if (typeof paragraph === 'string') {
+                                                return (
+                                                    <p key={`${section.title}-${index}`} dangerouslySetInnerHTML={renderMarkup(paragraph)} />
+                                                );
+                                            }
+
+                                            return (
+                                                <p
+                                                    key={`${section.title}-${paragraph.text}`}
+                                                    className={`schedule-link-note${paragraph.indent ? ' is-indented' : ''}`}
+                                                >
+                                                    <a className="news-card__link" href={paragraph.link} target="_blank" rel="noopener noreferrer">
+                                                        {paragraph.text}
+                                                    </a>
+                                                </p>
+                                            );
+                                        })}
+                                    </section>
+                                ))}
+                            </article>
+
+                            <div className="focus-list focus-list--outside">
+                                {activeArticle.topicIds.map((id) => (
+                                    <a key={id} href={`${NEWS_INDEX_PATH}?thema=${id}`}>
+                                        <span>{getTopicById(id)?.label ?? id}</span>
+                                    </a>
+                                ))}
+                            </div>
+                        </>
+                    ) : (
+                        <>
+                            <article className="feature-card feature-card--active news-article-page__content">
+                                {(activeArticle.content ?? []).map((paragraph) => (
+                                    <p key={paragraph} dangerouslySetInnerHTML={renderMarkup(paragraph)} />
+                                ))}
+                            </article>
+
+                            <div className="focus-list focus-list--outside">
+                                {activeArticle.topicIds.map((id) => (
+                                    <a key={id} href={`${NEWS_INDEX_PATH}?thema=${id}`}>
+                                        <span>{getTopicById(id)?.label ?? id}</span>
+                                    </a>
+                                ))}
+                            </div>
+                        </>
+                    )}
                 </section>
 
                 <SiteFooter onShowImpressum={onShowImpressum} onShowDatenschutz={onShowDatenschutz} />
@@ -104,8 +163,10 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
                         <article className="news-card" key={article.id}>
                             <p className="eyebrow">{formatDate(article.publishedAt)}</p>
                             <h3>{article.title}</h3>
-                            <p>{article.summary}</p>
-                            <a className="news-card__link" href={`${NEWS_INDEX_PATH}?artikel=${article.slug}`}>
+                            {getSummaryParagraphs(article.summary).map((paragraph, index) => (
+                                <p key={`${article.id}-summary-${index}`} dangerouslySetInnerHTML={renderMarkup(paragraph)} />
+                            ))}
+                            <a className="news-card__link" href={`${NEWS_INDEX_PATH}/${article.slug}`}>
                                 Beitrag öffnen
                             </a>
                         </article>

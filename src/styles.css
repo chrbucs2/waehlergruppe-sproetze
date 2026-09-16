@@ -944,6 +944,10 @@ h1 {
   color: var(--muted);
 }
 
+.schedule-link-note.is-indented {
+  padding-left: 1rem;
+}
+
 .schedule-link-note .news-card__link {
   margin-top: 0;
 }
@@ -1036,9 +1040,16 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  max-width: 820px;
+}
+
+.focus-list--outside {
+  margin-top: 4px;
+  max-width: none;
 }
 
 .focus-list span {
+  display: inline-flex;
   border-radius: 999px;
   padding: 8px 12px;
   background: rgba(123, 74, 124, 0.14);

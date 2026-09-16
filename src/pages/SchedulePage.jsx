@@ -127,7 +127,7 @@ export function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug 
                             <h4>{item.title}</h4>
                             <p>{item.details}</p>
                             {item.sections?.length > 0 && (
-                                <a className="news-card__link" href={`${SCHEDULE_PATH}?termin=${item.slug}`}>
+                                <a className="news-card__link" href={`${SCHEDULE_PATH}/${item.slug}`}>
                                     Termin öffnen
                                 </a>
                             )}
@@ -160,7 +160,7 @@ export function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug 
                             <h4>{item.title}</h4>
                             <p>{item.details}</p>
                             {item.sections?.length > 0 && (
-                                <a className="news-card__link" href={`${SCHEDULE_PATH}?termin=${item.slug}`}>
+                                <a className="news-card__link" href={`${SCHEDULE_PATH}/${item.slug}`}>
                                     Termin öffnen
                                 </a>
                             )}

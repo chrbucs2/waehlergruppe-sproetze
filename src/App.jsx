@@ -2,10 +2,12 @@ import { useEffect, useMemo, useState } from 'react';
 
 import { LegalModals } from './components/LegalModals';
 import { ThankYouModal } from './components/ThankYouModal';
+import { ArticlePage } from './pages/ArticlePage';
 import { HomePage } from './pages/HomePage';
 import { NewsPage } from './pages/NewsPage';
 import { SchedulePage } from './pages/SchedulePage';
 import { NEWS_INDEX_PATH, SCHEDULE_PATH, THANK_YOU_MODAL_STORAGE_KEY } from './lib/constants';
+import { getGeneralArticleBySlug, getNewsArticleBySlug } from './lib/content';
 import { getPathFromLocation, getSearchFromLocation, normalizePath } from './lib/routing';
 
 function App() {
@@ -64,15 +66,34 @@ function App() {
 
     const params = useMemo(() => new URLSearchParams(search), [search]);
     const topicId = params.get('thema');
-    const articleSlug = params.get('artikel');
-    const scheduleSlug = params.get('termin');
-    const isNewsPage = currentPath === normalizePath(NEWS_INDEX_PATH);
-    const isSchedulePage = currentPath === normalizePath(SCHEDULE_PATH);
+    const legacyArticleSlug = params.get('artikel');
+    const legacyScheduleSlug = params.get('termin');
+    const newsDetailSlug = currentPath.startsWith(`${normalizePath(NEWS_INDEX_PATH)}/`)
+        ? currentPath.slice(normalizePath(NEWS_INDEX_PATH).length + 1)
+        : null;
+    const generalArticleSlug = currentPath.startsWith('/artikel/')
+        ? currentPath.slice('/artikel/'.length)
+        : null;
+    const scheduleDetailSlug = currentPath.startsWith(`${normalizePath(SCHEDULE_PATH)}/`)
+        ? currentPath.slice(normalizePath(SCHEDULE_PATH).length + 1)
+        : null;
+    const articleSlug = legacyArticleSlug ?? generalArticleSlug ?? newsDetailSlug;
+    const scheduleSlug = legacyScheduleSlug ?? scheduleDetailSlug;
+    const generalArticle = articleSlug ? getGeneralArticleBySlug(articleSlug) : null;
+    const newsArticle = articleSlug ? getNewsArticleBySlug(articleSlug) : null;
+    const isNewsPage = currentPath === normalizePath(NEWS_INDEX_PATH) || !!newsDetailSlug;
+    const isSchedulePage = currentPath === normalizePath(SCHEDULE_PATH) || !!scheduleDetailSlug;
 
     return (
         <main className="page" id="top">
             <ThankYouModal isOpen={showThankYouModal} onClose={closeThankYouModal} />
-            {isNewsPage ? (
+            {generalArticle && !newsArticle ? (
+                <ArticlePage
+                    article={generalArticle}
+                    onShowImpressum={() => setShowImpressum(true)}
+                    onShowDatenschutz={() => setShowDatenschutz(true)}
+                />
+            ) : isNewsPage ? (
                 <NewsPage
                     onShowImpressum={() => setShowImpressum(true)}
                     onShowDatenschutz={() => setShowDatenschutz(true)}
