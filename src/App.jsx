@@ -686,38 +686,15 @@ function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleSlug }) 
                     <p className="eyebrow">Sprötze aktuell</p>
                     <h1>News und Themen aus Sprötze</h1>
                     <p className="lead">
-                        Hier pflegen wir aktuelle Meldungen zentral an einer Stelle — mit Themenfiltern
-                        und Detailseiten für einzelne Beiträge.
+                        Hier pflegen wir aktuelle Meldungen zentral an einer Stelle.
                     </p>
-                    <article className="hero__group">
-                        <ul>
-                            <li>Neueste Meldungen stehen automatisch oben.</li>
-                            <li>Themen lassen sich gesammelt filtern und aufrufen.</li>
-                            <li>Beiträge können über ihre eigene URL direkt geteilt werden.</li>
-                        </ul>
-                    </article>
-                    <div className="hero__actions">
-                        <a className="button button--primary" href="#news-feed">
-                            Zu den News
+                    <div className="hero__actions hero__actions--news">
+                        <a className="button button--primary" href="/">
+                            Zur WGS Startseite
                         </a>
                         <a className="button button--secondary" href={SCHEDULE_PATH}>
                             Zur Terminseite
                         </a>
-                    </div>
-                </div>
-                <div className="news-hero-card">
-                    <p className="eyebrow">Aktuelles System</p>
-                    <h2>Zentrale Pflege für Beiträge</h2>
-                    <p>
-                        Inhalte kommen aus <code>src/data/</code> und lassen sich dort gesammelt
-                        erweitern oder ändern.
-                    </p>
-                    <div className="focus-list">
-                        {availableTopics.map((topic) => (
-                            <a key={topic.id} href={`${NEWS_INDEX_PATH}?thema=${topic.id}`}>
-                                <span>{topic.label}</span>
-                            </a>
-                        ))}
                     </div>
                 </div>
             </section>
@@ -752,13 +729,6 @@ function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleSlug }) 
                             <p className="eyebrow">{formatDate(article.publishedAt)}</p>
                             <h3>{article.title}</h3>
                             <p>{article.summary}</p>
-                            <div className="focus-list">
-                                {article.topicIds.map((id) => (
-                                    <a key={id} href={`${NEWS_INDEX_PATH}?thema=${id}`}>
-                                        <span>{getTopicById(id)?.label ?? id}</span>
-                                    </a>
-                                ))}
-                            </div>
                             <a className="news-card__link" href={`${NEWS_INDEX_PATH}?artikel=${article.slug}`}>
                                 Beitrag öffnen
                             </a>
@@ -869,12 +839,12 @@ function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug }) {
                     <p className="lead schedule-page__lead">
                         Hier werden Termine aufgeführt, die für uns Sprötzer relevant sind.
                     </p>
-                    <div className="hero__actions">
-                        <a className="button button--primary" href={NEWS_INDEX_PATH}>
-                            Zu den News
-                        </a>
-                        <a className="button button--secondary" href="/">
+                    <div className="hero__actions hero__actions--schedule">
+                        <a className="button button--primary" href="/">
                             Zur WGS Startseite
+                        </a>
+                        <a className="button button--secondary" href={NEWS_INDEX_PATH}>
+                            Zu den News
                         </a>
                     </div>
                 </div>
