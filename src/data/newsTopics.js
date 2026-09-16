@@ -10,9 +10,14 @@ export const newsTopics = [
         description: 'Bebauungspläne, Flächennutzung und neue Vorhaben mit Auswirkungen auf Sprötze.',
     },
     {
-        id: 'stadtplanung',
-        label: 'Stadtplanung',
-        description: 'Planungen, Verfahren und Entscheidungen zur baulichen Entwicklung in und um Sprötze.',
+        id: 'ortsmitte',
+        label: 'Ortsmitte',
+        description: 'Entwicklung, Nutzung und Aufwertung der Ortsmitte von Sprötze.',
+    },
+    {
+        id: 'bauturbo',
+        label: 'Bauturbo',
+        description: 'Vorhaben, die über die beschleunigten Möglichkeiten des Bauturbos laufen.',
     },
     {
         id: 'leben-im-dorf',
