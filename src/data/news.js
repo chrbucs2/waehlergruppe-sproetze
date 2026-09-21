@@ -4,7 +4,7 @@ export const news = [
         slug: 'bebauungsplan-sproetzer-weg-an-den-tennisplaetzen-satzungsbeschluss',
         title: 'Neue Kita beim Discounter am Sprötzer Weg in Planung',
         publishedAt: '2026-05-06',
-        topicIds: ['neubaugebiete'],
+        topicIds: ['neubaugebiete'comm],
         summary: [
             '**Neue Kita am Sprötzer Weg rückt näher**: Der Ausschuss berät die entscheidende Änderung des Bebauungsplans „Sprötzer Weg / An den Tennisplätzen“. Auf der bislang für Einzelhandel vorgesehenen Fläche sollen die planungsrechtlichen Voraussetzungen für eine neue Kindertagesstätte geschaffen werden.',
             'Neben der künftigen Nutzung geht es dabei auch um Erschließung, Entwässerung und die Gestaltung des rund 0,9 Hektar großen Areals.',
@@ -65,7 +65,7 @@ export const news = [
         slug: 'niedersachsenstrasse-13-mehrfamilienhaeuser-bauturbo',
         title: 'Deutlich größere Bebauung in der Niedersachsenstraße 13',
         publishedAt: '2026-09-17',
-        topicIds: ['wohnen', 'stadtplanung'],
+        topicIds: ['ortsmitte'],
         summary: [
             '**Auf dem Eckgrundstück an der Niedersachsenstraße 13 neben dem Edeka sind zwei Mehrfamilienhäuser mit 12 bis 15 Wohnungen und zwei Gewerbeeinheiten geplant.**',
             'Für das Vorhaben sollen die **bisherigen Vorgaben des Bebauungsplans deutlich überschritten** werden: Statt eines Vollgeschosses sind zwei vorgesehen, außerdem sollen Gebäude höher ausfallen und Baugrenzen stellenweise um bis zu 6,20 Meter überschritten werden.',
