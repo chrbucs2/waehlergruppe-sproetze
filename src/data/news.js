@@ -4,10 +4,10 @@ export const news = [
         slug: 'bebauungsplan-sproetzer-weg-an-den-tennisplaetzen-satzungsbeschluss',
         title: 'Neue Kita beim Discounter am Sprötzer Weg in Planung',
         publishedAt: '2026-05-06',
-        topicIds: ['neubaugebiete'comm],
+        topicIds: ['neubaugebiete'],
         summary: [
-            '**Neue Kita am Sprötzer Weg rückt näher**: Der Ausschuss berät die entscheidende Änderung des Bebauungsplans „Sprötzer Weg / An den Tennisplätzen“. Auf der bislang für Einzelhandel vorgesehenen Fläche sollen die planungsrechtlichen Voraussetzungen für eine neue Kindertagesstätte geschaffen werden.',
-            'Neben der künftigen Nutzung geht es dabei auch um Erschließung, Entwässerung und die Gestaltung des rund 0,9 Hektar großen Areals.',
+            '**Neue Kita am Sprötzer Weg geplant.** Der Bebauungsplan „**Sprötzer Weg / An den Tennisplätzen“ soll geändert werden, um auf der bislang für Einzelhandel vorgesehenen Fläche unter anderem eine Kindertagesstätte zu ermöglichen.',
+            'Die Planung geht jedoch über die Kita hinaus und erlaubt künftig auch weitere soziale, kulturelle und sportliche Angebote. Zudem geht es um Verkehr, Erschließung, Entwässerung, Lärmschutz und die Begrünung des rund 0,9 Hektar großen Areals.',
         ],
         introduction: [
             'Am Sprötzer Weg soll eine **neue Kindertagesstätte** entstehen. Dafür wird der **Bebauungsplan „Sprötzer Weg / An den Tennisplätzen“** geändert.',
@@ -67,7 +67,7 @@ export const news = [
         publishedAt: '2026-09-17',
         topicIds: ['ortsmitte'],
         summary: [
-            '**Auf dem Eckgrundstück an der Niedersachsenstraße 13 neben dem Edeka sind zwei Mehrfamilienhäuser mit 12 bis 15 Wohnungen und zwei Gewerbeeinheiten geplant.**',
+            'Auf dem **Eckgrundstück an der Niedersachsenstraße 13 neben dem Edeka** sind **zwei Mehrfamilienhäuser** mit 12 bis 15 Wohnungen und zwei Gewerbeeinheiten geplant.',
             'Für das Vorhaben sollen die **bisherigen Vorgaben des Bebauungsplans deutlich überschritten** werden: Statt eines Vollgeschosses sind zwei vorgesehen, außerdem sollen Gebäude höher ausfallen und Baugrenzen stellenweise um bis zu 6,20 Meter überschritten werden.',
         ],
         articleLink: { slug: 'niedersachsenstrasse-13-wohnungsbau'},
