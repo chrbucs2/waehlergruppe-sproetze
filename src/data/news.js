@@ -52,7 +52,7 @@ export const news = [
                 ],
             },
         ],
-        articleLink: { slug: 'bebauungsplan-sproetzer-weg', label: 'Artikel: Bebauungsplan Sprötzer Weg' },
+        articleLink: { slug: 'bebauungsplan-sproetzer-weg', label: 'Bebauungsplan Sprötzer Weg' },
         ctaLabel: 'Mehr zu Stadtplanung',
     },
     {
