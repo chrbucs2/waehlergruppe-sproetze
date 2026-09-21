@@ -58,7 +58,6 @@ export const news = [
             },
         ],
         articleLink: { slug: 'bebauungsplan-sproetzer-weg', label: 'Bebauungsplan Sprötzer Weg' },
-        ctaLabel: 'Mehr zu Stadtplanung',
     },
     {
         id: 'bahnbruecke-k72-restarbeiten-september-2026',
@@ -85,11 +84,14 @@ export const news = [
                         text: 'Zum Wochenblatt-Artikel',
                         link: 'https://www.kreiszeitung-wochenblatt.de/buchholz/c-panorama/bauarbeiten-an-bahnbruecke-in-sproetze-teilweise-vollsperrung_a419984',
                         indent: true,
+                    },
+                    {
+                        text: 'Offizielle Vorgeschichte (Pressmitteilung)',
+                        link: 'https://www.landkreis-harburg.de/downloads/datei/NDE5ZTgzMzU5MjdkMDUwY2dhYUFVRlM1SFNlbzFURWJUMUM2dFJmUUxHUEVPUVcvUXVsMEFUZzMvRy9McSt4WlJBTXBmVGV2V3BhKzZHOUFtR3ZXNEhVcXNvMmIxWjFwMGRMc0RVMFB1b1p3NWVqZlBZSm96MEQ1YmhRU2txeDcreUFWTmpjVFBJdnNVTmo5YkhZRmpuNEpmOGZQTExJRmR0SVBzUT09',
                     }
                 ],
             },
         ],
-        ctaLabel: 'Mehr zu Verkehr & Baustellen',
     },
     {
         id: 'niedersachsenstrasse-13-wohnungsbau-bauturbo',
@@ -102,7 +104,6 @@ export const news = [
             'Für das Vorhaben sollen die **bisherigen Vorgaben des Bebauungsplans deutlich überschritten** werden: Statt eines Vollgeschosses sind zwei vorgesehen, außerdem sollen Gebäude höher ausfallen und Baugrenzen stellenweise um bis zu 6,20 Meter überschritten werden.',
         ],
         articleLink: { slug: 'niedersachsenstrasse-13-wohnungsbau'},
-        ctaLabel: 'Mehr zu Stadtplanung',
     },
     {
         id: 'haeckselaktion-buchholz-2026',
@@ -114,7 +115,6 @@ export const news = [
             'Die **mobile Häckselaktion** der Stadt Buchholz findet im **November** wieder statt. An vier Samstagen wird Baum- und Buschschnitt direkt vor angemeldeten Grundstücken zerkleinert. **Für Sprötze steht der genaue Termin noch nicht fest.** Die Stadt will am 19. Oktober bekanntgeben, welche Ortschaft an welchem Aktionstag bedient wird.',
         ],
         articleLink: { link: 'https://buchholz-aktuell.de/buchholz/jetzt-anmelden-mobile-haecksler-kommen-nach-buchholz-19803', label: 'Buchholz Aktuell: Häckselaktion' },
-        ctaLabel: 'Mehr zu Abfall & Entsorgung',
     },
 ];
 
