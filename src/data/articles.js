@@ -72,7 +72,7 @@ export const articles = [
             {
                 title: 'Wie weit ist das Verfahren?',
                 paragraphs: [
-                    'Die ersten Planungen wurden am **18. September 2024* öffentlich vorgestellt. Nach weiteren Untersuchungen und Änderungen lag der Bebauungsplan vom 7. Oktober bis 7. November 2025** öffentlich aus.',
+                    'Die ersten Planungen wurden am **18. September 2024** öffentlich vorgestellt. Nach weiteren Untersuchungen und Änderungen lag der Bebauungsplan vom **7. Oktober bis 7. November 2025** öffentlich aus.',
                     'Nach den veröffentlichten Abwägungsunterlagen gingen sowohl bei der frühzeitigen Beteiligung 2024 als auch bei der öffentlichen Auslegung 2025 **keine Stellungnahmen aus der Öffentlichkeit** ein. Behörden und andere Träger öffentlicher Belange gaben dagegen zahlreiche Hinweise ab.',
                     'Am **6. Mai 2026** wurde der Satzungsbeschluss im zuständigen Fachausschuss vorberaten. Die später veröffentlichten Planunterlagen haben den Stand **11. Juni 2026** und sind für den Satzungsbeschluss vorbereitet.',
                     'In den uns vorliegenden Unterlagen sind der endgültige Ratsbeschluss und das Inkrafttreten noch nicht eingetragen. **Ein rechtskräftiger Abschluss lässt sich daraus deshalb noch nicht feststellen.**',
@@ -139,20 +139,20 @@ export const articles = [
     {
         id: 'niedersachsenstrasse-13-wohnungsbau',
         slug: 'niedersachsenstrasse-13-wohnungsbau',
-        title: 'Niedersachsenstraße 13: Deutlich größere Bebauung in Sprötzes Ortsmitte geplant',
+        title: 'Niedersachsenstraße 13: Zwei Mehrfamilienhäuser mit 12 bis 15 Wohnungen geplant',
         publishedAt: '2026-09-17',
         modifiedAt: '2026-09-21',
         category: 'Stadtplanung',
         introduction: [
-            'Auf dem bekannten **Eckgrundstück an der Niedersachsenstraße 13 neben dem Edeka** sollen zwei Mehrfamilienhäuser mit insgesamt **12 bis 15 Wohnungen sowie zwei Gewerbeeinheiten** entstehen.',
-            'Besonders ist dabei, dass das **Vorhaben in mehreren Punkten vom geltenden Bebauungsplan abweicht**. Möglich werden soll dies über eine Befreiung nach dem sogenannten „Bauturbo“.',
+            'Auf dem **Eckgrundstück an der Niedersachsenstraße 13 neben dem Edeka** sollen zwei Mehrfamilienhäuser mit insgesamt **12 bis 15 Wohnungen sowie zwei Gewerbeeinheiten im Erdgeschoss** entstehen.',
+            'Das Vorhaben **weicht in mehreren Punkten vom geltenden Bebauungsplan ab**. Möglich werden soll dies über eine Befreiung nach **§ 31 Abs. 3 BauGB im Rahmen des sogenannten „Bauturbos“**.',
         ],
         sections: [
             {
                 title: 'Was ist geplant?',
                 paragraphs: [
-                    'Geplant sind **zwei Mehrfamilienhäuser mit insgesamt etwa 12 bis 15 Wohnungen sowie zwei Gewerbeeinheiten** im Erdgeschoss. Das Grundstück ist 1.715 Quadratmeter groß. Beantragt wurde zunächst eine Bauvoranfrage.',
-                    'Mit der Bebauung wäre die Ortsmitte deutlich dichter genutzt als nach dem derzeit geltenden Bebauungsplan vorgesehen.',
+                    'Geplant sind **zwei Mehrfamilienhäuser mit insgesamt etwa 12 bis 15 Wohnungen sowie zwei Gewerbeeinheiten im Erdgeschoss**. Das Grundstück ist 1.715 Quadratmeter groß. Beantragt wurde zunächst eine Bauvoranfrage.',
+                    'Die **Grundflächenzahl von 0,3 soll eingehalten werden**. Abgewichen werden soll vor allem bei **Geschossigkeit, Gebäudehöhe und Baugrenzen**.',
                 ],
                 image: {
                     src: '/images/articles/niedersachsenstrasse13.png',
@@ -163,8 +163,8 @@ export const articles = [
             {
                 title: 'Was bedeutet der „Bauturbo“?',
                 paragraphs: [
-                    'Der sogenannte „Bauturbo“ soll Wohnungsbau schneller ermöglichen. Dafür kann in bestimmten Fällen auch **von den Vorgaben eines bestehenden Bebauungsplans abgewichen werden** – zum Beispiel bei **Geschossigkeit**, **Gebäudehöhe** oder **Baugrenzen**.',
-                    'Das bedeutet aber nicht, dass solche Abweichungen automatisch erlaubt sind. Die Stadt muss dem konkreten Vorhaben zustimmen und prüfen, ob es mit ihren Vorstellungen zur städtebaulichen Entwicklung vereinbar ist.',
+                    'Beim Grundstück Niedersachsenstraße 13 soll eine **Befreiung nach § 31 Abs. 3 BauGB** genutzt werden. Damit kann die Stadt im Einzelfall Abweichungen von einem bestehenden Bebauungsplan zulassen, **ohne den Plan vorher zu ändern** – zum Beispiel bei **Geschossigkeit**, **Gebäudehöhe** oder **Baugrenzen**.',
+                    'Eine Zustimmung erfolgt **nicht automatisch**. Außerdem ist sie noch keine Baugenehmigung – diese muss anschließend gesondert erteilt werden.',
                 ],
             },
             {
@@ -190,23 +190,25 @@ export const articles = [
             {
                 title: 'Warum ist das für Sprötze interessant?',
                 paragraphs: [
-                    'Besonders interessant ist die Begründung der Verwaltung: Die **Begrenzung auf ein Vollgeschoss** war **im ursprünglichen Bebauungsplan** auch **mit dem dörflichen Charakter** und den großzügigeren Grundstückszuschnitten **begründet** worden.',
-                    '**Heute verweist die Verwaltung** dagegen **auf** die inzwischen **verdichtete Umgebung** rund um den Dorfplatz **und hält** deshalb zwei Vollgeschosse sowie **höhere Gebäude für vertretbar**.',
-                    'Damit stellt sich für die weitere Ortsentwicklung die **Frage, welcher bauliche Maßstab künftig in der Sprötzer Ortsmitte gelten** soll.'
+                    'Die **Begrenzung auf ein Vollgeschoss** wurde für diesen Teil des Bebauungsplans ursprünglich unter anderem mit den **großzügigeren Grundstücken und dem dörflichen Charakter** begründet.',
+                    '**Heute verweist die Verwaltung auf die inzwischen dichtere Bebauung** rund um den Dorfplatz und hält deshalb zwei Vollgeschosse sowie höhere Gebäude an dieser Stelle für vertretbar. Dabei verweist sie auch darauf, dass der geltende Bebauungsplan **östlich des Dorfplatzes bereits zwei Vollgeschosse zulässt**.',
+                    'Damit stellt sich für die weitere Ortsentwicklung die **Frage, welcher bauliche Maßstab künftig rund um den Dorfplatz gelten soll**.',
                 ],
             },
             {
                 title: 'Was ist mit Bäumen, Stellplätzen und Erschließung?',
                 paragraphs: [
-                    'Die vorhandenen großen **Bäume sollen erhalten bleiben**. Die **Zufahrt von der Kirchhofstraße** soll so angelegt werden, dass Eingriffe in den Wurzelbereich möglichst gering bleiben. Wo Eingriffe unvermeidbar sind, soll eine Ersatzpflanzung erfolgen.',
-                    'Stellplätze sollen auf dem Grundstück nachgewiesen werden. Die genaue Entwässerung, die Anordnung der Stellplätze und die endgültige Erschließung müssen im weiteren Genehmigungsverfahren noch abschließend geprüft werden.',
+                    'Die vorhandenen großen **Bäume sollen dauerhaft erhalten bleiben**. Die Zufahrt von der Kirchhofstraße soll so angelegt werden, dass Eingriffe in den Wurzelbereich möglichst gering bleiben. Unvermeidbare Eingriffe müssen gesondert geprüft werden; außerdem ist eine Ersatzpflanzung vorgesehen.',
+                    'Die Verwaltung weist zugleich auf Auswirkungen durch die **massiveren Baukörper und die Zufahrt im Grünbestand** hin. Eine Strategische Umweltprüfung hält sie jedoch nicht für erforderlich.',
+                    'Stellplätze sollen auf dem Grundstück nachgewiesen werden. In der vorliegenden Planskizze sind **16 Stellplätze** dargestellt. Entwässerung, Stellplätze und endgültige Erschließung werden erst im weiteren Genehmigungsverfahren abschließend geprüft.',
                 ],
             },
             {
                 title: 'Wie geht es weiter?',
                 paragraphs: [
-                    'Die Stadtverwaltung empfiehlt, die Zustimmung zum Vorhaben zu erteilen. Die endgültige Entscheidung über die gemeindliche Zustimmung soll im weiteren politischen Verfahren getroffen werden.',
-                    'Eine Zustimmung nach dem Bauturbo bedeutet noch keine fertige Baugenehmigung. Weitere Anforderungen müssen im anschließenden Genehmigungsverfahren geprüft werden.',
+                    'Die Stadtverwaltung empfiehlt, der beantragten **Befreiung zuzustimmen**. Das Vorhaben war am **17. September 2026 zur Vorberatung im zuständigen Fachausschuss** vorgesehen.',
+                    'Als Entscheidungsgremium nennt die Vorlage den **Verwaltungsausschuss**. Ein abschließender Beschluss zum konkreten Vorhaben ist in den derzeit vorliegenden Unterlagen noch nicht dokumentiert.',
+                    'Auch eine Zustimmung der Stadt wäre **noch keine Baugenehmigung**. Weitere Anforderungen müssen anschließend im Genehmigungsverfahren geprüft werden.',
                 ],
             },
             {
