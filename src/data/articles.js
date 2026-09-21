@@ -23,43 +23,59 @@ export const articles = [
                 },
             },
             {
-                title: 'Was ändert sich?',
+                title: 'Was ist geplant?',
                 paragraphs: [
-                    'Ursprünglich war die Fläche für den Einzelhandel vorgesehen. Nun wird der Bebauungsplan geändert. Ziel ist es, die bisherige reine Einzelhandelsnutzung zu öffnen. ',
-                    'Auf der Fläche sollen künftig vor allem soziale, kulturelle und sportliche Einrichtungen möglich sein. Dazu können zum Beispiel eine Kindertagesstätte, Bildungsangebote, Freizeit- oder Spielangebote gehören. Eine Kindertagesstätte ist momentan das einzige konkrete vorhaben.',
+                    'Die Fläche war bisher für Einzelhandel vorgesehen, wurde dafür aber nicht genutzt. Künftig wird sie als **Sondergebiet „Soziales, Kultur und Sport“** ausgewiesen.',
+                    '**Das konkrete Vorhaben ist eine Kindertagesstätte**. Möglich sind aber auch andere soziale, kulturelle und sportliche Einrichtungen sowie Freizeit-, Spiel- und Bildungsangebote.',
+                    'Der Bebauungsplan legt dabei nur fest, was grundsätzlich möglich ist. Die genaue Gestaltung der Kindertagesstätte wird erst in der weiteren Planung festgelegt.',
                 ],
             },
             {
-                title: 'Welche Themen werden diskutiert?',
+                title: 'Wie könnte die Kita aussehen?',
+                paragraphs: [
+                    'Ein erstes Konzept zeigt ein längliches Gebäude entlang des Sprötzer Wegs. Die Außenspielflächen liegen dahinter und werden dadurch teilweise von Straße und Bahn abgeschirmt.',
+                    'Der ältere Baumbestand am nördlichen Hang soll weitgehend erhalten bleiben. Ein Teil der vorhandenen Parkplätze soll gemeinsam mit dem Lebensmittelmarkt genutzt werden.',
+                    'Das Konzept zeigt **nur eine mögliche Gestaltung** und ist noch keine endgültige Bauplanung.',
+                ],
+                image: {
+                    src: '/images/articles/kita-sproetzer-weg-2025.png',
+                    alt: 'Entwicklungskonzept für eine Kindertagesstätte am Sprötzer Weg',
+                    caption: 'Mögliches Entwicklungskonzept für die Kita, Stand Mai 2025.',
+                },
+            },
+            {
+                title: 'Welche Themen sind wichtig?',
                 paragraphs: [
                     { type: 'subheading', text: 'Verkehr:' },
-                    'Nach den Planunterlagen soll der Autoverkehr weiterhin über die bereits vorhandene Zufahrt am Sprötzer Weg abgewickelt werden. Eine zusätzliche Zufahrt ist nach den bislang veröffentlichten Unterlagen nicht vorgesehen.',
-                    'Ein Bericht der Kreiszeitung Wochenblatt weist darauf hin, dass es im Bereich des benachbarten Schulzentrums besonders morgens bereits zu starkem Verkehr kommt. Deshalb wurde untersucht, wie sich zusätzliche Fahrten auswirken könnten.',
+                    'Die Zufahrt soll weiterhin über den Sprötzer Weg erfolgen. Das Verkehrsgutachten rechnet für die geplante Kita mit rund **236 zusätzlichen Kfz-Fahrten pro Tag**.',
+                    'Laut Gutachten können die untersuchten Straßen und Kreuzungen diesen zusätzlichen Verkehr rechnerisch aufnehmen. An der Kreuzung Bremer Straße / Sprötzer Weg gibt es aber bereits heute Rückstaus und Probleme für Fußgänger und Radfahrer. Das Gutachten empfiehlt dort unabhängig von der Kita Verbesserungen.',
+
                     { type: 'subheading', text: 'Regenwasser:' },
-                    'Die vorhandenen Regenwasserkanäle im Bereich der angrenzenden Straßen sind nach Angaben aus dem Entwässerungskonzept bereits stark ausgelastet. Deshalb soll Regenwasser möglichst direkt auf dem Grundstück versickern. Falls das wegen des Bodens nicht ausreichend möglich ist, muss Wasser auf dem Grundstück zurückgehalten und nur begrenzt in die Kanalisation abgegeben werden.',
+                    'Die öffentlichen Regenwasserkanäle sind in diesem Bereich bereits stark ausgelastet. Deshalb soll das Regenwasser **auf dem Grundstück versickern**. Vorgesehen sind dafür unterirdische Rigolen.',
+
                     { type: 'subheading', text: 'Lärm:' },
-                    'Das Gelände liegt direkt am Sprötzer Weg und in der Nähe der Bahnstrecke. Bereits in der frühen Planung wurde darauf hingewiesen, dass vor allem der südliche Bereich durch Schall belastet ist.',
-                    'Für die weitere Planung wurde deshalb eine eigene schalltechnische Untersuchung erstellt.',
+                    '**Durch den Sprötzer Weg und die nahe Bahnstrecke ist das Grundstück mit Verkehrslärm belastet**. Deshalb gibt es Vorgaben für die Lage empfindlicher Räume sowie für Fenster und Außenbauteile.',
+
                     { type: 'subheading', text: 'Grün und Umwelt:' },
-                    'Auch Natur und Begrünung wurden untersucht. Für die Planung liegt ein grünordnungsplanerischer Fachbeitrag vor. Darin werden unter anderem Boden, Wasser, Klima, Pflanzen, Tiere, Landschaft und die Auswirkungen auf Menschen betrachtet.',
-                    'Ein Naturschutzverband hat sich ebenfalls am Verfahren beteiligt. Er bewertete die Nutzung einer bereits teilweise erschlossenen Fläche grundsätzlich als eine Form der Innenentwicklung und damit günstiger als eine komplett neue Bebauung auf unberührter Fläche.',
+                    'Der ältere **Baumbestand am nördlichen Hang soll weitgehend erhalten** bleiben. Außerdem sind unter anderem neue Bäume an den Stellplätzen und teilweise begrünte Dächer vorgesehen.',
+                    'Auch der BUND hat sich am Verfahren beteiligt. Er bewertet es grundsätzlich positiv, eine bereits erschlossene Fläche zu nutzen, statt dafür eine neue Fläche auf der grünen Wiese zu bebauen.',
                 ],
             },
             {
                 title: 'Was bedeutet das für Sprötze?',
                 paragraphs: [
-                    'Das Plangebiet liegt nicht direkt in Sprötze. Trotzdem ist es für Sprötzer interessant, weil der Sprötzer Weg eine wichtige Verbindung in die Buchholzer Kernstadt ist.',
-                    'Neue Nutzungen an dieser Strecke können Auswirkungen auf Verkehr und Infrastruktur haben. Wie stark diese Auswirkungen tatsächlich sind, lässt sich aus den bisher veröffentlichten Unterlagen aber nicht eindeutig ableiten.',
+                    'Der Bebauungsplan liegt zwar nicht direkt in Sprötze. Der **Sprötzer Weg ist aber eine wichtige Verbindung von Sprötze in die Buchholzer Innenstadt**.',
+                    'Durch die Kita kommt zusätzlicher Verkehr hinzu. Laut Gutachten kann dieser aufgenommen werden. Die bereits bestehenden **Probleme an der Kreuzung Sprötzer Weg / Bremer Straße bleiben** aber **bestehen**.',
+                    'Für Sprötzer sind deshalb vor allem die weitere Verkehrsentwicklung sowie mögliche Verbesserungen für Auto-, Rad- und Fußverkehr interessant.',
                 ],
             },
             {
                 title: 'Wie weit ist das Verfahren?',
                 paragraphs: [
-                    'Das Verfahren läuft schon seit mehreren Jahren.',
-                    'Im September 2024 wurde das damalige Plankonzept für die frühzeitige Beteiligung beschlossen.',
-                    '2025 wurde die Planung weiter überarbeitet. Vom 7. Oktober bis 7. November 2025 lag der Entwurf erneut öffentlich aus. In dieser Zeit konnten Bürger und Behörden Stellungnahmen abgeben.',
-                    'Am 6. Mai 2026 stand schließlich der Satzungsbeschluss zur 1. Änderung des Bebauungsplans auf der Tagesordnung des Ausschusses für Stadtentwicklung, Umwelt, Klimaschutz und Mobilität. Dort wurde das Thema als Vorberatung behandelt.',
-                    'Erst wenn der Bebauungsplan endgültig beschlossen und rechtskräftig geworden ist, schafft er verbindliches Baurecht.',
+                    'Die ersten Planungen wurden am **18. September 2024* öffentlich vorgestellt. Nach weiteren Untersuchungen und Änderungen lag der Bebauungsplan vom 7. Oktober bis 7. November 2025** öffentlich aus.',
+                    'Nach den veröffentlichten Abwägungsunterlagen gingen sowohl bei der frühzeitigen Beteiligung 2024 als auch bei der öffentlichen Auslegung 2025 **keine Stellungnahmen aus der Öffentlichkeit** ein. Behörden und andere Träger öffentlicher Belange gaben dagegen zahlreiche Hinweise ab.',
+                    'Am **6. Mai 2026** wurde der Satzungsbeschluss im zuständigen Fachausschuss vorberaten. Die später veröffentlichten Planunterlagen haben den Stand **11. Juni 2026** und sind für den Satzungsbeschluss vorbereitet.',
+                    'In den uns vorliegenden Unterlagen sind der endgültige Ratsbeschluss und das Inkrafttreten noch nicht eingetragen. **Ein rechtskräftiger Abschluss lässt sich daraus deshalb noch nicht feststellen.**',
                 ],
             },
             {
@@ -111,12 +127,12 @@ export const articles = [
         ],
         sources: [
             {
-                label: 'Ratsinformationen der Stadt Buchholz',
-                url: 'https://www.buchholz.de/allris/to010?SILFDNR=1000953',
+                label: 'Ratsinformationssystem der Stadt Buchholz',
+                url: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1012941',
             },
             {
-                label: 'Öffentliche Vorlage zum Bebauungsplan',
-                url: 'https://www.buchholz.de/allris/to010?SILFDNR=1000953',
+                label: 'Planungsunterlagen zur öffentlichen Auslegung',
+                url: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1012498',
             },
         ],
     },
