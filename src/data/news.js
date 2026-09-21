@@ -1,12 +1,24 @@
 export const news = [
     {
+        id: 'gruengutannahme-trelder-berg-2026',
+        slug: 'neue-gruengutannahme-gewerbegebiet-trelder-berg',
+        title: 'Neue Grüngut-Annahmestelle im Gewerbegebiet Trelder Berg',
+        publishedAt: '2026-02-13',
+        topicIds: ['abfallentsorgung'],
+        summary: [
+            '**Im Gewerbegebiet Trelder Berg gibt es eine neue Annahmestelle für Grüngut.** Seit dem 2. März 2026 können Bürgerinnen und Bürger aus dem Landkreis Harburg können dort täglich bis zu **einen Kubikmeter Grüngut kostenfrei** abgeben. Die Annahme erfolgt ebenerdig in einer Halle und ist damit barrierefreier als am bisherigen Standort in Nenndorf.',
+            'Die neue Annahmestelle in der **Ritscherstraße 10** ersetzt die bisherige Grüngutabgabe in Nenndorf und liegt damit auch für Sprötze und Trelde vergleichsweise nah.',
+        ],
+        articleLink: { link: 'https://www.landkreis-harburg.de/portal/meldungen/neue-annahmestelle-fuer-gruengut-in-buchholz-901010429-20100.html', label: 'Zur Info-Seite des Landkreises' },
+    },
+    {
         id: 'bebauungsplan-sproetzer-weg-satzungsbeschluss',
         slug: 'bebauungsplan-sproetzer-weg-an-den-tennisplaetzen-satzungsbeschluss',
         title: 'Neue Kita beim Discounter am Sprötzer Weg in Planung',
         publishedAt: '2026-05-06',
         topicIds: ['infrastruktur', 'verkehr'],
         summary: [
-            '**Neue Kita am Sprötzer Weg geplant.** Der Bebauungsplan „**Sprötzer Weg / An den Tennisplätzen“ soll geändert werden, um auf der bislang für Einzelhandel vorgesehenen Fläche unter anderem eine Kindertagesstätte zu ermöglichen.',
+            '**Neue Kita am Sprötzer Weg geplant.** Der Bebauungsplan „**Sprötzer Weg / An den Tennisplätzen**“ soll geändert werden, um auf der bislang für Einzelhandel vorgesehenen Fläche unter anderem eine Kindertagesstätte zu ermöglichen.',
             'Die Planung geht jedoch über die Kita hinaus und erlaubt künftig auch weitere soziale, kulturelle und sportliche Angebote. Zudem geht es um Verkehr, Erschließung, Entwässerung, Lärmschutz und die Begrünung des rund 0,9 Hektar großen Areals.',
         ],
         introduction: [
@@ -76,19 +88,20 @@ export const news = [
             {
                 title: 'Weitere Arbeiten an der Bahnbrücke',
                 paragraphs: ['Die Arbeiten unterhalb des Bauwerks können nur während der nächtlichen Betriebsruhe der Bahn ausgeführt werden. Deshalb kann es zwischen **22:30 und 4:30 Uhr zu einzelnen Vollsperrungen** kommen. Eine durchgehende Sperrung über den gesamten Zeitraum ist nicht angekündigt.', 'Die **Übergangskonstruktionen der Brücke** wurden bereits im Frühjahr instandgesetzt. Die jetzt folgenden Arbeiten mussten verschoben werden, weil die dafür benötigten Sperrpausen der Deutschen Bahn erst Ende September zur Verfügung stehen.',],
-            }, {
+            },
+            {
                 title: 'Weiterführende Informationen',
                 paragraphs: [
                     'Weitere Informationen entnehmen Sie bitte dem Wochenblatt-Artikel, der die Hintergründe und Details zu den Arbeiten an der Bahnbrücke zusammenfasst.',
                     {
-                        text: 'Zum Wochenblatt-Artikel',
+                        text: 'Wochenblatt-Artikel',
                         link: 'https://www.kreiszeitung-wochenblatt.de/buchholz/c-panorama/bauarbeiten-an-bahnbruecke-in-sproetze-teilweise-vollsperrung_a419984',
                         indent: true,
                     },
                     {
                         text: 'Offizielle Vorgeschichte (Pressmitteilung)',
                         link: 'https://www.landkreis-harburg.de/downloads/datei/NDE5ZTgzMzU5MjdkMDUwY2dhYUFVRlM1SFNlbzFURWJUMUM2dFJmUUxHUEVPUVcvUXVsMEFUZzMvRy9McSt4WlJBTXBmVGV2V3BhKzZHOUFtR3ZXNEhVcXNvMmIxWjFwMGRMc0RVMFB1b1p3NWVqZlBZSm96MEQ1YmhRU2txeDcreUFWTmpjVFBJdnNVTmo5YkhZRmpuNEpmOGZQTExJRmR0SVBzUT09',
-                    }
+                    },
                 ],
             },
         ],
