@@ -30,6 +30,13 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
 
     const renderMarkup = (text) => ({ __html: formatInlineMarkup(text) });
     const getSummaryParagraphs = (summary) => (Array.isArray(summary) ? summary : [summary]);
+    const hasNewsDetailContent = (article) => Boolean(
+        article &&
+            Array.isArray(article.introduction) &&
+            article.introduction.length > 0 &&
+            Array.isArray(article.sections) &&
+            article.sections.length > 0,
+    );
 
     if (activeArticle) {
         const introParagraphs = Array.isArray(detailArticle?.introduction)
@@ -39,6 +46,7 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
                 : [];
         const sections = detailArticle?.sections ?? [];
         const newsDetailHref = `${NEWS_INDEX_PATH}/${activeArticle.slug}`;
+        const hasNewsDetailLink = hasNewsDetailContent(activeArticle);
         const articleActionHref = activeArticle.articleLink ? `/artikel/${activeArticle.articleLink.slug}` : null;
         const articleActionLabel = activeArticle.articleLink?.label ?? 'Beitrag öffnen';
 
@@ -102,9 +110,11 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
                                    </a>
                                ))}
                             </div>
-                            <p className="schedule-link-note is-indented">
-                               <a className="news-card__link" href={newsDetailHref} dangerouslySetInnerHTML={renderMarkup('Beitrag öffnen')} />
-                            </p>
+                            {hasNewsDetailLink && (
+                               <p className="schedule-link-note is-indented">
+                                   <a className="news-card__link" href={newsDetailHref} dangerouslySetInnerHTML={renderMarkup('Beitrag öffnen')} />
+                               </p>
+                            )}
                             {articleActionHref && (
                                <p className="schedule-link-note is-indented">
                                    <a className="news-card__link" href={articleActionHref} dangerouslySetInnerHTML={renderMarkup(articleActionLabel)} />
@@ -126,9 +136,11 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
                                     </a>
                                 ))}
                             </div>
-                            <p className="schedule-link-note is-indented">
-                                <a className="news-card__link" href={newsDetailHref} dangerouslySetInnerHTML={renderMarkup('Beitrag öffnen')} />
-                            </p>
+                            {hasNewsDetailLink && (
+                                <p className="schedule-link-note is-indented">
+                                    <a className="news-card__link" href={newsDetailHref} dangerouslySetInnerHTML={renderMarkup('Beitrag öffnen')} />
+                                </p>
+                            )}
                             {articleActionHref && (
                                 <p className="schedule-link-note is-indented">
                                     <a className="news-card__link" href={articleActionHref} dangerouslySetInnerHTML={renderMarkup(articleActionLabel)} />
@@ -193,6 +205,7 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
                 <div className="news-list">
                     {visibleArticles.map((article) => {
                         const newsDetailHref = `${NEWS_INDEX_PATH}/${article.slug}`;
+                        const hasNewsDetailLink = hasNewsDetailContent(article);
                         const articleHref = article.articleLink ? `/artikel/${article.articleLink.slug}` : null;
                         const articleLabel = article.articleLink?.label ?? 'Beitrag öffnen';
 
@@ -203,12 +216,16 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
                                 {getSummaryParagraphs(article.summary).map((paragraph, index) => (
                                     <p key={`${article.id}-summary-${index}`} dangerouslySetInnerHTML={renderMarkup(paragraph)} />
                                 ))}
-                                <div className="news-overview-header-actions">
-                                    <a className="news-card__link" href={newsDetailHref} dangerouslySetInnerHTML={renderMarkup('Beitrag öffnen')} />
-                                    {articleHref && (
-                                        <a className="news-card__link" href={articleHref} dangerouslySetInnerHTML={renderMarkup(articleLabel)} />
-                                    )}
-                                </div>
+                                {(hasNewsDetailLink || articleHref) && (
+                                    <div className="news-overview-header-actions">
+                                        {hasNewsDetailLink && (
+                                            <a className="news-card__link" href={newsDetailHref} dangerouslySetInnerHTML={renderMarkup('Beitrag öffnen')} />
+                                        )}
+                                        {articleHref && (
+                                            <a className="news-card__link" href={articleHref} dangerouslySetInnerHTML={renderMarkup(articleLabel)} />
+                                        )}
+                                    </div>
+                                )}
                             </article>
                         );
                     })}
