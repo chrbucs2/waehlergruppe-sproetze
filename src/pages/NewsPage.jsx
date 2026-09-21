@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 
 import { SiteFooter } from '../components/SiteFooter';
 import { filterTopics, news } from '../data';
-import { getTopicById, sortNewsByDate } from '../lib/content';
+import { getGeneralArticleBySlug, getTopicById, sortNewsByDate } from '../lib/content';
 import { NEWS_INDEX_PATH } from '../lib/constants';
 import { assetUrl, formatDate, formatInlineMarkup } from '../lib/formatting';
 
@@ -14,6 +14,12 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
     );
     const activeTopic = topicId ? getTopicById(topicId) : null;
     const activeArticle = articleSlug ? news.find((article) => article.slug === articleSlug) ?? null : null;
+    const articleReference = activeArticle?.articleLink
+        ? {
+              href: `/artikel/${activeArticle.articleLink.slug}`,
+              label: activeArticle.articleLink.label ?? 'Weiterer Artikel',
+          }
+        : null;
     const backHref = activeTopic ? `${NEWS_INDEX_PATH}?thema=${activeTopic.id}` : NEWS_INDEX_PATH;
 
     const visibleArticles = useMemo(() => {
@@ -60,7 +66,7 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
                                 {sections.map((section) => (
                                     <section className="schedule-detail-section" key={section.title}>
                                         <h3>{section.title}</h3>
-                                        {section.paragraphs.map((paragraph, index) => {
+                                        {(section.paragraphs ?? []).map((paragraph, index) => {
                                             if (typeof paragraph === 'string') {
                                                 return (
                                                     <p key={`${section.title}-${index}`} dangerouslySetInnerHTML={renderMarkup(paragraph)} />
@@ -95,6 +101,13 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
                                     </a>
                                 ))}
                             </div>
+                            {articleReference && (
+                                <p className="schedule-link-note is-indented">
+                                    <a className="news-card__link" href={articleReference.href}>
+                                        {articleReference.label}
+                                    </a>
+                                </p>
+                            )}
                         </>
                     ) : (
                         <>
@@ -111,6 +124,13 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
                                     </a>
                                 ))}
                             </div>
+                            {articleReference && (
+                                <p className="schedule-link-note is-indented">
+                                    <a className="news-card__link" href={articleReference.href}>
+                                        {articleReference.label}
+                                    </a>
+                                </p>
+                            )}
                         </>
                     )}
                 </section>
@@ -168,18 +188,32 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
                 </div>
 
                 <div className="news-list">
-                    {visibleArticles.map((article) => (
-                        <article className="news-card" key={article.id}>
-                            <p className="eyebrow">{formatDate(article.publishedAt)}</p>
-                            <h3>{article.title}</h3>
-                            {getSummaryParagraphs(article.summary).map((paragraph, index) => (
-                                <p key={`${article.id}-summary-${index}`} dangerouslySetInnerHTML={renderMarkup(paragraph)} />
-                            ))}
-                            <a className="news-card__link" href={`${NEWS_INDEX_PATH}/${article.slug}`}>
-                                Beitrag öffnen
-                            </a>
-                        </article>
-                    ))}
+                    {visibleArticles.map((article) => {
+                        const articleReference = article.articleLink
+                            ? {
+                                  href: `/artikel/${article.articleLink.slug}`,
+                                  label: article.articleLink.label ?? 'Weiterer Artikel',
+                              }
+                            : null;
+
+                        return (
+                            <article className="news-card" key={article.id}>
+                                <p className="eyebrow">{formatDate(article.publishedAt)}</p>
+                                <h3>{article.title}</h3>
+                                {getSummaryParagraphs(article.summary).map((paragraph, index) => (
+                                    <p key={`${article.id}-summary-${index}`} dangerouslySetInnerHTML={renderMarkup(paragraph)} />
+                                ))}
+                                <a className="news-card__link" href={`${NEWS_INDEX_PATH}/${article.slug}`}>
+                                    Beitrag öffnen
+                                </a>
+                                {articleReference && (
+                                    <a className="news-card__link" href={articleReference.href}>
+                                        {articleReference.label}
+                                    </a>
+                                )}
+                            </article>
+                        );
+                    })}
                 </div>
             </section>
 
