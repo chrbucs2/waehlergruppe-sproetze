@@ -67,16 +67,28 @@ export const articles = [
                 paragraphs: [
                     'Wer sich genauer mit der Planung beschäftigen möchte, findet hier die wichtigsten Unterlagen und Berichte:',
                     {
-                        text: 'Sitzung vom 6. Mai 2026',
-                        link: 'https://www.buchholz.de/allris/to010?SILFDNR=1000953&refresh=false',
+                        text: 'Sitzung vom 6. Mai 2026 (TOP Ö8)',
+                        link: 'https://www.buchholz.de/allris/to020?TOLFDNR=1017941&SILFDNR=1000953',
                     },
                     {
                         text: 'Weitere Unterlagen zum Satzungsbeschluss',
-                        link: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1012941&refresh=false',
+                        link: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1012941',
+                    },
+                    {
+                        text: 'Sitzung vom 17. September 2025 (TOP Ö10)',
+                        link: 'https://www.buchholz.de/allris/to020?TOLFDNR=1015283&SILFDNR=1000653'
                     },
                     {
                         text: 'Planungsunterlagen zum Bebauungsplan',
-                        link: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1012498&refresh=false',
+                        link: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1012498',
+                    },
+                    {
+                        text: 'Sitzung vom 18. September 2024 (TOP Ö7)',
+                        link: 'https://www.buchholz.de/allris/to020?TOLFDNR=1010466&SILFDNR=1000346'
+                    },
+                    {
+                        text: 'Plankonzept zur Vorbereitung',
+                        link: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1009915',
                     },
                     {
                         text: 'Grünordnungsplanerischen Fachbeitrag',
@@ -100,11 +112,11 @@ export const articles = [
         sources: [
             {
                 label: 'Ratsinformationen der Stadt Buchholz',
-                url: 'https://www.buchholz.de/allris/to010?SILFDNR=1000953&refresh=false',
+                url: 'https://www.buchholz.de/allris/to010?SILFDNR=1000953',
             },
             {
                 label: 'Öffentliche Vorlage zum Bebauungsplan',
-                url: 'https://www.buchholz.de/allris/to010?SILFDNR=1000953&refresh=false',
+                url: 'https://www.buchholz.de/allris/to010?SILFDNR=1000953',
             },
         ],
     },
@@ -187,7 +199,7 @@ export const articles = [
                     'Wer sich genauer informieren möchte, findet hier die wichtigsten offiziellen Unterlagen zur bisherigen Planung der Sprötzer Ortsmitte, zum Bauturbo und zum aktuellen Bauvorhaben an der Niedersachsenstraße 13.',
                     {
                         text: 'Bebauungsplan „Neue Ortsmitte Sprötze – Niedersachsenstraße“',
-                        link: 'https://www.buchholz.de/allris/vo020?VOLFDNR=6361&refresh=false',
+                        link: 'https://www.buchholz.de/allris/vo020?VOLFDNR=6361',
                         indent: true,
                     },
                     {
@@ -197,12 +209,12 @@ export const articles = [
                     },
                     {
                         text: 'Vorlage zum Bauvorhaben Niedersachsenstraße 13',
-                        link: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1013228&refresh=false&TOLFDNR=1019306',
+                        link: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1013228&TOLFDNR=1019306',
                         indent: true,
                     },
                     {
                         text: 'Stellungnahme der Verwaltung',
-                        link: 'https://www.buchholz.de/allris/vo020?14--attachments-expandedPanel-content-body-rows-1-cells-2-cell-link&VOLFDNR=1013228&refresh=false&TOLFDNR=1019306',
+                        link: 'https://www.buchholz.de/allris/vo020?14--attachments-expandedPanel-content-body-rows-1-cells-2-cell-link&VOLFDNR=1013228&TOLFDNR=1019306',
                         indent: true,
                     },
                 ],
@@ -211,7 +223,7 @@ export const articles = [
         sources: [
             {
                 label: 'Buchholzer Rats- und Verwaltungsvorlagen',
-                url: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1013228&refresh=false&TOLFDNR=1019306',
+                url: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1013228&TOLFDNR=1019306',
             },
             {
                 label: 'Informationen der Stadt Buchholz zum Bauturbo',

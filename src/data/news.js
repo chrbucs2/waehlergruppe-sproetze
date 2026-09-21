@@ -58,7 +58,7 @@ export const news = [
                     'Wer tiefer einsteigen möchte, findet die Tagesordnung, die öffentliche Vorlage und weitere Anlagen direkt auf der Sitzungsseite der Stadt Buchholz. Zusätzlich gibt es dazu auch einen ausführlichen Artikel mit den wichtigsten Hintergründen und Details.',
                     {
                         text: 'Zur öffentlichen Sitzungsseite',
-                        link: 'https://www.buchholz.de/allris/to010?SILFDNR=1000953&refresh=false',
+                        link: 'https://www.buchholz.de/allris/to010?SILFDNR=1000953',
                         indent: true,
                     },
                     {
