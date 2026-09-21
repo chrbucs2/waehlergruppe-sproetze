@@ -73,7 +73,7 @@ Rechtliche Texte:
 - `impressum`: Impressum-Inhalte (Überschriften, Texte)
 - `datenschutz`: Datenschutzerklärung (DSGVO-konform)
 
-### `newsTopics.js`
+### `filterTopics.js`
 Themenbereiche für `/sprötze-aktuell`.
 
 ### `news.js`

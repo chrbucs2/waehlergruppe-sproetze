@@ -5,6 +5,6 @@ export { teamMembers } from './teamMembers';
 export { organization, contacts, legal } from './content';
 export { news, newsArticles } from './news';
 export { articles } from './articles';
-export { newsTopics } from './newsTopics';
+export { filterTopics } from './filterTopics';
 export { scheduleItems } from './scheduleItems';
 export { electionResults } from './electionResults';

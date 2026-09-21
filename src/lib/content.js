@@ -1,7 +1,7 @@
-import { articles, news, newsTopics, scheduleItems } from '../data';
+import { articles, filterTopics, news, scheduleItems } from '../data';
 
 export function getTopicById(topicId) {
-    return newsTopics.find((topic) => topic.id === topicId) ?? null;
+    return filterTopics.find((topic) => topic.id === topicId) ?? null;
 }
 
 export function getNewsArticleBySlug(slug) {

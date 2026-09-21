@@ -1,4 +1,4 @@
-export const newsTopics = [
+export const filterTopics = [
     {
         id: 'verkehr',
         label: 'Verkehr & Mobilität',

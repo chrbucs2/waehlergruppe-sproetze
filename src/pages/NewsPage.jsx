@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 
 import { SiteFooter } from '../components/SiteFooter';
-import { news, newsTopics } from '../data';
+import { filterTopics, news } from '../data';
 import { getTopicById, sortNewsByDate } from '../lib/content';
 import { NEWS_INDEX_PATH } from '../lib/constants';
 import { assetUrl, formatDate, formatInlineMarkup } from '../lib/formatting';
@@ -9,7 +9,7 @@ import { assetUrl, formatDate, formatInlineMarkup } from '../lib/formatting';
 export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleSlug }) {
     const orderedArticles = useMemo(() => sortNewsByDate(news), []);
     const availableTopics = useMemo(
-        () => newsTopics.filter((topic) => orderedArticles.some((article) => article.topicIds.includes(topic.id))),
+        () => filterTopics.filter((topic) => orderedArticles.some((article) => article.topicIds.includes(topic.id))),
         [orderedArticles],
     );
     const activeTopic = topicId ? getTopicById(topicId) : null;
