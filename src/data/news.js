@@ -17,27 +17,27 @@ export const news = [
             {
                 title: 'Was ist geplant?',
                 paragraphs: [
-                    'Auf einer bisher ungenutzten Fläche neben dem bestehenden Discounter soll künftig unter anderem eine Kita möglich sein. Bisher war die Fläche hauptsächlich für Einzelhandel vorgesehen.',
+                    'Auf einer bisher **ungenutzten Fläche neben dem bestehenden Discounter im Sprötzer Weg** soll eine **neue Kita** gebaut werden. Bisher war die Fläche hauptsächlich für Einzelhandel vorgesehen.',
                     'Der neue Bebauungsplan erlaubt neben der Kita auch andere soziale, kulturelle oder sportliche Einrichtungen sowie Bildungs- und Freizeitangebote.',
                 ],
             },
             {
                 title: 'Worum geht es noch?',
                 paragraphs: [
-                    'Bei der Planung geht es nicht nur darum, was gebaut werden darf. Auch Verkehr, Zufahrt, Entwässerung, Lärmschutz und die Begrünung des Grundstücks müssen berücksichtigt werden.',
+                    'Bei der Planung geht es nicht nur darum, was gebaut werden darf. Auch **Verkehr**, **Zufahrt**, **Entwässerung**, **Lärmschutz** und die **Begrünung** des Grundstücks müssen berücksichtigt werden.',
                 ],
             },
             {
                 title: 'Wie geht es weiter?',
                 paragraphs: [
                     'Das Verfahren ist bereits weit fortgeschritten. Der Ausschuss hat die Änderung des Bebauungsplans für den späteren Satzungsbeschluss beraten.',
-                    'Wichtig: Damit ist der Bau der Kita noch nicht automatisch beschlossen. Der Bebauungsplan schafft zunächst die rechtlichen Voraussetzungen dafür, dass eine Kita an diesem Standort entstehen kann.',
+                    'Wichtig: Damit ist der Bau der Kita noch nicht automatisch beschlossen. Der Bebauungsplan schafft zunächst die **rechtlichen Voraussetzungen** dafür, dass eine Kita an diesem Standort entstehen kann.',
                 ],
             },
             {
                 title: 'Warum ist das für Sprötze interessant?',
                 paragraphs: [
-                    'Das Grundstück liegt zwar nicht direkt in Sprötze, befindet sich aber am Sprötzer Weg – einer wichtigen Verbindung zwischen Sprötze und der Buchholzer Kernstadt. Die Entwicklung des Standorts kann deshalb auch für Sprötzer interessant sein, etwa mit Blick auf Verkehr und neue soziale Infrastruktur.',
+                    'Das Grundstück liegt zwar nicht direkt in Sprötze, befindet sich aber am Sprötzer Weg – einer wichtigen Verbindung zwischen Sprötze und der Buchholzer Kernstadt. Die Entwicklung des Standorts kann deshalb auch **für Sprötzer interessant sein, etwa mit Blick auf Verkehr und neue soziale Infrastruktur**.',
                 ],
             },
             {
@@ -49,19 +49,10 @@ export const news = [
                         link: 'https://www.buchholz.de/allris/to010?SILFDNR=1000953&refresh=false',
                         indent: true,
                     },
-                    'Wer mehr über den Bebauungsplan Sprötzer Weg wissen möchte, kann sich folgenden Artikel ansehen.',
-                    {
-                        text: 'Artikel: Bebauungsplan Sprötzer Weg',
-                        link: '/artikel/bebauungsplan-sproetzer-weg',
-                        indent: true,
-                    },
                 ],
             },
         ],
-        articleLink: {
-            slug: 'bebauungsplan-sproetzer-weg',
-            label: 'Artikel: Bebauungsplan Sprötzer Weg',
-        },
+        articleLink: { slug: 'bebauungsplan-sproetzer-weg', label: 'Artikel: Bebauungsplan Sprötzer Weg' },
         ctaLabel: 'Mehr zu Stadtplanung',
     },
     {
@@ -141,14 +132,10 @@ export const news = [
             {
                 title: 'Weiterführende Informationen',
                 paragraphs: [
+                    'Wer sich genauer informieren möchte, findet hier die wichtigsten offiziellen Unterlagen zur bisherigen Planung der Sprötzer Ortsmitte, zum Bauturbo und zum aktuellen Bauvorhaben an der Niedersachsenstraße 13.',
                     {
-                        text: 'Vorlage zum Bauvorhaben Niedersachsenstraße 13',
-                        link: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1013228&refresh=false&TOLFDNR=1019306',
-                        indent: true,
-                    },
-                    {
-                        text: 'Stellungnahme der Verwaltung',
-                        link: 'https://www.buchholz.de/allris/vo020?14--attachments-expandedPanel-content-body-rows-1-cells-2-cell-link&VOLFDNR=1013228&refresh=false&TOLFDNR=1019306',
+                        text: 'Bebauungsplan „Neue Ortsmitte Sprötze – Niedersachsenstraße“',
+                        link: 'https://www.buchholz.de/allris/vo020?VOLFDNR=6361&refresh=false',
                         indent: true,
                     },
                     {
@@ -157,8 +144,13 @@ export const news = [
                         indent: true,
                     },
                     {
-                        text: 'Bebauungsplan „Neue Ortsmitte Sprötze – Niedersachsenstraße“',
-                        link: 'https://www.buchholz.de/allris/vo020?VOLFDNR=6361&refresh=false',
+                        text: 'Vorlage zum Bauvorhaben Niedersachsenstraße 13',
+                        link: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1013228&refresh=false&TOLFDNR=1019306',
+                        indent: true,
+                    },
+                    {
+                        text: 'Stellungnahme der Verwaltung',
+                        link: 'https://www.buchholz.de/allris/vo020?14--attachments-expandedPanel-content-body-rows-1-cells-2-cell-link&VOLFDNR=1013228&refresh=false&TOLFDNR=1019306',
                         indent: true,
                     },
                 ],
