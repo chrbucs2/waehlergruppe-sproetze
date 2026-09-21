@@ -4,7 +4,7 @@ export const news = [
         slug: 'bebauungsplan-sproetzer-weg-an-den-tennisplaetzen-satzungsbeschluss',
         title: 'Neue Kita beim Discounter am Sprötzer Weg in Planung',
         publishedAt: '2026-05-06',
-        topicIds: ['neubaugebiete'],
+        topicIds: ['infrastruktur', 'verkehr'],
         summary: [
             '**Neue Kita am Sprötzer Weg geplant.** Der Bebauungsplan „**Sprötzer Weg / An den Tennisplätzen“ soll geändert werden, um auf der bislang für Einzelhandel vorgesehenen Fläche unter anderem eine Kindertagesstätte zu ermöglichen.',
             'Die Planung geht jedoch über die Kita hinaus und erlaubt künftig auch weitere soziale, kulturelle und sportliche Angebote. Zudem geht es um Verkehr, Erschließung, Entwässerung, Lärmschutz und die Begrünung des rund 0,9 Hektar großen Areals.',

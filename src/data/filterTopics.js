@@ -5,6 +5,11 @@ export const filterTopics = [
         description: 'Straßensicherheit, Schulwege, ÖPNV und Erreichbarkeit in Sprötze.',
     },
     {
+        id: 'infrastruktur',
+        label: 'Infrastruktur',
+        description: 'Infrastrukturprojekte, öffentliche Einrichtungen und Versorgung in Sprötze.',
+    },
+    {
         id: 'neubaugebiete',
         label: 'Neubaugebiete',
         description: 'Bebauungspläne, Flächennutzung und neue Vorhaben mit Auswirkungen auf Sprötze.',
