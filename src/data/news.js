@@ -80,6 +80,11 @@ export const news = [
                 paragraphs: [
                     'Geplant sind zwei Mehrfamilienhäuser mit insgesamt etwa 12 bis 15 Wohnungen sowie zwei Gewerbeeinheiten im Erdgeschoss. Das Grundstück ist 1.715 Quadratmeter groß. Beantragt wurde zunächst eine Bauvoranfrage.',
                 ],
+                image: {
+                    src: '/images/articles/niedersachsenstrasse13.png',
+                    alt: 'Lageplan des geplanten Bauvorhabens Niedersachsenstraße 13 in Sprötze',
+                    caption: 'So sollen die beiden Mehrfamilienhäuser auf dem Eckgrundstück neben dem Edeka angeordnet werden. Quelle: Stadt Buchholz i.d.N., Stellungnahme vom 24.08.2026',
+                },
             },
             {
                 title: 'Was bedeutet der „Bauturbo“?',

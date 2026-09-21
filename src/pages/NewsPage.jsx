@@ -78,6 +78,12 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
                                                 </p>
                                             );
                                         })}
+                                        {(section.image ? [section.image] : []).map((image, index) => (
+                                            <figure className="article-section-image" key={`${section.title}-image-${index}`}>
+                                                <img src={image.src} alt={image.alt} loading="lazy" />
+                                                {image.caption && <figcaption>{image.caption}</figcaption>}
+                                            </figure>
+                                        ))}
                                     </section>
                                 ))}
                             </article>
