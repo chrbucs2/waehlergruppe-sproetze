@@ -13,7 +13,7 @@ export function ArticlePage({ article, onShowImpressum, onShowDatenschutz }) {
         <>
             <section className="content content--soft news-article-page">
                 <a className="news-back-link" href={NEWS_INDEX_PATH}>
-                    Zurück zu den News
+                    Zurück zur Übersicht
                 </a>
 
                 <div className="section-heading">
