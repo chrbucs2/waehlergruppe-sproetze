@@ -14,12 +14,10 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
     );
     const activeTopic = topicId ? getTopicById(topicId) : null;
     const activeArticle = articleSlug ? news.find((article) => article.slug === articleSlug) ?? null : null;
-    const articleReference = activeArticle?.articleLink
-        ? {
-              href: `/artikel/${activeArticle.articleLink.slug}`,
-              label: activeArticle.articleLink.label ?? 'Weiterer Artikel',
-          }
+    const referencedArticle = activeArticle?.articleLink
+        ? getGeneralArticleBySlug(activeArticle.articleLink.slug)
         : null;
+    const detailArticle = referencedArticle ?? activeArticle;
     const backHref = activeTopic ? `${NEWS_INDEX_PATH}?thema=${activeTopic.id}` : NEWS_INDEX_PATH;
 
     const visibleArticles = useMemo(() => {
@@ -34,12 +32,15 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
     const getSummaryParagraphs = (summary) => (Array.isArray(summary) ? summary : [summary]);
 
     if (activeArticle) {
-        const introParagraphs = Array.isArray(activeArticle.introduction)
-            ? activeArticle.introduction
-            : activeArticle.summary
-                ? getSummaryParagraphs(activeArticle.summary)
+        const introParagraphs = Array.isArray(detailArticle?.introduction)
+            ? detailArticle.introduction
+            : detailArticle?.summary
+                ? getSummaryParagraphs(detailArticle.summary)
                 : [];
-        const sections = activeArticle.sections ?? [];
+        const sections = detailArticle?.sections ?? [];
+        const newsDetailHref = `${NEWS_INDEX_PATH}/${activeArticle.slug}`;
+        const articleActionHref = activeArticle.articleLink ? `/artikel/${activeArticle.articleLink.slug}` : null;
+        const articleActionLabel = activeArticle.articleLink?.label ?? 'Beitrag öffnen';
 
         return (
             <>
@@ -95,24 +96,25 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
                             </article>
 
                             <div className="focus-list focus-list--outside">
-                                {activeArticle.topicIds.map((id) => (
-                                    <a key={id} href={`${NEWS_INDEX_PATH}?thema=${id}`}>
-                                        <span>{getTopicById(id)?.label ?? id}</span>
-                                    </a>
-                                ))}
+                               {activeArticle.topicIds.map((id) => (
+                                   <a key={id} href={`${NEWS_INDEX_PATH}?thema=${id}`}>
+                                       <span>{getTopicById(id)?.label ?? id}</span>
+                                   </a>
+                               ))}
                             </div>
-                            {articleReference && (
-                                <p className="schedule-link-note is-indented">
-                                    <a className="news-card__link" href={articleReference.href}>
-                                        {articleReference.label}
-                                    </a>
-                                </p>
+                            <p className="schedule-link-note is-indented">
+                               <a className="news-card__link" href={newsDetailHref} dangerouslySetInnerHTML={renderMarkup('Beitrag öffnen')} />
+                            </p>
+                            {articleActionHref && (
+                               <p className="schedule-link-note is-indented">
+                                   <a className="news-card__link" href={articleActionHref} dangerouslySetInnerHTML={renderMarkup(articleActionLabel)} />
+                               </p>
                             )}
                         </>
                     ) : (
                         <>
                             <article className="feature-card feature-card--active news-article-page__content">
-                                {(activeArticle.content ?? []).map((paragraph) => (
+                                {(detailArticle?.content ?? []).map((paragraph) => (
                                     <p key={paragraph} dangerouslySetInnerHTML={renderMarkup(paragraph)} />
                                 ))}
                             </article>
@@ -124,11 +126,12 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
                                     </a>
                                 ))}
                             </div>
-                            {articleReference && (
+                            <p className="schedule-link-note is-indented">
+                                <a className="news-card__link" href={newsDetailHref} dangerouslySetInnerHTML={renderMarkup('Beitrag öffnen')} />
+                            </p>
+                            {articleActionHref && (
                                 <p className="schedule-link-note is-indented">
-                                    <a className="news-card__link" href={articleReference.href}>
-                                        {articleReference.label}
-                                    </a>
+                                    <a className="news-card__link" href={articleActionHref} dangerouslySetInnerHTML={renderMarkup(articleActionLabel)} />
                                 </p>
                             )}
                         </>
@@ -189,12 +192,9 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
 
                 <div className="news-list">
                     {visibleArticles.map((article) => {
-                        const articleReference = article.articleLink
-                            ? {
-                                  href: `/artikel/${article.articleLink.slug}`,
-                                  label: article.articleLink.label ?? 'Weiterer Artikel',
-                              }
-                            : null;
+                        const newsDetailHref = `${NEWS_INDEX_PATH}/${article.slug}`;
+                        const articleHref = article.articleLink ? `/artikel/${article.articleLink.slug}` : null;
+                        const articleLabel = article.articleLink?.label ?? 'Beitrag öffnen';
 
                         return (
                             <article className="news-card" key={article.id}>
@@ -203,14 +203,12 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
                                 {getSummaryParagraphs(article.summary).map((paragraph, index) => (
                                     <p key={`${article.id}-summary-${index}`} dangerouslySetInnerHTML={renderMarkup(paragraph)} />
                                 ))}
-                                <a className="news-card__link" href={`${NEWS_INDEX_PATH}/${article.slug}`}>
-                                    Beitrag öffnen
-                                </a>
-                                {articleReference && (
-                                    <a className="news-card__link" href={articleReference.href}>
-                                        {articleReference.label}
-                                    </a>
-                                )}
+                                <div className="news-overview-header-actions">
+                                    <a className="news-card__link" href={newsDetailHref} dangerouslySetInnerHTML={renderMarkup('Beitrag öffnen')} />
+                                    {articleHref && (
+                                        <a className="news-card__link" href={articleHref} dangerouslySetInnerHTML={renderMarkup(articleLabel)} />
+                                    )}
+                                </div>
                             </article>
                         );
                     })}
