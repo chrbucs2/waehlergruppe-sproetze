@@ -61,6 +61,37 @@ export const news = [
         ctaLabel: 'Mehr zu Stadtplanung',
     },
     {
+        id: 'bahnbruecke-k72-restarbeiten-september-2026',
+        slug: 'bahnbruecke-sproetze-k72-vollsperrungen-september-2026',
+        title: 'Nächtliche Vollsperrungen an Sprötzer Bahnbrücke Ende September',
+        publishedAt: '2026-09-15',
+        topicIds: ['verkehr', 'leben-im-dorf'],
+        summary: [
+            '**An der Bahnbrücke der K72 in Sprötze stehen weitere Arbeiten an.** Vom 28. September bis 4. Oktober 2026 wird unterhalb der Brücke während der nächtlichen Betriebsruhe der Bahn gearbeitet. Dabei kann es zwischen **22:30 und 4:30 Uhr zu einzelnen Vollsperrungen** auf dem Brückenbauwerk kommen. Die Arbeiten an den Übergangskonstruktionen selbst wurden bereits im Frühjahr ausgeführt.',
+        ],
+        introduction: [
+            'Die Arbeiten an der **Bahnbrücke in der Kirchenallee in Sprötze** sind noch nicht vollständig abgeschlossen.',
+            'Vom **28. September bis 4. Oktober 2026** stehen weitere Arbeiten unterhalb der Brücke an. Dafür kann die K72 nachts zeitweise vollständig gesperrt werden.',
+        ],
+        sections: [
+            {
+                title: 'Weitere Arbeiten an der Bahnbrücke',
+                paragraphs: ['Die Arbeiten unterhalb des Bauwerks können nur während der nächtlichen Betriebsruhe der Bahn ausgeführt werden. Deshalb kann es zwischen **22:30 und 4:30 Uhr zu einzelnen Vollsperrungen** kommen. Eine durchgehende Sperrung über den gesamten Zeitraum ist nicht angekündigt.', 'Die **Übergangskonstruktionen der Brücke** wurden bereits im Frühjahr instandgesetzt. Die jetzt folgenden Arbeiten mussten verschoben werden, weil die dafür benötigten Sperrpausen der Deutschen Bahn erst Ende September zur Verfügung stehen.',],
+            }, {
+                title: 'Weiterführende Informationen',
+                paragraphs: [
+                    'Weitere Informationen entnehmen Sie bitte dem Wochenblatt-Artikel, der die Hintergründe und Details zu den Arbeiten an der Bahnbrücke zusammenfasst.',
+                    {
+                        text: 'Zum Wochenblatt-Artikel',
+                        link: 'https://www.kreiszeitung-wochenblatt.de/buchholz/c-panorama/bauarbeiten-an-bahnbruecke-in-sproetze-teilweise-vollsperrung_a419984',
+                        indent: true,
+                    }
+                ],
+            },
+        ],
+        ctaLabel: 'Mehr zu Verkehr & Baustellen',
+    },
+    {
         id: 'niedersachsenstrasse-13-wohnungsbau-bauturbo',
         slug: 'niedersachsenstrasse-13-mehrfamilienhaeuser-bauturbo',
         title: 'Deutlich größere Bebauung in der Niedersachsenstraße 13',
@@ -72,6 +103,18 @@ export const news = [
         ],
         articleLink: { slug: 'niedersachsenstrasse-13-wohnungsbau'},
         ctaLabel: 'Mehr zu Stadtplanung',
+    },
+    {
+        id: 'haeckselaktion-buchholz-2026',
+        slug: 'haeckselaktion-2026-anmeldung-sproetze',
+        title: 'Häckselaktion 2026 im November',
+        publishedAt: '2026-09-18',
+        topicIds: ['abfallentsorgung', 'leben-im-dorf'],
+        summary: [
+            'Die **mobile Häckselaktion** der Stadt Buchholz findet im **November** wieder statt. An vier Samstagen wird Baum- und Buschschnitt direkt vor angemeldeten Grundstücken zerkleinert. **Für Sprötze steht der genaue Termin noch nicht fest.** Die Stadt will am 19. Oktober bekanntgeben, welche Ortschaft an welchem Aktionstag bedient wird.',
+        ],
+        articleLink: { link: 'https://buchholz-aktuell.de/buchholz/jetzt-anmelden-mobile-haecksler-kommen-nach-buchholz-19803', label: 'Buchholz Aktuell: Häckselaktion' },
+        ctaLabel: 'Mehr zu Abfall & Entsorgung',
     },
 ];
 

@@ -19,4 +19,9 @@ export const filterTopics = [
         label: 'Leben im Dorf',
         description: 'Themen rund um Zusammenhalt, Ehrenamt und die Entwicklung von Sprötze.',
     },
+    {
+        id: 'abfallentsorgung',
+        label: 'Abfall & Entsorgung',
+        description: 'Abfallwirtschaft, Entsorgung und Recycling in Sprötze.',
+    },
 ];

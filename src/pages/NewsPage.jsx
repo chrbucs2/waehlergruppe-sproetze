@@ -52,7 +52,9 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
         const sections = detailArticle?.sections ?? [];
         const newsDetailHref = `${NEWS_INDEX_PATH}/${activeArticle.slug}`;
         const hasNewsDetailLink = hasNewsDetailContent(activeArticle);
-        const articleActionHref = activeArticle.articleLink ? `/artikel/${activeArticle.articleLink.slug}` : null;
+        const articleActionHref = activeArticle.articleLink
+            ? activeArticle.articleLink.slug ? `/artikel/${activeArticle.articleLink.slug}` : activeArticle.articleLink.link
+            : null;
         const articleActionLabel = activeArticle.articleLink?.label ?? 'Beitrag öffnen';
 
         return (
@@ -207,7 +209,9 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
                     {visibleArticles.map((article) => {
                         const newsDetailHref = `${NEWS_INDEX_PATH}/${article.slug}`;
                         const hasNewsDetailLink = hasNewsDetailContent(article);
-                        const articleHref = article.articleLink ? `/artikel/${article.articleLink.slug}` : null;
+                        const articleHref = article.articleLink
+                            ? article.articleLink.slug ? `/artikel/${article.articleLink.slug}` : article.articleLink.link
+                            : null;
                         const articleLabel = article.articleLink?.label ?? 'Beitrag öffnen';
 
                         return (
