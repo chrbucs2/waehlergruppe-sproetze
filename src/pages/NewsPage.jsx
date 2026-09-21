@@ -17,7 +17,12 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
     const referencedArticle = activeArticle?.articleLink
         ? getGeneralArticleBySlug(activeArticle.articleLink.slug)
         : null;
-    const detailArticle = referencedArticle ?? activeArticle;
+    const hasOwnDetailContent = Boolean(
+        activeArticle &&
+            ((Array.isArray(activeArticle.introduction) && activeArticle.introduction.length > 0) ||
+                (Array.isArray(activeArticle.sections) && activeArticle.sections.length > 0)),
+    );
+    const detailArticle = hasOwnDetailContent ? activeArticle : referencedArticle ?? activeArticle;
     const backHref = activeTopic ? `${NEWS_INDEX_PATH}?thema=${activeTopic.id}` : NEWS_INDEX_PATH;
 
     const visibleArticles = useMemo(() => {
@@ -82,14 +87,20 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
                                                 );
                                             }
 
+                                            const paragraphHref = paragraph.link ?? (paragraph.slug ? `/artikel/${paragraph.slug}` : undefined);
+
                                             return (
                                                 <p
                                                     key={`${section.title}-${paragraph.text}`}
                                                     className="schedule-link-note is-indented"
                                                 >
-                                                    <a className="news-card__link" href={paragraph.link}>
-                                                        {paragraph.text}
-                                                    </a>
+                                                    {paragraphHref ? (
+                                                        <a className="news-card__link" href={paragraphHref}>
+                                                            {paragraph.text}
+                                                        </a>
+                                                    ) : (
+                                                        <span>{paragraph.text}</span>
+                                                    )}
                                                 </p>
                                             );
                                         })}
@@ -110,16 +121,6 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
                                    </a>
                                ))}
                             </div>
-                            {hasNewsDetailLink && (
-                               <p className="schedule-link-note is-indented">
-                                   <a className="news-card__link" href={newsDetailHref} dangerouslySetInnerHTML={renderMarkup('Beitrag öffnen')} />
-                               </p>
-                            )}
-                            {articleActionHref && (
-                               <p className="schedule-link-note is-indented">
-                                   <a className="news-card__link" href={articleActionHref} dangerouslySetInnerHTML={renderMarkup(articleActionLabel)} />
-                               </p>
-                            )}
                         </>
                     ) : (
                         <>
@@ -136,14 +137,14 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
                                     </a>
                                 ))}
                             </div>
-                            {hasNewsDetailLink && (
-                                <p className="schedule-link-note is-indented">
-                                    <a className="news-card__link" href={newsDetailHref} dangerouslySetInnerHTML={renderMarkup('Beitrag öffnen')} />
-                                </p>
-                            )}
                             {articleActionHref && (
                                 <p className="schedule-link-note is-indented">
                                     <a className="news-card__link" href={articleActionHref} dangerouslySetInnerHTML={renderMarkup(articleActionLabel)} />
+                                </p>
+                            )}
+                            {hasNewsDetailLink && (
+                                <p className="schedule-link-note is-indented">
+                                    <a className="news-card__link" href={newsDetailHref} dangerouslySetInnerHTML={renderMarkup('Beitrag öffnen')} />
                                 </p>
                             )}
                         </>
@@ -218,11 +219,11 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
                                 ))}
                                 {(hasNewsDetailLink || articleHref) && (
                                     <div className="news-overview-header-actions">
-                                        {hasNewsDetailLink && (
-                                            <a className="news-card__link" href={newsDetailHref} dangerouslySetInnerHTML={renderMarkup('Beitrag öffnen')} />
-                                        )}
                                         {articleHref && (
                                             <a className="news-card__link" href={articleHref} dangerouslySetInnerHTML={renderMarkup(articleLabel)} />
+                                        )}
+                                        {hasNewsDetailLink && (
+                                            <a className="news-card__link" href={newsDetailHref} dangerouslySetInnerHTML={renderMarkup('Beitrag öffnen')} />
                                         )}
                                     </div>
                                 )}

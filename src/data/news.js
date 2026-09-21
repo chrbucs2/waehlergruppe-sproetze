@@ -2,7 +2,7 @@ export const news = [
     {
         id: 'bebauungsplan-sproetzer-weg-satzungsbeschluss',
         slug: 'bebauungsplan-sproetzer-weg-an-den-tennisplaetzen-satzungsbeschluss',
-        title: 'Neue Kita am Sprötzer Weg: Bebauungsplan vor dem Satzungsbeschluss',
+        title: 'Neue Kita beim Discounter am Sprötzer Weg in Planung',
         publishedAt: '2026-05-06',
         topicIds: ['neubaugebiete'],
         summary: [
@@ -30,8 +30,8 @@ export const news = [
             {
                 title: 'Wie geht es weiter?',
                 paragraphs: [
-                    'Das Verfahren ist bereits weit fortgeschritten. Der Ausschuss hat die Änderung des Bebauungsplans für den späteren Satzungsbeschluss beraten.',
-                    'Wichtig: Damit ist der Bau der Kita noch nicht automatisch beschlossen. Der Bebauungsplan schafft zunächst die **rechtlichen Voraussetzungen** dafür, dass eine Kita an diesem Standort entstehen kann.',
+                    'Das Verfahren ist bereits weit fortgeschritten. Der **Ausschuss hat die Änderung des Bebauungsplans** für den späteren Satzungsbeschluss **beraten**.',
+                    'Wichtig: Damit ist der Bau der Kita noch nicht automatisch beschlossen. Der Bebauungsplan schafft **zunächst nur die rechtlichen Voraussetzungen** dafür, dass eine Kita an diesem Standort entstehen kann.',
                 ],
             },
             {
@@ -43,10 +43,15 @@ export const news = [
             {
                 title: 'Weiterführende Informationen',
                 paragraphs: [
-                    'Wer tiefer einsteigen möchte, findet die Tagesordnung, die öffentliche Vorlage und weitere Anlagen direkt über die verlinkten Sitzungsseite der Stadt Buchholz.',
+                    'Wer tiefer einsteigen möchte, findet die Tagesordnung, die öffentliche Vorlage und weitere Anlagen direkt auf der Sitzungsseite der Stadt Buchholz. Zusätzlich gibt es dazu auch einen ausführlichen Artikel mit den wichtigsten Hintergründen und Details.',
                     {
                         text: 'Zur öffentlichen Sitzungsseite',
                         link: 'https://www.buchholz.de/allris/to010?SILFDNR=1000953&refresh=false',
+                        indent: true,
+                    },
+                    {
+                        text: 'Bebauungsplan Sprötzer Weg',
+                        slug: 'bebauungsplan-sproetzer-weg',
                         indent: true,
                     },
                 ],
@@ -58,7 +63,7 @@ export const news = [
     {
         id: 'niedersachsenstrasse-13-wohnungsbau-bauturbo',
         slug: 'niedersachsenstrasse-13-mehrfamilienhaeuser-bauturbo',
-        title: 'Niedersachsenstraße 13: Deutlich größere Bebauung in Sprötzes Ortsmitte geplant',
+        title: 'Deutlich größere Bebauung in der Niedersachsenstraße 13',
         publishedAt: '2026-09-17',
         topicIds: ['wohnen', 'stadtplanung'],
         summary: [

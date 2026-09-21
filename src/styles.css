@@ -943,6 +943,15 @@ h1 {
   color: var(--primary-dark);
 }
 
+.news-overview-header-actions {
+  display: grid;
+  gap: 8px;
+}
+
+.news-overview-header-actions .news-card__link {
+  margin-top: 0;
+}
+
 .news-card__link::after {
   content: '→';
 }

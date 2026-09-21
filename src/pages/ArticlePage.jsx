@@ -59,14 +59,20 @@ export function ArticlePage({ article, onShowImpressum, onShowDatenschutz }) {
                                     );
                                 }
 
+                                const paragraphHref = paragraph.link ?? (paragraph.slug ? `/artikel/${paragraph.slug}` : undefined);
+
                                 return (
                                     <p
                                         key={`${section.title}-${paragraph.text}`}
                                         className="schedule-link-note is-indented"
                                     >
-                                        <a className="news-card__link" href={paragraph.link}>
-                                            {paragraph.text}
-                                        </a>
+                                        {paragraphHref ? (
+                                            <a className="news-card__link" href={paragraphHref}>
+                                                {paragraph.text}
+                                            </a>
+                                        ) : (
+                                            <span>{paragraph.text}</span>
+                                        )}
                                     </p>
                                 );
                             })}
