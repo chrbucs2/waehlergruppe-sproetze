@@ -4,7 +4,7 @@ export const news = [
         slug: 'neue-gruengutannahme-gewerbegebiet-trelder-berg',
         title: 'Neue Grüngut-Annahmestelle im Gewerbegebiet Trelder Berg',
         publishedAt: '2026-02-13',
-        topicIds: ['abfallentsorgung'],
+        topicIds: ['abfallentsorgung', 'infrastruktur'],
         summary: [
             '**Im Gewerbegebiet Trelder Berg gibt es eine neue Annahmestelle für Grüngut.** Seit dem 2. März 2026 können Bürgerinnen und Bürger aus dem Landkreis Harburg können dort täglich bis zu **einen Kubikmeter Grüngut kostenfrei** abgeben. Die Annahme erfolgt ebenerdig in einer Halle und ist damit barrierefreier als am bisherigen Standort in Nenndorf.',
             'Die neue Annahmestelle in der **Ritscherstraße 10** ersetzt die bisherige Grüngutabgabe in Nenndorf und liegt damit auch für Sprötze und Trelde vergleichsweise nah.',
@@ -76,7 +76,7 @@ export const news = [
         slug: 'grundschule-sproetze-trelde-neubau-erweiterung',
         title: 'Grundschule Sprötze-Trelde: Ausbau beider Standorte geplant',
         publishedAt: '2026-05-26',
-        topicIds: ['ortsmitte'],
+        topicIds: ['ortsmitte', 'infrastruktur'],
         summary: [
             'Die Grundschule Sprötze-Trelde soll **an beiden Standorten weiterentwickelt werden**. In Sprötze ist ein Teilersatzneubau geplant, in Trelde soll die bestehende Schule erweitert werden.',
             'In Sprötze bildet **Variante 1 mit einem zweigeschossigen Neubau auf dem Pausenhof** die Grundlage der weiteren Planung. Die Tennisplätze und der Sportplatz können dabei bestehen bleiben. In Trelde soll der **einzügige Schulstandort erhalten** und an das benötigte Raumprogramm angepasst werden.',
