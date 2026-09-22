@@ -8,24 +8,37 @@ export const scheduleItems = [
         title: 'Bebauungsplan Sprötzer Weg',
         location: 'Kantine, Rathausplatz 1, 21244 Buchholz i.d.N.',
         details:
-            'Im Mittelpunkt der Ausschusssitzung am 6. Mai 2026 standen zentrale Themen der Buchholzer Stadtentwicklung: die Entwicklung des Lerchenparks, der **Bebauungsplan „Sprötzer Weg / An den Tennisplätzen“** sowie die Neuausrichtung des Innenstadtmanagements.',
+            'Im Mittelpunkt der Sitzung standen der **Bebauungsplan „Sprötzer Weg / An den Tennisplätzen“**, die weitere Planung des Lerchenparks auf dem ehemaligen Rütgersgelände sowie die Neuausrichtung des Innenstadtmanagements.',
         introduction: [
-            'Für Sprötze ist die Sitzung besonders relevant, weil mit dem **Bebauungsplan „Sprötzer Weg / An den Tennisplätzen“** unmittelbar an einer wichtigen Verbindung zwischen Sprötze und der Buchholzer Kernstadt geplant wird.'
+            'Für Sprötze besonders wichtig: Der Ausschuss empfahl den **Satzungsbeschluss für den Bebauungsplan „Sprötzer Weg / An den Tennisplätzen“** mit 5 Ja-Stimmen und 1 Enthaltung. Beim Lerchenpark wurde außerdem eine neue Verkehrsprognose vorgestellt, die unter anderem den Knoten **Bremer Straße / Seppenser Mühlenweg** betrachtet.'
         ],
         sections: [
             {
-                title: 'Themen der Sitzung',
+                title: 'Bebauungsplan „Sprötzer Weg / An den Tennisplätzen“',
                 paragraphs: [
-                    '**Bebauungsplan Sprötzer Weg**: Die bisher für Einzelhandel vorgesehene **freie Fläche neben dem Discounter** soll künftig vor allem **für oziale, sportliche und kulturelle Nutzungen** zur Verfügung stehen. Konkreter Anlass ist der geplante **Bau einer Kita**. Der Ausschuss empfahl den Satzungsbeschluss mit **5 Ja-Stimmen bei 1 Enthaltung**.',
+                    'Die bisher für Einzelhandel vorgesehene freie Fläche neben dem Discounter soll künftig vor allem für **soziale, sportliche und kulturelle Nutzungen** zur Verfügung stehen. Konkreter Anlass ist der geplante Bau einer neuen Kindertagesstätte.',
+                    'Der Ausschuss sprach sich mit **5 Ja-Stimmen bei 1 Enthaltung** für den Satzungsbeschluss aus und empfahl damit die Änderung des Bebauungsplans für das weitere Verfahren.',
                     {
-                        text: 'Bebauungsplan Sprötzer Weg',
+                        text: 'Details zum Bebauungsplan Sprötzer Weg',
                         slug: 'bebauungsplan-sproetzer-weg',
                         indent: true
                     },
-                    '**Lerchenpark / ehemaliges Rütgersgelände**: Vorgestellt wurden die überarbeitete Planung für das neue Stadtquartier und eine aktuelle Verkehrsprognose. Ein Beschluss wurde noch nicht gefasst. **Für Sprötze interessant:** Untersucht wurde auch der Knoten **Bremer Straße / Seppenser Mühlenweg**. Dort wird mit dem ersten Bauabschnitt mehr Verkehr erwartet; laut Gutachten bleibt der Knoten aber weiterhin leistungsfähig.',
-                    '**Innenstadtmanagement**: Die Verwaltung stellte ihre Strategie für die künftige Innenstadtentwicklung vor. Vorgesehen sind unter anderem ein aktiveres Flächenmanagement gegen Leerstände, neue Nutzungen und Veranstaltungen sowie Verbesserungen im öffentlichen Raum. Eine Beschlussempfehlung sollte erst in einer späteren Sitzung erfolgen.',
                 ],
-            }
+            },
+            {
+                title: 'Lerchenpark / ehemaliges Rütgersgelände',
+                paragraphs: [
+                    'Vorhabenträger und Fachgutachter stellten die überarbeitete Planung für das neue Stadtquartier sowie die aktuelle Verkehrsprognose vor. Ein Beschluss wurde an diesem Abend noch nicht gefasst; die Beratungen wurden anschließend fortgeführt.',
+                    'Für Sprötze interessant ist vor allem der Verkehr: Untersucht wurde auch der Knoten **Seppenser Mühlenweg / Bremer Straße** auf der westlichen Zufahrt nach Buchholz. Das Gutachten erwartet dort mit dem ersten Bauabschnitt eine stärkere Belastung, bewertet den Knoten aber weiterhin als leistungsfähig.'
+                ],
+            },
+            {
+                title: 'Neuausrichtung des Innenstadtmanagements',
+                paragraphs: [
+                    'Die Verwaltung stellte ihre Strategie für die künftige Innenstadtentwicklung vor. Dazu gehören unter anderem ein aktiveres Flächenmanagement gegen Leerstände, eine bessere Aufenthaltsqualität, neue Nutzungen und Veranstaltungen sowie eine bessere Verzahnung von Stadtplanung, Verkehr und Stadtmarketing.',
+                    'Eine Beschlussempfehlung gab es in dieser Sitzung noch nicht. Das Thema sollte in einer weiteren Sitzung erneut beraten werden.'
+                ],
+            },
         ],
         link: 'https://www.buchholz.de/allris/to010?SILFDNR=1000953&refresh=false',
         linkLabel: 'Zur öffentlichen Sitzungsseite',
@@ -65,30 +78,60 @@ export const scheduleItems = [
         title: 'Wohnungsbau in der Niedersachsenstraße, Buchholz Bus und Stadtentwicklung',
         location: 'Kantine Rathaus Buchholz',
         details:
-            'Für Sprötze stand vor allem das geplante **Bauvorhaben an der Niedersachsenstraße 13** im Mittelpunkt. Daneben ging es unter anderem um den Bauturbo, ein mögliches Rechenzentrum, den **Buchholz Bus** und weitere Stadtentwicklungsthemen.',
+            'Für Sprötze besonders relevant war die geplante **Bebauung an der Niedersachsenstraße 13**. Außerdem standen die erste Zwischenbilanz zum **Bauturbo**, der **Buchholz Bus**, ein mögliches Rechenzentrum im Bahnhofsumfeld Nord und weitere Stadtentwicklungsthemen auf der Tagesordnung.',
         introduction: [
-            'Besonders relevant für Sprötze war **TOP 13 zur Niedersachsenstraße 13**. Dort sind **zwei Mehrfamilienhäuser mit 12 bis 15 Wohnungen sowie zwei Gewerbeeinheiten** geplant. Das Vorhaben soll über den sogenannten **Bauturbo** ermöglicht werden und weicht in mehreren Punkten vom geltenden Bebauungsplan ab.',
+            'Bei der **Niedersachsenstraße 13** geht es um eine Bauvoranfrage für zwei Mehrfamilienhäuser mit **12 bis 15 Wohnungen und zwei Gewerbeeinheiten**. Das Vorhaben weicht deutlich vom geltenden Bebauungsplan ab. Die Fachabteilung hält die Abweichungen unter bestimmten Bedingungen für vertretbar und empfiehlt die Zustimmung.'
         ],
         sections: [
             {
-                title: 'Themen der Sitzung',
+                title: 'Erste Zwischenbilanz zum Bauturbo',
                 paragraphs: [
-                    '**Bauturbo**: Nach einem ersten Zwischenbericht nutzt Buchholz das neue Instrument bislang vor allem zur **Nachverdichtung bereits bebauter Bereiche und älterer Bebauungspläne**. Die Verwaltung sieht derzeit keinen grundsätzlichen Änderungsbedarf an den eigenen Kriterien.',
-                    '**Niedersachsenstraße 13**: Die Fachabteilung empfiehlt, dem **Vorhaben unter bestimmten Bedingungen zuzustimmen**. Ausführliche Informationen zum Bauvorhaben haben wir in einem eigenen Beitrag zusammengefasst.',
+                    'Nach rund einem halben Jahr zieht die Verwaltung eine erste Bilanz. Der Bauturbo wird in Buchholz bislang vor allem genutzt, um **bereits bebaute Bereiche nachzuverdichten** und bei älteren Bebauungsplänen begrenzte Abweichungen zu ermöglichen.',
+                    'Die Verwaltung sieht derzeit keinen grundsätzlichen Änderungsbedarf an den eigenen Kriterien. Ein konkretes Beispiel für die Anwendung ist die **Niedersachsenstraße 13 in Sprötze**. Ein weiterer Fall in dieser Sitzung war Feldkamp 5 mit zwei Dreifamilienhäusern und einem Doppelhaus.'
+                ],
+            },
+            {
+                title: 'Niedersachsenstraße 13 in Sprötze',
+                paragraphs: [
+                    'Geplant sind **zwei Mehrfamilienhäuser mit 12 bis 15 Wohnungen und zwei Gewerbeeinheiten** auf dem Eckgrundstück neben dem Edeka. Statt des bisher zulässigen einen Vollgeschosses sollen die Gebäude **zwei Vollgeschosse** erhalten. Vorgesehen sind maximal **7 Meter Traufhöhe und 11 Meter Firsthöhe**.',
+                    'Auch die festgelegten **Baugrenzen sollen überschritten werden** – je nach Gebäudeseite **um bis zu 6,20 Meter**. Die Fachabteilung bewertet dies für den zentralen Bereich am Dorfplatz als **städtebaulich vertretbar**.',
+                    'Bedingung ist unter anderem, dass der vorhandene **Baumbestand möglichst vollständig erhalten** bleibt. Die Zufahrt von der Kirchhofstraße soll zwischen den Bäumen geführt, die Versiegelung begrenzt und die genaue Erschließung im weiteren Verfahren geprüft werden.',
                     {
                         text: 'Bebaungsplan Niedersachsenstraße 13',
                         slug: 'niedersachsenstrasse-13-wohnungsbau',
                         indent: true
                     },
-                    '**Feldkamp 5**: Auch hier wurde ein Bauturbo-Vorhaben beraten. Geplant sind **zwei Dreifamilienhäuser und ein Doppelhaus**. Die Verwaltung schlägt die Zustimmung vor.',
-                    '**Bebauungsplan Wiesenstraße/Hermannstraße**: Die 1. Änderung des Bebauungsplans soll zum Satzungsbeschluss geführt werden. Eine wesentliche Änderung der Planung ist eine **Quartiersgarage anstelle der ursprünglich vorgesehenen Tiefgaragen**.',
-                    '**Rechenzentrum im Bahnhofsumfeld Nord**: Die weitere Planung soll davon abhängig gemacht werden, ob die entstehende **Abwärme sinnvoll für ein Wärmenetz genutzt werden kann**. Der Investor soll dafür eine Machbarkeitsstudie erstellen lassen. Offen ist unter anderem auch die Stromversorgung des geplanten Rechenzentrums.',
-                    '**Buchholz Bus**: Beraten wurden zusätzliche und teilweise höhere Sitzbänke an Haltestellen sowie die Prüfung einer Rückkehr zu den früheren Betriebszeiten des Buchholz Bus. Dabei sollen auch die entstehenden Mehrkosten ermittelt werden.',
-                    '**Sitzbänke an Bushaltestellen**: Beraten wurde ein Prüfauftrag für zusätzliche und teilweise höhere Sitzbänke. An der Haltestelle „Treffpunkt“ sollen bis zu sechs weitere Bänke geprüft werden; auch andere Haltestellen sollen nach und nach besser mit Sitzgelegenheiten ausgestattet werden.',
-                    '**Betriebszeiten des Buchholz Bus**: Seit September 2025 fährt der Buchholz Bus deutlich kürzer: werktags etwa **6:30 bis 20 Uhr statt 5:30 bis 21 Uhr**, samstags **8 bis 16:30 Uhr statt 7:30 bis 21 Uhr**. Damit wurden insgesamt **15 Betriebsstunden pro Woche** gestrichen. Nun soll geprüft werden, wie eine Rückkehr zu den früheren Fahrzeiten möglich wäre, welche Mehrkosten entstehen und ob dafür Mittel im Haushalt 2027/28 eingeplant werden können.',
-                    '**Weitere Themen**: Für das Quartier „Zwischen den Gleisen“ soll bei verfügbarer Förderung ein Sanierungsmanagement eingerichtet werden. Außerdem wurde über Regeln zur politischen Unabhängigkeit der Sprecherinnen und Sprecher der Klimateams im Klimabeirat beraten.',
                 ],
-            }
+            },
+            {
+                title: 'Bebauungsplan Wiesenstraße / Hermannstraße',
+                paragraphs: [
+                    'Die 1. Änderung des Bebauungsplans soll zum Satzungsbeschluss geführt werden. Die wichtigste Änderung betrifft die Stellplätze: Statt mehrerer Tiefgaragen ist nun eine **Quartiersgarage an der Rütgersstraße mit rund 180 Stellplätzen** vorgesehen.',
+                    'Ergänzend sind mehr Fahrradstellplätze und Carsharing vorgesehen. Die veränderte Verkehrsführung wurde gemeinsam mit der Entwicklung des benachbarten ehemaligen Rütgersgeländes betrachtet.'
+                ],
+            },
+            {
+                title: 'Rechenzentrum im Bahnhofsumfeld Nord',
+                paragraphs: [
+                    'Im Bahnhofsumfeld Nord wird die Ansiedlung eines **Rechenzentrums** geprüft. Die ursprüngliche Vorlage sieht vor, eine weitere Planung unter anderem daran zu knüpfen, dass die entstehende **Abwärme sinnvoll für ein Wärmenetz genutzt werden kann**. Dafür soll eine Machbarkeitsstudie erstellt werden.',
+                    'Noch offen ist insbesondere die **Stromversorgung**. Nach Angaben der Verwaltung kann die benötigte Leistung wegen Engpässen im vorgelagerten Stromnetz derzeit nicht sicher bereitgestellt werden. Im Ratsinformationssystem ist inzwischen außerdem eine geänderte Beschlussempfehlung vermerkt; ein endgültiges Sitzungsergebnis sollte daher erst mit einem Beschlussauszug übernommen werden.'
+                ],
+            },
+            {
+                title: 'Buchholz Bus und Bushaltestellen',
+                paragraphs: [
+                    'Seit September 2025 fährt der Buchholz Bus werktags nur noch etwa **6:30 bis 20 Uhr** und samstags **8 bis 16:30 Uhr**. Zuvor fuhr er werktags von 5:30 bis 21 Uhr und samstags von 7:30 bis 21 Uhr. Insgesamt wurden damit **15 Betriebsstunden pro Woche gestrichen**.',
+                    'Nun soll geprüft werden, wie eine **Rückkehr zu den früheren Betriebszeiten** umgesetzt werden könnte, welche jährlichen Mehrkosten entstehen und ob dafür Mittel im Doppelhaushalt 2027/2028 eingeplant werden können.',
+                    'Außerdem ging es um bessere Sitzmöglichkeiten an den Haltestellen. Am „Treffpunkt“ sollen bis zu sechs zusätzliche Bänke geprüft werden. Auch höhere Sitzflächen und zusätzliche Bänke an weiteren Haltestellen sind vorgesehen.'
+                ],
+            },
+            {
+                title: 'Weitere Themen',
+                paragraphs: [
+                    '**Quartier „Zwischen den Gleisen“**: Sobald eine Förderung wieder verfügbar ist, soll ein Sanierungsmanagement beantragt werden. Geplant sind unter anderem Energieberatung, die Prüfung eines Wärmenetzes, Verbesserungen für Fuß- und Radverkehr sowie Maßnahmen für mehr Grün und Klimaanpassung.',
+                    '**Klimabeirat**: Beraten wurde über die politische Unabhängigkeit der Sprecherinnen und Sprecher der Klimateams. Die Verwaltung schlug dabei eine weniger strikte Regelung vor, bei der eine politische Vertretung ausnahmsweise möglich bleiben könnte, wenn sonst niemand aus dem jeweiligen Klimateam teilnehmen kann.'
+                ],
+            },
         ],
         link: 'https://www.buchholz.de/allris/to010?SILFDNR=1000969',
         linkLabel: 'Zur öffentlichen Sitzungsseite',
