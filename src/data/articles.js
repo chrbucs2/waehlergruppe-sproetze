@@ -127,13 +127,119 @@ export const articles = [
         ],
         sources: [
             {
-                label: 'Ratsinformationssystem der Stadt Buchholz',
+                label: 'Ratsinformationssystem der Stadt Buchholz - Satzungsbeschluss',
                 url: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1012941',
             },
             {
-                label: 'Planungsunterlagen zur öffentlichen Auslegung',
+                label: 'Ratsinformationssystem der Stadt Buchholz - Aufstellungs- und Auslegungsbeschluss',
                 url: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1012498',
             },
+        ],
+    },
+    {
+        id: 'grundschule-sproetze-trelde-ausbau',
+        slug: 'grundschule-sproetze-trelde-ausbau',
+        title: 'Grundschule Sprötze-Trelde: Neubau in Sprötze und Ausbau in Trelde geplant',
+        publishedAt: '2026-09-22',
+        modifiedAt: '2026-09-22',
+        category: 'Bildung',
+        introduction: [
+            'Die Grundschule Sprötze-Trelde soll **an beiden Standorten ausgebaut** werden. In Sprötze ist ein Teilersatzneubau geplant, in Trelde eine Erweiterung des bestehenden Schulgebäudes.',
+            'Für Sprötze wurden **fünf verschiedene Varianten** untersucht. Inzwischen ist **Variante 1** favorisiert: ein zweigeschossiger Neubau auf dem heutigen Pausenhof. Tennisplätze und Sportplatz sollen dabei erhalten bleiben.',
+        ],
+        sections: [
+            {
+                title: 'Warum wird die Schule erweitert?',
+                paragraphs: [
+                    'An beiden Standorten reichen die vorhandenen Räume für die heutigen und zukünftigen Anforderungen nicht mehr aus. Hinzu kommt der Ausbau der Ganztagsbetreuung, für den zusätzliche Räume für Unterricht, Betreuung und gemeinsames Essen benötigt werden.',
+                    'Im Schuljahr 2026/27 besuchen insgesamt **275 Kinder** die Grundschule Sprötze-Trelde. In Sprötze werden neun Klassen, in Trelde vier Klassen unterrichtet.',
+                    'Zwischenzeitlich wurde auch diskutiert, ob die Schule langfristig an einem oder weiter an zwei Standorten betrieben werden soll. Die aktuelle Planung sieht nun den **Erhalt und Ausbau beider Standorte** vor.'
+                ],
+            },
+            {
+                title: 'Fünf Varianten für Sprötze',
+                paragraphs: [
+                    'Für Sprötze wurden **fünf mögliche Standorte und Bauformen** untersucht. Dabei ging es vor allem um die Frage, wie genügend Platz geschaffen werden kann, ohne Schule und Sportflächen stärker als nötig einzuschränken.',
+                    'Im Mai 2026 wurde entschieden, **Variante 1 als Grundlage für die weitere Planung** zu verwenden. Die anderen Varianten werden derzeit nicht weiterverfolgt.'
+                ],
+            },
+            {
+                title: 'Was ist in Sprötze geplant?',
+                paragraphs: [
+                    'Der geplante Neubau soll **zweigeschossig auf dem heutigen Pausenhof** entstehen und mit dem bestehenden Klassenhaus verbunden werden. Dabei soll auch eine barrierefreie Verbindung zu den oberen Geschossen möglich werden.',
+                    'Für Sprötze besonders wichtig: **Tennisplätze und Sportplatz bleiben nach der aktuellen Planung erhalten.** Ein Ausweichquartier für die Schule soll ebenfalls nicht nötig sein. Während der Bauzeit bleibt allerdings weniger Pausenhoffläche. Nach Fertigstellung soll ein alter Gebäudeteil abgerissen und die frei werdende Fläche wieder als Schulhof genutzt werden.',
+                    'Geplant wird zunächst für eine **zweizügige Grundschule**. Gleichzeitig soll eine spätere Erweiterung auf drei Züge schon mitgedacht werden. Die bisherige Zeichnung ist allerdings nur eine Baumassenstudie – wie der Neubau tatsächlich aussieht, steht noch nicht fest.'
+                ],
+                image: {
+                    src: '/images/articles/grundschule-sproetze-variante-1.png',
+                    alt: 'Baumassenstudie der aktuellen Variante 1 für die Grundschule Sprötze',
+                    caption: 'Aktuelle Planungsgrundlage: Variante 1 mit einem zweigeschossigen Neubau auf dem Pausenhof. Tennisplätze und Sportplatz bleiben erhalten.'
+                },
+            },
+            {
+                title: 'Was ist in Trelde geplant?',
+                paragraphs: [
+                    'Auch der Standort Trelde soll **einzügig erhalten und erweitert** werden. Grundlage sind erste Überlegungen für einen Umbau und eine Erweiterung im Bereich des heutigen Haupteingangs.',
+                ],
+            },
+            {
+                title: 'Was ist noch offen?',
+                paragraphs: [
+                    'Noch offen sind vor allem **Architektur, endgültige Kosten und Bauzeitplan**. Auch die genaue Gestaltung von Schulhof, Zugängen, Fahrradstellplätzen sowie Hol- und Bringverkehr wird erst mit der konkreteren Planung sichtbar.',
+                    'Ende 2025 wurde für Sprötze noch eine Größenordnung von rund **acht Millionen Euro** genannt. Diese Zahl stammt aber aus einer früheren Planungsphase und ist nicht als endgültige Kostenschätzung für die jetzt weiterverfolgte Variante zu verstehen.'
+                ],
+            },
+            {
+                title: 'Wie geht es weiter?',
+                paragraphs: [
+                    'Am **28. Mai 2026** wurde die weitere Planung für Variante 1 in Sprötze sowie die Erweiterung in Trelde im Ausschuss für Schule und Sport einstimmig unterstützt.',
+                    'Als nächster Schritt sollen die notwendigen Planungsleistungen vergeben werden. Die daraus entstehenden konkreteren Entwürfe sollen anschließend wieder politisch beraten werden.',
+                ],
+            },
+            {
+                title: 'Weiterführende Informationen',
+                paragraphs: [
+                    'Wer sich genauer mit der Planung beschäftigen möchte, findet hier die wichtigsten Unterlagen und Berichte:',
+                    {
+                        text: 'Sitzung des Ausschusses für Schule und Sport vom 28. Mai 2026',
+                        link: 'https://www.buchholz.de/allris/to010?3&SILFDNR=1000954'
+                    },
+                    {
+                        text: 'Bauliche Erweiterungsmaßnahmen an der Grundschule Sprötze-Trelde',
+                        link: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1012985'
+                    },
+                    {
+                        text: 'Ergänzender Prüfauftrag zum Schulgebäude Trelde',
+                        link: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1013108'
+                    },
+                    {
+                        text: 'Grundschule Sprötze-Trelde',
+                        link: 'https://www.grundschule-sproetze-trelde.de/wir-ueber-uns/'
+                    },
+                    {
+                        text: 'Wochenblatt: Ein oder zwei Standorte?',
+                        link: 'https://www.kreiszeitung-wochenblatt.de/buchholz/c-politik/ein-oder-zwei-standorte_a400821'
+                    },
+                    {
+                        text: 'buchholz-aktuell: Erste Planungen zum Neubau in Sprötze',
+                        link: 'https://buchholz-aktuell.de/trelde/acht-millionen-euro-grundschule-sproetze-braucht-neubau-9723/'
+                    }
+                ],
+            },
+        ],
+        sources: [
+            {
+                label: 'Ratsinformationssystem – Bauliche Erweiterungsmaßnahmen Grundschule Sprötze-Trelde',
+                url: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1012985'
+            },
+            {
+                label: 'Ratsinformationssystem – Ergänzender Prüfauftrag Standort Trelde',
+                url: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1013108'
+            },
+            {
+                label: 'Grundschule Sprötze-Trelde',
+                url: 'https://www.grundschule-sproetze-trelde.de/wir-ueber-uns/'
+            }
         ],
     },
     {
@@ -240,7 +346,7 @@ export const articles = [
         ],
         sources: [
             {
-                label: 'Buchholzer Rats- und Verwaltungsvorlagen',
+                label: 'Ratsinformationssystem der Stadt Buchholz - Zustimmung durch Verwaltungsausschuss',
                 url: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1013228&TOLFDNR=1019306',
             },
             {

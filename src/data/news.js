@@ -72,6 +72,18 @@ export const news = [
         articleLink: { slug: 'bebauungsplan-sproetzer-weg', label: 'Bebauungsplan Sprötzer Weg' },
     },
     {
+        id: 'grundschule-sproetze-trelde-ausbau',
+        slug: 'grundschule-sproetze-trelde-neubau-erweiterung',
+        title: 'Grundschule Sprötze-Trelde: Ausbau beider Standorte geplant',
+        publishedAt: '2026-05-26',
+        topicIds: ['ortsmitte'],
+        summary: [
+            'Die Grundschule Sprötze-Trelde soll **an beiden Standorten weiterentwickelt werden**. In Sprötze ist ein Teilersatzneubau geplant, in Trelde soll die bestehende Schule erweitert werden.',
+            'In Sprötze bildet **Variante 1 mit einem zweigeschossigen Neubau auf dem Pausenhof** die Grundlage der weiteren Planung. Die Tennisplätze und der Sportplatz können dabei bestehen bleiben. In Trelde soll der **einzügige Schulstandort erhalten** und an das benötigte Raumprogramm angepasst werden.',
+        ],
+        articleLink: { slug: 'grundschule-sproetze-trelde-ausbau' },
+    },
+    {
         id: 'bahnbruecke-k72-restarbeiten-september-2026',
         slug: 'bahnbruecke-sproetze-k72-vollsperrungen-september-2026',
         title: 'Nächtliche Vollsperrungen an Sprötzer Bahnbrücke Ende September',
