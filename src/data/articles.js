@@ -83,28 +83,31 @@ export const articles = [
                 paragraphs: [
                     'Wer sich genauer mit der Planung beschäftigen möchte, findet hier die wichtigsten Unterlagen und Berichte:',
                     {
-                        text: 'Sitzung vom 6. Mai 2026 (TOP Ö8)',
+                        text: 'Sitzung des Ausschusses für Stadtentwicklung, Umwelt, Klimaschutz und Mobilität vom 6. Mai 2026 (TOP Ö8)',
                         link: 'https://www.buchholz.de/allris/to020?TOLFDNR=1017941&SILFDNR=1000953',
                     },
                     {
-                        text: 'Weitere Unterlagen zum Satzungsbeschluss',
+                        text: 'Satzungsbeschluss zum Bauvorhaben in der Niedersachsenstraße',
                         link: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1012941',
+                        indent: true
                     },
                     {
-                        text: 'Sitzung vom 17. September 2025 (TOP Ö10)',
+                        text: 'Sitzung des Ausschusses für Stadtentwicklung, Umwelt, Klimaschutz und Mobilität vom 17. September 2025 (TOP Ö10)',
                         link: 'https://www.buchholz.de/allris/to020?TOLFDNR=1015283&SILFDNR=1000653'
                     },
                     {
-                        text: 'Planungsunterlagen zum Bebauungsplan',
+                        text: 'Zustimmung zum Bebauungsplanentwurf und Auslegungsbeschluss',
                         link: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1012498',
+                        indent: true
                     },
                     {
-                        text: 'Sitzung vom 18. September 2024 (TOP Ö7)',
+                        text: 'Sitzung des Ausschusses für Stadtentwicklung, Umwelt, Klimaschutz und Mobilität vom 18. September 2024 (TOP Ö7)',
                         link: 'https://www.buchholz.de/allris/to020?TOLFDNR=1010466&SILFDNR=1000346'
                     },
                     {
                         text: 'Plankonzept zur Vorbereitung',
                         link: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1009915',
+                        indent: true
                     },
                     {
                         text: 'Grünordnungsplanerischen Fachbeitrag',
@@ -127,13 +130,9 @@ export const articles = [
         ],
         sources: [
             {
-                label: 'Ratsinformationssystem der Stadt Buchholz - Satzungsbeschluss',
-                url: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1012941',
-            },
-            {
-                label: 'Ratsinformationssystem der Stadt Buchholz - Aufstellungs- und Auslegungsbeschluss',
-                url: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1012498',
-            },
+                label: 'Ratsinformationssystem der Stadt Buchholz',
+                url: 'https://www.buchholz.de/allris/tr010',
+            }
         ],
     },
     {
@@ -201,15 +200,29 @@ export const articles = [
                 paragraphs: [
                     'Wer sich genauer mit der Planung beschäftigen möchte, findet hier die wichtigsten Unterlagen und Berichte:',
                     {
-                        text: 'Sitzung des Ausschusses für Schule und Sport vom 28. Mai 2026',
-                        link: 'https://www.buchholz.de/allris/to010?3&SILFDNR=1000954'
+                        text: 'Sitzung des Ausschusses für Schule und Sport vom 28. Mai 2026 (TOP Ö9)',
+                        link: 'https://www.buchholz.de/allris/to020?TOLFDNR=1018070&SILFDNR=1000954'
                     },
                     {
-                        text: 'Bauliche Erweiterungsmaßnahmen an der Grundschule Sprötze-Trelde',
+                        text: 'Zustimmung zu baulichen Erweiterungsmaßnahmen an der Grundschule Sprötze-Trelde',
+                        link: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1013048',
+                        indent: true
+                    },
+                    {
+                        text: 'Sitzung des Ausschusses für Schule und Sport vom 28. Mai 2026 (TOP Ö9.1)',
+                        link: 'https://www.buchholz.de/allris/to020?TOLFDNR=1018491&SILFDNR=1000954'
+                    },
+                    {
+                        text: 'Gestaltung der Ausschreibung Grundschule Sprötze-Trelde',
+                        link: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1013106',
+                        indent: true
+                    },
+                    {
+                        text: 'Ursprüngliche Anfrage zur Zukunft der Grundschule Sprötze-Trelde',
                         link: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1012985'
                     },
                     {
-                        text: 'Ergänzender Prüfauftrag zum Schulgebäude Trelde',
+                        text: 'Ergänzender Prüfauftrag Standort Trelde',
                         link: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1013108'
                     },
                     {
@@ -222,23 +235,15 @@ export const articles = [
                     },
                     {
                         text: 'buchholz-aktuell: Erste Planungen zum Neubau in Sprötze',
-                        link: 'https://buchholz-aktuell.de/trelde/acht-millionen-euro-grundschule-sproetze-braucht-neubau-9723/'
+                        link: 'https://buchholz-aktuell.de/trelde/acht-millionen-euro-grundschule-sproetze-braucht-neubau-9723'
                     }
                 ],
             },
         ],
         sources: [
             {
-                label: 'Ratsinformationssystem – Bauliche Erweiterungsmaßnahmen Grundschule Sprötze-Trelde',
-                url: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1012985'
-            },
-            {
-                label: 'Ratsinformationssystem – Ergänzender Prüfauftrag Standort Trelde',
-                url: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1013108'
-            },
-            {
-                label: 'Grundschule Sprötze-Trelde',
-                url: 'https://www.grundschule-sproetze-trelde.de/wir-ueber-uns/'
+                label: 'Ratsinformationssystem der Stadt Buchholz',
+                url: 'https://www.buchholz.de/allris/tr010'
             }
         ],
     },
@@ -322,32 +327,29 @@ export const articles = [
                 paragraphs: [
                     'Wer sich genauer informieren möchte, findet hier die wichtigsten offiziellen Unterlagen zur bisherigen Planung der Sprötzer Ortsmitte, zum Bauturbo und zum aktuellen Bauvorhaben an der Niedersachsenstraße 13.',
                     {
-                        text: 'Bebauungsplan „Neue Ortsmitte Sprötze – Niedersachsenstraße“',
-                        link: 'https://www.buchholz.de/allris/vo020?VOLFDNR=6361',
-                        indent: true,
+                        text: 'Sitzung des des Ausschusses für Stadtentwicklung, Umwelt, Klimaschutz und Mobilität vom 17. September 2026 (TOP Ö13)',
+                        link: 'https://www.buchholz.de/allris/to010?SILFDNR=1000969&TOLFDNR=1019306'
                     },
                     {
-                        text: 'Informationen der Stadt Buchholz zum Bauturbo',
-                        link: 'https://www.buchholz.de/portal/seiten/bauturbo-in-buchholz-i-d-n--903001376-20101.html',
-                        indent: true,
-                    },
-                    {
-                        text: 'Vorlage zum Bauvorhaben Niedersachsenstraße 13',
+                        text: 'Stellungnahme zum Bauvorhaben Niedersachsenstraße 13',
                         link: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1013228&TOLFDNR=1019306',
                         indent: true,
                     },
                     {
-                        text: 'Stellungnahme der Verwaltung',
-                        link: 'https://www.buchholz.de/allris/vo020?14--attachments-expandedPanel-content-body-rows-1-cells-2-cell-link&VOLFDNR=1013228&TOLFDNR=1019306',
-                        indent: true,
+                        text: 'Bebauungsplan „Neue Ortsmitte Sprötze – Niedersachsenstraße“',
+                        link: 'https://www.buchholz.de/allris/vo020?VOLFDNR=6361',
                     },
+                    {
+                        text: 'Informationen der Stadt Buchholz zum Bauturbo',
+                        link: 'https://www.buchholz.de/portal/seiten/bauturbo-in-buchholz-i-d-n--903001376-20101.html',
+                    }
                 ],
             },
         ],
         sources: [
             {
-                label: 'Ratsinformationssystem der Stadt Buchholz - Zustimmung durch Verwaltungsausschuss',
-                url: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1013228&TOLFDNR=1019306',
+                label: 'Ratsinformationssystem der Stadt Buchholz',
+                url: 'https://www.buchholz.de/allris/tr010'
             },
             {
                 label: 'Informationen der Stadt Buchholz zum Bauturbo',
