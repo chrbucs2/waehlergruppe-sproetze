@@ -59,11 +59,19 @@ export function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug 
                                             );
                                         }
 
+                                        const paragraphHref = paragraph.link ?? (paragraph.slug ? `/artikel/${paragraph.slug}` : undefined);
                                         return (
-                                            <p key={paragraph.text} className="schedule-link-note">
-                                                <a className="news-card__link" href={paragraph.link}>
-                                                    {paragraph.text}
-                                                </a>
+                                            <p
+                                                key={paragraph.text}
+                                                className={paragraph.indent ? 'schedule-link-note is-indented' : 'schedule-link-note'}
+                                            >
+                                                {paragraphHref ? (
+                                                    <a className="news-card__link" href={paragraphHref}>
+                                                        {paragraph.text}
+                                                    </a>
+                                                ) : (
+                                                    <span>{paragraph.text}</span>
+                                                )}
                                             </p>
                                         );
                                     })}
