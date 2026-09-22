@@ -74,7 +74,7 @@ export const news = [
     {
         id: 'grundschule-sproetze-trelde-ausbau',
         slug: 'grundschule-sproetze-trelde-neubau-erweiterung',
-        title: 'Grundschule Sprötze-Trelde: Ausbau beider Standorte geplant',
+        title: 'Ausbau der Grundschule Sprötze-Trelde an beiden Standorten geplant',
         publishedAt: '2026-05-26',
         topicIds: ['ortsmitte', 'infrastruktur'],
         summary: [
