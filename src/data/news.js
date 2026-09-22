@@ -81,7 +81,7 @@ export const news = [
             'Die Grundschule Sprötze-Trelde soll **an beiden Standorten weiterentwickelt werden**. In Sprötze ist ein Teilersatzneubau geplant, in Trelde soll die bestehende Schule erweitert werden.',
             'In Sprötze bildet **Variante 1 mit einem zweigeschossigen Neubau auf dem Pausenhof** die Grundlage der weiteren Planung. Die Tennisplätze und der Sportplatz können dabei bestehen bleiben. In Trelde soll der **einzügige Schulstandort erhalten** und an das benötigte Raumprogramm angepasst werden.',
         ],
-        articleLink: { slug: 'grundschule-sproetze-trelde-ausbau' },
+        articleLink: { slug: 'grundschule-sproetze-trelde-ausbau', label: 'Ausbau Grundschule Sprötze-Trelde' },
     },
     {
         id: 'bahnbruecke-k72-restarbeiten-september-2026',
@@ -128,7 +128,7 @@ export const news = [
             'Auf dem **Eckgrundstück an der Niedersachsenstraße 13 neben dem Edeka** sind **zwei Mehrfamilienhäuser** mit 12 bis 15 Wohnungen und zwei Gewerbeeinheiten geplant.',
             'Für das Vorhaben sollen die **bisherigen Vorgaben des Bebauungsplans deutlich überschritten** werden: Statt eines Vollgeschosses sind zwei vorgesehen, außerdem sollen Gebäude höher ausfallen und Baugrenzen stellenweise um bis zu 6,20 Meter überschritten werden.',
         ],
-        articleLink: { slug: 'niedersachsenstrasse-13-wohnungsbau'},
+        articleLink: { slug: 'niedersachsenstrasse-13-wohnungsbau', label: 'Bebaungsplan Niedersachsenstraße 13' },
     },
     {
         id: 'haeckselaktion-buchholz-2026',
