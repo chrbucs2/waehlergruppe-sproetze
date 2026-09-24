@@ -987,6 +987,17 @@ h1 {
   margin-top: 0;
 }
 
+.schedule-detail-section p a {
+  color: var(--primary-dark);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.schedule-detail-section p a::after {
+  content: '→';
+}
+
 .schedule-source-link {
   margin-top: 1rem;
   margin-bottom: 0;

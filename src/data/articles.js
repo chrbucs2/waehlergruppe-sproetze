@@ -357,4 +357,171 @@ export const articles = [
             },
         ],
     },
+    {
+        id: 'stadteingang-west-bremer-strasse-2',
+        slug: 'stadteingang-west-bremer-strasse-2',
+        title: 'Stadteingang West: Bis zu 580 Wohnungen an der Bremer Straße geplant',
+        publishedAt: '2026-09-23',
+        modifiedAt: '2026-09-23',
+        category: 'Stadtplanung',
+        introduction: [
+            'Am westlichen Stadtrand von Buchholz soll beidseits der **Bremer Straße in Richtung B 75** ein neues Wohngebiet entstehen. Der Rahmenplan sieht insgesamt **bis zu rund 580 Wohnungen** vor.',
+            'Geplant ist ein Mix aus **Mehrfamilienhäusern, Reihenhäusern, Doppelhäusern und Einfamilienhäusern**. Ein großer Teil der Wohnungen soll in Mehrfamilienhäusern entstehen. Gleichzeitig sind Grünzüge, neue Fuß- und Radwege sowie eine bessere Busanbindung vorgesehen.',
+            'Die Planung befindet sich noch in einem **frühen Stadium**. Vor allem zu Verkehr, Entwässerung, Natur- und Artenschutz sowie den Folgen für Schulen und Kitas sind noch Fragen offen.',
+        ],
+        sections: [
+            {
+                title: 'Was ist geplant?',
+                paragraphs: [
+                    'Das neue Quartier soll zwischen **B 75, Bremer Straße, Brumhagen und dem Schulzentrum am Kattenberge** entstehen. Der Rahmenplan umfasst Flächen auf beiden Seiten der Bremer Straße.',
+                    'Ursprünglich wurden **zwei Varianten** des Rahmenplans ausgearbeitet. Die Verwaltung hatte **Variante 1** für eine abschnittsweise Entwicklung empfohlen. Der zuständige Fachausschuss wollte sich im März 2026 wegen noch ausstehender Fachgutachten jedoch **noch nicht endgültig auf eine der beiden Varianten festlegen**.',
+                    'Nach dem derzeitigen Konzept können insgesamt **bis zu rund 580 Wohnungen** entstehen. Etwa **50 bis 60 Prozent der Wohneinheiten** sind im **Mehrgeschosswohnungsbau** vorgesehen.',
+                    'Neben frei finanziertem Wohnraum soll ausdrücklich auch **bezahlbarer und geförderter Wohnraum** entstehen.',
+                ],
+                image: {
+                    src: '/images/articles/stadteingang-west-variante-1.png',
+                    alt: 'Rahmenplan Variante 1 für den Stadteingang West an der Bremer Straße',
+                    caption: 'Aktueller Vorabzug der Variante 1 vom 15. Januar 2026. Die konkreten Bebauungspläne werden auf dieser Grundlage weiterentwickelt. Quelle: Stadt Buchholz i.d.N.',
+                },
+            },
+            {
+                title: 'Wie soll das neue Quartier aussehen?',
+                paragraphs: [
+                    'Ein zentrales Element ist die vorhandene **Baumreihe**, die erhalten und zu einem größeren Grünzug ergänzt werden soll. Um diesen Bereich ist eine dichtere Bebauung mit Mehrfamilienhäusern vorgesehen.',
+                    'Zu den Rändern hin soll die Bebauung lockerer werden. Dort sind unter anderem Reihenhäuser sowie Doppel- und Einfamilienhäuser vorgesehen. In Richtung **Brumhagen und Trelder Moor** sollen Grünflächen und Abstand zur bestehenden Bebauung erhalten bleiben.',
+                    'An der Bremer Straße sind außerdem größere Gebäude vorgesehen, die den neuen Stadteingang markieren sollen. In den Erdgeschossen könnten teilweise auch andere Nutzungen entstehen.',
+                ],
+            },
+            {
+                title: 'Die Planung wird in zwei Bereiche aufgeteilt',
+                paragraphs: [
+                    'Für die weitere Planung gibt es zwei Bebauungsplanverfahren: **„Bremer Straße / Brumhagen Süd“** auf der südwestlichen Seite der Bremer Straße und **„Bremer Straße / Brumhagen Nord“** auf der nordöstlichen Seite.',
+                    'Der Rahmenplan nennt für das gesamte Gebiet **bis zu rund 580 Wohnungen**. Die endgültige Zahl kann sich im weiteren Verfahren noch verändern.',
+                    { type: 'subheading', text: 'Brumhagen Süd: der größere erste Teil' },
+                    'Der Geltungsbereich des Bebauungsplans **„Bremer Straße / Brumhagen Süd“** ist rund **23,5 Hektar groß**. Die Stadt geht dort derzeit von **etwa 400 Wohnungen** aus. Neben den eigentlichen Bauflächen liegen darin auch Straßen, Grünflächen, Wald, Gehölze und weitere Flächen.',
+                    'Für die eigentliche Wohnbebauung sind derzeit rund **10,1 Hektar** vorgesehen. Ein großer Teil der Grundstücke befindet sich im Eigentum der Stadt Buchholz.',
+                    { type: 'subheading', text: 'Brumhagen Nord: private Flächen auf der anderen Straßenseite' },
+                    'Der Bebauungsplan **„Bremer Straße / Brumhagen Nord“** umfasst rund **6,7 Hektar** nordöstlich der Bremer Straße. Dort werden derzeit etwa **200 Wohnungen** angenommen.',
+                    'Anders als im südlichen Bereich befinden sich diese Flächen **nicht im Eigentum der Stadt**. Deshalb spielen Vereinbarungen mit den privaten Eigentümern und die Buchholzer Regeln zur sozial und finanziell nachhaltigen Bodenentwicklung eine wichtige Rolle.',
+                ],
+            },
+            {
+                title: 'Verkehr bleibt eine der wichtigsten offenen Fragen',
+                paragraphs: [
+
+                    'Das neue Wohngebiet wird für den Autoverkehr im Wesentlichen über die **Bremer Straße** erschlossen. Genau dort liegt auch die Kreuzung mit dem **Sprötzer Weg** – einer wichtigen Verbindung zwischen Sprötze, dem Schulzentrum am Kattenberge und Buchholz.',
+                    'Die Stadt nennt die bereits belasteten Knoten **Bremer Straße / B 75, Bremer Straße / Sprötzer Weg und Bremer Straße / Mühlentunnel** ausdrücklich als Bereiche, bei denen **zusätzliche Verkehrsbelastungen untersucht** werden müssen.',
+                    'Gleichzeitig sieht die Planung neue **Fuß- und Radwege** in mehrere Richtungen vor. Geplant sind unter anderem Verbindungen zum Schulzentrum, nach Steinbeck, zum Gewerbegebiet Trelder Berg und über Brumhagen in Richtung Sprötze.',
+                    'Auch eine **Anbindung an den BuchholzBus** gehört zu den Planungszielen. Eine endgültige Linienführung und die daraus entstehenden Betriebskosten standen in den bisher vorliegenden Unterlagen noch nicht fest.',
+                ],
+            },
+            {
+                title: 'Kita, Nahversorgung und weitere Infrastruktur',
+                paragraphs: [
+                    'Im Quartier soll nach bisheriger Planung mindestens eine **größere Kindertagesstätte** möglich sein. Auch Räume für gemeinschaftliche oder ehrenamtliche Nutzungen wurden vorgeschlagen.',
+                    'Eine **eigene Grundschule** ist im Rahmenplan derzeit **nicht vorgesehen**. In den Planungsunterlagen werden unter anderem die **Grundschulen in Steinbeck und Sprötze** als erreichbare Schulen genannt.',
+                    'Gleichzeitig liegen nach Angaben der Verwaltung bislang **keine belastbaren Angaben über die später verfügbaren Schul- und Kita-Kapazitäten** vor. Die Entwicklung soll über mehrere Jahre und in einzelnen Bauabschnitten erfolgen, sodass Kapazitäten angepasst werden könnten.',
+                    'Gerade für jüngere Kinder spielt nicht nur die Entfernung zur Schule eine Rolle. Entscheidend sind auch **sichere Rad- und Fußwege, Querungen der Bremer Straße und zusätzlicher Elternverkehr**. Die Erreichbarkeit vorhandener Schulen soll deshalb vor allem durch sichere Fuß- und Radwege verbessert werden. ',
+                    'An der Bremer Straße ist außerdem eine Fläche vorgesehen, auf der beispielsweise ein **Nahversorger** entstehen könnte. Ob und in welcher Form dies umgesetzt wird, ist noch offen.',
+                ],
+            },
+            {
+                title: 'Natur, Trelder Moor und Entwässerung',
+                paragraphs: [
+                    'Für das Wohngebiet werden **große bisher unbebaute Acker- und Grünlandflächen im Außenbereich** in Anspruch genommen. Die Verwaltung geht deshalb selbst von **erheblichen Auswirkungen auf Landschaft und ökologische Zusammenhänge** aus.',
+                    'Vorhandene **Baumreihen, Waldflächen und ein gesetzlich geschütztes Biotop sollen erhalten werden**. In Richtung Trelder Moor ist ein breiter Grünbereich vorgesehen.',
+                    'Voraussichtlich werden zusätzlich **Ausgleichsflächen außerhalb des Baugebietes** benötigt. Wie groß diese sein müssen, hängt unter anderem von den laufenden Untersuchungen zu Arten, Biotopen und Boden ab.',
+                    'Auch die **Entwässerung ist noch nicht abschließend geklärt**. Dabei muss unter anderem untersucht werden, wie Regenwasser vor Ort zurückgehalten oder versickert werden kann und welche Auswirkungen dies auf das Umfeld und das Trelder Moor hat.',
+                ],
+            },
+            {
+                title: 'Worüber wird diskutiert?',
+                paragraphs: [
+                    'In den politischen Beratungen und öffentlichen Diskussionen stehen vor allem vier Fragen im Mittelpunkt: **Warum wird im Außenbereich gebaut, wie verkraftet das Straßennetz zusätzlichen Verkehr, wie werden Natur und Landschaft geschützt und reicht die soziale Infrastruktur aus?**',
+                    'Die **Verwaltung begründet** den Standort vor allem mit dem weiterhin **hohen Wohnraumbedarf** und damit, dass **große Teile der Fläche der Stadt gehören** und vergleichsweise kurzfristig entwickelt werden können.',
+                    '**Kritik** gibt es dagegen unter anderem an der **Größe des Baugebietes**, der zusätzlichen **Flächenversiegelung**, möglichen **Auswirkungen auf das Trelder Moor** sowie der **Verkehrsbelastung**. Auch in regionalen Medien und von Naturschutzverbänden wurden diese Punkte aufgegriffen.',
+                ],
+            },
+            {
+                title: 'Was bedeutet die Planung für Sprötze?',
+                paragraphs: [
+                    'Sprötze liegt zwar außerhalb des eigentlichen Baugebietes, ist aber Teil des erweiterten Umfelds. In den Planungen werden der **Bahnhof Sprötze, die Nahversorgung in Sprötze und Verbindungen über Brumhagen** ausdrücklich berücksichtigt.',
+                    'Für Sprötze besonders relevant ist die **Verkehrsentwicklung**, insbesondere zu Zeiten des **Schul- und Berufsverkehrs**. Zum heutigen Verkehr kommen weitere Entwicklungen hinzu. Am **Sprötzer Weg / An den Tennisplätzen** ist eine **[neue Kita](bebauungsplan-sproetzer-weg)** geplant. Der Landkreis geht davon aus, dass sich durch die Kita und die dortigen weiteren Nutzungen das **Verkehrsaufkommen** auf dem Sprötzer Weg weiter **erhöhen** wird.',
+                    'Auch bei der **schulischen Versorgung** spielt Sprötze eine Rolle. Die **Grundschulen in Steinbeck und Sprötze** werden als mögliche Standorte für Kinder aus dem neuen Quartier betrachtet. Damit bleibt eine für Sprötze wichtige Frage offen: **Wie werden zusätzliche Schülerinnen und Schüler verteilt, wenn einzelne Schulen ihre Kapazitätsgrenzen erreichen?**',
+                ],
+            },
+            {
+                title: 'Was ist noch offen?',
+                paragraphs: [
+                    'Der Rahmenplan legt die grundsätzliche Idee für das Gebiet fest. Er ist aber **noch kein Bebauungsplan und schafft allein noch kein Baurecht für die geplanten Häuser**. ',
+                    'Viele für die tatsächlichen Auswirkungen **entscheidende Fragen** werden erst **in den Bebauungsplanverfahren** geklärt.',
+                    {
+                        type: 'list',
+                        items: [
+                            'Wie stark nimmt der Verkehr auf Bremer Straße und Sprötzer Weg tatsächlich zu?',
+                            'Wie leistungsfähig bleibt die Kreuzung Bremer Straße / Sprötzer Weg zu den Hauptverkehrszeiten?',
+                            'Welche Schul- und Kita-Kapazitäten stehen zur Verfügung?',
+                            'Wie werden Kinder auf Schulen verteilt und welche Schulwege entstehen?',
+                            'Welche sicheren Querungen sowie Fuß- und Radwege werden gebaut?',
+                            'Wie werden Entwässerung und Schutz des Trelder Moores gelöst?',
+                            'Wie bleibt eine landschaftliche Trennung zu Sprötze und Brumhagen erhalten?',
+                            'Wo können Ausgleichsflächen enstehen und wie groß müssen diese sein?'
+                        ],
+                    },
+                ],
+            },
+            {
+                title: 'Wie geht es weiter?',
+                paragraphs: [
+                    'Für die Bereiche **„Bremer Straße / Brumhagen Süd“ und „Bremer Straße / Brumhagen Nord“** werden eigene Bebauungspläne vorbereitet. Parallel muss auch der Flächennutzungsplan geändert werden.',
+                    'Im weiteren Verfahren werden Gutachten unter anderem zu **Verkehr, Boden, Entwässerung sowie Natur- und Artenschutz** benötigt. Danach werden die Planungen konkreter.',
+                    'Erst die **Bebauungspläne legen später verbindlich fest, wo und in welchem Umfang gebaut werden darf**. Bis dahin können sich Gebäude, Straßen, Grünflächen und Bauabschnitte noch verändern.',
+                ],
+            },
+            {
+                title: 'Weiterführende Informationen',
+                paragraphs: [
+                    'Wer sich genauer informieren möchte, findet hier die wichtigsten offiziellen Unterlagen und ergänzende Berichte zum Stadteingang West.',
+                    {
+                        text: 'Ratsinformationssystem der Stadt Buchholz – bereitgestellte Sitzungsseite',
+                        link: 'https://www.buchholz.de/allris/to010?SILFDNR=1000942',
+                    },
+                    {
+                        text: 'Ratsinformationssystem der Stadt Buchholz – weitere Sitzungsseite',
+                        link: 'https://www.buchholz.de/allris/to010?SILFDNR=1001100',
+                    },
+                    {
+                        text: 'Ausschuss für Stadtentwicklung vom 3. Juni 2026 – Stadteingang West und Verkehr (TOP 13 und 14)',
+                        link: 'https://www.buchholz.de/allris/to010?SILFDNR=1000959&TOLFDNR=1018267',
+                    },
+                    {
+                        text: 'Buchholz Aktuell: Wohngebiet Bremer Straße – 580 Wohnungen und die Verkehrsdebatte',
+                        link: 'https://buchholz-aktuell.de/buchholz/wohngebiet-bremer-strasse-580-wohnungen-und-ein-drohender-verkehrskollaps-14748/',
+                    },
+                    {
+                        text: 'Buchholz Aktuell: Stellungnahme des BUND zum geplanten Neubaugebiet',
+                        link: 'https://buchholz-aktuell.de/buchholz/naturschuetzer-lehnen-neubaugebiet-an-der-bremer-strasse-ab-14952/',
+                    },
+                    {
+                        text: 'Kreiszeitung Wochenblatt: Debatte über Infrastruktur und Verkehr',
+                        link: 'https://www.kreiszeitung-wochenblatt.de/buchholz/c-politik/neubaugebiete-beduerfen-einer-rechtzeitigen-planung-der-infrastruktur_a402629',
+                    },
+                ],
+            },
+        ],
+        sources: [
+            {
+                label: 'Ratsinformationssystem der Stadt Buchholz',
+                url: 'https://www.buchholz.de/allris/tr010',
+            },
+            {
+                label: 'Buchholz Aktuell – Wohngebiet Bremer Straße',
+                url: 'https://buchholz-aktuell.de/buchholz/wohngebiet-bremer-strasse-580-wohnungen-und-ein-drohender-verkehrskollaps-14748/',
+            },
+            {
+                label: 'Kreiszeitung Wochenblatt – Stadtentwicklung und Infrastruktur',
+                url: 'https://www.kreiszeitung-wochenblatt.de/buchholz/c-politik/neubaugebiete-beduerfen-einer-rechtzeitigen-planung-der-infrastruktur_a402629',
+            },
+        ],
+    },
 ];

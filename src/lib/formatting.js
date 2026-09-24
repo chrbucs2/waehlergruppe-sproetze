@@ -11,5 +11,19 @@ export function formatDate(dateString) {
 }
 
 export function formatInlineMarkup(text) {
-    return String(text).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+    return String(text)
+        .replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, label, target) => `<a href="${resolveInlineLinkTarget(target)}">${label}</a>`)
+        .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+}
+
+function resolveInlineLinkTarget(target) {
+    if (/^https?:\/\//i.test(target)) {
+        return target;
+    }
+
+    if (target.startsWith('/')) {
+        return target;
+    }
+
+    return `/artikel/${target}`;
 }
