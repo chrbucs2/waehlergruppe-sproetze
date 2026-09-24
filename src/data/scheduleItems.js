@@ -1,12 +1,12 @@
 export const scheduleItems = [
     {
         id: 'ausschuss-stadtentwicklung-2026-05-06',
-        slug: 'ausschuss-stadtentwicklung-umwelt-klimaschutz-mobilitaet-2026-05-06',
+        slug: 'ausschuss-stadtentwicklung-2026-05-06',
         category: 'Ausschuss Stadtentwicklung, Umwelt, Klimaschutz und Mobilität',
         date: '2026-05-06',
         time: '18:30 Uhr',
         title: 'Bebauungsplan Sprötzer Weg',
-        location: 'Kantine, Rathausplatz 1, 21244 Buchholz i.d.N.',
+        location: 'Kantine, Rathaus Buchholz',
         details:
             'Im Mittelpunkt der Sitzung standen der **Bebauungsplan „Sprötzer Weg / An den Tennisplätzen“**, die weitere Planung des Lerchenparks auf dem ehemaligen Rütgersgelände sowie die Neuausrichtung des Innenstadtmanagements.',
         introduction: [
@@ -45,12 +45,12 @@ export const scheduleItems = [
     },
     {
         id: 'ortsrat-sproetze-2026-06-15',
-        slug: 'ortsrat-sproetze-regulaere-sitzung-2026-06-15',
+        slug: 'ortsrat-sproetze-2026-06-15',
         category: 'Ortsrat Sprötze',
         date: '2026-06-15',
         time: '17:30 Uhr',
         title: 'Grundstücksangelegenheit in der Niedersachsenstraße 13',
-        location: 'Torbogenzimmer, Rathausplatz 1, 21244 Buchholz i.d.N.',
+        location: 'Torbogenzimmer, Rathaus Buchholz',
         details:
             'Im Mittelpunkt der Sitzung des Ortsrates Sprötze am 15. Juni 2026 standen die Berichte der Ortsbürgermeisterin und des Bürgermeisters sowie aktuelle Anfragen aus dem Ortsrat. Im nichtöffentlichen Teil wurde zudem die **Veräußerung eines Wohngrundstücks in der Niedersachsenstraße 13** behandelt.',
         introduction: [
@@ -71,12 +71,12 @@ export const scheduleItems = [
     },
     {
         id: 'ausschuss-stadtentwicklung-2026-09-17',
-        slug: 'ausschuss-stadtentwicklung-umwelt-klimaschutz-mobilitaet-2026-09-17',
+        slug: 'ausschuss-stadtentwicklung-2026-09-17',
         category: 'Ausschuss Stadtentwicklung, Umwelt, Klimaschutz und Mobilität',
         date: '2026-09-17',
         time: '18:30 Uhr',
         title: 'Wohnungsbau in der Niedersachsenstraße, Buchholz Bus und Stadtentwicklung',
-        location: 'Kantine Rathaus Buchholz',
+        location: 'Kantine, Rathaus Buchholz',
         details:
             'Für Sprötze besonders relevant war die geplante **Bebauung an der Niedersachsenstraße 13**. Außerdem standen die erste Zwischenbilanz zum **Bauturbo**, der **Buchholz Bus**, ein mögliches Rechenzentrum im Bahnhofsumfeld Nord und weitere Stadtentwicklungsthemen auf der Tagesordnung.',
         introduction: [
@@ -137,22 +137,90 @@ export const scheduleItems = [
         linkLabel: 'Zur öffentlichen Sitzungsseite',
     },
     {
-        id: 'ausschuss-finanzen-2026-09-28',
-        slug: 'ausschuss-wirtschaft-finanzen-verwaltung-digitalisierung-2026-09-28',
-        category: 'Ausschuss Wirtschaft, Finanzen, Verwaltung und Digitalisierung',
-        date: '2026-09-28',
+        id: 'ausschuss-bauen-ordnung-feuerschutz-2026-09-24',
+        slug: 'ausschuss-bauen-ordnung-feuerschutz-2026-09-24',
+        category: 'Ausschuss für Bauen, Ordnung, Feuerschutz und Kommunalbetrieb',
+        date: '2026-09-24',
         time: '18:30 Uhr',
-        title: 'Reguläre Ratssitzung',
-        location: 'Kantine Rathaus Buchholz',
+        title: 'Klimaanpassungskonzept für Buchholz',
+        location: 'Kantine, Rathaus Buchholz',
         details:
-            'Der Ausschuss befasst sich mit aktuellen Themen aus den Bereichen Wirtschaft, städtische Finanzen, Verwaltung und Digitalisierung. Für Sprötze können insbesondere Haushalts- und Investitionsentscheidungen von Bedeutung sein.',
+            'Der Ausschuss berät über das neue **Klimaanpassungskonzept für Buchholz**. Es enthält Maßnahmen zu Starkregen, Hitze, Regenwasserrückhalt, Stadtgrün und Gewässern. Auch für **Sprötze** finden sich darin konkrete Bezüge.',
         introduction: [
-            'Von besonderem Interesse für Sprötze sind mögliche Beratungen zu Haushalt, Investitionen und städtischen Vorhaben mit Bezug zur Ortschaft.',
+            'Das Klimaanpassungskonzept soll künftig als Grundlage dafür dienen, wie sich Buchholz auf **Hitze, Starkregen, Trockenheit und andere Klimafolgen** vorbereitet.',
+            'Für Sprötze interessant sind unter anderem Aussagen zum **Sprötzer Bach**, zur **Grundschule Sprötze-Trelde**, zu landwirtschaftlichen Flächen rund um Sprötze und Trelde sowie zum Bevölkerungsschutz.',
+            'Der Ausschuss berät das Konzept zunächst vor. Anschließend soll der **Rat der Stadt Buchholz** darüber entscheiden.',
+        ],
+        sections: [
+            {
+                title: 'Was ist für Sprötze interessant?',
+                paragraphs: [
+                    'Der **Sprötzer Bach** wird im Konzept ausdrücklich untersucht. Bei seinem ökologischen Zustand werden Defizite bei den Wasserpflanzen genannt.',
+                    'Auch die **Grundschule Sprötze-Trelde** taucht auf: Beim Neu- und Anbau werden Aspekte der Klimaanpassung bereits berücksichtigt.',
+                    'Für landwirtschaftliche Flächen **um Sprötze und Trelde** weist das Konzept teilweise eine hohe bis sehr hohe potenzielle Gefährdung durch **Winderosion** aus.',
+                    'Beim Bevölkerungsschutz wird außerdem Sprötze als Standort der Ortsfeuerwehr genannt. Dort wird ein **mobiles Notstromaggregat** vorgehalten.',
+                ],
+            },
+            {
+                title: 'Was soll beschlossen werden?',
+                paragraphs: [
+                    'Vorgesehen ist, dem Klimaanpassungskonzept zuzustimmen. Außerdem soll sich die Stadt um weitere **Fördermittel für die Umsetzung** bewerben.',
+                    'Zu den vorgesehenen Maßnahmen gehören unter anderem ein **Starkregenkonzept**, die Rückhaltung und Versickerung von Regenwasser, Klimaanpassung in sozialen Einrichtungen sowie weitere Maßnahmen für Stadtgrün und Gewässer.',
+                ],
+            },
+            {
+                title: 'Noch keine konkreten Maßnahmen für Sprötze beschlossen',
+                paragraphs: [
+                    'Mit der Beratung des Klimaanpassungskonzepts werden noch **keine einzelnen Baumaßnahmen in Sprötze beschlossen**. Das Konzept bildet zunächst eine Grundlage dafür, welche Projekte in den kommenden Jahren weiter geplant und umgesetzt werden sollen.',
+                ],
+            },
         ],
     },
     {
+        id: 'ausschuss-finanzen-2026-09-30',
+        slug: 'ausschuss-finanzen-2026-09-30',
+        category: 'Ausschuss Wirtschaft, Finanzen, Verwaltung und Digitalisierung',
+        date: '2026-09-30',
+        time: '18:30 Uhr',
+        title: 'Bürgerstrom und Beteiligung an erneuerbaren Energien',
+        location: 'Torbogenzimmer, Rathaus Buchholz',
+        details:
+            'Für Sprötze ist vor allem die Beratung über **Bürgerbeteiligung bei erneuerbaren Energien** interessant. Vorgeschlagen werden unter anderem ein **regionaler Bürgerstrom-Tarif** und Möglichkeiten zur direkten finanziellen Beteiligung der Einwohnerschaft.',
+        introduction: [
+            'Die Stadt soll eine Strategie entwickeln, mit der bei neuen **Windkraft- und Photovoltaikprojekten** mehr Wertschöpfung in der Region bleibt und Einwohner direkt beteiligt werden können.',
+            'Vorgesehen sind unter anderem ein **regionaler Bürgerstrom-Tarif**, finanzielle Beteiligungsmöglichkeiten und eine Beteiligung der Kommune nach § 6 EEG. Für Einwohner aus Sprötze könnte das bei künftigen Energieprojekten im Stadtgebiet interessant werden.',
+        ],
+        sections: [
+            {
+                title: 'Was wird beraten?',
+                paragraphs: [
+                    'Bei städtischen Flächen für Windkraft- oder Photovoltaikanlagen sowie bei entsprechenden Bauleitplanungen soll die Zusammenarbeit mit den **Stadtwerken Buchholz** und Bürgerenergiegenossenschaften stärker berücksichtigt werden.',
+                    'Außerdem sollen Leitlinien für zukünftige Projekte entwickelt werden. Dazu gehören ein **regionaler Bürgerstrom-Tarif** und Angebote, mit denen sich Einwohner auch finanziell beteiligen können – beispielsweise über Genossenschaften oder andere Beteiligungsmodelle.',
+                ],
+            },
+            {
+                title: 'Was bedeutet das für Sprötze?',
+                paragraphs: [
+                    'Die Vorlage bezieht sich auf das gesamte Stadtgebiet und nennt **kein konkretes Energieprojekt in Sprötze**.',
+                    'Interessant ist das Thema trotzdem: Die geplanten Regeln könnten künftig bestimmen, wie Einwohner bei neuen Windkraft- oder Photovoltaikprojekten beteiligt werden und ob es dafür besondere Stromtarife oder finanzielle Beteiligungsmöglichkeiten gibt.',
+                    '**Noch ist nichts beschlossen.** Der Ausschuss berät den Vorschlag zunächst vor.',
+                ],
+            },
+            {
+                title: 'Weitere Themen der Sitzung',
+                paragraphs: [
+                    '**BuchholzBus:** Beraten wird, wie der Stadtrat künftig bei wichtigen Entscheidungen zu Betriebszeiten, Linienführung, möglichen Angebotskürzungen und Finanzierung beteiligt wird. **Die Busverbindungen in Sprötze selbst sind dabei kein Thema.** Gerade weil die Anbindung in Sprötze immer wieder diskutiert wird, ist diese Abgrenzung wichtig.',
+                    '**Weihnachtsmarkt:** Die Stadt will den Buchholzer Weihnachtsmarkt vom **23. November bis 23. Dezember 2026** ausrichten. Dafür sollen zusätzliche Haushaltsmittel bereitgestellt werden. Auch wenn der Markt in der Buchholzer Innenstadt stattfindet, dürfte das Thema für viele Sprötzer als Besucher interessant sein.',
+                    'Außerdem geht es unter anderem um die **KMU-Förderung** sowie Jahresabschlüsse und Wirtschaftspläne städtischer Gesellschaften.',
+                ],
+            },
+        ],
+        link: 'https://www.buchholz.de/allris/to010?SILFDNR=1000972',
+        linkLabel: 'Zur öffentlichen Sitzungsseite',
+    },
+    {
         id: 'rat-regulaer-2026-10-05',
-        slug: 'rat-der-stadt-letzte-regulaere-sitzung-2026-10-05',
+        slug: 'rat-regulaer-2026-10-05',
         category: 'Rat der Stadt',
         date: '2026-10-05',
         time: '19:00 Uhr',
@@ -166,7 +234,7 @@ export const scheduleItems = [
     },
     {
         id: 'rat-konstituierend-2026-11-09',
-        slug: 'rat-der-stadt-konstituierende-sitzung-2026-11-09',
+        slug: 'rat-konstituierend-2026-11-09',
         category: 'Rat der Stadt',
         date: '2026-11-09',
         time: '19:00 Uhr',
@@ -189,7 +257,7 @@ export const scheduleItems = [
     },
     {
         id: 'ortsrat-konstituierend-2026-11-11',
-        slug: 'ortsrat-sproetze-konstituierende-sitzung-2026-11-11',
+        slug: 'ortsrat-konstituierend-2026-11-11',
         category: 'Ortsrat Sprötze',
         date: '2026-11-11',
         time: '19:30 Uhr',
@@ -212,7 +280,7 @@ export const scheduleItems = [
     },
     {
         id: 'rat-regulaer-2026-12-14',
-        slug: 'rat-der-stadt-regulaere-sitzung-2026-12-14',
+        slug: 'rat-regulaer-2026-12-14',
         category: 'Rat der Stadt',
         date: '2026-12-14',
         time: '19:00 Uhr',
