@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 
 import { SiteFooter } from '../components/SiteFooter';
+import { DetailBackLink } from '../components/detail/DetailBackLink';
 import { scheduleItems } from '../data';
 import { getScheduleItemBySlug, getScheduleStatus, sortScheduleByDate } from '../lib/content';
 import { SCHEDULE_PATH } from '../lib/constants';
@@ -25,9 +26,7 @@ export function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug 
         return (
             <>
                 <section className="content content--soft news-article-page">
-                    <a className="news-back-link" href={SCHEDULE_PATH}>
-                        Zurück zur Terminübersicht
-                    </a>
+                    <DetailBackLink href={SCHEDULE_PATH} text={'Zurück zur Terminübersicht'} />
                     <div className="section-heading">
                         <p className="eyebrow">
                             {activeScheduleItem.category} · {formatDate(activeScheduleItem.date)} · {activeScheduleItem.time}

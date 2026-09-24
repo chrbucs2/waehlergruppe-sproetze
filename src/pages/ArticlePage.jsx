@@ -1,4 +1,5 @@
 import { SiteFooter } from '../components/SiteFooter';
+import { DetailBackLink } from '../components/detail/DetailBackLink';
 import { NEWS_INDEX_PATH } from '../lib/constants';
 import { formatDate, formatInlineMarkup } from '../lib/formatting';
 
@@ -12,9 +13,7 @@ export function ArticlePage({ article, onShowImpressum, onShowDatenschutz }) {
     return (
         <>
             <section className="content content--soft news-article-page">
-                <a className="news-back-link" href={NEWS_INDEX_PATH}>
-                    Zurück zur Übersicht
-                </a>
+                <DetailBackLink href={NEWS_INDEX_PATH} />
 
                 <div className="section-heading">
                     <p className="eyebrow">

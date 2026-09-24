@@ -1,6 +1,7 @@
 import { useMemo } from 'react';
 
 import { SiteFooter } from '../components/SiteFooter';
+import { DetailBackLink } from '../components/detail/DetailBackLink';
 import { filterTopics, news } from '../data';
 import { getGeneralArticleBySlug, getTopicById, sortNewsByDate } from '../lib/content';
 import { NEWS_INDEX_PATH } from '../lib/constants';
@@ -60,9 +61,7 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
         return (
             <>
                 <section className="content content--soft news-article-page">
-                    <a className="news-back-link" href={backHref}>
-                        Zurück zur Übersicht
-                    </a>
+                    <DetailBackLink href={backHref} />
                     <div className="section-heading">
                         <p className="eyebrow">{formatDate(activeArticle.publishedAt)}</p>
                         <h1 className="news-article-page__title">{activeArticle.title}</h1>
