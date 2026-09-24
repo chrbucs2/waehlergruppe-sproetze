@@ -14,13 +14,12 @@ const Container = styled.section`
     h3 {
         margin: 0 0 4px;
         font-size: 1.1rem;
-        line-height: 1.35;
-        color: var(--primary-dark);
     }
 
     p {
         line-height: 1.75;
         margin-bottom: 4px;
+        color: var(--muted);
     }
 `;
 

@@ -23,7 +23,10 @@ const LinkText = styled.a`
     }
 `;
 
-interface DetailSectionLinkProps extends Omit<DetailSectionLinkModel, 'type'> {}
+interface DetailSectionLinkProps extends Omit<DetailSectionLinkModel, 'type'> {
+    target?: string;
+    rel?: string;
+}
 
 export function DetailSectionLink({ text, href, slug, indent = false }: DetailSectionLinkProps) {
     const resolvedHref = href ?? (slug ? `/artikel/${slug}` : undefined);

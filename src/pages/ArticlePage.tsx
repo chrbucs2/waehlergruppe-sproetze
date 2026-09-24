@@ -1,12 +1,9 @@
 import { SiteFooter } from '../components/SiteFooter';
 import { DetailBackLink } from '../components/detail/DetailBackLink';
-import { DetailSection } from '../components/detail/DetailSection';
+import { DetailHeading } from '../components/detail/DetailHeading';
+import { DetailIntroduction } from '../components/detail/DetailIntroduction';
+import { DetailSections } from '../components/detail/DetailSections';
 import { NEWS_INDEX_PATH } from '../lib/constants';
-import { formatDate, formatInlineMarkup } from '../lib/formatting';
-import {DetailSectionModel} from "../models/DetailSectionModel";
-function renderParagraph(text: string) {
-    return { __html: formatInlineMarkup(text) };
-}
 
 export function ArticlePage({ article, onShowImpressum, onShowDatenschutz }) {
     if (!article) {
@@ -18,27 +15,21 @@ export function ArticlePage({ article, onShowImpressum, onShowDatenschutz }) {
             <section className="content content--soft news-article-page">
                 <DetailBackLink href={NEWS_INDEX_PATH} />
 
-                <div className="section-heading">
-                    <p className="eyebrow">
-                        {article.category ?? 'Artikel'} · {formatDate(article.publishedAt)}
-                        {article.modifiedAt && ` · aktualisiert am ${formatDate(article.modifiedAt)}`}
-                    </p>
-                    <h1 className="news-article-page__title">{article.title}</h1>
-                </div>
+                <DetailHeading
+                    type={'article'}
+                    title={article.title}
+                    category={article.category ?? 'Artikel'}
+                    publishedAt={article.publishedAt}
+                    modifiedAt={article.modifiedAt}
+                />
 
                 {article.introduction && (
-                    <div className="schedule-detail-intro">
-                        {article.introduction.map((paragraph, index) => (
-                            <p key={`${article.id}-intro-${index}`} dangerouslySetInnerHTML={renderParagraph(paragraph)} />
-                        ))}
-                    </div>
+                    <DetailIntroduction paragraphs={article.introduction} />
                 )}
 
-                <article className="feature-card feature-card--active news-article-page__content">
-                    {(article.sections ?? []).map((section: DetailSectionModel) => (
-                        <DetailSection key={section.title} {...section} />
-                    ))}
-                </article>
+                {article.sections && (
+                    <DetailSections sections={article.sections} />
+                )}
 
                 {(article.sources ?? []).length > 0 && (
                     <aside className="article-sources">

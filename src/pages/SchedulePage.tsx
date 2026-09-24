@@ -2,12 +2,16 @@ import { useMemo, useState } from 'react';
 
 import { SiteFooter } from '../components/SiteFooter';
 import { DetailBackLink } from '../components/detail/DetailBackLink';
-import { DetailSection } from '../components/detail/DetailSection';
+import { DetailHeading } from '../components/detail/DetailHeading';
+import { DetailIntroduction } from '../components/detail/DetailIntroduction';
+import { DetailSections } from '../components/detail/DetailSections';
 import { scheduleItems } from '../data';
 import { getScheduleItemBySlug, getScheduleStatus, sortScheduleByDate } from '../lib/content';
 import { SCHEDULE_PATH } from '../lib/constants';
 import { assetUrl, formatDate, formatInlineMarkup } from '../lib/formatting';
 import {DetailSectionModel} from "../models/DetailSectionModel";
+import {DetailSectionLink} from "../components/detail/DetailSectionLink";
+
 export function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug }) {
     const orderedSchedule = useMemo(() => sortScheduleByDate(scheduleItems), []);
     const [showAllUpcoming, setShowAllUpcoming] = useState(false);
@@ -22,43 +26,37 @@ export function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug 
         [now, orderedSchedule],
     );
     const visibleUpcomingSchedule = showAllUpcoming ? upcomingSchedule : upcomingSchedule.slice(0, 1);
-    const sections = activeScheduleItem?.sections ? activeScheduleItem.sections as DetailSectionModel[] : [];
 
     if (activeScheduleItem) {
+        const sections: DetailSectionModel[] = activeScheduleItem?.sections ? activeScheduleItem.sections as DetailSectionModel[] : [];
         return (
             <>
                 <section className="content content--soft news-article-page">
                     <DetailBackLink href={SCHEDULE_PATH} text={'Zurück zur Terminübersicht'} />
-                    <div className="section-heading">
-                        <p className="eyebrow">
-                            {activeScheduleItem.category} · {formatDate(activeScheduleItem.date)} · {activeScheduleItem.time}
-                        </p>
-                        <h1 className="news-article-page__title">{activeScheduleItem.title}</h1>
-                        <p className="section-copy">{activeScheduleItem.location}</p>
-                    </div>
+
+                    <DetailHeading
+                        type={'schedule'}
+                        title={activeScheduleItem.title}
+                        category={activeScheduleItem.category}
+                        scheduleDate={activeScheduleItem.date}
+                        scheduleTime={activeScheduleItem.time}
+                        location={activeScheduleItem.location}
+                    />
+
                     {activeScheduleItem.introduction && (
-                        <div className="schedule-detail-intro">
-                            {Array.isArray(activeScheduleItem.introduction)
-                                ? activeScheduleItem.introduction.map((paragraph) => (
-                                    <p key={paragraph} dangerouslySetInnerHTML={{ __html: formatInlineMarkup(paragraph) }} />
-                                ))
-                                : <p>{activeScheduleItem.introduction}</p>}
-                        </div>
+                        <DetailIntroduction paragraphs={Array.isArray(activeScheduleItem.introduction) ? activeScheduleItem.introduction : [activeScheduleItem.introduction]} />
                     )}
+
                     {sections.length > 0 && (
-                        <article className="feature-card feature-card--active news-article-page__content">
-                            {sections.map((section) => (
-                                <DetailSection key={section.title} {...section} />
-                            ))}
-                        </article>
+                        <DetailSections sections={sections} />
                     )}
-                    {activeScheduleItem.link && (
-                        <p className="schedule-source-link">
-                            <a className="news-card__link" href={activeScheduleItem.link} target="_blank" rel="noopener noreferrer">
-                                {activeScheduleItem.linkLabel ?? 'Zur öffentlichen Sitzungsseite'}
-                            </a>
-                        </p>
-                    )}
+
+                    <DetailSectionLink
+                        href={activeScheduleItem.link}
+                        text={activeScheduleItem.linkLabel ?? 'Zur öffentlichen Sitzungsseite'}
+                        target={'_blank'}
+                        rel={'noopener noreferrer'}
+                    />
                 </section>
 
                 <SiteFooter onShowImpressum={onShowImpressum} onShowDatenschutz={onShowDatenschutz} />

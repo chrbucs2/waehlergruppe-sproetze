@@ -2,13 +2,16 @@ import { useMemo } from 'react';
 
 import { SiteFooter } from '../components/SiteFooter';
 import { DetailBackLink } from '../components/detail/DetailBackLink';
-import { DetailSection } from '../components/detail/DetailSection';
+import { DetailHeading } from '../components/detail/DetailHeading';
+import { DetailIntroduction } from '../components/detail/DetailIntroduction';
 import { DetailSectionLink } from '../components/detail/DetailSectionLink';
+import { DetailSections } from '../components/detail/DetailSections';
 import { filterTopics, news } from '../data/index';
 import { getGeneralArticleBySlug, getTopicById, sortNewsByDate } from '../lib/content';
 import { NEWS_INDEX_PATH } from '../lib/constants';
 import { assetUrl, formatDate, formatInlineMarkup } from '../lib/formatting';
 import {DetailSectionModel} from "../models/DetailSectionModel";
+
 export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleSlug }) {
     const orderedArticles = useMemo(() => sortNewsByDate(news), []);
     const availableTopics = useMemo(
@@ -47,57 +50,34 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
     );
 
     if (activeArticle) {
-        const introParagraphs = Array.isArray(detailArticle?.introduction)
-            ? detailArticle.introduction
-            : [];
-        const sections = detailArticle?.sections ? detailArticle.sections as DetailSectionModel[] : [];
-        const articleActionHref = activeArticle.articleLink
-            ? activeArticle.articleLink.slug ? `/artikel/${activeArticle.articleLink.slug}` : activeArticle.articleLink.link
-            : null;
-        const articleActionLabel = activeArticle.articleLink?.label ?? 'Beitrag öffnen';
-
+        const sections: DetailSectionModel[] = detailArticle?.sections ? detailArticle.sections as DetailSectionModel[] : [];
         return (
             <>
                 <section className="content content--soft news-article-page">
                     <DetailBackLink href={backHref} />
-                    <div className="section-heading">
-                        <p className="eyebrow">{formatDate(activeArticle.publishedAt)}</p>
-                        <h1 className="news-article-page__title">{activeArticle.title}</h1>
-                    </div>
 
-                    {introParagraphs.length > 0 && (
-                        <div className="schedule-detail-intro">
-                            {introParagraphs.map((paragraph, index) => (
-                                <p key={`${activeArticle.id}-intro-${index}`} dangerouslySetInnerHTML={renderMarkup(paragraph)} />
-                            ))}
-                        </div>
+                    <DetailHeading
+                        type={'news'}
+                        title={activeArticle.title}
+                        publishedAt={activeArticle.publishedAt}
+                    />
+
+                    {detailArticle?.introduction && (
+                        <DetailIntroduction paragraphs={detailArticle.introduction} />
                     )}
 
-                    {sections.length > 0 && (
-                        <>
-                            <article className="feature-card feature-card--active news-article-page__content">
-                                {sections.map((section) => (
-                                    <DetailSection
-                                        key={section.title}
-                                        title={section.title}
-                                        paragraphs={section.paragraphs ?? []}
-                                        image={section.image}
-                                    />
-                                ))}
-                            </article>
+                    {sections.length && (
+                        <DetailSections sections={sections} />
+                    )}
 
-                            <div className="focus-list focus-list--outside">
-                               {activeArticle.topicIds.map((id) => (
-                                   <a key={id} href={`${NEWS_INDEX_PATH}?thema=${id}`}>
-                                       <span>{getTopicById(id)?.label ?? id}</span>
-                                   </a>
-                               ))}
-                            </div>
-
-                            {articleActionHref && (
-                                <DetailSectionLink text={articleActionLabel} href={articleActionHref} indent />
-                            )}
-                        </>
+                    {activeArticle.topicIds && (
+                        <div className="focus-list focus-list--outside">
+                            {activeArticle.topicIds.map((id) => (
+                                <a key={id} href={`${NEWS_INDEX_PATH}?thema=${id}`}>
+                                    <span>{getTopicById(id)?.label ?? id}</span>
+                                </a>
+                            ))}
+                        </div>
                     )}
                 </section>
 
