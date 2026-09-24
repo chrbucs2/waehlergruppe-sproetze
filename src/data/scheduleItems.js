@@ -210,7 +210,7 @@ export const scheduleItems = [
                 title: 'Weitere Themen der Sitzung',
                 paragraphs: [
                     '**BuchholzBus:** Beraten wird, wie der Stadtrat künftig bei wichtigen Entscheidungen zu Betriebszeiten, Linienführung, möglichen Angebotskürzungen und Finanzierung beteiligt wird. **Die Busverbindungen in Sprötze selbst sind dabei kein Thema.** Gerade weil die Anbindung in Sprötze immer wieder diskutiert wird, ist diese Abgrenzung wichtig.',
-                    '**Weihnachtsmarkt:** Die Stadt will den Buchholzer Weihnachtsmarkt vom **23. November bis 23. Dezember 2026** ausrichten. Dafür sollen zusätzliche Haushaltsmittel bereitgestellt werden. Auch wenn der Markt in der Buchholzer Innenstadt stattfindet, dürfte das Thema für viele Sprötzer als Besucher interessant sein.',
+                    '**Weihnachtsmarkt:** Die Stadt will den Buchholzer Weihnachtsmarkt vom **23. November bis 23. Dezember 2026** ausrichten. Dafür sollen zusätzliche Haushaltsmittel bereitgestellt werden.',
                     'Außerdem geht es unter anderem um die **KMU-Förderung** sowie Jahresabschlüsse und Wirtschaftspläne städtischer Gesellschaften.',
                 ],
             },
