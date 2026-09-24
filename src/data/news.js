@@ -12,8 +12,8 @@ export const news = [
         articleLink: { link: 'https://www.landkreis-harburg.de/portal/meldungen/neue-annahmestelle-fuer-gruengut-in-buchholz-901010429-20100.html', label: 'Zur Info-Seite des Landkreises' },
     },
     {
-        id: 'stadteingang-west-2026-03-18',
-        slug: 'stadteingang-west-rahmenplan-2026-03-18',
+        id: 'stadteingang-west-rahmenplan-beratung',
+        slug: 'stadteingang-west-rahmenplan-beratung',
         title: 'Stadteingang West: Weitere Planung für großes Wohngebiet beraten',
         publishedAt: '2026-03-18',
         topicIds: ['neubaugebiete', 'verkehr', 'infrastruktur'],
