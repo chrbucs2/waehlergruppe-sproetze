@@ -483,27 +483,36 @@ export const articles = [
                 paragraphs: [
                     'Wer sich genauer informieren möchte, findet hier die wichtigsten offiziellen Unterlagen und ergänzende Berichte zum Stadteingang West.',
                     {
-                        text: 'Ratsinformationssystem der Stadt Buchholz – bereitgestellte Sitzungsseite',
-                        link: 'https://www.buchholz.de/allris/to010?SILFDNR=1000942',
+                        text: 'Sitzung vom 18. März 2026 (TOP Ö8, Ö11, Ö12)',
+                        link: 'https://www.buchholz.de/allris/to010?SILFDNR=1000950'
                     },
                     {
-                        text: 'Ratsinformationssystem der Stadt Buchholz – weitere Sitzungsseite',
-                        link: 'https://www.buchholz.de/allris/to010?SILFDNR=1001100',
+                        text: 'Rahmenplan "Stadteingang West, Bremer Straße"',
+                        link: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1012612',
+                        indent: true
                     },
                     {
-                        text: 'Ausschuss für Stadtentwicklung vom 3. Juni 2026 – Stadteingang West und Verkehr (TOP 13 und 14)',
-                        link: 'https://www.buchholz.de/allris/to010?SILFDNR=1000959&TOLFDNR=1018267',
+                        text: 'Bebauungsplan "Bremer Straße / Brumhagen Süd"',
+                        link: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1012795',
+                        indent: true
                     },
                     {
-                        text: 'Buchholz Aktuell: Wohngebiet Bremer Straße – 580 Wohnungen und die Verkehrsdebatte',
+                        text: 'Sitzung vom 10. März 2026 (TOP Ö7 - Ö9)',
+                        link: 'https://www.buchholz.de/allris/to010?SILFDNR=1001100'
+                    },{
+                        text: 'Sitzung vom 11. Februar 2026 (TOP Ö7 - Ö9)',
+                        link: 'https://www.buchholz.de/allris/to010?SILFDNR=1000942'
+                    },
+                    {
+                        text: 'Buchholz Aktuell: Wohngebiet Bremer Straße: 580 Wohnungen und ein drohender Verkehrskollaps?',
                         link: 'https://buchholz-aktuell.de/buchholz/wohngebiet-bremer-strasse-580-wohnungen-und-ein-drohender-verkehrskollaps-14748/',
                     },
                     {
-                        text: 'Buchholz Aktuell: Stellungnahme des BUND zum geplanten Neubaugebiet',
+                        text: 'Buchholz Aktuell: Naturschützer lehnen Neubaugebiet an der Bremer Straße ab',
                         link: 'https://buchholz-aktuell.de/buchholz/naturschuetzer-lehnen-neubaugebiet-an-der-bremer-strasse-ab-14952/',
                     },
                     {
-                        text: 'Kreiszeitung Wochenblatt: Debatte über Infrastruktur und Verkehr',
+                        text: 'Kreiszeitung Wochenblatt: Neubaugebiete bedürfen einer rechtzeitigen Planung der Infrastruktur',
                         link: 'https://www.kreiszeitung-wochenblatt.de/buchholz/c-politik/neubaugebiete-beduerfen-einer-rechtzeitigen-planung-der-infrastruktur_a402629',
                     },
                 ],
