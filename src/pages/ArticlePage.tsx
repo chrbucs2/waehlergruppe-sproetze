@@ -3,6 +3,7 @@ import { DetailBackLink } from '../components/detail/DetailBackLink';
 import { DetailHeading } from '../components/detail/DetailHeading';
 import { DetailIntroduction } from '../components/detail/DetailIntroduction';
 import { DetailSections } from '../components/detail/DetailSections';
+import { DetailSource } from '../components/detail/DetailSource';
 import { NEWS_INDEX_PATH } from '../lib/constants';
 
 export function ArticlePage({ article, onShowImpressum, onShowDatenschutz }) {
@@ -31,20 +32,7 @@ export function ArticlePage({ article, onShowImpressum, onShowDatenschutz }) {
                     <DetailSections sections={article.sections} />
                 )}
 
-                {(article.sources ?? []).length > 0 && (
-                    <aside className="article-sources">
-                        <h3>Quellen</h3>
-                        <ul>
-                            {article.sources.map((source) => (
-                                <li key={source.label}>
-                                    <a href={source.url} target="_blank" rel="noopener noreferrer">
-                                        {source.label}
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
-                    </aside>
-                )}
+                <DetailSource sources={article.sources ?? []} />
             </section>
 
             <SiteFooter onShowImpressum={onShowImpressum} onShowDatenschutz={onShowDatenschutz} />
