@@ -16,7 +16,7 @@ export const articles = [
                 title: 'Was ist geplant?',
                 paragraphs: [
                     'Das neue Quartier soll zwischen **B 75, Bremer Straße, Brumhagen und dem Schulzentrum am Kattenberge** entstehen. Der Rahmenplan umfasst Flächen auf beiden Seiten der Bremer Straße.',
-                    'Ursprünglich wurden **zwei Varianten** des Rahmenplans ausgearbeitet. Die Verwaltung hatte **Variante 1** für eine abschnittsweise Entwicklung empfohlen. Der zuständige Fachausschuss empfahl im März 2026, den Rahmenplan weiterzuverfolgen, sich wegen noch ausstehender Fachgutachten aber **noch nicht endgültig auf Variante 1 oder 2 festzulegen**.',
+                    'Ursprünglich wurden **zwei Varianten** des Rahmenplans ausgearbeitet. Die Verwaltung hatte **Variante 1** für eine abschnittsweise Entwicklung empfohlen. Der zuständige Fachausschuss empfahl im März 2026, dem Rahmenplan zuzustimmen, sich wegen noch ausstehender Fachgutachten aber **noch nicht endgültig auf Variante 1 oder 2 festzulegen**.',
                     'Nach dem derzeitigen Konzept können insgesamt **bis zu rund 580 Wohnungen** entstehen. Etwa **50 bis 60 Prozent der Wohneinheiten** sind im **Mehrgeschosswohnungsbau** vorgesehen.',
                     'Neben frei finanziertem Wohnraum soll ausdrücklich auch **bezahlbarer und geförderter Wohnraum** entstehen.',
                 ],
@@ -60,11 +60,11 @@ export const articles = [
             {
                 title: 'Kita, Nahversorgung und weitere Infrastruktur',
                 paragraphs: [
-                    'Im Quartier soll nach bisheriger Planung mindestens eine **größere Kindertagesstätte** möglich sein. Auch Räume für gemeinschaftliche oder ehrenamtliche Nutzungen wurden vorgeschlagen.',
+                    'Im Quartier soll nach bisheriger Planung mindestens eine **größere Kita** entstehen. Auch Räume für gemeinschaftliche oder ehrenamtliche Nutzungen wurden vorgeschlagen.',
                     'Eine **eigene Grundschule** ist im Rahmenplan derzeit **nicht vorgesehen**. In den Planungsunterlagen werden unter anderem die **Grundschulen in Steinbeck und Sprötze** als erreichbare Schulen genannt.',
                     'Gleichzeitig liegen nach Angaben der Verwaltung bislang **keine belastbaren Angaben über die später verfügbaren Schul- und Kita-Kapazitäten** vor. Die Entwicklung soll über mehrere Jahre und in einzelnen Bauabschnitten erfolgen, sodass Kapazitäten angepasst werden könnten.',
-                    'Gerade für jüngere Kinder spielt nicht nur die Entfernung zur Schule eine Rolle. Entscheidend sind auch **sichere Rad- und Fußwege, Querungen der Bremer Straße und zusätzlicher Elternverkehr**. Die Erreichbarkeit vorhandener Schulen soll deshalb vor allem durch sichere Fuß- und Radwege verbessert werden. ',
-                    'An der Bremer Straße ist außerdem eine Fläche vorgesehen, auf der beispielsweise ein **Nahversorger** entstehen könnte. Ob und in welcher Form dies umgesetzt wird, ist noch offen.',
+                    'Gerade für jüngere Kinder spielt nicht nur die Entfernung zur Schule eine Rolle. Entscheidend sind auch **sichere Rad- und Fußwege, Querungen der Bremer Straße und möglicher zusätzlicher Elternverkehr**. Die Erreichbarkeit vorhandener Schulen soll deshalb vor allem durch sichere Fuß- und Radwege verbessert werden.',
+                    'An der Bremer Straße ist außerdem **optional eine Fläche für Einzelhandel oder Nahversorgung** vorgesehen. Ob und in welcher Form dies umgesetzt wird, ist noch offen.',
                 ],
             },
             {
@@ -88,8 +88,8 @@ export const articles = [
                 title: 'Was bedeutet die Planung für Sprötze?',
                 paragraphs: [
                     'Sprötze liegt zwar außerhalb des eigentlichen Baugebietes, ist aber Teil des erweiterten Umfelds. In den Planungen werden der **Bahnhof Sprötze, die Nahversorgung in Sprötze und Verbindungen über Brumhagen** ausdrücklich berücksichtigt.',
-                    'Für Sprötze besonders relevant ist die **Verkehrsentwicklung**, insbesondere zu Zeiten des **Schul- und Berufsverkehrs**. Zum heutigen Verkehr kommen weitere Entwicklungen hinzu. Am **Sprötzer Weg / An den Tennisplätzen** ist eine **[neue Kita](bebauungsplan-sproetzer-weg)** geplant. Der Landkreis geht davon aus, dass sich durch die Kita und die dortigen weiteren Nutzungen das **Verkehrsaufkommen** auf dem Sprötzer Weg weiter **erhöhen** wird.',
-                    'Auch bei der **schulischen Versorgung** spielt Sprötze eine Rolle. Die **Grundschulen in Steinbeck und Sprötze** werden als mögliche Standorte für Kinder aus dem neuen Quartier betrachtet. Damit bleibt eine für Sprötze wichtige Frage offen: **Wie werden zusätzliche Schülerinnen und Schüler verteilt, wenn einzelne Schulen ihre Kapazitätsgrenzen erreichen?**',
+                    'Für Sprötze besonders relevant ist die **Verkehrsentwicklung**, insbesondere zu Zeiten des **Schul- und Berufsverkehrs**. Zum heutigen Verkehr kommen weitere Entwicklungen hinzu. Am **Sprötzer Weg / An den Tennisplätzen** ist eine **[neue Kita](bebauungsplan-sproetzer-weg)** geplant. Die Verkehrsbehörde weist dort bereits auf den zu erwartenden **Hol- und Bringverkehr** hin.',
+                    'Auch bei der **schulischen Versorgung** spielt Sprötze eine Rolle. Die **Grundschulen in Steinbeck und Sprötze** werden als mögliche Standorte für Kinder aus dem neuen Quartier betrachtet. Damit bleibt eine für Sprötze wichtige Frage offen: **Wie werden zusätzliche Schülerinnen und Schüler verteilt, falls einzelne Schulen ihre Kapazitätsgrenzen erreichen?**',
                 ],
             },
             {
