@@ -1,11 +1,12 @@
 import { useMemo, useState } from 'react';
 
-import { SiteFooter } from '../components/SiteFooter.tsx';
-import { DetailBackLink } from '../components/detail/DetailBackLink.tsx';
-import { scheduleItems } from '../data/index.ts';
+import { SiteFooter } from '../components/SiteFooter';
+import { DetailBackLink } from '../components/detail/DetailBackLink';
+import { DetailSection } from '../components/detail/DetailSection';
+import { scheduleItems } from '../data/index';
 import { getScheduleItemBySlug, getScheduleStatus, sortScheduleByDate } from '../lib/content';
-import { SCHEDULE_PATH } from '../lib/constants.ts';
-import { assetUrl, formatDate, formatInlineMarkup } from '../lib/formatting.ts';
+import { SCHEDULE_PATH } from '../lib/constants';
+import { assetUrl, formatDate, formatInlineMarkup } from '../lib/formatting';
 
 export function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug }) {
     const orderedSchedule = useMemo(() => sortScheduleByDate(scheduleItems), []);
@@ -46,35 +47,7 @@ export function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug 
                     {activeScheduleItem.sections?.length > 0 ? (
                         <article className="feature-card feature-card--active news-article-page__content">
                             {activeScheduleItem.sections.map((section) => (
-                                <section className="schedule-detail-section" key={section.title}>
-                                    <h3>{section.title}</h3>
-                                    {section.paragraphs.map((paragraph) => {
-                                        if (typeof paragraph === 'string') {
-                                            return (
-                                                <p
-                                                    key={paragraph}
-                                                    dangerouslySetInnerHTML={{ __html: formatInlineMarkup(paragraph) }}
-                                                />
-                                            );
-                                        }
-
-                                        const paragraphHref = paragraph.link ?? (paragraph.slug ? `/artikel/${paragraph.slug}` : undefined);
-                                        return (
-                                            <p
-                                                key={paragraph.text}
-                                                className={paragraph.indent ? 'schedule-link-note is-indented' : 'schedule-link-note'}
-                                            >
-                                                {paragraphHref ? (
-                                                    <a className="news-card__link" href={paragraphHref}>
-                                                        {paragraph.text}
-                                                    </a>
-                                                ) : (
-                                                    <span>{paragraph.text}</span>
-                                                )}
-                                            </p>
-                                        );
-                                    })}
-                                </section>
+                                <DetailSection key={section.title} {...section} />
                             ))}
                             {activeScheduleItem.outcome && (
                                 <p className="schedule-outcome-text" dangerouslySetInnerHTML={{ __html: formatInlineMarkup(activeScheduleItem.outcome) }} />

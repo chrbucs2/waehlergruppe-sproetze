@@ -1,14 +1,14 @@
 import { useEffect, useMemo, useState } from 'react';
 
-import { LegalModals } from './components/LegalModals.tsx';
-import { ThankYouModal } from './components/ThankYouModal.tsx';
-import { ArticlePage } from './pages/ArticlePage.tsx';
-import { HomePage } from './pages/HomePage.tsx';
-import { NewsPage } from './pages/NewsPage.tsx';
-import { SchedulePage } from './pages/SchedulePage.tsx';
-import { NEWS_INDEX_PATH, SCHEDULE_PATH, THANK_YOU_MODAL_STORAGE_KEY } from './lib/constants.ts';
-import { getGeneralArticleBySlug, getNewsArticleBySlug } from './lib/content.ts';
-import { getPathFromLocation, getSearchFromLocation, normalizePath } from './lib/routing.ts';
+import { LegalModals } from './components/LegalModals';
+import { ThankYouModal } from './components/ThankYouModal';
+import { ArticlePage } from './pages/ArticlePage';
+import { HomePage } from './pages/HomePage';
+import { NewsPage } from './pages/NewsPage';
+import { SchedulePage } from './pages/SchedulePage';
+import { NEWS_INDEX_PATH, SCHEDULE_PATH, THANK_YOU_MODAL_STORAGE_KEY } from './lib/constants';
+import { getGeneralArticleBySlug, getNewsArticleBySlug } from './lib/content';
+import { getPathFromLocation, getSearchFromLocation, normalizePath } from './lib/routing';
 
 function App() {
     const [currentPath, setCurrentPath] = useState(getPathFromLocation);

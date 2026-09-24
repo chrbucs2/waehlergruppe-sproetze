@@ -1,11 +1,11 @@
 import { useMemo } from 'react';
 
-import { SiteFooter } from '../components/SiteFooter.tsx';
-import { DetailBackLink } from '../components/detail/DetailBackLink.tsx';
-import { filterTopics, news } from '../data/index.ts';
+import { SiteFooter } from '../components/SiteFooter';
+import { DetailBackLink } from '../components/detail/DetailBackLink';
+import { filterTopics, news } from '../data/index';
 import { getGeneralArticleBySlug, getTopicById, sortNewsByDate } from '../lib/content';
-import { NEWS_INDEX_PATH } from '../lib/constants.ts';
-import { assetUrl, formatDate, formatInlineMarkup } from '../lib/formatting.ts';
+import { NEWS_INDEX_PATH } from '../lib/constants';
+import { assetUrl, formatDate, formatInlineMarkup } from '../lib/formatting';
 
 export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleSlug }) {
     const orderedArticles = useMemo(() => sortNewsByDate(news), []);

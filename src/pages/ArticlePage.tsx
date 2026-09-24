@@ -1,14 +1,17 @@
-import { SiteFooter } from '../components/SiteFooter.tsx';
-import { DetailBackLink } from '../components/detail/DetailBackLink.tsx';
-import { NEWS_INDEX_PATH } from '../lib/constants.ts';
-import { formatDate, formatInlineMarkup } from '../lib/formatting.ts';
+import { SiteFooter } from '../components/SiteFooter';
+import { DetailBackLink } from '../components/detail/DetailBackLink';
+import { DetailSection } from '../components/detail/DetailSection';
+import { NEWS_INDEX_PATH } from '../lib/constants';
+import { formatDate, formatInlineMarkup } from '../lib/formatting';
+
+function renderParagraph(text) {
+    return { __html: formatInlineMarkup(text) };
+}
 
 export function ArticlePage({ article, onShowImpressum, onShowDatenschutz }) {
     if (!article) {
         return null;
     }
-
-    const renderParagraph = (text) => ({ __html: formatInlineMarkup(text) });
 
     return (
         <>
@@ -33,56 +36,7 @@ export function ArticlePage({ article, onShowImpressum, onShowDatenschutz }) {
 
                 <article className="feature-card feature-card--active news-article-page__content">
                     {(article.sections ?? []).map((section) => (
-                        <section className="schedule-detail-section" key={section.title}>
-                            <h3>{section.title}</h3>
-                            {section.paragraphs.map((paragraph, index) => {
-                                if (typeof paragraph === 'string') {
-                                    return (
-                                        <p key={`${section.title}-${index}`} dangerouslySetInnerHTML={renderParagraph(paragraph)} />
-                                    );
-                                }
-
-                                if (paragraph?.type === 'subheading') {
-                                    return (
-                                        <p key={`${section.title}-subheading-${index}`} className="article-subheading" dangerouslySetInnerHTML={renderParagraph(paragraph.text)} />
-                                    );
-                                }
-
-                                if (paragraph?.type === 'list') {
-                                    return (
-                                        <ul key={`${section.title}-list-${index}`} className="article-list">
-                                            {paragraph.items.map((item) => (
-                                                <li key={item} dangerouslySetInnerHTML={renderParagraph(item)} />
-                                            ))}
-                                        </ul>
-                                    );
-                                }
-
-                                const paragraphHref = paragraph.link ?? (paragraph.slug ? `/artikel/${paragraph.slug}` : undefined);
-
-                                return (
-                                    <p
-                                        key={`${section.title}-${paragraph.text}`}
-                                        className={paragraph.indent ? 'schedule-link-note is-indented' : 'schedule-link-note'}
-                                    >
-                                        {paragraphHref ? (
-                                            <a className="news-card__link" href={paragraphHref}>
-                                                {paragraph.text}
-                                            </a>
-                                        ) : (
-                                            <span>{paragraph.text}</span>
-                                        )}
-                                    </p>
-                                );
-                            })}
-
-                            {(section.image ? [section.image] : []).map((image, index) => (
-                                <figure className="article-section-image" key={`${section.title}-image-${index}`}>
-                                    <img src={image.src} alt={image.alt} loading="lazy" />
-                                    {image.caption && <figcaption>{image.caption}</figcaption>}
-                                </figure>
-                            ))}
-                        </section>
+                        <DetailSection key={section.title} {...section} />
                     ))}
                 </article>
 

@@ -5,7 +5,7 @@ export function ThankYouModal({ isOpen, onClose }) {
 
     return (
         <div className="legal-overlay" onClick={onClose}>
-            <article
+            <div
                 className="legal-modal thank-you-modal"
                 role="dialog"
                 aria-modal="true"
@@ -42,7 +42,7 @@ export function ThankYouModal({ isOpen, onClose }) {
                         </button>
                     </div>
                 </div>
-            </article>
+            </div>
         </div>
     );
 }
