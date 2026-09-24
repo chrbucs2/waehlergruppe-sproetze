@@ -12,6 +12,21 @@ export const news = [
         articleLink: { link: 'https://www.landkreis-harburg.de/portal/meldungen/neue-annahmestelle-fuer-gruengut-in-buchholz-901010429-20100.html', label: 'Zur Info-Seite des Landkreises' },
     },
     {
+        id: 'stadteingang-west-2026-03-18',
+        slug: 'stadteingang-west-rahmenplan-2026-03-18',
+        title: 'Stadteingang West: Weitere Planung für großes Wohngebiet beraten',
+        publishedAt: '2026-03-18',
+        topicIds: ['neubaugebiete', 'verkehr', 'infrastruktur'],
+        summary: [
+            'Der geplante **Stadteingang West an der Bremer Straße** stand am 18. März erneut auf der Tagesordnung des Stadtentwicklungsausschusses. Neben dem Rahmenplan ging es um die geplanten Bebauungspläne **„Bremer Straße / Brumhagen Süd“ und „Bremer Straße / Brumhagen Nord“**.',
+            'Für das Gesamtgebiet sind **bis zu rund 580 Wohnungen** vorgesehen. Die weitere Planung wird in mehreren Abschnitten vorbereitet. Offen sind unter anderem wichtige Fragen zu **Verkehr, Schul- und Kita-Kapazitäten, Entwässerung sowie Natur- und Artenschutz**.',
+        ],
+        articleLink: {
+            slug: 'stadteingang-west-bremer-strasse',
+            label: 'Stadteingang West: Planung und Auswirkungen im Überblick'
+        },
+    },
+    {
         id: 'bebauungsplan-sproetzer-weg-satzungsbeschluss',
         slug: 'bebauungsplan-sproetzer-weg-an-den-tennisplaetzen-satzungsbeschluss',
         title: 'Neue Kita beim Discounter am Sprötzer Weg in Planung',
