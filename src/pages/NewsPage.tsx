@@ -2,11 +2,13 @@ import { useMemo } from 'react';
 
 import { SiteFooter } from '../components/SiteFooter';
 import { DetailBackLink } from '../components/detail/DetailBackLink';
+import { DetailSection } from '../components/detail/DetailSection';
+import { DetailSectionLink } from '../components/detail/DetailSectionLink';
 import { filterTopics, news } from '../data/index';
 import { getGeneralArticleBySlug, getTopicById, sortNewsByDate } from '../lib/content';
 import { NEWS_INDEX_PATH } from '../lib/constants';
 import { assetUrl, formatDate, formatInlineMarkup } from '../lib/formatting';
-
+import {DetailSectionModel} from "../models/DetailSectionModel";
 export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleSlug }) {
     const orderedArticles = useMemo(() => sortNewsByDate(news), []);
     const availableTopics = useMemo(
@@ -34,7 +36,7 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
         return orderedArticles.filter((article) => article.topicIds.includes(activeTopic.id));
     }, [activeTopic, orderedArticles]);
 
-    const renderMarkup = (text) => ({ __html: formatInlineMarkup(text) });
+    const renderMarkup = (text: string) => ({ __html: formatInlineMarkup(text) });
     const getSummaryParagraphs = (summary) => (Array.isArray(summary) ? summary : [summary]);
     const hasNewsDetailContent = (article) => Boolean(
         article &&
@@ -47,12 +49,8 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
     if (activeArticle) {
         const introParagraphs = Array.isArray(detailArticle?.introduction)
             ? detailArticle.introduction
-            : detailArticle?.summary
-                ? getSummaryParagraphs(detailArticle.summary)
-                : [];
-        const sections = detailArticle?.sections ?? [];
-        const newsDetailHref = `${NEWS_INDEX_PATH}/${activeArticle.slug}`;
-        const hasNewsDetailLink = hasNewsDetailContent(activeArticle);
+            : [];
+        const sections = detailArticle?.sections ? detailArticle.sections as DetailSectionModel[] : [];
         const articleActionHref = activeArticle.articleLink
             ? activeArticle.articleLink.slug ? `/artikel/${activeArticle.articleLink.slug}` : activeArticle.articleLink.link
             : null;
@@ -75,43 +73,16 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
                         </div>
                     )}
 
-                    {sections.length > 0 ? (
+                    {sections.length > 0 && (
                         <>
                             <article className="feature-card feature-card--active news-article-page__content">
                                 {sections.map((section) => (
-                                    <section className="schedule-detail-section" key={section.title}>
-                                        <h3>{section.title}</h3>
-                                        {(section.paragraphs ?? []).map((paragraph, index) => {
-                                            if (typeof paragraph === 'string') {
-                                                return (
-                                                    <p key={`${section.title}-${index}`} dangerouslySetInnerHTML={renderMarkup(paragraph)} />
-                                                );
-                                            }
-
-                                            const paragraphHref = paragraph.link ?? (paragraph.slug ? `/artikel/${paragraph.slug}` : undefined);
-
-                                            return (
-                                                <p
-                                                    key={`${section.title}-${paragraph.text}`}
-                                                    className={paragraph.indent ? 'schedule-link-note is-indented' : 'schedule-link-note'}
-                                                >
-                                                    {paragraphHref ? (
-                                                        <a className="news-card__link" href={paragraphHref}>
-                                                            {paragraph.text}
-                                                        </a>
-                                                    ) : (
-                                                        <span>{paragraph.text}</span>
-                                                    )}
-                                                </p>
-                                            );
-                                        })}
-                                        {(section.image ? [section.image] : []).map((image, index) => (
-                                            <figure className="article-section-image" key={`${section.title}-image-${index}`}>
-                                                <img src={image.src} alt={image.alt} loading="lazy" />
-                                                {image.caption && <figcaption>{image.caption}</figcaption>}
-                                            </figure>
-                                        ))}
-                                    </section>
+                                    <DetailSection
+                                        key={section.title}
+                                        title={section.title}
+                                        paragraphs={section.paragraphs ?? []}
+                                        image={section.image}
+                                    />
                                 ))}
                             </article>
 
@@ -122,31 +93,9 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
                                    </a>
                                ))}
                             </div>
-                        </>
-                    ) : (
-                        <>
-                            <article className="feature-card feature-card--active news-article-page__content">
-                                {(detailArticle?.content ?? []).map((paragraph) => (
-                                    <p key={paragraph} dangerouslySetInnerHTML={renderMarkup(paragraph)} />
-                                ))}
-                            </article>
 
-                            <div className="focus-list focus-list--outside">
-                                {activeArticle.topicIds.map((id) => (
-                                    <a key={id} href={`${NEWS_INDEX_PATH}?thema=${id}`}>
-                                        <span>{getTopicById(id)?.label ?? id}</span>
-                                    </a>
-                                ))}
-                            </div>
                             {articleActionHref && (
-                                <p className="schedule-link-note is-indented">
-                                    <a className="news-card__link" href={articleActionHref} dangerouslySetInnerHTML={renderMarkup(articleActionLabel)} />
-                                </p>
-                            )}
-                            {hasNewsDetailLink && (
-                                <p className="schedule-link-note is-indented">
-                                    <a className="news-card__link" href={newsDetailHref} dangerouslySetInnerHTML={renderMarkup('Beitrag öffnen')} />
-                                </p>
+                                <DetailSectionLink text={articleActionLabel} href={articleActionHref} indent />
                             )}
                         </>
                     )}

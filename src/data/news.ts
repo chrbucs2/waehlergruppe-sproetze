@@ -72,11 +72,13 @@ export const news = [
                 paragraphs: [
                     'Wer tiefer einsteigen möchte, findet die Tagesordnung, die öffentliche Vorlage und weitere Anlagen direkt auf der Sitzungsseite der Stadt Buchholz. Zusätzlich gibt es dazu auch einen ausführlichen Artikel mit den wichtigsten Hintergründen und Details.',
                     {
+                        type: 'link',
                         text: 'Zur öffentlichen Sitzungsseite',
-                        link: 'https://www.buchholz.de/allris/to010?SILFDNR=1000953',
+                        href: 'https://www.buchholz.de/allris/to010?SILFDNR=1000953',
                         indent: true,
                     },
                     {
+                        type: 'link',
                         text: 'Bebauungsplan Sprötzer Weg',
                         slug: 'bebauungsplan-sproetzer-weg',
                         indent: true,
@@ -121,13 +123,16 @@ export const news = [
                 paragraphs: [
                     'Weitere Informationen entnehmen Sie bitte dem Wochenblatt-Artikel, der die Hintergründe und Details zu den Arbeiten an der Bahnbrücke zusammenfasst.',
                     {
+                        type: 'link',
                         text: 'Wochenblatt-Artikel',
-                        link: 'https://www.kreiszeitung-wochenblatt.de/buchholz/c-panorama/bauarbeiten-an-bahnbruecke-in-sproetze-teilweise-vollsperrung_a419984',
+                        href: 'https://www.kreiszeitung-wochenblatt.de/buchholz/c-panorama/bauarbeiten-an-bahnbruecke-in-sproetze-teilweise-vollsperrung_a419984',
                         indent: true,
                     },
                     {
+                        type: 'link',
                         text: 'Offizielle Vorgeschichte (Pressmitteilung)',
-                        link: 'https://www.landkreis-harburg.de/downloads/datei/NDE5ZTgzMzU5MjdkMDUwY2dhYUFVRlM1SFNlbzFURWJUMUM2dFJmUUxHUEVPUVcvUXVsMEFUZzMvRy9McSt4WlJBTXBmVGV2V3BhKzZHOUFtR3ZXNEhVcXNvMmIxWjFwMGRMc0RVMFB1b1p3NWVqZlBZSm96MEQ1YmhRU2txeDcreUFWTmpjVFBJdnNVTmo5YkhZRmpuNEpmOGZQTExJRmR0SVBzUT09',
+                        href: 'https://www.landkreis-harburg.de/downloads/datei/NDE5ZTgzMzU5MjdkMDUwY2dhYUFVRlM1SFNlbzFURWJUMUM2dFJmUUxHUEVPUVcvUXVsMEFUZzMvRy9McSt4WlJBTXBmVGV2V3BhKzZHOUFtR3ZXNEhVcXNvMmIxWjFwMGRMc0RVMFB1b1p3NWVqZlBZSm96MEQ1YmhRU2txeDcreUFWTmpjVFBJdnNVTmo5YkhZRmpuNEpmOGZQTExJRmR0SVBzUT09',
+                        indent: true,
                     },
                 ],
             },

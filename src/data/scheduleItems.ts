@@ -19,6 +19,7 @@ export const scheduleItems = [
                     'Die bisher für Einzelhandel vorgesehene freie Fläche neben dem Discounter soll künftig vor allem für **soziale, sportliche und kulturelle Nutzungen** zur Verfügung stehen. Konkreter Anlass ist der geplante Bau einer neuen Kindertagesstätte.',
                     'Der Ausschuss sprach sich mit **5 Ja-Stimmen bei 1 Enthaltung** für den Satzungsbeschluss aus und empfahl damit die Änderung des Bebauungsplans für das weitere Verfahren.',
                     {
+                        type: 'link',
                         text: 'Details zum Bebauungsplan Sprötzer Weg',
                         slug: 'bebauungsplan-sproetzer-weg',
                         indent: true
@@ -97,6 +98,7 @@ export const scheduleItems = [
                     'Auch die festgelegten **Baugrenzen sollen überschritten werden** – je nach Gebäudeseite **um bis zu 6,20 Meter**. Die Fachabteilung bewertet dies für den zentralen Bereich am Dorfplatz als **städtebaulich vertretbar**.',
                     'Bedingung ist unter anderem, dass der vorhandene **Baumbestand möglichst vollständig erhalten** bleibt. Die Zufahrt von der Kirchhofstraße soll zwischen den Bäumen geführt, die Versiegelung begrenzt und die genaue Erschließung im weiteren Verfahren geprüft werden.',
                     {
+                        type: 'link',
                         text: 'Bebaungsplan Niedersachsenstraße 13',
                         slug: 'niedersachsenstrasse-13-wohnungsbau',
                         indent: true

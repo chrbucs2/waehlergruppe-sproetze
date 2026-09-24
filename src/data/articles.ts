@@ -125,37 +125,45 @@ export const articles = [
                 paragraphs: [
                     'Wer sich genauer informieren möchte, findet hier die wichtigsten offiziellen Unterlagen und ergänzende Berichte zum Stadteingang West.',
                     {
+                        type: 'link',
                         text: 'Sitzung vom 18. März 2026 (TOP Ö8, Ö11, Ö12)',
-                        link: 'https://www.buchholz.de/allris/to010?SILFDNR=1000950'
+                        href: 'https://www.buchholz.de/allris/to010?SILFDNR=1000950'
                     },
                     {
+                        type: 'link',
                         text: 'Rahmenplan "Stadteingang West, Bremer Straße"',
-                        link: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1012612',
+                        href: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1012612',
                         indent: true
                     },
                     {
+                        type: 'link',
                         text: 'Bebauungsplan "Bremer Straße / Brumhagen Süd"',
-                        link: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1012795',
+                        href: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1012795',
                         indent: true
                     },
                     {
+                        type: 'link',
                         text: 'Sitzung vom 10. März 2026 (TOP Ö7 - Ö9)',
-                        link: 'https://www.buchholz.de/allris/to010?SILFDNR=1001100'
+                        href: 'https://www.buchholz.de/allris/to010?SILFDNR=1001100'
                     },{
+                        type: 'link',
                         text: 'Sitzung vom 11. Februar 2026 (TOP Ö7 - Ö9)',
-                        link: 'https://www.buchholz.de/allris/to010?SILFDNR=1000942'
+                        href: 'https://www.buchholz.de/allris/to010?SILFDNR=1000942'
                     },
                     {
+                        type: 'link',
                         text: 'Buchholz Aktuell: Wohngebiet Bremer Straße: 580 Wohnungen und ein drohender Verkehrskollaps?',
-                        link: 'https://buchholz-aktuell.de/buchholz/wohngebiet-bremer-strasse-580-wohnungen-und-ein-drohender-verkehrskollaps-14748/',
+                        href: 'https://buchholz-aktuell.de/buchholz/wohngebiet-bremer-strasse-580-wohnungen-und-ein-drohender-verkehrskollaps-14748/',
                     },
                     {
+                        type: 'link',
                         text: 'Buchholz Aktuell: Naturschützer lehnen Neubaugebiet an der Bremer Straße ab',
-                        link: 'https://buchholz-aktuell.de/buchholz/naturschuetzer-lehnen-neubaugebiet-an-der-bremer-strasse-ab-14952/',
+                        href: 'https://buchholz-aktuell.de/buchholz/naturschuetzer-lehnen-neubaugebiet-an-der-bremer-strasse-ab-14952/',
                     },
                     {
+                        type: 'link',
                         text: 'Kreiszeitung Wochenblatt: Neubaugebiete bedürfen einer rechtzeitigen Planung der Infrastruktur',
-                        link: 'https://www.kreiszeitung-wochenblatt.de/buchholz/c-politik/neubaugebiete-beduerfen-einer-rechtzeitigen-planung-der-infrastruktur_a402629',
+                        href: 'https://www.kreiszeitung-wochenblatt.de/buchholz/c-politik/neubaugebiete-beduerfen-einer-rechtzeitigen-planung-der-infrastruktur_a402629',
                     },
                 ],
             },
@@ -259,47 +267,57 @@ export const articles = [
                 paragraphs: [
                     'Wer sich genauer mit der Planung beschäftigen möchte, findet hier die wichtigsten Unterlagen und Berichte:',
                     {
+                        type: 'link',
                         text: 'Sitzung vom 6. Mai 2026 (TOP Ö8)',
-                        link: 'https://www.buchholz.de/allris/to020?TOLFDNR=1017941&SILFDNR=1000953',
+                        href: 'https://www.buchholz.de/allris/to020?TOLFDNR=1017941&SILFDNR=1000953',
                     },
                     {
+                        type: 'link',
                         text: 'Satzungsbeschluss zum Bauvorhaben in der Niedersachsenstraße',
-                        link: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1012941',
+                        href: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1012941',
                         indent: true
                     },
                     {
+                        type: 'link',
                         text: 'Sitzung vom 17. September 2025 (TOP Ö10)',
-                        link: 'https://www.buchholz.de/allris/to020?TOLFDNR=1015283&SILFDNR=1000653'
+                        href: 'https://www.buchholz.de/allris/to020?TOLFDNR=1015283&SILFDNR=1000653'
                     },
                     {
+                        type: 'link',
                         text: 'Zustimmung zum Bebauungsplanentwurf und Auslegungsbeschluss',
-                        link: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1012498',
+                        href: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1012498',
                         indent: true
                     },
                     {
+                        type: 'link',
                         text: 'Sitzung vom 18. September 2024 (TOP Ö7)',
-                        link: 'https://www.buchholz.de/allris/to020?TOLFDNR=1010466&SILFDNR=1000346'
+                        href: 'https://www.buchholz.de/allris/to020?TOLFDNR=1010466&SILFDNR=1000346'
                     },
                     {
+                        type: 'link',
                         text: 'Plankonzept zur Vorbereitung',
-                        link: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1009915',
+                        href: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1009915',
                         indent: true
                     },
                     {
+                        type: 'link',
                         text: 'Grünordnungsplanerischen Fachbeitrag',
-                        link: 'https://www.buchholz.de/downloads/datei/MmZkYWYzZDA2NTQ3NDQ5NXR2N3Y4VTVMQ0kyYWJ3bXMzall6UXhiQzFwYUtMZDRZRDUzcmY3ZDhxZmhqQVIyaERTK20rQjYxMFNkWGxSRVA4Vnl3UjVGUUMrWUtwdExZbk9SZ1RqbEg4VDFycGFqTktsbjcxeWxFU21LcVoxc0hSWkZqRjlieFRrckFMTUlHSnNtR0NwYk9SdjJyTkx4WGFUZUIwQT09',
+                        href: 'https://www.buchholz.de/downloads/datei/MmZkYWYzZDA2NTQ3NDQ5NXR2N3Y4VTVMQ0kyYWJ3bXMzall6UXhiQzFwYUtMZDRZRDUzcmY3ZDhxZmhqQVIyaERTK20rQjYxMFNkWGxSRVA4Vnl3UjVGUUMrWUtwdExZbk9SZ1RqbEg4VDFycGFqTktsbjcxeWxFU21LcVoxc0hSWkZqRjlieFRrckFMTUlHSnNtR0NwYk9SdjJyTkx4WGFUZUIwQT09',
                     },
                     {
+                        type: 'link',
                         text: 'Stellungnahmen des BUND zum Verfahren',
-                        link: 'https://www.bund-elbe-heide.de/fileadmin/elbeheide/harburg/stellungnahmen/B-Plan-Sproetzer-Weg---An-den-Tennisplaetzen-1.-AEnderung.pdf'
+                        href: 'https://www.bund-elbe-heide.de/fileadmin/elbeheide/harburg/stellungnahmen/B-Plan-Sproetzer-Weg---An-den-Tennisplaetzen-1.-AEnderung.pdf'
                     },
                     {
+                        type: 'link',
                         text: 'Entwässerungskonzept',
-                        link: 'https://www.buchholz.de/downloads/datei/ZGZjZmUxYTI1Mzg0YmUzOFhQRUVZeW83d0RXblFacEowUXd1OG9UZUo1ekVPMGFHVlMwTDBxSnlRSU9nMEdPM2FmbGVrbys2QTluZHJVQ2xvQXNJbDVhMHJvOEluQXNZbDlyd1F2WWplQ2pIV3dERE0xVlhrNVNMTEllRWF3eVJkVnA0MkFSVSszSW9uSHM4QnlBb3ZoOEhkdktISjVtWWRPdHNIWWQ1emhIVlJKcFdJMmR6L3hBdEJUUT0',
+                        href: 'https://www.buchholz.de/downloads/datei/ZGZjZmUxYTI1Mzg0YmUzOFhQRUVZeW83d0RXblFacEowUXd1OG9UZUo1ekVPMGFHVlMwTDBxSnlRSU9nMEdPM2FmbGVrbys2QTluZHJVQ2xvQXNJbDVhMHJvOEluQXNZbDlyd1F2WWplQ2pIV3dERE0xVlhrNVNMTEllRWF3eVJkVnA0MkFSVSszSW9uSHM4QnlBb3ZoOEhkdktISjVtWWRPdHNIWWQ1emhIVlJKcFdJMmR6L3hBdEJUUT0',
                     },
                     {
+                        type: 'link',
                         text: 'Kreiszeitung Wochenblatt – Bebauungsplan für Kita am Sprötzer Weg neben Aldi liegt jetzt aus',
-                        link: 'https://www.kreiszeitung-wochenblatt.de/buchholz/c-politik/bebauungsplan-fuer-kita-am-sproetzer-weg-neben-aldi-liegt-jetzt-aus_a377090',
+                        href: 'https://www.kreiszeitung-wochenblatt.de/buchholz/c-politik/bebauungsplan-fuer-kita-am-sproetzer-weg-neben-aldi-liegt-jetzt-aus_a377090',
                     },
                 ],
             },
@@ -391,21 +409,25 @@ export const articles = [
                 paragraphs: [
                     'Wer sich genauer informieren möchte, findet hier die wichtigsten offiziellen Unterlagen zur bisherigen Planung der Sprötzer Ortsmitte, zum Bauturbo und zum aktuellen Bauvorhaben an der Niedersachsenstraße 13.',
                     {
+                        type: 'link',
                         text: 'Sitzung vom 17. September 2026 (TOP Ö13)',
-                        link: 'https://www.buchholz.de/allris/to010?SILFDNR=1000969&TOLFDNR=1019306'
+                        href: 'https://www.buchholz.de/allris/to010?SILFDNR=1000969&TOLFDNR=1019306'
                     },
                     {
+                        type: 'link',
                         text: 'Stellungnahme zum Bauvorhaben Niedersachsenstraße 13',
-                        link: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1013228&TOLFDNR=1019306',
+                        href: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1013228&TOLFDNR=1019306',
                         indent: true,
                     },
                     {
+                        type: 'link',
                         text: 'Bebauungsplan „Neue Ortsmitte Sprötze – Niedersachsenstraße“',
-                        link: 'https://www.buchholz.de/allris/vo020?VOLFDNR=6361',
+                        href: 'https://www.buchholz.de/allris/vo020?VOLFDNR=6361',
                     },
                     {
+                        type: 'link',
                         text: 'Informationen der Stadt Buchholz zum Bauturbo',
-                        link: 'https://www.buchholz.de/portal/seiten/bauturbo-in-buchholz-i-d-n--903001376-20101.html',
+                        href: 'https://www.buchholz.de/portal/seiten/bauturbo-in-buchholz-i-d-n--903001376-20101.html',
                     }
                 ],
             },
@@ -486,38 +508,46 @@ export const articles = [
                 paragraphs: [
                     'Wer sich genauer mit der Planung beschäftigen möchte, findet hier die wichtigsten Unterlagen und Berichte:',
                     {
+                        type: 'link',
                         text: 'Sitzung vom 28. Mai 2026 (TOP Ö9)',
-                        link: 'https://www.buchholz.de/allris/to020?TOLFDNR=1018070&SILFDNR=1000954'
+                        href: 'https://www.buchholz.de/allris/to020?TOLFDNR=1018070&SILFDNR=1000954'
                     },
                     {
+                        type: 'link',
                         text: 'Zustimmung zu baulichen Erweiterungsmaßnahmen an der Grundschule Sprötze-Trelde',
-                        link: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1013048',
+                        href: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1013048',
                         indent: true
                     },
                     {
+                        type: 'link',
                         text: 'Sitzung vom 28. Mai 2026 (TOP Ö9.1)',
-                        link: 'https://www.buchholz.de/allris/to020?TOLFDNR=1018491&SILFDNR=1000954'
+                        href: 'https://www.buchholz.de/allris/to020?TOLFDNR=1018491&SILFDNR=1000954'
                     },
                     {
+                        type: 'link',
                         text: 'Gestaltung der Ausschreibung Grundschule Sprötze-Trelde',
-                        link: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1013106',
+                        href: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1013106',
                         indent: true
                     },
                     {
+                        type: 'link',
                         text: 'Ursprüngliche Anfrage zur Zukunft der Grundschule Sprötze-Trelde',
-                        link: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1012985'
+                        href: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1012985'
                     },
                     {
+                        type: 'link',
                         text: 'Ergänzender Prüfauftrag Standort Trelde',
-                        link: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1013108'
+                        href: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1013108'
                     },
                     {
+                        type: 'link',
                         text: 'Wochenblatt: Ein oder zwei Standorte?',
-                        link: 'https://www.kreiszeitung-wochenblatt.de/buchholz/c-politik/ein-oder-zwei-standorte_a400821'
+                        href: 'https://www.kreiszeitung-wochenblatt.de/buchholz/c-politik/ein-oder-zwei-standorte_a400821'
                     },
                     {
+                        type: 'link',
                         text: 'buchholz-aktuell: Acht Millionen Euro: Grundschule Sprötze braucht Neubau',
-                        link: 'https://buchholz-aktuell.de/trelde/acht-millionen-euro-grundschule-sproetze-braucht-neubau-9723'
+                        href: 'https://buchholz-aktuell.de/trelde/acht-millionen-euro-grundschule-sproetze-braucht-neubau-9723'
                     }
                 ],
             },

@@ -3,8 +3,8 @@ import { DetailBackLink } from '../components/detail/DetailBackLink';
 import { DetailSection } from '../components/detail/DetailSection';
 import { NEWS_INDEX_PATH } from '../lib/constants';
 import { formatDate, formatInlineMarkup } from '../lib/formatting';
-
-function renderParagraph(text) {
+import {DetailSectionModel} from "../models/DetailSectionModel";
+function renderParagraph(text: string) {
     return { __html: formatInlineMarkup(text) };
 }
 
@@ -35,7 +35,7 @@ export function ArticlePage({ article, onShowImpressum, onShowDatenschutz }) {
                 )}
 
                 <article className="feature-card feature-card--active news-article-page__content">
-                    {(article.sections ?? []).map((section) => (
+                    {(article.sections ?? []).map((section: DetailSectionModel) => (
                         <DetailSection key={section.title} {...section} />
                     ))}
                 </article>

@@ -1,10 +1,5 @@
 import styled from 'styled-components';
 
-type DetailBackLinkProps = {
-    href: string;
-    text?: string;
-};
-
 const BackLink = styled.a`
     display: inline-flex;
     align-items: center;
@@ -16,6 +11,11 @@ const BackLink = styled.a`
         content: '←';
     }
 `;
+
+type DetailBackLinkProps = {
+    href: string;
+    text?: string;
+};
 
 export function DetailBackLink({ href, text = 'Zurück zur Übersicht' }: DetailBackLinkProps) {
     return <BackLink href={href}>{text}</BackLink>;

@@ -971,22 +971,6 @@ h1 {
   width: 100%;
 }
 
-.schedule-link-note {
-  display: inline-flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px;
-  color: var(--muted);
-}
-
-.schedule-link-note.is-indented {
-  padding-left: 1rem;
-}
-
-.schedule-link-note .news-card__link {
-  margin-top: 0;
-}
-
 .schedule-source-link {
   margin-top: 1rem;
   margin-bottom: 0;
@@ -1044,43 +1028,6 @@ h1 {
 .schedule-detail-section p {
   line-height: 1.75;
   margin-bottom: 4px;
-}
-
-.article-section-image {
-  margin: 1rem 0 0;
-  display: grid;
-  gap: 0.45rem;
-}
-
-.article-section-image img {
-  display: block;
-  width: min(100%, 960px);
-  max-height: 620px;
-  object-fit: contain;
-  border-radius: 16px;
-  border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.6);
-}
-
-.article-section-image figcaption {
-  color: var(--muted);
-  font-size: 0.85rem;
-  line-height: 1.55;
-}
-
-.article-subheading {
-  margin: 0.25rem 0 0;
-  font-weight: 700;
-  color: var(--primary-dark);
-}
-
-.article-list {
-  margin: 0;
-  padding-left: 1.25rem;
-  display: grid;
-  gap: 0.4rem;
-  color: var(--muted);
-  line-height: 1.7;
 }
 
 .news-back-link {

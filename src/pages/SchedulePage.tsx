@@ -3,11 +3,11 @@ import { useMemo, useState } from 'react';
 import { SiteFooter } from '../components/SiteFooter';
 import { DetailBackLink } from '../components/detail/DetailBackLink';
 import { DetailSection } from '../components/detail/DetailSection';
-import { scheduleItems } from '../data/index';
+import { scheduleItems } from '../data';
 import { getScheduleItemBySlug, getScheduleStatus, sortScheduleByDate } from '../lib/content';
 import { SCHEDULE_PATH } from '../lib/constants';
 import { assetUrl, formatDate, formatInlineMarkup } from '../lib/formatting';
-
+import {DetailSectionModel} from "../models/DetailSectionModel";
 export function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug }) {
     const orderedSchedule = useMemo(() => sortScheduleByDate(scheduleItems), []);
     const [showAllUpcoming, setShowAllUpcoming] = useState(false);
@@ -22,6 +22,7 @@ export function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug 
         [now, orderedSchedule],
     );
     const visibleUpcomingSchedule = showAllUpcoming ? upcomingSchedule : upcomingSchedule.slice(0, 1);
+    const sections = activeScheduleItem?.sections ? activeScheduleItem.sections as DetailSectionModel[] : [];
 
     if (activeScheduleItem) {
         return (
@@ -44,19 +45,12 @@ export function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug 
                                 : <p>{activeScheduleItem.introduction}</p>}
                         </div>
                     )}
-                    {activeScheduleItem.sections?.length > 0 ? (
+                    {sections.length > 0 && (
                         <article className="feature-card feature-card--active news-article-page__content">
-                            {activeScheduleItem.sections.map((section) => (
+                            {sections.map((section) => (
                                 <DetailSection key={section.title} {...section} />
                             ))}
-                            {activeScheduleItem.outcome && (
-                                <p className="schedule-outcome-text" dangerouslySetInnerHTML={{ __html: formatInlineMarkup(activeScheduleItem.outcome) }} />
-                            )}
                         </article>
-                    ) : (
-                        activeScheduleItem.outcome && (
-                            <p className="schedule-outcome-text" dangerouslySetInnerHTML={{ __html: formatInlineMarkup(activeScheduleItem.outcome) }} />
-                        )
                     )}
                     {activeScheduleItem.link && (
                         <p className="schedule-source-link">
@@ -109,7 +103,7 @@ export function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug 
                             </div>
                             <h4>{item.title}</h4>
                             <p dangerouslySetInnerHTML={{ __html: formatInlineMarkup(item.details) }} />
-                            {item.sections?.length > 0 && (
+                            {item.sections?.length && (
                                 <a className="news-card__link" href={`${SCHEDULE_PATH}/${item.slug}`}>
                                     Termin öffnen
                                 </a>
@@ -142,7 +136,7 @@ export function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug 
                             </div>
                             <h4>{item.title}</h4>
                             <p dangerouslySetInnerHTML={{ __html: formatInlineMarkup(item.details) }} />
-                            {item.sections?.length > 0 && (
+                            {item.sections?.length && (
                                 <a className="news-card__link" href={`${SCHEDULE_PATH}/${item.slug}`}>
                                     Termin öffnen
                                 </a>

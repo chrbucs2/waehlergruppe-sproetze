@@ -1,10 +1,7 @@
 import styled from 'styled-components';
 
 import { formatInlineMarkup } from '../../lib/formatting';
-
-type DetailSectionListProps = {
-    items: string[];
-};
+import {DetailSectionListModel} from "../../models/DetailSectionListModel";
 
 const List = styled.ul`
     margin: 0;
@@ -14,6 +11,8 @@ const List = styled.ul`
     color: var(--muted);
     line-height: 1.7;
 `;
+
+interface DetailSectionListProps extends Omit<DetailSectionListModel, 'type'> {}
 
 export function DetailSectionList({ items }: DetailSectionListProps) {
     return (

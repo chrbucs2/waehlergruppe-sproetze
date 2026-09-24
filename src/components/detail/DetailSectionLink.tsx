@@ -1,13 +1,7 @@
 import styled from 'styled-components';
 
 import { formatInlineMarkup } from '../../lib/formatting';
-
-type DetailSectionLinkProps = {
-    text: string;
-    href?: string;
-    slug?: string;
-    indent?: boolean;
-};
+import {DetailSectionLinkModel} from "../../models/DetailSectionLinkModel";
 
 const LinkNote = styled.p<{ $indent: boolean }>`
     display: inline-flex;
@@ -15,10 +9,6 @@ const LinkNote = styled.p<{ $indent: boolean }>`
     align-items: center;
     color: var(--muted);
     ${({ $indent }) => $indent && 'padding-left: 1rem;'}
-
-    .news-card__link {
-        margin-top: 0;
-    }
 `;
 
 const LinkText = styled.a`
@@ -27,7 +17,13 @@ const LinkText = styled.a`
     gap: 8px;
     font-weight: 700;
     color: var(--primary-dark);
+    
+    &::after {
+        content: "→";
+    }
 `;
+
+interface DetailSectionLinkProps extends Omit<DetailSectionLinkModel, 'type'> {}
 
 export function DetailSectionLink({ text, href, slug, indent = false }: DetailSectionLinkProps) {
     const resolvedHref = href ?? (slug ? `/artikel/${slug}` : undefined);

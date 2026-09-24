@@ -1,35 +1,34 @@
+import styled from 'styled-components';
+
 import { DetailSectionImage } from './DetailSectionImage';
 import { DetailSectionLink } from './DetailSectionLink';
 import { DetailSectionList } from './DetailSectionList';
 import { DetailSectionSubHeading } from './DetailSectionSubHeading';
 import { DetailSectionText } from './DetailSectionText';
+import { DetailSectionModel } from '../../models/DetailSectionModel';
 
-type DetailSectionProps = {
-    title: string;
-    paragraphs?: DetailParagraph[];
-    image?: DetailImage | null;
-};
+const Container = styled.section`
+    display: grid;
+    gap: 8px;
 
-type DetailParagraph =
-    | string
-    | {
-          text: string;
-          link?: string;
-          slug?: string;
-          indent?: boolean;
-          type?: 'subheading' | 'list';
-          items?: string[];
-      };
+    h3 {
+        margin: 0 0 4px;
+        font-size: 1.1rem;
+        line-height: 1.35;
+        color: var(--primary-dark);
+    }
 
-type DetailImage = {
-    src: string;
-    alt: string;
-    caption?: string;
-};
+    p {
+        line-height: 1.75;
+        margin-bottom: 4px;
+    }
+`;
+
+interface DetailSectionProps extends DetailSectionModel {}
 
 export function DetailSection({ title, paragraphs = [], image }: DetailSectionProps) {
     return (
-        <section className="schedule-detail-section">
+        <Container>
             <h3>{title}</h3>
             {paragraphs.map((paragraph, index) => {
                 if (typeof paragraph === 'string') {
@@ -44,18 +43,22 @@ export function DetailSection({ title, paragraphs = [], image }: DetailSectionPr
                     return <DetailSectionList key={`${title}-list-${index}`} items={paragraph.items ?? []} />;
                 }
 
-                return (
-                    <DetailSectionLink
-                        key={`${title}-${paragraph.text}`}
-                        text={paragraph.text}
-                        href={paragraph.link}
-                        slug={paragraph.slug}
-                        indent={paragraph.indent}
-                    />
-                );
+                if (paragraph.type === 'link') {
+                    return (
+                        <DetailSectionLink
+                            key={`${title}-${paragraph.text}`}
+                            text={paragraph.text}
+                            href={paragraph.href}
+                            slug={paragraph.slug}
+                            indent={paragraph.indent}
+                        />
+                    );
+                }
+
+                return null;
             })}
 
             {image && <DetailSectionImage src={image.src} alt={image.alt} caption={image.caption} />}
-        </section>
+        </Container>
     );
 }

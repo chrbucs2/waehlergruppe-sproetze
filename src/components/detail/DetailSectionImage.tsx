@@ -1,10 +1,5 @@
 import styled from 'styled-components';
-
-type DetailSectionImageProps = {
-    src: string;
-    alt: string;
-    caption?: string;
-};
+import {DetailSectionImageModel} from "../../models/DetailSectionImageModel";
 
 const Figure = styled.figure`
     margin: 1rem 0 0;
@@ -27,6 +22,8 @@ const Caption = styled.figcaption`
     font-size: 0.85rem;
     line-height: 1.55;
 `;
+
+interface DetailSectionImageProps extends DetailSectionImageModel {}
 
 export function DetailSectionImage({ src, alt, caption }: DetailSectionImageProps) {
     return (
