@@ -1,7 +1,7 @@
-import { SiteFooter } from '../components/SiteFooter';
-import { DetailBackLink } from '../components/detail/DetailBackLink';
-import { NEWS_INDEX_PATH } from '../lib/constants';
-import { formatDate, formatInlineMarkup } from '../lib/formatting';
+import { SiteFooter } from '../components/SiteFooter.tsx';
+import { DetailBackLink } from '../components/detail/DetailBackLink.tsx';
+import { NEWS_INDEX_PATH } from '../lib/constants.ts';
+import { formatDate, formatInlineMarkup } from '../lib/formatting.ts';
 
 export function ArticlePage({ article, onShowImpressum, onShowDatenschutz }) {
     if (!article) {

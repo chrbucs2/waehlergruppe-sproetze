@@ -1,8 +1,8 @@
 import { useMemo, useRef, useState } from 'react';
 
-import { candidates, electionResults, priorities, teamMembers } from '../data';
-import { NEWS_INDEX_PATH } from '../lib/constants';
-import { assetUrl } from '../lib/formatting';
+import { candidates, electionResults, priorities, teamMembers } from '../data/index.ts';
+import { NEWS_INDEX_PATH } from '../lib/constants.ts';
+import { assetUrl } from '../lib/formatting.ts';
 
 export function HomePage({ onShowImpressum, onShowDatenschutz }) {
     const [activePriority, setActivePriority] = useState(priorities[0]);

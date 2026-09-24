@@ -1,4 +1,4 @@
-import { contacts, legal, organization, teamMembers } from '../data';
+import { contacts, legal, organization, teamMembers } from '../data/index.ts';
 
 export function LegalModals({ showImpressum, showDatenschutz, setShowImpressum, setShowDatenschutz }) {
     return (

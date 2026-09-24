@@ -1,11 +1,11 @@
 import { useMemo, useState } from 'react';
 
-import { SiteFooter } from '../components/SiteFooter';
-import { DetailBackLink } from '../components/detail/DetailBackLink';
-import { scheduleItems } from '../data';
+import { SiteFooter } from '../components/SiteFooter.tsx';
+import { DetailBackLink } from '../components/detail/DetailBackLink.tsx';
+import { scheduleItems } from '../data/index.ts';
 import { getScheduleItemBySlug, getScheduleStatus, sortScheduleByDate } from '../lib/content';
-import { SCHEDULE_PATH } from '../lib/constants';
-import { assetUrl, formatDate, formatInlineMarkup } from '../lib/formatting';
+import { SCHEDULE_PATH } from '../lib/constants.ts';
+import { assetUrl, formatDate, formatInlineMarkup } from '../lib/formatting.ts';
 
 export function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug }) {
     const orderedSchedule = useMemo(() => sortScheduleByDate(scheduleItems), []);
