@@ -23,7 +23,7 @@ export const news = [
         ],
         articleLink: {
             slug: 'stadteingang-west-bremer-strasse',
-            label: 'Stadteingang West: Planung und Auswirkungen im Überblick'
+            label: 'Wohngebiet "Stadteingang West"'
         },
     },
     {
