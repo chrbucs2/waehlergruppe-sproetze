@@ -1,6 +1,7 @@
 import { useMemo, useRef, useState } from 'react';
 
 import { candidates, electionResults, priorities, teamMembers } from '../data';
+import { NEWS_INDEX_PATH } from '../lib/constants';
 import { assetUrl } from '../lib/formatting';
 
 export function HomePage({ onShowImpressum, onShowDatenschutz }) {
@@ -88,8 +89,8 @@ export function HomePage({ onShowImpressum, onShowDatenschutz }) {
                     <p className="eyebrow">Unabhängige Kommunalpolitik für Sprötze</p>
                     <h1>Unsere Wählergruppe</h1>
                     <p className="lead">
-                        Gemeinsam engagieren wir uns für ein lebenswertes Sprötze — nah an den Menschen,
-                        lösungsorientiert und ohne Parteibindung.
+                        Wir engagieren uns für Sprötze: unabhängige Kommunalpolitik, klare Positionen und aktuelle Themen
+                        rund um Ort, Ortsrat und Dorfentwicklung.
                     </p>
 
                     <article className="hero__group">
@@ -106,6 +107,9 @@ export function HomePage({ onShowImpressum, onShowDatenschutz }) {
                         </a>
                         <a className="button button--secondary" href="#personen">
                             Unser Team
+                        </a>
+                        <a className="button button--secondary" href={NEWS_INDEX_PATH}>
+                            Sprötze aktuell
                         </a>
                     </div>
                 </div>
