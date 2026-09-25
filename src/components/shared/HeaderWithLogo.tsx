@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
-import { OverviewHeaderActions } from './OverviewHeaderActions';
-import { OverviewHeaderLogo } from './OverviewHeaderLogo';
-import { Eyebrow } from '../shared/Eyebrow';
-import {containerBorderStyles} from "../shared/commonStyles";
+import { Eyebrow } from './Eyebrow';
+import { containerBorderStyles } from './styles/commonStyles';
+import { HeaderActions } from './HeaderActions';
+import { HeaderLogo } from './HeaderLogo';
 
-const OverviewHeaderRoot = styled.section`
+const HeaderWithLogoRoot = styled.section`
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 24px;
@@ -19,13 +19,13 @@ const OverviewHeaderRoot = styled.section`
     }
 `;
 
-const OverviewHeaderCopy = styled.div`
+const HeaderWithLogoCopy = styled.div`
     display: flex;
     flex-direction: column;
     gap: 18px;
 `;
 
-const OverviewHeaderLead = styled.p`
+const HeaderWithLogoLead = styled.p`
     margin: 0;
     font-size: 1.08rem;
     line-height: 1.7;
@@ -33,31 +33,32 @@ const OverviewHeaderLead = styled.p`
     color: var(--muted);
 `;
 
-const OverviewHeaderTitle = styled.h1`
+const HeaderWithLogoTitle = styled.h1`
     font-size: clamp(1.65rem, 2.5vw, 2.3rem);
     max-width: none;
 `;
 
-interface OverviewHeaderProps {
+interface HeaderWithLogoProps {
     eyebrow: string;
     title: string;
     lead: string;
     actions: Array<{ href: string; label: string; variant: 'primary' | 'secondary' }>;
 }
 
-export function OverviewHeader({ eyebrow, title, lead, actions }: OverviewHeaderProps) {
+export function HeaderWithLogo({ eyebrow, title, lead, actions }: HeaderWithLogoProps) {
     return (
-        <OverviewHeaderRoot>
-            <OverviewHeaderCopy>
+        <HeaderWithLogoRoot>
+            <HeaderWithLogoCopy>
                 <Eyebrow>{eyebrow}</Eyebrow>
-                <OverviewHeaderTitle>{title}</OverviewHeaderTitle>
-                <OverviewHeaderLead>{lead}</OverviewHeaderLead>
-                <OverviewHeaderActions actions={actions} />
-            </OverviewHeaderCopy>
-            <OverviewHeaderLogo
+                <HeaderWithLogoTitle>{title}</HeaderWithLogoTitle>
+                <HeaderWithLogoLead>{lead}</HeaderWithLogoLead>
+                <HeaderActions actions={actions} />
+            </HeaderWithLogoCopy>
+            <HeaderLogo
                 label="Logo der Wählergruppe Sprötze"
                 alt="Logo der Wählergruppe Sprötze"
-                path="logo.png" />
-        </OverviewHeaderRoot>
+                path="logo.png"
+            />
+        </HeaderWithLogoRoot>
     );
 }

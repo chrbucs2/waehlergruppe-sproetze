@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { FilterButton } from '../shared/FilterButton';
+import { FilterButton } from '../shared/button/FilterButton';
 
 const OverviewSectionFilterRoot = styled.div`
     display: flex;

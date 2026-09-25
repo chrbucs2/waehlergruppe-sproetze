@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { LegalLinks } from './legal/LegalLinks';
-import { containerBorderStyles } from './shared/commonStyles';
+import { containerBorderStyles } from './shared/styles/commonStyles';
 
 interface SiteFooterProps {
     onShowImpressum: () => void;

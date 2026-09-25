@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 
 import { SiteFooter } from '../components/SiteFooter';
 import { Details } from '../components/detail/Details';
-import { OverviewHeader } from '../components/overview/OverviewHeader';
+import { HeaderWithLogo } from '../components/shared/HeaderWithLogo';
 import { OverviewSectionFilter } from '../components/overview/OverviewSectionFilter';
 import { OverviewSectionHeader } from '../components/overview/OverviewSectionHeader';
 import { filterTopics, news } from '../data';
@@ -96,7 +96,7 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
 
     return (
         <>
-            <OverviewHeader
+            <HeaderWithLogo
                 eyebrow="Sprötze aktuell"
                 title="News und Themen aus Sprötze"
                 lead="Hier pflegen wir aktuelle Meldungen zentral an einer Stelle."

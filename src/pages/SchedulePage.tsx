@@ -7,7 +7,7 @@ import {buildScheduleDetailUrl, getScheduleItemBySlug, getScheduleStatus, sortSc
 import {NEWS_PATH, SCHEDULE_PATH} from '../lib/constants';
 import { formatDate, formatInlineMarkup } from '../lib/formatting';
 import { ScheduleModel } from '../models/pages/ScheduleModel';
-import { OverviewHeader } from '../components/overview/OverviewHeader';
+import { HeaderWithLogo } from '../components/shared/HeaderWithLogo';
 import {OverviewSectionHeader} from "../components/overview/OverviewSectionHeader";
 import {Eyebrow} from "../components/shared/Eyebrow";
 
@@ -63,7 +63,7 @@ export function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug 
 
     return (
         <>
-            <OverviewHeader
+            <HeaderWithLogo
                 eyebrow="Termine"
                 title="Termine für Sprötze"
                 lead="Der nächste relevante Termin zuerst, weitere bei Bedarf."
@@ -83,7 +83,6 @@ export function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug 
                         <article className="schedule-card" key={item.id}>
                             <Eyebrow>{item.category}</Eyebrow>
                             <div className="schedule-card__head">
-                                <p className="eyebrow">{item.category}</p>
                                 <strong>{formatDate(item.date)} · {item.time}</strong>
                             </div>
                             <h4>{item.title}</h4>
@@ -117,8 +116,8 @@ export function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug 
                 <div className="schedule-list">
                     {pastSchedule.map((item) => (
                         <article className="schedule-card" key={item.id}>
+                            <Eyebrow>{item.category}</Eyebrow>
                             <div className="schedule-card__head">
-                                <p className="eyebrow">{item.category}</p>
                                 <strong>{formatDate(item.date)} · {item.time}</strong>
                             </div>
                             <h4>{item.title}</h4>

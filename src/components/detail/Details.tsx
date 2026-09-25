@@ -10,7 +10,7 @@ import { DetailSources } from './DetailSources';
 import { DetailHeadingModel } from '../../models/details/DetailHeadingModel';
 import { DetailModel } from '../../models/details/DetailModel';
 import { DetailSourceModel } from '../../models/details/DetailSourceModel';
-import { containerBorderStyles } from '../shared/commonStyles';
+import { containerBorderStyles } from '../shared/styles/commonStyles';
 
 const Container = styled.section`
     background: linear-gradient(180deg, #e6effb80, #f9f6fff2);

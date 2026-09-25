@@ -144,45 +144,33 @@ export const scheduleItems: ScheduleModel[] = [
         linkLabel: 'Zur öffentlichen Sitzungsseite',
     },
     {
-        id: 'ausschuss-bauen-ordnung-feuerschutz-2026-09-24',
-        slug: 'ausschuss-bauen-ordnung-feuerschutz-2026-09-24',
+        id: 'ausschuss-bauen-2026-09-24',
+        slug: 'ausschuss-bauen-2026-09-24',
         category: 'Ausschuss für Bauen, Ordnung, Feuerschutz und Kommunalbetrieb',
         date: '2026-09-24',
         time: '18:30 Uhr',
         title: 'Klimaanpassungskonzept für Buchholz',
-        location: 'Kantine, Rathaus Buchholz',
+        location: 'Kantine Rathaus Buchholz',
         summary: [
-            'Der Ausschuss berät über das neue **Klimaanpassungskonzept für Buchholz**. Es enthält Maßnahmen zu Starkregen, Hitze, Regenwasserrückhalt, Stadtgrün und Gewässern. Auch für **Sprötze** finden sich darin konkrete Bezüge.',
+            'Der Ausschuss befasst sich mit dem neuen **Klimaanpassungskonzept für Buchholz**. Darin werden Risiken durch Hitze, Starkregen und Trockenheit untersucht und Maßnahmen für die kommenden Jahre vorgeschlagen.',
         ],
         introduction: [
-            'Das Klimaanpassungskonzept soll künftig als Grundlage dafür dienen, wie sich Buchholz auf **Hitze, Starkregen, Trockenheit und andere Klimafolgen** vorbereitet.',
-            'Für Sprötze interessant sind unter anderem Aussagen zum **Sprötzer Bach**, zur **Grundschule Sprötze-Trelde**, zu landwirtschaftlichen Flächen rund um Sprötze und Trelde sowie zum Bevölkerungsschutz.',
-            'Der Ausschuss berät das Konzept zunächst vor. Anschließend soll der **Rat der Stadt Buchholz** darüber entscheiden.',
+            'Für Sprötze ist vor allem **TOP 7** interessant. Das Klimaanpassungskonzept gilt für das gesamte Stadtgebiet, enthält aber mehrere konkrete Bezüge zu Sprötze – unter anderem zur **Grundschule Sprötze-Trelde, zum Sprötzer Bach, zu landwirtschaftlichen Flächen rund um Sprötze und Trelde sowie zum Bevölkerungsschutz**.',
+            'Ob diese Sprötzer Punkte in der Sitzung einzeln angesprochen werden, geht aus der Tagesordnung nicht hervor. Im Mittelpunkt steht zunächst die Beratung über das Gesamtkonzept.',
         ],
         sections: [
             {
-                title: 'Was ist für Sprötze interessant?',
+                title: 'Tagesordnungspunkte',
                 paragraphs: [
-                    'Der **Sprötzer Bach** wird im Konzept ausdrücklich untersucht. Bei seinem ökologischen Zustand werden Defizite bei den Wasserpflanzen genannt.',
-                    'Auch die **Grundschule Sprötze-Trelde** taucht auf: Beim Neu- und Anbau werden Aspekte der Klimaanpassung bereits berücksichtigt.',
-                    'Für landwirtschaftliche Flächen **um Sprötze und Trelde** weist das Konzept teilweise eine hohe bis sehr hohe potenzielle Gefährdung durch **Winderosion** aus.',
-                    'Beim Bevölkerungsschutz wird außerdem Sprötze als Standort der Ortsfeuerwehr genannt. Dort wird ein **mobiles Notstromaggregat** vorgehalten.',
-                ],
-            },
-            {
-                title: 'Was soll beschlossen werden?',
-                paragraphs: [
-                    'Vorgesehen ist, dem Klimaanpassungskonzept zuzustimmen. Außerdem soll sich die Stadt um weitere **Fördermittel für die Umsetzung** bewerben.',
-                    'Zu den vorgesehenen Maßnahmen gehören unter anderem ein **Starkregenkonzept**, die Rückhaltung und Versickerung von Regenwasser, Klimaanpassung in sozialen Einrichtungen sowie weitere Maßnahmen für Stadtgrün und Gewässer.',
-                ],
-            },
-            {
-                title: 'Noch keine konkreten Maßnahmen für Sprötze beschlossen',
-                paragraphs: [
-                    'Mit der Beratung des Klimaanpassungskonzepts werden noch **keine einzelnen Baumaßnahmen in Sprötze beschlossen**. Das Konzept bildet zunächst eine Grundlage dafür, welche Projekte in den kommenden Jahren weiter geplant und umgesetzt werden sollen.',
+                    '**Klimaanpassungskonzept**: Die Klimaanpassungsmanagerin der Stadt und der beauftragte Dienstleister energielenker stellen das neue Konzept vor. Der Ausschuss soll darüber beraten, ob der Rat dem Konzept zustimmen soll. Außerdem möchte die Stadt eine Folgeförderung für die weitere Umsetzung beantragen.',
+                    '**Bezüge zu Sprötze**: Im Konzept wird festgehalten, dass Klimaanpassung beim Neu- und Anbau der **Grundschule Sprötze-Trelde** bereits berücksichtigt wird. Beim **Sprötzer Bach** werden Defizite beim ökologischen Zustand genannt. Rund um **Sprötze und Trelde** weisen landwirtschaftliche Flächen teilweise eine hohe bis sehr hohe Gefährdung durch Winderosion auf.',
+                    '**Feuerwehr und Bevölkerungsschutz**: Das Konzept betrachtet auch die Folgen von Extremwetter für den Bevölkerungsschutz. Ein mobiles Notstromaggregat der Feuerwehr wird am **Standort Sprötze** vorgehalten.',
+                    '**Weitere Tagesordnung**: Neben Berichten des Vorsitzenden und des Bürgermeisters sind Einwohnerfragestunden sowie Anfragen der Ausschussmitglieder vorgesehen. Weitere konkrete Sachthemen stehen im öffentlichen Teil derzeit nicht auf der Tagesordnung.',
                 ],
             },
         ],
+        link: 'https://www.buchholz.de/allris/to010?SILFDNR=1000967&refresh=false',
+        linkLabel: 'Zur öffentlichen Sitzungsseite',
     },
     {
         id: 'ausschuss-finanzen-2026-09-30',
@@ -190,37 +178,23 @@ export const scheduleItems: ScheduleModel[] = [
         category: 'Ausschuss Wirtschaft, Finanzen, Verwaltung und Digitalisierung',
         date: '2026-09-30',
         time: '18:30 Uhr',
-        title: 'Bürgerstrom und Beteiligung an erneuerbaren Energien',
+        title: 'Bürgerstrom, BuchholzBus und Weihnachtsmarkt',
         location: 'Torbogenzimmer, Rathaus Buchholz',
         summary: [
-            'Für Sprötze ist vor allem die Beratung über **Bürgerbeteiligung bei erneuerbaren Energien** interessant. Vorgeschlagen werden unter anderem ein **regionaler Bürgerstrom-Tarif** und Möglichkeiten zur direkten finanziellen Beteiligung der Einwohnerschaft.',
+            'Der Ausschuss berät unter anderem über die weitere KMU-Förderung, den Weihnachtsmarkt 2026, Grundsatzentscheidungen zum BuchholzBus sowie Bürgerbeteiligung und regionale Wertschöpfung bei erneuerbaren Energien.',
         ],
         introduction: [
-            'Die Stadt soll eine Strategie entwickeln, mit der bei neuen **Windkraft- und Photovoltaikprojekten** mehr Wertschöpfung in der Region bleibt und Einwohner direkt beteiligt werden können.',
-            'Vorgesehen sind unter anderem ein **regionaler Bürgerstrom-Tarif**, finanzielle Beteiligungsmöglichkeiten und eine Beteiligung der Kommune nach § 6 EEG. Für Einwohner aus Sprötze könnte das bei künftigen Energieprojekten im Stadtgebiet interessant werden.',
+            'Einen eigenen Tagesordnungspunkt zu Sprötze gibt es nicht. Für Sprötzer sind aber mehrere **stadtweite Themen** interessant: mögliche **finanzielle Beteiligungen an Wind- und Solarprojekten** und ein regionaler **Bürgerstrom-Tarif**, Entscheidungen rund um den **BuchholzBus** sowie die **Ausrichtung des Weihnachtsmarktes 2026**.',
         ],
         sections: [
             {
-                title: 'Was wird beraten?',
+                title: 'Tagesordnungspunkte',
                 paragraphs: [
-                    'Bei städtischen Flächen für Windkraft- oder Photovoltaikanlagen sowie bei entsprechenden Bauleitplanungen soll die Zusammenarbeit mit den **Stadtwerken Buchholz** und Bürgerenergiegenossenschaften stärker berücksichtigt werden.',
-                    'Außerdem sollen Leitlinien für zukünftige Projekte entwickelt werden. Dazu gehören ein **regionaler Bürgerstrom-Tarif** und Angebote, mit denen sich Einwohner auch finanziell beteiligen können – beispielsweise über Genossenschaften oder andere Beteiligungsmodelle.',
-                ],
-            },
-            {
-                title: 'Was bedeutet das für Sprötze?',
-                paragraphs: [
-                    'Die Vorlage bezieht sich auf das gesamte Stadtgebiet und nennt **kein konkretes Energieprojekt in Sprötze**.',
-                    'Interessant ist das Thema trotzdem: Die geplanten Regeln könnten künftig bestimmen, wie Einwohner bei neuen Windkraft- oder Photovoltaikprojekten beteiligt werden und ob es dafür besondere Stromtarife oder finanzielle Beteiligungsmöglichkeiten gibt.',
-                    '**Noch ist nichts beschlossen.** Der Ausschuss berät den Vorschlag zunächst vor.',
-                ],
-            },
-            {
-                title: 'Weitere Themen der Sitzung',
-                paragraphs: [
-                    '**BuchholzBus:** Beraten wird, wie der Stadtrat künftig bei wichtigen Entscheidungen zu Betriebszeiten, Linienführung, möglichen Angebotskürzungen und Finanzierung beteiligt wird. **Die Busverbindungen in Sprötze selbst sind dabei kein Thema.** Gerade weil die Anbindung in Sprötze immer wieder diskutiert wird, ist diese Abgrenzung wichtig.',
-                    '**Weihnachtsmarkt:** Die Stadt will den Buchholzer Weihnachtsmarkt vom **23. November bis 23. Dezember 2026** ausrichten. Dafür sollen zusätzliche Haushaltsmittel bereitgestellt werden.',
-                    'Außerdem geht es unter anderem um die **KMU-Förderung** sowie Jahresabschlüsse und Wirtschaftspläne städtischer Gesellschaften.',
+                    '**KMU-Förderung**: Die Stadt soll sich bis 2033 weiter an der Förderung kleiner und mittlerer Unternehmen des Landkreises Harburg beteiligen. Davon können grundsätzlich auch Unternehmen aus Sprötze profitieren.',
+                    '**Weihnachtsmarkt 2026**: Die Stadt soll den Buchholzer Weihnachtsmarkt vom 23. November bis 23. Dezember 2026 selbst veranstalten. Dafür sollen außerplanmäßig **60.000 Euro** bereitgestellt werden.',
+                    '**BuchholzBus**: Beraten wird, wie der Rat künftig bei wichtigen Entscheidungen über Betriebszeiten, Angebotskürzungen, Linienführung und die Finanzierung des BuchholzBus beteiligt wird. **Eine konkrete Änderung für Sprötze ist mit diesem Tagesordnungspunkt nicht verbunden.**',
+                    '**Erneuerbare Energien und Bürgerstrom**: Bei künftigen Windkraft- und Photovoltaikprojekten soll stärker darauf geachtet werden, dass die wirtschaftliche Wertschöpfung in der Region bleibt. Vorgesehen sind unter anderem Kooperationen mit den Stadtwerken und Bürgerenergiegenossenschaften, ein **regionaler Bürgerstrom-Tarif** sowie Möglichkeiten für Einwohner, sich **finanziell an Projekten zu beteiligen**.',
+                    '**Wirtschaftsbetriebe**: Außerdem wird beraten, wie der Rat künftig regelmäßig über die wirtschaftliche Entwicklung der Wirtschaftsbetriebe informiert werden soll. Dazu gehören unter anderem Bus, Bad, Gas, Strom, Wasser, Digitales und Netze.',
                 ],
             },
         ],

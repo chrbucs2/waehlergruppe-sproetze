@@ -1,6 +1,6 @@
 import { LegalLinks } from '../components/legal/LegalLinks';
 import { useMemo, useRef, useState } from 'react';
-import { Button } from '../components/shared/Button';
+import { Button } from '../components/shared/button/Button';
 
 import { candidates, electionResults, priorities, teamMembers } from '../data';
 import { NEWS_PATH } from '../lib/constants';

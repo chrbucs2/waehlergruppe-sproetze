@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { assetUrl } from '../../lib/formatting';
 
-const OverviewHeaderLogoRoot = styled.div`
+const HeaderLogoRoot = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,7 +13,7 @@ const OverviewHeaderLogoRoot = styled.div`
     }
 `;
 
-const OverviewHeaderLogoImage = styled.img`
+const HeaderLogoImage = styled.img`
     display: block;
     width: min(20vw, 220px);
     max-width: 220px;
@@ -21,16 +21,16 @@ const OverviewHeaderLogoImage = styled.img`
     object-fit: contain;
 `;
 
-interface OverviewHeaderLogoProps {
+interface HeaderLogoProps {
     alt: string;
     label: string;
     path: string;
 }
 
-export function OverviewHeaderLogo({ alt, label, path }: OverviewHeaderLogoProps) {
+export function HeaderLogo({ alt, label, path }: HeaderLogoProps) {
     return (
-        <OverviewHeaderLogoRoot aria-label={label}>
-            <OverviewHeaderLogoImage src={assetUrl(path)} alt={alt} />
-        </OverviewHeaderLogoRoot>
+        <HeaderLogoRoot aria-label={label}>
+            <HeaderLogoImage src={assetUrl(path)} alt={alt} />
+        </HeaderLogoRoot>
     );
 }
