@@ -1,3 +1,5 @@
+import styled from 'styled-components';
+
 import { SiteFooter } from '../components/SiteFooter';
 import { DetailBackLink } from '../components/detail/DetailBackLink';
 import { DetailHeading } from '../components/detail/DetailHeading';
@@ -5,15 +7,31 @@ import { DetailIntroduction } from '../components/detail/DetailIntroduction';
 import { DetailSections } from '../components/detail/DetailSections';
 import { DetailSource } from '../components/detail/DetailSource';
 import { NEWS_INDEX_PATH } from '../lib/constants';
+import { ArticleModel } from '../models/ArticleModel';
 
-export function ArticlePage({ article, onShowImpressum, onShowDatenschutz }) {
+const ArticleContent = styled.section`
+    background: linear-gradient(180deg, #e6effb80, #f9f6fff2); 
+    display: grid;
+    gap: 24px;
+    .section-heading {
+        margin-bottom: 0;
+    }
+`;
+
+export interface ArticlePageParams {
+    article?: ArticleModel;
+    onShowImpressum: () => void;
+    onShowDatenschutz: () => void;
+}
+
+export function ArticlePage({ article, onShowImpressum, onShowDatenschutz }: ArticlePageParams) {
     if (!article) {
         return null;
     }
 
     return (
         <>
-            <section className="content content--soft news-article-page">
+            <ArticleContent className="content">
                 <DetailBackLink href={NEWS_INDEX_PATH} />
 
                 <DetailHeading
@@ -33,7 +51,7 @@ export function ArticlePage({ article, onShowImpressum, onShowDatenschutz }) {
                 )}
 
                 <DetailSource sources={article.sources ?? []} />
-            </section>
+            </ArticleContent>
 
             <SiteFooter onShowImpressum={onShowImpressum} onShowDatenschutz={onShowDatenschutz} />
         </>
