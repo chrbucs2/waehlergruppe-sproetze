@@ -5,7 +5,7 @@ import { DetailSectionLink } from './DetailSectionLink';
 import { DetailSectionList } from './DetailSectionList';
 import { DetailSectionSubHeading } from './DetailSectionSubHeading';
 import { DetailSectionText } from './DetailSectionText';
-import { DetailSectionModel } from '../../models/DetailSectionModel';
+import { DetailModel } from '../../models/DetailModel';
 
 const Container = styled.section`
     display: grid;
@@ -23,7 +23,7 @@ const Container = styled.section`
     }
 `;
 
-interface DetailSectionProps extends DetailSectionModel {}
+interface DetailSectionProps extends DetailModel {}
 
 export function DetailSection({ title, paragraphs = [], image }: DetailSectionProps) {
     return (

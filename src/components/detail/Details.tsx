@@ -6,7 +6,7 @@ import { DetailIntroduction } from './DetailIntroduction';
 import { DetailSections } from './DetailSections';
 import { DetailTopics } from './DetailTopics';
 import { DetailSectionLink } from './DetailSectionLink';
-import { DetailSource } from './DetailSource';
+import { DetailSources } from './DetailSources';
 import { DetailHeadingModel } from '../../models/DetailHeadingModel';
 import { DetailSectionLinkModel } from '../../models/DetailSectionLinkModel';
 import { DetailModel } from '../../models/DetailModel';
@@ -59,7 +59,7 @@ export function Details({
             {introduction && <DetailIntroduction paragraphs={introduction} />}
             {sections && <DetailSections sections={sections} />}
             {topics && <DetailTopics topics={topics} />}
-            {sources && <DetailSource sources={sources} />}
+            {sources && <DetailSources sources={sources} />}
             {link && <DetailSectionLink href={link.href} text={link.text} />}
         </Container>
     );

@@ -1,7 +1,5 @@
-export interface DetailSectionLinkModel {
+import {LinkModel} from "./LinkModel";
+
+export interface DetailSectionLinkModel extends LinkModel {
     type: 'link';
-    text: string;
-    href?: string;
-    slug?: string;
-    indent?: boolean;
 }

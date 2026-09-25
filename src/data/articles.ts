@@ -1,4 +1,6 @@
-export const articles = [
+import {ArticleModel} from "../models/ArticleModel";
+
+export const articles: ArticleModel[] = [
     {
         id: 'stadteingang-west-bremer-strasse',
         slug: 'stadteingang-west-bremer-strasse',

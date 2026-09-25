@@ -9,9 +9,10 @@ const Container = styled.aside`
 `;
 
 const Title = styled.h3`
-    margin: 0;
-    font-size: 1.1rem;
-    color: var(--text);
+    display: block;
+    font-size: 1.17em;
+    font-weight: bold;
+    unicode-bidi: isolate;
 `;
 
 const List = styled.ul`
@@ -37,7 +38,7 @@ interface DetailSourceProps {
     sources: DetailSourceModel[];
 }
 
-export function DetailSource({ sources }: DetailSourceProps) {
+export function DetailSources({ sources }: DetailSourceProps) {
     if (!sources.length) {
         return null;
     }

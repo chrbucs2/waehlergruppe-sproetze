@@ -1,4 +1,4 @@
-export function normalizePath(pathname) {
+export function normalizePath(pathname: string) {
     if (!pathname) {
         return '/';
     }

@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 import { formatInlineMarkup } from '../../lib/formatting';
-import { DetailIntroductionModel } from '../../models/DetailIntroductionModel';
 
 const Container = styled.div`
     margin: 0;
@@ -27,7 +26,11 @@ const Paragraph = styled.p`
     }
 `;
 
-export function DetailIntroduction({ paragraphs }: DetailIntroductionModel) {
+export interface DetailIntroductionProps {
+    paragraphs: string[];
+}
+
+export function DetailIntroduction({ paragraphs }: DetailIntroductionProps) {
     if (!paragraphs.length) {
         return null;
     }

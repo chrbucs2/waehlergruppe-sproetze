@@ -37,7 +37,7 @@ export function DetailHeading(model: DetailHeadingModel) {
     if (type === 'article') {
         eyebrow = `${model.category} · ${formatDate(model.publishedAt)}${model.modifiedAt ? ` · aktualisiert am ${formatDate(model.modifiedAt)}` : ''}`;
     } else if (type === 'schedule') {
-        eyebrow = `${model.category} · ${formatDate(model.scheduleDate)} · ${model.scheduleTime}`;
+        eyebrow = `${model.category} · ${formatDate(model.date)} · ${model.time}`;
     } else if (type === 'news') {
         eyebrow = formatDate(model.publishedAt);
     }

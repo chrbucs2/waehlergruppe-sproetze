@@ -18,7 +18,7 @@ export interface DetailHeadingScheduleModel {
     type: 'schedule';
     title: string;
     category: string;
-    scheduleDate: string;
-    scheduleTime: string;
+    date: string;
+    time: string;
     location?: string;
 }

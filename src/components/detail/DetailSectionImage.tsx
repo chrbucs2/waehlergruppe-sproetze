@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import {DetailSectionImageModel} from "../../models/DetailSectionImageModel";
+import {imageContainerStyles} from "../shared/commonStyles";
 
 const Figure = styled.figure`
     margin: 1rem 0 0;
@@ -12,9 +13,8 @@ const Image = styled.img`
     width: min(100%, 960px);
     max-height: 620px;
     object-fit: contain;
-    border-radius: 16px;
-    border: 1px solid var(--border);
     background: rgba(255, 255, 255, 0.6);
+    ${imageContainerStyles()}
 `;
 
 const Caption = styled.figcaption`

@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 import { DetailSection } from './DetailSection';
-import { DetailSectionModel } from '../../models/DetailSectionModel';
+import { DetailModel } from '../../models/DetailModel';
+import {containerStyles} from "../shared/commonStyles";
 
 const Container = styled.article`
     width: 100%;
@@ -10,13 +11,12 @@ const Container = styled.article`
     gap: 12px;
     padding: 20px;
     background: linear-gradient(135deg, rgba(249, 247, 255, 0.94), rgba(222, 213, 244, 0.7));
-    border: 1px solid var(--border);
-    border-radius: 24px;
     align-content: start;
+    ${containerStyles()}
 `;
 
 interface DetailSectionsProps {
-    sections: DetailSectionModel[];
+    sections: DetailModel[];
 }
 
 export function DetailSections({ sections }: DetailSectionsProps) {
