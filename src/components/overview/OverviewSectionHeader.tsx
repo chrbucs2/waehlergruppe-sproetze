@@ -13,7 +13,6 @@ const OverviewSectionHeaderRoot = styled.div`
 const OverviewSectionHeaderTitle = styled.h2`
     margin: 0;
     font-size: clamp(1.6rem, 3vw, 2.4rem);
-    max-width: 18ch;
 `;
 
 const OverviewSectionHeaderCopy = styled.p`
