@@ -183,7 +183,7 @@ Typische Inhalte für die Detailsseite:
 Typische Inhalte für die Übersichtsseite:
 - Allgemein:  `id`, `slug` (in der Regel der gleiche Wert)
 - Header: `title`, `category`, `date`, `time`
-- Zusammenfassung: `details`
+- Zusammenfassung: `summary`
 
 Typische Inhalte für die Detailsseite:
 - Header: `title`, `category`, `date`, `time`, `location`
@@ -202,10 +202,10 @@ Typische Inhalte für die Detailsseite:
     time: '18:30 Uhr',
     title: 'Titel für den Termin',
     location: 'Wo der Termin stattfindet',
-    details: [
+    summary: [
         'Dies ist ein einleitender Text für die Übersichtsseite.',
         'Der kann auch über mehrere Absätze gehen und **fett gedruckten Text** enthalten.',
-    ]
+    ],
     introduction: [
         'Dies ist ein einleitender Text.',
         'Der kann auch über mehrere Absätze gehen und **fett gedruckten Text** enthalten.',

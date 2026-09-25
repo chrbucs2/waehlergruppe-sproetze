@@ -83,7 +83,7 @@ News-Beiträge mit Datum, Kurztext, optionaler Detailsseite und Themen.
 Übergreifende Artikelseiten mit ausführlicher Einleitung, Sections, Bildern, Themen und Quellenangaben.
 
 ### `scheduleItems.js`
-Relevante Sitzungstermine mit Details, Ergebnissen und optionalem Link.
+Relevante Sitzungstermine mit Summary, Details, Ergebnissen und optionalem Link.
 
 Zentrale Inhalte für `/sprötze-aktuell`:
 

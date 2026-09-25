@@ -9,8 +9,9 @@ export const scheduleItems: ScheduleModel[] = [
         time: '18:30 Uhr',
         title: 'Bebauungsplan Sprötzer Weg',
         location: 'Kantine, Rathaus Buchholz',
-        details:
+        summary: [
             'Im Mittelpunkt der Sitzung standen der **Bebauungsplan „Sprötzer Weg / An den Tennisplätzen“**, die weitere Planung des Lerchenparks auf dem ehemaligen Rütgersgelände sowie die Neuausrichtung des Innenstadtmanagements.',
+        ],
         introduction: [
             'Für Sprötze besonders wichtig: Der Ausschuss empfahl den **Satzungsbeschluss für den Bebauungsplan „Sprötzer Weg / An den Tennisplätzen“** mit 5 Ja-Stimmen und 1 Enthaltung. Beim Lerchenpark wurde außerdem eine neue Verkehrsprognose vorgestellt, die unter anderem den Knoten **Bremer Straße / Seppenser Mühlenweg** betrachtet.'
         ],
@@ -54,8 +55,9 @@ export const scheduleItems: ScheduleModel[] = [
         time: '17:30 Uhr',
         title: 'Grundstücksangelegenheit in der Niedersachsenstraße 13',
         location: 'Torbogenzimmer, Rathaus Buchholz',
-        details:
+        summary: [
             'Im Mittelpunkt der Sitzung des Ortsrates Sprötze am 15. Juni 2026 standen die Berichte der Ortsbürgermeisterin und des Bürgermeisters sowie aktuelle Anfragen aus dem Ortsrat. Im nichtöffentlichen Teil wurde zudem die **Veräußerung eines Wohngrundstücks in der Niedersachsenstraße 13** behandelt.',
+        ],
         introduction: [
             'Als Sitzung des Ortsrates ist der Termin unmittelbar für Sprötze relevant: Hier werden örtliche Anliegen aufgegriffen und Informationen aus Stadt und Ortschaft ausgetauscht.',
         ],
@@ -80,8 +82,9 @@ export const scheduleItems: ScheduleModel[] = [
         time: '18:30 Uhr',
         title: 'Wohnungsbau in der Niedersachsenstraße, Buchholz Bus und Stadtentwicklung',
         location: 'Kantine, Rathaus Buchholz',
-        details:
+        summary: [
             'Für Sprötze besonders relevant war die geplante **Bebauung an der Niedersachsenstraße 13**. Außerdem standen die erste Zwischenbilanz zum **Bauturbo**, der **Buchholz Bus**, ein mögliches Rechenzentrum im Bahnhofsumfeld Nord und weitere Stadtentwicklungsthemen auf der Tagesordnung.',
+        ],
         introduction: [
             'Bei der **Niedersachsenstraße 13** geht es um eine Bauvoranfrage für zwei Mehrfamilienhäuser mit **12 bis 15 Wohnungen und zwei Gewerbeeinheiten**. Das Vorhaben weicht deutlich vom geltenden Bebauungsplan ab. Die Fachabteilung hält die Abweichungen unter bestimmten Bedingungen für vertretbar und empfiehlt die Zustimmung.'
         ],
@@ -148,8 +151,9 @@ export const scheduleItems: ScheduleModel[] = [
         time: '18:30 Uhr',
         title: 'Klimaanpassungskonzept für Buchholz',
         location: 'Kantine, Rathaus Buchholz',
-        details:
+        summary: [
             'Der Ausschuss berät über das neue **Klimaanpassungskonzept für Buchholz**. Es enthält Maßnahmen zu Starkregen, Hitze, Regenwasserrückhalt, Stadtgrün und Gewässern. Auch für **Sprötze** finden sich darin konkrete Bezüge.',
+        ],
         introduction: [
             'Das Klimaanpassungskonzept soll künftig als Grundlage dafür dienen, wie sich Buchholz auf **Hitze, Starkregen, Trockenheit und andere Klimafolgen** vorbereitet.',
             'Für Sprötze interessant sind unter anderem Aussagen zum **Sprötzer Bach**, zur **Grundschule Sprötze-Trelde**, zu landwirtschaftlichen Flächen rund um Sprötze und Trelde sowie zum Bevölkerungsschutz.',
@@ -188,8 +192,9 @@ export const scheduleItems: ScheduleModel[] = [
         time: '18:30 Uhr',
         title: 'Bürgerstrom und Beteiligung an erneuerbaren Energien',
         location: 'Torbogenzimmer, Rathaus Buchholz',
-        details:
+        summary: [
             'Für Sprötze ist vor allem die Beratung über **Bürgerbeteiligung bei erneuerbaren Energien** interessant. Vorgeschlagen werden unter anderem ein **regionaler Bürgerstrom-Tarif** und Möglichkeiten zur direkten finanziellen Beteiligung der Einwohnerschaft.',
+        ],
         introduction: [
             'Die Stadt soll eine Strategie entwickeln, mit der bei neuen **Windkraft- und Photovoltaikprojekten** mehr Wertschöpfung in der Region bleibt und Einwohner direkt beteiligt werden können.',
             'Vorgesehen sind unter anderem ein **regionaler Bürgerstrom-Tarif**, finanzielle Beteiligungsmöglichkeiten und eine Beteiligung der Kommune nach § 6 EEG. Für Einwohner aus Sprötze könnte das bei künftigen Energieprojekten im Stadtgebiet interessant werden.',
@@ -230,8 +235,9 @@ export const scheduleItems: ScheduleModel[] = [
         time: '19:00 Uhr',
         title: 'Letzte reguläre Ratssitzung der bisherigen Wahlperiode',
         location: 'Saal EMPORE',
-        details:
+        summary: [
             'Der Rat der Stadt kommt zu seiner letzten regulären Sitzung der bisherigen Wahlperiode zusammen.',
+        ],
         introduction: [
             'Die Sitzung gehört zu den letzten Beratungen des bisherigen Stadtrates vor Beginn der neuen kommunalen Wahlperiode.',
         ],
@@ -244,8 +250,9 @@ export const scheduleItems: ScheduleModel[] = [
         time: '19:00 Uhr',
         title: 'Konstituierende Sitzung des neuen Stadtrates',
         location: 'Saal EMPORE',
-        details:
+        summary: [
             'Mit der konstituierenden Sitzung beginnt die Arbeit des neu gewählten Rates der Stadt Buchholz in der neuen Wahlperiode.',
+        ],
         introduction: [
             'Im Mittelpunkt stehen die organisatorischen und personellen Grundlagen für die politische Arbeit der neuen Wahlperiode.',
         ],
@@ -267,8 +274,9 @@ export const scheduleItems: ScheduleModel[] = [
         time: '19:30 Uhr',
         title: 'Konstituierende Sitzung des neu gewählten Ortsrates',
         location: 'Schützenhaus Sprötze',
-        details:
+        summary: [
             'Der neu gewählte Ortsrat Sprötze kommt erstmals zusammen und schafft die organisatorischen Grundlagen für die neue Wahlperiode.',
+        ],
         introduction: [
             'Die Sitzung markiert den Beginn der neuen Wahlperiode des Ortsrates und stellt die organisatorischen Weichen für dessen weitere Arbeit.',
         ],
@@ -290,8 +298,9 @@ export const scheduleItems: ScheduleModel[] = [
         time: '19:00 Uhr',
         title: 'Reguläre Ratssitzung',
         location: 'Saal EMPORE',
-        details:
+        summary: [
             'Der Rat der Stadt kommt im Dezember zu einer regulären Sitzung der neuen Wahlperiode zusammen. Die konkreten Schwerpunkte richten sich nach der veröffentlichten Tagesordnung.',
+        ],
         introduction: [
             'Nach der Konstituierung des neuen Rates stehen die regulären politischen Beratungen und Entscheidungen der neuen Wahlperiode im Mittelpunkt.',
         ],

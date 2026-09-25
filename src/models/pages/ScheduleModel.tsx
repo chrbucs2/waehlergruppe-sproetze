@@ -4,7 +4,7 @@ import {DetailHeadingScheduleModel} from "../details/DetailHeadingModel";
 export interface ScheduleModel extends Omit<DetailHeadingScheduleModel, 'type'>{
     id: string;
     slug: string;
-    details: string;
+    summary: string[];
     introduction?: string[];
     sections?: DetailModel[];
     link?: string;

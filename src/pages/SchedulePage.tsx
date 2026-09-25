@@ -94,7 +94,13 @@ export function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug 
                                 <strong>{formatDate(item.date)} · {item.time}</strong>
                             </div>
                             <h4>{item.title}</h4>
-                            <p dangerouslySetInnerHTML={{ __html: formatInlineMarkup(item.details) }} />
+                            <ul>
+                                {item.summary.map((summary, index) => (
+                                    <li key={`${item.id}-summary-${index}`}>
+                                        <p dangerouslySetInnerHTML={{ __html: formatInlineMarkup(summary) }} />
+                                    </li>
+                                ))}
+                            </ul>
                             {(item.introduction?.length || item.sections?.length) && (
                                 <a className="news-card__link" href={`${buildScheduleDetailUrl(item.slug)}`}>
                                     Termin öffnen
@@ -127,7 +133,13 @@ export function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug 
                                 <strong>{formatDate(item.date)} · {item.time}</strong>
                             </div>
                             <h4>{item.title}</h4>
-                            <p dangerouslySetInnerHTML={{ __html: formatInlineMarkup(item.details) }} />
+                            <ul>
+                                {item.summary.map((summary, index) => (
+                                    <li key={`${item.id}-summary-${index}`}>
+                                        <p dangerouslySetInnerHTML={{ __html: formatInlineMarkup(summary) }} />
+                                    </li>
+                                ))}
+                            </ul>
                             {(item.introduction?.length || item.sections?.length) && (
                                 <a className="news-card__link" href={`${buildScheduleDetailUrl(item.slug)}`}>
                                     Termin öffnen
