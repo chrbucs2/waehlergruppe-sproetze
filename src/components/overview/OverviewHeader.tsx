@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 import { OverviewHeaderActions } from './OverviewHeaderActions';
 import { OverviewHeaderLogo } from './OverviewHeaderLogo';
+import { Eyebrow } from '../shared/Eyebrow';
 import {containerBorderStyles} from "../shared/commonStyles";
 
 interface OverviewHeaderProps {
@@ -31,12 +32,12 @@ const OverviewHeaderCopy = styled.div`
     gap: 18px;
 `;
 
-const OverviewHeaderEyebrow = styled.p`
-    margin: 0;
-`;
-
 const OverviewHeaderLead = styled.p`
     margin: 0;
+    font-size: 1.08rem;
+    line-height: 1.7;
+    max-width: 60ch;
+    color: var(--muted);
 `;
 
 const OverviewHeaderTitle = styled.h1`
@@ -48,11 +49,11 @@ export function OverviewHeader({ eyebrow, title, lead, actions }: OverviewHeader
     return (
         <OverviewHeaderRoot>
             <OverviewHeaderCopy>
-                <OverviewHeaderEyebrow className="eyebrow">{eyebrow}</OverviewHeaderEyebrow>
+                <Eyebrow>{eyebrow}</Eyebrow>
                 <OverviewHeaderTitle>{title}</OverviewHeaderTitle>
-                    <OverviewHeaderLead className="lead">{lead}</OverviewHeaderLead>
-                    <OverviewHeaderActions actions={actions} />
-                </OverviewHeaderCopy>
+                <OverviewHeaderLead>{lead}</OverviewHeaderLead>
+                <OverviewHeaderActions actions={actions} />
+            </OverviewHeaderCopy>
             <OverviewHeaderLogo />
         </OverviewHeaderRoot>
     );
