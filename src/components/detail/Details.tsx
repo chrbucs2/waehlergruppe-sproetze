@@ -8,10 +8,9 @@ import { DetailTopics } from './DetailTopics';
 import { DetailSectionLink } from './DetailSectionLink';
 import { DetailSources } from './DetailSources';
 import { DetailHeadingModel } from '../../models/details/DetailHeadingModel';
-import { DetailSectionLinkModel } from '../../models/details/DetailSectionLinkModel';
 import { DetailModel } from '../../models/details/DetailModel';
 import { DetailSourceModel } from '../../models/details/DetailSourceModel';
-import { containerStyles } from '../shared/commonStyles';
+import { containerBorderStyles } from '../shared/commonStyles';
 
 const Container = styled.section`
     background: linear-gradient(180deg, #e6effb80, #f9f6fff2);
@@ -20,7 +19,7 @@ const Container = styled.section`
     width: 100%;
     margin-top: 18px;
     padding: 28px;
-    ${containerStyles(true)}
+    ${containerBorderStyles(true)}
 
     .section-heading {
         margin-bottom: 0;

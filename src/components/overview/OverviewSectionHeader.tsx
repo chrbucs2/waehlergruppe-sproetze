@@ -2,12 +2,6 @@ import styled from 'styled-components';
 
 import { Eyebrow } from '../shared/Eyebrow';
 
-interface OverviewSectionHeaderProps {
-    eyebrow: string;
-    title: string;
-    copy?: string;
-}
-
 const OverviewSectionHeaderRoot = styled.div`
     display: grid;
     gap: 10px;
@@ -29,6 +23,12 @@ const OverviewSectionHeaderCopy = styled.p`
     max-width: none;
     width: 100%;
 `;
+
+interface OverviewSectionHeaderProps {
+    eyebrow: string;
+    title: string;
+    copy?: string;
+}
 
 export function OverviewSectionHeader({ eyebrow, title, copy }: OverviewSectionHeaderProps) {
     return (

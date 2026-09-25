@@ -1,7 +1,7 @@
 import { Details } from '../components/detail/Details';
 import { SiteFooter } from '../components/SiteFooter';
 import { buildNewsOverviewUrl } from '../lib/content';
-import { NEWS_INDEX_PATH } from '../lib/constants';
+import { NEWS_PATH } from '../lib/constants';
 import { ArticleModel } from '../models/pages/ArticleModel';
 
 export interface ArticlePageParams {
@@ -25,7 +25,8 @@ export function ArticlePage({ article, onShowImpressum, onShowDatenschutz }: Art
     return (
         <>
             <Details
-                backHref={NEWS_INDEX_PATH}
+                backHref={NEWS_PATH}
+                backText={'Zu den News'}
                 heading={{
                     type: 'article',
                     title: article.title,

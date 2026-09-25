@@ -4,9 +4,11 @@ import { SiteFooter } from '../components/SiteFooter';
 import { Details } from '../components/detail/Details';
 import { scheduleItems } from '../data';
 import {buildScheduleDetailUrl, getScheduleItemBySlug, getScheduleStatus, sortScheduleByDate} from '../lib/content';
-import { SCHEDULE_PATH } from '../lib/constants';
-import { assetUrl, formatDate, formatInlineMarkup } from '../lib/formatting';
+import {NEWS_PATH, SCHEDULE_PATH} from '../lib/constants';
+import { formatDate, formatInlineMarkup } from '../lib/formatting';
 import { ScheduleModel } from '../models/pages/ScheduleModel';
+import { OverviewHeader } from '../components/overview/OverviewHeader';
+import {OverviewSectionHeader} from "../components/overview/OverviewSectionHeader";
 
 interface SchedulePageProps {
     onShowImpressum: () => void;
@@ -60,32 +62,21 @@ export function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug 
 
     return (
         <>
-            <section className="hero hero--schedule">
-                <div className="hero__copy">
-                    <p className="eyebrow">Termine</p>
-                    <h1 className="schedule-page__title">Termine für Sprötze</h1>
-                    <p className="lead schedule-page__lead">
-                        Der nächste relevante Termin zuerst, weitere bei Bedarf.
-                    </p>
-                    <div className="hero__actions hero__actions--schedule">
-                        <a className="button button--primary" href="/">
-                            Zur WGS Startseite
-                        </a>
-                        <a className="button button--secondary" href="/sproetze-aktuell">
-                            Zu den News
-                        </a>
-                    </div>
-                </div>
-                <div className="hero__brand" aria-label="Logo der Wählergruppe Sprötze">
-                    <img src={assetUrl('logo.png')} alt="Logo der Wählergruppe Sprötze" />
-                </div>
-            </section>
+            <OverviewHeader
+                eyebrow="Termine"
+                title="Termine für Sprötze"
+                lead="Der nächste relevante Termin zuerst, weitere bei Bedarf."
+                actions={[
+                    {href: '/', label: 'Zur WGS Startseite', variant: 'primary'},
+                    {href: NEWS_PATH, label: 'Zu den News', variant: 'secondary'},
+                ]}
+            />
 
             <section className="content" id="kommende-termine">
-                <div className="section-heading">
-                    <p className="eyebrow">Anstehend</p>
-                    <h2>Der nächste Termin</h2>
-                </div>
+                <OverviewSectionHeader
+                    eyebrow="Anstehend"
+                    title="Der nächste Termin"
+                />
                 <div className="schedule-list">
                     {visibleUpcomingSchedule.map((item) => (
                         <article className="schedule-card" key={item.id}>
@@ -121,10 +112,10 @@ export function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug 
             </section>
 
             <section className="content content--soft" id="vergangene-termine">
-                <div className="section-heading">
-                    <p className="eyebrow">Rückblick</p>
-                    <h2>Vergangene Sitzungen</h2>
-                </div>
+                <OverviewSectionHeader
+                    eyebrow="Rückblick"
+                    title="Vergangene Sitzungen"
+                />
                 <div className="schedule-list">
                     {pastSchedule.map((item) => (
                         <article className="schedule-card" key={item.id}>

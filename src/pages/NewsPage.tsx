@@ -1,8 +1,9 @@
-import { useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 import { SiteFooter } from '../components/SiteFooter';
 import { Details } from '../components/detail/Details';
 import { OverviewHeader } from '../components/overview/OverviewHeader';
+import { OverviewSectionHeader } from '../components/overview/OverviewSectionHeader';
 import { filterTopics, news } from '../data';
 import {
     buildArticleUrl,
@@ -12,7 +13,7 @@ import {
     getTopicById,
     sortNewsByDate
 } from '../lib/content';
-import {NEWS_PATH, SCHEDULE_PATH} from '../lib/constants';
+import { NEWS_PATH, SCHEDULE_PATH } from '../lib/constants';
 import { formatDate, formatInlineMarkup } from '../lib/formatting';
 import { DetailModel } from '../models/details/DetailModel';
 import { NewsModel } from '../models/pages/NewsModel';
@@ -46,13 +47,21 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
     const detailArticle = hasOwnDetailContent ? activeArticle : referencedArticle ?? activeArticle;
     const backHref = activeTopic ? `${NEWS_PATH}?thema=${activeTopic.id}` : NEWS_PATH;
 
-    const visibleArticles = useMemo(() => {
-        if (!activeTopic) {
+    const [selectedTopicId, setSelectedTopicId] = useState<string | null>(topicId ?? null);
+
+    useEffect(() => {
+        setSelectedTopicId(topicId ?? null);
+    }, [topicId]);
+
+    const selectedTopic = selectedTopicId ? getTopicById(selectedTopicId) : activeTopic;
+
+    const filteredArticles = useMemo(() => {
+        if (!selectedTopic) {
             return orderedArticles;
         }
 
-        return orderedArticles.filter((article) => article.topicIds.includes(activeTopic.id));
-    }, [activeTopic, orderedArticles]);
+        return orderedArticles.filter((article) => article.topicIds.includes(selectedTopic.id));
+    }, [orderedArticles, selectedTopic]);
 
     const renderMarkup = (text: string) => ({ __html: formatInlineMarkup(text) });
     const getSummaryParagraphs = (summary: string | string[]) => (Array.isArray(summary) ? summary : [summary]);
@@ -99,23 +108,26 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
             />
 
             <section className="content content--soft" id="news-feed">
-                <div className="section-heading">
-                    <p className="eyebrow">Themenfilter</p>
-                    <h2>{activeTopic ? `News zu ${activeTopic.label}` : 'Alle aktuellen Meldungen'}</h2>
-                    <p className="section-copy">
-                        {activeTopic ? activeTopic.description : 'Beiträge sind nach Veröffentlichungsdatum sortiert — der neueste Beitrag steht immer zuerst.'}
-                    </p>
-                </div>
+                <OverviewSectionHeader
+                    eyebrow="Themenfilter"
+                    title={selectedTopic ? `News zu ${selectedTopic.label}` : 'Alle aktuellen Meldungen'}
+                    copy={selectedTopic?.description || 'Beiträge sind nach Veröffentlichungsdatum sortiert — der neueste Beitrag steht immer zuerst.'}
+                />
 
                 <div className="topic-filter">
-                    <a className={`topic-filter__chip${!activeTopic ? ' is-active' : ''}`} href={NEWS_PATH}>
+                    <a
+                        type="link"
+                        className={`topic-filter__chip${!selectedTopic ? ' is-active' : ''}`}
+                        onClick={() => setSelectedTopicId(null)}
+                    >
                         Alle Themen
                     </a>
                     {availableTopics.map((topic) => (
                         <a
+                            type="link"
                             key={topic.id}
-                            className={`topic-filter__chip${activeTopic?.id === topic.id ? ' is-active' : ''}`}
-                            href={`${NEWS_PATH}?thema=${topic.id}`}
+                            className={`topic-filter__chip${selectedTopic?.id === topic.id ? ' is-active' : ''}`}
+                            onClick={() => setSelectedTopicId(topic.id)}
                         >
                             {topic.label}
                         </a>
@@ -123,7 +135,7 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
                 </div>
 
                 <div className="news-list">
-                    {visibleArticles.map((article) => {
+                    {filteredArticles.map((article) => {
                         const newsDetailHref = buildNewsDetailUrl(article.slug);
                         const hasNewsDetailLink = Boolean(article.introduction?.length && article.sections?.length);
                         const articleHref = buildArticleUrl(article.articleLink);

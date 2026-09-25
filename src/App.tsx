@@ -6,7 +6,7 @@ import { ArticlePage } from './pages/ArticlePage';
 import { HomePage } from './pages/HomePage';
 import { NewsPage } from './pages/NewsPage';
 import { SchedulePage } from './pages/SchedulePage';
-import { NEWS_INDEX_PATH, SCHEDULE_PATH, THANK_YOU_MODAL_STORAGE_KEY } from './lib/constants';
+import { NEWS_PATH, SCHEDULE_PATH, THANK_YOU_MODAL_STORAGE_KEY } from './lib/constants';
 import { getGeneralArticleBySlug, getNewsArticleBySlug } from './lib/content';
 import { getPathFromLocation, getSearchFromLocation, normalizePath } from './lib/routing';
 
@@ -68,8 +68,8 @@ function App() {
     const topicId = params.get('thema');
     const legacyArticleSlug = params.get('artikel');
     const legacyScheduleSlug = params.get('termin');
-    const newsDetailSlug = currentPath.startsWith(`${normalizePath(NEWS_INDEX_PATH)}/`)
-        ? currentPath.slice(normalizePath(NEWS_INDEX_PATH).length + 1)
+    const newsDetailSlug = currentPath.startsWith(`${normalizePath(NEWS_PATH)}/`)
+        ? currentPath.slice(normalizePath(NEWS_PATH).length + 1)
         : null;
     const generalArticleSlug = currentPath.startsWith('/artikel/')
         ? currentPath.slice('/artikel/'.length)
@@ -81,7 +81,7 @@ function App() {
     const scheduleSlug = legacyScheduleSlug ?? scheduleDetailSlug;
     const generalArticle = articleSlug ? getGeneralArticleBySlug(articleSlug) : null;
     const newsArticle = articleSlug ? getNewsArticleBySlug(articleSlug) : null;
-    const isNewsPage = currentPath === normalizePath(NEWS_INDEX_PATH) || !!newsDetailSlug;
+    const isNewsPage = currentPath === normalizePath(NEWS_PATH) || !!newsDetailSlug;
     const isSchedulePage = currentPath === normalizePath(SCHEDULE_PATH) || !!scheduleDetailSlug;
 
     return (

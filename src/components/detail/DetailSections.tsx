@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { DetailSection } from './DetailSection';
 import { DetailModel } from '../../models/details/DetailModel';
-import {containerStyles} from "../shared/commonStyles";
+import {containerBorderStyles} from "../shared/commonStyles";
 
 const Container = styled.article`
     width: 100%;
@@ -12,7 +12,7 @@ const Container = styled.article`
     padding: 20px;
     background: linear-gradient(135deg, rgba(249, 247, 255, 0.94), rgba(222, 213, 244, 0.7));
     align-content: start;
-    ${containerStyles()}
+    ${containerBorderStyles()}
 `;
 
 interface DetailSectionsProps {

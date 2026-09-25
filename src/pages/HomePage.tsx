@@ -2,7 +2,7 @@ import { LegalLinks } from '../components/legal/LegalLinks';
 import { useMemo, useRef, useState } from 'react';
 
 import { candidates, electionResults, priorities, teamMembers } from '../data';
-import { NEWS_INDEX_PATH } from '../lib/constants';
+import { NEWS_PATH } from '../lib/constants';
 import { assetUrl } from '../lib/formatting';
 
 interface HomePageProps {
@@ -130,7 +130,7 @@ export function HomePage({ onShowImpressum, onShowDatenschutz }: HomePageProps) 
                         <a className="button button--secondary" href="#personen">
                             Unser Team
                         </a>
-                        <a className="button button--secondary" href={NEWS_INDEX_PATH}>
+                        <a className="button button--secondary" href={NEWS_PATH}>
                             Sprötze aktuell
                         </a>
                     </div>

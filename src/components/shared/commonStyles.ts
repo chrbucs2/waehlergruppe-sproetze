@@ -1,6 +1,6 @@
 import { css } from 'styled-components';
 
-export const containerStyles =
+export const containerBorderStyles =
     (shadow = false) => css`
         border: 1px solid var(--border);
         border-radius: 28px;

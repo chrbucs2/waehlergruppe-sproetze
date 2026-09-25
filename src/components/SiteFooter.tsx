@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { LegalLinks } from './legal/LegalLinks';
-import { containerStyles } from './shared/commonStyles';
+import { containerBorderStyles } from './shared/commonStyles';
 
 interface SiteFooterProps {
     onShowImpressum: () => void;
@@ -15,7 +15,7 @@ const Footer = styled.footer`
     align-items: center;
     justify-content: space-between;
     background: rgba(123, 74, 124, 0.12);
-    ${containerStyles(true)}
+    ${containerBorderStyles(true)}
 `;
 
 const Brand = styled.div`

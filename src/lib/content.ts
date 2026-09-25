@@ -1,14 +1,14 @@
-import {NEWS_INDEX_PATH, SCHEDULE_PATH} from './constants';
+import {NEWS_PATH, SCHEDULE_PATH} from './constants';
 
 import { articles, filterTopics, news, scheduleItems } from '../data';
 import {LinkModel} from "../models/LinkModel";
 
 export function buildNewsOverviewUrl(topicId: string) {
-    return `${NEWS_INDEX_PATH}?thema=${topicId}`;
+    return `${NEWS_PATH}?thema=${topicId}`;
 }
 
 export function buildNewsDetailUrl(slug: string) {
-    return `${NEWS_INDEX_PATH}/${slug}`;
+    return `${NEWS_PATH}/${slug}`;
 }
 
 export function buildScheduleDetailUrl(slug: string) {
