@@ -77,13 +77,13 @@ Rechtliche Texte:
 Themenbereiche für `/sprötze-aktuell`.
 
 ### `news.js`
-News-Beiträge mit Datum, Kurztext, Langtext und Themen.
+News-Beiträge mit Datum, Kurztext, optionaler Detailsseite und Themen.
 
 ### `articles.js`
-Übergreifende Artikelseiten mit ausführlicher Einleitung, Sections, Bildern und Quellenangaben.
+Übergreifende Artikelseiten mit ausführlicher Einleitung, Sections, Bildern, Themen und Quellenangaben.
 
 ### `scheduleItems.js`
-Relevante Sitzungstermine mit Details, Ergebnissen und optionalem News-Link.
+Relevante Sitzungstermine mit Details, Ergebnissen und optionalem Link.
 
 Zentrale Inhalte für `/sprötze-aktuell`:
 

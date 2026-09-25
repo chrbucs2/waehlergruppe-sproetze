@@ -117,7 +117,7 @@ export const articles = [
     '**Neue Kita am Sprötzer Weg geplant.** Der Bebauungsplan soll geändert werden.',
     'Die Planung geht über die Kita hinaus und erlaubt auch weitere soziale, kulturelle und sportliche Angebote.',
   ],
-  articleLink: { slug: 'bebauungsplan-sproetzer-weg', label: 'Bebauungsplan Sprötzer Weg' },
+  articleLink: { slug: 'bebauungsplan-sproetzer-weg', text: 'Bebauungsplan Sprötzer Weg' },
 };
 ```
 
@@ -134,8 +134,8 @@ export const articles = [
     '**An der Bahnbrücke der K72 in Sprötze stehen weitere Arbeiten an.**',
   ],
   articleLink: {
-    link: 'https://www.kreiszeitung-wochenblatt.de/buchholz/c-panorama/bauarbeiten-an-bahnbruecke-in-sproetze-teilweise-vollsperrung_a419984',
-    label: 'Wochenblatt-Artikel',
+    href: 'https://www.kreiszeitung-wochenblatt.de/buchholz/c-panorama/bauarbeiten-an-bahnbruecke-in-sproetze-teilweise-vollsperrung_a419984',
+    text: 'Wochenblatt-Artikel',
   },
 };
 ```
@@ -200,4 +200,3 @@ In den Beispielen kommen diese Elemente vor:
 - externe Links per `[Text](https://...)`
 - eingerückte Links via `indent: true`
 - `articleLink.slug` und `articleLink.link`
-
