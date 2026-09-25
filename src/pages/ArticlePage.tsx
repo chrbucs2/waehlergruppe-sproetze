@@ -2,7 +2,7 @@ import { Details } from '../components/detail/Details';
 import { SiteFooter } from '../components/SiteFooter';
 import { buildNewsOverviewUrl } from '../lib/content';
 import { NEWS_INDEX_PATH } from '../lib/constants';
-import { ArticleModel } from '../models/ArticleModel';
+import { ArticleModel } from '../models/pages/ArticleModel';
 
 export interface ArticlePageParams {
     article?: ArticleModel;

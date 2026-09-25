@@ -1,7 +1,7 @@
-import { DetailSectionLinkModel } from './DetailSectionLinkModel';
-import { DetailModel } from './DetailModel';
-import {DetailHeadingNewsModel} from "./DetailHeadingModel";
-import {LinkModel} from "./LinkModel";
+import { DetailSectionLinkModel } from '../details/DetailSectionLinkModel';
+import { DetailModel } from '../details/DetailModel';
+import {DetailHeadingNewsModel} from "../details/DetailHeadingModel";
+import {LinkModel} from "../LinkModel";
 
 export interface NewsModel extends Omit<DetailHeadingNewsModel, 'type'>{
     id: string;

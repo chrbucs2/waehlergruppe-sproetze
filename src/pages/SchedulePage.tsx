@@ -6,7 +6,7 @@ import { scheduleItems } from '../data';
 import {buildScheduleDetailUrl, getScheduleItemBySlug, getScheduleStatus, sortScheduleByDate} from '../lib/content';
 import { SCHEDULE_PATH } from '../lib/constants';
 import { assetUrl, formatDate, formatInlineMarkup } from '../lib/formatting';
-import { ScheduleModel } from '../models/ScheduleModel';
+import { ScheduleModel } from '../models/pages/ScheduleModel';
 
 interface SchedulePageProps {
     onShowImpressum: () => void;
@@ -32,11 +32,7 @@ export function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug 
     if (activeScheduleItem) {
         const currentSchedule: ScheduleModel = activeScheduleItem;
         const sections = currentSchedule.sections ?? [];
-        const introduction = Array.isArray(currentSchedule.introduction)
-            ? currentSchedule.introduction
-            : currentSchedule.introduction
-                ? [currentSchedule.introduction]
-                : undefined;
+        const introduction = currentSchedule.introduction ?? [];
         return (
             <>
                 <Details
@@ -99,7 +95,7 @@ export function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug 
                             </div>
                             <h4>{item.title}</h4>
                             <p dangerouslySetInnerHTML={{ __html: formatInlineMarkup(item.details) }} />
-                            {item.sections?.length && (
+                            {(item.introduction?.length || item.sections?.length) && (
                                 <a className="news-card__link" href={`${buildScheduleDetailUrl(item.slug)}`}>
                                     Termin öffnen
                                 </a>
@@ -132,7 +128,7 @@ export function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug 
                             </div>
                             <h4>{item.title}</h4>
                             <p dangerouslySetInnerHTML={{ __html: formatInlineMarkup(item.details) }} />
-                            {item.sections?.length && (
+                            {(item.introduction?.length || item.sections?.length) && (
                                 <a className="news-card__link" href={`${buildScheduleDetailUrl(item.slug)}`}>
                                     Termin öffnen
                                 </a>

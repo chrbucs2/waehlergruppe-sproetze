@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { formatInlineMarkup } from '../../lib/formatting';
-import {DetailSectionListModel} from "../../models/DetailSectionListModel";
+import {DetailSectionListModel} from "../../models/details/DetailSectionListModel";
 
 const List = styled.ul`
     margin: 0;

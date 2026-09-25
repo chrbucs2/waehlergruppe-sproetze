@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { formatInlineMarkup } from '../../lib/formatting';
-import {DetailSectionSubheadingModel} from "../../models/DetailSectionSubheadingModel";
+import {DetailSectionSubheadingModel} from "../../models/details/DetailSectionSubheadingModel";
 
 const SubHeading = styled.p`
     margin: 0.25rem 0 0;

@@ -13,8 +13,8 @@ import {
 } from '../lib/content';
 import { NEWS_INDEX_PATH } from '../lib/constants';
 import { assetUrl, formatDate, formatInlineMarkup } from '../lib/formatting';
-import { DetailModel } from '../models/DetailModel';
-import { NewsModel } from '../models/NewsModel';
+import { DetailModel } from '../models/details/DetailModel';
+import { NewsModel } from '../models/pages/NewsModel';
 
 interface NewsPageProps {
     onShowImpressum: () => void;

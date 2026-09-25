@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { formatDate } from '../../lib/formatting';
-import { DetailHeadingModel } from '../../models/DetailHeadingModel';
+import { DetailHeadingModel } from '../../models/details/DetailHeadingModel';
 
 const Eyebrow = styled.p`
     margin: 0;

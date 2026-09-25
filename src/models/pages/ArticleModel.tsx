@@ -1,6 +1,6 @@
-import {DetailHeadingArticleModel} from "./DetailHeadingModel";
-import {DetailModel} from "./DetailModel";
-import {DetailSourceModel} from "./DetailSourceModel";
+import {DetailHeadingArticleModel} from "../details/DetailHeadingModel";
+import {DetailModel} from "../details/DetailModel";
+import {DetailSourceModel} from "../details/DetailSourceModel";
 
 export interface ArticleModel extends Omit<DetailHeadingArticleModel, 'type'> {
     id: string,

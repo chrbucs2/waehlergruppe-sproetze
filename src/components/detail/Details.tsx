@@ -7,10 +7,10 @@ import { DetailSections } from './DetailSections';
 import { DetailTopics } from './DetailTopics';
 import { DetailSectionLink } from './DetailSectionLink';
 import { DetailSources } from './DetailSources';
-import { DetailHeadingModel } from '../../models/DetailHeadingModel';
-import { DetailSectionLinkModel } from '../../models/DetailSectionLinkModel';
-import { DetailModel } from '../../models/DetailModel';
-import { DetailSourceModel } from '../../models/DetailSourceModel';
+import { DetailHeadingModel } from '../../models/details/DetailHeadingModel';
+import { DetailSectionLinkModel } from '../../models/details/DetailSectionLinkModel';
+import { DetailModel } from '../../models/details/DetailModel';
+import { DetailSourceModel } from '../../models/details/DetailSourceModel';
 import { containerStyles } from '../shared/commonStyles';
 
 const Container = styled.section`

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { formatInlineMarkup } from '../../lib/formatting';
-import {DetailSectionLinkModel} from "../../models/DetailSectionLinkModel";
+import {DetailSectionLinkModel} from "../../models/details/DetailSectionLinkModel";
 
 const LinkNote = styled.p<{ $indent: boolean }>`
     display: inline-flex;

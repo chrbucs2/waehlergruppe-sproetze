@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {DetailSectionImageModel} from "../../models/DetailSectionImageModel";
+import {DetailSectionImageModel} from "../../models/details/DetailSectionImageModel";
 import {imageContainerStyles} from "../shared/commonStyles";
 
 const Figure = styled.figure`

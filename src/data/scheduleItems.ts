@@ -1,4 +1,4 @@
-import { ScheduleModel } from '../models/ScheduleModel';
+import { ScheduleModel } from '../models/pages/ScheduleModel';
 
 export const scheduleItems: ScheduleModel[] = [
     {

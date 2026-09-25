@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { DetailSourceModel } from '../../models/DetailSourceModel';
+import { DetailSourceModel } from '../../models/details/DetailSourceModel';
 
 const Container = styled.aside`
     display: grid;

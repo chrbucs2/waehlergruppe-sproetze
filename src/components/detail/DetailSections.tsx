@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { DetailSection } from './DetailSection';
-import { DetailModel } from '../../models/DetailModel';
+import { DetailModel } from '../../models/details/DetailModel';
 import {containerStyles} from "../shared/commonStyles";
 
 const Container = styled.article`

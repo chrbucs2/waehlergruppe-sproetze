@@ -1,4 +1,4 @@
-import {LinkModel} from "./LinkModel";
+import {LinkModel} from "../LinkModel";
 
 export interface DetailSectionLinkModel extends LinkModel {
     type: 'link';

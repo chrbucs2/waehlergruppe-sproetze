@@ -37,7 +37,7 @@ function App() {
             setShowThankYouModal(true);
         }
 
-        const handleEscKey = (event) => {
+        const handleEscKey = (event: any) => {
             if (event.key === 'Escape') {
                 setShowImpressum(false);
                 setShowDatenschutz(false);

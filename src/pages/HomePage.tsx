@@ -5,16 +5,38 @@ import { candidates, electionResults, priorities, teamMembers } from '../data';
 import { NEWS_INDEX_PATH } from '../lib/constants';
 import { assetUrl } from '../lib/formatting';
 
-export function HomePage({ onShowImpressum, onShowDatenschutz }) {
-    const [activePriority, setActivePriority] = useState(priorities[0]);
-    const [activeCandidate, setActiveCandidate] = useState(candidates[0]);
-    const [activeTeamMemberName, setActiveTeamMemberName] = useState(null);
-    const [showElectionInfo, setShowElectionInfo] = useState(false);
-    const priorityDetailRef = useRef(null);
-    const candidateDetailRef = useRef(null);
-    const teamSectionRef = useRef(null);
+interface HomePageProps {
+    onShowImpressum: () => void;
+    onShowDatenschutz: () => void;
+}
+
+type Candidate = typeof candidates[number];
+type TeamMember = typeof teamMembers[number];
+type TeamMemberWithElection = TeamMember & {
+    election?: {
+        name: string;
+        rank: number;
+        votes: number;
+        elected: boolean;
+    };
+};
+type TeamMemberRef = { current: { scrollIntoView: (options: ScrollIntoViewOptions) => void } | null };
+type TeamMemberDetail = TeamMember['details'][number];
+
+function hasIconImage(detail: TeamMemberDetail): detail is TeamMemberDetail & { iconImage: string; iconAlt: string } {
+    return 'iconImage' in detail;
+}
+
+export function HomePage({ onShowImpressum, onShowDatenschutz }: HomePageProps) {
+    const [activePriority, setActivePriority] = useState<(typeof priorities)[number]>(priorities[0]);
+    const [activeCandidate, setActiveCandidate] = useState<Candidate>(candidates[0]);
+    const [activeTeamMemberName, setActiveTeamMemberName] = useState<string | null>(null);
+    const [showElectionInfo, setShowElectionInfo] = useState<boolean>(false);
+    const priorityDetailRef = useRef<HTMLElement | null>(null);
+    const candidateDetailRef = useRef<HTMLElement | null>(null);
+    const teamSectionRef = useRef<HTMLElement | null>(null);
     const activeTeamMember = teamMembers.find((member) => member.name === activeTeamMemberName) ?? null;
-    const heroFaces = teamMembers;
+    const heroFaces: TeamMember[] = teamMembers;
     const teamMembersByElectionRank = useMemo(
         () => [...teamMembers].sort((left, right) => {
             const leftResult = electionResults.allCandidateResults.find((entry) => entry.name === left.name);
@@ -23,15 +45,14 @@ export function HomePage({ onShowImpressum, onShowDatenschutz }) {
         }),
         [],
     );
-    const electedTeamMembers = useMemo(
+    const electedTeamMembers = useMemo<TeamMemberWithElection[]>(
         () => electionResults.electedCandidates
             .slice()
             .sort((left, right) => left.rank - right.rank)
-            .map((result) => {
+            .flatMap((result) => {
                 const member = teamMembers.find((entry) => entry.name === result.name);
-                return member ? { ...member, election: result } : null;
-            })
-            .filter(Boolean),
+                return member ? [{ ...member, election: result } as TeamMemberWithElection] : [];
+            }),
         [],
     );
 
@@ -44,7 +65,7 @@ export function HomePage({ onShowImpressum, onShowDatenschutz }) {
         'Lokalen Interessen von Sprötze!',
     ];
 
-    const scrollDetailIntoView = (detailRef) => {
+    const scrollDetailIntoView = (detailRef: TeamMemberRef) => {
         if (!window.matchMedia('(max-width: 900px)').matches) {
             return;
         }
@@ -54,11 +75,11 @@ export function HomePage({ onShowImpressum, onShowDatenschutz }) {
         });
     };
 
-    const handleTeamMemberSelect = (memberName) => {
+    const handleTeamMemberSelect = (memberName: string) => {
         setActiveTeamMemberName((current) => (current === memberName ? null : memberName));
     };
 
-    const handleElectedMemberJump = (memberName) => {
+    const handleElectedMemberJump = (memberName: string) => {
         setActiveTeamMemberName(memberName);
         requestAnimationFrame(() => {
             teamSectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -136,7 +157,7 @@ export function HomePage({ onShowImpressum, onShowDatenschutz }) {
                 </div>
                 {showElectionInfo && (
                     <div className="election-overlay" onClick={closeElectionInfo}>
-                        <article
+                        <div
                             className="election-modal"
                             id="election-info-overlay"
                             role="dialog"
@@ -178,7 +199,7 @@ export function HomePage({ onShowImpressum, onShowDatenschutz }) {
                                     </a>
                                 </p>
                             </div>
-                        </article>
+                        </div>
                     </div>
                 )}
                 {electedTeamMembers.map((member) => (
@@ -308,8 +329,8 @@ export function HomePage({ onShowImpressum, onShowDatenschutz }) {
                                 </div>
                                 <ul className="team-detail__facts">
                                     {activeTeamMember.details.map((detail) => (
-                                        <li key={`${detail.icon || detail.iconImage || 'icon'}-${detail.text}`}>
-                                            {detail.iconImage ? (
+                                        <li key={`${hasIconImage(detail) ? detail.iconImage : detail.icon}-${detail.text}`}>
+                                            {hasIconImage(detail) ? (
                                                 <img
                                                     className="team-detail__icon-image"
                                                     src={assetUrl(detail.iconImage)}

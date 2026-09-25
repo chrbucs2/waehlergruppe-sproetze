@@ -1,4 +1,4 @@
-import { NewsModel } from '../models/NewsModel';
+import { NewsModel } from '../models/pages/NewsModel';
 
 export const news: NewsModel[] = [
     {
