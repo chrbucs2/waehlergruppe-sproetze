@@ -2,6 +2,7 @@ import { useMemo } from 'react';
 
 import { SiteFooter } from '../components/SiteFooter';
 import { Details } from '../components/detail/Details';
+import { OverviewHeader } from '../components/overview/OverviewHeader';
 import { filterTopics, news } from '../data';
 import {
     buildArticleUrl,
@@ -11,8 +12,8 @@ import {
     getTopicById,
     sortNewsByDate
 } from '../lib/content';
-import { NEWS_INDEX_PATH } from '../lib/constants';
-import { assetUrl, formatDate, formatInlineMarkup } from '../lib/formatting';
+import {NEWS_PATH, SCHEDULE_PATH} from '../lib/constants';
+import { formatDate, formatInlineMarkup } from '../lib/formatting';
 import { DetailModel } from '../models/details/DetailModel';
 import { NewsModel } from '../models/pages/NewsModel';
 
@@ -43,7 +44,7 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
                 (Array.isArray(activeArticle.sections) && activeArticle.sections.length > 0)),
     );
     const detailArticle = hasOwnDetailContent ? activeArticle : referencedArticle ?? activeArticle;
-    const backHref = activeTopic ? `${NEWS_INDEX_PATH}?thema=${activeTopic.id}` : NEWS_INDEX_PATH;
+    const backHref = activeTopic ? `${NEWS_PATH}?thema=${activeTopic.id}` : NEWS_PATH;
 
     const visibleArticles = useMemo(() => {
         if (!activeTopic) {
@@ -87,26 +88,15 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
 
     return (
         <>
-            <section className="hero hero--news">
-                <div className="hero__copy">
-                    <p className="eyebrow">Sprötze aktuell</p>
-                    <h1>News und Themen aus Sprötze</h1>
-                    <p className="lead">
-                        Hier pflegen wir aktuelle Meldungen zentral an einer Stelle.
-                    </p>
-                    <div className="hero__actions hero__actions--news">
-                        <a className="button button--primary" href="/">
-                            Zur WGS Startseite
-                        </a>
-                        <a className="button button--secondary" href="/termine">
-                            Zur Terminseite
-                        </a>
-                    </div>
-                </div>
-                <div className="hero__brand" aria-label="Logo der Wählergruppe Sprötze">
-                    <img src={assetUrl('logo.png')} alt="Logo der Wählergruppe Sprötze" />
-                </div>
-            </section>
+            <OverviewHeader
+                eyebrow="Sprötze aktuell"
+                title="News und Themen aus Sprötze"
+                lead="Hier pflegen wir aktuelle Meldungen zentral an einer Stelle."
+                actions={[
+                    { href: '/', label: 'Zur WGS Startseite', variant: 'primary' },
+                    { href: SCHEDULE_PATH, label: 'Zur Terminseite', variant: 'secondary' },
+                ]}
+            />
 
             <section className="content content--soft" id="news-feed">
                 <div className="section-heading">
@@ -118,14 +108,14 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
                 </div>
 
                 <div className="topic-filter">
-                    <a className={`topic-filter__chip${!activeTopic ? ' is-active' : ''}`} href={NEWS_INDEX_PATH}>
+                    <a className={`topic-filter__chip${!activeTopic ? ' is-active' : ''}`} href={NEWS_PATH}>
                         Alle Themen
                     </a>
                     {availableTopics.map((topic) => (
                         <a
                             key={topic.id}
                             className={`topic-filter__chip${activeTopic?.id === topic.id ? ' is-active' : ''}`}
-                            href={`${NEWS_INDEX_PATH}?thema=${topic.id}`}
+                            href={`${NEWS_PATH}?thema=${topic.id}`}
                         >
                             {topic.label}
                         </a>

@@ -69,54 +69,6 @@ a {
   align-items: center;
 }
 
-.hero--news {
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: center;
-}
-
-.hero.hero--schedule {
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: center;
-}
-
-.hero--news h1 {
-  font-size: clamp(1.75rem, 2.9vw, 2.55rem);
-  line-height: 1.08;
-  max-width: 18ch;
-}
-
-.schedule-page__title {
-  font-size: clamp(1.65rem, 2.5vw, 2.3rem) !important;
-  max-width: none !important;
-}
-
-.schedule-page__lead {
-  font-size: 0.98rem;
-  line-height: 1.55;
-  max-width: 60ch;
-}
-
-.hero__copy {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-.hero__brand {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 180px;
-}
-
-.hero__brand img {
-  display: block;
-  width: min(20vw, 220px);
-  max-width: 220px;
-  height: auto;
-  object-fit: contain;
-}
-
 .eyebrow,
 .stat-card span,
 .priority-chip span {
@@ -150,58 +102,11 @@ h1 {
   color: var(--muted);
 }
 
-.hero__actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.hero__actions--schedule,
-.hero__actions--news {
-  justify-content: flex-start;
-}
-
-.hero--news .hero__copy {
-  width: 100%;
-}
-
-.hero--news h1 {
-  max-width: none;
-}
-
-.button {
-  appearance: none;
-  border: 0;
-  border-radius: 999px;
-  padding: 14px 18px;
-  font: inherit;
-  font-weight: 700;
-  cursor: pointer;
-  transition:
-    transform 160ms ease,
-    box-shadow 160ms ease,
-    background 160ms ease;
-}
-
-.button:hover,
-.button:focus-visible,
 .priority-chip:hover,
 .priority-chip:focus-visible,
 .footer__link:hover,
 .footer__link:focus-visible {
   transform: translateY(-1px);
-}
-
-.button--primary {
-  color: #fff;
-  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-  box-shadow: 0 16px 30px rgba(93, 55, 93, 0.32);
-}
-
-.button--secondary {
-  background: rgba(255, 255, 255, 0.72);
-  color: var(--accent-dark);
-  border: 1px solid var(--border);
 }
 
 .hero__group {
@@ -1111,8 +1016,7 @@ h1 {
     grid-template-columns: 1fr;
   }
 
-  .hero--news,
-  .hero.hero--schedule {
+  .hero--news {
     grid-template-columns: 1fr;
   }
 
