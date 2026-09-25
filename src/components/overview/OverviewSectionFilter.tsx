@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 
+import { FilterButton } from '../shared/FilterButton';
+import {buildNewsOverviewUrl} from "../../lib/content";
+
 const OverviewSectionFilterRoot = styled.div`
     display: flex;
     flex-wrap: wrap;
@@ -9,28 +12,23 @@ const OverviewSectionFilterRoot = styled.div`
 interface OverviewSectionFilterProps {
     items: Array<{ id: string; label: string }>;
     activeId?: string | null;
-    onSelect: (id: string | null) => void;
 }
 
-export function OverviewSectionFilter({ items, activeId, onSelect }: OverviewSectionFilterProps) {
+export function OverviewSectionFilter({ items, activeId }: OverviewSectionFilterProps) {
     return (
         <OverviewSectionFilterRoot className="topic-filter">
-            <a
-                type="link"
-                className={`topic-filter__chip${!activeId ? ' is-active' : ''}`}
-                onClick={() => onSelect(null)}
-            >
+            <FilterButton href="/sproetze-aktuell" active={!activeId}>
                 Alle Themen
-            </a>
+            </FilterButton>
+            
             {items.map((item) => (
-                <a
+                <FilterButton
                     key={item.id}
-                    type="link"
-                    className={`topic-filter__chip${activeId === item.id ? ' is-active' : ''}`}
-                    onClick={() => onSelect(item.id)}
+                    href={buildNewsOverviewUrl(item.id)}
+                    active={activeId === item.id}
                 >
                     {item.label}
-                </a>
+                </FilterButton>
             ))}
         </OverviewSectionFilterRoot>
     );

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo } from 'react';
 
 import { SiteFooter } from '../components/SiteFooter';
 import { Details } from '../components/detail/Details';
@@ -48,13 +48,7 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
     const detailArticle = hasOwnDetailContent ? activeArticle : referencedArticle ?? activeArticle;
     const backHref = activeTopic ? `${NEWS_PATH}?thema=${activeTopic.id}` : NEWS_PATH;
 
-    const [selectedTopicId, setSelectedTopicId] = useState<string | null>(topicId ?? null);
-
-    useEffect(() => {
-        setSelectedTopicId(topicId ?? null);
-    }, [topicId]);
-
-    const selectedTopic = selectedTopicId ? getTopicById(selectedTopicId) : activeTopic;
+    const selectedTopic = activeTopic;
 
     const filteredArticles = useMemo(() => {
         if (!selectedTopic) {
@@ -118,7 +112,6 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
                 <OverviewSectionFilter
                     items={availableTopics}
                     activeId={selectedTopic?.id ?? null}
-                    onSelect={setSelectedTopicId}
                 />
 
                 <div className="news-list">
