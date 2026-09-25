@@ -1,10 +1,17 @@
 import { LegalLinks } from '../components/legal/LegalLinks';
 import { useMemo, useRef, useState } from 'react';
-import { Button, HeroButtonRow } from '../components/shared/Button';
+import { Button } from '../components/shared/Button';
 
 import { candidates, electionResults, priorities, teamMembers } from '../data';
 import { NEWS_PATH } from '../lib/constants';
 import { assetUrl } from '../lib/formatting';
+import styled from "styled-components";
+
+export const HeroButtonRow = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+`;
 
 interface HomePageProps {
     onShowImpressum: () => void;

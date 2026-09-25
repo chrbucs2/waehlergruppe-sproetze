@@ -9,6 +9,7 @@ import { formatDate, formatInlineMarkup } from '../lib/formatting';
 import { ScheduleModel } from '../models/pages/ScheduleModel';
 import { OverviewHeader } from '../components/overview/OverviewHeader';
 import {OverviewSectionHeader} from "../components/overview/OverviewSectionHeader";
+import {Eyebrow} from "../components/shared/Eyebrow";
 
 interface SchedulePageProps {
     onShowImpressum: () => void;
@@ -80,18 +81,15 @@ export function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug 
                 <div className="schedule-list">
                     {visibleUpcomingSchedule.map((item) => (
                         <article className="schedule-card" key={item.id}>
+                            <Eyebrow>{item.category}</Eyebrow>
                             <div className="schedule-card__head">
                                 <p className="eyebrow">{item.category}</p>
                                 <strong>{formatDate(item.date)} · {item.time}</strong>
                             </div>
                             <h4>{item.title}</h4>
-                            <ul>
-                                {item.summary.map((summary, index) => (
-                                    <li key={`${item.id}-summary-${index}`}>
-                                        <p dangerouslySetInnerHTML={{ __html: formatInlineMarkup(summary) }} />
-                                    </li>
-                                ))}
-                            </ul>
+                            {item.summary.map((summary, index) => (
+                                <p key={`${item.id}-summary-${index}`} dangerouslySetInnerHTML={{ __html: formatInlineMarkup(summary) }} />
+                            ))}
                             {(item.introduction?.length || item.sections?.length) && (
                                 <a className="news-card__link" href={`${buildScheduleDetailUrl(item.slug)}`}>
                                     Termin öffnen
@@ -124,13 +122,9 @@ export function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug 
                                 <strong>{formatDate(item.date)} · {item.time}</strong>
                             </div>
                             <h4>{item.title}</h4>
-                            <ul>
-                                {item.summary.map((summary, index) => (
-                                    <li key={`${item.id}-summary-${index}`}>
-                                        <p dangerouslySetInnerHTML={{ __html: formatInlineMarkup(summary) }} />
-                                    </li>
-                                ))}
-                            </ul>
+                            {item.summary.map((summary, index) => (
+                                <p key={`${item.id}-summary-${index}`} dangerouslySetInnerHTML={{ __html: formatInlineMarkup(summary) }} />
+                            ))}
                             {(item.introduction?.length || item.sections?.length) && (
                                 <a className="news-card__link" href={`${buildScheduleDetailUrl(item.slug)}`}>
                                     Termin öffnen

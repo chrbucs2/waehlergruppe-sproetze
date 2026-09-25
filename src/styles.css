@@ -929,7 +929,7 @@ h1 {
 
 .news-card p,
 .news-detail p,
-.schedule-card p {
+.schedule-card div p, .schedule-card ul p {
   line-height: 1.7;
   color: var(--muted);
 }
@@ -1103,10 +1103,6 @@ h1 {
 .schedule-card__head {
   display: grid;
   gap: 4px;
-}
-
-.schedule-card p {
-  font-size: 0.96rem;
 }
 
 .focus-list {

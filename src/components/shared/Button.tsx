@@ -28,12 +28,6 @@ const ButtonRoot = styled.a<{ $variant: ButtonVariant }>`
     }
 `;
 
-export const HeroButtonRow = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-`;
-
 export function Button({ href, children, variant }: ButtonProps) {
     return (
         <ButtonRoot $variant={variant} href={href}>

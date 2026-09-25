@@ -19,6 +19,7 @@ import { formatDate, formatInlineMarkup } from '../lib/formatting';
 import { DetailModel } from '../models/details/DetailModel';
 import { NewsModel } from '../models/pages/NewsModel';
 import { useQueryParamState } from '../lib/routing';
+import {Eyebrow} from "../components/shared/Eyebrow";
 
 interface NewsPageProps {
     onShowImpressum: () => void;
@@ -119,25 +120,25 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
                 />
 
                 <div className="news-list">
-                    {filteredArticles.map((article) => {
-                        const newsDetailHref = buildNewsDetailUrl(article.slug);
-                        const hasNewsDetailLink = Boolean(article.introduction?.length && article.sections?.length);
-                        const articleHref = buildArticleUrl(article.articleLink);
-                        const articleLabel = article.articleLink?.text ?? 'Beitrag öffnen';
+                    {filteredArticles.map((item) => {
+                        const newsDetailHref = buildNewsDetailUrl(item.slug);
+                        const detailPageLink = Boolean(item.introduction?.length && item.sections?.length);
+                        const articleHref = buildArticleUrl(item.articleLink);
+                        const articleLabel = item.articleLink?.text ?? 'Beitrag öffnen';
 
                         return (
-                            <article className="news-card" key={article.id}>
-                                <p className="eyebrow">{formatDate(article.publishedAt)}</p>
-                                <h3>{article.title}</h3>
-                                {getSummaryParagraphs(article.summary).map((paragraph, index) => (
-                                    <p key={`${article.id}-summary-${index}`} dangerouslySetInnerHTML={renderMarkup(paragraph)} />
+                            <article className="news-card" key={item.id}>
+                                <Eyebrow>{formatDate(item.publishedAt)}</Eyebrow>
+                                <h3>{item.title}</h3>
+                                {getSummaryParagraphs(item.summary).map((paragraph, index) => (
+                                    <p key={`${item.id}-summary-${index}`} dangerouslySetInnerHTML={renderMarkup(paragraph)} />
                                 ))}
-                                {(hasNewsDetailLink || articleHref) && (
+                                {(detailPageLink || articleHref) && (
                                     <div className="news-overview-header-actions">
                                         {articleHref && (
                                             <a className="news-card__link" href={articleHref} dangerouslySetInnerHTML={renderMarkup(articleLabel)} />
                                         )}
-                                        {hasNewsDetailLink && (
+                                        {detailPageLink && (
                                             <a className="news-card__link" href={newsDetailHref} dangerouslySetInnerHTML={renderMarkup('Beitrag öffnen')} />
                                         )}
                                     </div>
