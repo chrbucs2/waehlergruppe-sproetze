@@ -1,4 +1,6 @@
-export const scheduleItems = [
+import { ScheduleModel } from '../models/ScheduleModel';
+
+export const scheduleItems: ScheduleModel[] = [
     {
         id: 'ausschuss-stadtentwicklung-2026-05-06',
         slug: 'ausschuss-stadtentwicklung-2026-05-06',

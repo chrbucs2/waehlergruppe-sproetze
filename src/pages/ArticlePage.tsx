@@ -1,5 +1,6 @@
 import { Details } from '../components/detail/Details';
 import { SiteFooter } from '../components/SiteFooter';
+import { buildNewsOverviewUrl } from '../lib/content';
 import { NEWS_INDEX_PATH } from '../lib/constants';
 import { ArticleModel } from '../models/ArticleModel';
 
@@ -13,6 +14,13 @@ export function ArticlePage({ article, onShowImpressum, onShowDatenschutz }: Art
     if (!article) {
         return null;
     }
+
+    const topics =
+        (article.topicIds ?? [])
+            .map((id) => ({
+                key: id,
+                value: buildNewsOverviewUrl(id)
+            }));
 
     return (
         <>
@@ -28,6 +36,7 @@ export function ArticlePage({ article, onShowImpressum, onShowDatenschutz }: Art
                 introduction={article.introduction}
                 sections={article.sections}
                 sources={article.sources}
+                topics={topics}
             />
 
             <SiteFooter onShowImpressum={onShowImpressum} onShowDatenschutz={onShowDatenschutz} />

@@ -1,9 +1,12 @@
 import {DetailHeadingArticleModel} from "./DetailHeadingModel";
-import {DetailSectionModel} from "./DetailSectionModel";
+import {DetailModel} from "./DetailModel";
 import {DetailSourceModel} from "./DetailSourceModel";
 
-export interface ArticleModel extends DetailHeadingArticleModel {
-    introduction: string[];
-    sections: DetailSectionModel[];
-    sources: DetailSourceModel[];
+export interface ArticleModel extends Omit<DetailHeadingArticleModel, 'type'> {
+    id: string,
+    slug: string,
+    introduction?: string[];
+    sections?: DetailModel[];
+    topicIds?: string[];
+    sources?: DetailSourceModel[];
 }

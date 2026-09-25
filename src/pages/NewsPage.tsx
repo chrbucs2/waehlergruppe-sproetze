@@ -3,12 +3,30 @@ import { useMemo } from 'react';
 import { SiteFooter } from '../components/SiteFooter';
 import { Details } from '../components/detail/Details';
 import { filterTopics, news } from '../data';
-import { getGeneralArticleBySlug, getTopicById, sortNewsByDate } from '../lib/content';
+import {
+    buildArticleUrl,
+    buildNewsDetailUrl,
+    buildNewsOverviewUrl,
+    getGeneralArticleBySlug,
+    getTopicById,
+    sortNewsByDate
+} from '../lib/content';
 import { NEWS_INDEX_PATH } from '../lib/constants';
 import { assetUrl, formatDate, formatInlineMarkup } from '../lib/formatting';
-import {DetailSectionModel} from "../models/DetailSectionModel";
+import { DetailModel } from '../models/DetailModel';
+import { NewsModel } from '../models/NewsModel';
 
-export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleSlug }) {
+interface NewsPageProps {
+    onShowImpressum: () => void;
+    onShowDatenschutz: () => void;
+    topicId?: string | null;
+    articleSlug?: string | null;
+}
+
+type DetailTopic = { key: string; value: string };
+type NewsLink = { href: string; text: string };
+
+export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleSlug }: NewsPageProps) {
     const orderedArticles = useMemo(() => sortNewsByDate(news), []);
     const availableTopics = useMemo(
         () => filterTopics.filter((topic) => orderedArticles.some((article) => article.topicIds.includes(topic.id))),
@@ -16,7 +34,7 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
     );
     const activeTopic = topicId ? getTopicById(topicId) : null;
     const activeArticle = articleSlug ? news.find((article) => article.slug === articleSlug) ?? null : null;
-    const referencedArticle = activeArticle?.articleLink
+    const referencedArticle = activeArticle?.articleLink?.slug
         ? getGeneralArticleBySlug(activeArticle.articleLink.slug)
         : null;
     const hasOwnDetailContent = Boolean(
@@ -36,32 +54,26 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
     }, [activeTopic, orderedArticles]);
 
     const renderMarkup = (text: string) => ({ __html: formatInlineMarkup(text) });
-    const getSummaryParagraphs = (summary) => (Array.isArray(summary) ? summary : [summary]);
-    const hasNewsDetailContent = (article) => Boolean(
-        article &&
-            Array.isArray(article.introduction) &&
-            article.introduction.length > 0 &&
-            Array.isArray(article.sections) &&
-            article.sections.length > 0,
-    );
-
+    const getSummaryParagraphs = (summary: string | string[]) => (Array.isArray(summary) ? summary : [summary]);
     if (activeArticle) {
-        const sections: DetailSectionModel[] = detailArticle?.sections ? detailArticle.sections as DetailSectionModel[] : [];
-        const topics =
-            (activeArticle.topicIds ?? [])
+        const sections: DetailModel[] = detailArticle?.sections ? detailArticle.sections as DetailModel[] : [];
+        const currentArticle: NewsModel = activeArticle;
+        const topics: DetailTopic[] =
+            (currentArticle.topicIds ?? [])
                 .map((id) => ({
                     key: id,
-                    value: `${NEWS_INDEX_PATH}?thema=${id}`
+                    value: buildNewsOverviewUrl(id)
                 }));
 
         return (
             <>
                 <Details
                     backHref={backHref}
+                    backText={'Zurück zu den Sprötze-News'}
                     heading={{
                         type: 'news',
-                        title: activeArticle.title,
-                        publishedAt: activeArticle.publishedAt,
+                        title: currentArticle.title,
+                        publishedAt: currentArticle.publishedAt,
                     }}
                     introduction={detailArticle?.introduction}
                     sections={sections}
@@ -122,12 +134,10 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
 
                 <div className="news-list">
                     {visibleArticles.map((article) => {
-                        const newsDetailHref = `${NEWS_INDEX_PATH}/${article.slug}`;
-                        const hasNewsDetailLink = hasNewsDetailContent(article);
-                        const articleHref = article.articleLink
-                            ? article.articleLink.slug ? `/artikel/${article.articleLink.slug}` : article.articleLink.link
-                            : null;
-                        const articleLabel = article.articleLink?.label ?? 'Beitrag öffnen';
+                        const newsDetailHref = buildNewsDetailUrl(article.slug);
+                        const hasNewsDetailLink = Boolean(article.introduction?.length && article.sections?.length);
+                        const articleHref = buildArticleUrl(article.articleLink);
+                        const articleLabel = article.articleLink?.text ?? 'Beitrag öffnen';
 
                         return (
                             <article className="news-card" key={article.id}>

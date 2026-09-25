@@ -1,4 +1,6 @@
-export const news = [
+import { NewsModel } from '../models/NewsModel';
+
+export const news: NewsModel[] = [
     {
         id: 'gruengutannahme-trelder-berg-2026',
         slug: 'neue-gruengutannahme-gewerbegebiet-trelder-berg',
@@ -9,7 +11,10 @@ export const news = [
             '**Im Gewerbegebiet Trelder Berg gibt es eine neue Annahmestelle für Grüngut.** Seit dem 2. März 2026 können Bürgerinnen und Bürger aus dem Landkreis Harburg können dort täglich bis zu **einen Kubikmeter Grüngut kostenfrei** abgeben. Die Annahme erfolgt ebenerdig in einer Halle und ist damit barrierefreier als am bisherigen Standort in Nenndorf.',
             'Die neue Annahmestelle in der **Ritscherstraße 10** ersetzt die bisherige Grüngutabgabe in Nenndorf und liegt damit auch für Sprötze und Trelde vergleichsweise nah.',
         ],
-        articleLink: { link: 'https://www.landkreis-harburg.de/portal/meldungen/neue-annahmestelle-fuer-gruengut-in-buchholz-901010429-20100.html', label: 'Zur Info-Seite des Landkreises' },
+        articleLink: {
+            href: 'https://www.landkreis-harburg.de/portal/meldungen/neue-annahmestelle-fuer-gruengut-in-buchholz-901010429-20100.html',
+            text: 'Zur Info-Seite des Landkreises'
+        },
     },
     {
         id: 'stadteingang-west-rahmenplan-beratung',
@@ -23,7 +28,7 @@ export const news = [
         ],
         articleLink: {
             slug: 'stadteingang-west-bremer-strasse',
-            label: 'Wohngebiet "Stadteingang West"'
+            text: 'Wohngebiet "Stadteingang West"'
         },
     },
     {
@@ -86,7 +91,10 @@ export const news = [
                 ],
             },
         ],
-        articleLink: { slug: 'bebauungsplan-sproetzer-weg', label: 'Bebauungsplan Sprötzer Weg' },
+        articleLink: {
+            slug: 'bebauungsplan-sproetzer-weg',
+            text: 'Bebauungsplan Sprötzer Weg'
+        },
     },
     {
         id: 'grundschule-sproetze-trelde-ausbau',
@@ -98,7 +106,10 @@ export const news = [
             'Die Grundschule Sprötze-Trelde soll **an beiden Standorten weiterentwickelt werden**. In Sprötze ist ein Teilersatzneubau geplant, in Trelde soll die bestehende Schule erweitert werden.',
             'In Sprötze bildet **Variante 1 mit einem zweigeschossigen Neubau auf dem Pausenhof** die Grundlage der weiteren Planung. Die Tennisplätze und der Sportplatz können dabei bestehen bleiben. In Trelde soll der **einzügige Schulstandort erhalten** und an das benötigte Raumprogramm angepasst werden.',
         ],
-        articleLink: { slug: 'grundschule-sproetze-trelde-ausbau', label: 'Ausbau Grundschule Sprötze-Trelde' },
+        articleLink: {
+            slug: 'grundschule-sproetze-trelde-ausbau',
+            text: 'Ausbau Grundschule Sprötze-Trelde'
+        },
     },
     {
         id: 'bahnbruecke-k72-restarbeiten-september-2026',
@@ -148,7 +159,10 @@ export const news = [
             'Auf dem **Eckgrundstück an der Niedersachsenstraße 13 neben dem Edeka** sind **zwei Mehrfamilienhäuser** mit 12 bis 15 Wohnungen und zwei Gewerbeeinheiten geplant.',
             'Für das Vorhaben sollen die **bisherigen Vorgaben des Bebauungsplans deutlich überschritten** werden: Statt eines Vollgeschosses sind zwei vorgesehen, außerdem sollen Gebäude höher ausfallen und Baugrenzen stellenweise um bis zu 6,20 Meter überschritten werden.',
         ],
-        articleLink: { slug: 'niedersachsenstrasse-13-wohnungsbau', label: 'Bebaungsplan Niedersachsenstraße 13' },
+        articleLink: {
+            slug: 'niedersachsenstrasse-13-wohnungsbau',
+            text: 'Bebaungsplan Niedersachsenstraße 13'
+        },
     },
     {
         id: 'haeckselaktion-buchholz-2026',
@@ -159,7 +173,10 @@ export const news = [
         summary: [
             'Die **mobile Häckselaktion** der Stadt Buchholz findet im **November** wieder statt. An vier Samstagen wird Baum- und Buschschnitt direkt vor angemeldeten Grundstücken zerkleinert. **Für Sprötze steht der genaue Termin noch nicht fest.** Die Stadt will am 19. Oktober bekanntgeben, welche Ortschaft an welchem Aktionstag bedient wird.',
         ],
-        articleLink: { link: 'https://buchholz-aktuell.de/buchholz/jetzt-anmelden-mobile-haecksler-kommen-nach-buchholz-19803', label: 'Buchholz Aktuell: Häckselaktion' },
+        articleLink: {
+            href: 'https://buchholz-aktuell.de/buchholz/jetzt-anmelden-mobile-haecksler-kommen-nach-buchholz-19803',
+            text: 'Buchholz Aktuell: Häckselaktion'
+        },
     },
 ];
 

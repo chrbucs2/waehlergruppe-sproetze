@@ -5,9 +5,11 @@ import { DetailHeading } from './DetailHeading';
 import { DetailIntroduction } from './DetailIntroduction';
 import { DetailSections } from './DetailSections';
 import { DetailTopics } from './DetailTopics';
+import { DetailSectionLink } from './DetailSectionLink';
 import { DetailSource } from './DetailSource';
 import { DetailHeadingModel } from '../../models/DetailHeadingModel';
-import { DetailSectionModel } from '../../models/DetailSectionModel';
+import { DetailSectionLinkModel } from '../../models/DetailSectionLinkModel';
+import { DetailModel } from '../../models/DetailModel';
 import { DetailSourceModel } from '../../models/DetailSourceModel';
 import { containerStyles } from '../shared/commonStyles';
 
@@ -34,10 +36,10 @@ interface DetailsProps {
     backText?: string;
     heading: DetailHeadingModel;
     introduction?: string[];
-    sections?: DetailSectionModel[];
+    sections?: DetailModel[];
     sources?: DetailSourceModel[];
     topics?: Array<{ key: string; value: string }>;
-    children?: React.ReactNode;
+    link?: { href: string; text: string };
 }
 
 export function Details({
@@ -48,7 +50,7 @@ export function Details({
     sections,
     sources,
     topics,
-    children,
+    link,
 }: DetailsProps) {
     return (
         <Container>
@@ -58,7 +60,7 @@ export function Details({
             {sections && <DetailSections sections={sections} />}
             {topics && <DetailTopics topics={topics} />}
             {sources && <DetailSource sources={sources} />}
-            {children}
+            {link && <DetailSectionLink href={link.href} text={link.text} />}
         </Container>
     );
 }
