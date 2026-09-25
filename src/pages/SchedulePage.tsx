@@ -1,10 +1,7 @@
 import { useMemo, useState } from 'react';
 
 import { SiteFooter } from '../components/SiteFooter';
-import { DetailBackLink } from '../components/detail/DetailBackLink';
-import { DetailHeading } from '../components/detail/DetailHeading';
-import { DetailIntroduction } from '../components/detail/DetailIntroduction';
-import { DetailSections } from '../components/detail/DetailSections';
+import { Details } from '../components/detail/Details';
 import { scheduleItems } from '../data';
 import { getScheduleItemBySlug, getScheduleStatus, sortScheduleByDate } from '../lib/content';
 import { SCHEDULE_PATH } from '../lib/constants';
@@ -31,25 +28,20 @@ export function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug 
         const sections: DetailSectionModel[] = activeScheduleItem?.sections ? activeScheduleItem.sections as DetailSectionModel[] : [];
         return (
             <>
-                <section className="content content--soft news-article-page">
-                    <DetailBackLink href={SCHEDULE_PATH} text={'Zurück zur Terminübersicht'} />
-
-                    <DetailHeading
-                        type={'schedule'}
-                        title={activeScheduleItem.title}
-                        category={activeScheduleItem.category}
-                        scheduleDate={activeScheduleItem.date}
-                        scheduleTime={activeScheduleItem.time}
-                        location={activeScheduleItem.location}
-                    />
-
-                    {activeScheduleItem.introduction && (
-                        <DetailIntroduction paragraphs={Array.isArray(activeScheduleItem.introduction) ? activeScheduleItem.introduction : [activeScheduleItem.introduction]} />
-                    )}
-
-                    {sections.length > 0 && (
-                        <DetailSections sections={sections} />
-                    )}
+                <Details
+                    backHref={SCHEDULE_PATH}
+                    backText={'Zurück zur Terminübersicht'}
+                    heading={{
+                        type: 'schedule',
+                        title: activeScheduleItem.title,
+                        category: activeScheduleItem.category,
+                        scheduleDate: activeScheduleItem.date,
+                        scheduleTime: activeScheduleItem.time,
+                        location: activeScheduleItem.location,
+                    }}
+                    introduction={Array.isArray(activeScheduleItem.introduction) ? activeScheduleItem.introduction : [activeScheduleItem.introduction]}
+                    sections={sections}
+                >
 
                     <DetailSectionLink
                         href={activeScheduleItem.link}
@@ -57,8 +49,7 @@ export function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug 
                         target={'_blank'}
                         rel={'noopener noreferrer'}
                     />
-                </section>
-
+                </Details>
                 <SiteFooter onShowImpressum={onShowImpressum} onShowDatenschutz={onShowDatenschutz} />
             </>
         );

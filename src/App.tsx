@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 
-import { LegalModals } from './components/LegalModals';
+import { LegalModals } from './components/legal/LegalModals';
 import { ThankYouModal } from './components/ThankYouModal';
 import { ArticlePage } from './pages/ArticlePage';
 import { HomePage } from './pages/HomePage';

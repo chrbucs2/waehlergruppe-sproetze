@@ -1,8 +1,9 @@
+import { LegalLinks } from '../components/legal/LegalLinks';
 import { useMemo, useRef, useState } from 'react';
 
-import { candidates, electionResults, priorities, teamMembers } from '../data/index.ts';
-import { NEWS_INDEX_PATH } from '../lib/constants.ts';
-import { assetUrl } from '../lib/formatting.ts';
+import { candidates, electionResults, priorities, teamMembers } from '../data';
+import { NEWS_INDEX_PATH } from '../lib/constants';
+import { assetUrl } from '../lib/formatting';
 
 export function HomePage({ onShowImpressum, onShowDatenschutz }) {
     const [activePriority, setActivePriority] = useState(priorities[0]);
@@ -379,12 +380,7 @@ export function HomePage({ onShowImpressum, onShowDatenschutz }) {
                     <p>Bürgernähe, Augenmaß und ein lebenswertes Dorf.</p>
                 </div>
                 <div className="footer__legal">
-                    <button type="button" onClick={onShowImpressum} className="footer__legal-link">
-                        Impressum
-                    </button>
-                    <button type="button" onClick={onShowDatenschutz} className="footer__legal-link">
-                        Datenschutz
-                    </button>
+                    <LegalLinks onShowImpressum={onShowImpressum} onShowDatenschutz={onShowDatenschutz} />
                 </div>
                 <a className="footer__link" href="#top">
                     Nach oben

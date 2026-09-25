@@ -1,12 +1,8 @@
 import { useMemo } from 'react';
 
 import { SiteFooter } from '../components/SiteFooter';
-import { DetailBackLink } from '../components/detail/DetailBackLink';
-import { DetailHeading } from '../components/detail/DetailHeading';
-import { DetailIntroduction } from '../components/detail/DetailIntroduction';
-import { DetailSectionLink } from '../components/detail/DetailSectionLink';
-import { DetailSections } from '../components/detail/DetailSections';
-import { filterTopics, news } from '../data/index';
+import { Details } from '../components/detail/Details';
+import { filterTopics, news } from '../data';
 import { getGeneralArticleBySlug, getTopicById, sortNewsByDate } from '../lib/content';
 import { NEWS_INDEX_PATH } from '../lib/constants';
 import { assetUrl, formatDate, formatInlineMarkup } from '../lib/formatting';
@@ -51,35 +47,26 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
 
     if (activeArticle) {
         const sections: DetailSectionModel[] = detailArticle?.sections ? detailArticle.sections as DetailSectionModel[] : [];
+        const topics =
+            (activeArticle.topicIds ?? [])
+                .map((id) => ({
+                    key: id,
+                    value: `${NEWS_INDEX_PATH}?thema=${id}`
+                }));
+
         return (
             <>
-                <section className="content content--soft news-article-page">
-                    <DetailBackLink href={backHref} />
-
-                    <DetailHeading
-                        type={'news'}
-                        title={activeArticle.title}
-                        publishedAt={activeArticle.publishedAt}
-                    />
-
-                    {detailArticle?.introduction && (
-                        <DetailIntroduction paragraphs={detailArticle.introduction} />
-                    )}
-
-                    {sections.length && (
-                        <DetailSections sections={sections} />
-                    )}
-
-                    {activeArticle.topicIds && (
-                        <div className="focus-list focus-list--outside">
-                            {activeArticle.topicIds.map((id) => (
-                                <a key={id} href={`${NEWS_INDEX_PATH}?thema=${id}`}>
-                                    <span>{getTopicById(id)?.label ?? id}</span>
-                                </a>
-                            ))}
-                        </div>
-                    )}
-                </section>
+                <Details
+                    backHref={backHref}
+                    heading={{
+                        type: 'news',
+                        title: activeArticle.title,
+                        publishedAt: activeArticle.publishedAt,
+                    }}
+                    introduction={detailArticle?.introduction}
+                    sections={sections}
+                    topics={topics}
+                />
 
                 <SiteFooter onShowImpressum={onShowImpressum} onShowDatenschutz={onShowDatenschutz} />
             </>

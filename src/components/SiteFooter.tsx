@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 
+import { LegalLinks } from './legal/LegalLinks';
+import { containerStyles } from './shared/commonStyles';
+
 interface SiteFooterProps {
     onShowImpressum: () => void;
     onShowDatenschutz: () => void;
@@ -12,6 +15,7 @@ const Footer = styled.footer`
     align-items: center;
     justify-content: space-between;
     background: rgba(123, 74, 124, 0.12);
+    ${containerStyles(true)}
 `;
 
 const Brand = styled.div`
@@ -22,29 +26,6 @@ const Brand = styled.div`
     p {
         margin-top: 6px;
         color: var(--muted);
-    }
-`;
-
-const Legal = styled.div`
-    display: flex;
-    gap: 16px;
-`;
-
-const LegalLink = styled.button`
-    background: transparent;
-    border: none;
-    color: var(--text);
-    cursor: pointer;
-    font-size: 13px;
-    text-decoration: none;
-    opacity: 0.7;
-    transition: opacity 0.2s;
-    padding: 0;
-    font-family: inherit;
-
-    &:hover,
-    &:focus-visible {
-        opacity: 1;
     }
 `;
 
@@ -70,14 +51,7 @@ export function SiteFooter({ onShowImpressum, onShowDatenschutz }: SiteFooterPro
                 <strong>Wählergruppe Sprötze</strong>
                 <p>Bürgernähe, Augenmaß und ein lebenswertes Dorf.</p>
             </Brand>
-            <Legal>
-                <LegalLink type="button" onClick={onShowImpressum}>
-                    Impressum
-                </LegalLink>
-                <LegalLink type="button" onClick={onShowDatenschutz}>
-                    Datenschutz
-                </LegalLink>
-            </Legal>
+            <LegalLinks onShowImpressum={onShowImpressum} onShowDatenschutz={onShowDatenschutz} />
             <BackToTop href="#top">
                 Nach oben
             </BackToTop>
