@@ -18,6 +18,7 @@ import { NEWS_PATH, SCHEDULE_PATH } from '../lib/constants';
 import { formatDate, formatInlineMarkup } from '../lib/formatting';
 import { DetailModel } from '../models/details/DetailModel';
 import { NewsModel } from '../models/pages/NewsModel';
+import { useQueryParamState } from '../lib/routing';
 
 interface NewsPageProps {
     onShowImpressum: () => void;
@@ -48,7 +49,9 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
     const detailArticle = hasOwnDetailContent ? activeArticle : referencedArticle ?? activeArticle;
     const backHref = activeTopic ? `${NEWS_PATH}?thema=${activeTopic.id}` : NEWS_PATH;
 
-    const selectedTopic = activeTopic;
+    const [selectedTopicId, setSelectedTopicId] = useQueryParamState('thema', topicId ?? null);
+
+    const selectedTopic = selectedTopicId ? getTopicById(selectedTopicId) : activeTopic;
 
     const filteredArticles = useMemo(() => {
         if (!selectedTopic) {
@@ -112,6 +115,7 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
                 <OverviewSectionFilter
                     items={availableTopics}
                     activeId={selectedTopic?.id ?? null}
+                    onSelect={setSelectedTopicId}
                 />
 
                 <div className="news-list">

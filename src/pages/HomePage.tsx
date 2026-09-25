@@ -1,5 +1,6 @@
 import { LegalLinks } from '../components/legal/LegalLinks';
 import { useMemo, useRef, useState } from 'react';
+import { Button, HeroButtonRow } from '../components/shared/Button';
 
 import { candidates, electionResults, priorities, teamMembers } from '../data';
 import { NEWS_PATH } from '../lib/constants';
@@ -123,17 +124,17 @@ export function HomePage({ onShowImpressum, onShowDatenschutz }: HomePageProps) 
                         </ul>
                     </article>
 
-                    <div className="hero__actions">
-                        <a className="button button--primary" href="#positionen">
+                    <HeroButtonRow>
+                        <Button href="#positionen" variant="primary">
                             Unsere Positionen
-                        </a>
-                        <a className="button button--secondary" href="#personen">
+                        </Button>
+                        <Button href="#personen" variant="secondary">
                             Unser Team
-                        </a>
-                        <a className="button button--secondary" href={NEWS_PATH}>
+                        </Button>
+                        <Button href={NEWS_PATH} variant="secondary">
                             Sprötze aktuell
-                        </a>
-                    </div>
+                        </Button>
+                    </HeroButtonRow>
                 </div>
             </section>
 

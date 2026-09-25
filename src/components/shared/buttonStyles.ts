@@ -1,6 +1,8 @@
 import { css } from 'styled-components';
 
 export const buttonBaseStyles = css`
+    appearance: none;
+    color: inherit;
     font: inherit;
     cursor: pointer;
     border-radius: 999px;

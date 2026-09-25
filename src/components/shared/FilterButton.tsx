@@ -3,12 +3,12 @@ import styled from 'styled-components';
 import { buttonBaseStyles, buttonFilterStyles } from './buttonStyles';
 
 interface FilterButtonProps {
-    href: string;
     children: string;
     active?: boolean;
+    onClick: () => void;
 }
 
-const FilterButtonRoot = styled.a<{ $active?: boolean }>`
+const FilterButtonRoot = styled.button<{ $active?: boolean }>`
     ${buttonBaseStyles}
     ${buttonFilterStyles}
     
@@ -16,9 +16,9 @@ const FilterButtonRoot = styled.a<{ $active?: boolean }>`
         $active ? 'linear-gradient(135deg, #7b4a7c33, #bba7de4d)' : 'rgba(255, 255, 255, 0.82)'};
 `;
 
-export function FilterButton({ href, children, active }: FilterButtonProps) {
+export function FilterButton({ children, active, onClick }: FilterButtonProps) {
     return (
-        <FilterButtonRoot href={href} $active={active}>
+        <FilterButtonRoot type="button" onClick={onClick} $active={active}>
             {children}
         </FilterButtonRoot>
     );
