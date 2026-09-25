@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { buttonBaseStyles, buttonFilterStyles } from './buttonStyles';
+import { buttonBaseStyles, buttonFilterStyles } from '../button/buttonStyles';
 
 interface FilterButtonProps {
     children: string;

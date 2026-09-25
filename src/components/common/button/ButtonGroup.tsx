@@ -1,25 +1,25 @@
 import styled from 'styled-components';
 
-import { Button } from './button/Button';
+import { Button } from './Button';
 
-const HeaderActionsRoot = styled.div`
+const ButtonGroupRoot = styled.div`
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
 `;
 
-interface HeaderActionsProps {
+interface ButtonGroupProps {
     actions: Array<{ href: string; label: string; variant: 'primary' | 'secondary' }>;
 }
 
-export function HeaderActions({ actions }: HeaderActionsProps) {
+export function ButtonGroup({ actions }: ButtonGroupProps) {
     return (
-        <HeaderActionsRoot>
+        <ButtonGroupRoot>
             {actions.map((action) => (
                 <Button key={action.href} href={action.href} variant={action.variant}>
                     {action.label}
                 </Button>
             ))}
-        </HeaderActionsRoot>
+        </ButtonGroupRoot>
     );
 }

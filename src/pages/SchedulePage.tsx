@@ -7,9 +7,9 @@ import {buildScheduleDetailUrl, getScheduleItemBySlug, getScheduleStatus, sortSc
 import {NEWS_PATH, SCHEDULE_PATH} from '../lib/constants';
 import { formatDate, formatInlineMarkup } from '../lib/formatting';
 import { ScheduleModel } from '../models/pages/ScheduleModel';
-import { HeaderWithLogo } from '../components/shared/HeaderWithLogo';
-import {OverviewSectionHeader} from "../components/overview/OverviewSectionHeader";
-import {Eyebrow} from "../components/shared/Eyebrow";
+import { HeadSectionWithLogo } from '../components/headsection/HeadSectionWithLogo';
+import { MainSectionHeader } from '../components/mainsection/MainSectionHeader';
+import {Eyebrow} from "../components/common/Eyebrow";
 
 interface SchedulePageProps {
     onShowImpressum: () => void;
@@ -63,7 +63,7 @@ export function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug 
 
     return (
         <>
-            <HeaderWithLogo
+            <HeadSectionWithLogo
                 eyebrow="Termine"
                 title="Termine für Sprötze"
                 lead="Der nächste relevante Termin zuerst, weitere bei Bedarf."
@@ -74,7 +74,7 @@ export function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug 
             />
 
             <section className="content" id="kommende-termine">
-                <OverviewSectionHeader
+                <MainSectionHeader
                     eyebrow="Anstehend"
                     title="Der nächste Termin"
                 />
@@ -109,7 +109,7 @@ export function SchedulePage({ onShowImpressum, onShowDatenschutz, scheduleSlug 
             </section>
 
             <section className="content content--soft" id="vergangene-termine">
-                <OverviewSectionHeader
+                <MainSectionHeader
                     eyebrow="Rückblick"
                     title="Vergangene Sitzungen"
                 />

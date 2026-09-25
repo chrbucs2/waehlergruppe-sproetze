@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
-import { Eyebrow } from './Eyebrow';
-import { containerBorderStyles } from './styles/commonStyles';
-import { HeaderActions } from './HeaderActions';
-import { HeaderLogo } from './HeaderLogo';
+import { Eyebrow } from '../common/Eyebrow';
+import { ButtonGroup } from '../common/button/ButtonGroup';
+import { containerBorderStyles } from '../styles/commonStyles';
+import { HeadSectionLogo } from './HeadSectionLogo';
 
-const HeaderWithLogoRoot = styled.section`
+const HeadSectionWithLogoRoot = styled.section`
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 24px;
@@ -19,13 +19,13 @@ const HeaderWithLogoRoot = styled.section`
     }
 `;
 
-const HeaderWithLogoCopy = styled.div`
+const HeadSectionWithLogoCopy = styled.div`
     display: flex;
     flex-direction: column;
     gap: 18px;
 `;
 
-const HeaderWithLogoLead = styled.p`
+const HeadSectionWithLogoLead = styled.p`
     margin: 0;
     font-size: 1.08rem;
     line-height: 1.7;
@@ -33,32 +33,32 @@ const HeaderWithLogoLead = styled.p`
     color: var(--muted);
 `;
 
-const HeaderWithLogoTitle = styled.h1`
+const HeadSectionWithLogoTitle = styled.h1`
     font-size: clamp(1.65rem, 2.5vw, 2.3rem);
     max-width: none;
 `;
 
-interface HeaderWithLogoProps {
+interface HeadSectionWithLogoProps {
     eyebrow: string;
     title: string;
     lead: string;
     actions: Array<{ href: string; label: string; variant: 'primary' | 'secondary' }>;
 }
 
-export function HeaderWithLogo({ eyebrow, title, lead, actions }: HeaderWithLogoProps) {
+export function HeadSectionWithLogo({ eyebrow, title, lead, actions }: HeadSectionWithLogoProps) {
     return (
-        <HeaderWithLogoRoot>
-            <HeaderWithLogoCopy>
+        <HeadSectionWithLogoRoot>
+            <HeadSectionWithLogoCopy>
                 <Eyebrow>{eyebrow}</Eyebrow>
-                <HeaderWithLogoTitle>{title}</HeaderWithLogoTitle>
-                <HeaderWithLogoLead>{lead}</HeaderWithLogoLead>
-                <HeaderActions actions={actions} />
-            </HeaderWithLogoCopy>
-            <HeaderLogo
+                <HeadSectionWithLogoTitle>{title}</HeadSectionWithLogoTitle>
+                <HeadSectionWithLogoLead>{lead}</HeadSectionWithLogoLead>
+                <ButtonGroup actions={actions} />
+            </HeadSectionWithLogoCopy>
+            <HeadSectionLogo
                 label="Logo der Wählergruppe Sprötze"
                 alt="Logo der Wählergruppe Sprötze"
                 path="logo.png"
             />
-        </HeaderWithLogoRoot>
+        </HeadSectionWithLogoRoot>
     );
 }

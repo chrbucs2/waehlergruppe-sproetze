@@ -7,7 +7,7 @@ import { HomePage } from './pages/HomePage';
 import { NewsPage } from './pages/NewsPage';
 import { SchedulePage } from './pages/SchedulePage';
 import { NEWS_PATH, SCHEDULE_PATH, THANK_YOU_MODAL_STORAGE_KEY } from './lib/constants';
-import { getGeneralArticleBySlug, getNewsArticleBySlug } from './lib/content';
+import { getArticleBySlug, getNewsItemBySlug } from './lib/content';
 import { getPathFromLocation, getSearchFromLocation, normalizePath } from './lib/routing';
 
 function App() {
@@ -79,8 +79,8 @@ function App() {
         : null;
     const articleSlug = legacyArticleSlug ?? generalArticleSlug ?? newsDetailSlug;
     const scheduleSlug = legacyScheduleSlug ?? scheduleDetailSlug;
-    const generalArticle = articleSlug ? getGeneralArticleBySlug(articleSlug) : null;
-    const newsArticle = articleSlug ? getNewsArticleBySlug(articleSlug) : null;
+    const generalArticle = articleSlug ? getArticleBySlug(articleSlug) : null;
+    const newsArticle = articleSlug ? getNewsItemBySlug(articleSlug) : null;
     const isNewsPage = currentPath === normalizePath(NEWS_PATH) || !!newsDetailSlug;
     const isSchedulePage = currentPath === normalizePath(SCHEDULE_PATH) || !!scheduleDetailSlug;
 
@@ -97,8 +97,8 @@ function App() {
                 <NewsPage
                     onShowImpressum={() => setShowImpressum(true)}
                     onShowDatenschutz={() => setShowDatenschutz(true)}
-                    topicId={topicId}
-                    articleSlug={articleSlug}
+                    newsItemSlug={articleSlug || undefined}
+                    topicId={topicId || undefined}
                 />
             ) : isSchedulePage ? (
                 <SchedulePage

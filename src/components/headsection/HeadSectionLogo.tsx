@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { assetUrl } from '../../lib/formatting';
 
-const HeaderLogoRoot = styled.div`
+const HeadSectionLogoRoot = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,7 +13,7 @@ const HeaderLogoRoot = styled.div`
     }
 `;
 
-const HeaderLogoImage = styled.img`
+const HeadSectionLogoImage = styled.img`
     display: block;
     width: min(20vw, 220px);
     max-width: 220px;
@@ -21,16 +21,16 @@ const HeaderLogoImage = styled.img`
     object-fit: contain;
 `;
 
-interface HeaderLogoProps {
+interface HeadSectionLogoProps {
     alt: string;
     label: string;
     path: string;
 }
 
-export function HeaderLogo({ alt, label, path }: HeaderLogoProps) {
+export function HeadSectionLogo({ alt, label, path }: HeadSectionLogoProps) {
     return (
-        <HeaderLogoRoot aria-label={label}>
-            <HeaderLogoImage src={assetUrl(path)} alt={alt} />
-        </HeaderLogoRoot>
+        <HeadSectionLogoRoot aria-label={label}>
+            <HeadSectionLogoImage src={assetUrl(path)} alt={alt} />
+        </HeadSectionLogoRoot>
     );
 }

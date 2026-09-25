@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { DetailSection } from './DetailSection';
 import { DetailModel } from '../../models/details/DetailModel';
-import {containerBorderStyles} from "../shared/styles/commonStyles";
+import {containerBorderStyles} from "../styles/commonStyles";
 
 const Container = styled.article`
     width: 100%;

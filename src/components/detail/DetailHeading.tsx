@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Eyebrow } from '../shared/Eyebrow';
+import { Eyebrow } from '../common/Eyebrow';
 import { formatDate } from '../../lib/formatting';
 import { DetailHeadingModel } from '../../models/details/DetailHeadingModel';
 

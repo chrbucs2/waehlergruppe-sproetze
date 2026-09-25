@@ -3,7 +3,10 @@ import {NEWS_PATH, SCHEDULE_PATH} from './constants';
 import { articles, filterTopics, news, scheduleItems } from '../data';
 import {LinkModel} from "../models/LinkModel";
 
-export function buildNewsOverviewUrl(topicId: string) {
+export function buildNewsOverviewUrl(topicId: string | undefined) {
+    if (!topicId) {
+        return NEWS_PATH;
+    }
     return `${NEWS_PATH}?thema=${topicId}`;
 }
 
@@ -26,16 +29,12 @@ export function getTopicById(topicId: string) {
     return filterTopics.find((topic) => topic.id === topicId) ?? null;
 }
 
-export function getNewsArticleBySlug(slug: string) {
-    return news.find((article) => article.slug === slug) ?? null;
-}
-
-export function getGeneralArticleBySlug(slug: string) {
+export function getArticleBySlug(slug: string) {
     return articles.find((article) => article.slug === slug) ?? null;
 }
 
-export function getArticleBySlug(slug: string) {
-    return getNewsArticleBySlug(slug) ?? getGeneralArticleBySlug(slug);
+export function getNewsItemBySlug(slug: string) {
+    return news.find((article) => article.slug === slug) ?? null;
 }
 
 export function getScheduleItemBySlug(slug: string) {
