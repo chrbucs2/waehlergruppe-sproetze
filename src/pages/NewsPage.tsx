@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { SiteFooter } from '../components/SiteFooter';
 import { Details } from '../components/detail/Details';
 import { OverviewHeader } from '../components/overview/OverviewHeader';
+import { OverviewSectionFilter } from '../components/overview/OverviewSectionFilter';
 import { OverviewSectionHeader } from '../components/overview/OverviewSectionHeader';
 import { filterTopics, news } from '../data';
 import {
@@ -114,25 +115,11 @@ export function NewsPage({ onShowImpressum, onShowDatenschutz, topicId, articleS
                     copy={selectedTopic?.description || 'Beiträge sind nach Veröffentlichungsdatum sortiert — der neueste Beitrag steht immer zuerst.'}
                 />
 
-                <div className="topic-filter">
-                    <a
-                        type="link"
-                        className={`topic-filter__chip${!selectedTopic ? ' is-active' : ''}`}
-                        onClick={() => setSelectedTopicId(null)}
-                    >
-                        Alle Themen
-                    </a>
-                    {availableTopics.map((topic) => (
-                        <a
-                            type="link"
-                            key={topic.id}
-                            className={`topic-filter__chip${selectedTopic?.id === topic.id ? ' is-active' : ''}`}
-                            onClick={() => setSelectedTopicId(topic.id)}
-                        >
-                            {topic.label}
-                        </a>
-                    ))}
-                </div>
+                <OverviewSectionFilter
+                    items={availableTopics}
+                    activeId={selectedTopic?.id ?? null}
+                    onSelect={setSelectedTopicId}
+                />
 
                 <div className="news-list">
                     {filteredArticles.map((article) => {
