@@ -5,13 +5,6 @@ import { OverviewHeaderLogo } from './OverviewHeaderLogo';
 import { Eyebrow } from '../shared/Eyebrow';
 import {containerBorderStyles} from "../shared/commonStyles";
 
-interface OverviewHeaderProps {
-    eyebrow: string;
-    title: string;
-    lead: string;
-    actions: Array<{ href: string; label: string; variant: 'primary' | 'secondary' }>;
-}
-
 const OverviewHeaderRoot = styled.section`
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
@@ -45,6 +38,13 @@ const OverviewHeaderTitle = styled.h1`
     max-width: none;
 `;
 
+interface OverviewHeaderProps {
+    eyebrow: string;
+    title: string;
+    lead: string;
+    actions: Array<{ href: string; label: string; variant: 'primary' | 'secondary' }>;
+}
+
 export function OverviewHeader({ eyebrow, title, lead, actions }: OverviewHeaderProps) {
     return (
         <OverviewHeaderRoot>
@@ -54,7 +54,10 @@ export function OverviewHeader({ eyebrow, title, lead, actions }: OverviewHeader
                 <OverviewHeaderLead>{lead}</OverviewHeaderLead>
                 <OverviewHeaderActions actions={actions} />
             </OverviewHeaderCopy>
-            <OverviewHeaderLogo />
+            <OverviewHeaderLogo
+                label="Logo der Wählergruppe Sprötze"
+                alt="Logo der Wählergruppe Sprötze"
+                path="logo.png" />
         </OverviewHeaderRoot>
     );
 }

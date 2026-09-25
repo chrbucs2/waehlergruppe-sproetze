@@ -21,10 +21,16 @@ const OverviewHeaderLogoImage = styled.img`
     object-fit: contain;
 `;
 
-export function OverviewHeaderLogo() {
+interface OverviewHeaderLogoProps {
+    alt: string;
+    label: string;
+    path: string;
+}
+
+export function OverviewHeaderLogo({ alt, label, path }: OverviewHeaderLogoProps) {
     return (
-        <OverviewHeaderLogoRoot aria-label="Logo der Wählergruppe Sprötze">
-            <OverviewHeaderLogoImage src={assetUrl('logo.png')} alt="Logo der Wählergruppe Sprötze" />
+        <OverviewHeaderLogoRoot aria-label={label}>
+            <OverviewHeaderLogoImage src={assetUrl(path)} alt={alt} />
         </OverviewHeaderLogoRoot>
     );
 }
