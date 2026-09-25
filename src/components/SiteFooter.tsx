@@ -16,6 +16,12 @@ const Footer = styled.footer`
     justify-content: space-between;
     background: rgba(123, 74, 124, 0.12);
     ${containerBorderStyles(true)}
+    
+    @media (max-width: 640px) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
 `;
 
 const Brand = styled.div`
