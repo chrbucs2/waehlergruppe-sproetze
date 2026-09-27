@@ -196,8 +196,8 @@ export const news: NewsModel[] = [
             {
                 title: 'Familientag auf dem Vereinsgelände',
                 paragraphs: [
-                    'Am 22. August wurde das Vereinsgelände an der Königsstraße zum Treffpunkt für Kinder, Familien und Vereinsmitglieder. Zum Auftakt fand gemeinsam mit der Grundschule Sprötze-Trelde ein **Sponsorenlauf zugunsten der Schulsporthalle Sprötze** statt.',
-                    'Trotz Regen zu Beginn entwickelte sich der Familientag zu einer gut besuchten Jubiläumsfeier. Zum Programm gehörten unter anderem Kindertanz, eine Judo-Vorführung, Spiel- und Geschicklichkeitsstationen sowie ein spontaner Zumba-Flashmob.',
+                    'Am **22. August** wurde das Vereinsgelände an der Königsstraße zum Treffpunkt für Kinder, Familien und Vereinsmitglieder. Zum Auftakt fand gemeinsam mit der Grundschule Sprötze-Trelde ein **Sponsorenlauf zugunsten der Schulsporthalle Sprötze** statt.',
+                    'Trotz Regen zu Beginn entwickelte sich der Familientag zu einer **gut besuchten Jubiläumsfeier**. Zum Programm gehörten unter anderem Kindertanz, eine Judo-Vorführung, Spiel- und Geschicklichkeitsstationen sowie ein spontaner Zumba-Flashmob.',
                     'Unterstützt wurde der TSV von zahlreichen Ehrenamtlichen und auch von der **Feuerwehr Sprötze**, die sich um die Verpflegung der Gäste kümmerte.',
                 ],
             },
@@ -221,26 +221,14 @@ export const news: NewsModel[] = [
                     'Weitere Informationen zum Jubiläum, zum Familientag und zur Geschichte des TSV Sprötze finden Sie hier:',
                     {
                         type: 'link',
-                        text: 'Wochenblatt: Familientag zum 100-jährigen Jubiläum',
-                        href: 'https://www.kreiszeitung-wochenblatt.de/buchholz/c-sport/familientag-der-verein-feiert-sein-100-jaehriges-jubilaeum_a415458',
-                        indent: true,
-                    },
-                    {
-                        type: 'link',
                         text: 'Wochenblatt: Familientag zum Jubiläum war ein großer Erfolg',
                         href: 'https://www.kreiszeitung-wochenblatt.de/buchholz/c-sport/familientag-zum-jubilaeum-war-ein-grosser-erfolg_a417411',
                         indent: true,
                     },
                     {
                         type: 'link',
-                        text: 'Landeszeitung: Familienfest beim TSV Sprötze',
-                        href: 'https://www.landeszeitung.de/lokales/harburg-lk/buchholz-nordheide/tsv-sproetze-feiert-am-22-august-sein-jubilaeum-mit-kostenlosem-familienfest-T5NEUZBTNZB2LBP6X5ZXKGE3EY.html',
-                        indent: true,
-                    },
-                    {
-                        type: 'link',
-                        text: 'Landeszeitung: TSV Sprötze feiert 100 Jahre',
-                        href: 'https://www.landeszeitung.de/lokales/harburg-lk/buchholz-nordheide/tsv-sproetze-feiert-100-jahre-mit-fruehschoppen-und-festakt-S7JAM4LRHBBHJCQ3IAPTBC3V4I.html',
+                        text: 'Wochenblatt: Der Verein feiert sein 100-jähriges Jubiläum',
+                        href: 'https://www.kreiszeitung-wochenblatt.de/buchholz/c-sport/familientag-der-verein-feiert-sein-100-jaehriges-jubilaeum_a415458',
                         indent: true,
                     },
                 ],
