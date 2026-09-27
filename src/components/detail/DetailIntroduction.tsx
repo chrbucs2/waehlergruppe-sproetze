@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { anchoredInlineLinkStyles } from '../common/link/inlineLinkStyles';
+import { anchoredInlineLinkStyles } from '../common/link/linkStyles';
 import { formatInlineMarkup } from '../../lib/formatting';
 
 const Container = styled.div`
