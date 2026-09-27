@@ -10,14 +10,14 @@ const FilterButtonGroupRoot = styled.div`
 
 interface FilterButtonGroupProps {
     items: Array<{ id: string; label: string }>;
-    activeId?: string | null;
-    onSelect: (id: string | null) => void;
+    activeId?: string | undefined;
+    onSelect: (id: string | undefined) => void;
 }
 
 export function FilterButtonGroup({ items, activeId, onSelect }: FilterButtonGroupProps) {
     return (
         <FilterButtonGroupRoot className="topic-filter">
-            <FilterButton active={!activeId} onClick={() => onSelect(null)}>
+            <FilterButton active={!activeId} onClick={() => onSelect(undefined)}>
                 Alle Themen
             </FilterButton>
 

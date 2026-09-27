@@ -98,7 +98,6 @@ function App() {
                     onShowImpressum={() => setShowImpressum(true)}
                     onShowDatenschutz={() => setShowDatenschutz(true)}
                     newsItemSlug={articleSlug || undefined}
-                    topicId={topicId || undefined}
                 />
             ) : isSchedulePage ? (
                 <SchedulePage

@@ -1,4 +1,3 @@
-import { LegalLinks } from '../components/legal/LegalLinks';
 import { useMemo, useRef, useState } from 'react';
 import { Button } from '../components/common/button/Button';
 
@@ -6,6 +5,7 @@ import { candidates, electionResults, priorities, teamMembers } from '../data';
 import { NEWS_PATH } from '../lib/constants';
 import { assetUrl } from '../lib/formatting';
 import styled from "styled-components";
+import {SiteFooter} from "../components/SiteFooter";
 
 export const HeroButtonRow = styled.div`
     display: flex;
@@ -403,18 +403,7 @@ export function HomePage({ onShowImpressum, onShowDatenschutz }: HomePageProps) 
                 </div>
             </section>
 
-            <footer className="footer">
-                <div>
-                    <strong>Wählergruppe Sprötze</strong>
-                    <p>Bürgernähe, Augenmaß und ein lebenswertes Dorf.</p>
-                </div>
-                <div className="footer__legal">
-                    <LegalLinks onShowImpressum={onShowImpressum} onShowDatenschutz={onShowDatenschutz} />
-                </div>
-                <a className="footer__link" href="#top">
-                    Nach oben
-                </a>
-            </footer>
+            <SiteFooter onShowImpressum={onShowImpressum} onShowDatenschutz={onShowDatenschutz} />
         </>
     );
 }

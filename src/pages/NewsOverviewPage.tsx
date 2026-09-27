@@ -1,28 +1,15 @@
 import { useMemo } from 'react';
-import styled from 'styled-components';
 
 import { SiteFooter } from '../components/SiteFooter';
 import { HeadSectionWithLogo } from '../components/headsection/HeadSectionWithLogo';
 import { FilterButtonGroup } from '../components/common/filter/FilterButtonGroup';
 import { MainSectionHeader } from '../components/mainsection/MainSectionHeader';
-import NewsCard from '../components/news/NewsCard';
 import { SCHEDULE_PATH } from '../lib/constants';
 import { useQueryParamState } from '../lib/routing';
 import { NewsModel } from '../models/pages/NewsModel';
-
-const NewsContent = styled.section.attrs({ id: 'news-feed' })`
-    margin-top: 18px;
-    padding: 28px;
-    border: 1px solid var(--border);
-    border-radius: 28px;
-    box-shadow: var(--shadow);
-    background: linear-gradient(rgba(230, 239, 251, 0.5), rgba(249, 246, 255, 0.95));
-`;
-
-const NewsList = styled.div`
-    display: grid;
-    gap: 14px;
-`;
+import MainSectionCard from "../components/mainsection/MainSectionCard";
+import {MainSectionCardList} from "../components/mainsection/MainSectionCardList";
+import {MainSectionContainer} from "../components/mainsection/MainSectionContainer";
 
 interface NewsOverviewPageProps {
     items: NewsModel[];
@@ -73,7 +60,7 @@ export function NewsOverviewPage({
                 ]}
             />
 
-            <NewsContent>
+            <MainSectionContainer>
                 <MainSectionHeader
                     eyebrow="Themenfilter"
                     title={title}
@@ -86,12 +73,12 @@ export function NewsOverviewPage({
                     onSelect={setSelectedTopicId}
                 />
 
-                <NewsList>
+                <MainSectionCardList>
                     {filteredNewsItems.map((item) => (
-                        <NewsCard key={item.id} item={item} />
+                        <MainSectionCard key={item.id} item={item} />
                     ))}
-                </NewsList>
-            </NewsContent>
+                </MainSectionCardList>
+            </MainSectionContainer>
 
             <SiteFooter onShowImpressum={onShowImpressum} onShowDatenschutz={onShowDatenschutz} />
         </>

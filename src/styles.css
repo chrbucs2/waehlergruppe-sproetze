@@ -872,7 +872,6 @@ h1 {
   width: 100%;
 }
 
-.news-card,
 .schedule-card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -916,12 +915,6 @@ h1 {
   justify-self: start;
 }
 
-.news-card {
-  display: grid;
-  gap: 12px;
-}
-
-.news-card h3,
 .news-detail h3,
 .schedule-card h4 {
   margin: 0;
@@ -934,26 +927,9 @@ h1 {
   color: var(--muted);
 }
 
-.news-card__link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 8px;
-  font-weight: 700;
-  color: var(--primary-dark);
-}
-
 .news-overview-header-actions {
   display: grid;
   gap: 8px;
-}
-
-.news-overview-header-actions .news-card__link {
-  margin-top: 0;
-}
-
-.news-card__link::after {
-  content: '→';
 }
 
 .schedule-detail-intro {
@@ -983,18 +959,10 @@ h1 {
   padding-left: 1rem;
 }
 
-.schedule-link-note .news-card__link {
-  margin-top: 0;
-}
-
 .schedule-source-link {
   margin-top: 1rem;
   margin-bottom: 0;
   text-align: left;
-}
-
-.schedule-source-link .news-card__link {
-  margin-top: 0;
 }
 
 .schedule-outcome-text {
