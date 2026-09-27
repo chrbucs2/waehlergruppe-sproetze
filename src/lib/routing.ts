@@ -38,8 +38,8 @@ export function syncQueryParam(name: string, value: string | null) {
     window.history.pushState({}, '', `${nextUrl.pathname}${nextUrl.search}${nextUrl.hash}`);
 }
 
-export function useQueryParamState(name: string, fallback: string | null = null) {
-    const [value, setValue] = useState<string | null>(() => getQueryParam(name) ?? fallback);
+export function useQueryParamState(name: string, fallback: string | undefined = undefined) {
+    const [value, setValue] = useState<string | undefined>(() => getQueryParam(name) ?? fallback);
 
     useEffect(() => {
         const handlePopState = () => {
@@ -50,9 +50,9 @@ export function useQueryParamState(name: string, fallback: string | null = null)
         return () => window.removeEventListener('popstate', handlePopState);
     }, [fallback, name]);
 
-    const updateValue = (nextValue: string | null) => {
+    const updateValue = (nextValue: string | undefined) => {
         setValue(nextValue);
-        syncQueryParam(name, nextValue);
+        syncQueryParam(name, nextValue ?? null);
     };
 
     return [value, updateValue] as const;

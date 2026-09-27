@@ -1,6 +1,7 @@
 import { SiteFooter } from '../components/SiteFooter';
 import { Details } from '../components/detail/Details';
 import { getArticleBySlug, buildNewsOverviewUrl } from '../lib/content';
+import { useQueryParamState } from '../lib/routing';
 import { DetailModel } from '../models/details/DetailModel';
 import { NewsModel } from '../models/pages/NewsModel';
 
@@ -14,6 +15,10 @@ interface NewsDetailsPageProps {
 }
 
 export function NewsDetailsPage({ newsItem, topicId, onShowImpressum, onShowDatenschutz }: NewsDetailsPageProps) {
+    // sync the selected topic with the URL query param so filters are shareable and browser back/forward works
+    const [selectedTopicId] = useQueryParamState('thema');
+
+    // check if newsItem or linked article should be used
     const hasOwnDetailContent =
             Boolean(newsItem.introduction?.length || newsItem.sections?.length);
     const article = hasOwnDetailContent ?
@@ -22,6 +27,7 @@ export function NewsDetailsPage({ newsItem, topicId, onShowImpressum, onShowDate
             getArticleBySlug(newsItem.articleLink.slug) :
             undefined;
 
+    // get params for the Details components
     const introduction: string[] = article?.introduction || [];
     const sections: DetailModel[] = article?.sections || [];
     const topics: DetailTopic[] = (newsItem.topicIds ?? []).map((id) => ({
@@ -32,7 +38,7 @@ export function NewsDetailsPage({ newsItem, topicId, onShowImpressum, onShowDate
     return (
         <>
             <Details
-                backHref={buildNewsOverviewUrl(topicId)}
+                backHref={buildNewsOverviewUrl(selectedTopicId ?? topicId)}
                 backText={'Zurück zu den Sprötze-News'}
                 heading={{
                     type: 'news',
