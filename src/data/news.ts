@@ -179,6 +179,75 @@ export const news: NewsModel[] = [
         },
     },
     {
+        id: '100-jahre-tsv-sproetze',
+        slug: '100-jahre-tsv-sproetze',
+        title: '100 Jahre TSV Sprötze: Jubiläumsjahr geht weiter',
+        publishedAt: '2026-08-28',
+        topicIds: ['vereine', 'leben-im-dorf'],
+        summary: [
+            'Der **TSV Sprötze feiert 2026 sein 100-jähriges Bestehen**. Einer der Höhepunkte war der große Familientag am 22. August auf dem Vereinsgelände.',
+            'Nach dem erfolgreichen Fest stehen im November noch der **offizielle 100. Geburtstag** und die große Jubiläumsparty an.',
+        ],
+        introduction: [
+            'Seit **100 Jahren** gehört der TSV zum Leben in Sprötze. Am 4. November 1926 wurde der Verein mit zunächst 22 Mitgliedern gegründet. Heute sind mehr als **950 Menschen** im TSV aktiv.',
+            'Das Jubiläum wird über das ganze Jahr gefeiert. Nach Fitness- und Yogatag, Frühschoppen und dem großen Familientag im August folgen im November die abschließenden Veranstaltungen.',
+        ],
+        sections: [
+            {
+                title: 'Familientag auf dem Vereinsgelände',
+                paragraphs: [
+                    'Am 22. August wurde das Vereinsgelände an der Königsstraße zum Treffpunkt für Kinder, Familien und Vereinsmitglieder. Zum Auftakt fand gemeinsam mit der Grundschule Sprötze-Trelde ein **Sponsorenlauf zugunsten der Schulsporthalle Sprötze** statt.',
+                    'Trotz Regen zu Beginn entwickelte sich der Familientag zu einer gut besuchten Jubiläumsfeier. Zum Programm gehörten unter anderem Kindertanz, eine Judo-Vorführung, Spiel- und Geschicklichkeitsstationen sowie ein spontaner Zumba-Flashmob.',
+                    'Unterstützt wurde der TSV von zahlreichen Ehrenamtlichen und auch von der **Feuerwehr Sprötze**, die sich um die Verpflegung der Gäste kümmerte.',
+                ],
+            },
+            {
+                title: 'Vom kleinen Turnverein zum Mehrgenerationenverein',
+                paragraphs: [
+                    'Gegründet wurde der **TSV Sprötze** am **4. November 1926** als kleiner Turnverein. Nach dem Zweiten Weltkrieg wurde der Verein 1946 neu aufgebaut und sein Sportangebot in den folgenden Jahrzehnten immer weiter erweitert.',
+                    'Heute reicht das Angebot vom Kinderturnen über Judo und Tennis bis zu Fitness-, Gesundheits- und Familienangeboten. Der Verein zählt inzwischen **mehr als 950 Mitglieder** und bringt damit mehrere Generationen aus Sprötze und Umgebung zusammen.',
+                ],
+            },
+            {
+                title: 'Im November wird weitergefeiert',
+                paragraphs: [
+                    'Am **4. November**, genau 100 Jahre nach der Vereinsgründung, findet ein Jubiläumsempfang für geladene Gäste statt.',
+                    'Den Abschluss des Jubiläumsjahres bildet am **7. November ab 20 Uhr** die große **Jubiläumsparty** mit DJ Stephan im Gasthaus Wiechern. Eingeladen sind Mitglieder, Freunde des Vereins und weitere Feierfreudige.',
+                ],
+            },
+            {
+                title: 'Weiterführende Informationen',
+                paragraphs: [
+                    'Weitere Informationen zum Jubiläum, zum Familientag und zur Geschichte des TSV Sprötze finden Sie hier:',
+                    {
+                        type: 'link',
+                        text: 'Wochenblatt: Familientag zum 100-jährigen Jubiläum',
+                        href: 'https://www.kreiszeitung-wochenblatt.de/buchholz/c-sport/familientag-der-verein-feiert-sein-100-jaehriges-jubilaeum_a415458',
+                        indent: true,
+                    },
+                    {
+                        type: 'link',
+                        text: 'Wochenblatt: Familientag zum Jubiläum war ein großer Erfolg',
+                        href: 'https://www.kreiszeitung-wochenblatt.de/buchholz/c-sport/familientag-zum-jubilaeum-war-ein-grosser-erfolg_a417411',
+                        indent: true,
+                    },
+                    {
+                        type: 'link',
+                        text: 'Landeszeitung: Familienfest beim TSV Sprötze',
+                        href: 'https://www.landeszeitung.de/lokales/harburg-lk/buchholz-nordheide/tsv-sproetze-feiert-am-22-august-sein-jubilaeum-mit-kostenlosem-familienfest-T5NEUZBTNZB2LBP6X5ZXKGE3EY.html',
+                        indent: true,
+                    },
+                    {
+                        type: 'link',
+                        text: 'Landeszeitung: TSV Sprötze feiert 100 Jahre',
+                        href: 'https://www.landeszeitung.de/lokales/harburg-lk/buchholz-nordheide/tsv-sproetze-feiert-100-jahre-mit-fruehschoppen-und-festakt-S7JAM4LRHBBHJCQ3IAPTBC3V4I.html',
+                        indent: true,
+                    },
+                ],
+            },
+        ],
+    },
+    {
         id: 'neuer-entsorger-veolia-gelbe-tonne-altpapier',
         slug: 'neuer-entsorger-veolia-gelbe-tonne-altpapier',
         title: 'Veolia übernimmt Gelbe Tonnen und Altpapier',

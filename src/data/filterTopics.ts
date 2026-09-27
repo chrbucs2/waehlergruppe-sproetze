@@ -30,6 +30,11 @@ export const filterTopics = [
         description: 'Hilfsangebote, Beteiligung und gesellschaftliche Projekte in Sprötze.',
     },
     {
+        id: 'vereine',
+        label: 'Vereine',
+        description: 'Sportvereine, Ehrenamt und gemeinschaftliche Aktivitäten in Sprötze.',
+    },
+    {
         id: 'abfallentsorgung',
         label: 'Abfall & Entsorgung',
         description: 'Abfallwirtschaft, Entsorgung und Recycling in Sprötze.',
