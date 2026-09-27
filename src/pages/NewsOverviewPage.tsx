@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import styled from 'styled-components';
 
 import { SiteFooter } from '../components/SiteFooter';
 import { HeadSectionWithLogo } from '../components/headsection/HeadSectionWithLogo';
@@ -8,6 +9,20 @@ import NewsCard from '../components/news/NewsCard';
 import { SCHEDULE_PATH } from '../lib/constants';
 import { useQueryParamState } from '../lib/routing';
 import { NewsModel } from '../models/pages/NewsModel';
+
+const NewsContent = styled.section.attrs({ id: 'news-feed' })`
+    margin-top: 18px;
+    padding: 28px;
+    border: 1px solid var(--border);
+    border-radius: 28px;
+    box-shadow: var(--shadow);
+    background: linear-gradient(rgba(230, 239, 251, 0.5), rgba(249, 246, 255, 0.95));
+`;
+
+const NewsList = styled.div`
+    display: grid;
+    gap: 14px;
+`;
 
 interface NewsOverviewPageProps {
     items: NewsModel[];
@@ -58,7 +73,7 @@ export function NewsOverviewPage({
                 ]}
             />
 
-            <section className="content content--soft" id="news-feed">
+            <NewsContent>
                 <MainSectionHeader
                     eyebrow="Themenfilter"
                     title={title}
@@ -71,12 +86,12 @@ export function NewsOverviewPage({
                     onSelect={setSelectedTopicId}
                 />
 
-                <div className="news-list">
+                <NewsList>
                     {filteredNewsItems.map((item) => (
                         <NewsCard key={item.id} item={item} />
                     ))}
-                </div>
-            </section>
+                </NewsList>
+            </NewsContent>
 
             <SiteFooter onShowImpressum={onShowImpressum} onShowDatenschutz={onShowDatenschutz} />
         </>
