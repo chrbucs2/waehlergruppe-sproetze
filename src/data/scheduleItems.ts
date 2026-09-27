@@ -169,7 +169,7 @@ export const scheduleItems: ScheduleModel[] = [
                 ],
             },
         ],
-        link: 'https://www.buchholz.de/allris/to010?SILFDNR=1000967&refresh=false',
+        link: 'https://www.buchholz.de/allris/to010?SILFDNR=1001239',
         linkLabel: 'Zur öffentlichen Sitzungsseite',
     },
     {
