@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { Eyebrow } from '../common/Eyebrow';
 import { ButtonGroup } from '../common/button/ButtonGroup';
-import { containerBorderStyles } from '../styles/commonStyles';
+import { containerBorderStyles } from '../common/commonStyles';
 import { HeadSectionLogo } from './HeadSectionLogo';
 
 const HeadSectionWithLogoRoot = styled.section`

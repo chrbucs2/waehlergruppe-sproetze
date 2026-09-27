@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
+import { anchoredInlineLinkStyles } from '../common/link/inlineLinkStyles';
 import { formatInlineMarkup } from '../../lib/formatting';
-import {DetailSectionListModel} from "../../models/details/DetailSectionListModel";
+import { DetailSectionListModel } from '../../models/details/DetailSectionListModel';
 
 const List = styled.ul`
     margin: 0;
@@ -10,6 +11,8 @@ const List = styled.ul`
     gap: 0.4rem;
     color: var(--muted);
     line-height: 1.7;
+
+    ${anchoredInlineLinkStyles}
 `;
 
 interface DetailSectionListProps extends Omit<DetailSectionListModel, 'type'> {}

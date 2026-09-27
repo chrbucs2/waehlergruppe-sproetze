@@ -25,6 +25,11 @@ export const filterTopics = [
         description: 'Themen rund um Zusammenhalt, Ehrenamt und die Entwicklung von Sprötze.',
     },
     {
+        id: 'soziales',
+        label: 'Soziales',
+        description: 'Hilfsangebote, Beteiligung und gesellschaftliche Projekte in Sprötze.',
+    },
+    {
         id: 'abfallentsorgung',
         label: 'Abfall & Entsorgung',
         description: 'Abfallwirtschaft, Entsorgung und Recycling in Sprötze.',

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import {DetailSectionImageModel} from "../../models/details/DetailSectionImageModel";
-import {imageContainerStyles} from "../styles/commonStyles";
+import {imageContainerStyles} from "../common/commonStyles";
 
 const Figure = styled.figure`
     margin: 1rem 0 0;

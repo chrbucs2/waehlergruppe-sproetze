@@ -1,15 +1,10 @@
+import styled from 'styled-components';
+
+import { anchoredInlineLinkStyles } from '../common/link/inlineLinkStyles';
 import { formatInlineMarkup } from '../../lib/formatting';
-import styled from "styled-components";
 
 const Paragraph = styled.p`
-    a {
-      text-decoration: underline;
-      text-underline-offset: 0.14em;
-    }
-    
-    a::after {
-        content: '→';
-    }
+    ${anchoredInlineLinkStyles}
 `;
 
 type DetailSectionTextProps = {

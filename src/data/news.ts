@@ -32,6 +32,73 @@ export const news: NewsModel[] = [
         },
     },
     {
+        id: 'tafel-buchholz-standort-sproetze-eroeffnet',
+        slug: 'tafel-buchholz-standort-sproetze-eroeffnet',
+        title: 'Tafel Buchholz eröffnet neuen Standort in Sprötze',
+        publishedAt: '2026-04-13',
+        topicIds: ['infrastruktur', 'leben-im-dorf', 'soziales'],
+        summary: [
+            'Die **Tafel Buchholz** hat ihren neuen Standort in der **Niedersachsenstraße 18 in Sprötze** offiziell eingeweiht. Bereits seit Ende 2025 findet die Lebensmittelausgabe dort statt.',
+            'Der Umzug schafft mehr Platz für Lebensmittel, Kühlung und die Ausgabe. Inzwischen versorgt die Tafel nach eigenen Angaben **mehr als 230 Familien**.',
+        ],
+        introduction: [
+            'Die Tafel Buchholz ist seit Ende 2025 in der **Niedersachsenstraße 18 in Sprötze** zu Hause. Am 13. April wurde der neue Standort nun auch offiziell mit einer kleinen Feierstunde eingeweiht.',
+            'Der frühere Standort am Reiherstieg war für die Arbeit der Tafel zu klein geworden. In Sprötze stehen nun größere Räume für die Lagerung, Kühlung und Ausgabe der Lebensmittel zur Verfügung.',
+        ],
+        sections: [
+            {
+                title: 'Die Tafel in Sprötze',
+                paragraphs: [
+                    'Der **Umzug** hatte bereits am **1. Oktober 2025** stattgefunden. Zuvor war die Tafel am Reiherstieg in Buchholz untergebracht. Schon damals wurde berichtet, dass die bisherigen Räume für die wachsende Arbeit nicht mehr ausreichten.',
+                    'Seit ihrem Umzug ist die Tafel Buchholz außerdem ein eigenständiger Verein. Zuvor wurde sie als Teil der Tafel Harburg geführt.',
+                ],
+            },
+            {
+                title: 'Mehr Platz für die Tafel',
+                paragraphs: [
+                    'Die neuen Räume sollen die tägliche Arbeit erleichtern. Neben der eigentlichen Ausgabe braucht die Tafel Platz für Regale sowie Kühl- und Gefrierschränke, um gespendete Lebensmittel lagern zu können.',
+                    'Nach Angaben der Tafel werden inzwischen **mehr als 230 Familien** von rund **25 ehrenamtlichen Helferinnen und Helfern** versorgt. Die Nachfrage sei weiterhin groß und steige weiter.',
+                    'Die **Stadt Buchholz übernimmt die Mietkosten** für den neuen Standort.',
+                ],
+            },
+            {
+                title: 'Öffnungszeiten und Spenden',
+                paragraphs: [
+                    'Die Lebensmittelausgabe findet aktuell **jeden Mittwoch von 13:00 bis 14:00 Uhr** in der Niedersachsenstraße 18 statt.',
+                    'Lebensmittelspenden können **mittwochs von 9:30 bis 14:00 Uhr** oder nach **telefonischer Absprache** abgegeben werden. Auch Geldspenden sind möglich.',
+                    {
+                        type: 'list',
+                        items: [
+                            '**Adresse:** Niedersachsenstraße 18, 21244 Buchholz i.d.N.',
+                            '**Lebensmittelausgabe:** Mittwoch, 13:00 bis 14:00 Uhr',
+                            '**Spendenannahme:** Mittwoch, 9:30 bis 14:00 Uhr oder nach telefonischer Absprache',
+                            '**Telefon:** 0176 88143096',
+                            '**Spendenkonto:** bitte der [Webseite](https://www.tafel-buchholz.de/kontakt/) entnehmen',
+                        ],
+                    },
+                ],
+            },
+            {
+                title: 'Weiterführende Informationen',
+                paragraphs: [
+                    'Weitere Informationen zum neuen Standort, zur Arbeit der Tafel und zu Möglichkeiten der Unterstützung finden Sie hier:',
+                    {
+                        type: 'link',
+                        text: 'Wochenblatt: Standort der Tafel Buchholz in Sprötze eröffnet',
+                        href: 'https://www.kreiszeitung-wochenblatt.de/buchholz/c-panorama/standort-der-tafel-buchholz-eroeffnet_a398918',
+                        indent: true,
+                    },
+                    {
+                        type: 'link',
+                        text: 'Tafel Buchholz: Kontakt, Öffnungszeiten und Spenden',
+                        href: 'https://www.tafel-buchholz.de/kontakt/',
+                        indent: true,
+                    },
+                ],
+            },
+        ],
+    },
+    {
         id: 'bebauungsplan-sproetzer-weg-satzungsbeschluss',
         slug: 'bebauungsplan-sproetzer-weg-an-den-tennisplaetzen-satzungsbeschluss',
         title: 'Neue Kita beim Discounter am Sprötzer Weg in Planung',
@@ -110,6 +177,140 @@ export const news: NewsModel[] = [
             slug: 'grundschule-sproetze-trelde-ausbau',
             text: 'Ausbau Grundschule Sprötze-Trelde'
         },
+    },
+    {
+        id: 'neuer-entsorger-veolia-gelbe-tonne-altpapier',
+        slug: 'neuer-entsorger-veolia-gelbe-tonne-altpapier',
+        title: 'Veolia übernimmt Gelbe Tonnen und Altpapier',
+        publishedAt: '2026-09-03',
+        topicIds: ['abfallentsorgung'],
+        summary: [
+            'Im Landkreis Harburg gibt es einen **neuen Entsorger für die Gelben Tonnen und das Altpapier**. Veolia hat die Aufgaben von Knettenbrech + Gurdulic übernommen.',
+            'Für Haushalte in Sprötze bleiben die **bekannten Abfuhrtermine unverändert**. Neu sind vor allem die Ansprechpartner bei Fragen oder bei der Bestellung einer Gelben Tonne.',
+        ],
+        introduction: [
+            'Die **Veolia Umweltservice Nord GmbH** übernimmt ab sofort die Abfuhr der Gelben Tonnen und des Altpapiers im Landkreis Harburg. Das Unternehmen hat den operativen Betrieb von Knettenbrech + Gurdulic übernommen.',
+            'Für die Haushalte in Sprötze ändert sich bei der eigentlichen Abfuhr zunächst wenig: **Die bisherigen Termine und Abläufe bleiben bestehen**. Übergangsweise können sogar noch die bekannten grün-roten Müllfahrzeuge des bisherigen Entsorgers unterwegs sein.',
+        ],
+        sections: [
+            {
+                title: 'Wechsel nach Problemen bei der Abfuhr',
+                paragraphs: [
+                    'Veolia ist künftig für die **Gelbe Tonne und die Altpapiertonne** zuständig. Dem Betreiberwechsel waren seit 2025 wiederholt Probleme bei der Abholung von Gelben Säcken beziehungsweise Gelben Tonnen und Altpapier vorausgegangen. Zeitweise blieben Behälter über längere Zeit stehen.',
+                    'Veolia übernimmt auch den bisherigen Betriebsstandort in Marxen. **Die genauen Hintergründe der vorzeitigen Übergabe an den neuen Entsorger wurden bislang nicht vollständig öffentlich erläutert.**',
+                    'Weitere Informationen gibt es beim [Landkreis Harburg](https://www.landkreis-harburg.de/portal/meldungen/neuer-entsorger-bei-papierabfall-und-gelben-tonnen-901010872-20100.html).',
+                ],
+            },
+            {
+                title: 'Was ändert sich für Sprötze?',
+                paragraphs: [
+                    'Die vorhandenen Tonnen können weiter genutzt werden und auch die veröffentlichten Abfuhrtermine ändern sich durch den Betreiberwechsel nicht.',
+                    'Geändert haben sich vor allem die **Kontaktmöglichkeiten**. Wer beispielsweise eine Gelbe Tonne bestellen möchte oder Fragen zur Abfuhr hat, muss sich künftig an Veolia wenden.',
+                ],
+            },
+            {
+                title: 'Neue Kontaktdaten',
+                paragraphs: [
+                    {
+                        type: 'list',
+                        items: [
+                            '**Veolia Umweltservice Nord GmbH, Betrieb Marxen**',
+                            'Hinter der Bahn 33, 21439 Marxen',
+                            'Telefon: **04185 9269030**',
+                            'E-Mail: **de.vus.dispo.marxen@veolia.com**',
+                            '[Online-Portal für die Gelbe Tonne](https://www.veolia.de/gelbe-tonne-landkreis-harburg)',
+                        ],
+                    },
+                    'Die gleichen Kontaktdaten gelten auch für Fragen zum **Altpapier**. Bei Fragen oder Reklamationen zur Papiertonne kann weiterhin auch die Abfallwirtschaft des Landkreises Harburg unter **04171 693694** oder per E-Mail an **abfallberatung@lkharburg.de** kontaktiert werden.',
+                ],
+            },
+            {
+                title: 'Weiterführende Informationen',
+                paragraphs: [
+                    'Weitere Informationen zum Wechsel des Entsorgers und zu den Hintergründen finden Sie bei folgenden Quellen:',
+                    {
+                        type: 'link',
+                        text: 'Landkreis Harburg: Neuer Entsorger bei Papierabfall und Gelben Tonnen',
+                        href: 'https://www.landkreis-harburg.de/portal/meldungen/neuer-entsorger-bei-papierabfall-und-gelben-tonnen-901010872-20100.html',
+                        indent: true,
+                    },
+                    {
+                        type: 'link',
+                        text: 'Buchholz Aktuell: Neuer Entsorger für Papier und Gelbe Tonne startet im Kreis Harburg',
+                        href: 'https://buchholz-aktuell.de/buchholz/nach-muell-chaos-neuer-entsorger-fuer-papier-und-gelbe-tonne-startet-im-kreis-harburg-19341/',
+                        indent: true,
+                    },
+                    {
+                        type: 'link',
+                        text: 'NDR: Künftig holt Veolia den Müll im Landkreis Harburg',
+                        href: 'https://www.ndr.de/nachrichten/niedersachsen/lueneburg_heide_unterelbe/betreiberwechsel-kuenftig-holt-veolia-muell-im-landkreis-harburg,aktuelllueneburg-2620.html',
+                        indent: true,
+                    },
+                ],
+            },
+        ],
+    },
+    {
+        id: 'hausmuellanalyse-buchholz-2026',
+        slug: 'hausmuellanalyse-buchholz-2026',
+        title: 'Hausmüllanalyse: Was landet in der Restmülltonne?',
+        publishedAt: '2026-09-04',
+        topicIds: ['abfallentsorgung'],
+        summary: [
+            'Vom **21. bis 25. September untersucht** die Abfallwirtschaft des Landkreises Harburg **stichprobenartig den Restmüll in Buchholz und fünf weiteren Orten**.',
+            'Dabei soll festgestellt werden, wie gut die Mülltrennung funktioniert und wie häufig beispielsweise **Biomüll, Papier oder Glas im Restmüll** landen.',
+        ],
+        introduction: [
+            'Die Abfallwirtschaft des Landkreises Harburg lässt vom **21. bis 25. September 2026** eine Analyse der Restmüllzusammensetzung durchführen. Neben Buchholz gehören Appel, Asendorf, Nenndorf, Salzhausen und Winsen zu den ausgewählten Untersuchungsorten.',
+            'Dabei geht es nicht um die Kontrolle einzelner Haushalte. Mehrere zufällig ausgewählte Restmülltonnen werden bei der regulären Abfuhr zusammengeführt. Anschließend wird das Gemisch in einem Labor untersucht.',
+        ],
+        sections: [
+            {
+                title: 'Was soll untersucht werden?',
+                paragraphs: [
+                    'Die Analyse soll zeigen, **was tatsächlich im Restmüll landet** und wie häufig Abfälle falsch entsorgt werden. Besonders geht es um Wertstoffe wie Biomüll, Papier oder Glas, die eigentlich getrennt gesammelt werden können.',
+                    'Der Landkreis möchte damit herausfinden, wie gut die Mülltrennung bereits funktioniert und an welchen Stellen möglicherweise zusätzliche Informationen zur richtigen Abfalltrennung sinnvoll sind.',
+                ],
+            },
+            {
+                title: 'Keine Kontrolle einzelner Haushalte',
+                paragraphs: [
+                    'Ein beauftragter Dienstleister leert während der normalen Müllabfuhr ausgewählte Restmülltonnen in einen gemeinsamen Sammelbehälter. Untersucht wird anschließend nur das **Gemisch aus mehreren Behältern**.',
+                    'Nach Angaben des Landkreises sind deshalb **keine Rückschlüsse auf einzelne Haushalte, deren Konsum oder ihr Trennverhalten möglich**.',
+                ],
+            },
+            {
+                title: 'Ist Sprötze betroffen?',
+                paragraphs: [
+                    'Der Landkreis nennt **Buchholz** als einen der sechs Untersuchungsorte. Welche Stadtteile, Straßen oder Haushalte für die Stichprobe ausgewählt werden, wird jedoch nicht veröffentlicht.',
+                    'Ob auch Restmülltonnen aus **Sprötze** Teil der Untersuchung sind, lässt sich aus den veröffentlichten Informationen daher nicht entnehmen.',
+                ],
+            },
+            {
+                title: 'Weiterführende Informationen',
+                paragraphs: [
+                    'Weitere Informationen zur Hausmüllanalyse und zu ihrem Ablauf finden Sie bei folgenden Quellen:',
+                    {
+                        type: 'link',
+                        text: 'Landkreis Harburg: Was landet alles im Restmüll?',
+                        href: 'https://www.landkreis-harburg.de/portal/meldungen/was-landet-alles-im-restmuell--901010877-20100.html',
+                        indent: true,
+                    },
+                    {
+                        type: 'link',
+                        text: 'Wochenblatt: Was landet alles im Restmüll?',
+                        href: 'https://www.kreiszeitung-wochenblatt.de/tag/abfall',
+                        indent: true,
+                    },
+                    {
+                        type: 'link',
+                        text: 'Buchholz Aktuell: Hausmüllanalyse soll Mülltrennung in Buchholz verbessern',
+                        href: 'https://buchholz-aktuell.de/buchholz/hausmuellanalyse-soll-muelltrennung-in-buchholz-verbessern-19380',
+                        indent: true,
+                    },
+                ],
+            },
+        ],
     },
     {
         id: 'bahnbruecke-k72-restarbeiten-september-2026',
