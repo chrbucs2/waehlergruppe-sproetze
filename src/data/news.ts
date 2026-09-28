@@ -164,6 +164,78 @@ export const news: NewsModel[] = [
         },
     },
     {
+        id: 'niedersachsenstrasse-4a-wohnungsbau',
+        slug: 'niedersachsenstrasse-4a-wohnungsbau',
+        title: 'Niedersachsenstraße 4a: Wohnhaus mit 8 Wohnungen geplant',
+        publishedAt: '2026-05-19',
+        topicIds: ['ortsmitte'],
+        summary: ['An der **Niedersachsenstraße 4a** ist ein **dreigeschossiges Wohnhaus mit 8 Wohnungen** geplant. Das Vorhaben wurde im April und Mai 2026 in den städtischen Gremien zur Kenntnis genommen; weitere Details zur konkreten Planung sind bislang nicht öffentlich bekannt.'],
+        introduction: [
+            'An der **Niedersachsenstraße 4a in Sprötze** ist ein neues Mehrfamilienhaus geplant. Vorgesehen ist ein **dreigeschossiges Gebäude mit insgesamt 8 Wohnungen**.',
+            'Das Vorhaben liegt in der Sprötzer Ortsmitte. Viele Details zur konkreten Planung wurden bisher allerdings **nicht öffentlich gemacht**.',
+        ],
+        sections: [
+            {
+                title: 'Was ist geplant?',
+                paragraphs: [
+                    'Die Stadt bezeichnet das Vorhaben als **„Errichtung eines dreigeschossigen Wohnhauses mit 8 Wohneinheiten“**.',
+                    'Weitere Angaben etwa zur Gebäudehöhe, zur Größe der Wohnungen, zu Stellplätzen oder zur Gestaltung sind in den bisher veröffentlichten Sitzungsunterlagen nicht enthalten.',
+                ],
+            },
+            {
+                title: 'Was ist bisher passiert?',
+                paragraphs: [
+                    'Das Bauvorhaben wurde am **15. April 2026** im Ausschuss für Stadtentwicklung, Umwelt, Klimaschutz und Mobilität behandelt. Der Tagesordnungspunkt wurde als Information über ein Bauvorhaben geführt.',
+                    'Am **19. Mai 2026** nahm auch der Verwaltungsausschuss die Information über das Vorhaben zur Kenntnis. Ein eigener politischer Beschluss über das Bauvorhaben ist in den veröffentlichten Unterlagen nicht ausgewiesen.',
+                ],
+            },
+            {
+                title: 'Warum ist das für Sprötze interessant?',
+                paragraphs: [
+                    'Das Grundstück liegt in der **Sprötzer Ortsmitte an der Niedersachsenstraße**. Bereits bei der Planung der „Neuen Ortsmitte Sprötze“ war vorgesehen, in diesem Bereich zusätzliche **innerörtliche Wohnmöglichkeiten** zu schaffen.',
+                    'Gleichzeitig sollte sich neue Bebauung in die vorhandenen Strukturen einfügen. In der Begründung zum Bebauungsplan wird ausdrücklich das Ziel genannt, bei Neubauten die **dörflichen Strukturen und das Ortsbild** zu berücksichtigen.',
+                    'Ein **dreigeschossiges Wohngebäude** ist deshalb für die weitere Entwicklung der Ortsmitte interessant – insbesondere im Hinblick auf Gebäudegröße und Gestaltung. Zu diesen Punkten liegen für das konkrete Vorhaben bisher aber keine öffentlichen Detailinformationen vor.',
+                ],
+            },
+            {
+                title: 'Wie geht es weiter?',
+                paragraphs: [
+                    'Der öffentlich dokumentierte Stand endet derzeit mit der **Kenntnisnahme durch den Verwaltungsausschuss am 19. Mai 2026**.',
+                    'Ob inzwischen eine Baugenehmigung erteilt wurde oder sich die Planung noch verändert hat, ist aus den bisher veröffentlichten Unterlagen nicht ersichtlich.',
+                ],
+            },
+            {
+                title: 'Weiterführende Informationen',
+                paragraphs: [
+                    {
+                        type: 'link',
+                        text: 'Sitzung des Stadtentwicklungsausschusses vom 15.04.2026',
+                        href: 'https://www.buchholz.de/allris/to010?SILFDNR=1000952&TOLFDNR=1017696',
+                        indent: true,
+                    },
+                    {
+                        type: 'link',
+                        text: 'Pressemitteilung des Verwaltungsausschusses vom 19.05.2026',
+                        href: 'https://www.buchholz.de/downloads/datei/NGQzZDk0ZDUyZDhmZjI2OWZKVTFvUmdnU0lrcGI1cDlRTS9FbUhhMWpTaVo5VEZDemdTVklDV2JxRnhFcW44THJKOWZpaEhnd1ZZWUVxbUNBenFWTFV2U1RtYXRnclh0Ym9QY2tLanpVWTFrMG1xekJya0I1cEVha3UzMk9OWE5RajhzVFphUXlZSC9VNWoydmVDNXB0TW1WVGFGam5pSnNNSVhZdz09',
+                        indent: true,
+                    },
+                    {
+                        type: 'link',
+                        text: 'Begründung zum Bebauungsplan „Neue Ortsmitte Sprötze – Niedersachsenstraße“',
+                        href: 'https://www.buchholz.de/downloads/datei/NTA0ZGM1OGM0ODU5MzAwN3VjaDdIQ0pzQVNyUmQ2elJXUHRQNEpPQ1ZFUEUwWUpLUXk3Y1haTGRIb1AvcFBnZWh3Y1BZOTk1bXdjUTBpMllJczNEK2hXYmdKZWN5aEt0OFVnaVdwZFRDRms1RXZIVEFXN0k0bGw0a0tZdlRWdGh5dmRuaXI4clI1V2RSb3ZNTHBXVXlVVE5ZaWhCMjRJd2czRkY3UT09',
+                        indent: true,
+                    },
+                    {
+                        type: 'link',
+                        text: 'Wochenblatt: Bürokratische Hürden bei einem Bauvorhaben in Sprötze',
+                        href: 'https://www.kreiszeitung-wochenblatt.de/buchholz/c-panorama/buerokratische-huerden-die-bei-bauvorhaben-lauern_a370051',
+                        indent: true,
+                    },
+                ],
+            },
+        ],
+    },
+    {
         id: 'grundschule-sproetze-trelde-ausbau',
         slug: 'grundschule-sproetze-trelde-neubau-erweiterung',
         title: 'Ausbau der Grundschule Sprötze-Trelde an beiden Standorten geplant',

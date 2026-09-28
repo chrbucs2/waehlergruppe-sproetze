@@ -2,6 +2,7 @@ import { SiteFooter } from '../components/SiteFooter';
 import { Details } from '../components/detail/Details';
 import { getArticleBySlug } from '../lib/content';
 import { useQueryParamState } from '../lib/routing';
+import { useSeo } from '../lib/seo';
 import { DetailModel } from '../models/details/DetailModel';
 import { ScheduleModel } from '../models/pages/ScheduleModel';
 import {SCHEDULE_PATH} from "../lib/constants";
@@ -15,6 +16,12 @@ interface ScheduleDetailsPageProps {
 }
 
 export function ScheduleDetailsPage({ scheduleItem, onShowImpressum, onShowDatenschutz }: ScheduleDetailsPageProps) {
+    useSeo({
+        title: scheduleItem.title,
+        description: scheduleItem.summary[0] ?? 'Termin der Wählergruppe Sprötze.',
+        canonicalPath: `/termine/${scheduleItem.slug}`,
+    });
+
     // get params for the Details components
     const introduction: string[] = scheduleItem?.introduction || [];
     const sections: DetailModel[] = scheduleItem?.sections || [];

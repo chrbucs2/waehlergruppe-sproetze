@@ -4,6 +4,7 @@ import { Button } from '../components/common/button/Button';
 import { candidates, electionResults, priorities, teamMembers } from '../data';
 import { NEWS_PATH } from '../lib/constants';
 import { assetUrl } from '../lib/formatting';
+import { useSeo } from '../lib/seo';
 import styled from "styled-components";
 import {SiteFooter} from "../components/SiteFooter";
 
@@ -36,6 +37,12 @@ function hasIconImage(detail: TeamMemberDetail): detail is TeamMemberDetail & { 
 }
 
 export function HomePage({ onShowImpressum, onShowDatenschutz }: HomePageProps) {
+    useSeo({
+        title: 'Wählergruppe Sprötze',
+        description: 'Offizielle Website der Wählergruppe Sprötze mit Positionen, Team und Kontakten zur unabhängigen Kommunalpolitik vor Ort.',
+        canonicalPath: '/',
+    });
+
     const [activePriority, setActivePriority] = useState<(typeof priorities)[number]>(priorities[0]);
     const [activeCandidate, setActiveCandidate] = useState<Candidate>(candidates[0]);
     const [activeTeamMemberName, setActiveTeamMemberName] = useState<string | null>(null);

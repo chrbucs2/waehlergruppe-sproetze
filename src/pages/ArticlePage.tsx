@@ -2,6 +2,7 @@ import { Details } from '../components/detail/Details';
 import { SiteFooter } from '../components/SiteFooter';
 import { buildNewsOverviewUrl } from '../lib/content';
 import { NEWS_PATH } from '../lib/constants';
+import { useSeo } from '../lib/seo';
 import { ArticleModel } from '../models/pages/ArticleModel';
 
 export interface ArticlePageParams {
@@ -14,6 +15,12 @@ export function ArticlePage({ article, onShowImpressum, onShowDatenschutz }: Art
     if (!article) {
         return null;
     }
+
+    useSeo({
+        title: article.title,
+        description: article.introduction?.length ? article.introduction[0] : 'Beitrag der Wählergruppe Sprötze.',
+        canonicalPath: `/artikel/${article.slug}`,
+    });
 
     const topics =
         (article.topicIds ?? [])

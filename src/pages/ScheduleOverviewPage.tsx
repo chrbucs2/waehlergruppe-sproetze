@@ -6,6 +6,7 @@ import { MainSectionContainer } from '../components/mainsection/MainSectionConta
 import { MainSectionCardList } from '../components/mainsection/MainSectionCardList';
 import { MainSectionHeader } from '../components/mainsection/MainSectionHeader';
 import {NEWS_PATH} from '../lib/constants';
+import { useSeo } from '../lib/seo';
 import { ScheduleModel } from '../models/pages/ScheduleModel';
 import MainSectionCard from "../components/mainsection/MainSectionCard";
 import {MoreButton} from "../components/common/button/MoreButton";
@@ -28,6 +29,12 @@ export function ScheduleOverviewPage({
     onShowImpressum,
     onShowDatenschutz,
 }: ScheduleOverviewPageProps) {
+    useSeo({
+        title: 'Termine für Sprötze',
+        description: 'Sitzungen, Veranstaltungen und Termine der Wählergruppe Sprötze in und rund um Sprötze.',
+        canonicalPath: '/termine',
+    });
+
     // state of show more button
     const [showAllUpcoming, setShowAllUpcoming] = useState(false);
 

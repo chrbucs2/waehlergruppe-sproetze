@@ -6,6 +6,7 @@ import { FilterButtonGroup } from '../components/common/filter/FilterButtonGroup
 import { MainSectionHeader } from '../components/mainsection/MainSectionHeader';
 import { SCHEDULE_PATH } from '../lib/constants';
 import { useQueryParamState } from '../lib/routing';
+import { useSeo } from '../lib/seo';
 import { NewsModel } from '../models/pages/NewsModel';
 import MainSectionCard from "../components/mainsection/MainSectionCard";
 import {MainSectionCardList} from "../components/mainsection/MainSectionCardList";
@@ -27,11 +28,16 @@ export function NewsOverviewPage({
     // sync the selected topic with the URL query param so filters are shareable and browser back/forward works
     const [selectedTopicId, setSelectedTopicId] = useQueryParamState('thema');
 
-    // if topic is selected find the topic object
     const selectedTopic = useMemo(
         () => availableTopics.find((topic) => topic.id === selectedTopicId) ?? null,
         [selectedTopicId, availableTopics],
     );
+
+    useSeo({
+        title: selectedTopic ? `News zu ${selectedTopic.label}` : 'Sprötze aktuell',
+        description: selectedTopic?.description ?? 'Aktuelle Nachrichten und Meldungen der Wählergruppe Sprötze.',
+        canonicalPath: selectedTopic ? `/sproetze-aktuell?thema=${selectedTopic.id}` : '/sproetze-aktuell',
+    });
 
     // filter news items based on the selected topic
     const filteredNewsItems = useMemo(() => {

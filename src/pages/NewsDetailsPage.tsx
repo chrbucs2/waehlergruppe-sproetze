@@ -2,6 +2,7 @@ import { SiteFooter } from '../components/SiteFooter';
 import { Details } from '../components/detail/Details';
 import { getArticleBySlug, buildNewsOverviewUrl } from '../lib/content';
 import { useQueryParamState } from '../lib/routing';
+import { useSeo } from '../lib/seo';
 import { DetailModel } from '../models/details/DetailModel';
 import { NewsModel } from '../models/pages/NewsModel';
 
@@ -15,6 +16,12 @@ interface NewsDetailsPageProps {
 }
 
 export function NewsDetailsPage({ newsItem, topicId, onShowImpressum, onShowDatenschutz }: NewsDetailsPageProps) {
+    useSeo({
+        title: newsItem.title,
+        description: newsItem.summary[0] ?? 'Sprötze aktuell.',
+        canonicalPath: `/sproetze-aktuell/${newsItem.slug}`,
+    });
+
     // sync the selected topic with the URL query param so filters are shareable and browser back/forward works
     const [selectedTopicId] = useQueryParamState('thema');
 
