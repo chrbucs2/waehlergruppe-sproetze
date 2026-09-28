@@ -34,11 +34,22 @@ export function ScheduleOverviewPage({
     // divide into upcoming and past schedule items
     const now = useMemo(() => new Date(), []);
     const pastSchedule = useMemo(
-        () => items.filter((item) => getScheduleStatus(item, now) === 'past').reverse(),
+        () => items
+            .filter(item => !item.hidden)
+            .filter(
+                (item) =>
+                    getScheduleStatus(item, now) === 'past'
+            )
+            .reverse(),
         [now, items],
     );
     const upcomingSchedule = useMemo(
-        () => items.filter((item) => getScheduleStatus(item, now) === 'upcoming'),
+        () => items
+            .filter(item => !item.hidden)
+            .filter(
+                (item) =>
+                    getScheduleStatus(item, now) === 'upcoming'
+            ),
         [now, items],
     );
 

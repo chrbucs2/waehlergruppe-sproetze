@@ -35,11 +35,12 @@ export function NewsOverviewPage({
 
     // filter news items based on the selected topic
     const filteredNewsItems = useMemo(() => {
+        const itemsWithoutHidden = items.filter((item) => !item.hidden);
         if (!selectedTopic) {
-            return items;
+            return itemsWithoutHidden;
         }
 
-        return items.filter((item) => item.topicIds.includes(selectedTopic.id));
+        return itemsWithoutHidden.filter((item) => item.topicIds.includes(selectedTopic.id));
     }, [items, selectedTopic]);
 
     // prepare content for the page

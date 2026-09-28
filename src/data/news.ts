@@ -436,6 +436,74 @@ export const news: NewsModel[] = [
             text: 'Buchholz Aktuell: Häckselaktion'
         },
     },
+    {
+        id: 'sproetzer-bahnhofstrasse-3-mehrfamilienhaus',
+        slug: 'sproetzer-bahnhofstrasse-3-mehrfamilienhaus',
+        title: 'Mehrfamilienhaus mit 12 Wohnungen an der Sprötzer Bahnhofstraße 3 geplant',
+        publishedAt: '2026-09-28',
+        topicIds: ['ortsmitte'],
+        summary: [
+            'An der **Sprötzer Bahnhofstraße 3** ist ein Mehrfamilienhaus mit **12 Wohnungen** geplant. Das 1.182 Quadratmeter große Grundstück wurde zuvor mit Altbestand zum Verkauf angeboten.',
+            'Inzwischen wird das genehmigte Neubauprojekt selbst als **Investment für 3,23 Millionen Euro** vermarktet. Die Fertigstellung ist für **2027** vorgesehen.',
+        ],
+        introduction: [
+            'An der **Sprötzer Bahnhofstraße 3** soll ein Mehrfamilienhaus mit **12 Wohnungen** entstehen. Das Grundstück mit einer Größe von **1.182 Quadratmetern** war zuvor als Baugrundstück mit Altbestand angeboten und inzwischen verkauft worden.',
+            'Mittlerweile wird das geplante Mehrfamilienhaus selbst als **Investment für 3,23 Millionen Euro** angeboten. Laut aktuellem Immobilienangebot liegt die **Baugenehmigung bereits vor**, die Fertigstellung ist für **2027** vorgesehen.',
+        ],
+        sections: [
+            {
+                title: 'Was ist geplant?',
+                paragraphs: [
+                    'Das aktuelle Angebot beschreibt ein **Mehrfamilienhaus mit 12 Wohnungen und rund 634 Quadratmetern Wohnfläche** auf dem 1.182 Quadratmeter großen Grundstück.',
+                    'Geplant ist ein energieeffizienter Neubau nach **KfW-40-QNG-Standard**. Das Projekt richtet sich vor allem an Kapitalanleger und wird derzeit für **3,23 Millionen Euro** angeboten.',
+                ],
+            },
+            {
+                title: 'Das Grundstück wurde zuvor verkauft',
+                paragraphs: [
+                    'Zuvor wurde das Grundstück als **Baugrundstück für ein Mehrfamilienhaus** angeboten. Auf dem Grundstück befand sich zu diesem Zeitpunkt noch ein Gebäude aus den 1960er-Jahren, das laut damaligem Angebot vom Käufer beseitigt werden sollte.',
+                    'Im früheren Angebot wurde eine Bebauung nach **§ 34 BauGB entsprechend der Nachbarschaftsbebauung** beschrieben. Das Angebot ist mittlerweile als **verkauft** gekennzeichnet.',
+                ],
+            },
+            {
+                title: '2024 waren noch vier Wohnungen genannt',
+                paragraphs: [
+                    'Interessant ist ein Blick in das Ratsinformationssystem der Stadt: Im August 2024 wurde unter der Adresse **Sprötzer Bahnhofstraße 3–3a** ein Bauvorhaben für ein **Mehrfamilienhaus mit vier Wohneinheiten** aufgeführt.',
+                    'Das aktuelle Immobilienangebot nennt dagegen **12 Wohnungen** und eine bereits erteilte Baugenehmigung. Wie sich die Planung zwischenzeitlich von vier auf zwölf Wohnungen entwickelt hat, lässt sich aus den öffentlich verfügbaren Angaben derzeit nicht nachvollziehen.',
+                ],
+            },
+            {
+                title: 'Das Projekt wird bereits als Investment angeboten',
+                paragraphs: [
+                    'Das heutige Angebot richtet sich nicht mehr an Käufer eines unbebauten Grundstücks, sondern vermarktet das **projektierte und genehmigte Mehrfamilienhaus als Kapitalanlage**.',
+                    'Angeboten werden dabei laut Makler zwei Modelle mit oder ohne Mietpreisbindung. Außerdem wird mit möglichen Förderdarlehen von NBank und KfW sowie steuerlichen Vorteilen geworben.',
+                ],
+            },
+            {
+                title: 'Weiterführende Informationen',
+                paragraphs: [
+                    {
+                        type: 'link',
+                        text: 'Früheres Verkaufsangebot des Grundstücks – inzwischen verkauft',
+                        href: 'https://amoreal.de/immobilien/grundstueck-in-buchholz-in-der-nordheide-sproetze-kaufen-36e9dc/',
+                        indent: true,
+                    },
+                    {
+                        type: 'link',
+                        text: 'Aktuelles Kaufangebot des geplanten Mehrfamilienhauses',
+                        href: 'https://www.jakob-bauer.de/immobiliendetails.xhtml?id[obj0]=237',
+                        indent: true,
+                    },
+                    {
+                        type: 'link',
+                        text: 'Ratsinformationssystem: Bauvorhaben Sprötzer Bahnhofstraße 3–3a mit vier Wohneinheiten im Jahr 2024',
+                        href: 'https://www.buchholz.de/allris/doc?ANNOTS=1&DOCTYP=108&DOLFDNR=1211906&OTYP=41',
+                        indent: true,
+                    },
+                ],
+            },
+        ],
+    },
 ];
 
 export const newsArticles = news;
