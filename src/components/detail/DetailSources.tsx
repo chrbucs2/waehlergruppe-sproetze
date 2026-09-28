@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import { DetailSourceModel } from '../../models/details/DetailSourceModel';
+import Link from "../common/link/Link";
 
 const Container = styled.aside`
     display: grid;
@@ -25,15 +26,6 @@ const Item = styled.li`
     line-height: 1.6;
 `;
 
-const Link = styled.a`
-    color: var(--primary-dark);
-
-    &::after {
-        content: '→';
-        margin-left: 0.35rem;
-    }
-`;
-
 interface DetailSourceProps {
     sources: DetailSourceModel[];
 }
@@ -49,7 +41,7 @@ export function DetailSources({ sources }: DetailSourceProps) {
             <List>
                 {sources.map((source) => (
                     <Item key={source.label}>
-                        <Link href={source.url} target="_blank" rel="noopener noreferrer">
+                        <Link href={source.url} showArrow={false} fontWeight="thin" rel="noopener noreferrer">
                             {source.label}
                         </Link>
                     </Item>
