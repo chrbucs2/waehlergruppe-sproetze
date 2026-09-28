@@ -6,6 +6,7 @@ import {LinkModel} from "../LinkModel";
 export interface NewsModel extends Omit<DetailHeadingNewsModel, 'type'>{
     id: string;
     slug: string;
+    hidden?: boolean;
     topicIds: string[];
     summary: string[];
     articleLink?: LinkModel;
