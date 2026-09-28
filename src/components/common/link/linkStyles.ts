@@ -1,28 +1,34 @@
 import { css } from 'styled-components';
 
+type LinkCssOptions = {
+    underline?: boolean;
+    showArrow?: boolean;
+    fontWeight?: 'thick' | 'thin';
+    arrowContent?: string;
+};
 
-const inlineLinkArrowStyles = css`
+export const getLinkStyles = ({
+    underline = false,
+    showArrow = true,
+    fontWeight = 'thick',
+    arrowContent = '→',
+}: LinkCssOptions = {}) => css`
     color: var(--primary-dark);
-    text-decoration: underline;
+    font-weight: ${fontWeight === 'thin' ? 400 : 700};
+    text-decoration: ${underline ? 'underline' : 'none'};
     text-underline-offset: 0.14em;
-`;
 
-const linkArrowStyles = css`
-    ${inlineLinkArrowStyles}
-    gap: 8px;
+    ${showArrow && css`
+        gap: 8px;
 
-    &::after {
-        content: '→';
-    }
-`;
-
-
-export const inlineLinkStyles = css`
-    ${inlineLinkArrowStyles}
+        &::after {
+            content: '${arrowContent}';
+        }
+    `}
 `;
 
 export const anchoredInlineLinkStyles = css`
     a {
-        ${inlineLinkArrowStyles}
+        ${getLinkStyles({underline: true, showArrow: false, fontWeight: 'thick'})}
     }
 `;

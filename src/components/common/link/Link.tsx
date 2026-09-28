@@ -1,33 +1,39 @@
 import styled from 'styled-components';
+import {getLinkStyles} from "./linkStyles";
 
 type LinkFontWeight = 'thick' | 'thin';
 
-type LinkProps = React.ComponentPropsWithoutRef<'a'> & {
-    href?: string;
-    showArrow?: boolean;
-    fontWeight?: LinkFontWeight;
-};
+interface LinkRootProps {
+    $showArrow: boolean;
+    $fontWeight: LinkFontWeight;
+    $underline: boolean;
+}
 
-const LinkRoot = styled.a<{ $showArrow: boolean; $fontWeight: LinkFontWeight }>`
+const LinkRoot = styled.a<LinkRootProps>`
     display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 0;
-    font-weight: ${({ $fontWeight }) => ($fontWeight === 'thin' ? 400 : 700)};
-    color: var(--primary-dark);
-
-    &::after {
-        content: ${({ $showArrow }) => ($showArrow ? `'→'` : 'none')};
+    ${({ $showArrow, $fontWeight, $underline }) => 
+        getLinkStyles({ 
+            showArrow: $showArrow, 
+            fontWeight: $fontWeight, 
+            underline: $underline })
     }
 `;
 
-export default function Link({ href, children, showArrow = true, fontWeight = 'thick', ...rest }: LinkProps) {
+interface LinkProps extends React.ComponentPropsWithoutRef<'a'> {
+    href?: string;
+    showArrow?: boolean;
+    arrowContent?: string;
+    fontWeight?: LinkFontWeight;
+    underline?: boolean;
+}
+
+export default function Link({ href, children, showArrow = true, fontWeight = 'thick', underline = false, ...rest }: LinkProps) {
     if (!href) {
         return null;
     }
 
     return (
-        <LinkRoot href={href} $showArrow={showArrow} $fontWeight={fontWeight} {...rest}>
+        <LinkRoot href={href} $showArrow={showArrow} $fontWeight={fontWeight} $underline={underline} {...rest}>
             {children}
         </LinkRoot>
     );
