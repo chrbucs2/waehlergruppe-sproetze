@@ -565,7 +565,7 @@ export const news: NewsModel[] = [
     {
         id: 'niedersachsenstrasse-4a-wohnungsbau',
         slug: 'niedersachsenstrasse-4a-wohnungsbau',
-        title: 'Niedersachsenstraße 4a: Wohnhaus mit 8 Wohnungen geplant',
+        title: 'Dreigeschossiges Wohnhaus mit 8 Wohnungen in Niedersachsenstrasse 4a geplant',
         publishedAt: '2026-09-17',
         topicIds: ['ortsmitte'],
         summary: ['An der **Niedersachsenstraße 4a** ist ein **dreigeschossiges Wohnhaus mit 8 Wohnungen** geplant. Das Vorhaben wurde im April und Mai 2026 in den städtischen Gremien zur Kenntnis genommen; weitere Details zur konkreten Planung sind bislang nicht öffentlich bekannt.'],
