@@ -495,24 +495,10 @@ export const news: NewsModel[] = [
         },
     },
     {
-        id: 'haeckselaktion-buchholz-2026',
-        slug: 'haeckselaktion-2026-anmeldung-sproetze',
-        title: 'Häckselaktion 2026 im November',
-        publishedAt: '2026-09-18',
-        topicIds: ['abfallentsorgung', 'leben-im-dorf'],
-        summary: [
-            'Die **mobile Häckselaktion** der Stadt Buchholz findet im **November** wieder statt. An vier Samstagen wird Baum- und Buschschnitt direkt vor angemeldeten Grundstücken zerkleinert. **Für Sprötze steht der genaue Termin noch nicht fest.** Die Stadt will am 19. Oktober bekanntgeben, welche Ortschaft an welchem Aktionstag bedient wird.',
-        ],
-        articleLink: {
-            href: 'https://buchholz-aktuell.de/buchholz/jetzt-anmelden-mobile-haecksler-kommen-nach-buchholz-19803',
-            text: 'Buchholz Aktuell: Häckselaktion'
-        },
-    },
-    {
         id: 'sproetzer-bahnhofstrasse-3-mehrfamilienhaus',
         slug: 'sproetzer-bahnhofstrasse-3-mehrfamilienhaus',
         title: 'Mehrfamilienhaus mit 12 Wohnungen an der Sprötzer Bahnhofstraße 3 geplant',
-        publishedAt: '2026-09-28',
+        publishedAt: '2026-09-17',
         topicIds: ['ortsmitte'],
         summary: [
             'An der **Sprötzer Bahnhofstraße 3** ist ein Mehrfamilienhaus mit **12 Wohnungen** geplant. Das 1.182 Quadratmeter große Grundstück wurde zuvor mit Altbestand zum Verkauf angeboten.',
@@ -580,7 +566,7 @@ export const news: NewsModel[] = [
         id: 'niedersachsenstrasse-4a-wohnungsbau',
         slug: 'niedersachsenstrasse-4a-wohnungsbau',
         title: 'Niedersachsenstraße 4a: Wohnhaus mit 8 Wohnungen geplant',
-        publishedAt: '2026-09-28',
+        publishedAt: '2026-09-17',
         topicIds: ['ortsmitte'],
         summary: ['An der **Niedersachsenstraße 4a** ist ein **dreigeschossiges Wohnhaus mit 8 Wohnungen** geplant. Das Vorhaben wurde im April und Mai 2026 in den städtischen Gremien zur Kenntnis genommen; weitere Details zur konkreten Planung sind bislang nicht öffentlich bekannt.'],
         introduction: [
@@ -647,6 +633,20 @@ export const news: NewsModel[] = [
                 ],
             },
         ],
+    },
+    {
+        id: 'haeckselaktion-buchholz-2026',
+        slug: 'haeckselaktion-2026-anmeldung-sproetze',
+        title: 'Häckselaktion 2026 im November',
+        publishedAt: '2026-09-18',
+        topicIds: ['abfallentsorgung', 'leben-im-dorf'],
+        summary: [
+            'Die **mobile Häckselaktion** der Stadt Buchholz findet im **November** wieder statt. An vier Samstagen wird Baum- und Buschschnitt direkt vor angemeldeten Grundstücken zerkleinert. **Für Sprötze steht der genaue Termin noch nicht fest.** Die Stadt will am 19. Oktober bekanntgeben, welche Ortschaft an welchem Aktionstag bedient wird.',
+        ],
+        articleLink: {
+            href: 'https://buchholz-aktuell.de/buchholz/jetzt-anmelden-mobile-haecksler-kommen-nach-buchholz-19803',
+            text: 'Buchholz Aktuell: Häckselaktion'
+        },
     },
 ];
 
