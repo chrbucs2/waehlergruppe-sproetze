@@ -9,12 +9,12 @@ const Figure = styled.figure`
 `;
 
 const Image = styled.img`
+    ${imageContainerStyles()}
     display: block;
     width: min(100%, 960px);
     max-height: 620px;
     object-fit: contain;
     background: rgba(255, 255, 255, 0.6);
-    ${imageContainerStyles()}
 `;
 
 const Caption = styled.figcaption`
