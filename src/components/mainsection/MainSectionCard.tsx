@@ -34,44 +34,39 @@ const CardHeader = styled.div`
     text-align: left;
 `;
 
-const CardBody = styled.div<{ $hasImage: boolean }>`
-    display: grid;
-    gap: 18px;
-    align-items: start;
-    grid-template-columns: ${
-        ({ $hasImage }) => 
-            ($hasImage ? '150px minmax(0, 1fr)' : '1fr')
-    };
-
-    @media (max-width: 720px) {
-        grid-template-columns: 1fr;
-    }
+const CardBody = styled.div`
+    display: block;
 `;
 
 const CardImageColumn = styled.div`
-    display: grid;
-    gap: 12px;
-    align-content: start;
-    width: 100%;
-    max-width: 150px;
-    justify-self: start;
+    float: left;
+    width: 150px;
+    margin: 0 18px 0px 0;
+
+    @media (max-width: 720px) {
+        float: none;
+        width: 100%;
+        max-width: 150px;
+        margin: 0 0 12px;
+        display: block;
+    }
 `;
 
 const CardContent = styled.div`
-    display: grid;
-    gap: 10px;
-    align-content: start;
-    justify-items: start;
     text-align: left;
+
+    p {
+        margin: 0 0 10px;
+    }
 `;
 
 const Actions = styled.div`
     display: grid;
     gap: 8px;
     justify-items: start;
-    grid-column: 1 / -1;
     width: 100%;
     padding-top: 4px;
+    clear: both;
 `;
 
 export type CardItem = NewsModel | ScheduleModel;
@@ -112,23 +107,23 @@ export default function MainSectionCard({ item }: CardProps) {
                 ) : null}
                 <h3>{item.title}</h3>
             </CardHeader>
-            <CardBody $hasImage={hasSummaryImage}>
-                {hasSummaryImage ? (
-                    <CardImageColumn>
-                        <MainSectionCardImage image={item.summaryImage!} title={item.title} />
-                    </CardImageColumn>
-                ) : null}
+            <CardBody>
                 <CardContent>
+                    {hasSummaryImage ? (
+                        <CardImageColumn>
+                            <MainSectionCardImage image={item.summaryImage!} title={item.title} />
+                        </CardImageColumn>
+                    ) : null}
                     {paragraphs.map((paragraph, index) => (
                         <p key={`${item.id}-summary-${index}`} dangerouslySetInnerHTML={renderMarkup(paragraph)} />
                     ))}
+                    {(hasDetailPage || articleHref) && (
+                        <Actions>
+                            {articleHref ? <Link href={articleHref} dangerouslySetInnerHTML={renderMarkup(articleLabel ?? '')} /> : null}
+                            {detailHref ? <Link href={detailHref} dangerouslySetInnerHTML={renderMarkup(detailLabel)} /> : null}
+                        </Actions>
+                    )}
                 </CardContent>
-                {(hasDetailPage || articleHref) && (
-                    <Actions>
-                        {articleHref ? <Link href={articleHref} dangerouslySetInnerHTML={renderMarkup(articleLabel ?? '')} /> : null}
-                        {detailHref ? <Link href={detailHref} dangerouslySetInnerHTML={renderMarkup(detailLabel)} /> : null}
-                    </Actions>
-                )}
             </CardBody>
         </CardRoot>
     );
