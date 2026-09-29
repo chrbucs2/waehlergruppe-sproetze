@@ -79,7 +79,7 @@ Typische Inhalte für die Übersichtsseite:
 - Allgemein:  `id`, `slug` (in der Regel der gleiche Wert)
 - Header: `title`, `publishedAt`
 - Themen-Filter: `topicIds`
-- Zusammenfassung: `summary`
+- Zusammenfassung: `summary`, `summaryImage`
 
 Typische Inhalte für die Detailsseite:
 - Header: `title`, `publishedAt`
@@ -101,6 +101,11 @@ Typische Inhalte für die Detailsseite:
         'Dies ist ein einleitender Text für die Übersichtsseite.',
         'Der kann auch über mehrere Absätze gehen und **fett gedruckten Text** enthalten.',
     ],
+    summaryImage: {
+        src: '/images/news/stadteingang-west.jpg',
+        alt: 'Luftbild des geplanten Stadteingangs West',
+        crop: { x: 50, y: 35 },
+    },
     introduction: [
         'Dies ist ein einleitender Text.',
         'Der kann auch über mehrere Absätze gehen und **fett gedruckten Text** enthalten.',
@@ -183,7 +188,7 @@ Typische Inhalte für die Detailsseite:
 Typische Inhalte für die Übersichtsseite:
 - Allgemein:  `id`, `slug` (in der Regel der gleiche Wert)
 - Header: `title`, `category`, `date`, `time`
-- Zusammenfassung: `summary`
+- Zusammenfassung: `summary`, `summaryImage`
 
 Typische Inhalte für die Detailsseite:
 - Header: `title`, `category`, `date`, `time`, `location`
@@ -206,6 +211,11 @@ Typische Inhalte für die Detailsseite:
         'Dies ist ein einleitender Text für die Übersichtsseite.',
         'Der kann auch über mehrere Absätze gehen und **fett gedruckten Text** enthalten.',
     ],
+    summaryImage: {
+        src: '/images/schedule/ausschuss.jpg',
+        alt: 'Bild aus dem Ausschuss mit Beteiligten',
+        crop: { x: 50, y: 20 },
+    },
     introduction: [
         'Dies ist ein einleitender Text.',
         'Der kann auch über mehrere Absätze gehen und **fett gedruckten Text** enthalten.',
