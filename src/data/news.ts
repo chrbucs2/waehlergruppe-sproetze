@@ -520,7 +520,7 @@ export const news: NewsModel[] = [
                 title: 'Was ist geplant?',
                 paragraphs: [
                     'Die Stadt bezeichnet das Vorhaben als **„Errichtung eines dreigeschossigen Wohnhauses mit 8 Wohneinheiten“**.',
-                    'Weitere Angaben etwa zur Gebäudehöhe, zur Größe der Wohnungen, zu Stellplätzen oder zur Gestaltung sind in den bisher veröffentlichten Sitzungsunterlagen nicht enthalten.',
+                    'Weitere Angaben etwa zur Gebäudehöhe, zur Größe der Wohnungen, zu Stellplätzen oder zur Gestaltung sind in den bisher veröffentlichten Sitzungsunterlagen nicht enthalten. Auch die genaue Grundstückslage geht aus den Unterlagen nicht hervor, evtl. könnte es sich um das Grundstück mit dem kleinen Spielplatz schräg gegenüber des alten Feuerwehrhauses handeln.',
                 ],
             },
             {
