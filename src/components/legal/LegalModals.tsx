@@ -185,7 +185,7 @@ export function LegalModals({ showImpressum, showDatenschutz, setShowImpressum, 
                             <p>
                                 <strong>Rechtsgrundlage:</strong> {legal.datenschutz.legalBasis}<br />
                                 <strong>Speicherdauer:</strong> {legal.datenschutz.storageDuration}<br />
-                                <strong>Verarbeitung durch:</strong> GitHub Inc. (USA), unter EU-Datenschutzabkommen
+                                <strong>Verarbeitung durch:</strong> GitHub als Hosting-Anbieter. Weitere Informationen zur Datenverarbeitung und zu etwaigen Drittlandtransfers finden Sie im GitHub Privacy Statement.
                             </p>
                             <h4>Ihre Rechte und Widerspruch</h4>
                             <p>Sie haben unter der DSGVO folgende Rechte:</p>

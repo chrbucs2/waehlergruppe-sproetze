@@ -47,7 +47,7 @@ E-Mail: ${contacts.representative.email}`,
             'Wählergruppe Sprötze ist eine unabhängige Bürgerbewegung (nicht eingetragener Verein, parteilos).',
         hostingTech: 'Diese Webseite wird auf GitHub Pages (pages.github.com) gehostet.',
         externalLinksDisclaimer:
-            'Für fremde Inhalte, auf die wir von dieser Seite verlinken, übernehmen wir keine Haftung nach TMG §7(1).',
+            'Diese Website enthält Links zu externen Seiten Dritter. Für deren aktuelle Inhalte sind ausschließlich die jeweiligen Betreiber verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf erkennbare Rechtsverstöße geprüft. Da sich Inhalte nachträglich ändern können, machen wir uns fremde Inhalte nicht zu eigen und übernehmen keine Gewähr für deren spätere Entwicklung.',
         imageRights:
             'Alle auf dieser Seite abgebildeten Personen haben der Veröffentlichung ihrer Fotos zugestimmt.',
     },
@@ -71,8 +71,9 @@ E-Mail: ${contacts.representative.email}`,
 • Browser-Informationen (User-Agent)
 • Referrer-Daten`,
         legalBasis:
-            'Rechtsgrundlage: DSGVO Art. 6 Abs. 1 f) (berechtigtes Interesse zur Infrastruktur-Überwachung und Sicherheit)',
-        storageDuration: 'Typischerweise ca. 90 Tage nach GitHub-Standardrichtlinien',
+            'DSGVO Art. 6 Abs. 1 lit. f (berechtigtes Interesse an sicherem und stabilem Hosting sowie an der Abwehr von Missbrauch). Maßgeblich sind im Übrigen die Datenschutzinformationen von GitHub als Hosting-Anbieter.',
+        storageDuration:
+            'Die Speicherdauer richtet sich nach den aktuellen Vorgaben und Prozessen von GitHub als Hosting-Anbieter. Auf konkrete Speicherfristen bei GitHub haben wir keinen eigenen Einfluss.',
         userRights: `Sie haben unter der DSGVO folgende Rechte:
 • Recht auf Auskunft über Ihre Daten (Art. 15)
 • Recht auf Berichtigung oder Löschung (Art. 16–17)

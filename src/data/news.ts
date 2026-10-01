@@ -26,12 +26,12 @@ export const news: NewsModel[] = [
             'Der geplante **Stadteingang West an der Bremer Straße** stand am 18. März erneut auf der Tagesordnung des Stadtentwicklungsausschusses. Neben dem Rahmenplan ging es um die geplanten Bebauungspläne **„Bremer Straße / Brumhagen Süd“ und „Bremer Straße / Brumhagen Nord“**.',
             'Für das Gesamtgebiet sind **bis zu rund 580 Wohnungen** vorgesehen. Die weitere Planung wird in mehreren Abschnitten vorbereitet. Offen sind unter anderem wichtige Fragen zu **Verkehr, Schul- und Kita-Kapazitäten, Entwässerung sowie Natur- und Artenschutz**.',
         ],
-        summaryImage: {
+        /*summaryImage: {
             src: '/images/articles/stadteingang-west-variante-1.png',
             alt: 'Planung Stadteingang-West, Variante 1',
             zoom: 1.1,
             offset: {x: 3, y: 2}
-        },
+        },*/
         articleLink: {
             slug: 'stadteingang-west-bremer-strasse',
             text: 'Wohngebiet "Stadteingang West"'
@@ -114,12 +114,12 @@ export const news: NewsModel[] = [
             '**Neue Kita am Sprötzer Weg geplant.** Der Bebauungsplan „**Sprötzer Weg / An den Tennisplätzen**“ soll geändert werden, um auf der bislang für Einzelhandel vorgesehenen Fläche unter anderem eine Kindertagesstätte zu ermöglichen.',
             'Die Planung geht jedoch über die Kita hinaus und erlaubt künftig auch weitere soziale, kulturelle und sportliche Angebote. Zudem geht es um Verkehr, Erschließung, Entwässerung, Lärmschutz und die Begrünung des rund 0,9 Hektar großen Areals.',
         ],
-        summaryImage: {
+        /*summaryImage: {
             src: '/images/articles/planzeichnung-sproetzer-weg.png',
             alt: 'Planzeichnung Sprötzer Weg',
             zoom: 1.4,
             offset: {x: -3, y: 0}
-        },
+        },*/
         introduction: [
             'Am Sprötzer Weg soll eine **neue Kindertagesstätte** entstehen. Dafür wird der **Bebauungsplan „Sprötzer Weg / An den Tennisplätzen“** geändert.',
             'Der zuständige Ausschuss hat sich am 6. Mai 2026 mit der Planung beschäftigt.',
@@ -185,12 +185,12 @@ export const news: NewsModel[] = [
             'Die Grundschule Sprötze-Trelde soll **an beiden Standorten weiterentwickelt werden**. In Sprötze ist ein Teilersatzneubau geplant, in Trelde soll die bestehende Schule erweitert werden.',
             'In Sprötze bildet **Variante 1 mit einem zweigeschossigen Neubau auf dem Pausenhof** die Grundlage der weiteren Planung. Die Tennisplätze und der Sportplatz können dabei bestehen bleiben. In Trelde soll der **einzügige Schulstandort erhalten** und an das benötigte Raumprogramm angepasst werden.',
         ],
-        summaryImage: {
+        /*summaryImage: {
             src: '/images/articles/grundschule-sproetze-variante-1.png',
             alt: 'Aktuelle Planungsgrundlage, Variante 1',
             zoom: 1.1,
             offset: {x: 4, y: 0}
-        },
+        },*/
         articleLink: {
             slug: 'grundschule-sproetze-trelde-ausbau',
             text: 'Ausbau Grundschule Sprötze-Trelde'
