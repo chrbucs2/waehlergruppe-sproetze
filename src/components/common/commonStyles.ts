@@ -1,5 +1,6 @@
 import { css } from 'styled-components';
 
+/** outer container is used with shadow. 2nd level container without shadow. **/
 export const containerBorderStyles =
     (shadow = false) => css`
         border: 1px solid var(--border);
