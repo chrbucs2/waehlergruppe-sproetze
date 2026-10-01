@@ -104,7 +104,6 @@ Typische Inhalte für die Detailsseite:
     summaryImage: {
         src: '/images/news/stadteingang-west.jpg',
         alt: 'Luftbild des geplanten Stadteingangs West',
-        crop: { x: 50, y: 35 },
     },
     introduction: [
         'Dies ist ein einleitender Text.',
@@ -214,7 +213,6 @@ Typische Inhalte für die Detailsseite:
     summaryImage: {
         src: '/images/schedule/ausschuss.jpg',
         alt: 'Bild aus dem Ausschuss mit Beteiligten',
-        crop: { x: 50, y: 20 },
     },
     introduction: [
         'Dies ist ein einleitender Text.',

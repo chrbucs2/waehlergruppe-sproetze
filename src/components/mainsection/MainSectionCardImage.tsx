@@ -19,6 +19,16 @@ const ImageFrame = styled.figure`
     }
 `;
 
+// image positioning
+const ImageTransformContent = styled.div<{ $zoom: number; $offsetX: number; $offsetY: number }>`
+    width: 100%;
+    height: 100%;
+    transform-origin: center center;
+    transform: ${({ $zoom, $offsetX, $offsetY }) =>
+        `${$zoom !== 1 ? `scale(${$zoom}) ` : ''}translate(${$offsetX}%, ${$offsetY}%)`};
+`;
+
+// image
 const Image = styled.img`
     display: block;
     width: 100%;
@@ -32,15 +42,14 @@ type MainSectionCardImageProps = {
 };
 
 export function MainSectionCardImage({ image, title }: MainSectionCardImageProps) {
+    const zoom = image.zoom ?? 1;
+    const offsetX = image.offset?.x ?? 0;
+    const offsetY = image.offset?.y ?? 0;
     return (
         <ImageFrame>
-            <Image
-                src={image.src}
-                alt={image.alt ?? title}
-                style={{
-                    objectPosition: image.crop ? `${image.crop.x}% ${image.crop.y}%` : 'center center',
-                }}
-            />
+            <ImageTransformContent $zoom={zoom} $offsetX={offsetX} $offsetY={offsetY}>
+                <Image src={image.src} alt={image.alt ?? title} />
+            </ImageTransformContent>
         </ImageFrame>
     );
 }

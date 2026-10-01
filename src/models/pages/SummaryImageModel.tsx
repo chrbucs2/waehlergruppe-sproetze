@@ -1,8 +1,9 @@
 export interface SummaryImageModel {
     src: string;
     alt?: string;
-    crop?: {
-        x: number;
-        y: number;
+    zoom?: number;
+    offset?: {
+        x?: number;
+        y?: number;
     };
 }
