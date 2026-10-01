@@ -608,4 +608,72 @@ export const news: NewsModel[] = [
             text: 'Buchholz Aktuell: Häckselaktion'
         },
     },
+    {
+        id: 'seniorenbeirat-wahl-2026-sproetze',
+        slug: 'seniorenbeirat-wahl-2026-sproetze',
+        title: 'Seniorenbeirat: Kandidaturen noch bis 9. Oktober möglich',
+        publishedAt: '2026-10-01',
+        topicIds: ['soziales'],
+        summary: [
+            'Der Buchholzer Seniorenbeirat wird für die Jahre 2026 bis 2031 neu gewählt. **Sprötze ist dabei mit einem eigenen Sitz vertreten.**',
+            'Wer für Sprötze kandidieren möchte, kann noch bis **Freitag, 9. Oktober 2026**, einen Wahlvorschlag bei der Stadt einreichen.',
+        ],
+        introduction: [
+            'Ende des Jahres wird der Seniorenbeirat der Stadt Buchholz neu gewählt. Das Gremium besteht aus **acht Mitgliedern**: Je ein Sitz entfällt auf Sprötze, Trelde, Steinbeck, Holm-Seppensen und Dibbersen, drei weitere auf die Kernstadt einschließlich Reindorf.',
+            'Für Interessierte läuft die Bewerbungsfrist bereits: **Bis zum 9. Oktober** können Wahlvorschläge eingereicht werden. Die eigentliche Wahl findet anschließend vom **20. November bis 4. Dezember per Briefwahl** statt.',
+        ],
+        sections: [
+            {
+                title: 'Wer kann kandidieren?',
+                paragraphs: [
+                    'Kandidieren kann, wer am **4. Dezember 2026 mindestens 60 Jahre alt** ist und seit spätestens 4. September mit Hauptwohnsitz in Buchholz gemeldet ist.',
+                    'Wer während der Mitgliedschaft im Seniorenbeirat ein Mandat im **Kreis-, Stadt- oder Ortsrat** innehat, kann dem Seniorenbeirat nicht angehören.',
+                    'Eine Kandidatur kann selbst eingereicht oder von einer anderen Person vorgeschlagen werden. In beiden Fällen muss die vorgeschlagene Person erklären, dass sie zur Kandidatur bereit ist.',
+                ],
+            },
+            {
+                title: 'Bewerbung noch bis 9. Oktober',
+                paragraphs: [
+                    'Wahlvorschläge müssen auf dem vorgesehenen Vordruck **bis Freitag, 9. Oktober**, bei der Stadt Buchholz eingehen.',
+                    {
+                        type: 'list',
+                        items: [
+                            '**Per Post:** Wahlausschuss Seniorenbeirat, Rathausplatz 1, 21244 Buchholz i.d.N.',
+                            '**Per E-Mail:** wahl-seniorenbeirat@buchholz.de',
+                            '**Am Rathaus:** Einwurf in den blauen Briefkasten am Haupteingang',
+                        ],
+                    },
+                    'Nach Ende der Bewerbungsfrist wird die Wahlliste erstellt. Die Wahl erfolgt anschließend **vom 20. November bis einschließlich 4. Dezember 2026 per Briefwahl**.',
+                ],
+            },
+            {
+                title: 'Was macht der Seniorenbeirat?',
+                paragraphs: [
+                    'Der Seniorenbeirat vertritt die Interessen der **über 60-jährigen Einwohnerinnen und Einwohner** in Buchholz. Er soll Rat, Verwaltung und Öffentlichkeit auf die Anliegen älterer Menschen aufmerksam machen und darauf hinwirken, dass diese bei Entscheidungen berücksichtigt werden.',
+                    'Der Beirat übernimmt dabei **keine eigenen Aufgaben der Altenhilfe**. Er berät und unterstützt vielmehr die Stadt, andere öffentliche Stellen und Träger der freien Wohlfahrtspflege. Seine Schwerpunkte kann er selbst festlegen.',
+                    'Zu seinen Themen gehören unter anderem **Wohnen, Verkehr, Sport und Freizeit** sowie soziale, kulturelle, wirtschaftliche und gesellschaftliche Fragen. Dabei geht es beispielsweise darum, wie Angebote und öffentliche Räume seniorengerecht gestaltet werden können.',
+                    'Der Seniorenbeirat wirkt außerdem bei der Planung von Angeboten für ältere Menschen mit, pflegt Kontakte zu Bewohnerinnen und Bewohnern von Senioreneinrichtungen und deren Vertretungen und unterstützt die Seniorenarbeit von Vereinen und Verbänden.',
+                    'Auch in die Kommunalpolitik kann sich das Gremium einbringen: Der Seniorenbeirat kann ein beratendes Mitglied in den zuständigen Fachausschuss der Stadt entsenden. Dort verfügt die Vertretung über **Rede- und Antragsrecht**.',
+                ],
+            },
+            {
+                title: 'Weiterführende Informationen',
+                paragraphs: [
+                    'Weitere Informationen zur Wahl, zu den Aufgaben des Seniorenbeirats und zur Entwicklung der Sprötzer Vertretung finden Sie hier:',
+                    {
+                        type: 'link',
+                        text: 'Buchholz Aktuell: Kandidaturen noch bis 9. Oktober möglich',
+                        href: 'https://buchholz-aktuell.de/buchholz/seniorenbeirat-buchholz-kandidaturen-noch-bis-9-oktober-moeglich-20108/',
+                        indent: true,
+                    },
+                    {
+                        type: 'link',
+                        text: 'Stadt Buchholz: Seniorenbeirat',
+                        href: 'https://www.buchholz.de/portal/seiten/seniorenbeirat-903001075-20101.html',
+                        indent: true,
+                    }
+                ],
+            },
+        ],
+    },
 ];
