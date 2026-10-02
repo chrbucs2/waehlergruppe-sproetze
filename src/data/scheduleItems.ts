@@ -178,23 +178,50 @@ export const scheduleItems: ScheduleModel[] = [
         category: 'Ausschuss Wirtschaft, Finanzen, Verwaltung und Digitalisierung',
         date: '2026-09-30',
         time: '18:30 Uhr',
-        title: 'Bürgerstrom, BuchholzBus und Weihnachtsmarkt',
+        title: 'Erneuerbare Energien, BuchholzBus und Weihnachtsmarkt',
         location: 'Torbogenzimmer, Rathaus Buchholz',
         summary: [
-            'Der Ausschuss berät unter anderem über die weitere KMU-Förderung, den Weihnachtsmarkt 2026, Grundsatzentscheidungen zum BuchholzBus sowie Bürgerbeteiligung und regionale Wertschöpfung bei erneuerbaren Energien.',
+            'Für Sprötzer interessant waren vor allem die Beratungen zu **erneuerbaren Energien**. Hier änderte der Ausschuss die ursprüngliche Vorlage deutlich: Ein regionaler **Bürgerstrom-Tarif** und zusätzliche Vorgaben zur direkten finanziellen Beteiligung wurden **nicht** in die Beschlussempfehlung **übernommen**.',
         ],
         introduction: [
-            'Einen eigenen Tagesordnungspunkt zu Sprötze gibt es nicht. Für Sprötzer sind aber mehrere **stadtweite Themen** interessant: mögliche **finanzielle Beteiligungen an Wind- und Solarprojekten** und ein regionaler **Bürgerstrom-Tarif**, Entscheidungen rund um den **BuchholzBus** sowie die **Ausrichtung des Weihnachtsmarktes 2026**.',
+            'Einen eigenen Tagesordnungspunkt zu Sprötze gab es nicht. Mehrere Entscheidungen betreffen aber die gesamte Stadt. Besonders interessant ist das Ergebnis zur regionalen **Wertschöpfung bei Wind- und Solarprojekten**. Der Ausschuss empfiehlt, bei künftigen Projekten die **Einbindung kommunaler und lokaler Unternehmen stärker** zu **berücksichtigen**. Die ursprünglich vorgeschlagenen **Regelungen zu einem Bürgerstrom-Tarif** und zu zusätzlichen finanziellen Beteiligungsangeboten **wurden dagegen gestrichen**.',
         ],
         sections: [
             {
-                title: 'Tagesordnungspunkte',
+                title: 'Erneuerbare Energien: Beschlussempfehlung geändert',
                 paragraphs: [
-                    '**KMU-Förderung**: Die Stadt soll sich bis 2033 weiter an der Förderung kleiner und mittlerer Unternehmen des Landkreises Harburg beteiligen. Davon können grundsätzlich auch Unternehmen aus Sprötze profitieren.',
-                    '**Weihnachtsmarkt 2026**: Die Stadt soll den Buchholzer Weihnachtsmarkt vom 23. November bis 23. Dezember 2026 selbst veranstalten. Dafür sollen außerplanmäßig **60.000 Euro** bereitgestellt werden.',
-                    '**BuchholzBus**: Beraten wird, wie der Rat künftig bei wichtigen Entscheidungen über Betriebszeiten, Angebotskürzungen, Linienführung und die Finanzierung des BuchholzBus beteiligt wird. **Eine konkrete Änderung für Sprötze ist mit diesem Tagesordnungspunkt nicht verbunden.**',
-                    '**Erneuerbare Energien und Bürgerstrom**: Bei künftigen Windkraft- und Photovoltaikprojekten soll stärker darauf geachtet werden, dass die wirtschaftliche Wertschöpfung in der Region bleibt. Vorgesehen sind unter anderem Kooperationen mit den Stadtwerken und Bürgerenergiegenossenschaften, ein **regionaler Bürgerstrom-Tarif** sowie Möglichkeiten für Einwohner, sich **finanziell an Projekten zu beteiligen**.',
-                    '**Wirtschaftsbetriebe**: Außerdem wird beraten, wie der Rat künftig regelmäßig über die wirtschaftliche Entwicklung der Wirtschaftsbetriebe informiert werden soll. Dazu gehören unter anderem Bus, Bad, Gas, Strom, Wasser, Digitales und Netze.',
+                    'Ursprünglich sollte die Stadt Leitlinien für Windkraft- und Photovoltaikprojekte entwickeln. Vorgesehen waren unter anderem ein regionaler Bürgerstrom-Tarif, Angebote zur direkten finanziellen Beteiligung der Einwohner und eine stärkere Zusammenarbeit mit Stadtwerken und Bürgerenergiegenossenschaften.',
+                    'Der Ausschuss änderte diesen Vorschlag jedoch deutlich. Empfohlen wird nun, bei der Vergabe städtischer Flächen und bei entsprechenden städtebaulichen Verträgen die **Einbindung kommunaler und lokaler Unternehmen als wichtiges Auswahlkriterium** zu berücksichtigen, soweit Vergabe- und Wettbewerbsrecht dies zulassen.',
+                    'Die ursprünglich vorgesehenen Punkte zum **Bürgerstrom-Tarif**, zu zusätzlichen finanziellen Beteiligungsangeboten sowie zur strategischen Vorgabe für die Wirtschaftsbetriebe **wurden gestrichen**. Die geänderte Beschlussempfehlung wurde mit **6 Ja-Stimmen, 0 Nein-Stimmen und 3 Enthaltungen** angenommen.',
+                    'Unabhängig davon weist die Verwaltung darauf hin, dass das niedersächsische Beteiligungsgesetz bei vielen neuen Windenergie- und Freiflächen-PV-Projekten bereits eine Abgabe an die betroffenen Kommunen sowie Angebote zur weiteren finanziellen Beteiligung der betroffenen Gemeinden oder Einwohner vorsieht.',
+                ],
+            },
+            {
+                title: 'Weihnachtsmarkt 2026',
+                paragraphs: [
+                    'Der Ausschuss befasste sich auch mit der kurzfristigen Organisation des **Buchholzer Weihnachtsmarktes vom 23. November bis 23. Dezember 2026**. Der bisherige Veranstalter kann den Markt in diesem Jahr nicht ausrichten, deshalb soll die Stadt die Organisation ausnahmsweise selbst übernehmen.',
+                    'Für die Durchführung sieht die Vorlage **60.000 Euro** vor. Ein großer Teil davon soll durch geschätzte **48.500 Euro Standgebühren** gedeckt werden. Für 2027 soll die Ausrichtung wieder öffentlich ausgeschrieben werden.',
+                ],
+            },
+            {
+                title: 'BuchholzBus und Beteiligung des Rates',
+                paragraphs: [
+                    'Beim **BuchholzBus** ging es nicht um eine neue Linie oder eine konkrete Änderung für Sprötze, sondern darum, wer künftig bei grundlegenden Entscheidungen beteiligt wird.',
+                    'Ein Antrag sieht vor, dass der Rat künftig frühzeitig eingebunden wird, wenn es beispielsweise um **Betriebszeiten, Angebotskürzungen, Linienführungen oder die Grundfinanzierung** des BuchholzBus geht. Hintergrund der Debatte sind unter anderem die bereits erfolgten Kürzungen der Betriebszeiten des BuchholzBus.',
+                ],
+            },
+            {
+                title: 'KMU-Förderung',
+                paragraphs: [
+                    'Beraten wurde außerdem über die weitere Beteiligung der Stadt an der **KMU-Förderung des Landkreises Harburg bis 2033**. Gefördert werden Investitionen kleiner und mittlerer Unternehmen, etwa bei Gründung und Wachstum, Unternehmenssicherung oder Digitalisierung.',
+                    'Für Unternehmen aus Sprötze ist dabei wichtig: Die Stadt soll grundsätzlich weiter am Programm teilnehmen. Wegen der Haushaltskonsolidierung wurden die städtischen Mittel allerdings bereits für 2026 halbiert; für **2027 bis 2029 sind zunächst keine eigenen Haushaltsmittel vorgesehen**. Die Beteiligung am Programm würde es ermöglichen, bei besserer Haushaltslage vergleichsweise kurzfristig wieder Fördermittel bereitzustellen.',
+                ],
+            },
+            {
+                title: 'Wirtschaftsbetriebe',
+                paragraphs: [
+                    'Ein weiterer Antrag beschäftigt sich mit der Information des Rates über die wirtschaftliche Entwicklung der **Wirtschaftsbetriebe Stadt Buchholz**. Dazu gehören unter anderem Bus, Bad, Gas, Strom, Wasser, Digitalisierung und Netze.',
+                    'Vorgeschlagen wurde eine regelmäßige Berichterstattung sowie eine frühzeitige Information bei Entscheidungen von besonderer wirtschaftlicher oder strategischer Bedeutung. Die Verwaltung hält die bestehenden Informationsmöglichkeiten grundsätzlich für ausreichend und schlägt unter anderem vor, die Wirtschaftspläne künftig zusätzlich informativ vorzulegen.',
                 ],
             },
         ],
