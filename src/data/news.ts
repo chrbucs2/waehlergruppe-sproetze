@@ -425,7 +425,7 @@ export const news: NewsModel[] = [
             },
         ],
     },
-    {
+    /*{
         id: 'niedersachsenstrasse-5-alte-feuerwehr',
         slug: 'niedersachsenstrasse-5-alte-feuerwehr',
         title: 'Verkauf in der Niedersachsenstraße: Hinweise auf altes Feuerwehrgrundstück',
@@ -498,7 +498,7 @@ export const news: NewsModel[] = [
                 ],
             },
         ],
-    },
+    },*/
     {
         id: 'niedersachsenstrasse-4a-wohnungsbau',
         slug: 'niedersachsenstrasse-4a-wohnungsbau',
