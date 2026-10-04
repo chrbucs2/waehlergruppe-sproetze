@@ -190,38 +190,38 @@ export const scheduleItems: ScheduleModel[] = [
             {
                 title: 'Erneuerbare Energien: Beschlussempfehlung geändert',
                 paragraphs: [
-                    'Ursprünglich sollte die Stadt Leitlinien für Windkraft- und Photovoltaikprojekte entwickeln. Vorgesehen waren unter anderem ein regionaler Bürgerstrom-Tarif, Angebote zur direkten finanziellen Beteiligung der Einwohner und eine stärkere Zusammenarbeit mit Stadtwerken und Bürgerenergiegenossenschaften.',
-                    'Der Ausschuss änderte diesen Vorschlag jedoch deutlich. Empfohlen wird nun, bei der Vergabe städtischer Flächen und bei entsprechenden städtebaulichen Verträgen die **Einbindung kommunaler und lokaler Unternehmen als wichtiges Auswahlkriterium** zu berücksichtigen, soweit Vergabe- und Wettbewerbsrecht dies zulassen.',
-                    'Die ursprünglich vorgesehenen Punkte zum **Bürgerstrom-Tarif**, zu zusätzlichen finanziellen Beteiligungsangeboten sowie zur strategischen Vorgabe für die Wirtschaftsbetriebe **wurden gestrichen**. Die geänderte Beschlussempfehlung wurde mit **6 Ja-Stimmen, 0 Nein-Stimmen und 3 Enthaltungen** angenommen.',
+                    'Ursprünglich sollte die Stadt Leitlinien für Windkraft- und Photovoltaikprojekte entwickeln. **Vorgesehen waren** unter anderem ein regionaler **Bürgerstrom-Tarif**, Angebote zur direkten **finanziellen Beteiligung der Einwohner** und eine **stärkere Zusammenarbeit mit Stadtwerken und Bürgerenergiegenossenschaften**.',
+                    'Der **Ausschuss änderte diesen Vorschlag** jedoch deutlich. **Empfohlen wird** nun, **bei der Vergabe städtischer Flächen** und bei entsprechenden städtebaulichen Verträgen die **Einbindung kommunaler und lokaler Unternehmen als wichtiges Auswahlkriterium** zu berücksichtigen, soweit Vergabe- und Wettbewerbsrecht dies zulassen.',
+                    'Die ursprünglich vorgesehenen Punkte zum **Bürgerstrom-Tarif**, zu zusätzlichen finanziellen Beteiligungsangeboten sowie zur strategischen Vorgabe für die Wirtschaftsbetriebe **wurden gestrichen**. Die geänderte Beschlussempfehlung wurde mit 6 Ja-Stimmen, 0 Nein-Stimmen und 3 Enthaltungen angenommen.',
                     'Unabhängig davon weist die Verwaltung darauf hin, dass das niedersächsische Beteiligungsgesetz bei vielen neuen Windenergie- und Freiflächen-PV-Projekten bereits eine Abgabe an die betroffenen Kommunen sowie Angebote zur weiteren finanziellen Beteiligung der betroffenen Gemeinden oder Einwohner vorsieht.',
                 ],
             },
             {
                 title: 'Weihnachtsmarkt 2026',
                 paragraphs: [
-                    'Der Ausschuss befasste sich auch mit der kurzfristigen Organisation des **Buchholzer Weihnachtsmarktes vom 23. November bis 23. Dezember 2026**. Der bisherige Veranstalter kann den Markt in diesem Jahr nicht ausrichten, deshalb soll die Stadt die Organisation ausnahmsweise selbst übernehmen.',
+                    'Der Ausschuss befasste sich auch mit der kurzfristigen Organisation des **Buchholzer Weihnachtsmarktes vom 23. November bis 23. Dezember 2026**. Der bisherige Veranstalter kann den Markt in diesem Jahr nicht ausrichten, deshalb soll die **Stadt die Organisation** ausnahmsweise selbst **übernehmen**.',
                     'Für die Durchführung sieht die Vorlage **60.000 Euro** vor. Ein großer Teil davon soll durch geschätzte **48.500 Euro Standgebühren** gedeckt werden. Für 2027 soll die Ausrichtung wieder öffentlich ausgeschrieben werden.',
                 ],
             },
             {
                 title: 'BuchholzBus und Beteiligung des Rates',
                 paragraphs: [
-                    'Beim **BuchholzBus** ging es nicht um eine neue Linie oder eine konkrete Änderung für Sprötze, sondern darum, wer künftig bei grundlegenden Entscheidungen beteiligt wird.',
-                    'Ein Antrag sieht vor, dass der Rat künftig frühzeitig eingebunden wird, wenn es beispielsweise um **Betriebszeiten, Angebotskürzungen, Linienführungen oder die Grundfinanzierung** des BuchholzBus geht. Hintergrund der Debatte sind unter anderem die bereits erfolgten Kürzungen der Betriebszeiten des BuchholzBus.',
+                    'Beim **BuchholzBus** ging es nicht um eine neue Linie oder eine konkrete Änderung für Sprötze, sondern darum, **wer künftig bei grundlegenden Entscheidungen beteiligt wird**.',
+                    'Ein **Antrag** sieht vor, dass der **Rat künftig frühzeitig eingebunden** wird, wenn es beispielsweise um **Betriebszeiten, Angebotskürzungen, Linienführungen oder die Grundfinanzierung** des BuchholzBus geht. Hintergrund der Debatte sind unter anderem die bereits erfolgten Kürzungen der Betriebszeiten des BuchholzBus.',
                 ],
             },
             {
                 title: 'KMU-Förderung',
                 paragraphs: [
-                    'Beraten wurde außerdem über die weitere Beteiligung der Stadt an der **KMU-Förderung des Landkreises Harburg bis 2033**. Gefördert werden Investitionen kleiner und mittlerer Unternehmen, etwa bei Gründung und Wachstum, Unternehmenssicherung oder Digitalisierung.',
-                    'Für Unternehmen aus Sprötze ist dabei wichtig: Die Stadt soll grundsätzlich weiter am Programm teilnehmen. Wegen der Haushaltskonsolidierung wurden die städtischen Mittel allerdings bereits für 2026 halbiert; für **2027 bis 2029 sind zunächst keine eigenen Haushaltsmittel vorgesehen**. Die Beteiligung am Programm würde es ermöglichen, bei besserer Haushaltslage vergleichsweise kurzfristig wieder Fördermittel bereitzustellen.',
+                    'Beraten wurde außerdem über die weitere **Beteiligung der Stadt** an der **KMU-Förderung des Landkreises Harburg bis 2033**. Gefördert werden Investitionen kleiner und mittlerer Unternehmen, etwa bei Gründung und Wachstum, Unternehmenssicherung oder Digitalisierung.',
+                    'Die Stadt soll grundsätzlich weiter am Programm teilnehmen. Wegen der Haushaltskonsolidierung wurden die **städtischen Mittel** allerdings bereits **für 2026 halbiert**; für **2027 bis 2029 sind zunächst keine eigenen Haushaltsmittel vorgesehen**. Die Beteiligung am Programm würde es ermöglichen, bei besserer Haushaltslage vergleichsweise kurzfristig wieder Fördermittel bereitzustellen.',
                 ],
             },
             {
                 title: 'Wirtschaftsbetriebe',
                 paragraphs: [
-                    'Ein weiterer Antrag beschäftigt sich mit der Information des Rates über die wirtschaftliche Entwicklung der **Wirtschaftsbetriebe Stadt Buchholz**. Dazu gehören unter anderem Bus, Bad, Gas, Strom, Wasser, Digitalisierung und Netze.',
-                    'Vorgeschlagen wurde eine regelmäßige Berichterstattung sowie eine frühzeitige Information bei Entscheidungen von besonderer wirtschaftlicher oder strategischer Bedeutung. Die Verwaltung hält die bestehenden Informationsmöglichkeiten grundsätzlich für ausreichend und schlägt unter anderem vor, die Wirtschaftspläne künftig zusätzlich informativ vorzulegen.',
+                    'Ein weiterer **Antrag** beschäftigt sich mit der ***Information des Rates** über die wirtschaftliche Entwicklung der **Wirtschaftsbetriebe Stadt Buchholz**. Dazu gehören unter anderem Bus, Bad, Gas, Strom, Wasser, Digitalisierung und Netze.',
+                    'Vorgeschlagen wurde eine **regelmäßige Berichterstattung** sowie eine frühzeitige Information bei Entscheidungen von besonderer wirtschaftlicher oder strategischer Bedeutung. Die Verwaltung hält die bestehenden Informationsmöglichkeiten grundsätzlich für ausreichend und schlägt unter anderem vor, die Wirtschaftspläne künftig zusätzlich informativ vorzulegen.',
                 ],
             },
         ],
