@@ -425,12 +425,13 @@ export const news: NewsModel[] = [
             },
         ],
     },
-    /*{
+    {
         id: 'niedersachsenstrasse-5-alte-feuerwehr',
         slug: 'niedersachsenstrasse-5-alte-feuerwehr',
         title: 'Verkauf in der Niedersachsenstraße: Hinweise auf altes Feuerwehrgrundstück',
         publishedAt: '2026-09-17',
         topicIds: ['ortsmitte'],
+        hidden: true,
         summary: [
             'Die Stadt setzt derzeit den **Verkauf eines Wohngrundstücks in der Niedersachsenstraße** um. Öffentliche Unterlagen sprechen deutlich dafür, dass damit das bisherige Grundstück der Sprötzer Feuerwehr gemeint sein könnte. **Offiziell bestätigt ist die Hausnummer jedoch nicht.**',
         ],
@@ -498,7 +499,7 @@ export const news: NewsModel[] = [
                 ],
             },
         ],
-    },*/
+    },
     {
         id: 'niedersachsenstrasse-4a-wohnungsbau',
         slug: 'niedersachsenstrasse-4a-wohnungsbau',
@@ -681,6 +682,64 @@ export const news: NewsModel[] = [
             href: 'https://buchholz-aktuell.de/buchholz/jetzt-anmelden-mobile-haecksler-kommen-nach-buchholz-19803',
             text: 'Buchholz Aktuell: Häckselaktion'
         },
+    },
+    {
+        id: 'b75-sperrung-trelder-berg-nord-oktober-2026',
+        slug: 'b75-sperrung-trelder-berg-nord-oktober-2026',
+        title: 'B75 am Trelder Berg: Halbseitige Sperrung ab 7. Oktober',
+        publishedAt: '2026-09-26',
+        topicIds: ['verkehr', 'infrastruktur'],
+        summary: [
+            'Auf der **B75 am Trelder Berg** kommt es **vom 7. bis 17. Oktober 2026** zu Verkehrsbehinderungen. Auf Höhe der neuen Elsa-Neumann-Straße wird die Bundesstraße halbseitig gesperrt.',
+            'Eine Baustellenampel regelt den Verkehr. Auch der Geh- und Radweg ist eingeschränkt – besonders im Berufsverkehr muss mit **längeren Wartezeiten** gerechnet werden.',
+        ],
+        introduction: [
+            'Im Bereich des neuen Gewerbegebiets **Trelder Berg Nord** steht die nächste Verkehrsbehinderung an: **Von Mittwoch, 7. Oktober, bis Samstag, 17. Oktober 2026**, ist die **B75 auf Höhe der neuen Elsa-Neumann-Straße** nur einspurig befahrbar.',
+            'Die Arbeiten stehen im Bereich der neuen Zufahrt zum Gewerbegebiet. Dort entsteht die dauerhafte Anbindung des rund 12,9 Hektar großen Gewerbegebiets an die B75.',
+        ],
+        sections: [
+            {
+                title: 'Baustellenampel auf der B75',
+                paragraphs: [
+                    'Während der Sperrung wird der Verkehr abwechselnd mit einer **Baustellenampel** an der Baustelle vorbeigeführt. Buchholz Aktuell rechnet insbesondere im Berufsverkehr mit Staus.',
+                    'Auch der parallel verlaufende **Geh- und Radweg ist nur eingeschränkt nutzbar**. Wer über die B75 zwischen Sprötze, Trelde und der Umgebung unterwegs ist, sollte deshalb zusätzliche Fahrzeit einplanen.',
+                ],
+            },
+            {
+                title: 'Neue Zufahrt zum Trelder Berg Nord',
+                paragraphs: [
+                    'Die **Elsa-Neumann-Straße** ist die neue **Erschließungsstraße des Gewerbegebiets Trelder Berg Nord**. Sie zweigt direkt von der B75 ab.',
+                    'Nach den Planungsunterlagen der Stadt gehört zur neuen Anbindung auch ein **Linksabbiegestreifen auf der B75**. Außerdem ist eine **Querungshilfe für Fußgänger und Radfahrer** vorgesehen.',
+                    'Innerhalb des Gewerbegebiets führt die neue Straße in das Areal und endet im östlichen Bereich in einer Wendeanlage.',
+                ],
+            },
+            {
+                title: 'Was entsteht am Trelder Berg?',
+                paragraphs: [
+                    'Das neue Gewerbegebiet umfasst insgesamt rund **12,9 Hektar nördlich der B75** auf dem Gelände einer ehemaligen Baumschule. Rund zehn Hektar sind für Gewerbeflächen vorgesehen.',
+                    'Nach den Planungen sollen sich dort größere und **kleinere Betriebe** aus Bereichen wie **Produktion, Verarbeitung, Lagerung, Auslieferung und Handwerk** ansiedeln. Bei der Vergabe sollen insbesondere ortsansässige und regionale Unternehmen berücksichtigt werden.',
+                    'Zur Erschließung gehört außerdem ein **Regenrückhaltebecken** im Norden des Gebiets. Niederschlagswasser soll dort zurückgehalten und möglichst versickert beziehungsweise gedrosselt in Richtung Meilsener Bach abgeleitet werden.',
+                ],
+            },
+            {
+                title: 'Weiterführende Informationen',
+                paragraphs: [
+                    'Weitere Informationen zur aktuellen Sperrung und zur Planung des Gewerbegebiets finden Sie hier:',
+                    {
+                        type: 'link',
+                        text: 'Stadt Buchholz: Aktuelle Sperrungen in Buchholz',
+                        href: 'https://www.buchholz.de/portal/meldungen/sperrungen-in-buchholz-903005006-20101.html',
+                        indent: true,
+                    },
+                    {
+                        type: 'link',
+                        text: 'Buchholz Aktuell: Sperrung am Trelder Berg – B75 nur einspurig befahrbar',
+                        href: 'https://buchholz-aktuell.de/trelde/sperrung-am-trelder-berg-b75-nur-einspurig-befahrbar-19960/',
+                        indent: true,
+                    },
+                ],
+            },
+        ],
     },
     {
         id: 'seniorenbeirat-wahl-2026-sproetze',
