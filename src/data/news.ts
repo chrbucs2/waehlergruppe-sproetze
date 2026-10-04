@@ -388,6 +388,75 @@ export const news: NewsModel[] = [
         ],
     },
     {
+        id: 'holzbarrieren-brunsberg-2026',
+        slug: 'holzbarrieren-brunsberg-2026',
+        title: 'Neue Holzbarrieren am Brunsberg',
+        publishedAt: '2026-09-11',
+        topicIds: ['natur', 'freizeit'],
+        summary: [
+            'Am **Brunsberg** wurden zwei neue **Holzbarrieren** aufgestellt. Sie **sollen schnelle Radfahrer stoppen** und für mehr Sicherheit auf den Wanderwegen sorgen.',
+            'Betroffen sind die Wege **vom Brunsberg zur Höllenschlucht und zum Kleinen Brunsberg**. In diesem Bereich ist Radfahren nicht erlaubt.',
+        ],
+        introduction: [
+            'Der Landkreis Harburg hat **am Brunsberg zwei Holzbarrieren** aufgestellt. Hintergrund sind Beschwerden sowie gefährliche Situationen zwischen Fußgängern und Radfahrern auf den teilweise steilen Wegen.',
+            'Zusätzliche Schilder weisen darauf hin, dass die **betroffenen Wege nur zu Fuß genutzt werden dürfen**. Besonders Mountainbikes und schnelle E-Bikes waren dort nach Angaben des Landkreises zuletzt häufiger unterwegs.',
+        ],
+        sections: [
+            {
+                title: 'Wo stehen die neuen Barrieren?',
+                paragraphs: [
+                    'Eine Sperre befindet sich am Weg **vom Brunsberg in Richtung Höllenschlucht**, die zweite **auf dem Weg zum Kleinen Brunsberg**.',
+                    'Die Barrieren bestehen aus Eichen- und Lärchenholz. Sie sollen Radfahrer zum Absteigen bringen und gleichzeitig deutlich machen, dass die Wege dahinter Fußgängern vorbehalten sind.',
+                ],
+            },
+            {
+                title: 'Mehr Sicherheit für Wanderer',
+                paragraphs: [
+                    'Auf den abschüssigen Wegen am Brunsberg kam es nach Angaben des Landkreises wiederholt zu **gefährlichen Situationen und Beinahe-Unfällen** zwischen Radfahrern und Fußgängern.',
+                    'Mit ähnlichen Holzsperren hat der Landkreis bereits am Pferdekopf im Büsenbachtal Erfahrungen gesammelt. Dort habe sich das Konzept bewährt.',
+                ],
+            },
+            {
+                title: 'Mit dem Fahrrad aus Sprötze',
+                paragraphs: [
+                    'Der Brunsberg ist auch von Sprötze aus gut erreichbar. Die Stadt empfiehlt für die Anfahrt mit dem Fahrrad den **Brunsbergweg**, der an der Bürgermeister-Kröger-Straße in Sprötze beginnt und bis zu einem Ferienheim führt.',
+                    'Dort können Fahrräder abgestellt werden. **Der weitere Weg zum Gipfel erfolgt zu Fuß.** Die neuen Barrieren betreffen damit nicht grundsätzlich die Anfahrt zum Brunsberg, sondern die Wege innerhalb des besonders geschützten und von Wanderern genutzten Bereichs.',
+                ],
+            },
+            {
+                title: 'Naturschutzgebiet Brunsberg',
+                paragraphs: [
+                    'Der **129 Meter hohe Brunsberg** gehört zu den bekanntesten Ausflugszielen rund um Buchholz. Die offene Heidelandschaft bietet vom Gipfel einen weiten Rundblick und ist über die Höllenschlucht mit dem Heidschnuckenweg verbunden.',
+                    'Das rund **65 Hektar große Naturschutzgebiet** besteht bereits seit 1954. Es ist unter anderem **Lebensraum für geschützte Reptilien wie Kreuzotter, Schlingnatter, Zauneidechse und Waldeidechse**.',
+                ],
+            },
+            {
+                title: 'Weiterführende Informationen',
+                paragraphs: [
+                    'Weitere Informationen zu den neuen Barrieren und zum Brunsberg finden Sie hier:',
+                    {
+                        type: 'link',
+                        text: 'Stadt Buchholz: Brunsberg und Höllenschlucht',
+                        href: 'https://www.buchholz.de/stadt/freizeit/buchholz-sehenswert/brunsberg-und-hoellenschlucht/',
+                        indent: true,
+                    },
+                    {
+                        type: 'link',
+                        text: 'Buchholz Aktuell: Brunsberg erhält Barrieren gegen rücksichtslose Radfahrer',
+                        href: 'https://buchholz-aktuell.de/buchholz/brunsberg-erhaelt-barrieren-gegen-ruecksichtslose-radfahrer-19560/',
+                        indent: true,
+                    },
+                    {
+                        type: 'link',
+                        text: 'Wochenblatt: Holzbarrieren für mehr Sicherheit',
+                        href: 'https://www.kreiszeitung-wochenblatt.de/buchholz/c-panorama/holzbarrieren-fuer-mehr-sicherheit_a419478',
+                        indent: true,
+                    },
+                ],
+            },
+        ],
+    },
+    {
         id: 'bahnbruecke-k72-restarbeiten-september-2026',
         slug: 'bahnbruecke-sproetze-k72-vollsperrungen-september-2026',
         title: 'Nächtliche Vollsperrungen an Sprötzer Bahnbrücke Ende September',
@@ -411,14 +480,14 @@ export const news: NewsModel[] = [
                     'Weitere Informationen entnehmen Sie bitte dem Wochenblatt-Artikel, der die Hintergründe und Details zu den Arbeiten an der Bahnbrücke zusammenfasst.',
                     {
                         type: 'link',
-                        text: 'Wochenblatt-Artikel',
-                        href: 'https://www.kreiszeitung-wochenblatt.de/buchholz/c-panorama/bauarbeiten-an-bahnbruecke-in-sproetze-teilweise-vollsperrung_a419984',
+                        text: 'Offizielle Vorgeschichte (Pressmitteilung)',
+                        href: 'https://www.landkreis-harburg.de/downloads/datei/NDE5ZTgzMzU5MjdkMDUwY2dhYUFVRlM1SFNlbzFURWJUMUM2dFJmUUxHUEVPUVcvUXVsMEFUZzMvRy9McSt4WlJBTXBmVGV2V3BhKzZHOUFtR3ZXNEhVcXNvMmIxWjFwMGRMc0RVMFB1b1p3NWVqZlBZSm96MEQ1YmhRU2txeDcreUFWTmpjVFBJdnNVTmo5YkhZRmpuNEpmOGZQTExJRmR0SVBzUT09',
                         indent: true,
                     },
                     {
                         type: 'link',
-                        text: 'Offizielle Vorgeschichte (Pressmitteilung)',
-                        href: 'https://www.landkreis-harburg.de/downloads/datei/NDE5ZTgzMzU5MjdkMDUwY2dhYUFVRlM1SFNlbzFURWJUMUM2dFJmUUxHUEVPUVcvUXVsMEFUZzMvRy9McSt4WlJBTXBmVGV2V3BhKzZHOUFtR3ZXNEhVcXNvMmIxWjFwMGRMc0RVMFB1b1p3NWVqZlBZSm96MEQ1YmhRU2txeDcreUFWTmpjVFBJdnNVTmo5YkhZRmpuNEpmOGZQTExJRmR0SVBzUT09',
+                        text: 'Wochenblatt: Bauarbeiten an Bahnbrücke in Sprötze',
+                        href: 'https://www.kreiszeitung-wochenblatt.de/buchholz/c-panorama/bauarbeiten-an-bahnbruecke-in-sproetze-teilweise-vollsperrung_a419984',
                         indent: true,
                     },
                 ],
