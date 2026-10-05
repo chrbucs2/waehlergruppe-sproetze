@@ -2,27 +2,27 @@ import {NEWS_PATH, SCHEDULE_PATH} from './constants';
 
 import { articles, filterTopics, news, scheduleItems } from '../data';
 import {LinkModel} from "../models/LinkModel";
+import {buildHrefWithPreservedQuery} from "./routing";
 
 export function buildNewsOverviewUrl(topicId: string | undefined) {
-    if (!topicId) {
-        return NEWS_PATH;
-    }
-    return `${NEWS_PATH}?thema=${topicId}`;
+    const href = !topicId ? NEWS_PATH : `${NEWS_PATH}?thema=${topicId}`;
+    return buildHrefWithPreservedQuery(href);
 }
 
 export function buildNewsDetailUrl(slug: string) {
-    return `${NEWS_PATH}/${slug}`;
+    return buildHrefWithPreservedQuery(`${NEWS_PATH}/${slug}`);
 }
 
 export function buildScheduleDetailUrl(slug: string) {
-    return `${SCHEDULE_PATH}/${slug}`;
+    return buildHrefWithPreservedQuery(`${SCHEDULE_PATH}/${slug}`);
 }
 
 export function buildArticleUrl(articleLink: LinkModel | undefined) {
     if (!articleLink) {
         return undefined;
     }
-    return articleLink.slug ? `/artikel/${articleLink.slug}` : articleLink.href;
+    const href = articleLink.slug ? `/artikel/${articleLink.slug}` : articleLink.href;
+    return href ? buildHrefWithPreservedQuery(href) : undefined;
 }
 
 export function getTopicById(topicId: string) {

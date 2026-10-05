@@ -27,15 +27,23 @@ export function getQueryParam(name: string) {
     return new URL(window.location.href).searchParams.get(name);
 }
 
-export function syncQueryParam(name: string, value: string | null) {
-    const nextUrl = new URL(window.location.href);
-    if (value) {
-        nextUrl.searchParams.set(name, value);
-    } else {
-        nextUrl.searchParams.delete(name);
+const DEFAULT_PRESERVED_QUERY_PARAMS = ['internal'];
+export function buildHrefWithPreservedQuery(href: string) {
+    if (!href) {
+        return href;
     }
 
-    window.history.pushState({}, '', `${nextUrl.pathname}${nextUrl.search}${nextUrl.hash}`);
+    const url = new URL(href, window.location.origin);
+    const currentUrl = new URL(window.location.href);
+
+    DEFAULT_PRESERVED_QUERY_PARAMS.forEach((paramName) => {
+        const value = currentUrl.searchParams.get(paramName);
+        if (value !== null) {
+            url.searchParams.set(paramName, value);
+        }
+    });
+
+    return `${url.pathname}${url.search}${url.hash}`;
 }
 
 export function useQueryParamState(name: string, fallback: string | undefined = undefined) {
@@ -56,4 +64,15 @@ export function useQueryParamState(name: string, fallback: string | undefined = 
     };
 
     return [value, updateValue] as const;
+}
+
+export function syncQueryParam(name: string, value: string | null) {
+    const nextUrl = new URL(window.location.href);
+    if (value) {
+        nextUrl.searchParams.set(name, value);
+    } else {
+        nextUrl.searchParams.delete(name);
+    }
+
+    window.history.pushState({}, '', `${nextUrl.pathname}${nextUrl.search}${nextUrl.hash}`);
 }

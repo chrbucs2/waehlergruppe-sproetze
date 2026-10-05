@@ -57,7 +57,13 @@ export function DetailSection({ title, paragraphs = [], image }: DetailSectionPr
                 return null;
             })}
 
-            {image && <DetailSectionImage src={image.src} alt={image.alt} caption={image.caption} />}
+            {image && <DetailSectionImage
+                src={image.src}
+                alt={image.alt}
+                caption={image.caption}
+                linkHref={image.linkHref}
+                linkText={image.linkText}
+            />}
         </Container>
     );
 }

@@ -32,7 +32,7 @@ export function ArticlePage({ article, onShowImpressum, onShowDatenschutz }: Art
     return (
         <>
             <Details
-                backHref={NEWS_PATH}
+                backHref={buildNewsOverviewUrl(undefined)}
                 backText={'Zu den News'}
                 heading={{
                     type: 'article',

@@ -350,9 +350,11 @@ export const articles: ArticleModel[] = [
                     'Die **Grundflächenzahl von 0,3 soll eingehalten werden**. Abgewichen werden soll vor allem bei **Geschossigkeit, Gebäudehöhe und Baugrenzen**.',
                 ],
                 image: {
-                    src: '/images/articles/niedersachsenstrasse13.png',
+                    src: '/images/articles/niedersachsenstrasse-13.png',
                     alt: 'Lageplan des geplanten Bauvorhabens Niedersachsenstraße 13 in Sprötze',
                     caption: 'Lage und geplante Bebauung des Eckgrundstücks an der Niedersachsenstraße 13. Quelle: Stadt Buchholz i.d.N., Stellungnahme vom 24.08.2026',
+                    linkText: 'Lageplan in der Stellungnahme des Verwaltungsausschusses vom 24.08.2026 auf Seite  5',
+                    linkHref: 'https://www.buchholz.de/allris/vo020?22--attachments-expandedPanel-content-body-rows-1-cells-2-cell-link&VOLFDNR=1013228&TOLFDNR=1019306',
                 },
             },
             {
