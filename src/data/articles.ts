@@ -25,7 +25,9 @@ export const articles: ArticleModel[] = [
                 image: {
                     src: '/images/articles/stadteingang-west-variante-1.png',
                     alt: 'Rahmenplan Variante 1 für den Stadteingang West an der Bremer Straße',
-                    caption: 'Vorabzug der Variante 1 vom 15. Januar 2026. Die bisherigen Aufstellungsunterlagen für die Bebauungspläne orientieren sich an dieser Variante; die weitere Planung kann sich durch Fachgutachten noch verändern. Quelle: Stadt Buchholz i.d.N.',
+                    caption: 'Vorabzug der Variante 1 vom 15. Januar 2026. Die weitere Planung kann sich durch Fachgutachten noch verändern. Quelle: Stadt Buchholz i.d.N.',
+                    linkText: 'Rahmenplan Variante 1 für den Stadteingang West an der Bremer Straße',
+                    linkHref: 'https://www.buchholz.de/allris/vo020?26--attachments-expandedPanel-content-body-rows-1-cells-2-cell-link'
                 },
             },
             {
@@ -128,6 +130,16 @@ export const articles: ArticleModel[] = [
                     'Wer sich genauer informieren möchte, findet hier die wichtigsten offiziellen Unterlagen und ergänzende Berichte zum Stadteingang West.',
                     {
                         type: 'link',
+                        text: 'Sitzung vom 11. Februar 2026 (TOP Ö7 - Ö9)',
+                        href: 'https://www.buchholz.de/allris/to010?SILFDNR=1000942'
+                    },
+                    {
+                        type: 'link',
+                        text: 'Sitzung vom 10. März 2026 (TOP Ö7 - Ö9)',
+                        href: 'https://www.buchholz.de/allris/to010?SILFDNR=1001100'
+                    },
+                    {
+                        type: 'link',
                         text: 'Sitzung vom 18. März 2026 (TOP Ö8, Ö11, Ö12)',
                         href: 'https://www.buchholz.de/allris/to010?SILFDNR=1000950'
                     },
@@ -142,15 +154,6 @@ export const articles: ArticleModel[] = [
                         text: 'Bebauungsplan "Bremer Straße / Brumhagen Süd"',
                         href: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1012795',
                         indent: true
-                    },
-                    {
-                        type: 'link',
-                        text: 'Sitzung vom 10. März 2026 (TOP Ö7 - Ö9)',
-                        href: 'https://www.buchholz.de/allris/to010?SILFDNR=1001100'
-                    },{
-                        type: 'link',
-                        text: 'Sitzung vom 11. Februar 2026 (TOP Ö7 - Ö9)',
-                        href: 'https://www.buchholz.de/allris/to010?SILFDNR=1000942'
                     },
                     {
                         type: 'link',
@@ -206,6 +209,8 @@ export const articles: ArticleModel[] = [
                     src: '/images/articles/planzeichnung-sproetzer-weg.png',
                     alt: 'Planzeichnung des Bebauungsplans am Sprötzer Weg mit dem geplanten Bereich für Kita und soziale Einrichtungen',
                     caption: 'Teil A: Planzeichnung mit dem geplanten Entwicklungsbereich am Sprötzer Weg.',
+                    linkText: 'Planzeichnung des Bebauungsplans am Sprötzer Weg',
+                    linkHref: 'https://www.buchholz.de/allris/vo020?54--attachments-expandedPanel-content-body-rows-2-cells-2-cell-link',
                 },
             },
             {
@@ -227,6 +232,8 @@ export const articles: ArticleModel[] = [
                     src: '/images/articles/kita-sproetzer-weg-2025.png',
                     alt: 'Entwicklungskonzept für eine Kindertagesstätte am Sprötzer Weg',
                     caption: 'Mögliches Entwicklungskonzept für die Kita, Stand Mai 2025.',
+                    linkText: 'Entwicklungskonzept für eine Kindertagesstätte auf Seite 9',
+                    linkHref: 'https://www.buchholz.de/allris/vo020?56--attachments-expandedPanel-content-body-rows-7-cells-2-cell-link',
                 },
             },
             {
@@ -250,8 +257,7 @@ export const articles: ArticleModel[] = [
             {
                 title: 'Was bedeutet das für Sprötze?',
                 paragraphs: [
-                    'Der Bebauungsplan liegt zwar nicht direkt in Sprötze. Der **Sprötzer Weg ist aber eine wichtige Verbindung von Sprötze in die Buchholzer Innenstadt**.',
-                    'Durch die Kita kommt zusätzlicher Verkehr hinzu. Laut Gutachten kann dieser aufgenommen werden. Die bereits bestehenden **Probleme an der Kreuzung Sprötzer Weg / Bremer Straße bleiben** aber **bestehen**.',
+                    'Der Bebauungsplan liegt zwar nicht direkt in Sprötze. Der **Sprötzer Weg ist aber eine wichtige Verbindung von Sprötze in die Buchholzer Innenstadt**. Durch die Kita kommt zusätzlicher Verkehr hinzu. Laut Gutachten kann dieser aufgenommen werden. Die bereits bestehenden **Probleme an der Kreuzung Sprötzer Weg / Bremer Straße bleiben** aber **bestehen**.',
                     'Für Sprötzer sind deshalb vor allem die weitere Verkehrsentwicklung sowie mögliche Verbesserungen für Auto-, Rad- und Fußverkehr interessant.',
                 ],
             },
@@ -270,13 +276,13 @@ export const articles: ArticleModel[] = [
                     'Wer sich genauer mit der Planung beschäftigen möchte, findet hier die wichtigsten Unterlagen und Berichte:',
                     {
                         type: 'link',
-                        text: 'Sitzung vom 6. Mai 2026 (TOP Ö8)',
-                        href: 'https://www.buchholz.de/allris/to020?TOLFDNR=1017941&SILFDNR=1000953',
+                        text: 'Sitzung vom 18. September 2024 (TOP Ö7)',
+                        href: 'https://www.buchholz.de/allris/to020?TOLFDNR=1010466&SILFDNR=1000346',
                     },
                     {
                         type: 'link',
-                        text: 'Satzungsbeschluss zum Bauvorhaben in der Niedersachsenstraße',
-                        href: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1012941',
+                        text: 'Plankonzept zum Bebauungsplan Sprötzer Weg / An den Tennisplätzen',
+                        href: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1009915',
                         indent: true
                     },
                     {
@@ -292,13 +298,13 @@ export const articles: ArticleModel[] = [
                     },
                     {
                         type: 'link',
-                        text: 'Sitzung vom 18. September 2024 (TOP Ö7)',
-                        href: 'https://www.buchholz.de/allris/to020?TOLFDNR=1010466&SILFDNR=1000346'
+                        text: 'Sitzung vom 6. Mai 2026 (TOP Ö8)',
+                        href: 'https://www.buchholz.de/allris/to020?TOLFDNR=1017941&SILFDNR=1000953',
                     },
                     {
                         type: 'link',
-                        text: 'Plankonzept zur Vorbereitung',
-                        href: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1009915',
+                        text: 'Satzungsbeschluss zum Bauvorhaben in der Niedersachsenstraße',
+                        href: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1012941',
                         indent: true
                     },
                     {
@@ -353,8 +359,8 @@ export const articles: ArticleModel[] = [
                     src: '/images/articles/niedersachsenstrasse-13.png',
                     alt: 'Lageplan des geplanten Bauvorhabens Niedersachsenstraße 13 in Sprötze',
                     caption: 'Lage und geplante Bebauung des Eckgrundstücks an der Niedersachsenstraße 13. Quelle: Stadt Buchholz i.d.N., Stellungnahme vom 24.08.2026',
-                    linkText: 'Lageplan in der Stellungnahme des Verwaltungsausschusses vom 24.08.2026 auf Seite  5',
-                    linkHref: 'https://www.buchholz.de/allris/vo020?22--attachments-expandedPanel-content-body-rows-1-cells-2-cell-link&VOLFDNR=1013228&TOLFDNR=1019306',
+                    linkText: 'Lageplan des geplanten Bauvorhabens auf Seite  5',
+                    linkHref: 'https://www.buchholz.de/allris/vo020?22--attachments-expandedPanel-content-body-rows-1-cells-2-cell-link',
                 },
             },
             {
@@ -419,8 +425,14 @@ export const articles: ArticleModel[] = [
                     },
                     {
                         type: 'link',
-                        text: 'Stellungnahme zum Bauvorhaben Niedersachsenstraße 13',
+                        text: 'Vorlage zum Bauvorhaben Niedersachsenstraße 13',
                         href: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1013228&TOLFDNR=1019306',
+                        indent: true,
+                    },
+                    {
+                        type: 'link',
+                        text: 'Stellungnahme zum Bauvorhaben Niedersachsenstraße 13',
+                        href: 'https://www.buchholz.de/allris/vo020?22--attachments-expandedPanel-content-body-rows-1-cells-2-cell-link',
                         indent: true,
                     },
                     {
@@ -484,7 +496,9 @@ export const articles: ArticleModel[] = [
                 image: {
                     src: '/images/articles/grundschule-sproetze-variante-1.png',
                     alt: 'Baumassenstudie der aktuellen Variante 1 für die Grundschule Sprötze',
-                    caption: 'Aktuelle Planungsgrundlage: Variante 1 mit einem zweigeschossigen Neubau auf dem Pausenhof. Tennisplätze und Sportplatz bleiben erhalten.'
+                    caption: 'Aktuelle Planungsgrundlage: Variante 1 mit einem zweigeschossigen Neubau auf dem Pausenhof. Tennisplätze und Sportplatz bleiben erhalten.',
+                    linkText: 'Baumassenstudie der aktuellen Variante 1',
+                    linkHref: 'https://www.buchholz.de/allris/to020?5--attachmentsVo-expandedPanel-content-body-rows-1-cells-2-cell-link',
                 },
             },
             {

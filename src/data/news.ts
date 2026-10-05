@@ -755,7 +755,7 @@ export const news: NewsModel[] = [
     {
         id: 'b75-sperrung-trelder-berg-nord-oktober-2026',
         slug: 'b75-sperrung-trelder-berg-nord-oktober-2026',
-        title: 'B75 am Trelder Berg: Halbseitige Sperrung ab 7. Oktober',
+        title: 'Halbseitige Sperrung ab 7. Oktober auf der B75 am Trelder Berg',
         publishedAt: '2026-09-26',
         topicIds: ['verkehr', 'infrastruktur'],
         summary: [

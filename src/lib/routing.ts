@@ -24,7 +24,13 @@ export function getSearchFromLocation() {
 }
 
 export function getQueryParam(name: string) {
-    return new URL(window.location.href).searchParams.get(name);
+    const params = new URL(window.location.href).searchParams;
+
+    if (!params.has(name)) {
+        return null;
+    }
+
+    return params.get(name) ?? '';
 }
 
 const DEFAULT_PRESERVED_QUERY_PARAMS = ['internal'];
