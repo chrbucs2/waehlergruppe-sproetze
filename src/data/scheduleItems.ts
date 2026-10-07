@@ -208,7 +208,7 @@ export const scheduleItems: ScheduleModel[] = [
         title: 'Lerchenpark beschlossen, Brody-Brücke und Rechenzentrum beraten',
         location: 'Saal EMPORE',
         summary: [
-            'Für Sprötze besonders interessant war die geplante **Brody-Brücke an der Kirchenallee**. In der zuletzt vorliegenden geänderten Beschlussempfehlung war diese Benennung allerdings nicht mehr enthalten. Bestätigt ist außerdem der Beschluss zum **Lerchenpark auf dem ehemaligen Rütgersgelände**.',
+            'Für Sprötze interessant war die geplante **Brody-Brücke an der Kirchenallee**. In der zuletzt vorliegenden geänderten Beschlussempfehlung war diese Benennung nach der ukrainischen Partnerstadt Brody allerdings nicht mehr enthalten. Bestätigt ist außerdem der Beschluss zum **Lerchenpark auf dem ehemaligen Rütgersgelände**.',
         ],
         introduction: [
             'In der letzten regulären Ratssitzung der bisherigen Wahlperiode wurde der **Rahmenplan für den Lerchenpark** mit **24 Ja-Stimmen, 13 Nein-Stimmen und einer Enthaltung** beschlossen. Damit ist noch kein Baurecht geschaffen, aber die Grundlage für die weitere Planung gelegt.',
