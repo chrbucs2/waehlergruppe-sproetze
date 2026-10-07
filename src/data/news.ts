@@ -246,6 +246,21 @@ export const news: NewsModel[] = [
         },
     },
     {
+        id: 'diekwischweg-trelde-wohngebiet-pruefauftrag',
+        slug: 'diekwischweg-trelde-wohngebiet-pruefauftrag',
+        title: 'Neubaugebiet am Diekwischweg in Trelde wird weiter geprüft',
+        publishedAt: '2026-07-01',
+        topicIds: ['neubaugebiete'],
+        summary: [
+            'Die Pläne für ein mögliches **Neubaugebiet am Diekwischweg in Trelde** sind weiterhin offen. Auf der rund **3,1 Hektar großen Fläche** östlich des Diekwischwegs könnten nach einer älteren Potentialanalyse etwa **33 bis 40 Wohneinheiten in Eigenheimen** sowie **10 bis 14 Wohnungen in Mehrfamilienhäusern** entstehen.',
+            'Nach Kritik an der ursprünglich vorgesehenen Größenordnung wird der CDU-Antrag zunächst als **Prüfauftrag** behandelt. Nach Abschluss der Prüfung soll das Vorhaben **erneut dem Ortsrat Trelde und dem Rat der Stadt Buchholz** vorgelegt werden.',
+        ],
+        articleLink: {
+            slug: 'neubaugebiet-diekwischweg-trelde',
+            text: 'Neubaugebiet Diekwischweg in Trelde'
+        },
+    },
+    {
         id: '100-jahre-tsv-sproetze',
         slug: '100-jahre-tsv-sproetze',
         title: '100 Jahre TSV Sprötze: Jubiläumsjahr geht weiter',

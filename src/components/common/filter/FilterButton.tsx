@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { buttonBaseStyles, buttonFilterStyles } from '../button/buttonStyles';
+import { buttonBaseStyles, filterButtonStyles } from '../button/buttonStyles';
 
 interface FilterButtonProps {
     children: string;
@@ -9,8 +9,7 @@ interface FilterButtonProps {
 }
 
 const FilterButtonRoot = styled.button<{ $active?: boolean }>`
-    ${buttonBaseStyles}
-    ${buttonFilterStyles}
+    ${filterButtonStyles}
     
     background: ${({ $active }) =>
         $active ? 'linear-gradient(135deg, #7b4a7c33, #bba7de4d)' : 'rgba(255, 255, 255, 0.82)'};

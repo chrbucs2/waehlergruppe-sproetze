@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { buttonBaseStyles, buttonFilterStyles } from './buttonStyles';
+import {moreButtonStyles } from './buttonStyles';
 
 interface MoreButtonProps {
     expanded: boolean;
@@ -10,15 +10,9 @@ interface MoreButtonProps {
 }
 
 const MoreButtonRoot = styled.button`
-    ${buttonBaseStyles}
-    ${buttonFilterStyles}
+    ${moreButtonStyles}
     background: rgba(255, 255, 255, 0.72);
     color: var(--accent-dark);
-
-    &:hover,
-    &:focus-visible {
-        transform: translateY(-1px);
-    }
 `;
 
 export function MoreButton({

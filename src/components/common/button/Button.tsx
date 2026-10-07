@@ -10,7 +10,6 @@ interface ButtonProps {
 }
 
 const ButtonRoot = styled.a<{ $variant: ButtonVariant }>`
-    ${buttonBaseStyles}
     ${buttonStandardStyles}
 
     ${({ $variant }) =>

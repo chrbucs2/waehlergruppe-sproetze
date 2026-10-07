@@ -2,6 +2,160 @@ import {ArticleModel} from "../models/pages/ArticleModel";
 
 export const articles: ArticleModel[] = [
     {
+        id: 'neubaugebiet-diekwischweg-trelde',
+        slug: 'neubaugebiet-diekwischweg-trelde',
+        title: 'Neues Wohngebiet mit rund 40 Eigenheimen im Diekwischweg in Trelde wird geprüft',
+        publishedAt: '2026-10-07',
+        modifiedAt: '2026-10-07',
+        category: 'Stadtplanung',
+        introduction: [
+            'Am **Diekwischweg in Trelde** könnte östlich der bestehenden Bebauung ein neues Wohngebiet entstehen. Die CDU-Fraktion hatte vorgeschlagen, eine rund **3,1 Hektar große Ackerfläche** für Wohnungsbau zu entwickeln. Nach der Wohnbauflächen-Potentialanalyse könnten dort etwa **33 bis 40 Wohneinheiten in Eigenheimen** sowie zusätzlich **10 bis 14 Wohnungen in Mehrfamilienhäusern** entstehen. Vorgesehen war vor allem eine Bebauung mit Einzel- und Doppelhäusern.',
+            'Beschlossen ist das Neubaugebiet allerdings nicht. Nach Kritik am Verfahren und an der Größe des Vorhabens wird der Vorschlag zunächst als **Prüfauftrag** behandelt. Anschließend soll die Planung erneut im Ortsrat Trelde und in den politischen Gremien beraten werden.',
+        ],
+        sections: [
+            {
+                title: 'Was hatte die CDU beantragt?',
+                paragraphs: [
+                    'Ausgangspunkt der aktuellen Diskussion ist ein Antrag der **CDU-Fraktion im Buchholzer Stadtrat vom August 2025**, der am 3. September 2025 bei der Stadt einging. Die CDU wollte für die Fläche einen **Bebauungsplan** mit der Bezeichnung **„Diekwischweg“** aufstellen lassen.',
+                    'Ziel sollte eine Wohnbebauung mit vorwiegend **Einzel- und Doppelhäusern** sein. Nach dem Antrag sollte sich das Gebiet **landschaftlich an die vorhandene Bebauung anpassen**. Vorgesehen waren unter anderem Hecken statt Zäune, eine Begrenzung der versiegelten Grundstücksfläche und öffentliche Begegnungsflächen wie ein Spielplatz oder Park.',
+                    'Außerdem sollten **Konzepte für junge Erwachsene, Alleinstehende und Senioren** berücksichtigt werden, sofern dafür im Planverfahren Interesse besteht.',
+                ],
+            },
+            {
+                title: 'Wo soll das Baugebiet entstehen?',
+                paragraphs: [
+                    'Die untersuchte **Fläche liegt östlich des Diekwischwegs** am heutigen Ortsrand von Trelde. Betroffen sind die Flurstücke **20/65, 20/24 und 436/20**. Zusammen umfassen sie rund **3,1 Hektar** und befinden sich in Privateigentum.',
+                    '**Heute** wird die Fläche **landwirtschaftlich genutzt**. **Im Flächennutzungsplan** ist sie allerdings **bereits als Wohnbaufläche** dargestellt. Auch im Integrierten Stadtentwicklungskonzept und in der Wohnbauflächen-Potentialanalyse der Stadt wurde sie bereits betrachtet.',
+                    'Auf der **westlichen Seite des Diekwischwegs** existiert bereits ein Bebauungsplan gleichen Namens. Dieser wurde 2014 beschlossen und ermöglichte dort die Erweiterung des Wohngebietes Am Kahlenberg. Die jetzt diskutierte Fläche liegt dagegen **östlich des Weges**.',
+                ],
+                image: {
+                    src: '/images/articles/diekwischweg-trelde.png',
+                    alt: 'Lage der möglichen Wohnbaufläche östlich des Diekwischwegs in Trelde',
+                    caption: 'Die mögliche Wohnbaufläche liegt östlich des Diekwischwegs und umfasst rund 3,1 Hektar. Quelle: Stadt Buchholz i.d.N.',
+                    linkText: 'Wohnbauentwicklung Trelde – Ratsinformationssystem',
+                    linkHref: 'https://www.buchholz.de/allris/vo020?15--attachments-expandedPanel-content-body-rows-2-cells-2-cell-link&VOLFDNR=1012539',
+                },
+            },
+            {
+                title: 'Wie viele Wohnungen könnten entstehen?',
+                paragraphs: [
+                    'Die Wohnbauflächen-Potentialanalyse von 2023 geht für das Gebiet von einem Schwerpunkt bei **Eigenheimen** aus. Rund **90 Prozent** der Bebauung wurden dort als Eigenheime mit Grundstücksgrößen von etwa **500 bis 600 Quadratmetern** angenommen.',
+                    'Daraus ergeben sich rechnerisch **33 bis 40 Wohneinheiten in Eigenheimen**. Weitere zehn Prozent der Fläche könnten nach dieser Untersuchung für Mehrfamilienhäuser genutzt werden. Dafür wurden **10 bis 14 zusätzliche Wohneinheiten** angesetzt.',
+                    'Diese Zahlen sind noch keine verbindliche Planung. Einen Bebauungsplan für die Fläche gibt es bislang nicht.',
+                ],
+            },
+            {
+                title: 'Wie wurde die Fläche bisher bewertet?',
+                paragraphs: [
+                    'Die städtische Wohnbauflächen-Potentialanalyse aus dem Jahr 2023 bewertete den Standort mit **19 von 44 möglichen Punkten** und führte ihn als **FNP-Reserve**. Die äußere Erschließung über den Diekwischweg wurde darin als gesichert angesehen.',
+                    'Positiv bewertet wurden unter anderem die vergleichsweise **geringe Lärmbelastung** und das **Fehlen von Wald** auf der Fläche. Die Analyse nennt außerdem Entfernungen von rund **350 Metern zur nächsten Bushaltestelle**, etwa **1,3 Kilometern zum Bahnhof Sprötze** sowie jeweils rund **1,6 Kilometern zur Kita und zur Grundschule in Sprötze**.',
+                    'Gleichzeitig handelt es sich um eine **Neuausweisung am Ortsrand**, die derzeit **landwirtschaftlich genutzt** wird und einen **Eingriff in Natur und Landschaft** bedeuten würde.',
+                ],
+            },
+            {
+                title: 'Die Verwaltung hält Wohnungsbau dort grundsätzlich für möglich',
+                paragraphs: [
+                    'Die **Stadtverwaltung bewertet den Standort** grundsätzlich nicht ablehnend. In ihrer Stellungnahme bezeichnet sie die Fläche **als Wohnbaulandreserve** und befürwortet grundsätzlich deren Entwicklung.',
+                    'Allerdings reicht der CDU-Antrag nach Einschätzung der Verwaltung noch nicht für einen unmittelbaren Aufstellungsbeschluss aus. Ein wichtiger Grund ist die Eigentumssituation: **Alle drei Flurstücke gehören privaten Eigentümern**.',
+                    'Schon bei der Planung des westlich gelegenen Baugebietes am Diekwischweg im Jahr 2014 hatte die Stadt Gespräche mit den Eigentümern geführt. Damals zeigte nach Angaben der Verwaltung lediglich eine der drei betroffenen Parteien Interesse an einer Entwicklung. Deshalb wurde seinerzeit nur die westliche Straßenseite bebaut.',
+                ],
+            },
+            {
+                title: 'Warum wurde die Planung zunächst gestoppt?',
+                paragraphs: [
+                    'Im Stadtentwicklungsausschuss im November 2025 kam es zunächst **nicht zu einem Beschluss über die Aufstellung eines Bebauungsplans**. Kritisiert wurde unter anderem, dass der **Ortsrat Trelde** vor Einbringung des Antrags **nicht beteiligt** worden war.',
+                    'Auch die **Verwaltung empfahl**, noch **kein Bebauungsplanverfahren einzuleiten**. Zwar befürwortet sie grundsätzlich eine Entwicklung der Fläche, für einen Aufstellungsbeschluss seien aber noch wichtige Voraussetzungen zu klären. Insbesondere befinden sich **alle drei betroffenen Flurstücke in Privateigentum**.',
+                    'Die Verwaltung schlug deshalb vor, zunächst das aktuelle Entwicklungsinteresse der Eigentümer zu ermitteln und die Vorgaben der Buchholzer Bodenpolitik zu berücksichtigen. Der CDU-Antrag wurde schließlich **vor der Abstimmung zurückgezogen**.'
+                ],
+            },
+            {
+                title: 'Was sagt der Ortsrat Trelde?',
+                paragraphs: [
+                    'Im Ortsrat Trelde wurde das Vorhaben anschließend weiter beraten. Die im ursprünglichen CDU-Antrag vorgesehene **Größenordnung von rund 40 Wohneinheiten** wird nach einem Bericht über die Ortsratssitzung von vielen Mitgliedern **kritisch gesehen**.',
+                    'Auf Anregung des Ortsrats behandelt die Verwaltung das Vorhaben nun zunächst als **Prüfauftrag**. Nach Abschluss dieser Prüfung soll das Ergebnis **erneut dem Ortsrat Trelde und dem Rat der Stadt Buchholz vorgelegt werden**.',
+                    'Damit bleibt auch die mögliche Größe des Baugebietes offen. Erst nach der Prüfung soll politisch darüber beraten werden, ob und in welcher Form die Fläche am Diekwischweg entwickelt wird.'
+                ],
+            },
+            {
+                title: 'Was spricht für und was gegen das Neubaugebiet?',
+                paragraphs: [
+                    'Die **Befürworter** verweisen vor allem auf die **Nachfrage nach Baugrundstücken** und darauf, dass die Fläche bereits langfristig für Wohnungsbau vorgesehen ist. Der CDU-Antrag begründet das Vorhaben außerdem mit **steigenden Grundstückspreisen** und dem Bedarf an **arbeitsplatznahem Wohnraum**.',
+                    'Die **Kritiker** sehen dagegen die **Ortsrandlage**, die **Verkehrsanbindung** und die weitere **Flächeninanspruchnahme kritisch**. Im Stadtentwicklungsausschuss wurde argumentiert, dass Buchholz zunächst bereits laufende Wohnungsbauprojekte umsetzen und stärker auf eine kompakte Stadtentwicklung setzen sollte.',
+                    'Hinzu kommt die grundsätzliche Frage, wie stark die Buchholzer Ortschaften wachsen sollen. Der **Flächennutzungsplan** verfolgt **für die Ortslagen** grundsätzlich das Ziel, Wohnbauflächen vor allem zur **Deckung des örtlichen Eigenbedarfs** bereitzustellen.',
+                ],
+            },
+            {
+                title: 'Wie geht es weiter?',
+                paragraphs: [
+                    'Der ursprüngliche CDU-Antrag führt derzeit **nicht unmittelbar zur Aufstellung eines Bebauungsplans**. Bereits die Verwaltung hatte empfohlen, zunächst die Voraussetzungen für eine Entwicklung zu prüfen. Sie verwies ausdrücklich darauf, dass ein Planverfahren ohne Zustimmung der Eigentümer nicht zielführend sei.',
+                    'Der Ortsrat hat diesen Weg inzwischen aufgegriffen. Die Verwaltung soll die offenen Punkte prüfen und das Ergebnis anschließend wieder der Politik vorlegen. Erst danach könnte entschieden werden, ob und gegebenenfalls in welcher Form ein Bebauungsplanverfahren begonnen wird.',
+                    'Das mögliche Neubaugebiet am Diekwischweg befindet sich damit weiterhin in einer **sehr frühen Prüfphase**. Baurecht für die neue Fläche besteht bislang nicht.',
+                ],
+            },
+            {
+                title: 'Weiterführende Informationen',
+                paragraphs: [
+                    'Wer die Entwicklung nachvollziehen möchte, findet hier die wichtigsten Unterlagen und Berichte.',
+                    {
+                        type: 'link',
+                        text: 'Sitzung des Stadtentwicklungsausschusses vom 12. November 2025 (TOP Ö12)',
+                        href: 'https://www.buchholz.de/allris/to020?TOLFDNR=1015889&SILFDNR=1000660'
+                    },
+                    {
+                        type: 'link',
+                        text: 'Antrag der CDU',
+                        href: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1012539',
+                        indent: true,
+                    },                    {
+                        type: 'link',
+                        text: 'Sitzung des Stadtentwicklungsausschusses vom 12. November 2025 (TOP Ö12.1)',
+                        href: 'https://www.buchholz.de/allris/to020?TOLFDNR=1015890&SILFDNR=1000660'
+                    },
+                    {
+                        type: 'link',
+                        text: 'Stellungnahme der Verwaltung',
+                        href: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1012642',
+                        indent: true,
+                    },
+                    {
+                        type: 'link',
+                        text: 'Sitzung des Ortsrat Trelde vom 11. Februar 2026 (TOP Ö4)',
+                        href: 'https://www.buchholz.de/allris/to020?TOLFDNR=1016788',
+                    },
+                    {
+                        type: 'link',
+                        text: 'Buchholz Aktuell: Drei Hektar für Eigenheime – Planungen in Trelde zunächst auf Eis',
+                        href: 'https://buchholz-aktuell.de/trelde/drei-hektar-fuer-eigenheime-planungen-in-trelde-zunaechst-auf-eis-10269/',
+                    },
+                    {
+                        type: 'link',
+                        text: 'Wochenblatt: Werden durch Planungen die Ortsränder zerfleddert?',
+                        href: 'https://www.kreiszeitung-wochenblatt.de/buchholz/c-panorama/werden-durch-planungen-die-ortsraender-zerfleddert_a381045',
+                    },
+                    {
+                        type: 'link',
+                        text: 'Wochenblatt: Volles Haus beim Ortsrat Trelde',
+                        href: 'https://www.kreiszeitung-wochenblatt.de/buchholz/c-politik/volles-haus-beim-ortsrat-trelde_a409990',
+                    },
+                ],
+            },
+        ],
+        sources: [
+            {
+                label: 'Ratsinformationssystem der Stadt Buchholz',
+                url: 'https://www.buchholz.de/allris/tr010'
+            },
+            {
+                label: 'Kreiszeitung Wochenblatt',
+                url: 'https://kreiszeitung-wochenblatt.de'
+            },
+            {
+                label: 'buchholz-aktuell',
+                url: 'https://buchholz-aktuell.de'
+            }
+        ],
+    },
+    {
         id: 'stadteingang-west-bremer-strasse',
         slug: 'stadteingang-west-bremer-strasse',
         title: 'Stadteingang West: Bis zu 580 Wohnungen an der Bremer Straße geplant',
@@ -130,29 +284,29 @@ export const articles: ArticleModel[] = [
                     'Wer sich genauer informieren möchte, findet hier die wichtigsten offiziellen Unterlagen und ergänzende Berichte zum Stadteingang West.',
                     {
                         type: 'link',
-                        text: 'Sitzung vom 11. Februar 2026 (TOP Ö7 - Ö9)',
+                        text: 'Sitzung des Ausschusses für Stadtentwicklung, Umwelt, Klimaschutz und Mobilität vom 11. Februar 2026 (TOP Ö7 - Ö9)',
                         href: 'https://www.buchholz.de/allris/to010?SILFDNR=1000942'
                     },
                     {
                         type: 'link',
-                        text: 'Sitzung vom 10. März 2026 (TOP Ö7 - Ö9)',
+                        text: 'Sitzung des Ausschusses für Stadtentwicklung, Umwelt, Klimaschutz und Mobilität vom 10. März 2026 (TOP Ö7 - Ö9)',
                         href: 'https://www.buchholz.de/allris/to010?SILFDNR=1001100'
                     },
                     {
                         type: 'link',
-                        text: 'Sitzung vom 18. März 2026 (TOP Ö8, Ö11, Ö12)',
+                        text: 'Sitzung des Ausschusses für Stadtentwicklung, Umwelt, Klimaschutz und Mobilität vom 18. März 2026 (TOP Ö8, Ö11, Ö12)',
                         href: 'https://www.buchholz.de/allris/to010?SILFDNR=1000950'
                     },
                     {
                         type: 'link',
-                        text: 'Rahmenplan "Stadteingang West, Bremer Straße"',
-                        href: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1012612',
+                        text: 'Änderung des Flächennutzungsplanes',
+                        href: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1012795',
                         indent: true
                     },
                     {
                         type: 'link',
-                        text: 'Bebauungsplan "Bremer Straße / Brumhagen Süd"',
-                        href: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1012795',
+                        text: 'Rahmenplan',
+                        href: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1012612',
                         indent: true
                     },
                     {
@@ -167,7 +321,7 @@ export const articles: ArticleModel[] = [
                     },
                     {
                         type: 'link',
-                        text: 'Kreiszeitung Wochenblatt: Neubaugebiete bedürfen einer rechtzeitigen Planung der Infrastruktur',
+                        text: 'Wochenblatt: Neubaugebiete bedürfen einer rechtzeitigen Planung der Infrastruktur',
                         href: 'https://www.kreiszeitung-wochenblatt.de/buchholz/c-politik/neubaugebiete-beduerfen-einer-rechtzeitigen-planung-der-infrastruktur_a402629',
                     },
                 ],
@@ -176,16 +330,16 @@ export const articles: ArticleModel[] = [
         sources: [
             {
                 label: 'Ratsinformationssystem der Stadt Buchholz',
-                url: 'https://www.buchholz.de/allris/tr010',
+                url: 'https://www.buchholz.de/allris/tr010'
             },
             {
-                label: 'Buchholz Aktuell – Wohngebiet Bremer Straße',
-                url: 'https://buchholz-aktuell.de/buchholz/wohngebiet-bremer-strasse-580-wohnungen-und-ein-drohender-verkehrskollaps-14748/',
+                label: 'Kreiszeitung Wochenblatt',
+                url: 'https://kreiszeitung-wochenblatt.de'
             },
             {
-                label: 'Kreiszeitung Wochenblatt – Stadtentwicklung und Infrastruktur',
-                url: 'https://www.kreiszeitung-wochenblatt.de/buchholz/c-politik/neubaugebiete-beduerfen-einer-rechtzeitigen-planung-der-infrastruktur_a402629',
-            },
+                label: 'buchholz-aktuell',
+                url: 'https://buchholz-aktuell.de'
+            }
         ],
     },
     {
@@ -276,34 +430,34 @@ export const articles: ArticleModel[] = [
                     'Wer sich genauer mit der Planung beschäftigen möchte, findet hier die wichtigsten Unterlagen und Berichte:',
                     {
                         type: 'link',
-                        text: 'Sitzung vom 18. September 2024 (TOP Ö7)',
+                        text: 'Sitzung des Ausschusses für Stadtentwicklung, Umwelt, Klimaschutz und Mobilität vom 18. September 2024 (TOP Ö7)',
                         href: 'https://www.buchholz.de/allris/to020?TOLFDNR=1010466&SILFDNR=1000346',
                     },
                     {
                         type: 'link',
-                        text: 'Plankonzept zum Bebauungsplan Sprötzer Weg / An den Tennisplätzen',
-                        href: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1009915',
-                        indent: true
-                    },
-                    {
-                        type: 'link',
-                        text: 'Sitzung vom 17. September 2025 (TOP Ö10)',
-                        href: 'https://www.buchholz.de/allris/to020?TOLFDNR=1015283&SILFDNR=1000653'
-                    },
-                    {
-                        type: 'link',
-                        text: 'Zustimmung zum Bebauungsplanentwurf und Auslegungsbeschluss',
+                        text: 'Plankonzept zur Vorbereitung des Bebauungsplanverfahrens',
                         href: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1012498',
                         indent: true
                     },
                     {
                         type: 'link',
-                        text: 'Sitzung vom 6. Mai 2026 (TOP Ö8)',
+                        text: 'Sitzung des Ausschusses für Stadtentwicklung, Umwelt, Klimaschutz und Mobilität vom 17. September 2025 (TOP Ö10)',
+                        href: 'https://www.buchholz.de/allris/to020?TOLFDNR=1015283&SILFDNR=1000653'
+                    },
+                    {
+                        type: 'link',
+                        text: 'Zustimmung der Verwaltung zum Bebauungsplanentwurf und Auslegungsbeschluss',
+                        href: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1012498',
+                        indent: true
+                    },
+                    {
+                        type: 'link',
+                        text: 'Sitzung des Ausschusses für Stadtentwicklung, Umwelt, Klimaschutz und Mobilität vom 6. Mai 2026 (TOP Ö8)',
                         href: 'https://www.buchholz.de/allris/to020?TOLFDNR=1017941&SILFDNR=1000953',
                     },
                     {
                         type: 'link',
-                        text: 'Satzungsbeschluss zum Bauvorhaben in der Niedersachsenstraße',
+                        text: 'Satzungsbeschluss zum Bauvorhaben',
                         href: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1012941',
                         indent: true
                     },
@@ -324,7 +478,7 @@ export const articles: ArticleModel[] = [
                     },
                     {
                         type: 'link',
-                        text: 'Kreiszeitung Wochenblatt – Bebauungsplan für Kita am Sprötzer Weg neben Aldi liegt jetzt aus',
+                        text: 'Wochenblatt: Bebauungsplan für Kita am Sprötzer Weg neben Aldi liegt jetzt aus',
                         href: 'https://www.kreiszeitung-wochenblatt.de/buchholz/c-politik/bebauungsplan-fuer-kita-am-sproetzer-weg-neben-aldi-liegt-jetzt-aus_a377090',
                     },
                 ],
@@ -334,7 +488,15 @@ export const articles: ArticleModel[] = [
             {
                 label: 'Ratsinformationssystem der Stadt Buchholz',
                 url: 'https://www.buchholz.de/allris/tr010',
-            }
+            },
+            {
+                label: 'Regionalverband Elbe-Heide',
+                url: 'https://www.bund-elbe-heide.de'
+            },
+            {
+                label: 'Kreiszeitung Wochenblatt',
+                url: 'https://kreiszeitung-wochenblatt.de'
+            },
         ],
     },
     {
@@ -420,18 +582,18 @@ export const articles: ArticleModel[] = [
                     'Wer sich genauer informieren möchte, findet hier die wichtigsten offiziellen Unterlagen zur bisherigen Planung der Sprötzer Ortsmitte, zum Bauturbo und zum aktuellen Bauvorhaben an der Niedersachsenstraße 13.',
                     {
                         type: 'link',
-                        text: 'Sitzung vom 17. September 2026 (TOP Ö13)',
+                        text: 'Sitzung des Ausschusses für Stadtentwicklung, Umwelt, Klimaschutz und Mobilität vom 17. September 2026 (TOP Ö13)',
                         href: 'https://www.buchholz.de/allris/to010?SILFDNR=1000969&TOLFDNR=1019306'
                     },
                     {
                         type: 'link',
-                        text: 'Vorlage zum Bauvorhaben Niedersachsenstraße 13',
+                        text: 'Zustimmung der Verwaltung zum Bauvorhaben',
                         href: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1013228&TOLFDNR=1019306',
                         indent: true,
                     },
                     {
                         type: 'link',
-                        text: 'Stellungnahme zum Bauvorhaben Niedersachsenstraße 13',
+                        text: 'Stellungnahme der Verwaltung',
                         href: 'https://www.buchholz.de/allris/vo020?22--attachments-expandedPanel-content-body-rows-1-cells-2-cell-link',
                         indent: true,
                     },
@@ -452,10 +614,6 @@ export const articles: ArticleModel[] = [
             {
                 label: 'Ratsinformationssystem der Stadt Buchholz',
                 url: 'https://www.buchholz.de/allris/tr010'
-            },
-            {
-                label: 'Informationen der Stadt Buchholz zum Bauturbo',
-                url: 'https://www.buchholz.de/portal/seiten/bauturbo-in-buchholz-i-d-n--903001376-20101.html',
             },
         ],
     },
@@ -527,23 +685,23 @@ export const articles: ArticleModel[] = [
                     'Wer sich genauer mit der Planung beschäftigen möchte, findet hier die wichtigsten Unterlagen und Berichte:',
                     {
                         type: 'link',
-                        text: 'Sitzung vom 28. Mai 2026 (TOP Ö9)',
+                        text: 'Sitzung des Ausschusses für Schule und Sport vom 28. Mai 2026 (TOP Ö9)',
                         href: 'https://www.buchholz.de/allris/to020?TOLFDNR=1018070&SILFDNR=1000954'
                     },
                     {
                         type: 'link',
-                        text: 'Zustimmung zu baulichen Erweiterungsmaßnahmen an der Grundschule Sprötze-Trelde',
+                        text: 'Zustimmung zu baulichen Erweiterungsmaßnahmen',
                         href: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1013048',
                         indent: true
                     },
                     {
                         type: 'link',
-                        text: 'Sitzung vom 28. Mai 2026 (TOP Ö9.1)',
+                        text: 'Sitzung des Ausschusses für Schule und Sport vom 28. Mai 2026 (TOP Ö9.1)',
                         href: 'https://www.buchholz.de/allris/to020?TOLFDNR=1018491&SILFDNR=1000954'
                     },
                     {
                         type: 'link',
-                        text: 'Gestaltung der Ausschreibung Grundschule Sprötze-Trelde',
+                        text: 'Gestaltung der Ausschreibung',
                         href: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1013106',
                         indent: true
                     },
@@ -574,6 +732,14 @@ export const articles: ArticleModel[] = [
             {
                 label: 'Ratsinformationssystem der Stadt Buchholz',
                 url: 'https://www.buchholz.de/allris/tr010'
+            },
+            {
+                label: 'Kreiszeitung Wochenblatt',
+                url: 'https://kreiszeitung-wochenblatt.de'
+            },
+            {
+                label: 'buchholz-aktuell',
+                url: 'https://buchholz-aktuell.de'
             }
         ],
     },
