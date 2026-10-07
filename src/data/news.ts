@@ -23,7 +23,7 @@ export const news: NewsModel[] = [
         publishedAt: '2026-03-15',
         topicIds: ['kita-und-schule', 'infrastruktur'],
         summary: [
-            'Die Stadtverwaltung spricht sich dafür aus, die Grundschule Sprötze-Trelde **weiterhin an beiden Standorten** zu betreiben. Eine zusätzliche Verwaltungskraft in Trelde soll die Schulleitung entlasten.',
+            'Die Stadtverwaltung spricht sich dafür aus, die Grundschule Sprötze-Trelde **weiterhin an beiden Standorten** zu betreiben. Eine **zusätzliche Verwaltungskraft in Trelde** soll die Schulleitung entlasten.',
         ],
         introduction: [
             'Wie soll es mit der Grundschule Sprötze-Trelde weitergehen? Auf eine Anfrage der Fraktion Bündnis 90/Die Grünen hat die Stadtverwaltung zwei Möglichkeiten gegenübergestellt: den Erhalt der Standorte Sprötze und Trelde und eine Zusammenlegung an einem Standort.',
@@ -252,8 +252,7 @@ export const news: NewsModel[] = [
         publishedAt: '2026-08-28',
         topicIds: ['vereine', 'leben-im-dorf'],
         summary: [
-            'Der **TSV Sprötze feiert 2026 sein 100-jähriges Bestehen**. Einer der Höhepunkte war der große Familientag am 22. August auf dem Vereinsgelände.',
-            'Nach dem erfolgreichen Fest stehen im November noch der **offizielle 100. Geburtstag** und die große Jubiläumsparty an.',
+            'Der **TSV Sprötze feiert 2026 sein 100-jähriges Bestehen**. Einer der Höhepunkte war der große Familientag am 22. August auf dem Vereinsgelände. Nach dem erfolgreichen Fest stehen im November noch der **offizielle 100. Geburtstag** und die große Jubiläumsparty an.',
         ],
         introduction: [
             'Seit **100 Jahren** gehört der TSV zum Leben in Sprötze. Am 4. November 1926 wurde der Verein mit zunächst 22 Mitgliedern gegründet. Heute sind mehr als **950 Menschen** im TSV aktiv.',
@@ -309,8 +308,7 @@ export const news: NewsModel[] = [
         publishedAt: '2026-09-03',
         topicIds: ['abfallentsorgung'],
         summary: [
-            'Im Landkreis Harburg gibt es einen **neuen Entsorger für die Gelben Tonnen und das Altpapier**. Veolia hat die Aufgaben von Knettenbrech + Gurdulic übernommen.',
-            'Für Haushalte in Sprötze bleiben die **bekannten Abfuhrtermine unverändert**. Neu sind vor allem die Ansprechpartner bei Fragen oder bei der Bestellung einer Gelben Tonne.',
+            'Im Landkreis Harburg gibt es einen **neuen Entsorger für die Gelben Tonnen und das Altpapier**. Veolia hat die Aufgaben von Knettenbrech + Gurdulic übernommen. Für Haushalte in Sprötze bleiben die **bekannten Abfuhrtermine unverändert**. Neu sind vor allem die Ansprechpartner bei Fragen oder bei der Bestellung einer Gelben Tonne.',
         ],
         introduction: [
             'Die **Veolia Umweltservice Nord GmbH** übernimmt ab sofort die Abfuhr der Gelben Tonnen und des Altpapiers im Landkreis Harburg. Das Unternehmen hat den operativen Betrieb von Knettenbrech + Gurdulic übernommen.',
@@ -381,7 +379,7 @@ export const news: NewsModel[] = [
         publishedAt: '2026-09-04',
         topicIds: ['abfallentsorgung'],
         summary: [
-            'Vom **21. bis 25. September untersucht** die Abfallwirtschaft des Landkreises Harburg **stichprobenartig den Restmüll in Buchholz und fünf weiteren Orten**. Dabei soll festgestellt werden, wie gut die Mülltrennung funktioniert und wie häufig beispielsweise **Biomüll, Papier oder Glas im Restmüll** landen.',
+            'Vom **21. bis 25. September untersucht** die Abfallwirtschaft des Landkreises Harburg stichprobenartig den Restmüll in Buchholz und fünf weiteren Orten. Dabei soll festgestellt werden, **wie gut die Mülltrennung funktioniert** und wie häufig beispielsweise Biomüll, Papier oder Glas im Restmüll landen.',
         ],
         introduction: [
             'Die Abfallwirtschaft des Landkreises Harburg lässt vom **21. bis 25. September 2026** eine Analyse der Restmüllzusammensetzung durchführen. Neben Buchholz gehören Appel, Asendorf, Nenndorf, Salzhausen und Winsen zu den ausgewählten Untersuchungsorten.',
