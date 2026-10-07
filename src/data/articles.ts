@@ -4,7 +4,7 @@ export const articles: ArticleModel[] = [
     {
         id: 'neubaugebiet-diekwischweg-trelde',
         slug: 'neubaugebiet-diekwischweg-trelde',
-        title: 'Neues Wohngebiet mit rund 40 Eigenheimen im Diekwischweg in Trelde wird geprüft',
+        title: 'Neues Wohngebiet mit rund 40 Eigenheimen im Diekwischweg in Trelde',
         publishedAt: '2026-10-07',
         modifiedAt: '2026-10-07',
         category: 'Stadtplanung',

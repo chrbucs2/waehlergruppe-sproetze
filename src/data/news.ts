@@ -577,6 +577,10 @@ export const news: NewsModel[] = [
         summary: [
             '**An der Bahnbrücke der K72 in Sprötze stehen weitere Arbeiten an.** Vom **28. September bis 4. Oktober 2026** wird unterhalb der Brücke während der nächtlichen Betriebsruhe der Bahn gearbeitet. Dabei kann es zwischen **22:30 und 4:30 Uhr zu einzelnen Vollsperrungen** auf dem Brückenbauwerk kommen. Die Arbeiten an den Übergangskonstruktionen selbst wurden bereits im Frühjahr ausgeführt.',
         ],
+        summaryImage: {
+            src: '/images/news/sproetzer-bruecke.jpeg',
+            alt: 'Sprötzer Brücke am Ortsausgang Richtung Holm-Seppensen',
+        },
         introduction: [
             'Die Arbeiten an der **Bahnbrücke in der Kirchenallee in Sprötze** sind noch nicht vollständig abgeschlossen.',
             'Vom **28. September bis 4. Oktober 2026** stehen weitere Arbeiten unterhalb der Brücke an. Dafür kann die K72 nachts zeitweise vollständig gesperrt werden.',
@@ -875,10 +879,6 @@ export const news: NewsModel[] = [
             'Auf der **B75 am Trelder Berg** kommt es **vom 7. bis 17. Oktober 2026** zu Verkehrsbehinderungen. Auf Höhe der neuen Elsa-Neumann-Straße wird die Bundesstraße halbseitig gesperrt.',
             'Eine Baustellenampel regelt den Verkehr. Auch der Geh- und Radweg ist eingeschränkt – besonders im Berufsverkehr muss mit **längeren Wartezeiten** gerechnet werden.',
         ],
-        summaryImage: {
-            src: '/images/news/sproetzer-bruecke.jpeg',
-            alt: 'Sprötzer Brücke am Ortsausgang Richtung Holm-Seppensen',
-        },
         introduction: [
             'Im Bereich des neuen Gewerbegebiets **Trelder Berg Nord** steht die nächste Verkehrsbehinderung an: **Von Mittwoch, 7. Oktober, bis Samstag, 17. Oktober 2026**, ist die **B75 auf Höhe der neuen Elsa-Neumann-Straße** nur einspurig befahrbar.',
             'Die Arbeiten stehen im Bereich der neuen Zufahrt zum Gewerbegebiet. Dort entsteht die dauerhafte Anbindung des rund 12,9 Hektar großen Gewerbegebiets an die B75.',
