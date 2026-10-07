@@ -7,7 +7,7 @@ export const scheduleItems: ScheduleModel[] = [
         category: 'Ausschuss Stadtentwicklung, Umwelt, Klimaschutz und Mobilität',
         date: '2026-05-06',
         time: '18:30 Uhr',
-        title: 'Bebauungsplan Sprötzer Weg',
+        title: 'Bebauungsplan Sprötzer Weg und Lerchenpark',
         location: 'Kantine, Rathaus Buchholz',
         summary: [
             'Im Mittelpunkt der Sitzung standen der **Bebauungsplan „Sprötzer Weg / An den Tennisplätzen“**, die weitere Planung des Lerchenparks auf dem ehemaligen Rütgersgelände sowie die Neuausrichtung des Innenstadtmanagements.',
@@ -80,7 +80,7 @@ export const scheduleItems: ScheduleModel[] = [
         category: 'Ausschuss Stadtentwicklung, Umwelt, Klimaschutz und Mobilität',
         date: '2026-09-17',
         time: '18:30 Uhr',
-        title: 'Wohnungsbau in der Niedersachsenstraße, Buchholz Bus und Stadtentwicklung',
+        title: 'Wohnungsbau in der Niedersachsenstraße 13, Buchholz Bus und Stadtentwicklung',
         location: 'Kantine, Rathaus Buchholz',
         summary: [
             'Für Sprötze besonders relevant war die geplante **Bebauung an der Niedersachsenstraße 13**. Außerdem standen die erste Zwischenbilanz zum **Bauturbo**, der **Buchholz Bus**, ein mögliches Rechenzentrum im Bahnhofsumfeld Nord und weitere Stadtentwicklungsthemen auf der Tagesordnung.',
@@ -152,7 +152,7 @@ export const scheduleItems: ScheduleModel[] = [
         title: 'Erneuerbare Energien, Buchholz Bus und Weihnachtsmarkt',
         location: 'Torbogenzimmer, Rathaus Buchholz',
         summary: [
-            'Für Sprötzer interessant waren vor allem die Beratungen zu **erneuerbaren Energien**. Hier änderte der Ausschuss die ursprüngliche Vorlage deutlich: Ein regionaler **Bürgerstrom-Tarif** und zusätzliche Vorgaben zur direkten finanziellen Beteiligung wurden **nicht** in die Beschlussempfehlung **übernommen**.',
+            'Der Ausschuss änderte die ursprüngliche Vorlage zu den **erneuerbaren Energien** deutlich: Ein regionaler **Bürgerstrom-Tarif** und zusätzliche Vorgaben zur direkten finanziellen Beteiligung wurden **nicht** in die Beschlussempfehlung **übernommen**.',
         ],
         introduction: [
             'Einen eigenen Tagesordnungspunkt zu Sprötze gab es nicht. Mehrere Entscheidungen betreffen aber die gesamte Stadt. Besonders interessant ist das Ergebnis zur regionalen **Wertschöpfung bei Wind- und Solarprojekten**. Der Ausschuss empfiehlt, bei künftigen Projekten die **Einbindung kommunaler und lokaler Unternehmen stärker** zu **berücksichtigen**. Die ursprünglich vorgeschlagenen **Regelungen zu einem Bürgerstrom-Tarif** und zu zusätzlichen finanziellen Beteiligungsangeboten **wurden dagegen gestrichen**.',
@@ -168,17 +168,17 @@ export const scheduleItems: ScheduleModel[] = [
                 ],
             },
             {
-                title: 'Weihnachtsmarkt 2026',
-                paragraphs: [
-                    'Der Ausschuss befasste sich auch mit der kurzfristigen Organisation des **Buchholzer Weihnachtsmarktes vom 23. November bis 23. Dezember 2026**. Der bisherige Veranstalter kann den Markt in diesem Jahr nicht ausrichten, deshalb soll die **Stadt die Organisation** ausnahmsweise selbst **übernehmen**.',
-                    'Für die Durchführung sieht die Vorlage **60.000 Euro** vor. Ein großer Teil davon soll durch geschätzte **48.500 Euro Standgebühren** gedeckt werden. Für 2027 soll die Ausrichtung wieder öffentlich ausgeschrieben werden.',
-                ],
-            },
-            {
                 title: 'Buchholz Bus und Beteiligung des Rates',
                 paragraphs: [
                     'Beim **Buchholz Bus** ging es nicht um eine neue Linie oder eine konkrete Änderung für Sprötze, sondern darum, **wer künftig bei grundlegenden Entscheidungen beteiligt wird**.',
                     'Ein **Antrag** sieht vor, dass der **Rat künftig frühzeitig eingebunden** wird, wenn es beispielsweise um **Betriebszeiten, Angebotskürzungen, Linienführungen oder die Grundfinanzierung** des Buchholz Bus geht. Hintergrund der Debatte sind unter anderem die bereits erfolgten Kürzungen der Betriebszeiten des BuchholzBus.',
+                ],
+            },
+            {
+                title: 'Weihnachtsmarkt 2026',
+                paragraphs: [
+                    'Der Ausschuss befasste sich auch mit der kurzfristigen Organisation des **Buchholzer Weihnachtsmarktes vom 23. November bis 23. Dezember 2026**. Der bisherige Veranstalter kann den Markt in diesem Jahr nicht ausrichten, deshalb soll die **Stadt die Organisation** ausnahmsweise selbst **übernehmen**.',
+                    'Für die Durchführung sieht die Vorlage **60.000 Euro** vor. Ein großer Teil davon soll durch geschätzte **48.500 Euro Standgebühren** gedeckt werden. Für 2027 soll die Ausrichtung wieder öffentlich ausgeschrieben werden.',
                 ],
             },
             {
@@ -205,52 +205,48 @@ export const scheduleItems: ScheduleModel[] = [
         category: 'Rat der Stadt',
         date: '2026-10-05',
         time: '19:00 Uhr',
-        title: 'Lerchenpark beschlossen, Brody-Brücke und Rechenzentrum beraten',
+        title: 'Erneuerbare Energien, Buchholz Bus und Stadtentwicklung',
         location: 'Saal EMPORE',
         summary: [
-            'Für Sprötze interessant war die geplante **Brody-Brücke an der Kirchenallee**. In der zuletzt vorliegenden geänderten Beschlussempfehlung war diese Benennung nach der ukrainischen Partnerstadt Brody allerdings nicht mehr enthalten. Bestätigt ist außerdem der Beschluss zum **Lerchenpark auf dem ehemaligen Rütgersgelände**.',
+            'Der Rat beriet zum Ende der Wahlperiode unter anderem über eine stärkere politische Beteiligung bei Entscheidungen zum **Buchholz Bus**, die regionale Wertschöpfung bei **Erneuerbare-Energien-Projekten** sowie das geplante **Rechenzentrum im Bahnhofsumfeld Nord**.',
         ],
         introduction: [
-            'In der letzten regulären Ratssitzung der bisherigen Wahlperiode wurde der **Rahmenplan für den Lerchenpark** mit **24 Ja-Stimmen, 13 Nein-Stimmen und einer Enthaltung** beschlossen. Damit ist noch kein Baurecht geschaffen, aber die Grundlage für die weitere Planung gelegt.',
-            'Außerdem ging es unter anderem um die Benennung nach den ukrainischen Partnerstädten, ein mögliches **Rechenzentrum im Bahnhofsumfeld Nord**, das Klimaanpassungskonzept und die künftige Beteiligung des Rates bei wichtigen Entscheidungen zum **Buchholz Bus**.',
+            'In der letzten regulären Ratssitzung der bisherigen Wahlperiode wurden noch mehrere größere Stadtentwicklungsthemen beraten. Im Mittelpunkt stand der **Lerchenpark** auf dem ehemaligen Rütgersgelände südlich des Bahnhofs.',
+            'Daneben ging es unter anderem um die zukünftige Beteiligung des Rates bei Entscheidungen zum **Buchholz Bus**, ein mögliches **Rechenzentrum** und die stärkere regionale Wertschöpfung bei **Erneuerbare-Energien-Projekten**.',
         ],
         sections: [
             {
-                title: 'Brody-Brücke in Sprötze',
+                title: 'Lerchenpark: Rahmenplan beschlossen',
                 paragraphs: [
-                    'Der ursprüngliche CDU-Antrag sah vor, die **Bahnbrücke an der Kirchenallee (K72) in Sprötze als „Brody-Brücke“** zu benennen. Gleichzeitig sollte die Bahnbrücke an der Bendestorfer Straße den Namen „Berdytschiw-Brücke“ erhalten.',
-                    'In der zuletzt vorliegenden **geänderten Beschlussempfehlung** des zuständigen Ausschusses ist die Sprötzer Brody-Brücke jedoch nicht mehr enthalten. Stattdessen soll ein zukünftiger Platz an der Nordseite des Buchholzer Bahnhofs im Bereich ZOB/Südtangente nach der Partnerstadt **Berdytschiw** benannt werden.',
-                    'Ein abschließendes Abstimmungsergebnis des Rates zu diesem Punkt ist im aktuell vorliegenden Sitzungs-Ausdruck noch nicht dokumentiert.'
-                ],
-            },
-            {
-                title: 'Lerchenpark auf dem ehemaligen Rütgersgelände',
-                paragraphs: [
-                    'Der Rat hat den **Rahmenplan für den Lerchenpark** beschlossen. Das Abstimmungsergebnis lautete **24 Ja-Stimmen, 13 Nein-Stimmen und eine Enthaltung**.',
-                    'Langfristig sind auf dem ehemaligen Rütgersgelände **bis zu rund 1.200 Wohnungen** denkbar. Nach Angaben der Stadt lässt die derzeitige Verkehrssituation zunächst allerdings nur einen ersten Entwicklungsschritt mit etwa **600 Wohnungen** zu. Für eine darüber hinausgehende Entwicklung wäre eine zusätzliche Verkehrsentlastung erforderlich.',
-                    'Der Beschluss schafft noch **kein Baurecht**. Vor den nächsten Planungsschritten müssen insbesondere weitere Voraussetzungen zur Sanierung der belasteten Flächen erfüllt und von der Bodenschutzbehörde bestätigt werden.'
+                    'Der Rat hat den **Rahmenplan für die Entwicklung des ehemaligen Rütgersgeländes** als Grundlage für die weiteren Planungen beschlossen. Damit entsteht noch kein Baurecht. Voraussetzung für die nächsten Planungsschritte ist unter anderem die weitere Klärung und Umsetzung der **Bodensanierung**. Für die Nordfläche muss zunächst eine verbindliche Erklärung zum Sanierungsplan vorliegen.',
+                    'Die weitere Bauleitplanung soll auf der **Nordfläche beginnen**. Für spätere Satzungsbeschlüsse muss die Sanierung der jeweiligen Fläche formal abgeschlossen und durch die zuständige Bodenschutzbehörde bestätigt sein.',
                 ],
             },
             {
                 title: 'Rechenzentrum im Bahnhofsumfeld Nord',
                 paragraphs: [
-                    'Weiter beraten wurde über ein mögliches **Rechenzentrum im Bahnhofsumfeld Nord**. Die Planung soll unter anderem davon abhängen, ob die entstehende Abwärme für ein Wärmenetz genutzt werden kann. Dazu soll eine Machbarkeitsstudie erstellt werden.',
-                    'Die Beschlussempfehlung wurde vor der Ratssitzung nochmals ergänzt: Es soll nachgewiesen werden, dass das Rechenzentrum nicht die Stromnetzkapazitäten beeinträchtigt, die für Unternehmen und Wohnbebauung benötigt werden. Auch die Nutzung der Wärme im Sommer soll untersucht werden.',
-                    'Zusätzlich wurde vorgeschlagen, eine **regelmäßige Eigenstromerzeugung mit fossilen Brennstoffen auszuschließen**.'
+                    'Auch das mögliche **Rechenzentrum im Bahnhofsumfeld Nord** wurde beraten. Voraussetzung für die weitere Planung soll unter anderem sein, dass die entstehende **Abwärme für ein Wärmenetz genutzt werden kann**. Dazu ist zunächst eine Machbarkeitsstudie vorgesehen.',
+                    'Die Beschlussempfehlung wurde ergänzt: Die für das Rechenzentrum benötigten Stromnetzkapazitäten dürfen die Elektrifizierung bestehender und zukünftiger Unternehmen oder Wohngebiete nicht einschränken.',
                 ],
             },
             {
-                title: 'Buchholz Bus',
+                title: 'Regionale Beteiligung bei erneuerbaren Energien',
                 paragraphs: [
-                    'Der Rat befasste sich erneut mit der politischen Kontrolle des **Buchholz Bus**. Hintergrund sind unter anderem die im vergangenen Jahr vorgenommenen Kürzungen der Betriebszeiten.',
-                    'Bei wesentlichen Entscheidungen zu **Betriebszeiten, Angebotskürzungen oder -ausweitungen, Linienführungen und der Grundfinanzierung** soll der Rat künftig frühzeitig beteiligt werden. Vorgesehen ist, dass entsprechende Maßnahmen nicht umgesetzt werden, bevor eine politische Beratung möglich war.'
+                    'Es wurde der weitere **Ausbau von Windkraft und Photovoltaik** besprochen. Ziel ist, dass ein möglichst **großer Teil der wirtschaftlichen Wertschöpfung in der Region** bleibt. Nach der zuletzt vorliegenden Beschlussempfehlung soll bei städtischen Flächen und entsprechenden Bauleitplanungen die **Einbindung kommunaler und lokaler Unternehmen** als wichtiges Auswahlkriterium berücksichtigt werden – soweit Vergabe- und Wettbewerbsrecht dies zulassen.',
                 ],
             },
             {
-                title: 'Klimaanpassungskonzept',
+                title: 'Buchholz Bus: Rat soll stärker eingebunden werden',
                 paragraphs: [
-                    'Auf der Tagesordnung stand außerdem das neue **Klimaanpassungskonzept der Stadt Buchholz**. Es soll die Stadt besser auf Folgen wie Hitze, Trockenheit und Starkregen vorbereiten.',
-                    'Die Verwaltung möchte auf Grundlage des Konzepts weitere Fördermittel beantragen. Die Maßnahmen betreffen grundsätzlich das gesamte Stadtgebiet und damit auch die Ortschaften wie Sprötze.'
+                    'Beim **Buchholz Bus** ging es darum, den Stadtrat künftig stärker in wesentliche Entscheidungen einzubinden. Dazu zählen insbesondere **Betriebszeiten, Änderungen des Angebots, Linienführung und die Grundfinanzierung** des Busbetriebs.',
+                ],
+            },
+            {
+                title: 'Weitere Themen',
+                paragraphs: [
+                    '**Bebauungsplan Wiesenstraße / Hermannstraße**: Die 1. Änderung des Bebauungsplans stand zum Satzungsbeschluss an.',
+                    '**Klimaanpassung**: Der Rat befasste sich mit dem Klimaanpassungskonzept und einer möglichen Folgeförderung für dessen Umsetzung.',
+                    '**Partnerstadt Berdytschiw**: Der Platz an der Nordseite des Bahnhofs im zukünftigen Bereich von ZOB und Südtangente soll nach der ukrainischen Partnerstadt **Berdytschiw** benannt werden.',
                 ],
             },
         ],
@@ -263,7 +259,7 @@ export const scheduleItems: ScheduleModel[] = [
         category: 'Rat der Stadt',
         date: '2026-11-09',
         time: '19:00 Uhr',
-        title: 'Konstituierende Sitzung des neuen Stadtrates',
+        title: 'Konstituierende Sitzung des Rates',
         location: 'Saal EMPORE',
         summary: [
             'Mit der konstituierenden Sitzung beginnt die Arbeit des neu gewählten Rates der Stadt Buchholz in der neuen Wahlperiode.',
@@ -287,7 +283,7 @@ export const scheduleItems: ScheduleModel[] = [
         category: 'Ortsrat Sprötze',
         date: '2026-11-11',
         time: '19:30 Uhr',
-        title: 'Konstituierende Sitzung des neu gewählten Ortsrates',
+        title: 'Konstituierende Sitzung des Ortsrates',
         location: 'Schützenhaus Sprötze',
         summary: [
             'Der neu gewählte Ortsrat Sprötze kommt erstmals zusammen und schafft die organisatorischen Grundlagen für die neue Wahlperiode.',
