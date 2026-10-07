@@ -8,7 +8,7 @@ type SeoOptions = {
 };
 
 const SITE_NAME = 'Wählergruppe Sprötze';
-const SITE_ORIGIN = 'https://wählergruppe-sprötze.de';
+const SITE_ORIGIN = 'https://xn--whlergruppe-sprtze-ltb88a.de';
 const DEFAULT_DESCRIPTION = 'Unabhängige Kommunalpolitik für Sprötze.';
 
 function setMeta(name: string, content: string) {

@@ -7,7 +7,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(__dirname, '..');
 const distDir = path.join(repoRoot, 'dist');
 
-const siteOrigin = 'https://wählergruppe-sprötze.de';
+const siteOrigin = 'https://xn--whlergruppe-sprtze-ltb88a.de';
 const siteName = 'Wählergruppe Sprötze';
 const defaultDescription = 'Unabhängige Kommunalpolitik für Sprötze.';
 

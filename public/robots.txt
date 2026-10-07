@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://wählergruppe-sprötze.de/sitemap.xml
+Sitemap: https://xn--whlergruppe-sprtze-ltb88a.de/sitemap.xml
