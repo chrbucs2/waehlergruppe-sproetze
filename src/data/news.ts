@@ -332,8 +332,7 @@ export const news: NewsModel[] = [
         publishedAt: '2026-09-04',
         topicIds: ['abfallentsorgung'],
         summary: [
-            'Vom **21. bis 25. September untersucht** die Abfallwirtschaft des Landkreises Harburg **stichprobenartig den Restmüll in Buchholz und fünf weiteren Orten**.',
-            'Dabei soll festgestellt werden, wie gut die Mülltrennung funktioniert und wie häufig beispielsweise **Biomüll, Papier oder Glas im Restmüll** landen.',
+            'Vom **21. bis 25. September untersucht** die Abfallwirtschaft des Landkreises Harburg **stichprobenartig den Restmüll in Buchholz und fünf weiteren Orten**. Dabei soll festgestellt werden, wie gut die Mülltrennung funktioniert und wie häufig beispielsweise **Biomüll, Papier oder Glas im Restmüll** landen.',
         ],
         introduction: [
             'Die Abfallwirtschaft des Landkreises Harburg lässt vom **21. bis 25. September 2026** eine Analyse der Restmüllzusammensetzung durchführen. Neben Buchholz gehören Appel, Asendorf, Nenndorf, Salzhausen und Winsen zu den ausgewählten Untersuchungsorten.',
