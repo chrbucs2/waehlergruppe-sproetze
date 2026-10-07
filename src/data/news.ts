@@ -394,8 +394,7 @@ export const news: NewsModel[] = [
         publishedAt: '2026-09-11',
         topicIds: ['natur', 'freizeit'],
         summary: [
-            'Am **Brunsberg** wurden zwei neue **Holzbarrieren** aufgestellt. Sie **sollen schnelle Radfahrer stoppen** und für mehr Sicherheit auf den Wanderwegen sorgen.',
-            'Betroffen sind die Wege **vom Brunsberg zur Höllenschlucht und zum Kleinen Brunsberg**. In diesem Bereich ist Radfahren nicht erlaubt.',
+            'Am **Brunsberg** wurden zwei neue **Holzbarrieren** aufgestellt. Sie **sollen schnelle Radfahrer stoppen** und für mehr Sicherheit auf den Wanderwegen sorgen. Betroffen sind die Wege **vom Brunsberg zur Höllenschlucht und zum Kleinen Brunsberg**. In diesem Bereich ist Radfahren nicht erlaubt.',
         ],
         introduction: [
             'Der Landkreis Harburg hat **am Brunsberg zwei Holzbarrieren** aufgestellt. Hintergrund sind Beschwerden sowie gefährliche Situationen zwischen Fußgängern und Radfahrern auf den teilweise steilen Wegen.',
