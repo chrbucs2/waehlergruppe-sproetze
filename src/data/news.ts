@@ -17,6 +17,55 @@ export const news: NewsModel[] = [
         },
     },
     {
+        id: 'grundschule-sproetze-trelde-zwei-standorte',
+        slug: 'grundschule-sproetze-trelde-zwei-standorte',
+        title: 'Grundschule Sprötze-Trelde: Verwaltung will beide Standorte erhalten',
+        publishedAt: '2026-03-15',
+        topicIds: ['kita-und-schule', 'infrastruktur'],
+        summary: [
+            'Die Stadtverwaltung spricht sich dafür aus, die Grundschule Sprötze-Trelde **weiterhin an beiden Standorten** zu betreiben. Eine zusätzliche Verwaltungskraft in Trelde soll die Schulleitung entlasten.',
+        ],
+        introduction: [
+            'Wie soll es mit der Grundschule Sprötze-Trelde weitergehen? Auf eine Anfrage der Fraktion Bündnis 90/Die Grünen hat die Stadtverwaltung zwei Möglichkeiten gegenübergestellt: den Erhalt der Standorte Sprötze und Trelde und eine Zusammenlegung an einem Standort.',
+            'Das Ergebnis der **Verwaltung** ist eindeutig: Sie **spricht sich** weiterhin **für das Zwei-Standort-Modell aus**. Eine Zusammenlegung würde zwar die Schulorganisation vereinfachen, hätte aber auch Nachteile für die Kinder und die Dorfgemeinschaft in Trelde.',
+        ],
+        sections: [
+            {
+                title: 'Was würde eine Zusammenlegung bedeuten?',
+                paragraphs: [
+                    'Bei einer Zusammenlegung müssten Kinder aus einem der beiden Ortsteile künftig mit dem Bus zur Schule fahren. Für den notwendigen Schulbusverkehr schätzt der Landkreis Harburg die Kosten auf rund **40.000 Euro pro Jahr** zuzüglich künftiger Kostensteigerungen.',
+                    'Für die Schule selbst sieht die Verwaltung Vorteile eines gemeinsamen Standortes: Absprachen und Vertretungen würden einfacher, Lehrkräfte könnten enger zusammenarbeiten und die Schulleitung würde organisatorisch entlastet. Dem gegenüber stehen **längere Schulwege, Busabhängigkeit und der Verlust der kleinen, familiären Schulstruktur**.',
+                ],
+            },
+            {
+                title: 'Was passiert dann mit Schule und Sport in Trelde?',
+                paragraphs: [
+                    'Bei einer Zusammenlegung müsste auch geklärt werden, wie das Schulgebäude in Trelde weiter genutzt wird. Denkbar wäre beispielsweise ein **Dorftreff oder Kulturzentrum**. Dafür wären unter anderem Umbauten für Brandschutz, Barrierefreiheit und Sanitäranlagen notwendig. Die Verwaltung schätzt die **Investitionen** grob auf **210.000 bis 340.000 Euro**. Die genannten Werte sind ausdrücklich nur Schätzungen.',
+                    'Auch Sporthalle und Sportplatz spielen eine wichtige Rolle. Für die **Sporthalle** fallen **derzeit** etwa **19.000 bis 28.000 Euro jährlich** an, für **Pflege und Betrieb des Sportplatzes** weitere **13.000 bis 15.000 Euro**. Die Verwaltung nennt verschiedene Modelle, mit denen eine Nutzung durch den Sportverein auch ohne Schulstandort möglich bleiben könnte.',
+                ],
+            },
+            {
+                title: 'Verwaltung spricht sich für beide Standorte aus',
+                paragraphs: [
+                    'In ihrer abschließenden Bewertung spricht sich die Stadtverwaltung **für den Erhalt der Schulstandorte Sprötze und Trelde** aus. Neben wirtschaftlichen Überlegungen nennt sie vor allem die **Bedeutung der Schule für Trelde** und das **Prinzip „Kurze Beine – kurze Wege“**.',
+                    'Eine konkrete Möglichkeit zur Entlastung wäre eine **zusätzliche Verwaltungskraft in Trelde mit 15 bis 20 Wochenstunden**. Die Stadt rechnet dafür mit jährlichen Personalkosten von etwa **21.500 bis 28.500 Euro**. Hinzu kämen **einmalig rund 3.500 Euro** für den Arbeitsplatz und etwa **1.200 Euro laufende Sachkosten pro Jahr**.',
+                    'Zusätzlich sollen weitere organisatorische Entlastungen geprüft und der regelmäßige Austausch mit der Schulleitung fortgeführt werden. Die Verwaltung bewertet diese Maßnahmen als **wirtschaftlich günstiger als eine Zusammenlegung**.',
+                    'Eine endgültige politische Entscheidung über die langfristige Entwicklung der Grundschule ist damit noch nicht getroffen. Die Antwort der Verwaltung bildet zunächst eine Grundlage für die weitere Beratung.',
+                ],
+            },
+            {
+                title: 'Weiterführende Links',
+                paragraphs: [
+                    {
+                        type: 'link',
+                        text: 'Antwort der Verwaltung zur Zukunft der Grundschule Sprötze-Trelde',
+                        href: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1012985',
+                    }
+                ],
+            },
+        ],
+    },
+    {
         id: 'stadteingang-west-rahmenplan-beratung',
         slug: 'stadteingang-west-rahmenplan-beratung',
         title: 'Stadteingang West: Weitere Planung für großes Wohngebiet beraten',
@@ -109,7 +158,7 @@ export const news: NewsModel[] = [
         slug: 'bebauungsplan-sproetzer-weg-an-den-tennisplaetzen-satzungsbeschluss',
         title: 'Neue Kita beim Discounter am Sprötzer Weg in Planung',
         publishedAt: '2026-05-06',
-        topicIds: ['infrastruktur', 'verkehr'],
+        topicIds: ['kita-und-schule', 'infrastruktur', 'verkehr'],
         summary: [
             '**Neue Kita am Sprötzer Weg geplant.** Der Bebauungsplan „**Sprötzer Weg / An den Tennisplätzen**“ soll geändert werden, um auf der bislang für Einzelhandel vorgesehenen Fläche unter anderem eine Kindertagesstätte zu ermöglichen.',
             'Die Planung geht jedoch über die Kita hinaus und erlaubt künftig auch weitere soziale, kulturelle und sportliche Angebote. Zudem geht es um Verkehr, Erschließung, Entwässerung, Lärmschutz und die Begrünung des rund 0,9 Hektar großen Areals.',
@@ -178,9 +227,9 @@ export const news: NewsModel[] = [
     {
         id: 'grundschule-sproetze-trelde-ausbau',
         slug: 'grundschule-sproetze-trelde-neubau-erweiterung',
-        title: 'Ausbau der Grundschule Sprötze-Trelde an beiden Standorten geplant',
+        title: 'Grundschule Sprötze-Trelde: Ausbau an beiden Standorten geplant',
         publishedAt: '2026-05-26',
-        topicIds: ['ortsmitte', 'infrastruktur'],
+        topicIds: ['kita-und-schule', 'ortsmitte', 'infrastruktur'],
         summary: [
             'Die Grundschule Sprötze-Trelde soll **an beiden Standorten weiterentwickelt werden**. In Sprötze ist ein Teilersatzneubau geplant, in Trelde soll die bestehende Schule erweitert werden.',
             'In Sprötze bildet **Variante 1 mit einem zweigeschossigen Neubau auf dem Pausenhof** die Grundlage der weiteren Planung. Die Tennisplätze und der Sportplatz können dabei bestehen bleiben. In Trelde soll der **einzügige Schulstandort erhalten** und an das benötigte Raumprogramm angepasst werden.',
@@ -380,6 +429,58 @@ export const news: NewsModel[] = [
                         type: 'link',
                         text: 'Buchholz Aktuell: Hausmüllanalyse soll Mülltrennung in Buchholz verbessern',
                         href: 'https://buchholz-aktuell.de/buchholz/hausmuellanalyse-soll-muelltrennung-in-buchholz-verbessern-19380',
+                        indent: true,
+                    },
+                ],
+            },
+        ],
+    },
+    {
+        id: 'schulsozialarbeit-sproetze-trelde',
+        slug: 'schulsozialarbeit-sproetze-trelde',
+        title: 'Zusätzliche Schulsozialarbeit für Grundschule Sprötze-Trelde empfohlen',
+        publishedAt: '2026-09-10',
+        topicIds: ['kita-und-schule', 'soziales'],
+        summary: [
+            'Der Ausschuss für Schule und Sport hat empfohlen, die Grundschule Sprötze-Trelde mit einer **zusätzlichen halben Stelle Schulsozialarbeit** zu stärken. Die Schule besitzt **zwei Standorte**, die sich bisher eine **halbe Stelle teilen**.',
+        ],
+        introduction: [
+            'Ausgangspunkt war ein Antrag der Gruppe SPD/Die Linke zur personellen Unterstützung der Schulstandorte Sprötze und Trelde. Vorgesehen waren zunächst zusätzliche Ressourcen für Schulsozialarbeit und Verwaltungsunterstützung. Der Ausschuss für Schule und Sport änderte den Antrag am **10. September 2026**. Er empfahl eine **zusätzliche halbe Stelle Schulsozialarbeit für Sprötze-Trelde**.',
+        ],
+        sections: [
+            {
+                title: 'Warum Sprötze-Trelde besonders ist',
+                paragraphs: [
+                    'Die Grundschule Sprötze-Trelde ist eine Schule mit **zwei räumlich getrennten Standorten**. Im Schuljahr 2025/2026 besuchten sie **265 Schülerinnen und Schüler**. Bisher steht der Schule – wie den anderen Buchholzer Grundschulen – eine **halbe Stelle Schulsozialarbeit** zur Verfügung. Diese muss sich **auf Sprötze und Trelde verteilen**.',
+                    'Die Verwaltung erkennt die zusätzlichen Belastungen durch die zwei Standorte an. Gleichzeitig vertritt sie die Auffassung, dass zusätzliche Schulsozialarbeit nicht nur für eine einzelne Schule, sondern im Zusammenhang mit allen Buchholzer Grundschulen betrachtet werden sollte.',
+                ],
+            },
+            {
+                title: 'Was der Schulausschuss empfohlen hat',
+                paragraphs: [
+                    'Der Ausschuss sprach sich dafür aus, für Sprötze-Trelde **eine zusätzliche halbe Stelle Schulsozialarbeit** einzurichten und die dafür notwendigen Haushaltsmittel bereitzustellen. Die Verwaltung beziffert die Kosten einer zusätzlichen halben Stelle Schulsozialarbeit auf rund **47.500 Euro pro Jahr**.',
+                    'Eine zusätzliche halbe Stelle für Verwaltungsaufgaben wurde dagegen nicht mehr in die Empfehlung aufgenommen. Die Stadt setzt ab dem **15. September 2026 eine vorhandene Verwaltungskraft mit 25 Wochenstunden am Standort Trelde** ein. Damit soll die Schulleitung im Alltag entlastet werden.',
+                ],
+            },
+            {
+                title: 'Wie es weitergeht',
+                paragraphs: [
+                    'Im weiteren Verfahren stellte die Fraktion WIR für Buchholz einen Änderungsantrag. Danach soll zunächst der **Bedarf an Schulsozialarbeit an allen Buchholzer Grundschulen** ermittelt werden. Dabei sollen unter anderem Schülerzahlen, mögliche soziale Belastungen und mehrere Schulstandorte wie bei Sprötze-Trelde berücksichtigt werden.',
+                ],
+            },
+            {
+                title: 'Weitere Informationen',
+                paragraphs: [
+                    {
+                        type: 'link',
+                        text: 'Sitzung des Ausschusses für Schule und Sport am 10.09.2026',
+                        href: 'https://www.buchholz.de/allris/to010?SILFDNR=1000968&TOLFDNR=1019086',
+                        indent: true,
+                    },
+                    {
+                        type: 'link',
+                        text: 'Vorlage zur Sicherung und Stärkung der Schulstandorte Sprötze und Trelde',
+                        href: 'https://www.buchholz.de/allris/vo020?VOLFDNR=1013178',
                         indent: true,
                     },
                 ],
@@ -617,6 +718,7 @@ export const news: NewsModel[] = [
             {
                 title: 'Weiterführende Informationen',
                 paragraphs: [
+                    'Weitere Informationen zur Hausmüllanalyse und zu ihrem Ablauf finden Sie bei folgenden Quellen:',
                     {
                         type: 'link',
                         text: 'Sitzung des Stadtentwicklungsausschusses vom 15.04.2026',
@@ -760,6 +862,10 @@ export const news: NewsModel[] = [
             'Auf der **B75 am Trelder Berg** kommt es **vom 7. bis 17. Oktober 2026** zu Verkehrsbehinderungen. Auf Höhe der neuen Elsa-Neumann-Straße wird die Bundesstraße halbseitig gesperrt.',
             'Eine Baustellenampel regelt den Verkehr. Auch der Geh- und Radweg ist eingeschränkt – besonders im Berufsverkehr muss mit **längeren Wartezeiten** gerechnet werden.',
         ],
+        summaryImage: {
+            src: '/images/news/sproetzer-bruecke.jpeg',
+            alt: 'Sprötzer Brücke am Ortsausgang Richtung Holm-Seppensen',
+        },
         introduction: [
             'Im Bereich des neuen Gewerbegebiets **Trelder Berg Nord** steht die nächste Verkehrsbehinderung an: **Von Mittwoch, 7. Oktober, bis Samstag, 17. Oktober 2026**, ist die **B75 auf Höhe der neuen Elsa-Neumann-Straße** nur einspurig befahrbar.',
             'Die Arbeiten stehen im Bereich der neuen Zufahrt zum Gewerbegebiet. Dort entsteht die dauerhafte Anbindung des rund 12,9 Hektar großen Gewerbegebiets an die B75.',

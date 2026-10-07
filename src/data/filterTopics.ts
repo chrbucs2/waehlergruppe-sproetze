@@ -30,6 +30,11 @@ export const filterTopics = [
         description: 'Hilfsangebote, Beteiligung und gesellschaftliche Projekte in Sprötze.',
     },
     {
+        id: 'kita-und-schule',
+        label: 'KiTa & Schule',
+        description: 'Kindertagesstätten, Schulstandorte und Bildungsangebote mit Bedeutung für Sprötze.',
+    },
+    {
         id: 'vereine',
         label: 'Vereine',
         description: 'Sportvereine, Ehrenamt und gemeinschaftliche Aktivitäten in Sprötze.',
