@@ -13,12 +13,21 @@ export const buttonBaseStyles = css`
 `;
 
 export const buttonStandardStyles = css`
+    ${buttonBaseStyles}
     border: 0;
     padding: 14px 18px;
     font-weight: 700;
 `;
 
-export const buttonFilterStyles = css`
+export const filterButtonStyles = css`
+    ${buttonBaseStyles}
+    border: 1px solid var(--border);
+    padding: 10px 14px;
+    font-weight: 600;
+`;
+
+export const moreButtonStyles = css`
+    ${buttonBaseStyles}
     border: 1px solid var(--border);
     padding: 10px 14px;
     font-weight: 600;
