@@ -91,7 +91,17 @@ export function HomePage({ onShowImpressum, onShowDatenschutz }: HomePageProps) 
     };
 
     const handleTeamMemberSelect = (memberName: string) => {
-        setActiveTeamMemberName((current) => (current === memberName ? null : memberName));
+        setActiveTeamMemberName((current) => {
+            const nextMemberName = current === memberName ? null : memberName;
+
+            if (nextMemberName && !window.matchMedia('(max-width: 900px)').matches) {
+                requestAnimationFrame(() => {
+                    teamSectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                });
+            }
+
+            return nextMemberName;
+        });
     };
 
     const handleElectedMemberJump = (memberName: string) => {
