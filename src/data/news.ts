@@ -228,7 +228,7 @@ export const news: NewsModel[] = [
         id: 'grundschule-sproetze-trelde-ausbau',
         slug: 'grundschule-sproetze-trelde-neubau-erweiterung',
         title: 'Grundschule Sprötze-Trelde: Ausbau an beiden Standorten geplant',
-        publishedAt: '2026-05-26',
+        publishedAt: '2026-05-28',
         topicIds: ['kita-und-schule', 'ortsmitte', 'infrastruktur'],
         summary: [
             'Die Grundschule Sprötze-Trelde soll **an beiden Standorten weiterentwickelt werden**. In Sprötze ist ein Teilersatzneubau geplant, in Trelde soll die bestehende Schule erweitert werden.',
