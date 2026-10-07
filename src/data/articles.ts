@@ -58,7 +58,7 @@ export const articles: ArticleModel[] = [
                     'Das neue Wohngebiet wird für den Autoverkehr im Wesentlichen über die **Bremer Straße** erschlossen. Genau dort liegt auch die Kreuzung mit dem **Sprötzer Weg** – einer wichtigen Verbindung zwischen Sprötze, dem Schulzentrum am Kattenberge und Buchholz.',
                     'Die Stadt nennt die bereits belasteten Knoten **Bremer Straße / B 75, Bremer Straße / Sprötzer Weg und Bremer Straße / Mühlentunnel** ausdrücklich als Bereiche, bei denen **zusätzliche Verkehrsbelastungen untersucht** werden müssen.',
                     'Gleichzeitig sieht die Planung neue **Fuß- und Radwege** in mehrere Richtungen vor. Geplant sind unter anderem Verbindungen zum Schulzentrum, nach Steinbeck, zum Gewerbegebiet Trelder Berg und über Brumhagen in Richtung Sprötze.',
-                    'Auch eine **Anbindung an den BuchholzBus** gehört zu den Planungszielen. Eine endgültige Linienführung und die daraus entstehenden Betriebskosten standen in den bisher vorliegenden Unterlagen noch nicht fest.',
+                    'Auch eine **Anbindung an den Buchholz Bus** gehört zu den Planungszielen. Eine endgültige Linienführung und die daraus entstehenden Betriebskosten standen in den bisher vorliegenden Unterlagen noch nicht fest.',
                 ],
             },
             {

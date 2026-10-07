@@ -144,41 +144,12 @@ export const scheduleItems: ScheduleModel[] = [
         linkLabel: 'Zur öffentlichen Sitzungsseite',
     },
     {
-        id: 'ausschuss-bauen-2026-09-24',
-        slug: 'ausschuss-bauen-2026-09-24',
-        category: 'Ausschuss für Bauen, Ordnung, Feuerschutz und Kommunalbetrieb',
-        date: '2026-09-24',
-        time: '18:30 Uhr',
-        title: 'Klimaanpassungskonzept für Buchholz',
-        location: 'Kantine Rathaus Buchholz',
-        summary: [
-            'Der Ausschuss befasst sich mit dem neuen **Klimaanpassungskonzept für Buchholz**. Darin werden Risiken durch Hitze, Starkregen und Trockenheit untersucht und Maßnahmen für die kommenden Jahre vorgeschlagen.',
-        ],
-        introduction: [
-            'Für Sprötze ist vor allem **TOP 7** interessant. Das Klimaanpassungskonzept gilt für das gesamte Stadtgebiet, enthält aber mehrere konkrete Bezüge zu Sprötze – unter anderem zur **Grundschule Sprötze-Trelde, zum Sprötzer Bach, zu landwirtschaftlichen Flächen rund um Sprötze und Trelde sowie zum Bevölkerungsschutz**.',
-            'Ob diese Sprötzer Punkte in der Sitzung einzeln angesprochen werden, geht aus der Tagesordnung nicht hervor. Im Mittelpunkt steht zunächst die Beratung über das Gesamtkonzept.',
-        ],
-        sections: [
-            {
-                title: 'Tagesordnungspunkte',
-                paragraphs: [
-                    '**Klimaanpassungskonzept**: Die Klimaanpassungsmanagerin der Stadt und der beauftragte Dienstleister energielenker stellen das neue Konzept vor. Der Ausschuss soll darüber beraten, ob der Rat dem Konzept zustimmen soll. Außerdem möchte die Stadt eine Folgeförderung für die weitere Umsetzung beantragen.',
-                    '**Bezüge zu Sprötze**: Im Konzept wird festgehalten, dass Klimaanpassung beim Neu- und Anbau der **Grundschule Sprötze-Trelde** bereits berücksichtigt wird. Beim **Sprötzer Bach** werden Defizite beim ökologischen Zustand genannt. Rund um **Sprötze und Trelde** weisen landwirtschaftliche Flächen teilweise eine hohe bis sehr hohe Gefährdung durch Winderosion auf.',
-                    '**Feuerwehr und Bevölkerungsschutz**: Das Konzept betrachtet auch die Folgen von Extremwetter für den Bevölkerungsschutz. Ein mobiles Notstromaggregat der Feuerwehr wird am **Standort Sprötze** vorgehalten.',
-                    '**Weitere Tagesordnung**: Neben Berichten des Vorsitzenden und des Bürgermeisters sind Einwohnerfragestunden sowie Anfragen der Ausschussmitglieder vorgesehen. Weitere konkrete Sachthemen stehen im öffentlichen Teil derzeit nicht auf der Tagesordnung.',
-                ],
-            },
-        ],
-        link: 'https://www.buchholz.de/allris/to010?SILFDNR=1001239',
-        linkLabel: 'Zur öffentlichen Sitzungsseite',
-    },
-    {
         id: 'ausschuss-finanzen-2026-09-30',
         slug: 'ausschuss-finanzen-2026-09-30',
         category: 'Ausschuss Wirtschaft, Finanzen, Verwaltung und Digitalisierung',
         date: '2026-09-30',
         time: '18:30 Uhr',
-        title: 'Erneuerbare Energien, BuchholzBus und Weihnachtsmarkt',
+        title: 'Erneuerbare Energien, Buchholz Bus und Weihnachtsmarkt',
         location: 'Torbogenzimmer, Rathaus Buchholz',
         summary: [
             'Für Sprötzer interessant waren vor allem die Beratungen zu **erneuerbaren Energien**. Hier änderte der Ausschuss die ursprüngliche Vorlage deutlich: Ein regionaler **Bürgerstrom-Tarif** und zusätzliche Vorgaben zur direkten finanziellen Beteiligung wurden **nicht** in die Beschlussempfehlung **übernommen**.',
@@ -204,10 +175,10 @@ export const scheduleItems: ScheduleModel[] = [
                 ],
             },
             {
-                title: 'BuchholzBus und Beteiligung des Rates',
+                title: 'Buchholz Bus und Beteiligung des Rates',
                 paragraphs: [
-                    'Beim **BuchholzBus** ging es nicht um eine neue Linie oder eine konkrete Änderung für Sprötze, sondern darum, **wer künftig bei grundlegenden Entscheidungen beteiligt wird**.',
-                    'Ein **Antrag** sieht vor, dass der **Rat künftig frühzeitig eingebunden** wird, wenn es beispielsweise um **Betriebszeiten, Angebotskürzungen, Linienführungen oder die Grundfinanzierung** des BuchholzBus geht. Hintergrund der Debatte sind unter anderem die bereits erfolgten Kürzungen der Betriebszeiten des BuchholzBus.',
+                    'Beim **Buchholz Bus** ging es nicht um eine neue Linie oder eine konkrete Änderung für Sprötze, sondern darum, **wer künftig bei grundlegenden Entscheidungen beteiligt wird**.',
+                    'Ein **Antrag** sieht vor, dass der **Rat künftig frühzeitig eingebunden** wird, wenn es beispielsweise um **Betriebszeiten, Angebotskürzungen, Linienführungen oder die Grundfinanzierung** des Buchholz Bus geht. Hintergrund der Debatte sind unter anderem die bereits erfolgten Kürzungen der Betriebszeiten des BuchholzBus.',
                 ],
             },
             {
@@ -234,14 +205,57 @@ export const scheduleItems: ScheduleModel[] = [
         category: 'Rat der Stadt',
         date: '2026-10-05',
         time: '19:00 Uhr',
-        title: 'Letzte reguläre Ratssitzung der bisherigen Wahlperiode',
+        title: 'Lerchenpark beschlossen, Brody-Brücke und Rechenzentrum beraten',
         location: 'Saal EMPORE',
         summary: [
-            'Der Rat der Stadt kommt zu seiner letzten regulären Sitzung der bisherigen Wahlperiode zusammen.',
+            'Für Sprötze besonders interessant war die geplante **Brody-Brücke an der Kirchenallee**. In der zuletzt vorliegenden geänderten Beschlussempfehlung war diese Benennung allerdings nicht mehr enthalten. Bestätigt ist außerdem der Beschluss zum **Lerchenpark auf dem ehemaligen Rütgersgelände**.',
         ],
         introduction: [
-            'Die Sitzung gehört zu den letzten Beratungen des bisherigen Stadtrates vor Beginn der neuen kommunalen Wahlperiode.',
+            'In der letzten regulären Ratssitzung der bisherigen Wahlperiode wurde der **Rahmenplan für den Lerchenpark** mit **24 Ja-Stimmen, 13 Nein-Stimmen und einer Enthaltung** beschlossen. Damit ist noch kein Baurecht geschaffen, aber die Grundlage für die weitere Planung gelegt.',
+            'Außerdem ging es unter anderem um die Benennung nach den ukrainischen Partnerstädten, ein mögliches **Rechenzentrum im Bahnhofsumfeld Nord**, das Klimaanpassungskonzept und die künftige Beteiligung des Rates bei wichtigen Entscheidungen zum **Buchholz Bus**.',
         ],
+        sections: [
+            {
+                title: 'Brody-Brücke in Sprötze',
+                paragraphs: [
+                    'Der ursprüngliche CDU-Antrag sah vor, die **Bahnbrücke an der Kirchenallee (K72) in Sprötze als „Brody-Brücke“** zu benennen. Gleichzeitig sollte die Bahnbrücke an der Bendestorfer Straße den Namen „Berdytschiw-Brücke“ erhalten.',
+                    'In der zuletzt vorliegenden **geänderten Beschlussempfehlung** des zuständigen Ausschusses ist die Sprötzer Brody-Brücke jedoch nicht mehr enthalten. Stattdessen soll ein zukünftiger Platz an der Nordseite des Buchholzer Bahnhofs im Bereich ZOB/Südtangente nach der Partnerstadt **Berdytschiw** benannt werden.',
+                    'Ein abschließendes Abstimmungsergebnis des Rates zu diesem Punkt ist im aktuell vorliegenden Sitzungs-Ausdruck noch nicht dokumentiert.'
+                ],
+            },
+            {
+                title: 'Lerchenpark auf dem ehemaligen Rütgersgelände',
+                paragraphs: [
+                    'Der Rat hat den **Rahmenplan für den Lerchenpark** beschlossen. Das Abstimmungsergebnis lautete **24 Ja-Stimmen, 13 Nein-Stimmen und eine Enthaltung**.',
+                    'Langfristig sind auf dem ehemaligen Rütgersgelände **bis zu rund 1.200 Wohnungen** denkbar. Nach Angaben der Stadt lässt die derzeitige Verkehrssituation zunächst allerdings nur einen ersten Entwicklungsschritt mit etwa **600 Wohnungen** zu. Für eine darüber hinausgehende Entwicklung wäre eine zusätzliche Verkehrsentlastung erforderlich.',
+                    'Der Beschluss schafft noch **kein Baurecht**. Vor den nächsten Planungsschritten müssen insbesondere weitere Voraussetzungen zur Sanierung der belasteten Flächen erfüllt und von der Bodenschutzbehörde bestätigt werden.'
+                ],
+            },
+            {
+                title: 'Rechenzentrum im Bahnhofsumfeld Nord',
+                paragraphs: [
+                    'Weiter beraten wurde über ein mögliches **Rechenzentrum im Bahnhofsumfeld Nord**. Die Planung soll unter anderem davon abhängen, ob die entstehende Abwärme für ein Wärmenetz genutzt werden kann. Dazu soll eine Machbarkeitsstudie erstellt werden.',
+                    'Die Beschlussempfehlung wurde vor der Ratssitzung nochmals ergänzt: Es soll nachgewiesen werden, dass das Rechenzentrum nicht die Stromnetzkapazitäten beeinträchtigt, die für Unternehmen und Wohnbebauung benötigt werden. Auch die Nutzung der Wärme im Sommer soll untersucht werden.',
+                    'Zusätzlich wurde vorgeschlagen, eine **regelmäßige Eigenstromerzeugung mit fossilen Brennstoffen auszuschließen**.'
+                ],
+            },
+            {
+                title: 'Buchholz Bus',
+                paragraphs: [
+                    'Der Rat befasste sich erneut mit der politischen Kontrolle des **Buchholz Bus**. Hintergrund sind unter anderem die im vergangenen Jahr vorgenommenen Kürzungen der Betriebszeiten.',
+                    'Bei wesentlichen Entscheidungen zu **Betriebszeiten, Angebotskürzungen oder -ausweitungen, Linienführungen und der Grundfinanzierung** soll der Rat künftig frühzeitig beteiligt werden. Vorgesehen ist, dass entsprechende Maßnahmen nicht umgesetzt werden, bevor eine politische Beratung möglich war.'
+                ],
+            },
+            {
+                title: 'Klimaanpassungskonzept',
+                paragraphs: [
+                    'Auf der Tagesordnung stand außerdem das neue **Klimaanpassungskonzept der Stadt Buchholz**. Es soll die Stadt besser auf Folgen wie Hitze, Trockenheit und Starkregen vorbereiten.',
+                    'Die Verwaltung möchte auf Grundlage des Konzepts weitere Fördermittel beantragen. Die Maßnahmen betreffen grundsätzlich das gesamte Stadtgebiet und damit auch die Ortschaften wie Sprötze.'
+                ],
+            },
+        ],
+        link: 'https://www.buchholz.de/allris/to010?SILFDNR=1000973&refresh=false',
+        linkLabel: 'Zur öffentlichen Sitzungsseite',
     },
     {
         id: 'rat-konstituierend-2026-11-09',
