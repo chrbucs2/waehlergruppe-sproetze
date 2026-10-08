@@ -208,7 +208,7 @@ export const scheduleItems: ScheduleModel[] = [
         title: 'Erneuerbare Energien, Buchholz Bus und Stadtentwicklung',
         location: 'Saal EMPORE',
         summary: [
-            'Der Rat beriet zum Ende der Wahlperiode unter anderem über eine stärkere politische Beteiligung bei Entscheidungen zum **Buchholz Bus**, die regionale Wertschöpfung bei **Erneuerbare-Energien-Projekten** sowie das geplante **Rechenzentrum im Bahnhofsumfeld Nord**.',
+            'Der Rat beriet zum Ende der Wahlperiode unter anderem über eine stärkere politische Beteiligung bei Entscheidungen zum **Buchholz Bus**, die regionale Wertschöpfung bei **Erneuerbare-Energien-Projekten** und weitere Stadtentwicklungsthemen, wie dem Lerchenpark oder das neue Rechenzentrum.',
         ],
         introduction: [
             'In der letzten regulären Ratssitzung der bisherigen Wahlperiode wurden noch mehrere größere Stadtentwicklungsthemen beraten. Im Mittelpunkt stand der **Lerchenpark** auf dem ehemaligen Rütgersgelände südlich des Bahnhofs.',
