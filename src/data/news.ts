@@ -991,4 +991,87 @@ export const news: NewsModel[] = [
             },
         ],
     },
+    {
+        id: 'mini-kreisel-sproetze-instandsetzung-2026',
+        slug: 'mini-kreisel-sproetze-instandsetzung-2026',
+        title: 'Mini-Kreisel in Sprötze wird vier Wochen gesperrt',
+        publishedAt: '2026-10-08',
+        topicIds: ['verkehr', 'leben-im-dorf'],
+        summary: [
+            'Der **Mini-Kreisel in der Sprötzer Ortsmitte** wird vom **12. Oktober bis 11. November 2026 vollständig gesperrt** und instandgesetzt. Betroffen ist die Kreuzung Sprötzer Bahnhofstraße, Kirchenallee und Niedersachsenstraße.',
+            'Die Arbeiten führen auch zu **Änderungen im Busverkehr**. Die Haltestellen **„Sprötze Ortsmitte“ und „Bahnhof Sprötze“ entfallen vorübergehend**.',
+        ],
+        introduction: [
+            'Vier Wochen lang geht es in der Sprötzer Ortsmitte nicht mehr rund: Der **Mini-Kreisverkehr** an der Sprötzer Bahnhofstraße, Kirchenallee und Niedersachsenstraße wird **vom 12. Oktober bis 11. November instandgesetzt** und dafür **vollständig gesperrt**.',
+            'Der 2020 eingerichtete Kreisel sorgt immer wieder für Unsicherheit, weil sein **Innenkreis lediglich durch eine Fahrbahnmarkierung sichtbar** gemacht wird. Diese ist inzwischen wieder **stark abgenutzt** und kaum noch zu erkennen.',
+        ],
+        sections: [
+            {
+                title: 'Vier Wochen Vollsperrung',
+                paragraphs: [
+                    'Während der Bauzeit kann der Kreuzungsbereich nicht durchfahren werden. Eine großräumige **Umleitung führt über die B3, B75, Bremer Straße und den Sprötzer Weg**. Für Autofahrerinnen und Autofahrer aus Sprötze bedeutet das insbesondere bei Fahrten in Richtung Buchholz und innerhalb des Ortes zum Teil deutlich längere Wege.',
+                ],
+            },
+            {
+                title: 'Busse halten an der Grundschule',
+                paragraphs: [
+                    'Auch der Busverkehr ist während der gesamten Bauzeit betroffen. Die Haltestellen **„Sprötze Ortsmitte“** in der Sprötzer Bahnhofstraße und **„Bahnhof Sprötze“** können nicht angefahren werden.',
+                    'Als **Ersatz** dient die Haltestelle an der **Grundschule Sprötze in der Lehrer-Schwägermann-Straße**. Vom Bahnhof und aus der Ortsmitte ist sie zu Fuß über den Tunnel am Bahnhof erreichbar. Der zusätzliche Fußweg soll bei der Fahrplanung berücksichtigt werden.',
+                ],
+            },
+            {
+                title: 'Sonderregelung für Schulbusse',
+                paragraphs: [
+                    'Nach den Herbstferien gilt für die Schulbusse eine besondere Regelung: **Morgens dürfen sie den Bereich des Kreisels passieren**. Auf dem **Rückweg** werden sie dagegen **über die Schmiedegasse umgeleitet**.',
+                    'Damit das funktioniert, wird die **Schmiedegasse vom 26. Oktober bis 11. November zur Einbahnstraße**.',
+                ],
+            },
+            {
+                title: 'Seit 2020 ein Mini-Kreisverkehr',
+                paragraphs: [
+                    'Der Kreisverkehr wurde im Sommer 2020 eingerichtet. Die Stadt wollte damit die Kreuzung Sprötzer Bahnhofstraße, Kirchenallee und Niedersachsenstraße neu ordnen. Im Zuge des damaligen Umbaus wurden unter anderem auch Fußgängerüberwege, abgesenkte Bordsteine, Beleuchtung und Arbeiten an der Fahrbahn vorgesehen.',
+                    'Für den damaligen Umbau investierte die Stadt Buchholz rund **40.000 Euro**.',
+                ],
+            },
+            {
+                title: 'Kreisel sorgt immer wieder für Unsicherheit',
+                paragraphs: [
+                    'Der Mini-Kreisverkehr wurde 2020 an der zuvor normalen Kreuzung eingerichtet. Anders als bei einem klassischen Kreisverkehr gibt es in der Mitte keine baulich deutlich abgesetzte Verkehrsinsel. Der Innenkreis wird vor allem durch eine Markierung auf der Fahrbahn erkennbar.',
+                    'Ist diese Markierung stark abgenutzt, ist die Verkehrsführung für Ortsunkundige und teilweise auch für andere Verkehrsteilnehmer schwerer zu erkennen. So entsteht immer wieder Unsicherheit darüber, ob man sich an einer normalen Kreuzung mit Rechts-vor-Links-Regelung oder an einem Kreisverkehr befindet.',
+                    'Das Problem ist nicht neu: Bereits 2022 wurde berichtet, dass die Markierung des Kreisverkehrs so stark beschädigt war, dass der Kreisel kaum noch zu erkennen war. Die Markierung wurde daraufhin erneuert. Inzwischen ist sie erneut weitgehend verblasst.',
+                ],
+            },
+            {
+                title: 'Weiterführende Informationen',
+                paragraphs: [
+                    'Weitere Informationen zur aktuellen Sperrung und zur Entstehung des Mini-Kreisverkehrs finden Sie hier:',
+                    {
+                        type: 'link',
+                        text: 'Stadt Buchholz: Mini-Kreisel in Sprötze wird ab 12. Oktober gesperrt',
+                        href: 'https://www.buchholz.de/portal/meldungen/mini-kreisel-in-sproetze-wird-ab-12-oktober-gesperrt-903006878-20101.html?rubrik=903000076',
+                    },
+                    {
+                        type: 'link',
+                        text: 'Buchholz Aktuell: Vier Wochen Sperrung – Mini-Kreisel wird erneuert',
+                        href: 'https://buchholz-aktuell.de/buchholz/vier-wochen-sperrung-mini-kreisel-in-sproetze-wird-erneuert-20956/',
+                    },
+                    {
+                        type: 'link',
+                        text: 'Wochenblatt: Kreisel wird eingerichtet - In Sprötze geht es rund',
+                        href: 'https://www.kreiszeitung-wochenblatt.de/buchholz/c-panorama/kreisel-wird-eingerichtet-in-sproetze-geht-es-rund_a172148',
+                    },
+                    {
+                        type: 'link',
+                        text: 'Wochenblatt 2022: Buchholz und Kreisverkehre - das passt nicht zusammen',
+                        href: 'https://www.kreiszeitung-wochenblatt.de/buchholz/c-politik/buchholz-und-kreisverkehre-das-passt-nicht-zusammen_a260286',
+                    },
+                    {
+                        type: 'link',
+                        text: 'Wochenblatt 2020: Kreisel wird eingerichtet - In Sprötze geht es rund',
+                        href: 'https://www.kreiszeitung-wochenblatt.de/buchholz/c-panorama/kreisel-wird-eingerichtet-in-sproetze-geht-es-rund_a172148',
+                    },
+                ],
+            },
+        ],
+    }
 ];
