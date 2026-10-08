@@ -25,6 +25,10 @@ export const news: NewsModel[] = [
         summary: [
             'Die Stadtverwaltung spricht sich dafür aus, die Grundschule Sprötze-Trelde **weiterhin an beiden Standorten** zu betreiben. Eine **zusätzliche Verwaltungskraft in Trelde** soll die Schulleitung entlasten.',
         ],
+        summaryImage: {
+            src: '/images/news/grundschule-sproetze-trelde.jpeg',
+            alt: 'Grundschule Sprötze-Trelde',
+        },
         introduction: [
             'Wie soll es mit der Grundschule Sprötze-Trelde weitergehen? Auf eine Anfrage der Fraktion Bündnis 90/Die Grünen hat die Stadtverwaltung zwei Möglichkeiten gegenübergestellt: den Erhalt der Standorte Sprötze und Trelde und eine Zusammenlegung an einem Standort.',
             'Das Ergebnis der **Verwaltung** ist eindeutig: Sie **spricht sich** weiterhin **für das Zwei-Standort-Modell aus**. Eine Zusammenlegung würde zwar die Schulorganisation vereinfachen, hätte aber auch Nachteile für die Kinder und die Dorfgemeinschaft in Trelde.',
@@ -96,6 +100,10 @@ export const news: NewsModel[] = [
             'Die **Tafel Buchholz** hat ihren neuen Standort in der **Niedersachsenstraße 18 in Sprötze** offiziell eingeweiht. Bereits seit Ende 2025 findet die Lebensmittelausgabe dort statt.',
             'Der Umzug schafft mehr Platz für Lebensmittel, Kühlung und die Ausgabe. Inzwischen versorgt die Tafel nach eigenen Angaben **mehr als 230 Familien**.',
         ],
+        summaryImage: {
+            src: '/images/news/tafel-sproetze.jpeg',
+            alt: 'Tafel in der Niedersachsenstraße 18',
+        },
         introduction: [
             'Die Tafel Buchholz ist seit Ende 2025 in der **Niedersachsenstraße 18 in Sprötze** zu Hause. Am 13. April wurde der neue Standort nun auch offiziell mit einer kleinen Feierstunde eingeweiht.',
             'Der frühere Standort am Reiherstieg war für die Arbeit der Tafel zu klein geworden. In Sprötze stehen nun größere Räume für die Lagerung, Kühlung und Ausgabe der Lebensmittel zur Verfügung.',
@@ -163,8 +171,12 @@ export const news: NewsModel[] = [
             '**Neue Kita am Sprötzer Weg geplant.** Der Bebauungsplan „**Sprötzer Weg / An den Tennisplätzen**“ soll geändert werden, um auf der bislang für Einzelhandel vorgesehenen Fläche unter anderem eine Kindertagesstätte zu ermöglichen.',
             'Die Planung geht jedoch über die Kita hinaus und erlaubt künftig auch weitere soziale, kulturelle und sportliche Angebote. Zudem geht es um Verkehr, Erschließung, Entwässerung, Lärmschutz und die Begrünung des rund 0,9 Hektar großen Areals.',
         ],
+        summaryImage: {
+            src: '/images/articles/bebauungsgebiet-sproetzer-weg.jpeg',
+            alt: 'Potentielles Bebauungsgebiet am Sprötzer Weg',
+        },
         /*summaryImage: {
-            src: '/images/articles/planzeichnung-sproetzer-weg.png',
+            src: '/images/articles/bebauungsgebiet-sproetzer-weg.jpeg',
             alt: 'Planzeichnung Sprötzer Weg',
             zoom: 1.4,
             offset: {x: -3, y: 0}
@@ -234,6 +246,10 @@ export const news: NewsModel[] = [
             'Die Grundschule Sprötze-Trelde soll **an beiden Standorten weiterentwickelt werden**. In Sprötze ist ein Teilersatzneubau geplant, in Trelde soll die bestehende Schule erweitert werden.',
             'In Sprötze bildet **Variante 1 mit einem zweigeschossigen Neubau auf dem Pausenhof** die Grundlage der weiteren Planung. Die Tennisplätze und der Sportplatz können dabei bestehen bleiben. In Trelde soll der **einzügige Schulstandort erhalten** und an das benötigte Raumprogramm angepasst werden.',
         ],
+        summaryImage: {
+            src: '/images/news/grundschule-sproetze-trelde.jpeg',
+            alt: 'Grundschule Sprötze-Trelde',
+        },
         /*summaryImage: {
             src: '/images/articles/grundschule-sproetze-variante-1.png',
             alt: 'Aktuelle Planungsgrundlage, Variante 1',
@@ -269,6 +285,10 @@ export const news: NewsModel[] = [
         summary: [
             'Der **TSV Sprötze feiert 2026 sein 100-jähriges Bestehen**. Einer der Höhepunkte war der große Familientag am 22. August auf dem Vereinsgelände. Nach dem erfolgreichen Fest stehen im November noch der **offizielle 100. Geburtstag** und die große Jubiläumsparty an.',
         ],
+        summaryImage: {
+            src: '/images/news/sportverein-sproetze.jpeg',
+            alt: 'Sportverein Sprötze',
+        },
         introduction: [
             'Seit **100 Jahren** gehört der TSV zum Leben in Sprötze. Am 4. November 1926 wurde der Verein mit zunächst 22 Mitgliedern gegründet. Heute sind mehr als **950 Menschen** im TSV aktiv.',
             'Das Jubiläum wird über das ganze Jahr gefeiert. Nach Fitness- und Yogatag, Frühschoppen und dem großen Familientag im August folgen im November die abschließenden Veranstaltungen.',
@@ -1001,6 +1021,10 @@ export const news: NewsModel[] = [
             'Der **Mini-Kreisel in der Sprötzer Ortsmitte** wird vom **12. Oktober bis 11. November 2026 vollständig gesperrt** und instandgesetzt. Betroffen ist die Kreuzung Sprötzer Bahnhofstraße, Kirchenallee und Niedersachsenstraße.',
             'Die Arbeiten führen auch zu **Änderungen im Busverkehr**. Die Haltestellen **„Sprötze Ortsmitte“ und „Bahnhof Sprötze“ entfallen vorübergehend**.',
         ],
+        summaryImage: {
+            src: '/images/news/kreisel-sproetze.jpeg',
+            alt: 'Kreisel Sprötze',
+        },
         introduction: [
             'Vier Wochen lang geht es in der Sprötzer Ortsmitte nicht mehr rund: Der **Mini-Kreisverkehr** an der Sprötzer Bahnhofstraße, Kirchenallee und Niedersachsenstraße wird **vom 12. Oktober bis 11. November instandgesetzt** und dafür **vollständig gesperrt**.',
             'Der 2020 eingerichtete Kreisel sorgt immer wieder für Unsicherheit, weil sein **Innenkreis lediglich durch eine Fahrbahnmarkierung sichtbar** gemacht wird. Diese ist inzwischen wieder **stark abgenutzt** und kaum noch zu erkennen.',
