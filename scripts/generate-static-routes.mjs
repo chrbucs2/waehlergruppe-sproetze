@@ -155,6 +155,7 @@ async function main() {
         },
         {
             path: '/sproetze-aktuell',
+            canonicalPath: '/sproetze-aktuell/',
             title: 'Sprötze aktuell',
             description: 'Aktuelle Nachrichten und Meldungen der Wählergruppe Sprötze.',
         },
@@ -167,6 +168,7 @@ async function main() {
             })),
         {
             path: '/termine',
+            canonicalPath: '/termine/',
             title: 'Termine für Sprötze',
             description: 'Sitzungen, Veranstaltungen und Termine der Wählergruppe Sprötze in und rund um Sprötze.',
         },
