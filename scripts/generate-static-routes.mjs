@@ -85,6 +85,10 @@ function parseDataArray(source, exportName) {
     return vm.runInNewContext(`(${section})`);
 }
 
+function hasDetailContent(item) {
+    return Boolean(item?.introduction?.length || item?.sections?.length);
+}
+
 function escapeHtml(value) {
     return value
         .replaceAll('&', '&amp;')
@@ -161,6 +165,7 @@ async function main() {
         },
         ...news
             .filter((item) => !item.hidden)
+            .filter(hasDetailContent)
             .map((item) => ({
                 path: `/sproetze-aktuell/${item.slug}`,
                 canonicalPath: `/sproetze-aktuell/${item.slug}/`,
@@ -181,12 +186,14 @@ async function main() {
                 title: item.title,
                 description: item.summary[0] ?? 'Termin der Wählergruppe Sprötze.',
             })),
-        ...articles.map((article) => ({
-            path: `/artikel/${article.slug}`,
-            canonicalPath: `/artikel/${article.slug}/`,
-            title: article.title,
-            description: article.introduction?.[0] ?? 'Beitrag der Wählergruppe Sprötze.',
-        })),
+        ...articles
+            .filter(hasDetailContent)
+            .map((article) => ({
+                path: `/artikel/${article.slug}`,
+                canonicalPath: `/artikel/${article.slug}/`,
+                title: article.title,
+                description: article.introduction?.[0] ?? 'Beitrag der Wählergruppe Sprötze.',
+            })),
     ];
 
     for (const route of routes) {
