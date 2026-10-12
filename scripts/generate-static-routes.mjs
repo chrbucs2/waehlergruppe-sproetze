@@ -163,6 +163,7 @@ async function main() {
             .filter((item) => !item.hidden)
             .map((item) => ({
                 path: `/sproetze-aktuell/${item.slug}`,
+                canonicalPath: `/sproetze-aktuell/${item.slug}/`,
                 title: item.title,
                 description: item.summary[0] ?? 'Sprötze aktuell.',
             })),
@@ -176,11 +177,13 @@ async function main() {
             .filter((item) => !item.hidden)
             .map((item) => ({
                 path: `/termine/${item.slug}`,
+                canonicalPath: `/termine/${item.slug}/`,
                 title: item.title,
                 description: item.summary[0] ?? 'Termin der Wählergruppe Sprötze.',
             })),
         ...articles.map((article) => ({
             path: `/artikel/${article.slug}`,
+            canonicalPath: `/artikel/${article.slug}/`,
             title: article.title,
             description: article.introduction?.[0] ?? 'Beitrag der Wählergruppe Sprötze.',
         })),
