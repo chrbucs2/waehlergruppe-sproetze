@@ -1103,7 +1103,7 @@ export const news: NewsModel[] = [
         slug: 'kita-kinderzauber-neue-gruppe-2027',
         title: 'Kita Kinderzauber: Neue Gruppe ab Januar 2027 vorgesehen',
         publishedAt: '2026-10-09',
-        topicIds: ['infrastruktur'],
+        topicIds: ['infrastruktur', 'kita-und-schule'],
         summary: [
             'Für die Erweiterung der **Kita Kinderzauber in Sprötze** gibt es einen konkreteren Zeitplan: Laut aktuellen Stellenausschreibungen der Stadt ist eine neue altersübergreifende Gruppe **ab dem 1. Januar 2027 vorgesehen**.',
             'Passend dazu sucht die Stadt derzeit pädagogisches Personal für die Kita. Eine der ausgeschriebenen Stellen ist ausdrücklich für die **neue Gruppe** vorgesehen und soll bereits ab Dezember 2026 besetzt werden.',
@@ -1248,7 +1248,7 @@ export const news: NewsModel[] = [
         slug: 'naturpark-tag-2026-brunsberg',
         title: 'Gemeinsam anpacken für die Heide am Brunsberg',
         publishedAt: '2026-10-15',
-        topicIds: ['natur-freizeit'],
+        topicIds: ['kita-und-schule', 'natur-freizeit'],
         summary: [
             'Beim **Naturpark-Tag am 14. November** lädt die Grundschule Sprötze-Trelde zur gemeinsamen Heidepflege am Brunsberg ein.',
             'Ab **10 Uhr** werden junge Kiefern aus den Heideflächen entfernt. Mitmachen kann jeder – eine Anmeldung ist nicht erforderlich.',
