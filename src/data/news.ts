@@ -1097,5 +1097,203 @@ export const news: NewsModel[] = [
                 ],
             },
         ],
+    },
+    {
+        id: 'lecker-schmecker-sproetze-2026',
+        slug: 'lecker-schmecker-sproetze-2026',
+        title: '„Lecker Schmecker“: Gemeinsam essen in Sprötze',
+        publishedAt: '2026-10-14',
+        topicIds: ['soziales'],
+        summary: [
+            'Im Gemeindehaus der Kreuzkirche gibt es regelmäßig **„Lecker Schmecker“ – ein gemeinsames Mittagessen in Sprötze**. Der nächste Termin ist am **21. Oktober um 12:30 Uhr**.',
+            'Das Angebot ist **kostenfrei**, eine Spende ist möglich. Zur besseren Planung ist eine vorherige Anmeldung erforderlich.',
+        ],
+        introduction: [
+            'Einmal im Monat wird im Gemeindehaus der Kreuzkirche in Sprötze gemeinsam gekocht und gegessen. Die Seniorenbetreuung lädt dabei nicht nur zum Mittagessen, sondern auch zum **Klönen, Kennenlernen und gemeinsamen Beisammensein** ein.',
+            'Der nächste Termin ist am **Mittwoch, 21. Oktober, um 12:30 Uhr**. Diesmal stehen Kassler, Sauerkraut und Kartoffelstampf auf dem Speiseplan.',
+        ],
+        sections: [
+            {
+                title: 'Gemeinsam essen und ins Gespräch kommen',
+                paragraphs: [
+                    'Bei „Lecker Schmecker“ steht nicht nur das Essen im Mittelpunkt. Das regelmäßige Treffen bietet Gelegenheit, andere Menschen aus Sprötze und der Kirchengemeindenachbarschaft kennenzulernen und miteinander ins Gespräch zu kommen.',
+                    'Das Mittagessen wird **kostenfrei** angeboten. Wer möchte, kann die Arbeit mit einer Spende unterstützen.',
+                ],
+            },
+            {
+                title: 'Die nächsten Termine',
+                paragraphs: [
+                    {
+                        type: 'list',
+                        items: [
+                            '**Mittwoch, 21. Oktober, 12:30 Uhr**',
+                            '**Mittwoch, 4. November, 12:30 Uhr**',
+                        ],
+                    },
+                    'Treffpunkt ist das **Gemeindehaus der Kreuzkirche, Kirchenallee 15 in Sprötze**. Eine vorherige Anmeldung ist zur besseren Planung erforderlich.',
+                    {
+                        type: 'link',
+                        text: 'Aktuelle Kontaktdaten und Anmeldung bei der Kirchengemeindenachbarschaft',
+                        href: 'https://www.nachbarschaft-kirche-buchholz.de/dabei-sein/treffpunkte',
+                        indent: true,
+                    },
+                ],
+            },
+            {
+                title: 'Weiterführende Informationen',
+                paragraphs: [
+                    'Weitere Informationen zu „Lecker Schmecker“, den nächsten Terminen und zur Anmeldung finden Sie hier:',
+                    {
+                        type: 'link',
+                        text: 'Kirchengemeindenachbarschaft Buchholz: Treffpunkte und aktuelle Termine',
+                        href: 'https://www.nachbarschaft-kirche-buchholz.de/dabei-sein/treffpunkte',
+                        indent: true,
+                    },
+                    {
+                        type: 'link',
+                        text: 'Wochenblatt: „Lecker Schmecker“ für Senioren im Gemeindehaus',
+                        href: 'https://www.kreiszeitung-wochenblatt.de/buchholz/c-service/lecker-schmecker-fuer-senioren-im-gemeindehaus_a424009',
+                        indent: true,
+                    },
+                ],
+            },
+        ],
+    },
+    {
+        id: 'naturpark-tag-2026-brunsberg',
+        slug: 'naturpark-tag-2026-brunsberg',
+        title: 'Gemeinsam anpacken für die Heide am Brunsberg',
+        publishedAt: '2026-10-15',
+        topicIds: ['natur', 'freizeit'],
+        summary: [
+            'Beim **Naturpark-Tag am 14. November** lädt die Grundschule Sprötze-Trelde zur gemeinsamen Heidepflege am Brunsberg ein.',
+            'Ab **10 Uhr** werden junge Kiefern aus den Heideflächen entfernt. Mitmachen kann jeder – eine Anmeldung ist nicht erforderlich.',
+        ],
+        introduction: [
+            'Am Samstag, **14. November 2026**, heißt es am Brunsberg wieder gemeinsam anpacken: Die Naturpark-Schule **Grundschule Sprötze-Trelde** beteiligt sich am 15. Naturpark-Tag und organisiert eine Pflegeaktion in der Heide.',
+            'Dabei werden vor allem junge Kieferntriebe entfernt, damit die offene Heidelandschaft erhalten bleibt. Die Aktion beginnt um **10 Uhr** und dauert etwa zwei Stunden.',
+        ],
+        sections: [
+            {
+                title: 'Gemeinsam die Heide entkusseln',
+                paragraphs: [
+                    'Bei der Aktion werden junge Kiefern mit der Hand herausgezogen oder mit geeignetem Werkzeug entfernt. Diese Form der Landschaftspflege wird als **Entkusseln** bezeichnet.',
+                    'Ziel ist es, zu verhindern, dass die offenen Heideflächen nach und nach mit Bäumen zuwachsen. Ohne regelmäßige Pflege würde sich die Landschaft langfristig wieder in Richtung Wald entwickeln.',
+                ],
+            },
+            {
+                title: 'Treffpunkt und Ausrüstung',
+                paragraphs: [
+                    'Treffpunkt ist um **10 Uhr am Brunsbergweg vor der Abzweigung zum Kleinen Brunsberg**. Der Arbeitseinsatz dauert ungefähr zwei Stunden.',
+                    'Wer mithelfen möchte, sollte passende Kleidung und festes Schuhwerk mitbringen. Empfohlen werden außerdem:',
+                    {
+                        type: 'list',
+                        items: [
+                            '**Arbeitshandschuhe**',
+                            '**Gummistiefel oder festes Schuhwerk**',
+                            '**Spaten**, wenn vorhanden',
+                            '**Astschere**, wenn vorhanden',
+                        ],
+                    },
+                    'Eine **Anmeldung ist nicht erforderlich**. Die Aktionen des Naturpark-Tags finden auch bei Regen statt.',
+                ],
+            },
+            {
+                title: 'Warum braucht die Heide Pflege?',
+                paragraphs: [
+                    'Die Heidelandschaft am Brunsberg bleibt nicht von allein offen. Junge Kiefern, Birken und andere Gehölze breiten sich auf den Flächen aus und würden die Heide nach und nach verdrängen.',
+                    'Deshalb finden am Brunsberg schon seit Jahren Pflegeaktionen statt. Durch das Entfernen der jungen Gehölze sollen die offenen Heideflächen und der für sie typische Pflanzenmix erhalten bleiben.',
+                ],
+            },
+            {
+                title: '15. Naturpark-Tag',
+                paragraphs: [
+                    'Die Aktion in Sprötze ist Teil des **15. Naturpark-Tags im Naturpark Lüneburger Heide**. Am 14. November finden in der gesamten Naturparkregion zahlreiche ehrenamtliche Pflegeaktionen statt.',
+                    'Neben dem Entkusseln werden andernorts beispielsweise Feuchtwiesen gepflegt, Bäume und Hecken gepflanzt oder Nisthilfen gebaut. Der Naturpark lädt ausdrücklich auch Familien zum Mitmachen ein.',
+                ],
+            },
+            {
+                title: 'Weiterführende Informationen',
+                paragraphs: [
+                    'Weitere Informationen zur Sprötzer Aktion und zur Heidepflege finden Sie hier:',
+                    {
+                        type: 'link',
+                        text: 'Naturpark Lüneburger Heide: Heidepflege der Grundschule Sprötze-Trelde',
+                        href: 'https://naturpark-lueneburger-heide.de/naturpark-tag/uebersicht-aktionen-2026/naturpark-schule-gs-sproetze-trelde',
+                        indent: true,
+                    },
+                    {
+                        type: 'link',
+                        text: 'Buchholz Erleben: Hintergrund zur Heidepflege am Brunsberg',
+                        href: 'https://buchholz-erleben.de/gemeinsam-anpacken-zum-schutz-der-heide-landschaft/',
+                        indent: true,
+                    },
+                ],
+            },
+        ],
+    },
+    {
+        id: 'bahn-sperrung-harburg-hamburg-november-2026',
+        slug: 'bahn-sperrung-harburg-hamburg-november-2026',
+        title: 'Vier Wochen keine Metronom-Züge zwischen Harburg und Hamburg Hbf',
+        publishedAt: '2026-10-19',
+        topicIds: ['verkehr', 'infrastruktur'],
+        summary: [
+            'Bahnreisende aus Sprötze müssen sich auf erhebliche Einschränkungen einstellen: Vom **26. Oktober bis 22. November 2026** fahren die Metronom-Züge nicht zwischen Hamburg-Harburg und Hamburg Hauptbahnhof.',
+            'Wer mit der **RB41 von Sprötze Richtung Hamburg** fährt, muss in Harburg umsteigen. Als Alternative steht vor allem die S-Bahn zur Verfügung – ein Ersatzverkehr mit Bussen ist nicht vorgesehen.',
+        ],
+        introduction: [
+            'Für Pendlerinnen und Pendler aus Sprötze wird die Fahrt nach Hamburg ab Ende Oktober aufwendiger. Wegen einer Streckensperrung enden die Metronom-Verbindungen **RE4/RB41 aus Richtung Buchholz, Tostedt und Bremen bereits in Hamburg-Harburg**.',
+            'Die Einschränkung gilt vom **26. Oktober bis einschließlich 22. November**. Zwischen Harburg und Hamburg Hauptbahnhof müssen Reisende auf die S-Bahn oder das eingeschränkte Fernverkehrsangebot ausweichen.',
+        ],
+        sections: [
+            {
+                title: 'Was bedeutet das für Sprötze?',
+                paragraphs: [
+                    'Sprötze liegt direkt an der Linie **RB41 zwischen Bremen, Tostedt, Buchholz und Hamburg**. Die Züge können während der Sperrung weiterhin bis Hamburg-Harburg fahren, der Abschnitt von dort zum Hauptbahnhof entfällt jedoch.',
+                    'Für Fahrten in die Hamburger Innenstadt ist deshalb ein **zusätzlicher Umstieg in Harburg** erforderlich. Zwischen Harburg und Hauptbahnhof verkehren die S-Bahn-Linien **S3 und S5**.',
+                    'Gerade im Berufsverkehr ist mit einer höheren Auslastung der S-Bahnen und längeren Reisezeiten zu rechnen. Reisende sollten deshalb mehr Zeit einplanen und ihre Verbindung vor Fahrtbeginn noch einmal prüfen.',
+                ],
+            },
+            {
+                title: 'Keine Ersatzbusse',
+                paragraphs: [
+                    'Metronom richtet für den gesperrten Abschnitt **keinen Schienenersatzverkehr mit Bussen** ein. Begründet wird dies mit den weiterhin fahrenden S-Bahnen und einem eingeschränkten Angebot im Fernverkehr.',
+                    'Die Sperrung betrifft neben **RE4/RB41** auch die Metronom-Linien **RE3/RB31** aus Richtung Lüneburg. Damit müssen zahlreiche Fahrgäste aus dem südlichen Hamburger Umland in Harburg auf andere Verbindungen wechseln.',
+                ],
+            },
+            {
+                title: 'Warum wird die Strecke gesperrt?',
+                paragraphs: [
+                    'Grund ist eine **Totalsperrung im Bereich Ericus – Hamburg Hauptbahnhof – Norderelbebrücke**. Metronom spricht deshalb von erheblichen Einschränkungen auf dem Abschnitt zwischen Harburg und Hauptbahnhof.',
+                    'Das Wochenblatt berichtet, dass auch weitere Regional- und Fernzüge betroffen sein können. Für die Metronom-Linien RE4/RB41 und RE3/RB31 sind die Ausfälle bereits offiziell bestätigt und in Baustellenfahrplänen berücksichtigt.',
+                ],
+            },
+            {
+                title: 'Aktuelle Verbindung vorher prüfen',
+                paragraphs: [
+                    'Da sich während größerer Bauarbeiten Fahrpläne und einzelne Verbindungen noch ändern können, sollten Reisende vor der Fahrt die **aktuelle Fahrplanauskunft von Metronom oder HVV** nutzen.',
+                    'Metronom hat für den Zeitraum eigene Baustellenfahrpläne veröffentlicht. Dort sind die tatsächlich fahrenden Verbindungen und Abfahrtszeiten aufgeführt.',
+                ],
+            },
+            {
+                title: 'Weiterführende Informationen',
+                paragraphs: [
+                    'Weitere Informationen zur Sperrung und zu den Fahrplanänderungen finden Sie hier:',
+                    {
+                        type: 'link',
+                        text: 'Metronom: Totalsperrung Hamburg Hbf – Hamburg-Harburg',
+                        href: 'https://www.der-metronom.de/baustellen/re3-rb31-und-re4-rb41-totalsperrung-hamburg-hbf-hamburg-harburg/',
+                        indent: true,
+                    },
+                    {
+                        type: 'link',
+                        text: 'Wochenblatt: Vier Wochen keine Regionalzüge zwischen Harburg und Hamburg Hbf',
+                        href: 'https://www.kreiszeitung-wochenblatt.de/stade/c-service/bahn-chaos-droht-vier-wochen-lang-keine-regionalzuege-zwischen-harburg-und-hamburger-hauptbahnhof_a424546',
+                        indent: true,
+                    }
+                ],
+            },
+        ],
     }
 ];
