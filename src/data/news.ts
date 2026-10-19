@@ -1099,6 +1099,90 @@ export const news: NewsModel[] = [
         ],
     },
     {
+        id: 'kita-kinderzauber-neue-gruppe-2027',
+        slug: 'kita-kinderzauber-neue-gruppe-2027',
+        title: 'Kita Kinderzauber: Neue Gruppe ab Januar 2027 vorgesehen',
+        publishedAt: '2026-10-09',
+        topicIds: ['infrastruktur'],
+        summary: [
+            'Für die Erweiterung der **Kita Kinderzauber in Sprötze** gibt es einen konkreteren Zeitplan: Laut aktuellen Stellenausschreibungen der Stadt ist eine neue altersübergreifende Gruppe **ab dem 1. Januar 2027 vorgesehen**.',
+            'Passend dazu sucht die Stadt derzeit pädagogisches Personal für die Kita. Eine der ausgeschriebenen Stellen ist ausdrücklich für die **neue Gruppe** vorgesehen und soll bereits ab Dezember 2026 besetzt werden.',
+        ],
+        introduction: [
+            'Die geplante Erweiterung der städtischen Kita Kinderzauber am Sanderfeld nimmt weiter Gestalt an. Zwei aktuelle Stellenausschreibungen nennen erstmals einen konkreten Termin: Die zusätzliche **altersübergreifende Gruppe ist ab dem 1. Januar 2027 vorgesehen**.',
+            'Derzeit betreuen zehn pädagogische Fachkräfte insgesamt **65 Kinder in drei Gruppen**. Mit der bereits länger geplanten Erweiterung sollen zusätzliche Betreuungsplätze in Sprötze entstehen.',
+        ],
+        sections: [
+            {
+                title: 'Neue altersübergreifende Gruppe',
+                paragraphs: [
+                    'Aktuell gibt es in der Kita eine Vormittagsgruppe und eine Ganztagsgruppe mit jeweils 25 Kindern sowie eine Krippengruppe mit 15 Kindern.',
+                    'Hinzu kommen soll eine **altersübergreifende Gruppe**. Laut aktueller Stellenausschreibung ist für sie eine Betreuung von **8 bis 15 Uhr** vorgesehen. Zusätzlich gibt es Früh- und Spätdienste.',
+                    'In einem früheren Maßnahmenplan der Stadt war für die Erweiterung ein **Anbau an die bestehende Kita** vorgesehen. Die Planung sah für die zusätzliche Gruppe sechs Krippen- und 13 Elementarplätze vor.',
+                ],
+            },
+            {
+                title: 'Stadt sucht pädagogisches Personal',
+                paragraphs: [
+                    'Aktuell sind zwei Stellen für die Kita Kinderzauber ausgeschrieben. Eine davon ist ausdrücklich der **neuen altersübergreifenden Gruppe** zugeordnet.',
+                    {
+                        type: 'list',
+                        items: [
+                            'eine **Erzieherin oder einen Erzieher für die neue altersübergreifende Gruppe** mit mindestens 35 Wochenstunden',
+                            'eine **Erzieherin, einen Erzieher oder eine sozialpädagogische Assistenzkraft für eine gruppenübergreifende Tätigkeit** mit mindestens 35 Wochenstunden',
+                        ],
+                    },
+                    'Beide Stellen sollen **ab Dezember 2026** besetzt werden. Ob die zweite, gruppenübergreifende Stelle ebenfalls unmittelbar wegen der Erweiterung geschaffen wurde, geht aus der Ausschreibung nicht hervor.',
+                ],
+            },
+            {
+                title: 'Erweiterung ist schon länger geplant',
+                paragraphs: [
+                    'Der Ausbau der Kita Kinderzauber ist bereits seit Längerem Teil der städtischen Planung. Im Maßnahmenplan zum Ausbau der Kinderbetreuung wurde eine zusätzliche altersübergreifende Gruppe durch einen **Anbau an die bestehende Einrichtung** vorgesehen.',
+                    'Dort wurde für den Anbau zunächst ein Investitionsbedarf von **600.000 Euro** angesetzt. Im Vorbericht zum Doppelhaushalt 2025/2026 wird die Position **„Erweiterung Kita Sprötze (inkl. Heizungsanlage)“ mit insgesamt 709.950 Euro** geführt.',
+                    'Bei diesen Beträgen handelt es sich um Planungs- beziehungsweise Haushaltsansätze. Sie sagen nicht aus, wie hoch die tatsächlichen Kosten der Erweiterung am Ende ausfallen.',
+                ],
+            },
+            {
+                title: 'Was ist bereits sicher?',
+                paragraphs: [
+                    'Die aktuellen Stellenausschreibungen zeigen, dass die Stadt den Betrieb der zusätzlichen Gruppe vorbereitet. Sie nennen den **1. Januar 2027 ausdrücklich als vorgesehenen Starttermin** und suchen bereits ab Dezember Personal.',
+                    'Eine aktuelle öffentliche Mitteilung, dass der Anbau vollständig fertiggestellt ist oder alle Voraussetzungen für die Inbetriebnahme bereits abschließend erfüllt sind, liegt uns jedoch nicht vor. Deshalb sollte der **1. Januar 2027 weiterhin als vorgesehener und nicht als endgültig bestätigter Eröffnungstermin** verstanden werden.',
+                ],
+            },
+            {
+                title: 'Weiterführende Informationen',
+                paragraphs: [
+                    'Weitere Informationen zur geplanten Erweiterung und zu den aktuellen Stellenausschreibungen finden Sie hier:',
+                    {
+                        type: 'link',
+                        text: 'Stadt Buchholz: Kita Kinderzauber',
+                        href: 'https://www.kitasindernordheide.de/staedt-kita-kinderzauber',
+                        indent: true,
+                    },
+                    {
+                        type: 'link',
+                        text: 'Stadt Buchholz: Stelle für die neue altersübergreifende Gruppe',
+                        href: 'https://www.kitasindernordheide.de/jobs-in-buchholz-buchholz-sproetze/erzieherin-ab-dezember-2026-unbefristet-altersuebergreifende-gruppe-mindestens-35-std-/7',
+                        indent: true,
+                    },
+                    {
+                        type: 'link',
+                        text: 'Stadt Buchholz: Gruppenübergreifende pädagogische Stelle',
+                        href: 'https://www.kitasindernordheide.de/jobs-in-buchholz-buchholz-sproetze/erzieherin-oder-spa-ab-dezember-2026-unbefristet-gruppenuebergreifend-mindestens-35-std-/74',
+                        indent: true,
+                    },
+                    {
+                        type: 'link',
+                        text: 'Stadt Buchholz: Maßnahmenplan zum Ausbau der Kinderbetreuung',
+                        href: 'https://www.buchholz.de/allris/wicket/resource/org.apache.wicket.Application/doc1247681.pdf',
+                        indent: true,
+                    },
+                ],
+            },
+        ],
+    },
+    {
         id: 'lecker-schmecker-sproetze-2026',
         slug: 'lecker-schmecker-sproetze-2026',
         title: '„Lecker Schmecker“: Gemeinsam essen in Sprötze',
