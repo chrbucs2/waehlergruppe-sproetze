@@ -894,7 +894,7 @@ export const news: NewsModel[] = [
         slug: 'b75-sperrung-trelder-berg-nord-oktober-2026',
         title: 'Halbseitige Sperrung ab 7. Oktober auf der B75 am Trelder Berg',
         publishedAt: '2026-09-26',
-        topicIds: ['verkehr', 'infrastruktur'],
+        topicIds: ['verkehr'],
         summary: [
             'Auf der **B75 am Trelder Berg** kommt es **vom 7. bis 17. Oktober 2026** zu Verkehrsbehinderungen. Auf Höhe der neuen Elsa-Neumann-Straße wird die Bundesstraße halbseitig gesperrt.',
             'Eine Baustellenampel regelt den Verkehr. Auch der Geh- und Radweg ist eingeschränkt – besonders im Berufsverkehr muss mit **längeren Wartezeiten** gerechnet werden.',
