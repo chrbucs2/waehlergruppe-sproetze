@@ -44,4 +44,9 @@ export const filterTopics = [
         label: 'Abfall & Entsorgung',
         description: 'Abfallwirtschaft, Entsorgung und Recycling in Sprötze.',
     },
+    {
+        id: 'natur-freizeit',
+        label: 'Natur & Freizeit',
+        description: 'Natur, Naherholung und Freizeitangebote rund um Sprötze.',
+    },
 ];

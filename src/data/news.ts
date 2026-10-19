@@ -525,7 +525,7 @@ export const news: NewsModel[] = [
         slug: 'holzbarrieren-brunsberg-2026',
         title: 'Neue Holzbarrieren am Brunsberg',
         publishedAt: '2026-09-11',
-        topicIds: ['natur', 'freizeit'],
+        topicIds: ['natur-freizeit'],
         summary: [
             'Am **Brunsberg** wurden zwei neue **Holzbarrieren** aufgestellt. Sie **sollen schnelle Radfahrer stoppen** und für mehr Sicherheit auf den Wanderwegen sorgen. Betroffen sind die Wege **vom Brunsberg zur Höllenschlucht und zum Kleinen Brunsberg**. In diesem Bereich ist Radfahren nicht erlaubt.',
         ],
@@ -1248,7 +1248,7 @@ export const news: NewsModel[] = [
         slug: 'naturpark-tag-2026-brunsberg',
         title: 'Gemeinsam anpacken für die Heide am Brunsberg',
         publishedAt: '2026-10-15',
-        topicIds: ['natur', 'freizeit'],
+        topicIds: ['natur-freizeit'],
         summary: [
             'Beim **Naturpark-Tag am 14. November** lädt die Grundschule Sprötze-Trelde zur gemeinsamen Heidepflege am Brunsberg ein.',
             'Ab **10 Uhr** werden junge Kiefern aus den Heideflächen entfernt. Mitmachen kann jeder – eine Anmeldung ist nicht erforderlich.',
