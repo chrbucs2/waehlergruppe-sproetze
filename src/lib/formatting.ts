@@ -1,3 +1,5 @@
+import { ensureTrailingSlash } from './routing';
+
 export function assetUrl(path: string) {
     return `${import.meta.env.BASE_URL}${String(path).replace(/^\/+/, '')}`;
 }
@@ -22,8 +24,8 @@ function resolveInlineLinkTarget(target: string) {
     }
 
     if (target.startsWith('/')) {
-        return target;
+        return ensureTrailingSlash(target);
     }
 
-    return `/artikel/${target}`;
+    return ensureTrailingSlash(`/artikel/${target}`);
 }

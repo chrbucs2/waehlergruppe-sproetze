@@ -4,13 +4,17 @@ import { articles, filterTopics, news, scheduleItems } from '../data';
 import {LinkModel} from "../models/LinkModel";
 import {buildHrefWithPreservedQuery} from "./routing";
 
-export function buildNewsOverviewUrl(topicId: string | undefined) {
+export function buildNewsOverviewUrl(topicId?: string) {
     const href = !topicId ? NEWS_PATH : `${NEWS_PATH}?thema=${topicId}`;
     return buildHrefWithPreservedQuery(href);
 }
 
 export function buildNewsDetailUrl(slug: string) {
     return buildHrefWithPreservedQuery(`${NEWS_PATH}/${slug}`);
+}
+
+export function buildScheduleOverviewUrl() {
+    return buildHrefWithPreservedQuery(`${SCHEDULE_PATH}`);
 }
 
 export function buildScheduleDetailUrl(slug: string) {

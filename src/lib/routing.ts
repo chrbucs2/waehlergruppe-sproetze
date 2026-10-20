@@ -9,6 +9,22 @@ export function normalizePath(pathname: string) {
     return trimmed || '/';
 }
 
+export function ensureTrailingSlash(href: string) {
+    if (!href.startsWith('/') || href.startsWith('//')) {
+        return href;
+    }
+
+    const suffixIndex = href.search(/[?#]/);
+    const pathname = suffixIndex === -1 ? href : href.slice(0, suffixIndex);
+    const suffix = suffixIndex === -1 ? '' : href.slice(suffixIndex);
+
+    if (pathname === '/' || pathname.endsWith('/')) {
+        return href;
+    }
+
+    return `${pathname}/${suffix}`;
+}
+
 export function getPathFromLocation() {
     const params = new URLSearchParams(window.location.search);
     const redirectedPath = params.get('p');
@@ -35,7 +51,7 @@ export function getQueryParam(name: string) {
 
 const DEFAULT_PRESERVED_QUERY_PARAMS = ['internal'];
 export function buildHrefWithPreservedQuery(href: string) {
-    if (!href) {
+    if (!href || href.startsWith('http')) {
         return href;
     }
 
@@ -49,7 +65,7 @@ export function buildHrefWithPreservedQuery(href: string) {
         }
     });
 
-    return `${url.pathname}${url.search}${url.hash}`;
+    return ensureTrailingSlash(`${url.pathname}${url.search}${url.hash}`);
 }
 
 export function useQueryParamState(name: string, fallback: string | undefined = undefined) {
