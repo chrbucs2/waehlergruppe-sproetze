@@ -11,6 +11,7 @@ import { NewsModel } from '../models/pages/NewsModel';
 import MainSectionCard from "../components/mainsection/MainSectionCard";
 import {MainSectionCardList} from "../components/mainsection/MainSectionCardList";
 import {MainSectionContainer} from "../components/mainsection/MainSectionContainer";
+import {buildScheduleOverviewUrl} from "../lib/content";
 
 interface NewsOverviewPageProps {
     items: NewsModel[];
@@ -63,7 +64,7 @@ export function NewsOverviewPage({
                 lead="Hier pflegen wir aktuelle Meldungen zentral an einer Stelle."
                 actions={[
                     { href: '/', label: 'Zur WGS Startseite', variant: 'primary' },
-                    { href: SCHEDULE_PATH, label: 'Zur Terminseite', variant: 'secondary' },
+                    { href: buildScheduleOverviewUrl(), label: 'Zur Terminseite', variant: 'secondary' },
                 ]}
             />
 

@@ -1101,30 +1101,46 @@ export const news: NewsModel[] = [
     {
         id: 'kita-kinderzauber-neue-gruppe-2027',
         slug: 'kita-kinderzauber-neue-gruppe-2027',
-        title: 'Kita Kinderzauber: Neue Gruppe ab Januar 2027 vorgesehen',
+        title: 'Neue Gruppe in der Kita Kinderzauber ab Januar 2027 vorgesehen',
         publishedAt: '2026-10-09',
-        topicIds: ['infrastruktur', 'kita-und-schule'],
+        topicIds: ['infrastruktur'],
         summary: [
-            'Für die Erweiterung der **Kita Kinderzauber in Sprötze** gibt es einen konkreteren Zeitplan: Laut aktuellen Stellenausschreibungen der Stadt ist eine neue altersübergreifende Gruppe **ab dem 1. Januar 2027 vorgesehen**.',
-            'Passend dazu sucht die Stadt derzeit pädagogisches Personal für die Kita. Eine der ausgeschriebenen Stellen ist ausdrücklich für die **neue Gruppe** vorgesehen und soll bereits ab Dezember 2026 besetzt werden.',
+            'Für die Erweiterung der **Kita Kinderzauber in Sprötze** gibt es einen konkreteren Zeitplan: Laut aktuellen Stellenausschreibungen der Stadt ist eine **neue altersübergreifende Gruppe ab dem 1. Januar 2027** vorgesehen.',
+            'Geplant sind **6 zusätzliche Krippen- und 13 Elementarplätze**. Die Erweiterung ist bereits seit Längerem Teil des städtischen Kita-Ausbaus – der Start hat sich gegenüber früheren Planungen jedoch nach hinten verschoben.',
         ],
         introduction: [
-            'Die geplante Erweiterung der städtischen Kita Kinderzauber am Sanderfeld nimmt weiter Gestalt an. Zwei aktuelle Stellenausschreibungen nennen erstmals einen konkreten Termin: Die zusätzliche **altersübergreifende Gruppe ist ab dem 1. Januar 2027 vorgesehen**.',
-            'Derzeit betreuen zehn pädagogische Fachkräfte insgesamt **65 Kinder in drei Gruppen**. Mit der bereits länger geplanten Erweiterung sollen zusätzliche Betreuungsplätze in Sprötze entstehen.',
+            'Die Erweiterung der städtischen Kita Kinderzauber am Sanderfeld nimmt weiter Gestalt an. Zwei aktuelle Stellenausschreibungen nennen erstmals einen konkreten vorgesehenen Starttermin: Die zusätzliche **altersübergreifende Gruppe soll ab dem 1. Januar 2027** angeboten werden.',
+            '**Derzeit** werden in der Kita **65 Kinder in drei Gruppen** von **zehn pädagogischen Fachkräften** betreut. Mit der Erweiterung sollen **zusätzliche wohnortnahe Betreuungsplätze** in Sprötze entstehen.',
         ],
         sections: [
             {
-                title: 'Neue altersübergreifende Gruppe',
+                title: '19 zusätzliche Betreuungsplätze geplant',
                 paragraphs: [
                     'Aktuell gibt es in der Kita eine Vormittagsgruppe und eine Ganztagsgruppe mit jeweils 25 Kindern sowie eine Krippengruppe mit 15 Kindern.',
-                    'Hinzu kommen soll eine **altersübergreifende Gruppe**. Laut aktueller Stellenausschreibung ist für sie eine Betreuung von **8 bis 15 Uhr** vorgesehen. Zusätzlich gibt es Früh- und Spätdienste.',
-                    'In einem früheren Maßnahmenplan der Stadt war für die Erweiterung ein **Anbau an die bestehende Kita** vorgesehen. Die Planung sah für die zusätzliche Gruppe sechs Krippen- und 13 Elementarplätze vor.',
+                    'Der von der Stadt beschlossene Maßnahmenplan sieht einen **Anbau an die bestehende Kita** und eine zusätzliche altersübergreifende Gruppe mit **6 Krippen- und 13 Elementarplätzen** vor.',
+                    'Nach der aktuellen Stellenausschreibung soll die neue Gruppe **von 8 bis 15 Uhr betreut** werden. Zusätzlich bietet die Kita Früh- und Spätdienste an.',
                 ],
             },
             {
-                title: 'Stadt sucht pädagogisches Personal',
+                title: 'Warum wird die Kita erweitert?',
                 paragraphs: [
-                    'Aktuell sind zwei Stellen für die Kita Kinderzauber ausgeschrieben. Eine davon ist ausdrücklich der **neuen altersübergreifenden Gruppe** zugeordnet.',
+                    'Die Stadt hatte den Ausbau der Kinderbetreuung 2025 erneut überprüft. Dabei zeigte sich ein besonderes Problem: Obwohl es im Stadtgebiet teilweise freie Kita-Plätze gab, bestanden gleichzeitig Wartelisten, weil **freie Plätze nicht immer wohnortnah dort verfügbar waren, wo Familien sie benötigten**.',
+                    'Die Erweiterung der Kita Kinderzauber wurde deshalb als einer der nächsten Schritte des städtischen Ausbauprogramms vorgesehen. Gerade für Familien aus Sprötze und Trelde sollen damit zusätzliche Plätze vor Ort entstehen.',
+                    'Neben der Erweiterung in Sprötze plant die Stadt langfristig weitere Einrichtungen, unter anderem im TIP und am Sprötzer Weg.',
+                ],
+            },
+            {
+                title: 'Start später als ursprünglich geplant',
+                paragraphs: [
+                    'Im im Mai 2025 aktualisierten Maßnahmenplan war die Erweiterung der Kita Kinderzauber noch dem Kita-Jahr 2025/2026 zugeordnet. Der zuständige Fachausschuss empfahl den Maßnahmenplan einstimmig, anschließend stimmte auch der Verwaltungsausschuss zu.',
+                    'Auch die damalige Berichterstattung ging davon aus, dass die zusätzliche Gruppe im folgenden Jahr eingerichtet werden sollte.',
+                    'Die aktuellen Stellenausschreibungen konkretisieren den Zeitplan nun auf den 1. Januar 2027. Damit liegt der vorgesehene Start später als in der ursprünglichen Ausbauplanung.',
+                ],
+            },
+            {
+                title: 'Stadt sucht bereits Personal',
+                paragraphs: [
+                    'Passend zum geplanten Start sind derzeit zwei Stellen für die Kita Kinderzauber ausgeschrieben. Eine davon ist ausdrücklich der **neuen altersübergreifenden Gruppe** zugeordnet.',
                     {
                         type: 'list',
                         items: [
@@ -1132,28 +1148,33 @@ export const news: NewsModel[] = [
                             'eine **Erzieherin, einen Erzieher oder eine sozialpädagogische Assistenzkraft für eine gruppenübergreifende Tätigkeit** mit mindestens 35 Wochenstunden',
                         ],
                     },
-                    'Beide Stellen sollen **ab Dezember 2026** besetzt werden. Ob die zweite, gruppenübergreifende Stelle ebenfalls unmittelbar wegen der Erweiterung geschaffen wurde, geht aus der Ausschreibung nicht hervor.',
-                ],
-            },
-            {
-                title: 'Erweiterung ist schon länger geplant',
-                paragraphs: [
-                    'Der Ausbau der Kita Kinderzauber ist bereits seit Längerem Teil der städtischen Planung. Im Maßnahmenplan zum Ausbau der Kinderbetreuung wurde eine zusätzliche altersübergreifende Gruppe durch einen **Anbau an die bestehende Einrichtung** vorgesehen.',
-                    'Dort wurde für den Anbau zunächst ein Investitionsbedarf von **600.000 Euro** angesetzt. Im Vorbericht zum Doppelhaushalt 2025/2026 wird die Position **„Erweiterung Kita Sprötze (inkl. Heizungsanlage)“ mit insgesamt 709.950 Euro** geführt.',
-                    'Bei diesen Beträgen handelt es sich um Planungs- beziehungsweise Haushaltsansätze. Sie sagen nicht aus, wie hoch die tatsächlichen Kosten der Erweiterung am Ende ausfallen.',
+                    'Beide Stellen sollen bereits **ab Dezember 2026** besetzt werden.',
                 ],
             },
             {
                 title: 'Was ist bereits sicher?',
                 paragraphs: [
-                    'Die aktuellen Stellenausschreibungen zeigen, dass die Stadt den Betrieb der zusätzlichen Gruppe vorbereitet. Sie nennen den **1. Januar 2027 ausdrücklich als vorgesehenen Starttermin** und suchen bereits ab Dezember Personal.',
-                    'Eine aktuelle öffentliche Mitteilung, dass der Anbau vollständig fertiggestellt ist oder alle Voraussetzungen für die Inbetriebnahme bereits abschließend erfüllt sind, liegt uns jedoch nicht vor. Deshalb sollte der **1. Januar 2027 weiterhin als vorgesehener und nicht als endgültig bestätigter Eröffnungstermin** verstanden werden.',
+                    'Sicher ist, dass die zusätzliche altersübergreifende Gruppe Teil des beschlossenen städtischen Maßnahmenplans ist und die Stadt inzwischen **gezielt Personal für diese Gruppe sucht**.',
+                    'Die aktuellen Stellenausschreibungen nennen den **1. Januar 2027 als vorgesehenen Starttermin**. Eine aktuelle öffentliche Mitteilung, dass der Anbau bereits vollständig fertiggestellt ist und sämtliche Voraussetzungen für die Inbetriebnahme abschließend erfüllt sind, haben wir bislang jedoch nicht gefunden.',
+                    'Der 1. Januar sollte deshalb weiterhin als **vorgesehener und nicht als garantiert bestätigter Starttermin** verstanden werden.',
                 ],
             },
             {
                 title: 'Weiterführende Informationen',
                 paragraphs: [
-                    'Weitere Informationen zur geplanten Erweiterung und zu den aktuellen Stellenausschreibungen finden Sie hier:',
+                    'Weitere Informationen zur Erweiterung der Kita Kinderzauber und zur Entwicklung der Kinderbetreuung in Buchholz finden Sie hier:',
+                    {
+                        type: 'link',
+                        text: 'Stadt Buchholz: Aktualisierung des Maßnahmenplans für Betreuungsplätze',
+                        href: 'https://www.buchholz.de/allris/vo020?0-1.0-beratungen-showHideLink&VOLFDNR=1011697&refresh=false&TOLFDNR=1013848',
+                        indent: true,
+                    },
+                    {
+                        type: 'link',
+                        text: 'Landeszeitung: Erweiterung der Kinderbetreuung - Buchholz plant deutlich mehr Kita-Plätze bis 2029',
+                        href: 'https://www.landeszeitung.de/lokales/harburg-lk/buchholz-nordheide/buchholz-plant-erweiterung-der-kinderbetreuung-mehr-kita-plaetze-bis-2029-N7W5H2EU2FAGDAJZSCVZ7XZXWU.html',
+                        indent: true,
+                    },
                     {
                         type: 'link',
                         text: 'Stadt Buchholz: Kita Kinderzauber',
@@ -1170,12 +1191,6 @@ export const news: NewsModel[] = [
                         type: 'link',
                         text: 'Stadt Buchholz: Gruppenübergreifende pädagogische Stelle',
                         href: 'https://www.kitasindernordheide.de/jobs-in-buchholz-buchholz-sproetze/erzieherin-oder-spa-ab-dezember-2026-unbefristet-gruppenuebergreifend-mindestens-35-std-/74',
-                        indent: true,
-                    },
-                    {
-                        type: 'link',
-                        text: 'Stadt Buchholz: Maßnahmenplan zum Ausbau der Kinderbetreuung',
-                        href: 'https://www.buchholz.de/allris/wicket/resource/org.apache.wicket.Application/doc1247681.pdf',
                         indent: true,
                     },
                 ],
@@ -1218,7 +1233,7 @@ export const news: NewsModel[] = [
                     {
                         type: 'link',
                         text: 'Aktuelle Kontaktdaten und Anmeldung bei der Kirchengemeindenachbarschaft',
-                        href: 'https://www.nachbarschaft-kirche-buchholz.de/dabei-sein/treffpunkte',
+                        href: 'https://www.nachbarschaft-kirche-buchholz.de/dabei-sein/treffpunkte#c31852',
                         indent: true,
                     },
                 ],
@@ -1235,7 +1250,7 @@ export const news: NewsModel[] = [
                     },
                     {
                         type: 'link',
-                        text: 'Wochenblatt: „Lecker Schmecker“ für Senioren im Gemeindehaus',
+                        text: 'Wochenblatt: Lecker Schmecker für Senioren im Gemeindehaus',
                         href: 'https://www.kreiszeitung-wochenblatt.de/buchholz/c-service/lecker-schmecker-fuer-senioren-im-gemeindehaus_a424009',
                         indent: true,
                     },
@@ -1250,18 +1265,18 @@ export const news: NewsModel[] = [
         publishedAt: '2026-10-15',
         topicIds: ['kita-und-schule', 'natur-freizeit'],
         summary: [
-            'Beim **Naturpark-Tag am 14. November** lädt die Grundschule Sprötze-Trelde zur gemeinsamen Heidepflege am Brunsberg ein.',
-            'Ab **10 Uhr** werden junge Kiefern aus den Heideflächen entfernt. Mitmachen kann jeder – eine Anmeldung ist nicht erforderlich.',
+            'Beim **Naturpark-Tag am 14. November** lädt die Grundschule Sprötze-Trelde zur gemeinsamen **Heidepflege am Brunsberg** ein.',
+            '**Ab 10 Uhr** werden junge Kiefern aus den Heideflächen entfernt. Mitmachen kann jeder – eine Anmeldung ist nicht erforderlich.',
         ],
         introduction: [
-            'Am Samstag, **14. November 2026**, heißt es am Brunsberg wieder gemeinsam anpacken: Die Naturpark-Schule **Grundschule Sprötze-Trelde** beteiligt sich am 15. Naturpark-Tag und organisiert eine Pflegeaktion in der Heide.',
+            'Am Samstag, **14. November 2026**, heißt es am Brunsberg wieder gemeinsam anpacken: Die Naturpark-Schule **Grundschule Sprötze-Trelde** beteiligt sich am 15. Naturpark-Tag und organisiert eine **Pflegeaktion in der Heide**.',
             'Dabei werden vor allem junge Kieferntriebe entfernt, damit die offene Heidelandschaft erhalten bleibt. Die Aktion beginnt um **10 Uhr** und dauert etwa zwei Stunden.',
         ],
         sections: [
             {
                 title: 'Gemeinsam die Heide entkusseln',
                 paragraphs: [
-                    'Bei der Aktion werden junge Kiefern mit der Hand herausgezogen oder mit geeignetem Werkzeug entfernt. Diese Form der Landschaftspflege wird als **Entkusseln** bezeichnet.',
+                    'Bei der Aktion werden **junge Kiefern mit der Hand herausgezogen** oder mit geeignetem Werkzeug entfernt. Diese Form der Landschaftspflege wird als **Entkusseln** bezeichnet.',
                     'Ziel ist es, zu verhindern, dass die offenen Heideflächen nach und nach mit Bäumen zuwachsen. Ohne regelmäßige Pflege würde sich die Landschaft langfristig wieder in Richtung Wald entwickeln.',
                 ],
             },
@@ -1283,20 +1298,6 @@ export const news: NewsModel[] = [
                 ],
             },
             {
-                title: 'Warum braucht die Heide Pflege?',
-                paragraphs: [
-                    'Die Heidelandschaft am Brunsberg bleibt nicht von allein offen. Junge Kiefern, Birken und andere Gehölze breiten sich auf den Flächen aus und würden die Heide nach und nach verdrängen.',
-                    'Deshalb finden am Brunsberg schon seit Jahren Pflegeaktionen statt. Durch das Entfernen der jungen Gehölze sollen die offenen Heideflächen und der für sie typische Pflanzenmix erhalten bleiben.',
-                ],
-            },
-            {
-                title: '15. Naturpark-Tag',
-                paragraphs: [
-                    'Die Aktion in Sprötze ist Teil des **15. Naturpark-Tags im Naturpark Lüneburger Heide**. Am 14. November finden in der gesamten Naturparkregion zahlreiche ehrenamtliche Pflegeaktionen statt.',
-                    'Neben dem Entkusseln werden andernorts beispielsweise Feuchtwiesen gepflegt, Bäume und Hecken gepflanzt oder Nisthilfen gebaut. Der Naturpark lädt ausdrücklich auch Familien zum Mitmachen ein.',
-                ],
-            },
-            {
                 title: 'Weiterführende Informationen',
                 paragraphs: [
                     'Weitere Informationen zur Sprötzer Aktion und zur Heidepflege finden Sie hier:',
@@ -1308,7 +1309,7 @@ export const news: NewsModel[] = [
                     },
                     {
                         type: 'link',
-                        text: 'Buchholz Erleben: Hintergrund zur Heidepflege am Brunsberg',
+                        text: 'Buchholz Erleben: Gemeinsam Anpacken zum Schutz der Heide-Landschaft',
                         href: 'https://buchholz-erleben.de/gemeinsam-anpacken-zum-schutz-der-heide-landschaft/',
                         indent: true,
                     },
@@ -1323,34 +1324,26 @@ export const news: NewsModel[] = [
         publishedAt: '2026-10-19',
         topicIds: ['verkehr', 'infrastruktur'],
         summary: [
-            'Bahnreisende aus Sprötze müssen sich auf erhebliche Einschränkungen einstellen: Vom **26. Oktober bis 22. November 2026** fahren die Metronom-Züge nicht zwischen Hamburg-Harburg und Hamburg Hauptbahnhof.',
-            'Wer mit der **RB41 von Sprötze Richtung Hamburg** fährt, muss in Harburg umsteigen. Als Alternative steht vor allem die S-Bahn zur Verfügung – ein Ersatzverkehr mit Bussen ist nicht vorgesehen.',
+            'Bahnreisende aus Sprötze müssen sich auf erhebliche Einschränkungen einstellen: Vom **26. Oktober bis 22. November 2026** fahren die Metronom-Züge nicht **zwischen Hamburg-Harburg und Hamburg Hauptbahnhof**.',
+            'Wer mit der RB41 von Sprötze Richtung Hamburg fährt, muss in Harburg umsteigen. Als Alternative steht vor allem die S-Bahn zur Verfügung – ein Ersatzverkehr mit Bussen ist nicht vorgesehen.',
         ],
         introduction: [
-            'Für Pendlerinnen und Pendler aus Sprötze wird die Fahrt nach Hamburg ab Ende Oktober aufwendiger. Wegen einer Streckensperrung enden die Metronom-Verbindungen **RE4/RB41 aus Richtung Buchholz, Tostedt und Bremen bereits in Hamburg-Harburg**.',
-            'Die Einschränkung gilt vom **26. Oktober bis einschließlich 22. November**. Zwischen Harburg und Hamburg Hauptbahnhof müssen Reisende auf die S-Bahn oder das eingeschränkte Fernverkehrsangebot ausweichen.',
+            'Für Pendlerinnen und Pendler aus Sprötze wird die Fahrt nach Hamburg ab Ende Oktober aufwendiger. Wegen einer **Streckensperrung** enden die Metronom-Verbindungen RE4/RB41 aus Richtung Buchholz, Tostedt und Bremen bereits in Hamburg-Harburg.',
+            'Die Einschränkung gilt vom **26. Oktober bis einschließlich 22. November**. **Zwischen Harburg und Hamburg Hauptbahnhof** müssen Reisende **auf die S-Bahn** oder das eingeschränkte Fernverkehrsangebot **ausweichen**.',
         ],
         sections: [
-            {
-                title: 'Was bedeutet das für Sprötze?',
-                paragraphs: [
-                    'Sprötze liegt direkt an der Linie **RB41 zwischen Bremen, Tostedt, Buchholz und Hamburg**. Die Züge können während der Sperrung weiterhin bis Hamburg-Harburg fahren, der Abschnitt von dort zum Hauptbahnhof entfällt jedoch.',
-                    'Für Fahrten in die Hamburger Innenstadt ist deshalb ein **zusätzlicher Umstieg in Harburg** erforderlich. Zwischen Harburg und Hauptbahnhof verkehren die S-Bahn-Linien **S3 und S5**.',
-                    'Gerade im Berufsverkehr ist mit einer höheren Auslastung der S-Bahnen und längeren Reisezeiten zu rechnen. Reisende sollten deshalb mehr Zeit einplanen und ihre Verbindung vor Fahrtbeginn noch einmal prüfen.',
-                ],
-            },
-            {
-                title: 'Keine Ersatzbusse',
-                paragraphs: [
-                    'Metronom richtet für den gesperrten Abschnitt **keinen Schienenersatzverkehr mit Bussen** ein. Begründet wird dies mit den weiterhin fahrenden S-Bahnen und einem eingeschränkten Angebot im Fernverkehr.',
-                    'Die Sperrung betrifft neben **RE4/RB41** auch die Metronom-Linien **RE3/RB31** aus Richtung Lüneburg. Damit müssen zahlreiche Fahrgäste aus dem südlichen Hamburger Umland in Harburg auf andere Verbindungen wechseln.',
-                ],
-            },
             {
                 title: 'Warum wird die Strecke gesperrt?',
                 paragraphs: [
                     'Grund ist eine **Totalsperrung im Bereich Ericus – Hamburg Hauptbahnhof – Norderelbebrücke**. Metronom spricht deshalb von erheblichen Einschränkungen auf dem Abschnitt zwischen Harburg und Hauptbahnhof.',
-                    'Das Wochenblatt berichtet, dass auch weitere Regional- und Fernzüge betroffen sein können. Für die Metronom-Linien RE4/RB41 und RE3/RB31 sind die Ausfälle bereits offiziell bestätigt und in Baustellenfahrplänen berücksichtigt.',
+                    'Das Wochenblatt berichtet, dass auch **weitere Regional- und Fernzüge betroffen** sein können. Für die Metronom-Linien **RE4/RB41** und RE3/RB31 **sind die Ausfälle bereits** offiziell bestätigt und **in Baustellenfahrplänen berücksichtigt**.',
+                ],
+            },
+            {
+                title: 'Was bedeutet das für Pendler?',
+                paragraphs: [
+                    'Für Fahrten in die Hamburger Innenstadt ist deshalb ein **zusätzlicher Umstieg in Harburg** erforderlich. Zwischen Harburg und Hauptbahnhof verkehren die S-Bahn-Linien **S3 und S5**.',
+                    'Gerade im Berufsverkehr ist mit einer **höheren Auslastung der S-Bahnen** und **längeren Reisezeiten** zu rechnen. Reisende sollten deshalb mehr **Zeit einplanen** und ihre Verbindung vor Fahrtbeginn noch einmal prüfen.',
                 ],
             },
             {
@@ -1358,6 +1351,13 @@ export const news: NewsModel[] = [
                 paragraphs: [
                     'Da sich während größerer Bauarbeiten Fahrpläne und einzelne Verbindungen noch ändern können, sollten Reisende vor der Fahrt die **aktuelle Fahrplanauskunft von Metronom oder HVV** nutzen.',
                     'Metronom hat für den Zeitraum eigene Baustellenfahrpläne veröffentlicht. Dort sind die tatsächlich fahrenden Verbindungen und Abfahrtszeiten aufgeführt.',
+                ],
+            },
+            {
+                title: 'Keine Ersatzbusse',
+                paragraphs: [
+                    'Metronom richtet für den gesperrten Abschnitt **keinen Schienenersatzverkehr mit Bussen** ein. Begründet wird dies mit den weiterhin fahrenden S-Bahnen und einem eingeschränkten Angebot im Fernverkehr.',
+                    'Die Sperrung betrifft neben RE4/RB41 auch die Metronom-Linien RE3/RB31 aus Richtung Lüneburg. Damit müssen zahlreiche Fahrgäste aus dem südlichen Hamburger Umland in Harburg auf andere Verbindungen wechseln.',
                 ],
             },
             {
@@ -1372,7 +1372,7 @@ export const news: NewsModel[] = [
                     },
                     {
                         type: 'link',
-                        text: 'Wochenblatt: Vier Wochen keine Regionalzüge zwischen Harburg und Hamburg Hbf',
+                        text: 'Wochenblatt: Bahn-Chaos droht - Vier Wochen lang keine Regionalzüge zwischen Harburg und Hamburger Hauptbahnhof',
                         href: 'https://www.kreiszeitung-wochenblatt.de/stade/c-service/bahn-chaos-droht-vier-wochen-lang-keine-regionalzuege-zwischen-harburg-und-hamburger-hauptbahnhof_a424546',
                         indent: true,
                     }

@@ -10,7 +10,7 @@ import { useSeo } from '../lib/seo';
 import { ScheduleModel } from '../models/pages/ScheduleModel';
 import MainSectionCard from "../components/mainsection/MainSectionCard";
 import {MoreButton} from "../components/common/button/MoreButton";
-import {getScheduleStatus} from "../lib/content";
+import {buildNewsOverviewUrl, getScheduleStatus} from "../lib/content";
 import styled from "styled-components";
 
 export const MoreButtonWrapper = styled.div`
@@ -73,7 +73,7 @@ export function ScheduleOverviewPage({
                 lead="Der nächste relevante Termin zuerst, weitere bei Bedarf."
                 actions={[
                     {href: '/', label: 'Zur WGS Startseite', variant: 'primary'},
-                    {href: NEWS_PATH, label: 'Zu den News', variant: 'secondary'},
+                    {href: buildNewsOverviewUrl(), label: 'Zu den News', variant: 'secondary'},
                 ]}
             />
 

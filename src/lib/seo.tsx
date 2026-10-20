@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { ensureTrailingSlash } from './routing';
 
 type SeoOptions = {
     title: string;
@@ -52,7 +53,7 @@ function setCanonical(href: string) {
 export function useSeo({ title, description, canonicalPath, noindex = false }: SeoOptions) {
     useEffect(() => {
         const fullTitle = `${title} | ${SITE_NAME}`;
-        const fullUrl = `${SITE_ORIGIN}${canonicalPath}`;
+        const fullUrl = `${SITE_ORIGIN}${ensureTrailingSlash(canonicalPath)}`;
 
         document.title = fullTitle;
         setMeta('description', description || DEFAULT_DESCRIPTION);
