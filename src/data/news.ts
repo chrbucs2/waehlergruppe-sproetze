@@ -1379,5 +1379,99 @@ export const news: NewsModel[] = [
                 ],
             },
         ],
+    },
+    {
+        id: 'haeckselaktion-sproetze-2026',
+        slug: 'haeckselaktion-sproetze-2026',
+        title: 'Häckselaktion in Sprötze am 14. November',
+        publishedAt: '2026-10-30',
+        topicIds: ['infrastruktur'],
+        summary: [
+            'Die diesjährige Häckselaktion findet in Sprötze am Samstag, 14. November, zwischen 8 und 17 Uhr statt. Angefahren werden ausschließlich zuvor angemeldete Grundstücke; neue Anmeldungen sind nicht mehr möglich.',
+            'In Sprötze stehen folgende Straßen auf dem Tourenplan: Am Holzplatz, Bgm.-Kröger-Straße, Brunsbergweg, Ginsterweg, Hubertusweg, Sanddornweg, Sanderfeld, Schwarzer Weg und Vogelbeerenweg.',
+        ],
+        articleLink: {
+            href: 'https://www.buchholz.de/downloads/datei/Nzg5ODZjM2FlYTlkY2JkYnZiRkszNnVpcTZEVUpiakJzWW82ZVl6bkFoSGg3SUt1R3YxcmVMcTB5M21XWUdYRWV4ci9nTWUraHNoams3UEY2WkFOM2JWZCt2amViTFRhd3JmYmEyV0J6NXVNd094a2VZZ3hxNXZvbFlOR0xnaW9CWno5MVBEd011UDhncVUxbmRGRHREN0pDV2NxOXo5a2JpaHdXbXdUbUJucGx2Z2lFZ29NQXhVUFBubz0',
+            text: 'Zum Zeitplan der Häckselaktion',
+        },
+    },
+    {
+        id: 'buslinie-4840-sproetze-2027',
+        slug: 'buslinie-4840-sproetze-2027',
+        title: 'ÖPNV ab 2027: Neue Buslinie 4840 für Sprötze',
+        publishedAt: '2026-11-02',
+        topicIds: ['verkehr', 'infrastruktur'],
+        summary: [
+            'Zum Jahresbeginn 2027 soll das regionale Busnetz neu geordnet werden. Für Sprötze ist dabei eine **neue Buslinie 4840 über Kakenstorf nach Tostedt** vorgesehen.',
+            'Geplant sind ein **Stundentakt von Montag bis Freitag** und ein **Zweistundentakt am Samstag**. Gleichzeitig soll die bisher durch Sprötze fahrende Linie 4037 künftig einen direkteren Weg zwischen Buchholz und Hollenstedt nehmen.',
+        ],
+        introduction: [
+            'Für den Busverkehr rund um Sprötze steht Anfang 2027 eine größere Änderung an. Der Landkreis plant die neue **Linie 4840, die Sprötze über Kakenstorf mit Tostedt verbinden** soll. Der Bahnhof Sprötze soll dabei ausdrücklich angebunden werden.',
+            'Damit wird zugleich die **Linie 4037** neu geordnet: Sie **soll Sprötze und Kakenstorf künftig nicht mehr bedienen**, sondern direkter von Buchholz über Trelde in Richtung Hollenstedt fahren.',
+        ],
+        sections: [
+            {
+                title: 'Neue Linie 4840 über Kakenstorf nach Tostedt',
+                paragraphs: [
+                    'Für die neue Linie ist nach der bisherigen Planung **montags bis freitags ein Stundentakt** und **samstags ein Zweistundentakt** vorgesehen. Sonntags war in der im Frühjahr vorgestellten Planung kein reguläres Angebot vorgesehen.',
+                    'Die Linie soll **Kakenstorf mit den Bahnhöfen Sprötze und Tostedt verbinden**. Dort besteht Anschluss an die RB41. Auch das Gewerbegebiet an der Harburger Straße in Todtglüsingen soll durch die neue Verbindung besser erreichbar werden.',
+                    'In früheren Berichten wurde teilweise auch eine Weiterführung der Linie in Richtung Buchholz genannt. Ob und bei welchen Fahrten die 4840 tatsächlich über Sprötze hinaus bis Buchholz fahren wird, lässt sich ohne den endgültigen Fahrplan noch nicht sicher sagen.',
+                ],
+            },
+            {
+                title: 'Linie 4037 fährt künftig nicht mehr durch Sprötze',
+                paragraphs: [
+                    'Heute verbindet die Linie 4037 Buchholz über Sprötze, Trelde und Kakenstorf mit Hollenstedt. Mit der Neuordnung soll sie einen direkteren Verlauf erhalten und Sprötze sowie Kakenstorf nicht mehr bedienen.',
+                    'Dafür soll das Angebot auf der 4037 deutlich ausgeweitet werden. Vorgesehen ist werktags ein Stundentakt zwischen Buchholz und Hollenstedt. Auch am Wochenende soll das Angebot verbessert werden.',
+                    'Für Sprötze soll die wegfallende Verbindung der 4037 durch die neue Linie 4840 ersetzt beziehungsweise neu geordnet werden.',
+                ],
+            },
+            {
+                title: 'Bessere Anbindung für Trelde und den Trelder Berg',
+                paragraphs: [
+                    'Von der neuen Linienführung der 4037 sollen insbesondere Trelde und das Gewerbegebiet Trelder Berg profitieren. Dort ist die neue Haltestelle „Fendtstraße“ vorgesehen.',
+                    'Nach der bisherigen Planung sollen Trelde und das Gewerbegebiet dadurch künftig stündlich mit Buchholz verbunden werden.',
+                ],
+            },
+            {
+                title: 'Start Anfang 2027 geplant – Fahrplan steht noch aus',
+                paragraphs: [
+                    'Die Änderungen wurden zuletzt Anfang Oktober beim Netzwerktreffen Mobilität des Landkreises erneut als kommende Verbesserungen vorgestellt. Der **Start ist zum Jahresbeginn 2027** vorgesehen.',
+                    'Für die Linie 4840 soll der Landkreis in den ersten beiden Jahren die Finanzierung vollständig übernehmen.',
+                    'Ein **endgültiger Fahrplan** mit genauen Abfahrtszeiten, Haltestellen und dem vollständigen Linienweg ist **bislang jedoch nicht veröffentlicht**. Auch in der aktuellen Fahrplanübersicht der KVG ist die neue Linie 4840 noch nicht enthalten.',
+                    'Die genannten Takte und Linienwege geben daher den aktuellen Planungsstand wieder. Sobald der neue Fahrplan veröffentlicht wird, können sich noch Details ändern.',
+                ],
+            },
+            {
+                title: 'Weiterführende Informationen',
+                paragraphs: [
+                    'Weitere Informationen zur geplanten Neuordnung des Busverkehrs und zum aktuellen Fahrplan finden Sie hier:',
+                    {
+                        type: 'link',
+                        text: 'Buchholz Aktuell: Netzwerk Mobilität - Besserer Busverkehr und Lösungen für E‑Scooter-Probleme',
+                        href: 'https://buchholz-aktuell.de/buchholz/netzwerk-mobilitaet-besserer-busverkehr-und-loesungen-fuer-e-scooter-probleme-20881/',
+                        indent: true,
+                    },
+                    {
+                        type: 'link',
+                        text: 'Wochenblatt: ÖPNV-Ausweitung für Buchholz, Tostedt und Hollenstedt',
+                        href: 'https://www.kreiszeitung-wochenblatt.de/buchholz/c-panorama/oepnv-ausweitung_a416307',
+                        indent: true,
+                    },
+                    {
+                        type: 'link',
+                        text: 'Wochenblatt: Busverkehr in Hollenstedt, Tostedt und Jesteburg soll verbessert werden',
+                        href: 'https://www.kreiszeitung-wochenblatt.de/winsen/c-politik/busverkehr-in-hollenstedt-tostedt-und-jesteburg-soll-verbessert-werden_a398387',
+                        indent: true,
+                    },
+                    {
+                        type: 'link',
+                        text: 'KVG: Aktuelle Fahrpläne im Landkreis Harburg',
+                        href: 'https://kvg-bus.de/harburg/fahrplaene/',
+                        indent: true,
+                    },
+                ],
+            },
+        ],
     }
 ];
