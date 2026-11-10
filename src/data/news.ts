@@ -1268,7 +1268,7 @@ export const news: NewsModel[] = [
         topicIds: ['kita-und-schule', 'natur-freizeit'],
         summary: [
             'Beim **Naturpark-Tag am 14. November** lädt die Grundschule Sprötze-Trelde zur gemeinsamen **Heidepflege am Brunsberg** ein.',
-            '**Ab 10 Uhr** werden junge Kiefern aus den Heideflächen entfernt. Mitmachen kann jeder – eine Anmeldung ist nicht erforderlich.',
+            '**Ab 10 Uhr** werden junge Kiefern aus den Heideflächen entfernt. Mitmachen kann jeder – eine **Anmeldung ist nicht erforderlich**.',
         ],
         introduction: [
             'Am Samstag, **14. November 2026**, heißt es am Brunsberg wieder gemeinsam anpacken: Die Naturpark-Schule **Grundschule Sprötze-Trelde** beteiligt sich am 15. Naturpark-Tag und organisiert eine **Pflegeaktion in der Heide**.',
