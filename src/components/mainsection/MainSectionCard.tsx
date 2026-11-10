@@ -2,17 +2,23 @@ import styled from 'styled-components';
 
 import Link from '../common/link/Link';
 import { Eyebrow } from '../common/Eyebrow';
+import { NewsBadges } from '../common/NewsBadges';
 import { MainSectionCardImage } from './MainSectionCardImage';
 import {buildArticleUrl, buildNewsDetailUrl, buildScheduleDetailUrl} from '../../lib/content';
 import { formatDate, formatInlineMarkup } from '../../lib/formatting';
 import { NewsModel } from '../../models/pages/NewsModel';
 import { ScheduleModel } from '../../models/pages/ScheduleModel';
 
-const CardRoot = styled.article<{}>`
+const CardRoot = styled.article<{ $highlight?: boolean }>`
     display: grid;
     gap: 14px;
     background: var(--surface);
     border: 1px solid var(--border);
+    ${({ $highlight }) => $highlight && `
+        background: var(--highlight-bg);
+        border-color: var(--highlight-border);
+        border-inline-start: 4px solid var(--highlight-accent);
+    `}
     border-radius: 24px;
     padding: 18px 20px;
 
@@ -77,6 +83,7 @@ type CardProps = {
 
 export default function MainSectionCard({ item }: CardProps) {
     const isSchedule = 'date' in item;
+    const badges = 'badges' in item ? item.badges : undefined;
 
     // content
     const paragraphs = Array.isArray(item.summary) ? item.summary : [item.summary];
@@ -95,9 +102,12 @@ export default function MainSectionCard({ item }: CardProps) {
 
     const renderMarkup = (text: string) => ({ __html: formatInlineMarkup(text) });
     return (
-        <CardRoot>
+        <CardRoot $highlight={'highlight' in item ? item.highlight : undefined}>
             <CardHeader>
-                <Eyebrow>{isSchedule ? item.category : formatDate(item.publishedAt)}</Eyebrow>
+                <Eyebrow>
+                    {badges && <NewsBadges badges={badges} />}
+                    {isSchedule ? item.category : formatDate(item.publishedAt)}
+                </Eyebrow>
                 {isSchedule ? (
                     <div className="schedule-card__head">
                         <strong>

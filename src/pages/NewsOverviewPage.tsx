@@ -4,7 +4,7 @@ import { SiteFooter } from '../components/SiteFooter';
 import { HeadSectionWithLogo } from '../components/headsection/HeadSectionWithLogo';
 import { FilterButtonGroup } from '../components/common/filter/FilterButtonGroup';
 import { MainSectionHeader } from '../components/mainsection/MainSectionHeader';
-import { SCHEDULE_PATH } from '../lib/constants';
+import { useActiveNewsBadges } from '../lib/useActiveNewsBadges';
 import { useQueryParamState } from '../lib/routing';
 import { useSeo } from '../lib/seo';
 import { NewsModel } from '../models/pages/NewsModel';
@@ -50,11 +50,14 @@ export function NewsOverviewPage({
         return itemsWithoutHidden.filter((item) => item.topicIds.includes(selectedTopic.id));
     }, [items, selectedTopic]);
 
+    // remove inactive badges from items and sort
+    const filteredAndSortedNewsItems = useActiveNewsBadges(filteredNewsItems);
+
     // prepare content for the page
     const title = selectedTopic ? `News zu ${selectedTopic.label}` : 'Alle aktuellen Meldungen';
     const description =
         selectedTopic?.description ??
-        'Beiträge sind nach Veröffentlichungsdatum sortiert — der neueste Beitrag steht immer zuerst.';
+        'Angepinnte Beiträge stehen zuerst. Alle weiteren Meldungen folgen nach Veröffentlichungsdatum — neueste zuerst.';
 
     return (
         <>
@@ -82,7 +85,7 @@ export function NewsOverviewPage({
                 />
 
                 <MainSectionCardList>
-                    {filteredNewsItems.map((item) => (
+                    {filteredAndSortedNewsItems.map((item) => (
                         <MainSectionCard key={item.id} item={item} />
                     ))}
                 </MainSectionCardList>

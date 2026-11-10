@@ -1261,6 +1261,8 @@ export const news: NewsModel[] = [
     {
         id: 'naturpark-tag-2026-brunsberg',
         slug: 'naturpark-tag-2026-brunsberg',
+        highlight: true,
+        badges: [{ type: 'pin', endDate: '2026-11-14' }],
         title: 'Gemeinsam anpacken für die Heide am Brunsberg',
         publishedAt: '2026-10-15',
         topicIds: ['kita-und-schule', 'natur-freizeit'],
@@ -1321,6 +1323,7 @@ export const news: NewsModel[] = [
         id: 'bahn-sperrung-harburg-hamburg-november-2026',
         slug: 'bahn-sperrung-harburg-hamburg-november-2026',
         title: 'Vier Wochen keine Metronom-Züge zwischen Harburg und Hamburg Hbf',
+        highlight: true,
         publishedAt: '2026-10-19',
         topicIds: ['verkehr', 'infrastruktur'],
         summary: [
@@ -1383,6 +1386,8 @@ export const news: NewsModel[] = [
     {
         id: 'haeckselaktion-sproetze-2026',
         slug: 'haeckselaktion-sproetze-2026',
+        highlight: true,
+        badges: [{ type: 'pin', endDate: '2026-11-14' }],
         title: 'Häckselaktion in Sprötze am 14. November',
         publishedAt: '2026-10-30',
         topicIds: ['infrastruktur'],

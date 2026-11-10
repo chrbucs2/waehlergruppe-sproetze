@@ -80,6 +80,8 @@ Typische Inhalte für die Übersichtsseite:
 - Header: `title`, `publishedAt`
 - Themen-Filter: `topicIds`
 - Zusammenfassung: `summary`, `summaryImage`
+- Farbliche Hervorhebung (unabhängig von Badges): `highlight: true`
+- Symbole vor dem Datum: `badges` mit `type: 'pin'` (Pinnadel) oder `type: 'wgs'` (eigenes Logo)
 
 Typische Inhalte für die Detailsseite:
 - Header: `title`, `publishedAt`
@@ -97,6 +99,11 @@ Typische Inhalte für die Detailsseite:
     title: 'Titel für den News-Beitrag',
     publishedAt: '2026-03-18',
     topicIds: ['neubaugebiete', 'verkehr', 'infrastruktur'],
+    highlight: true,
+    badges: [
+        {type: 'pin', startDate: '2026-11-10', endDate: '2026-11-14'}
+        {type: 'wgs'}
+    ]
     summary: [
         'Dies ist ein einleitender Text für die Übersichtsseite.',
         'Der kann auch über mehrere Absätze gehen und **fett gedruckten Text** enthalten.',
