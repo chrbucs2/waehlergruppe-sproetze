@@ -1269,6 +1269,10 @@ export const news: NewsModel[] = [
             'Beim **Naturpark-Tag am 14. November** lädt die Grundschule Sprötze-Trelde zur gemeinsamen **Heidepflege am Brunsberg** ein.',
             '**Ab 10 Uhr** werden junge Kiefern aus den Heideflächen entfernt. Mitmachen kann jeder – eine **Anmeldung ist nicht erforderlich**.',
         ],
+        summaryImage: {
+            src: '/images/news/brunsberg-herbst.jpeg',
+            alt: 'Kreisel Sprötze',
+        },
         introduction: [
             'Am Samstag, **14. November 2026**, heißt es am Brunsberg wieder gemeinsam anpacken: Die Naturpark-Schule **Grundschule Sprötze-Trelde** beteiligt sich am 15. Naturpark-Tag und organisiert eine **Pflegeaktion in der Heide**.',
             'Dabei werden vor allem junge Kieferntriebe entfernt, damit die offene Heidelandschaft erhalten bleibt. Die Aktion beginnt um **10 Uhr** und dauert etwa zwei Stunden.',
