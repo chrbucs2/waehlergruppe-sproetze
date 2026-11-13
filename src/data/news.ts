@@ -800,7 +800,7 @@ export const news: NewsModel[] = [
         },
         articleLink: {
             slug: 'niedersachsenstrasse-13-wohnungsbau',
-            text: 'Bebaungsplan Niedersachsenstraße 13'
+            text: 'Bebauungsplan Niedersachsenstraße 13',
         },
     },
     {
@@ -1529,6 +1529,10 @@ export const news: NewsModel[] = [
         summaryImage: {
             src: '/images/news/niedersachsenstrasse-13.jpeg',
             alt: 'Altbestand in der Niedersachsenstrasse 13',
+        },
+        articleLink: {
+            slug: 'niedersachsenstrasse-13-wohnungsbau',
+            text: 'Bebaungsplan Niedersachsenstraße 13'
         },
         introduction: [
             'Für das Grundstück an der Niedersachsenstraße 13 neben dem Edeka sind zwei Mehrfamilienhäuser geplant, die deutlich größer ausfallen sollen, als es der geltende Bebauungsplan erlaubt. Die Stadtverwaltung hält diese Abweichungen für vertretbar.',
