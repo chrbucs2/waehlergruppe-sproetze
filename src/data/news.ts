@@ -1489,8 +1489,7 @@ export const news: NewsModel[] = [
         badges: [{ type: 'wgs' }, { type: 'pin', endDate: '2026-11-14' }],
         summary: [
             '**Ein besonderer Tag für die Wählergruppe Sprötze!** In der konstituierenden Sitzung des Ortsrates am 11. November wurde **Denise Jusinski (WGS) einstimmig zur neuen Ortsbürgermeisterin** gewählt. Auch ihr Stellvertreter **Peter Kröger (WGS)** erhielt alle neun Stimmen.',
-            'Dass beide Kandidaten das **Vertrauen des gesamten Ortsrates** erhalten haben, freut uns ganz besonders. ',
-            '**Wir gratulieren Denise und Peter von Herzen** und freuen uns auf die gemeinsame Arbeit für Sprötze!',
+            'Dass beide Kandidaten das **Vertrauen des gesamten Ortsrates** erhalten haben, freut uns ganz besonders. **Wir gratulieren Denise und Peter von Herzen** und freuen uns auf die gemeinsame Arbeit für Sprötze!',
         ],
         introduction: [
             'Mit einem erfreulichen Ergebnis ist der neue Ortsrat Sprötze in die Wahlperiode 2026 bis 2031 gestartet. **Denise Jusinski und Peter Kröger von der Wählergruppe Sprötze wurden jeweils mit allen neun Stimmen** zur Ortsbürgermeisterin beziehungsweise zum stellvertretenden Ortsbürgermeister gewählt.',
