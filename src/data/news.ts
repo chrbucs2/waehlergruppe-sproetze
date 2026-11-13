@@ -1484,7 +1484,7 @@ export const news: NewsModel[] = [
         slug: 'ortsrat-sproetze-neue-ortsbuergermeisterin-2026',
         title: 'Große Freude bei der WGS: Denise Jusinski ist neue Ortsbürgermeisterin!',
         publishedAt: '2026-11-11',
-        topicIds: ['ortsrat'],
+        topicIds: ['leben-im-dorf'],
         highlight: true,
         badges: [{ type: 'wgs' }, { type: 'pin', endDate: '2026-11-14' }],
         summary: [
