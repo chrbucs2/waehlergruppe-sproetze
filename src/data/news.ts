@@ -1261,7 +1261,6 @@ export const news: NewsModel[] = [
     {
         id: 'naturpark-tag-2026-brunsberg',
         slug: 'naturpark-tag-2026-brunsberg',
-        highlight: true,
         badges: [{ type: 'pin', endDate: '2026-11-14' }],
         title: 'Gemeinsam anpacken für die Heide am Brunsberg',
         publishedAt: '2026-10-15',
@@ -1386,7 +1385,6 @@ export const news: NewsModel[] = [
     {
         id: 'haeckselaktion-sproetze-2026',
         slug: 'haeckselaktion-sproetze-2026',
-        highlight: true,
         badges: [{ type: 'pin', endDate: '2026-11-14' }],
         title: 'Häckselaktion in Sprötze am 14. November',
         publishedAt: '2026-10-30',
