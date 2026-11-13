@@ -39,7 +39,7 @@ export function NewsBadges({ badges }: { badges: NewsBadge[] }) {
                 </span>
             )}
             {wgs && (
-                <span title="Von der WGS angestoßen">
+                <span title="Wählergruppe Sprötze">
                     <img src={assetUrl('logo.png')} alt="Von der WGS angestoßen" />
                 </span>
             )}
