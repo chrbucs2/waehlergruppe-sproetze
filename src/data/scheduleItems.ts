@@ -286,17 +286,26 @@ export const scheduleItems: ScheduleModel[] = [
         title: 'Konstituierende Sitzung des Ortsrates',
         location: 'Schützenhaus Sprötze',
         summary: [
-            'Der neu gewählte Ortsrat Sprötze kommt erstmals zusammen und schafft die organisatorischen Grundlagen für die neue Wahlperiode.',
+            'Der neue Ortsrat Sprötze hat sich konstituiert. **Denise Jusinski von der WGS** wurde mit neun Stimmen zur neuen **Ortsbürgermeisterin** gewählt.',
         ],
         introduction: [
-            'Die Sitzung markiert den Beginn der neuen Wahlperiode des Ortsrates und stellt die organisatorischen Weichen für dessen weitere Arbeit.',
+            'Am 11. November 2026 kam der neu gewählte Ortsrat Sprötze zu seiner konstituierenden Sitzung im Schützenhaus zusammen. Im Mittelpunkt standen die Wahl der Ortsbürgermeisterin und ihrer Stellvertretung sowie die organisatorischen Grundlagen für die neue Wahlperiode.',
+            '**Mit Denise Jusinski übernimmt ein Mitglied der Wählergemeinschaft Sprötze (WGS) das Amt der Ortsbürgermeisterin.**',
         ],
         sections: [
             {
-                title: 'Konstituierung des Ortsrates',
+                title: 'Denise Jusinski zur Ortsbürgermeisterin gewählt',
                 paragraphs: [
-                    'Im Mittelpunkt steht die Konstituierung des neu gewählten Ortsrates.',
-                    'Zu den wesentlichen organisatorischen Aufgaben einer neuen Wahlperiode gehören die Besetzung der vorgesehenen Funktionen und die Festlegung der Grundlagen für die weitere Arbeit des Ortsrates.',
+                    'Der Ortsrat Sprötze hat **Denise Jusinski** von der Wählergemeinschaft Sprötze (WGS) mit **neun Stimmen** zur neuen **Ortsbürgermeisterin** gewählt.',
+                    'Zum **stellvertretenden Ortsbürgermeister wurde Peter Kröger**, ebenfalls Mitglied der WGS, gewählt. Auch er erhielt neun Stimmen.',
+                ],
+            },
+            {
+                title: 'Bauturbo: Ortsrat setzt sich für eine maßvolle Entwicklung ein',
+                paragraphs: [
+                    'Ein weiteres wichtiges Thema war der sogenannte Bauturbo. Am Beispiel geplanter Bauvorhaben in Sprötze wurde deutlich, welche Bedeutung eine sorgfältige Abwägung zwischen zusätzlichem Wohnraum und dem Erhalt des gewachsenen Ortsbildes hat.',
+                    'Insbesondere beim geplanten **Bauvorhaben an der Niedersachsenstraße 13** hat der Ortsrat deutliche **Bedenken gegen weitreichende Abweichungen vom bestehenden Bebauungsplan** geäußert. Dieser wurde unter großer Beteiligung der Öffentlichkeit erarbeitet und bildet eine wichtige Grundlage für die Entwicklung der Sprötzer Ortsmitte.',
+                    'Der Ortsrat stellt sich nicht grundsätzlich gegen neuen Wohnraum, setzt sich jedoch für eine maßvolle und städtebaulich verträgliche Entwicklung ein. Gebäudehöhen, Bebauungsdichte und der dörfliche Charakter sollen dabei ebenso berücksichtigt werden wie die Interessen der Einwohnerinnen und Einwohner. Weitere Einzelheiten zu den Bauvorhaben und den Positionen des Ortsrates werden in einem gesonderten Artikel erläutert.',
                 ],
             },
         ],

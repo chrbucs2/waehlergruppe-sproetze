@@ -1478,5 +1478,78 @@ export const news: NewsModel[] = [
                 ],
             },
         ],
-    }
+    },
+    {
+        id: 'ortsrat-sproetze-neue-ortsbuergermeisterin-2026',
+        slug: 'ortsrat-sproetze-neue-ortsbuergermeisterin-2026',
+        title: 'Große Freude bei der WGS: Denise Jusinski ist neue Ortsbürgermeisterin!',
+        publishedAt: '2026-11-11',
+        topicIds: ['ortsrat'],
+        highlight: true,
+        badges: [{ type: 'wgs' }, { type: 'pin', endDate: '2026-11-14' }],
+        summary: [
+            '**Ein besonderer Tag für die Wählergruppe Sprötze!** In der konstituierenden Sitzung des Ortsrates am 11. November wurde **Denise Jusinski (WGS) einstimmig zur neuen Ortsbürgermeisterin** gewählt. Auch ihr Stellvertreter **Peter Kröger (WGS)** erhielt alle neun Stimmen.',
+            'Dass beide Kandidaten das **Vertrauen des gesamten Ortsrates** erhalten haben, freut uns ganz besonders. ',
+            '**Wir gratulieren Denise und Peter von Herzen** und freuen uns auf die gemeinsame Arbeit für Sprötze!',
+        ],
+        introduction: [
+            'Mit einem erfreulichen Ergebnis ist der neue Ortsrat Sprötze in die Wahlperiode 2026 bis 2031 gestartet. **Denise Jusinski und Peter Kröger von der Wählergruppe Sprötze wurden jeweils mit allen neun Stimmen** zur Ortsbürgermeisterin beziehungsweise zum stellvertretenden Ortsbürgermeister gewählt.',
+            'Für unsere Wählergruppe ist dies ein ganz besonderer Moment. Wir freuen uns über das große Vertrauen, das beide über die Fraktionsgrenzen hinweg erhalten haben.',
+        ],
+        sections: [
+            {
+                title: 'Gemeinsam Verantwortung für Sprötze übernehmen',
+                paragraphs: [
+                    'Denise Jusinski übernimmt als neue Ortsbürgermeisterin eine wichtige Aufgabe: Sie wird Sprötze repräsentieren, die Sitzungen des Ortsrates leiten und sich für die Interessen unserer Ortschaft einsetzen. Mit Peter Kröger steht ihr ein erfahrenes Ortsratsmitglied als Stellvertreter zur Seite.',
+                    'Die **einstimmige Wahl beider Kandidaten** ist ein schöner Auftakt für die neue Wahlperiode. Wir hoffen, dass dieses Miteinander auch die zukünftige Arbeit im Ortsrat prägen wird – unabhängig von Parteizugehörigkeiten und immer mit dem Blick auf das Wohl unseres Dorfes.',
+                ],
+            },
+            {
+                title: 'Herzlichen Glückwunsch und vielen Dank!',
+                paragraphs: [
+                    '**Liebe Denise, lieber Peter: Wir gratulieren euch herzlich zu eurer Wahl!**',
+                    'Wir wünschen euch viel Erfolg, Freude und eine glückliche Hand bei den kommenden Aufgaben. Wir sind stolz darauf, dass ihr beide aus unseren Reihen kommt.',
+                    'Ein herzliches Dankeschön gilt auch der bisherigen Ortsbürgermeisterin **Heidemarie Micheel** für ihren Einsatz für Sprötze.',
+                    'Wir freuen uns darauf, die Zukunft unseres Dorfes in den kommenden fünf Jahren gemeinsam mitzugestalten!',
+                ],
+            },
+        ],
+    },
+    {
+        id: 'ortsrat-sproetze-bauturbo-niedersachsenstrasse-13',
+        slug: 'ortsrat-sproetze-bauturbo-niedersachsenstrasse-13',
+        title: 'Ortsrat setzt klares Zeichen für Sprötzes Ortsmitte',
+        publishedAt: '2026-11-11',
+        highlight: true,
+        badges: [{ type: 'pin', endDate: '2026-11-14' }],
+        topicIds: ['ortsmitte'],
+        summary: [
+            'Der **Ortsrat Sprötze** stellt sich **fraktionsübergreifend gegen die geplante überdimensionierte Bebauung** an der Niedersachsenstraße 13. In seiner Sitzung am 11. November beschäftigte er sich mit dem Vorhaben und den erheblichen Abweichungen vom geltenden Bebauungsplan.',
+            'Mit einer **ausführlich begründeten Stellungnahme** setzt sich der Ortsrat dafür ein, dass der **dörfliche Charakter der Ortsmitte erhalten bleibt** und die ursprünglich gemeinsam mit den Bürgern erarbeiteten **Planungsziele nicht durch** den sogenannten „Bauturbo übergangen“ werden.',
+        ],
+        summaryImage: {
+            src: '/images/news/niedersachsenstrasse-13.jpeg',
+            alt: 'Altbestand in der Niedersachsenstrasse 13',
+        },
+        introduction: [
+            'Für das Grundstück an der Niedersachsenstraße 13 neben dem Edeka sind zwei Mehrfamilienhäuser geplant, die deutlich größer ausfallen sollen, als es der geltende Bebauungsplan erlaubt. Die Stadtverwaltung hält diese Abweichungen für vertretbar.',
+            'Der Ortsrat sieht das anders und hat seine **Bedenken fraktionsübergreifend in einer ausführlichen Stellungnahme** begründet. Dabei geht es nicht darum, neuen Wohnraum zu verhindern, sondern um eine Bebauung, die zur Sprötzer Ortsmitte passt.',
+        ],
+        sections: [
+            {
+                title: 'Gemeinsam für eine maßvolle Entwicklung',
+                paragraphs: [
+                    'Der Ortsrat erinnert daran, dass der **Bebauungsplan von 2016 unter großer Beteiligung der Sprötzer Bürger erarbeitet** wurde. Die darin festgelegten **Gebäudehöhen, Geschosszahlen und Baugrenzen sollen den dörflichen Charakter schützen**. Diese Vorgaben dürfen nach Auffassung des Ortsrates nicht ohne überzeugende Gründe aufgegeben werden.',
+                    '**Besonders erfreulich ist die gemeinsame Haltung über die politischen Grenzen hinweg.** Der Ortsrat zeigt damit, wie wichtig eine sachliche und engagierte Vertretung der Interessen Sprötzes ist.',
+                ],
+            },
+            {
+                title: 'Bedenken sollen bei der Entscheidung zählen',
+                paragraphs: [
+                    'Der Ortsrat fordert die Stadt Buchholz auf, **die beantragte Zustimmung zu den Abweichungen nicht zu erteilen**. Seine Stellungnahme soll dem zuständigen Verwaltungsausschuss vollständig vorgelegt, öffentlich zugänglich gemacht und dort durch die Ortsbürgermeisterin vertreten werden.',
+                    'Die endgültige Entscheidung liegt beim Verwaltungsausschuss. Der **Ortsrat** hat mit seiner sorgfältigen Arbeit jedoch eine wichtige **Grundlage geschaffen**, damit die **Interessen Sprötzes bei dieser Entscheidung Gehör finden**.',
+                ],
+            },
+        ],
+    },
 ];
