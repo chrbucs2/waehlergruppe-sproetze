@@ -1322,7 +1322,6 @@ export const news: NewsModel[] = [
         id: 'bahn-sperrung-harburg-hamburg-november-2026',
         slug: 'bahn-sperrung-harburg-hamburg-november-2026',
         title: 'Vier Wochen keine Metronom-Züge zwischen Harburg und Hamburg Hbf',
-        highlight: true,
         publishedAt: '2026-10-19',
         topicIds: ['verkehr', 'infrastruktur'],
         summary: [
