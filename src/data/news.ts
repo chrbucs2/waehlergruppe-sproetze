@@ -1521,7 +1521,7 @@ export const news: NewsModel[] = [
         topicIds: ['ortsmitte'],
         summary: [
             'Der **Ortsrat Sprötze** stellt sich **fraktionsübergreifend gegen die geplante überdimensionierte Bebauung** an der Niedersachsenstraße 13. In seiner Sitzung am 11. November beschäftigte er sich mit dem Vorhaben und den erheblichen Abweichungen vom geltenden Bebauungsplan.',
-            'Mit einer **ausführlich begründeten Stellungnahme** setzt sich der Ortsrat dafür ein, dass der **dörfliche Charakter der Ortsmitte erhalten bleibt** und die ursprünglich gemeinsam mit den Bürgern erarbeiteten **Planungsziele nicht durch** den sogenannten „Bauturbo übergangen“ werden.',
+            'Mit einer **ausführlich begründeten Stellungnahme** setzt sich der Ortsrat dafür ein, dass der **dörfliche Charakter der Ortsmitte erhalten bleibt** und die ursprünglich gemeinsam mit den Bürgern erarbeiteten **Planungsziele nicht durch** den sogenannten **„Bauturbo übergangen“** werden.',
         ],
         summaryImage: {
             src: '/images/news/niedersachsenstrasse-13.jpeg',
