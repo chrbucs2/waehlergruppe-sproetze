@@ -1,88 +1,31 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import vm from 'node:vm';
+import { createServer } from 'vite';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(__dirname, '..');
 const distDir = path.join(repoRoot, 'dist');
 
-const siteOrigin = 'https://xn--whlergruppe-sprtze-ltb88a.de';
-const siteName = 'Wählergruppe Sprötze';
-const defaultDescription = 'Unabhängige Kommunalpolitik für Sprötze.';
+async function loadBuildModules() {
+    const server = await createServer({
+        root: repoRoot,
+        server: { middlewareMode: true, hmr: false },
+        appType: 'custom',
+    });
 
-async function readFile(relativePath) {
-    return fs.readFile(path.join(repoRoot, relativePath), 'utf8');
-}
-
-function extractSection(source, exportName) {
-    const marker = `export const ${exportName}`;
-    const markerIndex = source.indexOf(marker);
-
-    if (markerIndex === -1) {
-        throw new Error(`Could not find export "${exportName}"`);
+    try {
+        const [{ news }, { articles }, { scheduleItems }, { renderPage }, seo] = await Promise.all([
+            server.ssrLoadModule('/src/data/content/news/index.ts'),
+            server.ssrLoadModule('/src/data/content/articles/index.ts'),
+            server.ssrLoadModule('/src/data/content/scheduleItems/index.ts'),
+            server.ssrLoadModule('/src/prerender.tsx'),
+            server.ssrLoadModule('/src/lib/seoMetadata.ts'),
+        ]);
+        return { news, articles, scheduleItems, renderPage, seo };
+    } finally {
+        await server.close();
     }
-
-    const assignmentIndex = source.indexOf('=', markerIndex);
-    const arrayStart = source.indexOf('[', assignmentIndex);
-    if (arrayStart === -1) {
-        throw new Error(`Could not find array start for "${exportName}"`);
-    }
-
-    let depth = 0;
-    let inSingleQuote = false;
-    let inDoubleQuote = false;
-    let inTemplateString = false;
-    let isEscaped = false;
-
-    for (let index = arrayStart; index < source.length; index += 1) {
-        const character = source[index];
-
-        if (isEscaped) {
-            isEscaped = false;
-            continue;
-        }
-
-        if (character === '\\') {
-            isEscaped = true;
-            continue;
-        }
-
-        if (!inDoubleQuote && !inTemplateString && character === '\'') {
-            inSingleQuote = !inSingleQuote;
-            continue;
-        }
-
-        if (!inSingleQuote && !inTemplateString && character === '"') {
-            inDoubleQuote = !inDoubleQuote;
-            continue;
-        }
-
-        if (!inSingleQuote && !inDoubleQuote && character === '`') {
-            inTemplateString = !inTemplateString;
-            continue;
-        }
-
-        if (inSingleQuote || inDoubleQuote || inTemplateString) {
-            continue;
-        }
-
-        if (character === '[') {
-            depth += 1;
-        } else if (character === ']') {
-            depth -= 1;
-            if (depth === 0) {
-                return source.slice(arrayStart, index + 1);
-            }
-        }
-    }
-
-    throw new Error(`Could not find array end for "${exportName}"`);
-}
-
-function parseDataArray(source, exportName) {
-    const section = extractSection(source, exportName);
-    return vm.runInNewContext(`(${section})`);
 }
 
 function hasDetailContent(item) {
@@ -97,39 +40,19 @@ function escapeHtml(value) {
         .replaceAll('"', '&quot;');
 }
 
-function buildSeoTags({ title, description, canonicalPath }) {
-    const fullTitle = `${title} | ${siteName}`;
-    const fullUrl = `${siteOrigin}${canonicalPath}`;
-    const safeDescription = escapeHtml(description || defaultDescription);
-    const safeTitle = escapeHtml(fullTitle);
-    const safeUrl = escapeHtml(fullUrl);
-
-    return [
-        `<title>${safeTitle}</title>`,
-        `<meta name="description" content="${safeDescription}" />`,
-        '<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />',
-        `<link rel="canonical" href="${safeUrl}" />`,
-        `<meta property="og:title" content="${safeTitle}" />`,
-        `<meta property="og:description" content="${safeDescription}" />`,
-        `<meta property="og:url" content="${safeUrl}" />`,
-        `<meta name="twitter:title" content="${safeTitle}" />`,
-        `<meta name="twitter:description" content="${safeDescription}" />`,
-    ].join('\n    ');
-}
-
-function replaceSeo(baseHtml, seo) {
-    const tags = buildSeoTags(seo);
+function replaceSeo(baseHtml, seo, metadata) {
+    const { buildSeoTitle, DEFAULT_DESCRIPTION: defaultDescription, SITE_ORIGIN: siteOrigin } = metadata;
 
     return baseHtml
-        .replace(/<title>[\s\S]*?<\/title>/, `<title>${escapeHtml(`${seo.title} | ${siteName}`)}</title>`)
-        .replace(/<meta name="description" content="[\s\S]*?" \/>/, `<meta name="description" content="${escapeHtml(seo.description || defaultDescription)}" />`)
+        .replace(/<title>[\s\S]*?<\/title>/, () => `<title>${escapeHtml(buildSeoTitle(seo.title))}</title>`)
+        .replace(/<meta name="description" content="[\s\S]*?" \/>/, () => `<meta name="description" content="${escapeHtml(seo.description || defaultDescription)}" />`)
         .replace(/<meta name="robots" content="[\s\S]*?" \/>/, '<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />')
-        .replace(/<link rel="canonical" href="[\s\S]*?" \/>/, `<link rel="canonical" href="${escapeHtml(`${siteOrigin}${seo.canonicalPath}`)}" />`)
-        .replace(/<meta property="og:title" content="[\s\S]*?" \/>/, `<meta property="og:title" content="${escapeHtml(`${seo.title} | ${siteName}`)}" />`)
-        .replace(/<meta property="og:description" content="[\s\S]*?" \/>/, `<meta property="og:description" content="${escapeHtml(seo.description || defaultDescription)}" />`)
-        .replace(/<meta property="og:url" content="[\s\S]*?" \/>/, `<meta property="og:url" content="${escapeHtml(`${siteOrigin}${seo.canonicalPath}`)}" />`)
-        .replace(/<meta name="twitter:title" content="[\s\S]*?" \/>/, `<meta name="twitter:title" content="${escapeHtml(`${seo.title} | ${siteName}`)}" />`)
-        .replace(/<meta name="twitter:description" content="[\s\S]*?" \/>/, `<meta name="twitter:description" content="${escapeHtml(seo.description || defaultDescription)}" />`);
+        .replace(/<link rel="canonical" href="[\s\S]*?" \/>/, () => `<link rel="canonical" href="${escapeHtml(`${siteOrigin}${seo.canonicalPath}`)}" />`)
+        .replace(/<meta property="og:title" content="[\s\S]*?" \/>/, () => `<meta property="og:title" content="${escapeHtml(buildSeoTitle(seo.title))}" />`)
+        .replace(/<meta property="og:description" content="[\s\S]*?" \/>/, () => `<meta property="og:description" content="${escapeHtml(seo.description || defaultDescription)}" />`)
+        .replace(/<meta property="og:url" content="[\s\S]*?" \/>/, () => `<meta property="og:url" content="${escapeHtml(`${siteOrigin}${seo.canonicalPath}`)}" />`)
+        .replace(/<meta name="twitter:title" content="[\s\S]*?" \/>/, () => `<meta name="twitter:title" content="${escapeHtml(buildSeoTitle(seo.title))}" />`)
+        .replace(/<meta name="twitter:description" content="[\s\S]*?" \/>/, () => `<meta name="twitter:description" content="${escapeHtml(seo.description || defaultDescription)}" />`);
 }
 
 async function writeRoute(routePath, html) {
@@ -140,28 +63,23 @@ async function writeRoute(routePath, html) {
 }
 
 async function main() {
-    const [newsSource, articlesSource, scheduleSource] = await Promise.all([
-        readFile('src/data/news.ts'),
-        readFile('src/data/articles.ts'),
-        readFile('src/data/scheduleItems.ts'),
-    ]);
-    const news = parseDataArray(newsSource, 'news');
-    const articles = parseDataArray(articlesSource, 'articles');
-    const scheduleItems = parseDataArray(scheduleSource, 'scheduleItems');
+    const { news, articles, scheduleItems, renderPage, seo } = await loadBuildModules();
+    const siteOrigin = seo.SITE_ORIGIN;
 
     const baseHtml = await fs.readFile(path.join(distDir, 'index.html'), 'utf8');
+
+    if (!baseHtml.includes('<div id="root"></div>') || !baseHtml.includes('</head>')) {
+        throw new Error('Build template is missing the prerender root or head closing tag');
+    }
 
     const routes = [
         {
             path: '/',
-            title: 'Wählergruppe Sprötze',
-            description: 'Offizielle Website der Wählergruppe Sprötze mit Positionen, Team und Kontakten zur unabhängigen Kommunalpolitik vor Ort.',
+            ...seo.HOME_SEO,
         },
         {
             path: '/sproetze-aktuell',
-            canonicalPath: '/sproetze-aktuell/',
-            title: 'Sprötze aktuell',
-            description: 'Aktuelle Nachrichten und Meldungen der Wählergruppe Sprötze.',
+            ...seo.NEWS_SEO,
         },
         ...news
             .filter((item) => !item.hidden)
@@ -197,12 +115,16 @@ async function main() {
     ];
 
     for (const route of routes) {
-        const html = replaceSeo(baseHtml, {
+        const { html: content, styles } = renderPage(route.path);
+        const pageHtml = baseHtml
+            .replace('<div id="root"></div>', () => `<div id="root">${content}</div>`)
+            .replace('</head>', () => `${styles}\n  </head>`);
+        const html = replaceSeo(pageHtml, {
             title: route.title,
             description: route.description,
             canonicalPath: route.canonicalPath ?? route.path,
-        });
-        await writeRoute(route.filePath ?? route.path, html);
+        }, seo);
+        await writeRoute(route.path, html);
     }
 
     const sitemapEntries = routes.map((route) => `  <url><loc>${siteOrigin}${route.canonicalPath ?? route.path}</loc></url>`).join('\n');

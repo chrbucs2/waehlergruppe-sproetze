@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import Link from '../common/link/Link';
 import { Eyebrow } from '../common/Eyebrow';
-import { NewsBadges } from '../common/NewsBadges';
+import { NewsBadges } from '../common/badge/NewsBadges';
 import { MainSectionCardImage } from './MainSectionCardImage';
 import {buildArticleUrl, buildNewsDetailUrl, buildScheduleDetailUrl} from '../../lib/content';
 import { formatDate, formatInlineMarkup } from '../../lib/formatting';

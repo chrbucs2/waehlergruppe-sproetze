@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import { assetUrl } from '../../lib/formatting';
-import type { NewsBadge } from '../../models/pages/NewsModel';
+import { assetUrl } from '../../../lib/formatting';
+import type { NewsBadge } from '../../../models/pages/NewsModel';
 
 const Symbols = styled.span`
     display: inline-flex;

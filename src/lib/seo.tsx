@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { ensureTrailingSlash } from './routing';
+import { buildSeoTitle, DEFAULT_DESCRIPTION, SITE_ORIGIN } from './seoMetadata';
 
 type SeoOptions = {
     title: string;
@@ -7,10 +8,6 @@ type SeoOptions = {
     canonicalPath: string;
     noindex?: boolean;
 };
-
-const SITE_NAME = 'Wählergruppe Sprötze';
-const SITE_ORIGIN = 'https://xn--whlergruppe-sprtze-ltb88a.de';
-const DEFAULT_DESCRIPTION = 'Unabhängige Kommunalpolitik für Sprötze.';
 
 function setMeta(name: string, content: string) {
     const selector = `meta[name="${name}"]`;
@@ -52,7 +49,7 @@ function setCanonical(href: string) {
 
 export function useSeo({ title, description, canonicalPath, noindex = false }: SeoOptions) {
     useEffect(() => {
-        const fullTitle = `${title} | ${SITE_NAME}`;
+        const fullTitle = buildSeoTitle(title);
         const fullUrl = `${SITE_ORIGIN}${ensureTrailingSlash(canonicalPath)}`;
 
         document.title = fullTitle;

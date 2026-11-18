@@ -1,4 +1,4 @@
-import { NewsModel } from '../models/pages/NewsModel';
+import { NewsModel } from '../../../models/pages/NewsModel';
 
 export const news: NewsModel[] = [
     {
@@ -1261,7 +1261,6 @@ export const news: NewsModel[] = [
     {
         id: 'naturpark-tag-2026-brunsberg',
         slug: 'naturpark-tag-2026-brunsberg',
-        badges: [{ type: 'pin', endDate: '2026-11-14' }],
         title: 'Gemeinsam anpacken für die Heide am Brunsberg',
         publishedAt: '2026-10-15',
         topicIds: ['kita-und-schule', 'natur-freizeit'],
@@ -1388,7 +1387,6 @@ export const news: NewsModel[] = [
     {
         id: 'haeckselaktion-sproetze-2026',
         slug: 'haeckselaktion-sproetze-2026',
-        badges: [{ type: 'pin', endDate: '2026-11-14' }],
         title: 'Häckselaktion in Sprötze am 14. November',
         publishedAt: '2026-10-30',
         topicIds: ['infrastruktur'],
@@ -1397,7 +1395,7 @@ export const news: NewsModel[] = [
             'In Sprötze stehen folgende Straßen auf dem Tourenplan: Am Holzplatz, Bgm.-Kröger-Straße, Brunsbergweg, Ginsterweg, Hubertusweg, Sanddornweg, Sanderfeld, Schwarzer Weg und Vogelbeerenweg.',
         ],
         articleLink: {
-            href: 'https://www.buchholz.de/downloads/datei/Nzg5ODZjM2FlYTlkY2JkYnZiRkszNnVpcTZEVUpiakJzWW82ZVl6bkFoSGg3SUt1R3YxcmVMcTB5M21XWUdYRWV4ci9nTWUraHNoams3UEY2WkFOM2JWZCt2amViTFRhd3JmYmEyV0J6NXVNd094a2VZZ3hxNXZvbFlOR0xnaW9CWno5MVBEd011UDhncVUxbmRGRHREN0pDV2NxOXo5a2JpaHdXbXdUbUJucGx2Z2lFZ29NQXhVUFBubz0',
+            href: 'https://www.buchholz.de/portal/meldungen/zeitplan-der-haeckselaktion-903006891-20101.html',
             text: 'Zum Zeitplan der Häckselaktion',
         },
     },

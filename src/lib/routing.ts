@@ -33,6 +33,10 @@ export function getPathFromLocation() {
 }
 
 export function getSearchFromLocation() {
+    if (typeof window === 'undefined') {
+        return '';
+    }
+
     const params = new URLSearchParams(window.location.search);
     const redirectedSearch = params.get('q');
 
@@ -40,6 +44,10 @@ export function getSearchFromLocation() {
 }
 
 export function getQueryParam(name: string) {
+    if (typeof window === 'undefined') {
+        return null;
+    }
+
     const params = new URL(window.location.href).searchParams;
 
     if (!params.has(name)) {
@@ -53,6 +61,10 @@ const DEFAULT_PRESERVED_QUERY_PARAMS = ['internal'];
 export function buildHrefWithPreservedQuery(href: string) {
     if (!href || href.startsWith('http')) {
         return href;
+    }
+
+    if (typeof window === 'undefined') {
+        return ensureTrailingSlash(href);
     }
 
     const url = new URL(href, window.location.origin);

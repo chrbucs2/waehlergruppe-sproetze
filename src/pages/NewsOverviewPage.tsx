@@ -12,6 +12,7 @@ import { MainSectionContainer } from '../components/mainsection/MainSectionConta
 import { useActiveNewsBadges } from '../lib/useActiveNewsBadges';
 import { useQueryParamState } from '../lib/routing';
 import { useSeo } from '../lib/seo';
+import { NEWS_SEO } from '../lib/seoMetadata';
 import { NewsModel } from '../models/pages/NewsModel';
 import { buildScheduleOverviewUrl } from '../lib/content';
 
@@ -49,9 +50,9 @@ export function NewsOverviewPage({
     );
 
     useSeo({
-        title: selectedTopic ? `News zu ${selectedTopic.label}` : 'Sprötze aktuell',
-        description: selectedTopic?.description ?? 'Aktuelle Nachrichten und Meldungen der Wählergruppe Sprötze.',
-        canonicalPath: selectedTopic ? `/sproetze-aktuell?thema=${selectedTopic.id}` : '/sproetze-aktuell',
+        title: selectedTopic ? `News zu ${selectedTopic.label}` : NEWS_SEO.title,
+        description: selectedTopic?.description ?? NEWS_SEO.description,
+        canonicalPath: selectedTopic ? `/sproetze-aktuell?thema=${selectedTopic.id}` : NEWS_SEO.canonicalPath,
     });
 
     // filter news items based on the selected topic
@@ -79,8 +80,8 @@ export function NewsOverviewPage({
         <>
             <HeadSectionWithLogo
                 eyebrow="Sprötze aktuell"
-                title="News und Themen aus Sprötze"
-                lead="Hier pflegen wir aktuelle Meldungen zentral an einer Stelle."
+                title="Nachrichten und Aktuelles aus Sprötze"
+                lead="Aktuelles aus Sprötze: Nachrichten zu Ortsrat, Verkehr, Schulen und Dorfentwicklung – zusammengestellt und eingeordnet von der Wählergruppe Sprötze."
                 actions={[
                     { href: '/', label: 'Zur WGS Startseite', variant: 'primary' },
                     { href: buildScheduleOverviewUrl(), label: 'Zur Terminseite', variant: 'secondary' },

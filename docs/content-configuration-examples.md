@@ -1,10 +1,29 @@
 # Content-Konfiguration: articles, news und scheduleItems
 
-Diese drei Dateien bilden die redaktionelle Struktur der Seite:
+Diese drei Inhaltsbereiche unter `src/data/content/` bilden die redaktionelle Struktur der Seite:
 
 - `articles`: ausführliche Hintergrundartikel mit eigener Detailseite
 - `news`: Kurzmeldungen mit optionaler Detailseite oder Verlinkung auf Artikel und externe Quellen
 - `scheduleItems`: Sitzungs- und Terminobjekte mit Zusammenfassung, Detailabschnitten und Quellen
+
+Die bestehenden Inhalte liegen in `articles/articles.ts`, `news/news.ts` und
+`scheduleItems/scheduleItems.ts`. Jeder Unterordner besitzt eine `index.ts`, die
+die Inhaltsdateien zu einem gemeinsamen Array bündelt.
+
+Für eine spätere Aufteilung kann beispielsweise `news/weitereNews.ts` ein typisiertes
+Array `weitereNews: NewsModel[]` exportieren. Dieses wird in `news/index.ts` ergänzt:
+
+```ts
+import { news as newsItems } from './news';
+import { weitereNews } from './weitereNews';
+
+export const news = [...newsItems, ...weitereNews];
+```
+
+Für Artikel und Termine gilt das gleiche Muster. IDs und Slugs müssen innerhalb
+des jeweiligen Inhaltsbereichs eindeutig bleiben. Bestehende Einträge beim
+Aufteilen verschieben, nicht kopieren. Seiten, statische Detailseiten und Sitemap
+verwenden automatisch das gebündelte Array.
 
 ## 1. `articles`
 
@@ -22,12 +41,12 @@ Typische Inhalte:
 ```js
 {
     id: 'bebauungsplan-sproetzer-weg',
-        slug: 'bebauungsplan-sproetzer-weg',
-        title: 'Titel für den Artikel',
-        publishedAt: '2026-05-06',
-        modifiedAt: '2026-05-20',
-        category: 'Sitzungskategory wie "Ortsrat"',
-        introduction: [
+    slug: 'bebauungsplan-sproetzer-weg',
+    title: 'Titel für den Artikel',
+    publishedAt: '2026-05-06',
+    modifiedAt: '2026-05-20',
+    category: 'Sitzungskategory wie "Ortsrat"',
+    introduction: [
         'Dies ist ein einleitender Text.',
         'Der kann auch über mehrere Absätze gehen und **fett gedruckten Text** enthalten.',
     ],

@@ -73,17 +73,26 @@ Rechtliche Texte:
 - `impressum`: Impressum-Inhalte (Überschriften, Texte)
 - `datenschutz`: Datenschutzerklärung (DSGVO-konform)
 
-### `filterTopics.js`
+### `content/filterTopics/`
 Themenbereiche für `/sprötze-aktuell`.
+Die Inhalte liegen zunächst in `filterTopics.ts`; `index.ts` bündelt die Inhaltsdateien.
 
-### `news.js`
+### `content/news/`
 News-Beiträge mit Datum, Kurztext, optionaler Detailsseite, Themen und optionalem Overview-Teaserbild (`summaryImage`).
+Die Inhalte liegen zunächst in `news.ts`; `index.ts` bündelt die Inhaltsdateien.
 
-### `articles.js`
+### `content/articles/`
 Übergreifende Artikelseiten mit ausführlicher Einleitung, Sections, Bildern, Themen und Quellenangaben.
+Die Inhalte liegen zunächst in `articles.ts`; `index.ts` bündelt die Inhaltsdateien.
 
-### `scheduleItems.js`
+### `content/scheduleItems/`
 Relevante Sitzungstermine mit Summary, Details, Ergebnissen, optionalem Link und optionalem Overview-Teaserbild (`summaryImage`).
+Die Inhalte liegen zunächst in `scheduleItems.ts`; `index.ts` bündelt die Inhaltsdateien.
+
+Weitere Inhaltsdateien werden im jeweiligen Unterordner angelegt und in dessen `index.ts`
+importiert und per Spread in das gemeinsame Array aufgenommen. Die Imports der Seiten
+über `src/data/index.ts` bleiben unverändert. Auch die Generierung statischer Seiten
+und der Sitemap verwendet diese gebündelten Arrays.
 
 Zentrale Inhalte für `/sprötze-aktuell`:
 

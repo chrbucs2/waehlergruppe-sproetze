@@ -5,6 +5,7 @@ import { candidates, electionResults, priorities, teamMembers } from '../data';
 import { NEWS_PATH } from '../lib/constants';
 import { assetUrl } from '../lib/formatting';
 import { useSeo } from '../lib/seo';
+import { HOME_SEO } from '../lib/seoMetadata';
 import styled from "styled-components";
 import {SiteFooter} from "../components/SiteFooter";
 
@@ -37,11 +38,7 @@ function hasIconImage(detail: TeamMemberDetail): detail is TeamMemberDetail & { 
 }
 
 export function HomePage({ onShowImpressum, onShowDatenschutz }: HomePageProps) {
-    useSeo({
-        title: 'Wählergruppe Sprötze',
-        description: 'Offizielle Website der Wählergruppe Sprötze mit Positionen, Team und Kontakten zur unabhängigen Kommunalpolitik vor Ort.',
-        canonicalPath: '/',
-    });
+    useSeo(HOME_SEO);
 
     const [activePriority, setActivePriority] = useState<(typeof priorities)[number]>(priorities[0]);
     const [activeCandidate, setActiveCandidate] = useState<Candidate>(candidates[0]);
@@ -134,10 +131,10 @@ export function HomePage({ onShowImpressum, onShowDatenschutz }: HomePageProps) 
 
                 <div className="hero__copy">
                     <p className="eyebrow">Unabhängige Kommunalpolitik für Sprötze</p>
-                    <h1>Unsere Wählergruppe</h1>
+                    <h1>Wählergruppe Sprötze – WGS</h1>
                     <p className="lead">
-                        Wir engagieren uns für Sprötze: unabhängige Kommunalpolitik, klare Positionen und aktuelle Themen
-                        rund um Ort, Ortsrat und Dorfentwicklung.
+                        Wir engagieren uns für Sprötze, Ortsteil von Buchholz in der Nordheide: unabhängige Kommunalpolitik,
+                        klare Positionen und aktuelle Themen rund um Ort, Ortsrat und Dorfentwicklung.
                     </p>
 
                     <article className="hero__group">

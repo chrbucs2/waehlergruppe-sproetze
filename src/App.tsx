@@ -10,8 +10,12 @@ import { NEWS_PATH, SCHEDULE_PATH, THANK_YOU_MODAL_STORAGE_KEY } from './lib/con
 import { getArticleBySlug, getNewsItemBySlug } from './lib/content';
 import { getPathFromLocation, getSearchFromLocation, normalizePath } from './lib/routing';
 
-function App() {
-    const [currentPath, setCurrentPath] = useState(getPathFromLocation);
+interface AppProps {
+    initialPath?: string;
+}
+
+function App({ initialPath }: AppProps) {
+    const [currentPath, setCurrentPath] = useState(() => initialPath ? normalizePath(initialPath) : getPathFromLocation());
     const [search, setSearch] = useState(getSearchFromLocation);
     const [showImpressum, setShowImpressum] = useState(false);
     const [showDatenschutz, setShowDatenschutz] = useState(false);
