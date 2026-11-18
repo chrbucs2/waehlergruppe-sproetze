@@ -1554,4 +1554,35 @@ export const news: NewsModel[] = [
             },
         ],
     },
+    {
+        id: 'sproetzer-heide-schoppern-2026',
+        slug: 'sproetzer-heide-schoppern-2026',
+        title: 'Kahle Flächen in der Sprötzer Heide – damit die Heide wieder blühen kann',
+        publishedAt: '2026-11-13',
+        topicIds: ['natur'],
+        summary: [
+            'Wer derzeit durch die **Sprötzer Heide** spaziert, wird sich wundern: Auf großen Flächen ist von der vertrauten Heidelandschaft kaum noch etwas zu sehen. Der Landkreis Harburg hat auf rund **12.000 Quadratmetern** die alte **Vegetation samt oberster Bodenschicht entfernt**. Was zunächst wie eine Zerstörung aussieht, soll die **Heide langfristig retten**.',
+        ],
+        introduction: [
+            'Die **Sprötzer Heide**, oft als kleine Schwester des Brunsbergs bezeichnet, ist ein beliebtes Ausflugsziel und wertvoller Lebensraum für zahlreiche Tier- und Pflanzenarten. Doch in den vergangenen Jahren hat der **Heideblattkäfer** den überalterten **Heidepflanzen stark zugesetzt**. Immer **größere Flächen der Besenheide starben ab**. Ohne Gegenmaßnahmen drohten bereits 2027 weitere erhebliche Verluste.',
+            'Deshalb hat der Landkreis Harburg nun eine umfangreiche **Pflegemaßnahme** durchgeführt, das sogenannte **Schoppern**.',
+        ],
+        sections: [
+            {
+                title: 'Was bedeutet Schoppern?',
+                paragraphs: [
+                    'Beim Schoppern werden alte und geschädigte Heidepflanzen zusammen mit der obersten Bodenschicht abgetragen. Dadurch entstehen zunächst kahle Flächen. Aus verbliebenen Pflanzen und Samen im Boden soll sich anschließend eine neue, gesunde Heidevegetation entwickeln.',
+                    'Bis die Sprötzer Heide wieder in ihrem typischen Lila erstrahlt, ist allerdings Geduld gefragt: **Mit den ersten neuen Heideblüten wird in etwa zwei Jahren gerechnet.**',
+                ],
+            },
+            {
+                title: 'Ein wichtiger Lebensraum wird erhalten',
+                paragraphs: [
+                    'Die Maßnahmen dienen nicht nur dem Erhalt einer schönen Landschaft. Die Sprötzer Heide ist Teil des **Biotopverbunds Nordheide**, der wertvolle Lebensräume von Hamburg bis in die Lüneburger Heide miteinander verbindet. Davon profitieren insbesondere seltene und geschützte Tier- und Pflanzenarten.',
+                    'Auch wenn die Heide momentan ungewohnt kahl aussieht, besteht damit die Chance, dass sie sich in den kommenden Jahren wieder zu einer blühenden Heidelandschaft entwickelt.',
+                    'Weitere Informationen gibt es beim [Landkreis Harburg](https://www.landkreis-harburg.de/portal/meldungen/neue-perspektiven-fuer-die-sproetzer-heide-901011056-20100.html?rubrik=1000042) und im [Kreiszeitung Wochenblatt](https://www.kreiszeitung-wochenblatt.de/buchholz/c-panorama/umfangreiche-pflegemassnahmen-retten-die-sproetzer-heide_a428419).',
+                ],
+            },
+        ],
+    },
 ];
