@@ -1585,4 +1585,56 @@ export const news: NewsModel[] = [
             },
         ],
     },
+    {
+        id: 'wgs-wir-bleiben-dran-2026',
+        slug: 'wgs-wir-bleiben-dran-2026',
+        title: 'Wir bleiben dran – nicht erst wieder in fünf Jahren!',
+        publishedAt: '2026-11-19',
+        topicIds: ['ortsrat'],
+        highlight: true,
+        badges: [
+            { type: 'wgs' },
+        ],
+        summary: [
+            '**Die Wahl ist vorbei – unser Engagement für Sprötze geht weiter!** Wir möchten nicht erst zur nächsten Kommunalwahl wieder von uns hören lassen. Als Wählergruppe bleiben wir aktiv, begleiten die Arbeit des Ortsrates und möchten große wie kleine Projekte in unserem Dorf unterstützen.',
+            'Ein erstes Versprechen haben wir bereits angepackt: Mit **„Sprötze Aktuell“** machen wir Informationen, Planungen und Entscheidungen rund um unseren Ort verständlich und für alle zugänglich.',
+        ],
+        summaryImage: {
+            src: 'logo.png',
+            alt: 'Wählergruppe Sprötze',
+        },
+        introduction: [
+            'Nach der Kommunalwahl und dem Start des neuen Ortsrates stellt sich für uns eine wichtige Frage: **Wie geht es mit der Wählergruppe Sprötze weiter?**',
+            'Unsere Antwort ist klar: **Wir bleiben am Ball!** Wir verstehen uns nicht als Wählergruppe, die nur alle fünf Jahre zur Wahl aktiv wird. Wir wollen auch dazwischen ansprechbar sein, Entwicklungen begleiten und gemeinsam mit den Menschen in Sprötze etwas bewegen.',
+        ],
+        sections: [
+            {
+                title: 'Mitgestalten statt nur zuschauen',
+                paragraphs: [
+                    'Mit unseren Vertreterinnen und Vertretern im Ortsrat sind wir eng vernetzt. Wir möchten ihre Arbeit unterstützen, Themen aufgreifen und uns dort einbringen, wo wir gemeinsam etwas für Sprötze erreichen können. Ob große Vorhaben oder kleine Verbesserungen im Alltag – **uns ist wichtig, dass gute Ideen nicht nur diskutiert, sondern auch weiterverfolgt werden.**',
+                    'Dabei setzen wir auf eine offene Zusammenarbeit, auch über politische Grenzen hinweg. Denn am Ende sollte nicht entscheidend sein, von wem eine gute Idee kommt, sondern was sie für unseren Ort bewirken kann.',
+                ],
+            },
+            {
+                title: 'Ein erstes Versprechen setzen wir bereits um',
+                paragraphs: [
+                    'Ein Thema haben wir schon angepackt: **Mehr Transparenz und bessere Informationen über das, was in Sprötze passiert.** Mit unserer Seite **„Sprötze Aktuell“** möchten wir öffentlich zugängliche Informationen aus Politik, Verwaltung und anderen Quellen zusammentragen, verständlich aufbereiten und auf das Wesentliche für unsere Ortschaft reduzieren. Hier findet ihr aktuelle Nachrichten, Hintergründe zu wichtigen Projekten und Informationen zu Sitzungen und Terminen.',
+                    'Unser Ziel ist, dass sich jeder unkompliziert informieren kann – auch ohne sich durch umfangreiche Sitzungsunterlagen oder komplizierte Verwaltungsdokumente arbeiten zu müssen. Und möglichst frühzeitig, bevor wichtige Entscheidungen bereits gefallen sind.',
+                ],
+            },
+            {
+                title: 'Sprötze lebt vom Mitmachen!',
+                paragraphs: [
+                    'Wir möchten aber nicht nur informieren, sondern auch zuhören.',
+                    {
+                        type: "list",
+                        items: ['**Was bewegt euch?**', '**Wo seht ihr Handlungsbedarf?**', '**Welche Ideen habt ihr für Sprötze?**']
+                    },
+                    'Nicht jedes Anliegen lässt sich sofort lösen, und nicht alles liegt in den Händen des Ortsrates. Aber wir können Themen aufgreifen, gemeinsam nach Lösungen suchen und uns dafür einsetzen, dass die Anliegen aus unserem Dorf Gehör finden.',
+                    '**Unser Versprechen bleibt: Wir setzen uns für Sprötze ein – nicht nur vor einer Wahl, sondern die ganzen fünf Jahre.** ',
+                    'Und dabei freuen wir uns über alle, die mitdenken, mitreden und mitgestalten möchten!',
+                ],
+            },
+        ],
+    },
 ];
