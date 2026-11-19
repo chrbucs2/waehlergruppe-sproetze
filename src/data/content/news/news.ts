@@ -1590,7 +1590,7 @@ export const news: NewsModel[] = [
         slug: 'wgs-wir-bleiben-dran-2026',
         title: 'Wir bleiben dran – nicht erst wieder in fünf Jahren!',
         publishedAt: '2026-11-19',
-        topicIds: ['ortsrat'],
+        topicIds: [],
         highlight: true,
         badges: [
             { type: 'wgs' },
