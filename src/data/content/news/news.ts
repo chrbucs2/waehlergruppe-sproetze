@@ -1600,7 +1600,7 @@ export const news: NewsModel[] = [
             'Ein erstes Versprechen haben wir bereits angepackt: Mit **„Sprötze Aktuell“** machen wir Informationen, Planungen und Entscheidungen rund um unseren Ort verständlich und für alle zugänglich.',
         ],
         summaryImage: {
-            src: 'logo.png',
+            src: '/logo.png',
             alt: 'Wählergruppe Sprötze',
         },
         introduction: [
