@@ -320,7 +320,7 @@ export const scheduleItems: ScheduleModel[] = [
         location: 'Altes Feuerwehrhaus Sprötze',
         summary: [
             'Am **Freitag, 4. Dezember 2026**, lädt der **Ortsrat Sprötze** zum **Lebendigen Adventskalender am alten Feuerwehrhaus** ein.',
-            'Gemeinsam möchten wir einen gemütlichen Adventsabend verbringen, miteinander ins Gespräch kommen und die vorweihnachtliche Atmosphäre genießen.',
+            'Gemeinsam möchte der Ortsrat einen gemütlichen Adventsabend verbringen, miteinander ins Gespräch kommen und die vorweihnachtliche Atmosphäre genießen.',
             '**Alle Sprötzerinnen und Sprötzer sind herzlich willkommen!**',
         ]
     },
