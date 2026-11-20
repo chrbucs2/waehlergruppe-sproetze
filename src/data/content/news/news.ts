@@ -1647,7 +1647,7 @@ export const news: NewsModel[] = [
             { type: 'pin', startDate: '2026-12-01', endDate: '2026-12-04' },
         ],
         summary: [
-            'Am **Freitag, 4. Dezember 2026**, öffnet der **Ortsrat Sprötze** ein Türchen des **Lebendigen Adventskalenders**. Treffpunkt ist das **alte Feuerwehrhaus in Sprötze**.',
+            'Am **Freitag, 4. Dezember 2026 um 18:30 Uhr**, öffnet der **Ortsrat Sprötze** ein Türchen des **Lebendigen Adventskalenders**. Treffpunkt ist das **alte Feuerwehrhaus in Sprötze**.',
             'Gemeinsam möchte der Ortsrat einen gemütlichen Adventsabend verbringen, miteinander ins Gespräch kommen und die vorweihnachtliche Stimmung genießen. Eine schöne Gelegenheit, bekannte Gesichter wiederzusehen und neue Menschen aus unserem Dorf kennenzulernen.',
             '**Alle Sprötzerinnen und Sprötzer sind herzlich eingeladen!**',
         ],

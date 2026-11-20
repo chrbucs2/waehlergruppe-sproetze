@@ -315,7 +315,7 @@ export const scheduleItems: ScheduleModel[] = [
         slug: 'lebendiger-adventskalender-ortsrat-2026-12-04',
         category: 'Kirchengemeinde Sprötze / Ortsrat Sprötze',
         date: '2026-12-04',
-        time: 'Uhrzeit folgt',
+        time: '18:30 Uhr',
         title: 'Lebendiger Adventskalender mit dem Ortsrat Sprötze',
         location: 'Altes Feuerwehrhaus Sprötze',
         summary: [
