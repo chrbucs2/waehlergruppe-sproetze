@@ -19,7 +19,7 @@ export const contacts = {
     representative: {
         name: 'Peter Kröger',
         title: 'Vertreter der Wählergruppe',
-        email: 'peter.kroeger@sproetze.de',
+        email: 'kroeger.p_rat@t-online.de ',
         phone: '+49 4186 7878',
         address: 'Sprötzer Bahnhofstraße 9A, 21244 Buchholz-Sprötze',
     },
