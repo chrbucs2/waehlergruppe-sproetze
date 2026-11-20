@@ -311,6 +311,20 @@ export const scheduleItems: ScheduleModel[] = [
         ],
     },
     {
+        id: 'lebendiger-adventskalender-ortsrat-2026-12-04',
+        slug: 'lebendiger-adventskalender-ortsrat-2026-12-04',
+        category: 'Kirchengemeinde Sprötze / Ortsrat Sprötze',
+        date: '2026-12-04',
+        time: 'Uhrzeit folgt',
+        title: 'Lebendiger Adventskalender mit dem Ortsrat Sprötze',
+        location: 'Altes Feuerwehrhaus Sprötze',
+        summary: [
+            'Am **Freitag, 4. Dezember 2026**, lädt der **Ortsrat Sprötze** zum **Lebendigen Adventskalender am alten Feuerwehrhaus** ein.',
+            'Gemeinsam möchten wir einen gemütlichen Adventsabend verbringen, miteinander ins Gespräch kommen und die vorweihnachtliche Atmosphäre genießen.',
+            '**Alle Sprötzerinnen und Sprötzer sind herzlich willkommen!**',
+        ]
+    },
+    {
         id: 'rat-regulaer-2026-12-14',
         slug: 'rat-regulaer-2026-12-14',
         category: 'Rat der Stadt',

@@ -1637,4 +1637,19 @@ export const news: NewsModel[] = [
             },
         ],
     },
+    {
+        id: 'lebendiger-adventskalender-ortsrat-2026',
+        slug: 'lebendiger-adventskalender-ortsrat-2026',
+        title: 'Lebendiger Adventskalender: Der Ortsrat Sprötze lädt ein!',
+        publishedAt: '2026-11-19',
+        topicIds: ['ortsrat'],
+        badges: [
+            { type: 'pin', startDate: '2026-12-01', endDate: '2026-12-04' },
+        ],
+        summary: [
+            'Am **Freitag, 4. Dezember 2026**, öffnet der **Ortsrat Sprötze** ein Türchen des **Lebendigen Adventskalenders**. Treffpunkt ist das **alte Feuerwehrhaus in Sprötze**.',
+            'Gemeinsam möchten wir einen gemütlichen Adventsabend verbringen, miteinander ins Gespräch kommen und die vorweihnachtliche Stimmung genießen. Eine schöne Gelegenheit, bekannte Gesichter wiederzusehen und neue Menschen aus unserem Dorf kennenzulernen.',
+            '**Alle Sprötzerinnen und Sprötzer sind herzlich eingeladen!**',
+        ],
+    },
 ];
