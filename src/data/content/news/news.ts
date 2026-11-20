@@ -1651,5 +1651,9 @@ export const news: NewsModel[] = [
             'Gemeinsam möchte der Ortsrat einen gemütlichen Adventsabend verbringen, miteinander ins Gespräch kommen und die vorweihnachtliche Stimmung genießen. Eine schöne Gelegenheit, bekannte Gesichter wiederzusehen und neue Menschen aus unserem Dorf kennenzulernen.',
             '**Alle Sprötzerinnen und Sprötzer sind herzlich eingeladen!**',
         ],
+        summaryImage: {
+            src: '/images/news/adventskerze.webp',
+            alt: 'Weihnachtliche Kerze mit Tannenzweigen und Sternen',
+        },
     },
 ];
